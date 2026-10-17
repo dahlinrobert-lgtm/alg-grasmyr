@@ -90,6 +90,18 @@ jobs:
         continue-on-error: true
         run: |
           python scripts/download_statistics.py --out out/extra/hornean-moose-observations --area-id 724577 --report-id 25 --from-year "2010/2011" --to-year "2025/2026" --boundary-mode historical
+      - name: Hörneåns — mean age, recent seasons (report 9)
+        continue-on-error: true
+        run: |
+          python scripts/download_statistics.py --out out/extra/hornean_mean-age_2020-2025 --area-id 724577 --report-id 9 --from-year "2020/2021" --to-year "2025/2026" --boundary-mode current
+      - name: Hörneåns — carcass weight, recent seasons (report 20)
+        continue-on-error: true
+        run: |
+          python scripts/download_statistics.py --out out/extra/hornean_carcass-weight_2020-2025 --area-id 724577 --report-id 20 --from-year "2020/2021" --to-year "2025/2026" --boundary-mode current
+      - name: Hörneåns — moose observations, recent seasons (report 25)
+        continue-on-error: true
+        run: |
+          python scripts/download_statistics.py --out out/extra/hornean-moose-observations_2020-2025 --area-id 724577 --report-id 25 --from-year "2020/2021" --to-year "2025/2026" --boundary-mode current
       - name: Gräsmyrs VVO — mean age (report 9)
         continue-on-error: true
         run: |
