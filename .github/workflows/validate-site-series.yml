@@ -1,0 +1,28 @@
+name: Validate website statistics against processed CSVs
+
+on:
+  push:
+    paths:
+      - "index.html"
+      - "data/processed/avskjutning_mal_ajo_hornean_2013-2026.csv"
+      - "data/processed/algobs_hornean_2013-2026.csv"
+      - "data/processed/medelalder_vuxna_hornean_2013-2026.csv"
+      - "scripts/validate_site_series.py"
+      - ".github/workflows/validate-site-series.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compare site series with processed CSVs
+        run: python scripts/validate_site_series.py
