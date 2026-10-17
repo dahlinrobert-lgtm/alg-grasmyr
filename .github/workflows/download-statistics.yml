@@ -1,0 +1,54 @@
+name: Download initial Älgdata report
+
+on:
+  push:
+    paths:
+      - "scripts/download_statistics.py"
+      - ".github/workflows/download-statistics.yml"
+  workflow_dispatch:
+    inputs:
+      from_year:
+        description: First hunting year
+        required: true
+        default: "2010/2011"
+      to_year:
+        description: Last hunting year
+        required: true
+        default: "2025/2026"
+
+permissions:
+  contents: read
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Playwright
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Download official statistics report
+        env:
+          FROM_YEAR: ${{ inputs.from_year || '2010/2011' }}
+          TO_YEAR: ${{ inputs.to_year || '2025/2026' }}
+        run: |
+          python scripts/download_statistics.py \
+            --out out/hornean-avskjutning \
+            --from-year "$FROM_YEAR" \
+            --to-year "$TO_YEAR"
+      - name: Upload raw workbook and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hornean-avskjutning-first-export
+          path: out/hornean-avskjutning/
+          if-no-files-found: warn
+          retention-days: 7
