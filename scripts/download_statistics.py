@@ -55,6 +55,23 @@ async def choose_report(select, report_id: str) -> dict[str, Any]:
     raise RuntimeError(f"Report option Id={report_id} was not found")
 
 
+async def choose_available_end_year(select, requested: str, start_year: str) -> str:
+    options = await select.locator("option").evaluate_all(
+        "(els) => els.map(o => ({label:o.text.trim(), value:o.value, disabled:o.disabled}))"
+    )
+    eligible = [o for o in options if o["value"] >= start_year and not o["disabled"]]
+    if not eligible:
+        raise RuntimeError(f"No enabled end-year options on or after {start_year}")
+    target = next((o for o in eligible if o["value"] == requested), None)
+    if target is None:
+        # The portal disables future or unsupported seasons for some report types.
+        # Use the latest enabled season not later than the requested year.
+        earlier = [o for o in eligible if o["value"] <= requested]
+        target = earlier[-1] if earlier else eligible[0]
+    await select.select_option(value=target["value"])
+    return target["value"]
+
+
 async def capture_visible_state(page) -> dict[str, Any]:
     return await page.evaluate("""() => {
       const texts = (els) => Array.from(els).slice(0, 100).map(el =>
@@ -103,6 +120,7 @@ async def main() -> None:
     export_path: Path | None = None
     before_stats: dict[str, Any] | None = None
     after_stats: dict[str, Any] | None = None
+    selected_year_to: str | None = None
 
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
@@ -180,7 +198,14 @@ async def main() -> None:
             from_select = page.locator("select").nth(3)
             to_select = page.locator("select").nth(4)
             await choose_by_label(from_select, args.from_year)
-            await choose_by_label(to_select, args.to_year)
+            selected_year_to = await choose_available_end_year(
+                to_select, args.to_year, args.from_year
+            )
+            if selected_year_to != args.to_year:
+                errors.append(
+                    f"Requested end year {args.to_year} was disabled by the portal; "
+                    f"using latest permitted year {selected_year_to}"
+                )
 
             await page.wait_for_timeout(400)
             before_stats = await capture_visible_state(page)
@@ -228,7 +253,8 @@ async def main() -> None:
         "selected_area": selected_area,
         "report_config": report_config,
         "hunting_year_from": args.from_year,
-        "hunting_year_to": args.to_year,
+        "hunting_year_to_requested": args.to_year,
+        "hunting_year_to_selected": selected_year_to,
         "boundary_mode": "current",
         "navigation_error": navigation_error,
         "errors": errors,
