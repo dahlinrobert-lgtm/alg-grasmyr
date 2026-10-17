@@ -1,17 +1,17 @@
 series;official_area_id;season;reported_area_ha;change_ha_from_previous_distinct_area;change_pct_from_previous_distinct_area;source;interpretation
-grasmyr_historic;24-01-02-017-A;2010/2011;4795;;;Älgdata avskjutning med mål;Historical VVO identity; reported area only for this report season
-grasmyr_historic;24-01-02-017-A;2011/2012;4795;0;0;Älgdata avskjutning med mål;Historical VVO identity; reported area only for this report season
-grasmyr_historic;24-01-02-017-A;2012/2013;4795;0;0;Älgdata avskjutning med mål;Historical VVO identity; reported area only for this report season
-hornean_current;24-01-02-342-Ä;2013/2014;26777;;;Älgdata avskjutning med mål;First season in current downloaded series; not assumed to be same boundary as earlier VVO
-hornean_current;24-01-02-342-Ä;2014/2015;32355;5578;20.83;Älgdata avskjutning med mål;Reported area increase; requires historical boundary/decision check
+grasmyr_historic;24-01-02-017-A;2010/2011;4795;;;Älgdata avskjutning med mål;Historical VVO identity, reported area only for this report season
+grasmyr_historic;24-01-02-017-A;2011/2012;4795;0;0;Älgdata avskjutning med mål;Historical VVO identity, reported area only for this report season
+grasmyr_historic;24-01-02-017-A;2012/2013;4795;0;0;Älgdata avskjutning med mål;Historical VVO identity, reported area only for this report season
+hornean_current;24-01-02-342-Ä;2013/2014;26777;;;Älgdata avskjutning med mål;First season in current downloaded series, not assumed to be same boundary as earlier VVO
+hornean_current;24-01-02-342-Ä;2014/2015;32355;5578;20.83;Älgdata avskjutning med mål;Reported area increase, requires historical boundary/decision check
 hornean_current;24-01-02-342-Ä;2015/2016;32355;0;0;Älgdata avskjutning med mål;No change in reported area
 hornean_current;24-01-02-342-Ä;2016/2017;32355;0;0;Älgdata avskjutning med mål;No change in reported area
 hornean_current;24-01-02-342-Ä;2017/2018;32355;0;0;Älgdata avskjutning med mål;No change in reported area
-hornean_current;24-01-02-342-Ä;2018/2019;35506;3151;9.74;Älgdata avskjutning med mål;Reported area increase; requires historical boundary/decision check
+hornean_current;24-01-02-342-Ä;2018/2019;35506;3151;9.74;Älgdata avskjutning med mål;Reported area increase, requires historical boundary/decision check
 hornean_current;24-01-02-342-Ä;2019/2020;35506;0;0;Älgdata avskjutning med mål;No change in reported area
-hornean_current;24-01-02-342-Ä;2020/2021;35567.05;61.05;0.17;Älgdata avskjutning med mål;Reported area increase; requires historical boundary/decision check
+hornean_current;24-01-02-342-Ä;2020/2021;35567.05;61.05;0.17;Älgdata avskjutning med mål;Reported area increase, requires historical boundary/decision check
 hornean_current;24-01-02-342-Ä;2021/2022;35567.05;0;0;Älgdata avskjutning med mål;No change in reported area
 hornean_current;24-01-02-342-Ä;2022/2023;35567.05;0;0;Älgdata avskjutning med mål;No change in reported area
-hornean_current;24-01-02-342-Ä;2023/2024;37132.8;1565.75;4.40;Älgdata avskjutning med mål;Reported area increase; requires historical boundary/decision check
+hornean_current;24-01-02-342-Ä;2023/2024;37132.8;1565.75;4.40;Älgdata avskjutning med mål;Reported area increase, requires historical boundary/decision check
 hornean_current;24-01-02-342-Ä;2024/2025;37132.8;0;0;Älgdata avskjutning med mål;No change in reported area
-hornean_current;24-01-02-342-Ä;2025/2026;37132.8;0;0;Älgdata avskjutning med mål;Latest downloaded report area; not necessarily exact cadastral polygon area
+hornean_current;24-01-02-342-Ä;2025/2026;37132.8;0;0;Älgdata avskjutning med mål;Latest downloaded report area, not necessarily exact cadastral polygon area
