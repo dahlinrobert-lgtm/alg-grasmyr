@@ -158,33 +158,36 @@ async def main() -> None:
         except Exception:
             afo_options = []
 
+        target_terms = (
+            "Högland", "Hogland", "01-02-183", "01-02-098",
+            "Hörneåns älgskötselområde", "Hörneåns ÄSO",
+            "Gräsmyrs viltvårdsområde", "Gräsmyr",
+            "Djupsjö", "Nyåker", "Tallbergslidens",
+        )
         for afo in afo_options:
             if afo["value"] == "-1" or not afo["label"]:
                 continue
             try:
                 await afo_select.select_option(value=afo["value"])
-                await page.wait_for_timeout(1200)
+                await page.wait_for_timeout(1000)
                 opts = await area_select.locator("option").evaluate_all(
                     "(els) => els.map(o => ({label: o.text.trim(), value: o.value}))"
                 )
-                discovered_names = [o["label"] for o in opts if o["value"] != "-1" and o["label"]]
+                discovered = [o for o in opts if o["value"] != "-1" and o["label"]]
+                matches = [
+                    {"term": term, "options": [o for o in discovered if term.casefold() in o["label"].casefold()]}
+                    for term in target_terms
+                ]
+                matches = [m for m in matches if m["options"]]
                 area_discovery.append({
-                    "afo_name": afo["label"], "afo_id": afo["value"],
-                    "areas_loaded": len(discovered_names), "area_options": opts,
+                    "afo_name": afo["label"],
+                    "afo_id": afo["value"],
+                    "areas_loaded": len(discovered),
+                    "area_options": discovered,
+                    "target_matches": matches,
                 })
-                found = False
-                for target in ("Hörneåns älgskötselområde", "Hörneåns ÄSO", "Gräsmyrs viltvårdsområde"):
-                    match = next((o for o in opts if target.casefold() in o["label"].casefold()), None)
-                    if match:
-                        await area_select.select_option(value=match["value"])
-                        exploratory_actions.append({
-                            "target": target,
-                            "action": f"found under {afo['label']} (area value {match['value']})"
-                        })
-                        found = True
-                        break
-                if found:
-                    break
+                # Intentionally inspect every AFO. Do not stop when Hörneåns or
+                # Gräsmyr is found, since that previously prevented a full search.
             except Exception as exc:
                 area_discovery.append({
                     "afo_name": afo["label"], "afo_id": afo["value"],
@@ -226,7 +229,8 @@ async def main() -> None:
             "exploratory_actions": exploratory_actions,
             "area_discovery": [
                 {"afo_name": x.get("afo_name"), "afo_id": x.get("afo_id"),
-                 "areas_loaded": x.get("areas_loaded"), "error": x.get("error")}
+                 "areas_loaded": x.get("areas_loaded"), "target_matches": x.get("target_matches", []),
+                 "error": x.get("error")}
                 for x in area_discovery
             ],
             "likely_data_requests": [
