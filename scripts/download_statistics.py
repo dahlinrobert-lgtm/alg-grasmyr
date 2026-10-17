@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import csv
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -108,6 +109,49 @@ async def capture_visible_state(page) -> dict[str, Any]:
     }""")
 
 
+
+CSV_FIELDS = [
+    "registreringsnummer", "jaktomradesnamn", "jaktsasong", "registrerad_areal_ha",
+    "fallda_vuxna_totalt", "fallda_vuxna_handjur", "fallda_vuxna_hondjur",
+    "fallda_kalvar_totalt", "fallda_kalvar_handjur", "fallda_kalvar_hondjur",
+    "fallda_totalt", "fallda_otjanliga", "fallda_oregistrerad_mark",
+    "fallda_per_1000_ha", "tjur_andel_pct", "kalv_andel_pct",
+    "avskjutningsmal_vuxna", "avskjutningsmal_handjur", "avskjutningsmal_hondjur",
+    "avskjutningsmal_kalv", "avskjutningsmal_totalt", "avskjutningsmal_per_1000_ha",
+    "nyttjandegrad_vuxna_pct", "nyttjandegrad_kalv_pct", "nyttjandegrad_totalt_pct",
+]
+
+
+def save_statistics_table(state: dict[str, Any] | None, output_path: Path) -> int:
+    """Save the rendered Älgdata 'Avskjutning med mål — ÄJO' table as CSV."""
+    if not state:
+        return 0
+    target_table = None
+    for table in state.get("tables", []):
+        rows = table.get("rows", [])
+        if rows and any("Registreringsnummer" in cell for cell in rows[0]):
+            target_table = rows
+            break
+    if not target_table:
+        return 0
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    written = 0
+    with output_path.open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.writer(handle, delimiter=";", quoting=csv.QUOTE_MINIMAL)
+        writer.writerow(CSV_FIELDS)
+        # The rendered DataTable has a two-row grouped header followed by a
+        # summary row. The rest are one row per hunting season. Preserve source
+        # display values, including percent signs and decimal commas.
+        for row in target_table[2:]:
+            if not row or not row[0] or row[0].strip().casefold().startswith("summa"):
+                continue
+            if len(row) < len(CSV_FIELDS):
+                continue
+            writer.writerow(row[:len(CSV_FIELDS)])
+            written += 1
+    return written
+
 async def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", type=Path, default=Path("out/hornean-avskjutning"))
@@ -133,6 +177,8 @@ async def main() -> None:
     before_stats: dict[str, Any] | None = None
     after_stats: dict[str, Any] | None = None
     selected_year_to: str | None = None
+    data_csv_path: Path | None = None
+    data_csv_rows = 0
 
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
@@ -236,21 +282,18 @@ async def main() -> None:
             await page.wait_for_timeout(1500)
             after_stats = await capture_visible_state(page)
 
-            excel = page.locator('input[type="button"][value="Excel"]')
-            if await excel.count() and not await excel.is_disabled():
-                try:
-                    async with page.expect_download(timeout=15000) as download_info:
-                        await excel.click()
-                    download = await download_info.value
-                    suggested = download.suggested_filename or (
-                        f"hornean_avskjutning_{args.from_year.replace('/', '-')}_"
-                        f"{args.to_year.replace('/', '-')}.xlsx"
-                    )
-                    if not Path(suggested).suffix:
-                        suggested += ".xlsx"
-                    export_path = output_dir / suggested
-                    await download.save_as(export_path)
-                except Exception as exc:
+            # The portal's export buttons remain hidden in some UI states. The
+            # rendered result table is public, visible in the page and gives a
+            # reproducible CSV copy without depending on the hidden Excel control.
+            data_csv_path = output_dir / (
+                f"avskjutning_mal_ajo_{args.area_id}_"
+                f"{args.from_year.replace('/', '-')}_{selected_year_to.replace('/', '-')}.csv"
+            )
+            if args.report_id == "4":
+                data_csv_rows = save_statistics_table(after_stats, data_csv_path)
+                if data_csv_rows == 0:
+                    errors.append("Could not locate data rows in the rendered statistics table")
+        except Exception as exc:
                     errors.append("Excel export unavailable: " + str(exc)[:500])
             else:
                 errors.append("Excel export button was missing or disabled")
@@ -274,15 +317,16 @@ async def main() -> None:
         "boundary_mode": args.boundary_mode,
         "navigation_error": navigation_error,
         "errors": errors,
-        "export_file": str(export_path.name) if export_path and export_path.exists() else None,
-        "export_size_bytes": export_path.stat().st_size if export_path and export_path.exists() else None,
+        "data_csv": str(data_csv_path.name) if data_csv_path and data_csv_path.exists() else None,
+        "data_csv_rows": data_csv_rows,
+        "data_csv_size_bytes": data_csv_path.stat().st_size if data_csv_path and data_csv_path.exists() else None,
         "before_stats": before_stats,
         "after_stats": after_stats,
         "request_metadata": request_meta,
         "response_metadata": responses,
         "public_json_responses": public_json,
         "note": (
-            "One official portal report configuration; raw workbook has not been normalized. "
+            "One official portal report configuration; CSV fields map the rendered grouped table, values preserved as displayed. "
             "The historical Gräsmyrs VVO is a separate identity and is not treated as the same area."
         )
     }
@@ -290,8 +334,9 @@ async def main() -> None:
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps({
         "report": str(report_path),
-        "export_file": report["export_file"],
-        "export_size_bytes": report["export_size_bytes"],
+        "data_csv": report["data_csv"],
+        "data_csv_rows": report["data_csv_rows"],
+        "data_csv_size_bytes": report["data_csv_size_bytes"],
         "selected_area": selected_area,
         "report_config": report_config,
         "errors": errors,
