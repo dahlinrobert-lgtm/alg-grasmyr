@@ -1,0 +1,24 @@
+{
+  "source": "Länsstyrelsernas Älgdata statistikportal",
+  "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+  "report": "Avskjutning med mål — ÄJO",
+  "portal_report_id": "4",
+  "area": "Gräsmyrs viltvårdsområde",
+  "official_display_id": "24-01-02-017-A",
+  "portal_internal_id": 718148,
+  "county": "Västerbottens län",
+  "management_area": "Sydöstra älgförvaltningsområdet",
+  "boundary_mode": "Nuvarande gränser",
+  "period": "2010/2011–2012/2013",
+  "rows": 3,
+  "retrieved_on": "2026-10-17",
+  "notes": [
+    "Query requested 2010/2011–2019/2020. The portal returned only 2010/2011, 2011/2012 and 2012/2013.",
+    "A separate query for 2020/2021–2025/2026 could not select this area under current boundaries: the current area dropdown did not contain internal ID 718148.",
+    "This is an observed gap/end-of-series in the selected portal configuration, not evidence of zero harvest after 2012/2013.",
+    "The area is kept separate from Hörneåns ÄSO; no geographic identity or direct series merge is assumed.",
+    "The value 4,795 ha matches the area size displayed in this portal report, but historical boundary comparability should still be checked.",
+    "Values are kept as displayed by the source, including decimal commas and percent signs.",
+    "fallda_totalt is actual reported shot moose; avskjutningsmal_totalt is the harvest target."
+  ]
+}
