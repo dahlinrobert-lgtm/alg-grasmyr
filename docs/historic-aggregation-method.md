@@ -120,7 +120,7 @@ En publicerad SVT-lista med titeln [Älgtilldelning 2012](https://www.yumpu.com/
 ### Exakta aritmetiska träffar
 
 1. **Basår 2013/14:** Gräsmyrs VVO (4 795 ha) + Mullsjö VVO (3 492 ha) + Tallbergslidens VVO (3 172 ha) + Hummelholms VVO (5 508 ha) + Hörnsjö VVO (6 601 ha) + Torrböle VVO (3 209 ha) = **26 777 ha**, exakt samma som Hörneåns ÄSO:s rapporterade areal 2013/14.
-2. **Aritmetisk träff för 2014/15:** Djupsjö VVO (2 506 ha) + Nyåkers VVO (2 568 ha) + en post på 504 ha = **5 578 ha**, samma som Hörneåns rapporterade arealökning. Flerårsuttaget från Älgdata visar emellertid att registrering 24-01-02-183-A redan hade 504 ha från 2010/11. Arealsumman är därför en ledtråd, inte belägg för att denna enhet anslöt 2014/15 eller för att den motsvarar Högland.
+2. **Aritmetisk träff för 2014/15:** Djupsjö VVO (2 506 ha) + Nyåkers VVO (2 568 ha) + registrering 24-01-02-183-A (504 ha) = **5 578 ha**, samma som Hörneåns rapporterade arealökning. Älgdata visar att 183 redan fanns som separat registrering på 504 ha från 2010/11. Det utesluter inte att den kan ha anslutits till Hörneåns ÄSO senare. Tillsammans med den lokala 2014-listans namn Djupsjö, Högland och Nyåker är detta en stark hypotes om möjlig sammansättning av arealsteget, men det bevisar inte medlemskap, anslutningsår eller att Högland avser just 183.
 3. **Ökning 2018/19:** Öre-Brattfors VVO anges till **3 151 ha**, exakt samma som ökningen från 32 355 till 35 506 ha. Kopplingen till Hörneåns ÄSO har inte verifierats.
 4. **Ökning 2023/24:** Hallens VVO anges till 1 553 ha, nära men inte exakt ökningen 1 565,75 ha (skillnad 12,75 ha). Detta är en svag hypotes, inte en matchning.
 
@@ -131,7 +131,7 @@ De tre första träffarna ger en konkret prioriteringsordning för att söka his
 Nästa kontroll är att jämföra officiella polygoner eller beslut för 2013/14, 2014/15 och 2018/19 och kontrollera om de föreslagna äldre VVO-områdena faktiskt motsvarar Hörneåns geografi. VK:s artikel [Nordmalings älgtilldelning (2011)](https://www.vk.se/2011-07-08/nordmalings-algtilldelning) är ytterligare en relevant äldre källa att jämföra mot. De arealvärden som använts här är hämtade från den separat publicerade 2012-listan.
 ## Ytterligare kontroll: oidentifierad post och registerdigitalisering
 
-Den lokala tilldelningslistan från 14 december 2014 innehåller nio namn. Jämfört med de sex namn som nämns i bildande-/anslutningssammanhang 2012/13 är de tre ytterligare namnen Djupsjö, Högland och Nyåker. En tidigare hypotes var att ökningen 2014/15 motsvarade Djupsjö (2 506 ha) + Nyåker (2 568 ha) + posten `01-02-183` (504 ha). Den senare posten hade dock redan 504 ha 2010/11–2012/13 enligt officiell Älgdata. Hypotesen kan därför inte användas som belägg för anslutning just 2014/15, och Högland får inte kopplas till registreringen utan karta eller beslut.
+Den lokala tilldelningslistan från 14 december 2014 innehåller nio namn. Jämfört med de sex namn som nämns i bildande-/anslutningssammanhang 2012/13 är de tre ytterligare namnen Djupsjö, Högland och Nyåker. Summan Djupsjö (2 506 ha) + Nyåker (2 568 ha) + registrering `01-02-183` (504 ha) motsvarar exakt arealsteget 5 578 ha 2014/15. Att 183 redan existerade som separat 504-ha-enhet före detta steg är förenligt med en senare anslutning till ÄSO:n. Det är en stark sammansättningshypotes, men formellt medlemskap och kopplingen Högland ↔ 183 kräver beslut eller kartunderlag.
 
 En viktig alternativ förklaring till senare arealsteg är ändrad register- och arealberäkning. Länsstyrelsen Västerbottens årsredovisning för 2020 beskriver att ett nytt administrativt system infördes, att jaktområdenas geometrier behövde kontrolleras och föras över och att nya registreringsbeslut med kartor och fastighetslistor skickades ut. Länsstyrelsens information om kvalitetssäkring förklarar dessutom att arealer i registreringsbeslut beräknas digitalt utifrån Lantmäteriets fastighetsskikt och att endast registrerad landareal ligger till grund för tilldelningen. Se [årsredovisning 2020](https://www.lansstyrelsen.se/download/18.8cd5a1b19362fb4fc2370f/1732539429770/%25C3%2585rsredovisning%2520L%25C3%25A4nsstyrelsen%2520V%C3%A4sterbotten%25202020.pdf) och [information om kvalitetssäkring av älgjaktområden](https://www.lansstyrelsen.se/download/18.4adf753a1791c8ec4551a426/1622009058466/Information-om-kvalitetss%C3%A4kring-av-%C3%A4lgjaktomr%C3%A5den.pdf).
 
@@ -148,7 +148,7 @@ De ursprungliga skärmbilderna har nu kompletterats och kontrollerats mot portal
 
 ### Högland och de namnlösa posterna
 
-Den publicerade listan *Älgtilldelning 2012* visar en namnlös post med kod `01-02-183` och 504 ha. Officiell Älgdata visar att modern portalregistrering `24-01-02-183-A` hade 303 ha 2009/10 och 504 ha från 2010/11. Den aritmetiska summan Djupsjö (2 506) + Nyåker (2 568) + 504 = 5 578 ha matchar Hörneåns rapporterade arealsteg 2014/15, men eftersom 504-ha-arealen redan fanns flera år tidigare visar summan inte när eller om denna enhet anslöts till Hörneåns.
+Den publicerade listan *Älgtilldelning 2012* visar en namnlös post med kod `01-02-183` och 504 ha. Officiell Älgdata visar att `24-01-02-183-A` hade 303 ha 2009/10 och 504 ha från 2010/11. Summan Djupsjö (2 506) + Nyåker (2 568) + 504 = 5 578 ha matchar Hörneåns arealsteg 2014/15. Att 504-ha-arealen redan fanns tidigare utesluter inte en senare anslutning till Hörneåns; det visar bara att området inte bildades först 2014/15. Medlemskapet är fortfarande en hypotes.
 
 Viktigt: samma lista innehåller även andra poster utan namn, exempelvis `01-02-098` med 340 ha. Den koden matchar starkt `24-01-02-098-A — Höglågdal jaktområde` (340 ha i 2009/10–2012/13). Högland förekommer i en lokal tilldelningslista från 2014 men har ännu inte kopplats till `24-01-02-183-A` eller någon annan registrering. Inget av detta bevisar att Högland saknade separat registrering — endast att sambandet inte har verifierats.
 
@@ -189,7 +189,7 @@ Ett automatiserat Playwright-uttag från Länsstyrelsens publika Älgdata-portal
 
 - **01-02-098 / Höglågdal:** den säsongsfiltrerade portalrapporten visar exakt 340 ha för `24-01-02-098-A`, och 2012-listan visar en namnlös post `01-02-098` på 340 ha. Kodsekvens, areal och det officiella portalnamnet ger en stark korsreferens. Äldre polygonidentitet bör ändå kontrolleras mot karta eller registreringsbeslut.
 - **01-02-183 / okänt namn:** den säsongsfiltrerade portalrapporten visar `24-01-02-183-A` (intern-ID 718179) med **303 ha 2009/10 och 504 ha från 2010/11 till 2012/13**. Den tidigare arealkonflikten mellan 303 och 504 ha är alltså förklarad av årtalet, men orsaken till själva ökningen 2010/11 är ännu inte fastställd. Namn och eventuell koppling till det lokala jaktlaget Högland är fortfarande obekräftade.
-- Summeringen Djupsjö (2 506 ha) + Nyåker (2 568 ha) + 504 ha = 5 578 ha matchar aritmetiskt Hörneåns arealsteg 2014/15. Men registrering `24-01-02-183-A` hade 504 ha redan 2010/11–2012/13. Summan bevisar därför varken en anslutning under 2014/15 eller att registreringen är Högland.
+- Summeringen Djupsjö (2 506 ha) + Nyåker (2 568 ha) + 504 ha = 5 578 ha matchar exakt Hörneåns arealsteg 2014/15. Att `24-01-02-183-A` hade 504 ha redan 2010/11–2012/13 är förenligt med att enheten kan ha anslutits senare som separat registrering. Summan ger en stark hypotes om 2014/15-sammansättningen, men bevisar varken formellt anslutningsår eller att området heter Högland.
 
 ### Ytterligare kontroll
 
@@ -221,3 +221,38 @@ Nordmalings kommuns publicerade inventering *1988 inventering Ledusjö, Norrmark
 Detta är relevant lokalhistorisk geografi och stödjer att namnet Högland hör hemma i närområdet kring Djupsjö/Hummelholm. Det **bevisar inte** att jaktlaget Högland i den lokala tilldelningslistan är samma enhet som den namnlösa älgjaktregistreringen `24-01-02-183-A`. En kulturmiljöinventering beskriver byn och historisk markbakgrund, inte registreringsnummer eller älgjaktgränser.
 
 Länsstyrelsens officiella information säger att ändringar av registrerade älgjaktområden, såsom tillägg eller borttagning av fastigheter, sker genom ansökan och beslut. För att koppla det lokala Högland till registrering `24-01-02-183-A` krävs därför fortfarande historiskt beslut, karta/fastighetsbilaga, äldre registerutdrag eller skriftlig bekräftelse från Länsstyrelsen. Se [Älgförvaltning och jaktområden](https://www.lansstyrelsen.se/vasterbotten/djur/jakt-och-vilt/algjakt/algforvaltning-och-jaktomraden.html).
+
+## Fyraårsgranskning av tio historiska områdesregister (2026-10-17)
+
+Körningen [Audit historic area registers 2009–2013, GitHub Actions 39067657897](https://github.com/dahlinrobert-lgtm/alg-grasmyr/actions/runs/39067657897) hämtade *Avskjutning med mål — ÄJO* med historiska gränser för tio registreringar och fyra jaktår (40 rader totalt). Samtliga tio områdeshämtningar lyckades utan rapporterade fel. Den sammanfattade årstabellen finns i `data/official_historical_area_summary_2009_2013.csv`; artifacten från körningen innehåller fullständiga tabeller och diagnostik.
+
+### Arealsumma för de sex ursprungliga namngivna områdena
+
+| Jaktår | Mullsjö + Tallbergslidens + Gräsmyr + Hörnsjö + Hummelholm + Torrböle |
+|---|---:|
+| 2009/2010 | 26 778 ha |
+| 2010/2011 | 26 778 ha |
+| 2011/2012 | 26 777 ha |
+| 2012/2013 | 26 777 ha |
+
+Summan under 2011/12 och 2012/13 stämmer exakt med Hörneåns rapporterade basareal 26 777 ha 2013/14. Avvikelsen på ett hektar i de två tidigare säsongerna kommer av att Torrböle redovisas med 3 210 ha 2009/10–2010/11 och 3 209 ha 2011/12–2012/13. Den äldre 2012-listan anger också 3 209 ha. Det är viktigt att bevara båda källornas årsspecifika värden i stället för att normalisera bort skillnaden.
+
+### Arealsumma för Djupsjö, Nyåker och registrering 183
+
+| Jaktår | Djupsjö | Nyåker | Registrering 183 | Summa |
+|---|---:|---:|---:|---:|
+| 2009/2010 | 2 506 ha | 2 568 ha | 303 ha | 5 377 ha |
+| 2010/2011 | 2 506 ha | 2 568 ha | 504 ha | 5 578 ha |
+| 2011/2012 | 2 506 ha | 2 568 ha | 504 ha | 5 578 ha |
+| 2012/2013 | 2 506 ha | 2 568 ha | 504 ha | 5 578 ha |
+
+Hörneåns rapporterade arealsteg 2014/15 är **+5 578 ha** (26 777 → 32 355 ha). Från 2010/11 och framåt motsvarar samma summa exakt Djupsjö, Nyåker och den namnlösa registreringen 183. Den lokala tilldelningslistan från december 2014 nämner dessutom tre ytterligare namn jämfört med 2012 års bildande-/anslutningsuppgifter: Djupsjö, Högland och Nyåker. Sammantaget är detta en **stark hypotes** om att utökningen kan motsvara Djupsjö, Nyåker och registrering 183, där Högland möjligen är det lokala namnet för 183.
+
+Begränsningar:
+- `24-01-02-183-A` saknar visningsnamn i Älgdata och den gamla listan saknar namn på kod `01-02-183`.
+- Arealökningen för själva registrering 183 (303 → 504 ha) skedde redan 2010/11; detta är skilt från ett eventuellt senare anslutningsår till Hörneåns ÄSO.
+- Att det separata området existerade före 2014/15 **utesluter inte** att det senare anslöts till ÄSO:n. Den exakta summan och den lokala namnlistan är kompatibla med ett sådant scenario men bevisar inte formellt medlemskap, polygonidentitet eller giltighetsdatum.
+- Höglågdal (`24-01-02-098-A`) är ett annat område med 340 ha; det ska inte förväxlas med Högland.
+- För att bekräfta hypotesen krävs fortfarande historiska registrerings-/ändringsbeslut, fastighetsbilagor eller gränskartor från Länsstyrelsen.
+
+Den sammanfattande CSV-filen finns här: `data/official_historical_area_summary_2009_2013.csv`. Detta underlag ersätter inte kontrollen av faktisk geografisk täckning och överlapp, så delområdenas avskjutning ska inte summeras med Hörneåns ÄSO-totalen ännu.
