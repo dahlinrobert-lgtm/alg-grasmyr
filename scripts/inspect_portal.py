@@ -27,6 +27,13 @@ async def inspect_dom(page) -> dict[str, Any]:
         return labels.join(' / ') || el.getAttribute('aria-label') || el.getAttribute('title') || parent;
       };
       const controls = Array.from(document.querySelectorAll('select, input, button, [role="combobox"], [role="listbox"], [role="option"]'))
+        .filter(el => {
+          const type = (el.getAttribute('type') || '').toLowerCase();
+          const name = (el.getAttribute('name') || '').toLowerCase();
+          return !(el.tagName === 'INPUT' && (
+            type === 'hidden' || /(token|password|secret|cookie|authorization)/.test(name)
+          ));
+        })
         .slice(0, 250).map(el => ({
           tag: el.tagName.toLowerCase(),
           role: el.getAttribute('role') || '',
@@ -37,6 +44,7 @@ async def inspect_dom(page) -> dict[str, Any]:
           text: (el.innerText || el.value || '').trim().slice(0, 180),
           placeholder: el.getAttribute('placeholder') || '',
           options: el.tagName === 'SELECT' ? Array.from(el.options).slice(0, 250).map(o => ({
+            group: o.parentElement && o.parentElement.tagName === 'OPTGROUP' ? o.parentElement.label : '',
             label: o.text.trim(), value: o.value, selected: o.selected
           })) : []
         }));
@@ -61,6 +69,8 @@ async def main() -> None:
 
     requests: list[dict[str, Any]] = []
     responses: list[dict[str, Any]] = []
+    json_payloads: list[dict[str, Any]] = []
+    response_tasks: set[asyncio.Task] = set()
     page_errors: list[str] = []
     console_errors: list[str] = []
 
@@ -75,6 +85,39 @@ async def main() -> None:
             "content_type": res.headers.get("content-type", ""),
             "resource_type": res.request.resource_type
         }))
+
+        async def capture_public_json(res) -> None:
+            try:
+                content_type = res.headers.get("content-type", "").lower()
+                if res.request.resource_type not in ("xhr", "fetch"):
+                    return
+                if "application/json" not in content_type or "/Home/" not in res.url:
+                    return
+                body = await res.text()
+                if len(body.encode("utf-8", errors="replace")) > 250_000:
+                    json_payloads.append({
+                        "url": res.url, "status": res.status,
+                        "truncated": True, "body_chars": len(body)
+                    })
+                    return
+                try:
+                    parsed = json.loads(body)
+                except json.JSONDecodeError:
+                    parsed = body
+                json_payloads.append({
+                    "url": res.url, "status": res.status,
+                    "truncated": False, "json": parsed
+                })
+            except Exception:
+                # Some responses are not readable after navigation or cancellation.
+                return
+
+        def schedule_response_body(res) -> None:
+            task = asyncio.create_task(capture_public_json(res))
+            response_tasks.add(task)
+            task.add_done_callback(response_tasks.discard)
+
+        page.on("response", schedule_response_body)
         page.on("pageerror", lambda err: page_errors.append(str(err)[:500]))
         page.on("console", lambda msg: console_errors.append(msg.text[:500]) if msg.type == "error" else None)
 
@@ -119,8 +162,10 @@ async def main() -> None:
             if not chosen:
                 exploratory_actions.append({"target": target, "action": "not found in native select options"})
         final_dom = await inspect_dom(page)
+        if response_tasks:
+            await asyncio.gather(*list(response_tasks), return_exceptions=True)
 
-        # Re-capture any late-loaded requests, but do not inspect response bodies.
+        # Only public JSON payloads from the portal's own Home endpoints are retained.
         report = {
             "inspected_at_utc": datetime.now(timezone.utc).isoformat(),
             "source_url": URL,
@@ -130,11 +175,13 @@ async def main() -> None:
             "final_dom": final_dom,
             "requests": requests,
             "responses": responses,
+            "public_json_payloads": json_payloads,
             "page_errors": page_errors,
             "console_errors": console_errors[:100],
             "limitations": [
-                "Only public page structure and request/response metadata are recorded.",
-                "Response bodies, authentication data, cookies, and form submissions are not collected.",
+                "Only public page structure, request metadata and small JSON responses from public Home endpoints are recorded.",
+                "Hidden inputs and fields with token/password/secret/cookie/authorization names are excluded.",
+                "No cookies, request bodies, authentication data, or form submissions are collected.",
                 "The portal may load statistics only after selecting a statistics type or filters."
             ]
         }
