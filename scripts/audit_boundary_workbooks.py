@@ -74,5 +74,27 @@ def main():
         w=csv.DictWriter(f,fieldnames=fields,delimiter=";");w.writeheader()
         for x in comparisons:
             w.writerow({k:x.get(k,"") for k in fields})
-    print(f"Audited {len(records)} original XLSX workbooks; see out/boundary-workbook-audit/")
+    report = ["# Original Excel-export audit: historical vs current boundaries", "", f"Workbook files inspected: **{len(records)}**.", "", "Cell values are compared at matching sheet/row/column positions. This shows export differences, not which boundary is geographically correct.", "", "| Season | Status | Historical files | Current files | Different cells |", "|---|---|---:|---:|---:|"]
+    for x in comparisons:
+        report.append("| " + " | ".join(str(x.get(k, "")) for k in ["season", "status", "historical_files", "current_files", "cell_differences"]) + " |")
+    report.extend(["", "## Cell-level differences", ""])
+    found = False
+    for x in comparisons:
+        diffs = x.get("differences", [])
+        if not diffs:
+            continue
+        found = True
+        report.extend(["### " + x["season"], "", "Historical: " + x["historical_file"], "", "Current: " + x["current_file"], "", "| Sheet index | Row | Column | Historical value | Current value |", "|---:|---:|---:|---|---|"])
+        for d in diffs[:200]:
+            oldv = str(d["historical"]).replace("|", "\\|").replace("\n", " ")
+            newv = str(d["current"]).replace("|", "\\|").replace("\n", " ")
+            report.append(f"| {d['sheet_index']} | {d['row']} | {d['column']} | {oldv} | {newv} |")
+        if len(diffs) > 200:
+            report.append(f"| … | … | … | First 200 of {len(diffs)} differences shown | |")
+        report.append("")
+    if not found:
+        report.append("No cell-level differences detected in seasons where both boundary modes were available.")
+    report.extend(["", "## Interpretation cautions", "", "- A missing workbook is not evidence of zero area or zero observations.", "- Differences may reflect export layout or boundary-mode semantics; inspect actual values before interpreting them.", "- The 2017/18 and 2018/19 gaps remain gaps unless source workbooks are added.", "- This comparison does not prove VVO membership or that a registration joined an ÄSO.", ""])
+    (DATA / "processed" / "boundary-comparison-summary.md").write_text("\n".join(report), encoding="utf-8")
+    print(f"Audited {len(records)} original XLSX workbooks; readable report generated.")
 if __name__ == "__main__": main()
