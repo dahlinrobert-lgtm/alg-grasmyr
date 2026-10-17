@@ -38,6 +38,7 @@ Frågan för Gräsmyrs VVO gav data för 2010/2011, 2011/2012 och 2012/2013. Fö
 
 - [Actions: avskjutning för båda områdena](https://github.com/dahlinrobert-lgtm/alg-grasmyr/actions/workflows/download-statistics.yml) hämtar två jaktårsintervall för varje område och sparar CSV samt diagnostik som ett GitHub Actions-artifact.
 - [Actions: fler statistiktyper](https://github.com/dahlinrobert-lgtm/alg-grasmyr/actions/workflows/download-other-statistics.yml) testar medelålder, slaktvikt och älgobservationer för de områdes-/periodkombinationer som går att välja.
+- [Actions: utökad historisk hämtning](https://github.com/dahlinrobert-lgtm/alg-grasmyr/actions/workflows/download-expanded-history.yml) samlar historiska och aktuella perioder i ett manuellt startbart flöde och kör även månadsvis. Resultaten sparas som artifacts; workflowet skriver inte automatiskt om versionshanterade datafiler.
 - [Guide för datahämtning](docs/acquisition.md)
 - [Områdesregister](data/area_registry.csv)
 - [Datadictionary och kvalitetsregler](docs/data-dictionary.md)
