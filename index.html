@@ -343,10 +343,10 @@ function drawAreaHistory(){
    svg.insertAdjacentHTML("beforeend",'<text x="'+xx+'" y="'+(h-22)+'" text-anchor="middle" fill="#63736b" font-size="11">'+d.season+'</text>');
    return;
   }
-  const highlight=[1,7,10].includes(i),yy=y(d.area);
-  svg.insertAdjacentHTML("beforeend",'<circle cx="'+xx+'" cy="'+yy+'" r="'+(highlight?6:4)+'" fill="'+(i===6||i===10?"#bb7b2a":"#244c3d")+'" stroke="white" stroke-width="2" tabindex="0" role="img" aria-label="'+d.season+": "+d.area.toLocaleString("sv-SE")+' hektar"><title>'+d.season+": "+d.area.toLocaleString("sv-SE")+" ha"+(d.label?" · "+d.label:"")+'</title></circle>');
+  const highlight=[1,5,7,10].includes(i),yy=y(d.area);
+  svg.insertAdjacentHTML("beforeend",'<circle cx="'+xx+'" cy="'+yy+'" r="'+(highlight?6:4)+'" fill="'+(i===5||i===10?"#bb7b2a":"#244c3d")+'" stroke="white" stroke-width="2" tabindex="0" role="img" aria-label="'+d.season+": "+d.area.toLocaleString("sv-SE")+' hektar"><title>'+d.season+": "+d.area.toLocaleString("sv-SE")+" ha"+(d.label?" · "+d.label:"")+'</title></circle>');
   svg.insertAdjacentHTML("beforeend",'<text x="'+xx+'" y="'+(h-22)+'" text-anchor="middle" fill="#63736b" font-size="11">'+d.season+'</text>');
-  if(d.label)svg.insertAdjacentHTML("beforeend",'<text x="'+xx+'" y="'+(yy-13-(i===1?2:0))+'" text-anchor="middle" fill="'+(i===6||i===10?"#8a5a1c":"#244c3d")+'" font-size="11" font-weight="700">'+d.label+'</text>');
+  if(d.label)svg.insertAdjacentHTML("beforeend",'<text x="'+xx+'" y="'+(yy-13-(i===1?2:0))+'" text-anchor="middle" fill="'+(i===5||i===10?"#8a5a1c":"#244c3d")+'" font-size="11" font-weight="700">'+d.label+'</text>');
  });
  svg.insertAdjacentHTML("beforeend",'<text x="'+ml+'" y="18" fill="#63736b" font-size="12">Hektar</text>');
 }
