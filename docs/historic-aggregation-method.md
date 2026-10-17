@@ -144,7 +144,7 @@ Ytterligare tre poster från Länsstyrelsens statistikportal har dokumenterats f
 - Tallbergslidens VVO, `24-01-02-008-A`, 3 172 ha.
 - Nyåkers VVO, `24-01-02-052-A`, 2 568 ha.
 
-Värdena har transkriberats från användarens skärmbilder av den officiella portalen och sparats i `data/official_historical_area_stats_2009_2010_additional.csv`. Huvudtabellen för de fem första områdena finns i `data/official_historical_area_stats_2009_2010.csv`. Detta är en dokumenterad transkription från myndighetskällan, inte ett direkt API-uttag.
+De ursprungliga skärmbilderna har nu kompletterats och kontrollerats mot portalens maskinellt nedladdade säsongstabell. Använd [det fullständiga uttaget för tio områden](../data/official_historical_area_stats_2009_2010_full.csv) som gemensam huvudkälla för jaktåret 2009/2010. Den tabellen bevarar även fler fält än skärmbildstranskriptionerna, bland annat uppdelad avskjutning, tilldelning, nyttjandegrad och internt portal-ID.
 
 ### Högland och de namnlösa posterna
 
@@ -221,23 +221,3 @@ Nordmalings kommuns publicerade inventering *1988 inventering Ledusjö, Norrmark
 Detta är relevant lokalhistorisk geografi och stödjer att namnet Högland hör hemma i närområdet kring Djupsjö/Hummelholm. Det **bevisar inte** att jaktlaget Högland i den lokala tilldelningslistan är samma enhet som den namnlösa älgjaktregistreringen `24-01-02-183-A`. En kulturmiljöinventering beskriver byn och historisk markbakgrund, inte registreringsnummer eller älgjaktgränser.
 
 Länsstyrelsens officiella information säger att ändringar av registrerade älgjaktområden, såsom tillägg eller borttagning av fastigheter, sker genom ansökan och beslut. För att koppla det lokala Högland till registrering `24-01-02-183-A` krävs därför fortfarande historiskt beslut, karta/fastighetsbilaga, äldre registerutdrag eller skriftlig bekräftelse från Länsstyrelsen. Se [Älgförvaltning och jaktområden](https://www.lansstyrelsen.se/vasterbotten/djur/jakt-och-vilt/algjakt/algforvaltning-och-jaktomraden.html).
-
-
-
-## Officiell registrering 24-01-02-183-A: 303 till 504 ha (2026-10-17)
-
-En säsongsfiltrerad rapport i Länsstyrelsernas Älgdata visar en registrering med beteckningen `24-01-02-183-A`, internt portal-ID `718179`, men utan visat områdesnamn. Rapporterad areal är 303 ha för 2009/2010 och 504 ha för 2010/2011, 2011/2012 och 2012/2013. Det innebär en ändring på +201 ha mellan 2009/2010 och 2010/2011.
-
-Detta förklarar varför den äldre listan från 2012 anger en onamngiven post med koden `01-02-183` och arealen 504 ha. Det är en identifiering av registreringsposten och dess arealserie, **inte** en identifiering av jaktlaget som Högland. Den lokala notisen från 2014 nämner Högland, men inga officiella beslut eller polygoner kopplar ännu Högland till `24-01-02-183-A`.
-
-Den nya uppgiften ändrar hur arealhypoteserna ska tolkas: 504 ha fanns redan i den redovisade arealen 2010/2011–2012/2013. Därför kan just dessa 504 ha inte i sig förklara Hörneåns ÄSO:s senare arealökning med 5 578 ha år 2014/2015. Den senare ökningen kräver en separat förklaring — exempelvis flera registrerings-/gränsändringar, annan geometri eller arealberäkning — som måste kontrolleras mot beslut och kartor.
-
-### Kvarstående verifiering
-
-- Begär registreringsbeslutet för `24-01-02-183-A`, särskilt ändringen från 303 till 504 ha inför 2010/2011.
-- Begär karta och fastighetsförteckning som hör till beslutet och eventuella senare ändringsbeslut.
-- Kontrollera om handlingen nämner Högland, Djupsjö, Orrböle eller andra lokala namn.
-- Jämför den historiska polygonen med Hörneåns gräns för 2013/2014 och senare säsonger innan avskjutning aggregeras.
-- Behåll `area_183_historic` som separat identitet med okänt namn och uteslut den från rekonstruerade totalsummor tills identitet och överlapp är verifierade.
-
-Källor: [Länsstyrelsernas Älgdata](https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/) och [Länsstyrelsen Västerbotten – älgförvaltning och jaktområden](https://www.lansstyrelsen.se/vasterbotten/djur/jakt-och-vilt/algjakt/algforvaltning-och-jaktomraden.html). Portaluppgiften är dokumenterad från säsongsfiltrerad rapport och skärmbaserat uttag; den tomma namnkolumnen ska bevaras som sådan.
