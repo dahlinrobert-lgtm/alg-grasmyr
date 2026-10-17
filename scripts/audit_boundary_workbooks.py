@@ -117,6 +117,64 @@ def main():
                     "area_differences":[d for d in field_diffs if "areal" in d["field"].lower()],
                     "harvest_differences":[d for d in field_diffs if any(k in d["field"].lower() for k in ("vuxen","handjur","hondjur","kalv","totalt","otjänliga","oregistrerad"))]
                 })
+    # Track target ÄSO and historical component registrations in each original export.
+    tracked = {
+        "24-01-02-342-Ä": "Hörneåns ÄSO",
+        "24-01-02-017-A": "Gräsmyrs VVO",
+        "24-01-02-006-A": "Mullsjö VVO",
+        "24-01-02-008-A": "Tallbergslidens VVO",
+        "24-01-02-028-A": "Hörnsjö VVO",
+        "24-01-02-045-A": "Hummelholms VVO",
+        "24-01-02-052-A": "Nyåkers VVO",
+        "24-01-02-093-A": "Djupsjö VVO",
+        "24-01-02-100-A": "Torrböle VVO",
+        "24-01-02-098-A": "Höglågdal",
+        "24-01-02-183-A": "Namnlös registrering 183",
+        "24-01-02-049-A": "Öre-Brattfors VVO",
+        "24-01-02-067-A": "Hallens VVO",
+    }
+    tracked_rows = []
+    for rec in records:
+        p = DATA / rec["file"]
+        rows = workbook_rows(p)
+        for reg, display in tracked.items():
+            for row in rows.get(reg, []):
+                tracked_rows.append({
+                    "season": rec["season"], "boundary_mode": rec["mode"],
+                    "file": rec["file"], "registration": reg,
+                    "tracked_label": display, "reported_name": row.get("Jaktområdets namn", ""),
+                    "reported_area_ha": row.get("Registrerad areal ha", ""),
+                    "harvest_total": row.get("Totalt", ""),
+                    "reported_status": row.get("Slut-rapporterat", "")
+                })
+    with (OUT/"tracked_registration_history.csv").open("w",newline="",encoding="utf-8-sig") as f:
+        fields=["season","boundary_mode","registration","tracked_label","reported_name","reported_area_ha","harvest_total","reported_status","file"]
+        w=csv.DictWriter(f,fieldnames=fields,delimiter=";"); w.writeheader(); w.writerows(tracked_rows)
+    # Direct comparison of the target ÄSO's reported area with the site's published series.
+    target_rows = [r for r in tracked_rows if r["registration"] == "24-01-02-342-Ä"]
+    annual_path = DATA / "area_annual.csv"
+    annual = {}
+    if annual_path.exists():
+        with annual_path.open(encoding="utf-8-sig",newline="") as f:
+            for row in csv.DictReader(f,delimiter=";"):
+                if row.get("series") == "hornean_current":
+                    annual[row.get("season","")] = row.get("reported_area_ha","")
+    area_check = []
+    seen_pairs = set()
+    for r in target_rows:
+        pair=(r["season"],r["boundary_mode"],r["reported_area_ha"],r["file"])
+        if pair in seen_pairs: continue
+        seen_pairs.add(pair)
+        site_area=annual.get(r["season"],"")
+        area_check.append({
+            "season":r["season"],"boundary_mode":r["boundary_mode"],"file":r["file"],
+            "registration":r["registration"],"excel_reported_area_ha":r["reported_area_ha"],
+            "site_series_area_ha":site_area,
+            "matches_site_series": str(r["reported_area_ha"]) == str(site_area) if site_area else ""
+        })
+    with (OUT/"hornean_area_source_check.csv").open("w",newline="",encoding="utf-8-sig") as f:
+        fields=["season","boundary_mode","registration","excel_reported_area_ha","site_series_area_ha","matches_site_series","file"]
+        w=csv.DictWriter(f,fieldnames=fields,delimiter=";"); w.writeheader(); w.writerows(area_check)
     (OUT/"boundary_comparison.json").write_text(json.dumps(comparisons,ensure_ascii=False,indent=2),encoding="utf-8")
     with (OUT/"boundary_comparison_summary.csv").open("w",newline="",encoding="utf-8-sig") as f:
         fields=["season","status","historical_file","current_file","historical_registrations","current_registrations","only_historical_count","only_current_count","field_difference_count"]
@@ -155,7 +213,20 @@ def main():
         if not x["field_differences"] and not x["only_historical"] and not x["only_current"]:
             report.append("| — | — | — | Inga värdeskillnader identifierade | — |")
         report.append("")
-    report.extend(["## Viktiga reservationer","","- Perioder utan båda filtyperna kan inte jämföras direkt.","- Identiska dubblettfiler ska inte räknas som oberoende belägg.","- Registreringsnummer som saknas i en export kan bero på exporturval eller gränsdefinition; det är inte automatiskt ett bevis på att jaktområdet upphört eller tillkommit.","- Denna rapport verifierar Excel-innehåll och skillnader mellan exporterna, inte formella beslut eller polygonernas juridiska status.",""])
+    report.extend(["## Kontroll av arealen för Hörneåns ÄSO (24-01-02-342-Ä)","",
+        "| Säsong | Gränsvariant | Excel: registrerad areal (ha) | Webbseriens areal (ha) | Matchar | Fil |",
+        "|---|---|---:|---:|---|---|"])
+    if area_check:
+        for r in area_check:
+            report.append("| "+" | ".join(str(r.get(k,"")) for k in ["season","boundary_mode","excel_reported_area_ha","site_series_area_ha","matches_site_series","file"])+" |")
+    else:
+        report.append("| — | — | — | — | Ingen rad med det exakta registreringsnumret hittades i Excel-exporterna | — |")
+    report.extend(["",
+        "## Historiska jaktområden och kandidater",
+        "",
+        "Fulla radvärden för de kända äldre områdeskoderna finns i \`out/boundary-workbook-audit/tracked_registration_history.csv\` i körningens artefakt. De är avsiktligt inte automatiskt summerade till Hörneåns ÄSO: medlemskap och geometri kräver separat belägg.",
+        "",
+        "## Viktiga reservationer","","- Perioder utan båda filtyperna kan inte jämföras direkt.","- Identiska dubblettfiler ska inte räknas som oberoende belägg.","- Registreringsnummer som saknas i en export kan bero på exporturval eller gränsdefinition; det är inte automatiskt ett bevis på att jaktområdet upphört eller tillkommit.","- Denna rapport verifierar Excel-innehåll och skillnader mellan exporterna, inte formella beslut eller polygonernas juridiska status.",""])
     (DATA/"processed"/"boundary-comparison-summary.md").write_text("\n".join(report),encoding="utf-8")
     print(f"Compared {len(records)} XLSX files using registration keys; report written to data/processed/boundary-comparison-summary.md")
 
