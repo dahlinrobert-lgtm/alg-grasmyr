@@ -19,6 +19,17 @@ from playwright.async_api import async_playwright
 URL = "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/"
 
 
+async def choose_label_for_inspection(select, label: str) -> str:
+    options = await select.locator("option").evaluate_all(
+        "(els) => els.map(o => ({label:o.text.trim(), value:o.value}))"
+    )
+    match = next((o for o in options if o["label"].casefold() == label.casefold()), None)
+    if not match:
+        raise RuntimeError(f"Option not found: {label}")
+    await select.select_option(value=match["value"])
+    return match["value"]
+
+
 async def inspect_dom(page) -> dict[str, Any]:
     return await page.evaluate("""() => {
       const labelFor = (el) => {
@@ -149,22 +160,52 @@ async def main() -> None:
             exploratory_actions.append({"target": "Västerbottens län", "action": "select failed: " + str(exc)[:120]})
 
         area_discovery: list[dict[str, Any]] = []
+        report_select = page.locator("select").nth(0)
+        county_select = page.locator("select").nth(1)
         afo_select = page.locator("select").nth(2)
+        from_select = page.locator("select").nth(3)
+        to_select = page.locator("select").nth(4)
         area_select = page.locator("select").nth(5)
         target_terms = (
             "Högland", "Hogland", "01-02-183", "01-02-098",
-            "Hörneåns älgskötselområde", "Hörneåns ÄSO",
-            "Gräsmyrs viltvårdsområde", "Gräsmyr",
-            "Djupsjö", "Nyåker", "Tallbergslidens",
+            "24-01-02-183", "24-01-02-098",
+            "Höglågdal", "Hörneåns älgskötselområde", "Hörneåns ÄSO",
+            "Gräsmyrs viltvårdsområde", "Gräsmyr", "Djupsjö",
+            "Nyåker", "Tallbergslidens",
         )
-        # Search both historical and current boundary modes. In the earlier
-        # implementation, finding Hörneåns/Gräsmyr stopped the search early.
+
+        # Make the search season-specific. The first inspection omitted the
+        # hunting-year filters, which can leave only a subset of historic area
+        # registrations in the dependent area selector.
+        try:
+            report_options = await report_select.locator("option").evaluate_all(
+                "(els) => els.map(o => ({label:o.text.trim(), value:o.value}))"
+            )
+            report_found = False
+            for option in report_options:
+                try:
+                    config = json.loads(option["value"])
+                except (json.JSONDecodeError, TypeError):
+                    continue
+                if str(config.get("Id")) == "4":
+                    await report_select.select_option(value=option["value"])
+                    exploratory_actions.append({"target": "Avskjutning med mål — ÄJO", "action": "selected report Id=4"})
+                    report_found = True
+                    break
+            if not report_found:
+                exploratory_actions.append({"target": "Avskjutning med mål — ÄJO", "action": "report Id=4 not found"})
+            await page.wait_for_timeout(400)
+            await choose_label_for_inspection(county_select, "Västerbottens län")
+            exploratory_actions.append({"target": "Västerbottens län", "action": "selected county"})
+        except Exception as exc:
+            exploratory_actions.append({"target": "report/county", "action": "selection failed: " + str(exc)[:180]})
+
         for boundary_mode, radio_value in (("historical", "F"), ("current", "G")):
             try:
                 mode_radio = page.locator(f'input[name="optTypeAFO"][value="{radio_value}"]')
                 if await mode_radio.count():
                     await mode_radio.check()
-                    await page.wait_for_timeout(500)
+                    await page.wait_for_timeout(400)
                 afo_options = await afo_select.locator("option").evaluate_all(
                     "(els) => els.map(o => ({label: o.text.trim(), value: o.value}))"
                 )
@@ -180,7 +221,34 @@ async def main() -> None:
                     continue
                 try:
                     await afo_select.select_option(value=afo["value"])
-                    await page.wait_for_timeout(1000)
+                    await page.wait_for_timeout(700)
+                    # The portal's period controls depend on the report/AFO.
+                    from_options = await from_select.locator("option").evaluate_all(
+                        "(els) => els.map(o => ({label:o.text.trim(),value:o.value,disabled:o.disabled}))"
+                    )
+                    from_match = next((o for o in from_options if o["label"].casefold() == "2009/2010".casefold() and not o["disabled"]), None)
+                    if not from_match:
+                        area_discovery.append({
+                            "boundary_mode": boundary_mode, "afo_name": afo["label"], "afo_id": afo["value"],
+                            "error": "2009/2010 not available in start-year selector",
+                            "start_year_options": [o for o in from_options if o["label"]][:25],
+                        })
+                        continue
+                    await from_select.select_option(value=from_match["value"])
+                    await page.wait_for_timeout(300)
+                    to_options = await to_select.locator("option").evaluate_all(
+                        "(els) => els.map(o => ({label:o.text.trim(),value:o.value,disabled:o.disabled}))"
+                    )
+                    to_match = next((o for o in to_options if o["label"].casefold() == "2009/2010".casefold() and not o["disabled"]), None)
+                    if not to_match:
+                        area_discovery.append({
+                            "boundary_mode": boundary_mode, "afo_name": afo["label"], "afo_id": afo["value"],
+                            "error": "2009/2010 not available in end-year selector",
+                            "end_year_options": [o for o in to_options if o["label"]][:25],
+                        })
+                        continue
+                    await to_select.select_option(value=to_match["value"])
+                    await page.wait_for_timeout(700)
                     opts = await area_select.locator("option").evaluate_all(
                         "(els) => els.map(o => ({label: o.text.trim(), value: o.value}))"
                     )
@@ -192,14 +260,15 @@ async def main() -> None:
                     matches = [m for m in matches if m["options"]]
                     area_discovery.append({
                         "boundary_mode": boundary_mode,
+                        "hunting_year": "2009/2010",
                         "afo_name": afo["label"],
                         "afo_id": afo["value"],
                         "areas_loaded": len(discovered),
                         "area_options": discovered,
                         "target_matches": matches,
                     })
-                    # Search all AFOs in each boundary mode. This is a public,
-                    # read-only inspection of the portal's visible selectors.
+                    # Search all AFOs in both boundary modes with the historic
+                    # hunting year explicitly selected. No area is submitted.
                 except Exception as exc:
                     area_discovery.append({
                         "boundary_mode": boundary_mode,
