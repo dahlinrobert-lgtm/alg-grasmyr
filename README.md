@@ -120,6 +120,7 @@ För den fortsatta analysen antar vi att **Öre-Brattfors VVO tillkom i Hörneå
 
 Nuvarande arbetsmodell:
 - 2018/2019: rapporterad ökning **3 151 ha**, som sammanfaller med den angivna arealen för Öre-Brattfors VVO.
+- 2020/2021: rapporterad ökning **61,05 ha** saknar identifierad kandidat bland de äldre delområdena. En felinmatning, arealkorrigering eller mindre omräkning är en rimlig arbetshypotes; inget nytt område ska antas ha anslutit utan stöd i källorna. Samma arealvärde upprepas senare, så tidsserien ensam kan inte avgöra om det var ett fel eller en korrigerad registeruppgift.
 - 2023/2024: rapporterad ökning **1 565,75 ha**. En äldre referenslista anger Hallens VVO till **1 553 ha**, men original-Excel-filerna med både historiska och nuvarande gränser anger **1 567,62 ha** i 2021/22 och 2022/23. Den senaste Excel-arealen är därmed **1,87 ha större** än Hörneåns rapporterade ökning; den äldre uppgiften skiljer sig med 12,75 ha.
 - I originalfilerna förekommer Öre-Brattfors som separat registrering t.o.m. 2016/17 men inte i de tillgängliga filerna fr.o.m. 2019/20. Hallens förekommer separat t.o.m. 2022/23 men saknas separat i de tillgängliga filerna fr.o.m. 2023/24.
 - Dessa exportförändringar stärker arbetshypoteserna och begränsar möjliga övergångsintervall, men är inte i sig formella beslut eller bevis på identiska gränspolygoner. Excel-filer för 2017/18 och 2018/19 saknas.
