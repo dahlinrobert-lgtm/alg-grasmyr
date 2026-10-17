@@ -51,7 +51,7 @@ Frågan för Gräsmyrs VVO gav data för 2010/2011, 2011/2012 och 2012/2013. Fö
 - [Actions: avskjutning för båda områdena](https://github.com/dahlinrobert-lgtm/alg-grasmyr/actions/workflows/download-statistics.yml) hämtar två jaktårsintervall för varje område och sparar CSV samt diagnostik som ett GitHub Actions-artifact.
 - [Actions: fler statistiktyper](https://github.com/dahlinrobert-lgtm/alg-grasmyr/actions/workflows/download-other-statistics.yml) testar medelålder, slaktvikt och älgobservationer för de områdes-/periodkombinationer som går att välja.
 - [Guide för datahämtning](docs/acquisition.md)
-- [Historisk arealmatchning – äldre VVO-arealer och kandidater för arealsteg](data/historical_area_crosswalk_candidates.csv).
+- [Excel-baserad arealavstämning – registrerade arealer och differenser](data/historical_area_crosswalk_candidates.csv).
 - [Officiell flerårstabell för tio historiska områden 2009/10–2012/13](data/official_historical_area_summary_2009_2013.csv): 40 rapporterade rader med areal, fällda älgar och avskjutningsmål.
 - [Workflow: full historisk registergranskning](.github/workflows/audit-historical-area-registers.yml), körning [39067657897](https://github.com/dahlinrobert-lgtm/alg-grasmyr/actions/runs/39067657897), med fullständiga tabeller och diagnostik.
 - [Portalens historiska områdeskoder för jaktåret 2009/2010](data/portal_area_crosswalk_2009_2010.csv): säsongsfiltrerade ID:n och försiktigt bedömda kopplingar för de äldre Nordmalingsområdena.
@@ -100,7 +100,7 @@ python scripts/download_statistics.py \
 4. Jaktår ska behållas som text tills formatet är verifierat.
 5. Ändrade områdesgränser och områdes-ID ska dokumenteras; blanda inte statistik från olika geografiska enheter utan belägg.
 
-- [Säsongsvis arealavstämning mot Hörneåns ÄSO](data/area_reconciliation_by_season.csv): visar aritmetiska kandidatmatchningar och kvarstående differenser. Hallens äldre listning är 1 553 ha, men original-Excel rapporterar 1 567,62 ha 2021/22–2022/23.
+- [Säsongsvis arealavstämning mot Hörneåns ÄSO](data/area_reconciliation_by_season.csv): visar aritmetiska kandidatmatchningar och kvarstående differenser. Hallens separata registrering i Excel anger 1 567,62 ha 2021/22–2022/23.
 - [Jämförelse av original-Excel med historiska respektive nuvarande gränser](data/processed/boundary-comparison-summary.md): jämför registreringsnummer, registrerade arealer och övriga fält för alla säsonger där båda exportvarianterna finns.
 - [Registreringshistorik för äldre delområden](data/processed/area-registration-boundary-audit.csv) och [direkt Excel-kontroll av Hörneåns rapporterade areal](data/processed/hornean-area-source-check.csv): källvärden för identifierade registreringsnummer i båda gränsvarianterna.
 
@@ -123,6 +123,6 @@ Nuvarande arbetsmodell:
 - 2020/2021: rapporterad ökning **61,05 ha** saknar identifierad kandidat bland de äldre delområdena. En felinmatning, arealkorrigering eller mindre omräkning är en rimlig arbetshypotes; inget nytt område ska antas ha anslutit utan stöd i källorna. Samma arealvärde upprepas senare, så tidsserien ensam kan inte avgöra om det var ett fel eller en korrigerad registeruppgift.
 - 2023/2024: rapporterad ökning **1 565,75 ha**. En äldre referenslista anger Hallens VVO till **1 553 ha**, men original-Excel-filerna med både historiska och nuvarande gränser anger **1 567,62 ha** i 2021/22 och 2022/23. Den senaste Excel-arealen är därmed **1,87 ha större** än Hörneåns rapporterade ökning; den äldre uppgiften skiljer sig med 12,75 ha.
 - I originalfilerna förekommer Öre-Brattfors som separat registrering t.o.m. 2016/17 men inte i de tillgängliga filerna fr.o.m. 2019/20. Hallens förekommer separat t.o.m. 2022/23 men saknas separat i de tillgängliga filerna fr.o.m. 2023/24.
-- Dessa exportförändringar stärker arbetshypoteserna och begränsar möjliga övergångsintervall, men är inte i sig formella beslut eller bevis på identiska gränspolygoner. Excel-filer för 2017/18 och 2018/19 saknas.
+- Dessa exportförändringar beskriver endast vad som går att observera i tillgängliga Excel-filer. Excel-filer för 2017/18 och 2018/19 saknas.
 
 Alla areal- och avskjutningsvärden på webbplatsen ska kontrolleras mot primära Excel-exporter innan de markeras som avstämda. Där en relevant Excel-export eller säsong saknas ska luckan anges öppet.
