@@ -153,7 +153,33 @@ def save_statistics_table(state: dict[str, Any] | None, output_path: Path) -> in
             written += 1
     return written
 
-async def main() -> None:
+async def save_rendered_table(state: dict[str, Any] | None, output_path: Path) -> int:
+    """Write the longest rendered result table verbatim as a semicolon CSV.
+
+    This is a raw capture for report types whose columns have not yet been
+    normalized. Grouped header rows and summary rows are deliberately retained.
+    """
+    if not state:
+        return 0
+    candidates = [
+        table.get("rows", [])
+        for table in state.get("tables", [])
+        if table.get("rows")
+    ]
+    if not candidates:
+        return 0
+    rows = max(candidates, key=len)
+    if len(rows) < 2:
+        return 0
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with output_path.open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.writer(handle, delimiter=";", quoting=csv.QUOTE_MINIMAL)
+        for row in rows:
+            writer.writerow(row)
+    return len(rows)
+
+
+def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", type=Path, default=Path("out/hornean-avskjutning"))
     parser.add_argument("--from-year", default="2010/2011")
@@ -286,14 +312,18 @@ async def main() -> None:
             # The portal's export buttons remain hidden in some UI states. The
             # rendered result table is public, visible in the page and gives a
             # reproducible CSV copy without depending on the hidden Excel control.
+            safe_from = args.from_year.replace("/", "-")
+            safe_to = selected_year_to.replace("/", "-")
+            report_slug = "avskjutning_mal_ajo" if args.report_id == "4" else f"report_{args.report_id}"
             data_csv_path = output_dir / (
-                f"avskjutning_mal_ajo_{args.area_id}_"
-                f"{args.from_year.replace('/', '-')}_{selected_year_to.replace('/', '-')}.csv"
+                f"{report_slug}_{args.area_id}_{safe_from}_{safe_to}.csv"
             )
             if args.report_id == "4":
                 data_csv_rows = save_statistics_table(after_stats, data_csv_path)
-                if data_csv_rows == 0:
-                    errors.append("Could not locate data rows in the rendered statistics table")
+            else:
+                data_csv_rows = save_rendered_table(after_stats, data_csv_path)
+            if data_csv_rows == 0:
+                errors.append("Could not locate data rows in the rendered statistics table")
         except Exception as exc:
             errors.append(type(exc).__name__ + ": " + str(exc)[:1000])
         finally:
