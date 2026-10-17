@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Historisk och aktuell statistik för älg och kronhjort i Hörneåns älgskötselområde och Hörneåns kronhjortsskötselområde.">
+<title>Hörneåns viltstatistik – älg och kronhjort</title>
+<style>
+:root{--bg:#f5f6f1;--paper:#fff;--ink:#17251f;--muted:#63736b;--line:#dce4dc;--green:#244c3d;--green2:#356b53;--lime:#dce9b6;--gold:#bb7b2a;--red:#a34c3e;--shadow:0 10px 30px rgba(24,48,37,.06)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:var(--green2)}.hero{background:var(--green);color:white;padding:48px 20px 36px}.wrap{max-width:1160px;margin:0 auto}.topline{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem;font-weight:700;color:#dce9b6}.dot{width:8px;height:8px;background:#dce9b6;border-radius:50%}h1{font-size:clamp(2rem,5vw,3.65rem);line-height:1.05;letter-spacing:-.04em;margin:18px 0 15px;max-width:850px}.hero p{font-size:1.05rem;max-width:780px;color:#e0e9e3;margin:0}.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}.pill{border:1px solid #628273;border-radius:999px;padding:7px 11px;font-size:.82rem;color:#f0f5f1}.nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}.nav .wrap{display:flex;gap:4px;overflow:auto;padding:10px 16px}.nav a{white-space:nowrap;padding:8px 12px;border-radius:999px;text-decoration:none;font-size:.9rem;font-weight:650;color:var(--green)}.nav a:hover{background:#eaf0e7}
+main{padding:28px 18px 70px}.section{margin:25px auto 42px}.section-head{display:flex;gap:18px;justify-content:space-between;align-items:end;margin-bottom:18px}.eyebrow{font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:var(--green2);font-weight:800}h2{font-size:clamp(1.5rem,3vw,2.15rem);letter-spacing:-.025em;margin:5px 0}.section-head p{color:var(--muted);margin:0;max-width:640px}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}.kpi-label{font-size:.82rem;color:var(--muted);font-weight:650}.kpi{font-size:2.15rem;font-weight:800;letter-spacing:-.04em;margin:6px 0 4px}.kpi-foot{font-size:.8rem;color:var(--muted)}.panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:20px}.toolbar{display:flex;align-items:end;flex-wrap:wrap;gap:12px;margin-bottom:18px}.field{display:grid;gap:5px}.field label{font-size:.78rem;font-weight:750;color:var(--muted)}select,button{font:inherit}select{background:#fff;border:1px solid #cbd7ce;border-radius:9px;padding:10px 34px 10px 11px;color:var(--ink);min-width:160px}button{border:1px solid var(--green);color:#fff;background:var(--green);border-radius:9px;padding:10px 13px;font-weight:700;cursor:pointer}button.secondary{background:white;color:var(--green)}button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid #d9a65a;outline-offset:3px}
+.chart-wrap{width:100%;overflow:auto}.chart{width:100%;min-width:540px;display:block;min-height:280px}.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:.82rem;color:var(--muted)}.legend span{display:inline-flex;align-items:center;gap:6px}.swatch{width:12px;height:4px;border-radius:3px;background:var(--green)}.swatch.gold{background:var(--gold)}.swatch.blue{background:#557ca8}.table-wrap{overflow:auto;margin-top:15px;border:1px solid var(--line);border-radius:12px}table{border-collapse:collapse;width:100%;background:white;font-variant-numeric:tabular-nums;font-size:.89rem}th,td{text-align:right;padding:10px 12px;border-bottom:1px solid #e8ede8;white-space:nowrap}th{background:#edf2eb;color:#3e5448;font-size:.77rem;letter-spacing:.02em;position:sticky;top:0}td:first-child,th:first-child{text-align:left}tbody tr:last-child td{border-bottom:0}tbody tr:hover{background:#f7faf6}.note{padding:14px 16px;border-left:4px solid var(--gold);background:#fff8eb;border-radius:8px;color:#5c4b32;font-size:.9rem;margin-top:16px}.note.green{border-color:var(--green2);background:#edf5ed;color:#294a39}.muted{color:var(--muted)}.small{font-size:.82rem}.tag{display:inline-block;background:#eef3e9;color:#325b45;padding:3px 7px;border-radius:6px;font-size:.72rem;font-weight:800}
+.species-tabs{display:flex;gap:8px;margin-bottom:16px}.species-tabs button{flex:1}.species-tabs button[aria-pressed="true"]{background:var(--green2);border-color:var(--green2)}.hidden{display:none!important}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.timeline article{border:1px solid var(--line);background:white;border-radius:14px;padding:16px}.timeline .year{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--green2);font-weight:850}.timeline h3{font-size:1.02rem;margin:5px 0}.timeline p{margin:0;color:var(--muted);font-size:.89rem}
+.details{border-top:1px solid var(--line);padding:14px 0}.details summary{font-weight:750;cursor:pointer}.details p{color:var(--muted);max-width:850px}.sources{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.sources a{display:block;background:white;border:1px solid var(--line);border-radius:12px;padding:15px;text-decoration:none;color:var(--ink);font-weight:750}.sources a span{display:block;color:var(--muted);font-weight:450;font-size:.82rem;margin-top:5px}
+footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;color:var(--muted);font-size:.83rem}footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+@media(max-width:820px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head{display:block}.timeline{grid-template-columns:1fr}.sources{grid-template-columns:1fr}.hero{padding-top:34px}.panel{padding:14px}}
+@media(max-width:440px){.cards{grid-template-columns:1fr 1fr;gap:8px}.card{padding:12px}.kpi{font-size:1.65rem}.kpi-foot{font-size:.74rem}.hero-meta{gap:6px}.pill{font-size:.75rem}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="topline"><span class="dot"></span> Lokal viltstatistik · Västerbotten</div>
+    <h1>Älg och kronhjort<br>i Hörneåns område</h1>
+    <p>En samlad bild av avskjutning, älgobservationer och biologiska indikatorer – med historiska uppgifter från Gräsmyr och tydlig markering av när områdesindelningen ändrats.</p>
+    <div class="hero-meta"><span class="pill">Sydöstra älgförvaltningsområdet</span><span class="pill">Uppgifter t.o.m. jaktåret 2025/2026</span><span class="pill">Senast uppdaterad: 17 oktober 2026</span></div>
+  </div>
+</header>
+<nav class="nav" aria-label="Huvudnavigation"><div class="wrap">
+<a href="#oversikt">Översikt</a><a href="#alg">Älg</a><a href="#kronhjort">Kronhjort</a><a href="#historik">Områdeshistorik</a><a href="#metod">Metod och källor</a>
+</div></nav>
+<main class="wrap">
+<section class="section" id="oversikt">
+ <div class="section-head"><div><div class="eyebrow">Översikt</div><h2>Viltstatistik med geografisk kontext</h2></div><p>Statistik presenteras per jaktår. Historiska data hålls skilda från nuvarande område där gränserna inte är verifierat jämförbara.</p></div>
+ <div class="cards">
+  <div class="card"><div class="kpi-label">Fällda älgar · 2025/26</div><div class="kpi">116</div><div class="kpi-foot">Hörneåns ÄSO · rapporterat utfall</div></div>
+  <div class="card"><div class="kpi-label">Avskjutning 2024/25</div><div class="kpi">112</div><div class="kpi-foot">Hörneåns ÄSO · 64 vuxna, 48 kalvar</div></div>
+  <div class="card"><div class="kpi-label">Älgobs per mantimme · 2025/26</div><div class="kpi">0,0386</div><div class="kpi-foot">Portalens indikator för älgobservationer</div></div>
+  <div class="card"><div class="kpi-label">Kronhjort · årsserie</div><div class="kpi">Söks</div><div class="kpi-foot">KSO-serien måste verifieras separat från älgdata</div></div>
+ </div>
+ <div class="note">Avskjutning betyder rapporterade fällda djur, inte tilldelning eller skötselplanens mål. Jämför inte årsserier över gränsändringar som om geografisk täckning säkert vore oförändrad.</div>
+</section>
+
+<section class="section" id="alg">
+ <div class="section-head"><div><div class="eyebrow">Art 1</div><h2>Älg – avskjutning och indikatorer</h2></div><p>Hörneåns älgskötselområde (ÄSO) i Sydöstra älgförvaltningsområdet. Historisk Gräsmyr-statistik visas separat tills områdessambandet kan dokumenteras.</p></div>
+ <div class="panel">
+  <div class="species-tabs" aria-label="Välj statistiktyp">
+    <button type="button" data-mode="harvest" aria-pressed="true">Avskjutning</button>
+    <button type="button" data-mode="obs" aria-pressed="false">Älgobs</button>
+    <button type="button" data-mode="age" aria-pressed="false">Medelålder</button>
+  </div>
+  <div class="toolbar">
+   <div class="field"><label for="areaSelect">Område/serie</label><select id="areaSelect"><option value="hornean">Hörneåns ÄSO · rapporterad serie</option><option value="grasmyr">Gräsmyrs VVO · historisk serie</option></select></div>
+   <div class="field"><label for="startYear">Från jaktår</label><select id="startYear"><option value="2010">2010/2011</option><option value="2013" selected>2013/2014</option><option value="2017">2017/2018</option><option value="2020">2020/2021</option></select></div>
+   <div class="field"><label for="endYear">Till jaktår</label><select id="endYear"><option value="2019">2019/2020</option><option value="2022">2022/2023</option><option value="2025" selected>2025/2026</option></select></div>
+   <button type="button" class="secondary" id="resetFilters">Återställ</button>
+  </div>
+  <div class="chart-wrap"><svg id="algChart" class="chart" viewBox="0 0 900 320" role="img" aria-label="Diagram över älgstatistik per jaktår"></svg></div>
+  <div class="legend" id="algLegend"></div>
+  <p class="small muted" id="algDescription">Avskjutning för Hörneåns ÄSO enligt statistikportalen. Bruten tidsaxel visar inte att värdet är noll när data saknas.</p>
+  <div class="table-wrap"><table id="algTable"><thead></thead><tbody></tbody></table></div>
+  <div class="note" id="algNote">Gräsmyrs VVO har hittills verifierade avskjutningsvärden för 2010/2011–2012/2013. För senare år var områdes-ID:t inte valbart i portalens urval. Saknade värden tolkas inte som noll.</div>
+ </div>
+</section>
+
+<section class="section" id="kronhjort">
+ <div class="section-head"><div><div class="eyebrow">Art 2</div><h2>Kronhjort – Hörneåns KSO</h2></div><p>Kronhjortsskötselområdet är en separat förvaltningsenhet. Avskjutningen ska hämtas från den rapportering som gäller kronhjort – inte uppskattas från älgstatistik.</p></div>
+ <div class="cards" style="margin-bottom:14px">
+  <div class="card"><div class="kpi-label">Aktuellt område</div><div class="kpi" style="font-size:1.4rem">Hörneåns KSO</div><div class="kpi-foot">Kronhjortsskötselområde enligt angiven områdesbenämning</div></div>
+  <div class="card"><div class="kpi-label">Verifierad årsserie</div><div class="kpi">Ej klar</div><div class="kpi-foot">Årsvisa fällda kronhjortar måste hämtas och kontrolleras mot källan</div></div>
+  <div class="card"><div class="kpi-label">Primär källa</div><div class="kpi" style="font-size:1.3rem">Länsstyrelsen</div><div class="kpi-foot">Kronhjortsrapportering och beslut/skötselplaner</div></div>
+  <div class="card"><div class="kpi-label">Mätetal</div><div class="kpi" style="font-size:1.3rem">Fällda djur</div><div class="kpi-foot">Särskilj hjort, hind och kalv om källan redovisar grupperna</div></div>
+ </div>
+ <div class="panel">
+  <div class="toolbar">
+   <div class="field"><label for="deerMetric">Mätetal</label><select id="deerMetric"><option value="total">Totalt fällda</option><option value="male">Hjort (handjur)</option><option value="female">Hind (hondjur)</option><option value="calf">Kalv</option></select></div>
+   <div class="field"><label for="deerPeriod">Jaktårsintervall</label><select id="deerPeriod"><option value="all">Alla tillgängliga år</option><option value="recent">Senaste 6 jaktår</option></select></div>
+  </div>
+  <div id="deerChartWrap" class="chart-wrap"><svg id="deerChart" class="chart" viewBox="0 0 900 300" role="img" aria-label="Kronhjortsavskjutning per år, visas efter att verifierade data har tillförts"></svg></div>
+  <div id="deerStatus" class="note">Kronhjortsstatistik har inte ännu kunnat beläggas med en verifierad årsserie för Hörneåns KSO i det här projektets nedladdade underlag. Grafen fylls först när rapporterade årsdata från primärkälla har lagts in. Ingen linje eller stapel betyder inte noll fällda djur.</div>
+  <div class="table-wrap"><table id="deerTable"><thead><tr><th>Jaktår</th><th>Totalt fällda</th><th>Hjort</th><th>Hind</th><th>Kalv</th><th>Källa/status</th></tr></thead><tbody><tr><td colspan="6" style="text-align:left">Inväntar verifierad kronhjortsrapport per jaktår.</td></tr></tbody></table></div>
+  <p class="small muted">Länsstyrelsens information om kronhjort beskriver att skötsel sker inom registrerade kronhjortsskötselområden och att fällda djur ska rapporteras. Se <a href="https://www.lansstyrelsen.se/vasterbotten/djur/jakt-och-vilt/kronhjortsjakt.html" target="_blank" rel="noreferrer">Kronhjortsjakt – Länsstyrelsen Västerbotten</a> och <a href="https://www.lansstyrelsen.se/vasterbotten/djur/jakt-och-vilt/kronhjortsjakt/skotsel-av-kronhjort.html" target="_blank" rel="noreferrer">Skötsel av kronhjort</a>.</p>
+ </div>
+</section>
+
+<section class="section" id="historik">
+ <div class="section-head"><div><div class="eyebrow">Geografisk kontinuitet</div><h2>Områdeshistorik</h2></div><p>För att beskriva utvecklingen behöver vi skilja på historisk avskjutning i lokala områden och statistik från det större eller förändrade förvaltningsområdet.</p></div>
+ <div class="timeline">
+  <article><div class="year">2010/11–2012/13</div><h3>Gräsmyrs viltvårdsområde</h3><p>Separat historisk portalserie. Registrerad areal i dessa tabeller: 4 795 ha. Rapporterad avskjutning: 15, 17 respektive 15 älgar per jaktår.</p></article>
+  <article><div class="year">2013/14–2019/20</div><h3>Hörneåns ÄSO – historiska uttag</h3><p>Avskjutningsserie finns från 2013/14. Älgobs har dessutom kompletterats med en äldre serie där historiska gränser valts. Exakt geometri måste fortsatt verifieras.</p></article>
+  <article><div class="year">2020/21–2025/26</div><h3>Hörneåns ÄSO – aktuell serie</h3><p>Senare data visar den nuvarande områdesidentiteten i statistikportalen. Gräsmyrs tidigare ID var inte tillgängligt i de senare områdesurvalen som testats.</p></article>
+ </div>
+ <div class="note green">Din områdeskunskap – att Gräsmyr och andra tidigare områden numera ingår i Hörneåns ÄSO – är viktig för den historiska tolkningen. För att kvantifiera utvecklingen utan att dubbelräkna behövs dock en årtalssatt lista över tidigare områden och officiella gränser eller beslut. Sidan håller därför historikserierna åtskilda i stället för att summera dem som om de vore samma område.</div>
+</section>
+
+<section class="section" id="metod">
+ <div class="section-head"><div><div class="eyebrow">Källor och begränsningar</div><h2>Så ska siffrorna tolkas</h2></div><p>Underlaget ska gå att spåra tillbaka till publicerad statistik och kunna uppdateras utan att förlora tidigare versioner.</p></div>
+ <div class="panel">
+  <div class="details"><details open><summary>Älgstatistik</summary><p>Avskjutning kommer från rapporttypen ”Avskjutning med mål — ÄJO”. Fällda djur och avskjutningsmål är separata mått. Älgobs per mantimme, medelålder och slaktvikter är andra indikatorer och ska inte behandlas som antal fällda.</p></details></div>
+  <div class="details"><details><summary>Historiska områden och gränser</summary><p>Gräsmyrs VVO (portal-ID 718148; beteckning 24-01-02-017-A) och Hörneåns ÄSO (portal-ID 724577; beteckning 24-01-02-342-Ä) förekommer som separata områdesval i portalen. Det bekräftar inte i sig när eller exakt hur gränserna ändrats. Historiska jämförelser ska vara märkta med områdesidentitet och gränsläge.</p></details></div>
+  <div class="details"><details><summary>Kronhjort</summary><p>Kronhjortsskötselområdet (KSO) redovisas separat från älgens ÄSO. Kronhjortens årsserie behöver bekräftas från den rapportfunktion eller de officiella årsrapporter som faktiskt gäller Hörneåns KSO. Tills dess redovisas inga påhittade årsvärden.</p></details></div>
+  <div class="details"><details><summary>Uppdatering och versionshantering</summary><p>Publicerade filer ligger i GitHub-repot och sidan kan läsa inbearbetade CSV-filer när de finns på main. När ny officiell data hämtas ska råkälla, datum, områdes-ID, gränsläge och jaktår sparas. Saknade observationer förblir saknade värden.</p></details></div>
+ </div>
+ <div class="sources" style="margin-top:14px">
+  <a href="https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/" target="_blank" rel="noreferrer">Älgdata statistikportal<span>Avskjutning och biologiska rapporter</span></a>
+  <a href="https://ext-webbgis.lansstyrelsen.se/lst_algdata/" target="_blank" rel="noreferrer">Älgdata WebbGIS<span>Områden och kartlager</span></a>
+  <a href="https://www.lansstyrelsen.se/vasterbotten/djur/jakt-och-vilt/kronhjortsjakt.html" target="_blank" rel="noreferrer">Länsstyrelsen – kronhjort<span>Rapportering och förvaltning av kronhjort</span></a>
+ </div>
+ <p class="small muted">Källor som granskats: Älgdata statistikportal, Länsstyrelsen Västerbotten. Sidan är ett fristående statistikprojekt och inte en officiell publikation från Länsstyrelsen.</p>
+</section>
+</main>
+<footer><div class="wrap"><span>Hörneåns viltstatistik · Älg och kronhjort</span><span>Öppen sammanställning · <a href="https://github.com/dahlinrobert-lgtm/alg-grasmyr">GitHub-repository</a></span></div></footer>
+<script>
+const elkHarvest=[
+{season:"2013/2014",year:2013,total:109,adult:53,calves:56,target:133,area:26777},
+{season:"2014/2015",year:2014,total:112,adult:57,calves:55,target:143,area:32355},
+{season:"2015/2016",year:2015,total:103,adult:58,calves:45,target:132,area:32355},
+{season:"2016/2017",year:2016,total:106,adult:54,calves:52,target:100,area:32355},
+{season:"2017/2018",year:2017,total:98,adult:55,calves:43,target:100,area:32355},
+{season:"2018/2019",year:2018,total:123,adult:66,calves:57,target:145,area:35506},
+{season:"2019/2020",year:2019,total:127,adult:71,calves:56,target:163,area:35506},
+{season:"2020/2021",year:2020,total:120,adult:66,calves:54,target:131,area:35567},
+{season:"2021/2022",year:2021,total:114,adult:70,calves:44,target:128,area:35567},
+{season:"2022/2023",year:2022,total:118,adult:69,calves:49,target:127,area:35567},
+{season:"2023/2024",year:2023,total:105,adult:62,calves:43,target:119,area:37133},
+{season:"2024/2025",year:2024,total:112,adult:64,calves:48,target:135,area:37133},
+{season:"2025/2026",year:2025,total:116,adult:71,calves:45,target:190,area:37133}];
+const elkObs=[
+{season:"2013/2014",year:2013,obs:0.0659,hours:6978,calves:0.491,significant:"Ja"},
+{season:"2014/2015",year:2014,obs:0.069,hours:6724,calves:0.691,significant:"Ja"},
+{season:"2015/2016",year:2015,obs:0.057,hours:4838,calves:0.598,significant:"Nej"},
+{season:"2016/2017",year:2016,obs:0.0756,hours:3860,calves:0.677,significant:"Nej"},
+{season:"2017/2018",year:2017,obs:0.0652,hours:4538,calves:0.714,significant:"Nej"},
+{season:"2018/2019",year:2018,obs:0.0607,hours:5350,calves:0.5,significant:"Ja"},
+{season:"2019/2020",year:2019,obs:0.056,hours:2323,calves:0.656,significant:"Nej"},
+{season:"2020/2021",year:2020,obs:0.0551,hours:3502,calves:0.466,significant:"Nej"},
+{season:"2021/2022",year:2021,obs:0.0447,hours:3716,calves:0.398,significant:"Nej"},
+{season:"2022/2023",year:2022,obs:0.0601,hours:3163,calves:0.732,significant:"Nej"},
+{season:"2023/2024",year:2023,obs:0.0498,hours:6211,calves:0.591,significant:"Ja"},
+{season:"2024/2025",year:2024,obs:0.0542,hours:5020,calves:0.804,significant:"Ja"},
+{season:"2025/2026",year:2025,obs:0.0386,hours:4353,calves:0.698,significant:"Nej"}];
+const elkAge=[
+{season:"2013/2014",year:2013,male:1.9,nMale:16,female:2.5,nFemale:20},
+{season:"2014/2015",year:2014,male:2.4,nMale:28,female:3.7,nFemale:23},
+{season:"2015/2016",year:2015,male:2.5,nMale:27,female:2.2,nFemale:23},
+{season:"2016/2017",year:2016,male:2,nMale:21,female:3.1,nFemale:16},
+{season:"2017/2018",year:2017,male:2.6,nMale:18,female:4.3,nFemale:11},
+{season:"2018/2019",year:2018,male:3.1,nMale:10,female:3.2,nFemale:6},
+{season:"2019/2020",year:2019,male:2.6,nMale:18,female:2.4,nFemale:12},
+{season:"2020/2021",year:2020,male:2.9,nMale:20,female:3.5,nFemale:14},
+{season:"2021/2022",year:2021,male:2.6,nMale:20,female:2.9,nFemale:17},
+{season:"2022/2023",year:2022,male:2,nMale:2,female:7.5,nFemale:2},
+{season:"2023/2024",year:2023,male:3.2,nMale:16,female:3,nFemale:11},
+{season:"2024/2025",year:2024,male:2.6,nMale:19,female:4,nFemale:15},
+{season:"2025/2026",year:2025,male:3.3,nMale:20,female:3.1,nFemale:17}];
+const grasmyr=[
+{season:"2010/2011",year:2010,total:15,adult:9,calves:6,target:13,area:4795},
+{season:"2011/2012",year:2011,total:17,adult:11,calves:6,target:17,area:4795},
+{season:"2012/2013",year:2012,total:15,adult:7,calves:8,target:15,area:4795}];
+const modes={
+ harvest:{title:"Avskjutning av älg",description:"Rapporterat antal fällda älgar per jaktår. Måltal visas som separat jämförelseserie.",series:[{key:"total",label:"Totalt fällda",color:"#244c3d"},{key:"target",label:"Avskjutningsmål",color:"#bb7b2a"}]},
+ obs:{title:"Älgobservationer",description:"Älgobs per mantimme. Det är en observationsindikator och inte en direkt uppskattning av totalt antal älgar.",series:[{key:"obs",label:"Älgobs per mantimme",color:"#557ca8"}]},
+ age:{title:"Medelålder på undersökta vuxna älgar",description:"Medelålder för handjur och hondjur, med antal undersökta djur i tabellen. Små urval kan ge stora svängningar.",series:[{key:"male",label:"Handjur, år",color:"#244c3d"},{key:"female",label:"Hondjur, år",color:"#bb7b2a"}]}
+};
+let mode="harvest";
+const byId=id=>document.getElementById(id);
+const fmt=(n,d=1)=>n===null||n===undefined||Number.isNaN(n)?"Saknas":Number(n).toLocaleString("sv-SE",{maximumFractionDigits:d});
+function selectedData(){
+ const area=byId("areaSelect").value;let arr=area==="grasmyr"?grasmyr:(mode==="harvest"?elkHarvest:mode==="obs"?elkObs:elkAge);
+ const from=Number(byId("startYear").value),to=Number(byId("endYear").value);
+ return arr.filter(d=>d.year>=from&&d.year<=to);
+}
+function drawChart(svg, data, series, opts={}){
+ const w=900,h=320,ml=54,mr=22,mt=18,mb=48,pw=w-ml-mr,ph=h-mt-mb;
+ svg.innerHTML="";
+ if(!data.length){svg.innerHTML='<text x="450" y="150" text-anchor="middle" fill="#63736b" font-size="16">Inga rapporterade värden för valt intervall</text>';return;}
+ const all=data.flatMap(d=>series.map(s=>d[s.key])).filter(v=>Number.isFinite(v));
+ let min=0,max=Math.max(...all)*1.16;if(max===min)max=1;if(opts.zeroLine===false)min=Math.min(...all)*.8;
+ const y=v=>mt+ph-(v-min)/(max-min)*ph;
+ const x=i=>data.length===1?ml+pw/2:ml+i*pw/(data.length-1);
+ for(let i=0;i<=4;i++){const val=min+(max-min)*i/4,yy=y(val);svg.insertAdjacentHTML("beforeend",'<line x1="'+ml+'" y1="'+yy+'" x2="'+(w-mr)+'" y2="'+yy+'" stroke="#e5ebe4"/><text x="'+(ml-10)+'" y="'+(yy+4)+'" text-anchor="end" fill="#63736b" font-size="11">'+fmt(val,2)+'</text>');}
+ data.forEach((d,i)=>svg.insertAdjacentHTML("beforeend",'<text x="'+x(i)+'" y="'+(h-18)+'" text-anchor="middle" fill="#63736b" font-size="10">'+d.season.slice(2,4)+'</text>'));
+ series.forEach(s=>{
+  let points=data.map((d,i)=>d[s.key]===undefined||d[s.key]===null?null:[x(i),y(d[s.key])]);
+  let seg=[];const flush=()=>{if(seg.length>1)svg.insertAdjacentHTML("beforeend",'<polyline fill="none" stroke="'+s.color+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="'+seg.map(p=>p.join(",")).join(" ")+'"/>');seg=[];};
+  points.forEach(p=>{if(p){seg.push(p)}else flush()});flush();
+  points.forEach((p,i)=>{if(p)svg.insertAdjacentHTML("beforeend",'<circle cx="'+p[0]+'" cy="'+p[1]+'" r="4.3" fill="'+s.color+'" stroke="white" stroke-width="1.5"><title>'+data[i].season+': '+fmt(data[i][s.key],3)+'</title></circle>');});
+ });
+ svg.insertAdjacentHTML("beforeend",'<line x1="'+ml+'" y1="'+(mt+ph)+'" x2="'+(w-mr)+'" y2="'+(mt+ph)+'" stroke="#adbaaf"/>');
+}
+function setTable(data){
+ const table=byId("algTable"),head=table.querySelector("thead"),body=table.querySelector("tbody");
+ let headers,rows;
+ if(mode==="harvest" && byId("areaSelect").value==="grasmyr"){
+  headers=["Jaktår","Totalt fällda","Vuxna","Kalvar","Avskjutningsmål","Registrerad areal"];
+  rows=data.map(d=>[d.season,fmt(d.total,0),fmt(d.adult,0),fmt(d.calves,0),fmt(d.target,0),fmt(d.area,0)+" ha"]);
+ } else if(mode==="harvest"){
+  headers=["Jaktår","Totalt fällda","Vuxna","Kalvar","Avskjutningsmål","Registrerad areal"];
+  rows=data.map(d=>[d.season,fmt(d.total,0),fmt(d.adult,0),fmt(d.calves,0),fmt(d.target,0),fmt(d.area,0)+" ha"]);
+ } else if(mode==="obs"){
+  headers=["Jaktår","Älgobs/mantimme","Mantimmar","Kalvar per hondjur","Statistiskt säkerställd"];
+  rows=data.map(d=>[d.season,fmt(d.obs,4),fmt(d.hours,0),fmt(d.calves,3),d.significant||"—"]);
+ } else {
+  headers=["Jaktår","Medelålder handjur","Antal handjur","Medelålder hondjur","Antal hondjur"];
+  rows=data.map(d=>[d.season,fmt(d.male,1),fmt(d.nMale,0),fmt(d.female,1),fmt(d.nFemale,0)]);
+ }
+ head.innerHTML="<tr>"+headers.map(x=>"<th>"+x+"</th>").join("")+"</tr>";
+ body.innerHTML=rows.map(r=>"<tr>"+r.map(x=>"<td>"+x+"</td>").join("")+"</tr>").join("");
+}
+function renderElk(){
+ const area=byId("areaSelect").value;
+ if(area==="grasmyr" && mode!=="harvest"){byId("algChart").innerHTML='<text x="450" y="150" text-anchor="middle" fill="#63736b" font-size="15">Ingen användbar serie för vald statistiktyp</text>';byId("algLegend").innerHTML="";byId("algTable").querySelector("thead").innerHTML="<tr><th>Status</th></tr>";byId("algTable").querySelector("tbody").innerHTML='<tr><td>Portalens test gav inga användbara data. Detta är inte noll avskjutning.</td></tr>';byId("algDescription").textContent="Ingen användbar serie i undersökt Gräsmyrs VVO-underlag.";byId("algNote").textContent="Gräsmyrs VVO har här endast avskjutningsdata för tre säsonger. Älgobs och övriga indikatorer saknar verifierade data i försöken.";return;}
+ const data=selectedData(),spec=modes[mode];drawChart(byId("algChart"),data,spec.series);
+ byId("algLegend").innerHTML=spec.series.map(s=>'<span><i class="swatch" style="background:'+s.color+'"></i>'+s.label+'</span>').join("");
+ byId("algDescription").textContent=spec.description;
+ setTable(data);
+ byId("algNote").textContent=area==="grasmyr"?"Historisk Gräsmyrs VVO-serie (portal-ID 718148). Endast de tre redovisade jaktåren har verifierad avskjutning här.":"Hörneåns ÄSO (portal-ID 724577). Områdets registrerade areal ändras mellan vissa rapportår; tolka jämförelser över tid tillsammans med gränshistoriken.";
+}
+document.querySelectorAll("[data-mode]").forEach(btn=>btn.addEventListener("click",()=>{
+ mode=btn.dataset.mode;document.querySelectorAll("[data-mode]").forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));renderElk();
+}));
+["areaSelect","startYear","endYear"].forEach(id=>byId(id).addEventListener("change",()=>{
+ const start=Number(byId("startYear").value),end=Number(byId("endYear").value);
+ if(start>end){byId("endYear").value=String(start>2020?2025:start>2017?2019:2022);}
+ renderElk();
+}));
+byId("resetFilters").addEventListener("click",()=>{byId("areaSelect").value="hornean";byId("startYear").value="2013";byId("endYear").value="2025";mode="harvest";document.querySelectorAll("[data-mode]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.mode===mode)));renderElk();});
+drawChart(byId("deerChart"),[],[{key:"total",label:"Totalt fällda",color:"#244c3d"}]);
+byId("deerMetric").addEventListener("change",()=>{byId("deerStatus").textContent="Inga verifierade kronhjortsvärden har laddats in. Vald indikator: "+byId("deerMetric").selectedOptions[0].text+". Ingen linje betyder okänd rapportering, inte noll avskjutning.";});
+byId("deerPeriod").addEventListener("change",()=>{byId("deerStatus").textContent="Kronhjortsdata saknas ännu för det valda intervallet; lägg endast in verifierade årsrapporter från Hörneåns KSO.";});
+renderElk();
+</script>
+</body>
+</html>

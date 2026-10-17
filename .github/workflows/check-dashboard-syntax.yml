@@ -1,0 +1,32 @@
+name: Check dashboard JavaScript syntax
+on:
+  push:
+    paths:
+      - "index.html"
+      - ".github/workflows/check-dashboard-syntax.yml"
+  pull_request:
+    paths:
+      - "index.html"
+      - ".github/workflows/check-dashboard-syntax.yml"
+permissions:
+  contents: read
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check inline script syntax
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          s = Path("index.html").read_text(encoding="utf-8")
+          scripts = re.findall(r"<script[^>]*>(.*?)</script>", s, flags=re.S)
+          if len(scripts) != 1:
+              raise SystemExit(f"Expected 1 inline script, found {len(scripts)}")
+          Path("/tmp/dashboard.js").write_text(scripts[0], encoding="utf-8")
+          PY
+          node --check /tmp/dashboard.js
