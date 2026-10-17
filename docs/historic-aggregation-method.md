@@ -112,3 +112,20 @@ En separat tabell i `data/historical_team_harvest_allocations.csv` lagrar jaktla
 2014 års redovisade avskjutning summerar till 30 tjurar, 26 hondjur och 53 kalvar till och med vecka 44. 2015 års tilldelning summerar till 59 vuxna. I 2014 års tabell är Hummelholm förkortat H-holm. Värdena beskriver jaktlagens interna redovisning, inte fristående registrerade områden. De ska inte summeras med Älgdatas områdesstatistik, eftersom det skulle kunna dubbelräkna samma fällda djur.
 
 Dessa två snapshots kan användas för att följa vilka lokala namn som redovisades vid respektive tidpunkt, men de bevisar inte formella anslutningsdatum eller geografisk täckning. Källan är https://www3.olzzon.com/g/g.php?a=s&i=g32-03680-34&m=alla&p=1.
+
+## Historisk arealmatchning mot äldre Nordmalingsområden (2026-10-17)
+
+En publicerad SVT-lista med titeln [Älgtilldelning 2012](https://www.yumpu.com/sv/document/view/27615173/pdf-dokument-algtilldelning-2012-svt) innehåller arealer för äldre VVO och jaktlag. Den jämfördes med Hörneåns rapporterade areal per jaktår i data/area_annual.csv. Resultaten lagras som kandidater i data/historical_area_crosswalk_candidates.csv.
+
+### Exakta aritmetiska träffar
+
+1. **Basår 2013/14:** Gräsmyrs VVO (4 795 ha) + Mullsjö VVO (3 492 ha) + Tallbergslidens VVO (3 172 ha) + Hummelholms VVO (5 508 ha) + Hörnsjö VVO (6 601 ha) + Torrböle VVO (3 209 ha) = **26 777 ha**, exakt samma som Hörneåns ÄSO:s rapporterade areal 2013/14.
+2. **Ökning 2014/15:** Djupsjö VVO (2 506 ha) + Nyåkers VVO (2 568 ha) + en oidentifierad post på 504 ha = **5 578 ha**, exakt samma som ökningen från 26 777 till 32 355 ha. Den oidentifierade 504-ha-posten ska inte automatiskt kopplas till Högland eller något annat lokalt namn.
+3. **Ökning 2018/19:** Öre-Brattfors VVO anges till **3 151 ha**, exakt samma som ökningen från 32 355 till 35 506 ha. Kopplingen till Hörneåns ÄSO har inte verifierats.
+4. **Ökning 2023/24:** Hallens VVO anges till 1 553 ha, nära men inte exakt ökningen 1 565,75 ha (skillnad 12,75 ha). Detta är en svag hypotes, inte en matchning.
+
+### Tolkning
+
+De tre första träffarna ger en konkret prioriteringsordning för att söka historiska registreringsbeslut och kartor. Den exakta basårssumman är starkt indicium på en möjlig sammansättning av den rapporterade arealen men bevisar inte identiska polygoner. En exakt summa kan bero på avrundning, gemensamma gränser eller sammanträffande; historiska områden kan också ha överlappat, ändrats eller varit delar av en annan registreringsenhet. Arealsteget ska inte automatiskt tolkas som anslutningsår.
+
+Nästa kontroll är att jämföra officiella polygoner eller beslut för 2013/14, 2014/15 och 2018/19 och kontrollera om de föreslagna äldre VVO-områdena faktiskt motsvarar Hörneåns geografi. VK:s artikel [Nordmalings älgtilldelning (2011)](https://www.vk.se/2011-07-08/nordmalings-algtilldelning) är ytterligare en relevant äldre källa att jämföra mot. De arealvärden som använts här är hämtade från den separat publicerade 2012-listan.
