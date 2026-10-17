@@ -14,30 +14,48 @@
   "report_checks": [
     {
       "area": "Hörneåns älgskötselområde",
+      "report_id": "4",
+      "report": "Avskjutning med mål — ÄJO",
+      "period": "2013/2014–2025/2026",
+      "status": "DATA",
+      "data_rows": 13,
+      "csv": "data/processed/avskjutning_mal_ajo_hornean_2013-2026.csv"
+    },
+    {
+      "area": "Hörneåns älgskötselområde",
       "report_id": "9",
       "report": "Medelålder — vuxna djur — ÄJO",
-      "period": "2020/2021–2025/2026",
+      "period": "2013/2014–2025/2026",
       "status": "DATA",
-      "data_rows": 6,
-      "csv": "data/processed/medelalder_vuxna_hornean_2020-2026.csv"
+      "data_rows": 13,
+      "csv": "data/processed/medelalder_vuxna_hornean_2013-2026.csv"
     },
     {
       "area": "Hörneåns älgskötselområde",
       "report_id": "20",
       "report": "Slaktvikt — ÄJO",
-      "period": "2020/2021–2025/2026",
+      "period": "2013/2014–2025/2026",
       "status": "DATA",
-      "data_rows": 6,
-      "csv": "data/processed/slaktvikt_hornean_2020-2026.csv"
+      "data_rows": 13,
+      "csv": "data/processed/slaktvikt_hornean_2013-2026.csv"
     },
     {
       "area": "Hörneåns älgskötselområde",
       "report_id": "25",
       "report": "Älgobservationer — ÄJO",
-      "period": "2020/2021–2025/2026",
+      "period": "2013/2014–2025/2026",
       "status": "DATA",
-      "data_rows": 6,
-      "csv": "data/processed/algobs_hornean_2020-2026.csv"
+      "data_rows": 13,
+      "csv": "data/processed/algobs_hornean_2013-2026.csv"
+    },
+    {
+      "area": "Gräsmyrs viltvårdsområde",
+      "report_id": "4",
+      "report": "Avskjutning med mål — ÄJO",
+      "period": "2010/2011–2012/2013",
+      "status": "DATA",
+      "data_rows": 3,
+      "csv": "data/processed/avskjutning_mal_ajo_grasmyr_2010-2013.csv"
     },
     {
       "area": "Gräsmyrs viltvårdsområde",
@@ -65,7 +83,16 @@
       "status": "NO_DATA_IN_PORTAL",
       "data_rows": 0,
       "raw_csv": "data/raw/portal_tables/grasmyr_algobs_ajo_2010-2020.csv"
+    },
+    {
+      "area": "Gräsmyrs viltvårdsområde",
+      "report_id": "4",
+      "report": "Avskjutning med mål — ÄJO",
+      "period": "2020/2021–2025/2026",
+      "status": "AREA_NOT_AVAILABLE_IN_CURRENT_OR_HISTORICAL_SELECTOR",
+      "data_rows": 0,
+      "notes": "Portal ID 718148 could not be selected for this period with either current or historical boundary settings."
     }
   ],
-  "caveat": "Gräsmyrs lack of data in these three report types does not equate to zero harvest/observations. Geographic/hunting-unit changes and report availability need separate verification."
+  "caveat": "Missing report rows, zero samples, or a 'no data' message are not proof that harvest or observations were zero. Geographic and reporting-unit changes need separate verification. Gräsmyrs VVO and Hörneåns ÄSO must remain separate until official decisions and historical geographies establish their relationship."
 }
