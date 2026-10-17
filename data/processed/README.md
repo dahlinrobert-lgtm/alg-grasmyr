@@ -32,3 +32,16 @@ För Hörneåns ÄSO har tre rapporttyper fångats för 2020/2021–2025/2026:
 - `algobs_hornean_2020-2026.csv`: älgobs per mantimme, kalv/hondjur- och könsandelar, antal efter observationskategori samt statistisk säkerställning.
 
 Råa tabellfångster ligger i `data/raw/portal_tables/`. Se `other-statistics-hornean-2020-2026.metadata.json` för fältförklaringar och `other-statistics-coverage.json` för utfall per område/rapport. Gräsmyrs rapporter för medelålder, slaktvikt och älgobs returnerade noll provantal eller ingen data i de kontrollerade urvalen; detta får inte tolkas som noll fällda eller observerade älgar.
+
+
+## Fullständig statistikserie för Hörneåns ÄSO (2013/2014–2025/2026)
+
+Efter två uttag per rapporttyp är följande sammanhängande 13-säsongsserier sammanställda med portalens nuvarande gränsval:
+
+- `medelalder_vuxna_hornean_2013-2026.csv`: medelålder (år) och antal för vuxna handjur/hondjur.
+- `slaktvikt_hornean_2013-2026.csv`: slaktvikter (kg) och antal prov för vuxna djur och flera kalvgrupper.
+- `algobs_hornean_2013-2026.csv`: älgobs per mantimme, kalv-/hondjurmått, andel handjur, observationer efter kategori och statistisk säkerställning.
+- `other-statistics-hornean-2013-2026.metadata.json`: rapport-ID:n, period, källor och fältbeskrivning.
+- `other-statistics-coverage.json`: täckning för samtliga fyra rapporttyper och båda områdesidentiteterna.
+
+Varje rapportserie bör analyseras tillsammans med dess provantal/mantimmar och rapporterad statistisk säkerställning. Medelvärden med få prov kan variera kraftigt. Områdenas gränser och registrerade areal kan också variera mellan år.
