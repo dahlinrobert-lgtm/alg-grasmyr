@@ -154,3 +154,17 @@ Viktigt: samma lista innehåller även andra poster utan namn, exempelvis `01-02
 
 Officiell allmän vägledning: Länsstyrelsen beskriver att älgskötsel- och licensområden registreras av myndigheten och att ändringar kräver ansökan/beslut ([Älgförvaltning och jaktområden](https://www.lansstyrelsen.se/vasterbotten/djur/jakt-och-vilt/algjakt/algforvaltning-och-jaktomraden.html)). För att sluta frågan behövs historiskt registerutdrag, registreringsbeslut med karta/fastighetslista eller bekräftelse från Länsstyrelsen Västerbotten.
 
+## Portalens säsongsfiltrerade sökning efter historiska ID:n (2026-10-17)
+
+En ny Playwright-inspektion ställde uttryckligen in rapporttypen `Avskjutning med mål — ÄJO`, Västerbottens län och jaktåret 2009/2010 innan den läste områdesväljaren i alla fem ÄFO och båda gränslägena. Körningen var framgångsrik och artifact finns från GitHub Actions-körningen [39066281476](https://github.com/dahlinrobert-lgtm/alg-grasmyr/actions/runs/39066281476).
+
+I Sydöstra ÄFO visades följande historiska val i portalens områdesväljare:
+- `24-01-02-098-A — Höglågdal jaktområde`, internt portal-ID `718169`. Detta är en stark kandidat till den namnlösa posten `01-02-098` (340 ha) i 2012-listan, eftersom kodens sifferdelar överensstämmer och portalen nu ger området ett namn. Den äldre arealen ska kontrolleras i den separat hämtade avskjutningsrapporten innan arealkopplingen behandlas som helt bekräftad.
+- `24-01-02-183-A`, internt portal-ID `718179`, visas utan områdesnamn. Den motsvarar den äldre koden `01-02-183` i portalens registreringsnummerstruktur. Den äldre listan anger 504 ha. Kopplingen mellan den namnlösa registreringsenheten och portalens ID är nu bekräftad i säsongsfiltrerad väljare, men historiskt namn och koppling till det lokala jaktlaget Högland är fortfarande okända.
+
+Sökningen gav även namnet `HÖGLAND-VACKERLIDEN JAKTLAG` under Mellersta ÄFO (`24-21-01-171-A`) och `LÅNGSELE-HÖGLANDS JAKTLAG` under Sydvästra ÄFO (`24-25-91-007-A`). Dessa ligger i andra förvaltningsområden och får **inte** identifieras med det lokala Högland som nämns i den äldre tilldelningslistan för Hörneåns ÄSO. Namnträff i sig bevisar inte geografisk identitet.
+
+De övriga historiska områdena i Sydöstra ÄFO hade följande interna portal-ID:n i samma inspektion: Mullsjö 718143, Tallbergslidens 718145, Gräsmyr 718148, Hörnsjö 718150, Hummelholm 718153, Nyåker 718155, Djupsjö 718168 och Torrböle 718170. Detta gör det möjligt att hämta deras tabellrader reproducerbart med `scripts/download_statistics.py`.
+
+Källfil: `data/portal_area_crosswalk_2009_2010.csv`. Automatiserat uttag: `.github/workflows/download-2009-historical-areas.yml`. Den första oårsspecifika inspektionen ska inte användas för slutsatser om saknade historiska områden; den korrigerade inspektionen med jaktår 2009/2010 är den relevanta.
+
