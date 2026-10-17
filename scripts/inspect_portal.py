@@ -133,35 +133,61 @@ async def main() -> None:
         await page.wait_for_timeout(max(0, min(args.seconds, 20)) * 1000)
         dom = await inspect_dom(page)
 
-        # If native select boxes exist, expand data dependencies by selecting
-        # the county and area when those exact labels are present. This only
-        # reads public data; it does not submit or change server-side records.
+        # Select Västerbottens län, then visit its AFOs so the portal populates
+        # the dependent hunting-area list. These are read-only public lookups.
         exploratory_actions: list[dict[str, str]] = []
-        for target in ("Västerbottens län", "Hörneåns älgskötselområde", "Gräsmyrs viltvårdsområde"):
-            selects = page.locator("select")
-            count = await selects.count()
-            chosen = False
-            for idx in range(count):
-                select = selects.nth(idx)
-                try:
-                    option_texts = await select.locator("option").all_text_contents()
-                    match = next((t.strip() for t in option_texts if t.strip().casefold() == target.casefold()), None)
+        county_select = page.locator("select").filter(has=page.locator("option", has_text="Västerbottens län")).first
+        try:
+            county_value = await county_select.locator("option").filter(has_text="Västerbottens län").first.get_attribute("value")
+            if county_value:
+                await county_select.select_option(value=county_value)
+                await page.wait_for_timeout(900)
+                exploratory_actions.append({"target": "Västerbottens län", "action": "selected native option"})
+        except Exception as exc:
+            exploratory_actions.append({"target": "Västerbottens län", "action": "select failed: " + str(exc)[:120]})
+
+        area_discovery: list[dict[str, Any]] = []
+        afo_select = page.locator("select").filter(
+            has=page.locator("option", has_text="Nordvästra älgförvaltningsområdet")
+        ).first
+        try:
+            afo_options = await afo_select.locator("option").evaluate_all(
+                "(els) => els.map(o => ({label: o.text.trim(), value: o.value}))"
+            )
+        except Exception:
+            afo_options = []
+
+        for afo in afo_options:
+            if afo["value"] == "-1" or not afo["label"]:
+                continue
+            try:
+                await afo_select.select_option(value=afo["value"])
+                await page.wait_for_timeout(1200)
+                area_select = page.locator("select").filter(
+                    has=page.locator("option", has_text="Välj...")
+                ).last
+                opts = await area_select.locator("option").evaluate_all(
+                    "(els) => els.map(o => ({label: o.text.trim(), value: o.value}))"
+                )
+                discovered_names = [o["label"] for o in opts if o["value"] != "-1" and o["label"]]
+                area_discovery.append({
+                    "afo_name": afo["label"], "afo_id": afo["value"],
+                    "areas_loaded": len(discovered_names), "area_options": opts,
+                })
+                for target in ("Hörneåns älgskötselområde", "Hörneåns ÄSO", "Gräsmyrs viltvårdsområde"):
+                    match = next((o for o in opts if target.casefold() in o["label"].casefold()), None)
                     if match:
-                        current = (await select.input_value()).strip()
-                        target_value = await select.locator("option").filter(has_text=match).first.get_attribute("value")
-                        if target_value and current != target_value:
-                            await select.select_option(value=target_value)
-                            exploratory_actions.append({"target": target, "action": "selected native option"})
-                            await page.wait_for_timeout(1500)
-                        else:
-                            exploratory_actions.append({"target": target, "action": "already selected or empty value"})
-                        chosen = True
-                        break
-                except Exception:
-                    continue
-            if not chosen:
-                exploratory_actions.append({"target": target, "action": "not found in native select options"})
-        final_dom = await inspect_dom(page)
+                        await area_select.select_option(value=match["value"])
+                        exploratory_actions.append({
+                            "target": target,
+                            "action": f"found under {afo['label']} (area value {match['value']})"
+                        })
+            except Exception as exc:
+                area_discovery.append({
+                    "afo_name": afo["label"], "afo_id": afo["value"],
+                    "error": str(exc)[:180],
+                })
+                final_dom = await inspect_dom(page)
         if response_tasks:
             await asyncio.gather(*list(response_tasks), return_exceptions=True)
 
@@ -172,6 +198,7 @@ async def main() -> None:
             "navigation_error": navigation_error,
             "initial_dom": dom,
             "exploratory_actions": exploratory_actions,
+            "area_discovery": area_discovery,
             "final_dom": final_dom,
             "requests": requests,
             "responses": responses,
@@ -194,6 +221,11 @@ async def main() -> None:
             "requests": len(requests),
             "responses": len(responses),
             "exploratory_actions": exploratory_actions,
+            "area_discovery": [
+                {"afo_name": x.get("afo_name"), "afo_id": x.get("afo_id"),
+                 "areas_loaded": x.get("areas_loaded"), "error": x.get("error")}
+                for x in area_discovery
+            ],
             "likely_data_requests": [
                 x for x in responses
                 if x.get("resource_type") in ("xhr", "fetch")
