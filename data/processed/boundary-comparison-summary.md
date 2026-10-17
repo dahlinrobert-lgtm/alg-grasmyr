@@ -1,6 +1,6 @@
 # Jämförelse av originalfiler: historiska och nuvarande gränser
 
-Antal Excel-filer inventerade: **39**. Identiska filer med samma SHA-256 har identifierats som dubbletter.
+Den ursprungliga inventeringen omfattade **39 Excel-filer**. Fyra ytterligare uppladdade originalfiler för 2017/2018 och 2018/2019 har jämförts separat.
 
 Jämförelsen matchar rader på **registreringsnummer**, inte Excel-radnummer. Därför ska sorteringsskillnader inte räknas som dataskillnader. Gränslägen kan påverka registrerad areal och förvaltningsstatistik; rapporten visar skillnaderna men avgör inte vilken geometri som juridiskt gäller.
 
@@ -23,6 +23,8 @@ Jämförelsen matchar rader på **registreringsnummer**, inte Excel-radnummer. D
 | 2014/2015 | compared by registration number | 189 | 189 | 0 | 0 | 0 |
 | 2015/2016 | compared by registration number | 148 | 148 | 0 | 0 | 0 |
 | 2016/2017 | compared by registration number | 144 | 144 | 0 | 0 | 0 |
+| 2017/2018 | supplemental Excel comparison | 116 | 116 | 0 | 0 | 0 |
+| 2018/2019 | supplemental Excel comparison | 109 | 109 | 0 | 0 | 0 |
 | 2019/2020 | compared by registration number | 108 | 108 | 0 | 0 | 0 |
 | 2019/2020 | compared by registration number (duplicate export) | 108 | 108 | 0 | 0 | 0 |
 | 2020/2021 | compared by registration number | 108 | 108 | 0 | 0 | 0 |
@@ -214,14 +216,14 @@ Fulla radvärden för de kända äldre områdeskoderna finns i `area-registratio
 
 ### Vad originalfilerna säger om de två arbetshypoteserna
 
-- **Öre-Brattfors VVO (`24-01-02-049-A`)**: separat registrering med 3 151 ha i de tillgängliga filerna till och med 2016/17; inte separat i de tillgängliga filerna från 2019/20. Filer för 2017/18 och 2018/19 saknas, så den exakta övergången kan inte avläsas.
+- **Öre-Brattfors VVO (`24-01-02-049-A`)**: separat registrering med 3 151 ha i Excel-exporten 2017/18 men inte som separat rad i 2018/19. Hörneåns areal ökar samtidigt med 3 151 ha. Detta stöder ett samband men bevisar inte formellt medlemskap eller identiska gränser.
 - **Hallens VVO (`24-01-02-067-A`)**: 1 553 ha i filerna 2012/13–2020/21; 1 567,62 ha i 2021/22 och 2022/23; saknas som separat registrering från 2023/24. Hörneåns ökning 2023/24 är 1 565,75 ha, alltså 1,87 ha mindre än Hallens senaste redovisade areal.
-- För säsonger där båda exportvarianterna finns, innehåller matchande registreringsnummer samma registrerade fält. Skillnaden är i huvudsak att 2012/13-filen med nuvarande gränser innehåller tre ytterligare registreringar.
+- För alla säsonger där båda exportvarianterna finns, inklusive de uppladdade filerna för 2017/18 och 2018/19, innehåller matchande registreringsnummer samma registrerade fält. Skillnaden är i huvudsak att 2012/13-filen med nuvarande gränser innehåller tre ytterligare registreringar.
 - Detta stärker övergångshypoteserna men är inte formellt beslut eller bevis för identiska polygoner.
 
 ## Viktiga reservationer
 
-- Perioder utan båda filtyperna kan inte jämföras direkt.
+- För 2000/01–2011/12 finns endast nuvarande-gränser-exporter. För 2012/13–2026/27 finns båda exporttyperna i det granskade underlaget.
 - Identiska dubblettfiler ska inte räknas som oberoende belägg.
 - Registreringsnummer som saknas i en export kan bero på exporturval eller gränsdefinition; det är inte automatiskt ett bevis på att jaktområdet upphört eller tillkommit.
 - Denna rapport verifierar Excel-innehåll och skillnader mellan exporterna, inte formella beslut eller polygonernas juridiska status.
