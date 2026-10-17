@@ -21,6 +21,10 @@ Portalen visar följande områden under **Sydöstra älgförvaltningsområdet**:
 
 Detta är två separata val i portalen. De ska inte automatiskt behandlas som samma geografiska enhet. För att länka tidsserierna behövs historik över beslut, områdesgränser och eventuell ändrad rapportering.
 
+## Webbplats
+
+En responsiv statistikwebb publiceras via GitHub Pages från [index.html](index.html) i repositoryts rot. Den visar separat älgstatistik för Hörneåns ÄSO och historiska Gräsmyrs VVO, samt en egen kronhjortsdel där värden inte visas förrän årsdata har verifierats. Webbplatsen markerar områdeshistorik och saknade värden.
+
 ## Data som redan finns i repot
 
 - [Hörneåns ÄSO – avskjutning 2013/2014–2025/2026](data/processed/avskjutning_mal_ajo_hornean_2013-2026.csv): 13 säsonger, med både faktiskt fällda älgar, avskjutningsmål och rapporterad nyttjandegrad.
