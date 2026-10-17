@@ -1,13 +1,7 @@
 #!/usr/bin/env python3
-"""Audit original Älgdata XLSX exports grouped by boundary mode and season.
-
-The script preserves workbook cell positions and reports sheet dimensions,
-non-empty cell samples, and cell-by-cell differences for matching seasons
-where both historical and current boundary exports exist. It does not infer
-that either boundary mode represents the true area of a VVO.
-"""
+"""Compare Älgdata XLSX exports by registration number, not worksheet row position."""
 from __future__ import annotations
-import csv, json, re
+import csv, hashlib, json, re
 from pathlib import Path
 from openpyxl import load_workbook
 
@@ -15,86 +9,126 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT = ROOT / "out" / "boundary-workbook-audit"
 PATTERN = re.compile(r"Avskjutning med mål - Förvaltningsområde - (Historiska|Nuvarande) gränser - .*? - (\d{4})--(\d{4})", re.I)
+COLS = ["Registreringsnummer","Jaktområdets namn","Säsong","Slut-rapporterat","Registrerad areal ha","Vuxen","Handjur","Hondjur","Kalv","Handjur kalv","Hondjur kalv","Totalt","Varav otjänliga","Varav oregistrerad mark","Älgar/1000 ha","Tjur %","Kalv %","Vuxen historik","Handjur historik","Hondjur historik","Kalv historik","Totalt historik","Älgar/1000 ha historik","Vuxen per 1000 ha","Kalv per 1000 ha","Totalt per 1000 ha"]
 
-def val(v):
-    if v is None: return ""
-    return str(v)
+def txt(v):
+    return "" if v is None else str(v).strip()
 
-def inspect(path):
+def workbook_rows(path):
     wb = load_workbook(path, read_only=True, data_only=True)
-    sheets = []
-    for ws in wb.worksheets:
-        rows = []
-        for row in ws.iter_rows():
-            cells = [{"cell": c.coordinate, "value": val(c.value)} for c in row if c.value is not None]
-            if cells:
-                rows.append(cells)
-            if len(rows) >= 35:
-                break
-        sheets.append({"name": ws.title, "max_row": ws.max_row, "max_column": ws.max_column, "rows": rows})
+    ws = wb.worksheets[0]
+    rows = list(ws.iter_rows(values_only=True))
     wb.close()
-    return sheets
+    if len(rows) < 3:
+        return {}
+    headers = [txt(v) for v in rows[1]]
+    output = {}
+    for row in rows[2:]:
+        vals = [txt(v) for v in row]
+        if not vals or not vals[0]:
+            continue
+        reg = vals[0]
+        # Exports may repeat the same key; preserve duplicates so they can be diagnosed.
+        output.setdefault(reg, []).append({headers[i] if i < len(headers) and headers[i] else f"column_{i+1}": vals[i] for i in range(len(vals))})
+    return output
+
+def sha(path):
+    h=hashlib.sha256()
+    with path.open("rb") as f:
+        for chunk in iter(lambda:f.read(1024*1024),b""): h.update(chunk)
+    return h.hexdigest()
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    files = sorted(DATA.glob("*.xlsx"))
-    records = []
-    by_key = {}
-    for p in files:
-        m = PATTERN.search(p.name)
-        if not m:
-            continue
-        mode = "historical" if m.group(1).lower().startswith("histor") else "current"
-        season = f"{m.group(2)}/{m.group(3)}"
-        sheets = inspect(p)
-        payload = {"file": p.name, "boundary_mode": mode, "season": season, "size_bytes": p.stat().st_size, "sheets": sheets}
-        (OUT / (p.stem.replace("/", "_") + ".json")).write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-        records.append({"file": p.name, "boundary_mode": mode, "season": season, "size_bytes": p.stat().st_size, "sheet_count": len(sheets), "sheet_names": " | ".join(s["name"] for s in sheets)})
-        by_key.setdefault(season, {}).setdefault(mode, []).append((p, sheets))
-    with (OUT / "workbook_inventory.csv").open("w", newline="", encoding="utf-8-sig") as f:
-        w=csv.DictWriter(f, fieldnames=["file","boundary_mode","season","size_bytes","sheet_count","sheet_names"], delimiter=";")
+    records=[]
+    by_key={}
+    seen_hashes={}
+    for p in sorted(DATA.glob("*.xlsx")):
+        m=PATTERN.search(p.name)
+        if not m: continue
+        mode="historical" if m.group(1).lower().startswith("histor") else "current"
+        season=f"{m.group(2)}/{m.group(3)}"
+        digest=sha(p)
+        duplicate_of=seen_hashes.get(digest, "")
+        seen_hashes.setdefault(digest,p.name)
+        rec={"file":p.name,"mode":mode,"season":season,"size_bytes":p.stat().st_size,"sha256":digest,"duplicate_of":duplicate_of}
+        records.append(rec)
+        if not duplicate_of:
+            by_key.setdefault(season,{}).setdefault(mode,[]).append(p)
+    with (OUT/"workbook_inventory.csv").open("w",newline="",encoding="utf-8-sig") as f:
+        w=csv.DictWriter(f,fieldnames=["file","mode","season","size_bytes","sha256","duplicate_of"],delimiter=";")
         w.writeheader(); w.writerows(records)
-    comparisons = []
-    for season, modes in sorted(by_key.items()):
-        if "historical" not in modes or "current" not in modes:
-            comparisons.append({"season":season,"status":"missing one boundary mode","historical_files":len(modes.get("historical",[])),"current_files":len(modes.get("current",[])),"cell_differences":""})
+    comparisons=[]
+    for season,modes in sorted(by_key.items()):
+        olds=modes.get("historical",[]); news=modes.get("current",[])
+        if not olds or not news:
+            comparisons.append({"season":season,"status":"missing one boundary mode","old_files":len(olds),"new_files":len(news)})
             continue
-        for old_path, old_sheets in modes["historical"]:
-            for new_path, new_sheets in modes["current"]:
-                old_map = {(si, r, c): val(cell.value) for si, ws in enumerate(load_workbook(old_path, read_only=True, data_only=True).worksheets) for r, row in enumerate(ws.iter_rows(),1) for c,cell in enumerate(row,1) if cell.value is not None}
-                wb2=load_workbook(new_path, read_only=True, data_only=True)
-                new_map = {(si, r, c): val(cell.value) for si, ws in enumerate(wb2.worksheets) for r, row in enumerate(ws.iter_rows(),1) for c,cell in enumerate(row,1) if cell.value is not None}
-                wb2.close()
-                keys=sorted(set(old_map)|set(new_map))
-                diffs=[{"sheet_index":k[0],"row":k[1],"column":k[2],"historical":old_map.get(k,""),"current":new_map.get(k,"")} for k in keys if old_map.get(k,"") != new_map.get(k,"")]
-                comparisons.append({"season":season,"status":"compared","historical_file":old_path.name,"current_file":new_path.name,"cell_differences":len(diffs),"differences":diffs})
-    (OUT/"boundary_comparison.json").write_text(json.dumps(comparisons, ensure_ascii=False, indent=2), encoding="utf-8")
+        for oldp in olds:
+            oldrows=workbook_rows(oldp)
+            for newp in news:
+                newrows=workbook_rows(newp)
+                oldkeys=set(oldrows); newkeys=set(newrows)
+                missing_new=sorted(oldkeys-newkeys)
+                missing_old=sorted(newkeys-oldkeys)
+                field_diffs=[]
+                duplicates=[]
+                for reg in sorted(oldkeys & newkeys):
+                    if len(oldrows[reg]) != 1 or len(newrows[reg]) != 1:
+                        duplicates.append({"registration":reg,"historical_rows":len(oldrows[reg]),"current_rows":len(newrows[reg])})
+                        continue
+                    a,b=oldrows[reg][0],newrows[reg][0]
+                    for col in sorted(set(a)|set(b)):
+                        av,bv=a.get(col,""),b.get(col,"")
+                        # Skip metadata and derived ratios where small denominator/rounding may differ.
+                        if av != bv and col not in ("Säsong",):
+                            field_diffs.append({"registration":reg,"name":a.get("Jaktområdets namn",b.get("Jaktområdets namn","")),"field":col,"historical":av,"current":bv})
+                # Only report non-title differences using identity keys.
+                status="compared by registration number"
+                comparisons.append({
+                    "season":season,"status":status,"historical_file":oldp.name,"current_file":newp.name,
+                    "historical_registrations":len(oldkeys),"current_registrations":len(newkeys),
+                    "only_historical_count":len(missing_new),"only_current_count":len(missing_old),
+                    "only_historical":missing_new,"only_current":missing_old,
+                    "duplicate_keys":duplicates,"field_difference_count":len(field_diffs),
+                    "field_differences":field_diffs,
+                    "area_differences":[d for d in field_diffs if "areal" in d["field"].lower()],
+                    "harvest_differences":[d for d in field_diffs if any(k in d["field"].lower() for k in ("vuxen","handjur","hondjur","kalv","totalt","otjänliga","oregistrerad"))]
+                })
+    (OUT/"boundary_comparison.json").write_text(json.dumps(comparisons,ensure_ascii=False,indent=2),encoding="utf-8")
     with (OUT/"boundary_comparison_summary.csv").open("w",newline="",encoding="utf-8-sig") as f:
-        fields=["season","status","historical_files","current_files","historical_file","current_file","cell_differences"]
-        w=csv.DictWriter(f,fieldnames=fields,delimiter=";");w.writeheader()
-        for x in comparisons:
-            w.writerow({k:x.get(k,"") for k in fields})
-    report = ["# Original Excel-export audit: historical vs current boundaries", "", f"Workbook files inspected: **{len(records)}**.", "", "Cell values are compared at matching sheet/row/column positions. This shows export differences, not which boundary is geographically correct.", "", "| Season | Status | Historical files | Current files | Different cells |", "|---|---|---:|---:|---:|"]
+        fields=["season","status","historical_file","current_file","historical_registrations","current_registrations","only_historical_count","only_current_count","field_difference_count"]
+        w=csv.DictWriter(f,fieldnames=fields,delimiter=";"); w.writeheader()
+        for x in comparisons: w.writerow({k:x.get(k,"") for k in fields})
+    report=["# Jämförelse av originalfiler: historiska och nuvarande gränser","",
+      f"Antal Excel-filer inventerade: **{len(records)}**. Identiska filer med samma SHA-256 har identifierats som dubbletter.",
+      "",
+      "Jämförelsen matchar rader på **registreringsnummer**, inte Excel-radnummer. Därför ska sorteringsskillnader inte räknas som dataskillnader. Gränslägen kan påverka registrerad areal och förvaltningsstatistik; rapporten visar skillnaderna men avgör inte vilken geometri som juridiskt gäller.",
+      "",
+      "| Säsong | Status | Historiska registreringar | Nuvarande registreringar | Endast historiska | Endast nuvarande | Fält som skiljer |",
+      "|---|---|---:|---:|---:|---:|---:|"]
     for x in comparisons:
-        report.append("| " + " | ".join(str(x.get(k, "")) for k in ["season", "status", "historical_files", "current_files", "cell_differences"]) + " |")
-    report.extend(["", "## Cell-level differences", ""])
-    found = False
+        report.append("| "+" | ".join(str(x.get(k,"")) for k in ["season","status","historical_registrations","current_registrations","only_historical_count","only_current_count","field_difference_count"])+" |")
+    report.extend(["","## Säsongsvisa skillnader",""])
     for x in comparisons:
-        diffs = x.get("differences", [])
-        if not diffs:
-            continue
-        found = True
-        report.extend(["### " + x["season"], "", "Historical: " + x["historical_file"], "", "Current: " + x["current_file"], "", "| Sheet index | Row | Column | Historical value | Current value |", "|---:|---:|---:|---|---|"])
-        for d in diffs[:200]:
-            oldv = str(d["historical"]).replace("|", "\\|").replace("\n", " ")
-            newv = str(d["current"]).replace("|", "\\|").replace("\n", " ")
-            report.append(f"| {d['sheet_index']} | {d['row']} | {d['column']} | {oldv} | {newv} |")
-        if len(diffs) > 200:
-            report.append(f"| … | … | … | First 200 of {len(diffs)} differences shown | |")
+        if x["status"]!="compared by registration number": continue
+        report.extend([f"### {x['season']}","",f"Historisk fil: `{x['historical_file']}`  ",f"Nuvarande fil: `{x['current_file']}`",""])
+        if x["only_historical"]:
+            report.append("Registreringar endast i historisk fil: "+", ".join(x["only_historical"]))
+        if x["only_current"]:
+            report.append("Registreringar endast i nuvarande fil: "+", ".join(x["only_current"]))
+        if x["duplicate_keys"]: report.append("Dubbletter av registreringsnummer: "+json.dumps(x["duplicate_keys"],ensure_ascii=False))
+        report.extend(["","| Registreringsnummer | Jaktområde | Fält | Historiskt | Nuvarande |","|---|---|---|---|---|"])
+        for d in x["field_differences"][:250]:
+            vals=[d["registration"],d["name"],d["field"],d["historical"],d["current"]]
+            vals=[str(v).replace("|","\\|").replace("\n"," ") for v in vals]
+            report.append("| "+" | ".join(vals)+" |")
+        if len(x["field_differences"])>250: report.append(f"| … | … | … | Första 250 av {len(x['field_differences'])} fältskillnader visas | |")
+        if not x["field_differences"] and not x["only_historical"] and not x["only_current"]:
+            report.append("| — | — | — | Inga värdeskillnader identifierade | — |")
         report.append("")
-    if not found:
-        report.append("No cell-level differences detected in seasons where both boundary modes were available.")
-    report.extend(["", "## Interpretation cautions", "", "- A missing workbook is not evidence of zero area or zero observations.", "- Differences may reflect export layout or boundary-mode semantics; inspect actual values before interpreting them.", "- The 2017/18 and 2018/19 gaps remain gaps unless source workbooks are added.", "- This comparison does not prove VVO membership or that a registration joined an ÄSO.", ""])
-    (DATA / "processed" / "boundary-comparison-summary.md").write_text("\n".join(report), encoding="utf-8")
-    print(f"Audited {len(records)} original XLSX workbooks; readable report generated.")
-if __name__ == "__main__": main()
+    report.extend(["## Viktiga reservationer","","- Perioder utan båda filtyperna kan inte jämföras direkt.","- Identiska dubblettfiler ska inte räknas som oberoende belägg.","- Registreringsnummer som saknas i en export kan bero på exporturval eller gränsdefinition; det är inte automatiskt ett bevis på att jaktområdet upphört eller tillkommit.","- Denna rapport verifierar Excel-innehåll och skillnader mellan exporterna, inte formella beslut eller polygonernas juridiska status.",""])
+    (DATA/"processed"/"boundary-comparison-summary.md").write_text("\n".join(report),encoding="utf-8")
+    print(f"Compared {len(records)} XLSX files using registration keys; report written to data/processed/boundary-comparison-summary.md")
+
+if __name__=="__main__": main()
