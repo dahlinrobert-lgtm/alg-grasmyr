@@ -1,0 +1,71 @@
+{
+  "source": "Länsstyrelsernas Älgdata statistics portal",
+  "retrieved_on": "2026-10-17",
+  "area_registry": {
+    "Hörneåns älgskötselområde": {
+      "portal_id": 724577,
+      "display_id": "24-01-02-342-Ä"
+    },
+    "Gräsmyrs viltvårdsområde": {
+      "portal_id": 718148,
+      "display_id": "24-01-02-017-A"
+    }
+  },
+  "report_checks": [
+    {
+      "area": "Hörneåns älgskötselområde",
+      "report_id": "9",
+      "report": "Medelålder — vuxna djur — ÄJO",
+      "period": "2020/2021–2025/2026",
+      "status": "DATA",
+      "data_rows": 6,
+      "csv": "data/processed/medelalder_vuxna_hornean_2020-2026.csv"
+    },
+    {
+      "area": "Hörneåns älgskötselområde",
+      "report_id": "20",
+      "report": "Slaktvikt — ÄJO",
+      "period": "2020/2021–2025/2026",
+      "status": "DATA",
+      "data_rows": 6,
+      "csv": "data/processed/slaktvikt_hornean_2020-2026.csv"
+    },
+    {
+      "area": "Hörneåns älgskötselområde",
+      "report_id": "25",
+      "report": "Älgobservationer — ÄJO",
+      "period": "2020/2021–2025/2026",
+      "status": "DATA",
+      "data_rows": 6,
+      "csv": "data/processed/algobs_hornean_2020-2026.csv"
+    },
+    {
+      "area": "Gräsmyrs viltvårdsområde",
+      "report_id": "9",
+      "report": "Medelålder — vuxna djur — ÄJO",
+      "period": "2010/2011–2019/2020",
+      "status": "ZERO_COUNTS_OR_NO_SAMPLES",
+      "data_rows": 2,
+      "raw_csv": "data/raw/portal_tables/grasmyr_medelalder_ajo_2010-2020.csv"
+    },
+    {
+      "area": "Gräsmyrs viltvårdsområde",
+      "report_id": "20",
+      "report": "Slaktvikt — ÄJO",
+      "period": "2010/2011–2019/2020",
+      "status": "NO_DATA_IN_PORTAL",
+      "data_rows": 0,
+      "raw_csv": "data/raw/portal_tables/grasmyr_slaktvikt_ajo_2010-2020.csv"
+    },
+    {
+      "area": "Gräsmyrs viltvårdsområde",
+      "report_id": "25",
+      "report": "Älgobservationer — ÄJO",
+      "period": "2010/2011–2019/2020",
+      "status": "NO_DATA_IN_PORTAL",
+      "data_rows": 0,
+      "raw_csv": "data/raw/portal_tables/grasmyr_algobs_ajo_2010-2020.csv"
+    }
+  ],
+  "caveat": "Gräsmyrs lack of data in these three report types does not equate to zero harvest/observations. Geographic/hunting-unit changes and report availability need separate verification."
+}
