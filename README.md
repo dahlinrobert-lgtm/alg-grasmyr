@@ -128,7 +128,7 @@ Vid avstämning ska vi skilja mellan:
 
 För offentlig statistik i detta projekt används endast myndighetens publicerade Excel-exporter som belägg för registrerade arealer, områdesnamn, registreringsnummer och jaktår. Externa listor, lokala källor och andra webbplatser används inte för att fylla luckor eller fastställa historiska medlemskap.
 
-- **2018/2019:** Hörneåns rapporterade areal ökar med 3 151 ha. Öre-Brattfors förekommer separat med 3 151 ha i äldre tillgängliga Excel-exporter. Det är en aritmetisk matchning, inte bevis för överföring.
+- **2019/2020:** Den första tillgängliga Excel-exporten efter luckan visar 35 506 ha, 3 151 ha mer än 2016/2017. Öre-Brattfors finns separat med 3 151 ha i Excel 2016/2017. Det är en aritmetisk matchning över en källucka, inte bevis för överföring eller för att förändringen skedde 2018/2019.
 - **2020/2021:** rapporterad ökning är 61,05 ha. Ingen motsvarande separat registrering har identifierats i den granskade Excel-serien. Orsaken är okänd; vi antar varken felinmatning eller anslutning.
 - **2023/2024:** Hörneåns rapporterade areal ökar med 1 565,75 ha. Hallens finns separat med 1 567,62 ha i Excel 2021/2022 och 2022/2023, en differens på 1,87 ha. Det bevisar inte överföring eller identiska gränser.
 - Öre-Brattfors finns separat i tillgängliga filer till och med 2016/2017 men inte i tillgängliga filer från 2019/2020. Hallens finns separat till och med 2022/2023 men saknas separat från 2023/2024.
