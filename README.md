@@ -50,14 +50,17 @@ docs/
 scripts/
   inspect_export.py    # inspekterar exempel på exportfiler
   prepare_export.py    # CSV-kopior + manifest från xlsx
+  inspect_portal.py    # kontrollerar publika fält, områden och endpoints
+  download_statistics.py # hämtar en Excel-rapport via statistikportalen
 ```
 
 ## Status
 
 - [x] Identifierat statistikportalen och WebbGIS som relevanta primärkällor.
 - [x] Lagt till verktyg för att inspektera och förbereda exporter.
-- [ ] Verifiera officiella ID:n och historiska gränser för båda områdesnamnen.
-- [ ] Spara en första faktisk Excel-export för Hörneåns ÄSO och en historisk export för Gräsmyrs VVO.
+- [x] Identifierat Hörneåns ÄSO i statistikportalens områdeslista: `24-01-02-342-Ä`, portal-ID `724577`, under Sydöstra ÄFO.
+- [ ] Verifiera det historiska ID:t och gränserna för Gräsmyrs viltvårdsområde.
+- [ ] Kontrollera utfallet från första automatiserade Excel-exporten i GitHub Actions och spara en verifierad råexport.
 - [ ] Mappa exporternas verkliga kolumner till ett stabilt schema.
 - [ ] Undersöka statistikportalens faktiska nätverksanrop/exportväg innan eventuell schemalagd automatisering byggs.
 
