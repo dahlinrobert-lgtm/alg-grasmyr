@@ -59,6 +59,7 @@ scripts/
 - [x] Identifierat statistikportalen och WebbGIS som relevanta primärkällor.
 - [x] Lagt till verktyg för att inspektera och förbereda exporter.
 - [x] Identifierat Hörneåns ÄSO i statistikportalens områdeslista: `24-01-02-342-Ä`, portal-ID `724577`, under Sydöstra ÄFO.
+- [x] Identifierat Gräsmyrs VVO i statistikportalens områdeslista: `24-01-02-017-A`, portal-ID `718148`, också under Sydöstra ÄFO.
 - [ ] Verifiera det historiska ID:t och gränserna för Gräsmyrs viltvårdsområde.
 - [ ] Kontrollera utfallet från första automatiserade Excel-exporten i GitHub Actions och spara en verifierad råexport.
 - [ ] Mappa exporternas verkliga kolumner till ett stabilt schema.
