@@ -61,7 +61,9 @@ scripts/
 - [x] Identifierat Hörneåns ÄSO i statistikportalens områdeslista: `24-01-02-342-Ä`, portal-ID `724577`, under Sydöstra ÄFO.
 - [x] Identifierat Gräsmyrs VVO i statistikportalens områdeslista: `24-01-02-017-A`, portal-ID `718148`, också under Sydöstra ÄFO.
 - [ ] Verifiera det historiska ID:t och gränserna för Gräsmyrs viltvårdsområde.
-- [ ] Kontrollera utfallet från första automatiserade Excel-exporten i GitHub Actions och spara en verifierad råexport.
+- [x] Hämtat och sparat den första rapporttabellen för Hörneåns ÄSO: 7 säsonger (2013/2014–2019/2020), med metadata.
+- [ ] Hämta separata tidsperioder och motsvarande tabell för Gräsmyrs VVO.
+- [ ] Jämför historiska gränser mot nuvarande gränser innan tidsserierna länkas.
 - [ ] Mappa exporternas verkliga kolumner till ett stabilt schema.
 - [ ] Undersöka statistikportalens faktiska nätverksanrop/exportväg innan eventuell schemalagd automatisering byggs.
 
