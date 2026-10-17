@@ -226,7 +226,14 @@ def main():
     report.extend(["",
         "## Historiska jaktområden och kandidater",
         "",
-        "Fulla radvärden för de kända äldre områdeskoderna finns i \`out/boundary-workbook-audit/tracked_registration_history.csv\` i körningens artefakt. De är avsiktligt inte automatiskt summerade till Hörneåns ÄSO: medlemskap och geometri kräver separat belägg.",
+         "Fulla radvärden för de kända äldre områdeskoderna finns i `area-registration-boundary-audit.csv`; den direkta avstämningen av Hörneåns-arealen finns i `hornean-area-source-check.csv`. Filerna jämför båda gränsvarianterna och behåller källvärden utan att automatiskt summera äldre områden till Hörneåns ÄSO.",
+        "",
+        "### Vad originalfilerna säger om de två arbetshypoteserna",
+        "",
+        "- **Öre-Brattfors VVO (`24-01-02-049-A`)**: separat registrering med 3 151 ha i de tillgängliga filerna till och med 2016/17; inte separat i de tillgängliga filerna från 2019/20. Filer för 2017/18 och 2018/19 saknas, så den exakta övergången kan inte avläsas.",
+        "- **Hallens VVO (`24-01-02-067-A`)**: 1 553 ha i filerna 2012/13–2020/21; 1 567,62 ha i 2021/22 och 2022/23; saknas som separat registrering från 2023/24. Hörneåns ökning 2023/24 är 1 565,75 ha, alltså 1,87 ha mindre än Hallens senaste redovisade areal.",
+        "- För säsonger där båda exportvarianterna finns, innehåller matchande registreringsnummer samma registrerade fält. Skillnaden är i huvudsak att 2012/13-filen med nuvarande gränser innehåller tre ytterligare registreringar.",
+        "- Detta stärker övergångshypoteserna men är inte formellt beslut eller bevis för identiska polygoner.",
         "",
         "## Viktiga reservationer","","- Perioder utan båda filtyperna kan inte jämföras direkt.","- Identiska dubblettfiler ska inte räknas som oberoende belägg.","- Registreringsnummer som saknas i en export kan bero på exporturval eller gränsdefinition; det är inte automatiskt ett bevis på att jaktområdet upphört eller tillkommit.","- Denna rapport verifierar Excel-innehåll och skillnader mellan exporterna, inte formella beslut eller polygonernas juridiska status.",""])
     (DATA/"processed"/"boundary-comparison-summary.md").write_text("\n".join(report),encoding="utf-8")
