@@ -136,7 +136,9 @@ async def main() -> None:
         # Select Västerbottens län, then visit its AFOs so the portal populates
         # the dependent hunting-area list. These are read-only public lookups.
         exploratory_actions: list[dict[str, str]] = []
-        county_select = page.locator("select").filter(has=page.locator("option", has_text="Västerbottens län")).first
+        # The form's native selects are ordered: report, county, AFO, start year, end year, hunting area.
+        selects = page.locator("select")
+        county_select = selects.nth(1)
         try:
             county_value = await county_select.locator("option").filter(has_text="Västerbottens län").first.get_attribute("value")
             if county_value:
@@ -147,9 +149,8 @@ async def main() -> None:
             exploratory_actions.append({"target": "Västerbottens län", "action": "select failed: " + str(exc)[:120]})
 
         area_discovery: list[dict[str, Any]] = []
-        afo_select = page.locator("select").filter(
-            has=page.locator("option", has_text="Nordvästra älgförvaltningsområdet")
-        ).first
+        afo_select = page.locator("select").nth(2)
+        area_select = page.locator("select").nth(5)
         try:
             afo_options = await afo_select.locator("option").evaluate_all(
                 "(els) => els.map(o => ({label: o.text.trim(), value: o.value}))"
@@ -163,9 +164,6 @@ async def main() -> None:
             try:
                 await afo_select.select_option(value=afo["value"])
                 await page.wait_for_timeout(1200)
-                area_select = page.locator("select").filter(
-                    has=page.locator("option", has_text="Välj...")
-                ).last
                 opts = await area_select.locator("option").evaluate_all(
                     "(els) => els.map(o => ({label: o.text.trim(), value: o.value}))"
                 )
@@ -174,6 +172,7 @@ async def main() -> None:
                     "afo_name": afo["label"], "afo_id": afo["value"],
                     "areas_loaded": len(discovered_names), "area_options": opts,
                 })
+                found = False
                 for target in ("Hörneåns älgskötselområde", "Hörneåns ÄSO", "Gräsmyrs viltvårdsområde"):
                     match = next((o for o in opts if target.casefold() in o["label"].casefold()), None)
                     if match:
@@ -182,12 +181,16 @@ async def main() -> None:
                             "target": target,
                             "action": f"found under {afo['label']} (area value {match['value']})"
                         })
+                        found = True
+                        break
+                if found:
+                    break
             except Exception as exc:
                 area_discovery.append({
                     "afo_name": afo["label"], "afo_id": afo["value"],
                     "error": str(exc)[:180],
                 })
-                final_dom = await inspect_dom(page)
+        final_dom = await inspect_dom(page)
         if response_tasks:
             await asyncio.gather(*list(response_tasks), return_exceptions=True)
 
