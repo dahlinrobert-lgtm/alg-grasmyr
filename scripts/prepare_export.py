@@ -12,7 +12,7 @@ import csv
 import hashlib
 import json
 import re
-from datetime import date, datetime, time
+from datetime import date, datetime, time, timezone
 from pathlib import Path
 from typing import Any
 
@@ -60,10 +60,9 @@ def main() -> None:
     workbook = load_workbook(source, read_only=True, data_only=True)
     manifest: dict[str, Any] = {
         "source_file": source.name,
-        "source_path": str(source),
         "sha256": sha256_file(source),
         "format": source.suffix.lower(),
-        "created_utc": datetime.now().astimezone().isoformat(),
+        "created_utc": datetime.now(timezone.utc).isoformat(),
         "conversion_note": (
             "Worksheet values are copied row-by-row; no statistical field mapping "
             "or filtering is applied. CSV is a convenience copy, not the source of record."
