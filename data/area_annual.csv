@@ -6,9 +6,9 @@ hornean_current;24-01-02-342-Ä;2013/2014;26777;;;Älgdata avskjutning med mål;
 hornean_current;24-01-02-342-Ä;2014/2015;32355;5578;20.83;Älgdata avskjutning med mål;Reported area increase, requires historical boundary/decision check
 hornean_current;24-01-02-342-Ä;2015/2016;32355;0;0;Älgdata avskjutning med mål;No change in reported area
 hornean_current;24-01-02-342-Ä;2016/2017;32355;0;0;Älgdata avskjutning med mål;No change in reported area
-hornean_current;24-01-02-342-Ä;2017/2018;;;;official Excel export missing;No available boundary-export XLSX for this season. Do not carry forward the prior area as a source value.; do not carry forward the prior area as a source value.
-hornean_current;24-01-02-342-Ä;2018/2019;;;;official Excel export missing;No available boundary-export XLSX for this season. Do not assign the 3151 ha change to this season.; do not assign the 3151 ha change to this season.
-hornean_current;24-01-02-342-Ä;2019/2020;35506;3151;9.74;Älgdata avskjutning med mål;First available Excel observation after missing 2017/2018 and 2018/2019 exports. Change is versus last available observation in 2016/2017, not a season-specific change.; change is versus last available observation in 2016/2017, not a season-specific change.
+hornean_current;24-01-02-342-Ä;2017/2018;;;;official Excel export missing;No available boundary-export XLSX for this season. Do not carry forward the prior area as a source value.
+hornean_current;24-01-02-342-Ä;2018/2019;;;;official Excel export missing;No available boundary-export XLSX for this season. Do not assign the 3151 ha change to this season.
+hornean_current;24-01-02-342-Ä;2019/2020;35506;3151;9.74;Älgdata avskjutning med mål;First available Excel observation after missing 2017/2018 and 2018/2019 exports. Change is versus last available observation in 2016/2017, not a season-specific change.
 hornean_current;24-01-02-342-Ä;2020/2021;35567.05;61.05;0.17;Älgdata avskjutning med mål;Reported area increase, requires historical boundary/decision check
 hornean_current;24-01-02-342-Ä;2021/2022;35567.05;0;0;Älgdata avskjutning med mål;No change in reported area
 hornean_current;24-01-02-342-Ä;2022/2023;35567.05;0;0;Älgdata avskjutning med mål;No change in reported area
