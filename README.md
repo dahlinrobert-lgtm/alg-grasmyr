@@ -105,6 +105,16 @@ python scripts/download_statistics.py \
 - [Registreringshistorik för äldre delområden](data/processed/area-registration-boundary-audit.csv) och [direkt Excel-kontroll av Hörneåns rapporterade areal](data/processed/hornean-area-source-check.csv): källvärden för identifierade registreringsnummer i båda gränsvarianterna.
 
 
+## Inventering av publicerade Excel-exporter
+
+Den befintliga Excel-granskningen visar följande säsongstäckning i repot:
+
+- **Nuvarande gränser:** 2000/2001–2016/2017 samt 2019/2020–2026/2027.
+- **Historiska gränser:** 2012/2013–2016/2017 samt 2019/2020–2026/2027.
+- **Lucka i båda exportserierna:** 2017/2018 och 2018/2019.
+
+Det innebär att de tillgängliga nuvarande-gränser-filerna från 2000/2001 och framåt redan är representerade i den granskade säsongsserien; vi ska inte be om att de laddas upp igen. För 2000/2001–2011/2012 finns bara nuvarande-gränser-exporter i den inventerade serien. Åren 2017/2018 och 2018/2019 ska markeras som saknade källfiler, inte fyllas med antaganden. Se [registreringshistoriken från Excel-granskningen](data/processed/area-registration-boundary-audit.csv) och [jämförelsesammanfattningen](data/processed/boundary-comparison-summary.md).
+
 ## Källhierarki och granskningsprincip
 
 **De ursprungliga Excel-exporterna i `data/` är projektets primära källmaterial.** Bearbetade CSV-filer, metadata, manuellt sammanställda tabeller och webbplatsens JavaScript är sekundära representationer. Vid avvikelse ska uppgiften kontrolleras mot relevant Excel-fil och blad, och sekundärfilen eller webbplatsen korrigeras. En CSV-kopia får inte tyst ersätta originalexporten som facit.
