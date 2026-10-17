@@ -168,3 +168,29 @@ De övriga historiska områdena i Sydöstra ÄFO hade följande interna portal-I
 
 Källfil: `data/portal_area_crosswalk_2009_2010.csv`. Automatiserat uttag: `.github/workflows/download-2009-historical-areas.yml`. Den första oårsspecifika inspektionen ska inte användas för slutsatser om saknade historiska områden; den korrigerade inspektionen med jaktår 2009/2010 är den relevanta.
 
+## Verifierat officiellt tabelluttag för 2009/2010 (2026-10-17)
+
+Ett automatiserat Playwright-uttag från Länsstyrelsens publika Älgdata-portal kördes med rapporttypen `Avskjutning med mål — ÄJO`, Västerbottens län, Sydöstra ÄFO, urvalet **historiska gränser** och jaktåret 2009/2010. Samtliga tio separata områdesuttag i [GitHub Actions-körning 39066438548](https://github.com/dahlinrobert-lgtm/alg-grasmyr/actions/runs/39066438548) avslutades utan rapporterade fel. De visade datauppgifterna finns samlade i `data/official_historical_area_stats_2009_2010_full.csv`, med portal-ID och källa per rad.
+
+| Äldre kod | Portalregistrering / namn | Rapporterad areal 2009/10 | Fällda totalt |
+|---|---|---:|---:|
+| 01-02-006 | 24-01-02-006-A Mullsjö VVO | 3 492 ha | 9 |
+| 01-02-008 | 24-01-02-008-A Tallbergslidens VVO | 3 172 ha | 12 |
+| 01-02-017 | 24-01-02-017-A Gräsmyrs VVO | 4 795 ha | 18 |
+| 01-02-028 | 24-01-02-028-A Hörnsjö VVO | 6 601 ha | 23 |
+| 01-02-045 | 24-01-02-045-A Hummelholms VVO | 5 508 ha | 22 |
+| 01-02-052 | 24-01-02-052-A Nyåkers VVO | 2 568 ha | 10 |
+| 01-02-093 | 24-01-02-093-A Djupsjö VVO | 2 506 ha | 13 |
+| 01-02-098 | 24-01-02-098-A Höglågdal jaktområde | 340 ha | 1 |
+| 01-02-100 | 24-01-02-100-A Torrböle VVO | 3 210 ha | 14 |
+| 01-02-183 | 24-01-02-183-A (visningsnamn saknas) | 303 ha | 2 |
+
+### Tolkning av de två namnlösa raderna i 2012-listan
+
+- **01-02-098 / Höglågdal:** den säsongsfiltrerade portalrapporten visar exakt 340 ha för `24-01-02-098-A`, och 2012-listan visar en namnlös post `01-02-098` på 340 ha. Kodsekvens, areal och det officiella portalnamnet ger en stark korsreferens. Äldre polygonidentitet bör ändå kontrolleras mot karta eller registreringsbeslut.
+- **01-02-183 / okänt namn:** den säsongsfiltrerade portalrapporten visar `24-01-02-183-A` med intern-ID 718179, men arealen är **303 ha**, medan den äldre 2012-listan visar **504 ha** för `01-02-183`. Skillnaden är **201 ha**. Det kan finnas en areal-/gränsförändring, registerhistorik eller skillnad i källa/metod, men underlaget räcker inte för att avgöra orsaken. Kodkopplingen är stark, medan historiskt namn, arealförändring och eventuell koppling till det lokala jaktlaget Högland inte är verifierade.
+- Den tidigare summeringen Djupsjö (2 506 ha) + Nyåker (2 568 ha) + 504 ha = 5 578 ha matchar fortfarande aritmetiskt Hörneåns rapporterade arealsteg 2014/15. Men **504 ha är inte bekräftad areal för den aktuella registreringen 24-01-02-183-A 2009/10**. Därför ska detta inte längre beskrivas som en bekräftad sammansättning eller användas som grund för att identifiera Högland.
+
+### Ytterligare kontroll
+
+Nästa test är att ta ut `24-01-02-183-A` och `24-01-02-098-A` för flera jaktår med historiska gränser. Om den rapporterade arealen för 183 ändras under 2009/10–2012/13 kan det bidra till att förklara skillnaden 303/504 ha. Om inte behöver vi äldre beslut, registerutdrag och kartbilagor från Länsstyrelsen. Dessa lokala områdesresultat ska fortfarande hållas åtskilda från Hörneåns ÄSO:s egen rapporterade avskjutning tills geografisk täckning och överlapp har verifierats.
