@@ -1,0 +1,24 @@
+{
+  "source": "Länsstyrelsernas Älgdata statistikportal",
+  "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+  "report": "Avskjutning med mål — ÄJO",
+  "portal_report_id": "4",
+  "area": "Hörneåns älgskötselområde",
+  "area_display_id": "24-01-02-342-Ä",
+  "area_portal_internal_id": 724577,
+  "county": "Västerbottens län",
+  "management_area": "Sydöstra älgförvaltningsområdet",
+  "boundary_mode": "Nuvarande gränser",
+  "requested_hunting_years": "2010/2011–2025/2026",
+  "portal_permitted_hunting_years": "2010/2011–2019/2020",
+  "rows_returned": 7,
+  "first_returned_hunting_year": "2013/2014",
+  "last_returned_hunting_year": "2019/2020",
+  "retrieved_on": "2026-10-17",
+  "notes": [
+    "Only years returned by the official portal's rendered statistics table are included.",
+    "There are no rows for 2010/2011–2012/2013 in this export; they have not been filled with zeros.",
+    "Source display values are preserved as strings, including decimal commas and percent signs.",
+    "The shot-count and harvest-target fields are distinct; do not interpret target values as actual harvest."
+  ]
+}
