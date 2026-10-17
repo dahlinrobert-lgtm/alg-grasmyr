@@ -233,12 +233,12 @@ const elkHarvest=[
 {season:"2017/2018",year:2017,total:98,adult:55,calves:43,target:100,area:32355},
 {season:"2018/2019",year:2018,total:123,adult:66,calves:57,target:145,area:35506},
 {season:"2019/2020",year:2019,total:127,adult:71,calves:56,target:163,area:35506},
-{season:"2020/2021",year:2020,total:120,adult:66,calves:54,target:131,area:35567},
-{season:"2021/2022",year:2021,total:114,adult:70,calves:44,target:128,area:35567},
-{season:"2022/2023",year:2022,total:118,adult:69,calves:49,target:127,area:35567},
-{season:"2023/2024",year:2023,total:105,adult:62,calves:43,target:119,area:37133},
-{season:"2024/2025",year:2024,total:112,adult:64,calves:48,target:135,area:37133},
-{season:"2025/2026",year:2025,total:116,adult:71,calves:45,target:190,area:37133}];
+{season:"2020/2021",year:2020,total:120,adult:66,calves:54,target:131,area:35567.05},
+{season:"2021/2022",year:2021,total:114,adult:70,calves:44,target:128,area:35567.05},
+{season:"2022/2023",year:2022,total:118,adult:69,calves:49,target:127,area:35567.05},
+{season:"2023/2024",year:2023,total:105,adult:62,calves:43,target:119,area:37132.8},
+{season:"2024/2025",year:2024,total:112,adult:64,calves:48,target:135,area:37132.8},
+{season:"2025/2026",year:2025,total:116,adult:71,calves:45,target:190,area:37132.8}];
 const elkObs=[
 {season:"2013/2014",year:2013,obs:0.0659,hours:6978,calves:0.491,significant:"Ja"},
 {season:"2014/2015",year:2014,obs:0.069,hours:6724,calves:0.691,significant:"Ja"},
@@ -306,10 +306,10 @@ function setTable(data){
  let headers,rows;
  if(mode==="harvest" && byId("areaSelect").value==="grasmyr"){
   headers=["Jaktår","Totalt fällda","Vuxna","Kalvar","Avskjutningsmål","Registrerad areal"];
-  rows=data.map(d=>[d.season,fmt(d.total,0),fmt(d.adult,0),fmt(d.calves,0),fmt(d.target,0),fmt(d.area,0)+" ha"]);
+  rows=data.map(d=>[d.season,fmt(d.total,0),fmt(d.adult,0),fmt(d.calves,0),fmt(d.target,0),fmt(d.area,2)+" ha"]);
  } else if(mode==="harvest"){
   headers=["Jaktår","Totalt fällda","Vuxna","Kalvar","Avskjutningsmål","Registrerad areal"];
-  rows=data.map(d=>[d.season,fmt(d.total,0),fmt(d.adult,0),fmt(d.calves,0),fmt(d.target,0),fmt(d.area,0)+" ha"]);
+  rows=data.map(d=>[d.season,fmt(d.total,0),fmt(d.adult,0),fmt(d.calves,0),fmt(d.target,0),fmt(d.area,2)+" ha"]);
  } else if(mode==="obs"){
   headers=["Jaktår","Älgobs/mantimme","Mantimmar","Kalvar per hondjur","Statistiskt säkerställd"];
   rows=data.map(d=>[d.season,fmt(d.obs,4),fmt(d.hours,0),fmt(d.calves,3),d.significant||"—"]);
