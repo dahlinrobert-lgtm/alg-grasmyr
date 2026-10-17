@@ -126,12 +126,13 @@ def save_statistics_table(state: dict[str, Any] | None, output_path: Path) -> in
     """Save the rendered Älgdata 'Avskjutning med mål — ÄJO' table as CSV."""
     if not state:
         return 0
-    target_table = None
+    candidates = []
     for table in state.get("tables", []):
         rows = table.get("rows", [])
         if rows and any("Registreringsnummer" in cell for cell in rows[0]):
-            target_table = rows
-            break
+            candidates.append(rows)
+    # The UI may render a header-only clone before the actual sortable data table.
+    target_table = max(candidates, key=len) if candidates else None
     if not target_table:
         return 0
 
