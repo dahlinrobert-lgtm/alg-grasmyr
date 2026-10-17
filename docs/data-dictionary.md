@@ -25,3 +25,8 @@ Detta är ett preliminärt schema. Kolumner ska mappas från riktiga exportfiler
 - Jaktår är inte kalenderår; lagra dem som text tills formatet är verifierat.
 - Dubbletter ska identifieras med områdes-ID, jaktår, statistiktyp, indikator och eventuella dimensioner från källan.
 - Om ett områdes namn eller geometri ändras, lagra namn-/ID-historik och dokumentera om tidsserier är jämförbara.
+
+
+## Områdesidentiteter
+
+Se [area-identity.md](area-identity.md) och `data/area_registry.csv`. Områdes-ID, historisk giltighet och geometri ska verifieras i Länsstyrelsens karta/statistikportal. Ett kandidat-ID från en sekundär återgivning får inte användas som slutgiltig koppling mellan historiska och nuvarande områden.
