@@ -213,3 +213,12 @@ Däremot fastställer arealserien inte varför arealen ändrades 2010/11 (t.ex. 
 Samma perioduttag för `24-01-02-098-A — Höglågdal jaktområde` visar stabil areal **340 ha** alla fyra säsonger 2009/10–2012/13. Det stärker kopplingen till den namnlösa raden `01-02-098` med 340 ha i 2012-listan.
 
 De årsvisa värdena för `24-01-02-183-A` finns i `data/official_area_history_24-01-02-183-A_2009-2013.csv`. Den fullständiga ettårsbaserade tvärsnittstabellen för tio områden finns i `data/official_historical_area_stats_2009_2010_full.csv`. Fortsatt sammanräkning med Hörneåns ÄSO kräver fortfarande verifierad geografisk täckning och överlapp; rapporterade delområden får inte läggas ovanpå ÄSO-totalen automatiskt.
+
+## Lokalhistorisk geografisk ledtråd för Högland (2026-10-17)
+
+Nordmalings kommuns publicerade inventering *1988 inventering Ledusjö, Norrmark, Baggård, Djupsjö, Högland, Sunnansjö, Stavsjöholm* beskriver Höglands by som belägen på en uppodlad högplatå mellan Djupsjö, Orrböle och Hummelholms skogsskiften och anger att Högland historiskt var ett nybygge på Djupsjö bys skog. Källa: [Nordmalings kommuns inventering, 1988](https://www.nordmaling.se/download/18.38e5fa29193b39ee26d14546/1736343605147/1988%20inventering%20Ledusj%C3%B6%20Norrmark%20Bagg%C3%A5rd%20Djupsj%C3%B6%20H%C3%B6gland%20Sunnansj%C3%B6%20Stavsj%C3%B6holm.pdf).
+
+Detta är relevant lokalhistorisk geografi och stödjer att namnet Högland hör hemma i närområdet kring Djupsjö/Hummelholm. Det **bevisar inte** att jaktlaget Högland i den lokala tilldelningslistan är samma enhet som den namnlösa älgjaktregistreringen `24-01-02-183-A`. En kulturmiljöinventering beskriver byn och historisk markbakgrund, inte registreringsnummer eller älgjaktgränser.
+
+Länsstyrelsens officiella information säger att ändringar av registrerade älgjaktområden, såsom tillägg eller borttagning av fastigheter, sker genom ansökan och beslut. För att koppla det lokala Högland till registrering `24-01-02-183-A` krävs därför fortfarande historiskt beslut, karta/fastighetsbilaga, äldre registerutdrag eller skriftlig bekräftelse från Länsstyrelsen. Se [Älgförvaltning och jaktområden](https://www.lansstyrelsen.se/vasterbotten/djur/jakt-och-vilt/algjakt/algforvaltning-och-jaktomraden.html).
+
