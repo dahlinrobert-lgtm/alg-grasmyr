@@ -92,6 +92,18 @@
       "status": "AREA_NOT_AVAILABLE_IN_CURRENT_OR_HISTORICAL_SELECTOR",
       "data_rows": 0,
       "notes": "Portal ID 718148 could not be selected for this period with either current or historical boundary settings."
+    },
+    {
+      "area": "Hörneåns älgskötselområde",
+      "report_id": "25",
+      "report": "Älgobservationer — ÄJO",
+      "period": "2010/2011–2012/2013",
+      "boundary_mode": "HISTORICAL",
+      "status": "SUPPLEMENTAL_HISTORICAL_BOUNDARY_DATA",
+      "data_rows": 3,
+      "raw_csv": "data/raw/portal_tables/hornean_algobs_ajo_historical_boundaries_2010-2020.csv",
+      "normalized_csv": "data/processed/algobs_hornean_historical_boundaries_2010-2013.csv",
+      "notes": "Historical-boundary query extends the observation timeline before 2013/2014. Do not assume a stable geometry across boundary modes without checking area-history metadata."
     }
   ],
   "caveat": "Missing report rows, zero samples, or a 'no data' message are not proof that harvest or observations were zero. Geographic and reporting-unit changes need separate verification. Gräsmyrs VVO and Hörneåns ÄSO must remain separate until official decisions and historical geographies establish their relationship."
