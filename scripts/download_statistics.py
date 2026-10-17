@@ -92,8 +92,18 @@ async def capture_visible_state(page) -> dict[str, Any]:
         headings: texts(document.querySelectorAll('h1,h2,h3,h4')),
         tables,
         table_count: document.querySelectorAll('table').length,
+        form_controls: Array.from(document.querySelectorAll('select')).map(s => ({
+          id: s.id,
+          label: s.getAttribute('aria-label') || s.getAttribute('aria-labelledby') || '',
+          value: s.value,
+          selected_text: s.selectedIndex >= 0 ? (s.options[s.selectedIndex].text || '').trim() : '',
+          options_count: s.options.length
+        })),
+        radios: Array.from(document.querySelectorAll('input[type=radio]')).map(r => ({
+          name:r.name, value:r.value, checked:!!r.checked, label:r.labels && r.labels.length ? r.labels[0].innerText.trim() : ''
+        })),
         buttons: Array.from(document.querySelectorAll('button,input[type=button],input[type=submit]'))
-          .map(b => ({tag:b.tagName.toLowerCase(), value:b.value || '', text:(b.innerText || '').trim(), disabled:!!b.disabled})),
+          .map(b => ({tag:b.tagName.toLowerCase(), value:b.value || '', text:(b.innerText || '').trim(), disabled:!!b.disabled, visible:!!(b.offsetWidth || b.offsetHeight || b.getClientRects().length)})),
       };
     }""")
 
@@ -104,6 +114,8 @@ async def main() -> None:
     parser.add_argument("--from-year", default="2010/2011")
     parser.add_argument("--to-year", default="2025/2026")
     parser.add_argument("--area-id", default=AREA_ID)
+    parser.add_argument("--afo-name", default=AFO_NAME)
+    parser.add_argument("--boundary-mode", choices=("current", "historical"), default="current")
     parser.add_argument("--report-id", default=REPORT_ID)
     args = parser.parse_args()
 
@@ -171,30 +183,19 @@ async def main() -> None:
             # County and AFO trigger official dependent JSON lookups.
             await choose_by_label(page.locator("select").nth(1), COUNTY_NAME)
             await page.wait_for_timeout(500)
-            await choose_by_label(page.locator("select").nth(2), AFO_NAME)
+            await choose_by_label(page.locator("select").nth(2), args.afo_name)
             await page.wait_for_timeout(900)
 
-            # Set current boundaries unless the user changes this script/config.
-            current_radio = page.locator('input[name="optTypeAFO"][value="G"]')
-            if await current_radio.count():
-                await current_radio.check()
-                await page.wait_for_timeout(250)
+            # Choose historical/current boundary interpretation before the dependent filters.
+            boundary_value = "F" if args.boundary_mode == "historical" else "G"
+            boundary_radio = page.locator(f'input[name="optTypeAFO"][value="{boundary_value}"]')
+            if await boundary_radio.count():
+                await boundary_radio.check()
+                await page.wait_for_timeout(350)
 
-            # Select the required hunting area by internal official ID after AFO load.
-            area_select = page.locator("select").nth(5)
-            area_options = await area_select.locator("option").evaluate_all(
-                "(els) => els.map(o => ({label:o.text.trim(),value:o.value}))"
-            )
-            area_option = next((o for o in area_options if o["value"] == args.area_id), None)
-            if area_option is None:
-                raise RuntimeError(
-                    f"Area ID {args.area_id} unavailable under {AFO_NAME}; "
-                    f"loaded {len(area_options)} options"
-                )
-            await area_select.select_option(value=args.area_id)
-            selected_area = {"area_id": args.area_id, "display_label": area_option["label"]}
+            # Year selectors are the 4th and 5th native select controls. Choose them
+            # before the hunting area because the portal refreshes dependent filters.
 
-            # Year selectors are the 4th and 5th native select controls.
             from_select = page.locator("select").nth(3)
             to_select = page.locator("select").nth(4)
             await choose_by_label(from_select, args.from_year)
@@ -207,7 +208,22 @@ async def main() -> None:
                     f"using latest permitted year {selected_year_to}"
                 )
 
-            await page.wait_for_timeout(400)
+            # Select area last: changing years can refresh the form and clear this field.
+            await page.wait_for_timeout(350)
+            area_select = page.locator("select").nth(5)
+            area_options = await area_select.locator("option").evaluate_all(
+                "(els) => els.map(o => ({label:o.text.trim(),value:o.value}))"
+            )
+            area_option = next((o for o in area_options if o["value"] == args.area_id), None)
+            if area_option is None:
+                raise RuntimeError(
+                    f"Area ID {args.area_id} unavailable under {args.afo_name}; "
+                    f"loaded {len(area_options)} options"
+                )
+            await area_select.select_option(value=args.area_id)
+            selected_area = {"area_id": args.area_id, "display_label": area_option["label"]}
+            await page.wait_for_timeout(500)
+
             before_stats = await capture_visible_state(page)
             show_button = page.locator('input[type="button"][value="Visa statistik"]')
             if not await show_button.count():
@@ -249,13 +265,13 @@ async def main() -> None:
         "inspected_at_utc": datetime.now(timezone.utc).isoformat(),
         "source_url": URL,
         "county": COUNTY_NAME,
-        "afo": AFO_NAME,
+        "afo": args.afo_name,
         "selected_area": selected_area,
         "report_config": report_config,
         "hunting_year_from": args.from_year,
         "hunting_year_to_requested": args.to_year,
         "hunting_year_to_selected": selected_year_to,
-        "boundary_mode": "current",
+        "boundary_mode": args.boundary_mode,
         "navigation_error": navigation_error,
         "errors": errors,
         "export_file": str(export_path.name) if export_path and export_path.exists() else None,
