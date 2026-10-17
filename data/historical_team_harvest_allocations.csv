@@ -1,0 +1,19 @@
+hunting_year;team_name;source_post;source_date;harvest_bulls;harvest_females;harvest_calves;allocated_adult_bulls;allocated_adult_females;allocated_adults_total;data_type;notes
+2014/2015;Nyåker;234;2014-12-14;2;3;5;2;3;5;harvest_and_allocation_snapshot;Harvest to week 44. Adult allocation is bull and female quota as shown in the post.
+2014/2015;Torrböle;234;2014-12-14;3;4;7;3;4;7;harvest_and_allocation_snapshot;Harvest to week 44. Adult allocation is bull and female quota as shown in the post.
+2014/2015;Tallberg;234;2014-12-14;4;3;6;3;4;7;harvest_and_allocation_snapshot;Harvest to week 44. Adult allocation is bull and female quota as shown in the post.
+2014/2015;Djupsjö;234;2014-12-14;2;3;7;2;3;5;harvest_and_allocation_snapshot;Harvest to week 44. Adult allocation is bull and female quota as shown in the post.
+2014/2015;Gräsmyr;234;2014-12-14;5;4;10;5;6;11;harvest_and_allocation_snapshot;Harvest to week 44. This team name does not by itself establish that the full historical Gräsmyrs VVO polygon was included.
+2014/2015;Hummelholm;234;2014-12-14;6;2;2;6;6;12;harvest_and_allocation_snapshot;Harvest to week 44. Source abbreviates the team as H-holm.
+2014/2015;Högland;234;2014-12-14;0;0;0;1;0;1;harvest_and_allocation_snapshot;Harvest to week 44. The table shows a bull allocation despite no harvest recorded at that date.
+2014/2015;Hörnsjö;234;2014-12-14;6;4;11;7;8;15;harvest_and_allocation_snapshot;Harvest to week 44. Adult allocation is bull and female quota as shown in the post.
+2014/2015;Mullsjö;234;2014-12-14;2;3;5;4;4;8;harvest_and_allocation_snapshot;Harvest to week 44. Source row has a blank/visually compressed calf cell but total harvest is consistent with the reported total of 53 calves.
+2015/2016;Hummelholm;242;2015-07-05;;;;5;5;10;allocation_snapshot;Adult allocation only. Post explicitly says the total area allocation was 59 adults and this team's allocation was 10.
+2015/2016;Mullsjö;242;2015-07-05;;;;3;2;5;allocation_snapshot;Adult allocation only.
+2015/2016;Tallberg;242;2015-07-05;;;;2;3;5;allocation_snapshot;Adult allocation only.
+2015/2016;Gräsmyr;242;2015-07-05;;;;5;4;9;allocation_snapshot;Adult allocation only. Full historic VVO boundary relationship is not established.
+2015/2016;Hörnsjö;242;2015-07-05;;;;6;6;12;allocation_snapshot;Adult allocation only.
+2015/2016;Torrböle;242;2015-07-05;;;;3;2;5;allocation_snapshot;Adult allocation only.
+2015/2016;Djupsjö;242;2015-07-05;;;;3;3;6;allocation_snapshot;Adult allocation only.
+2015/2016;Högland;242;2015-07-05;;;;0;1;1;allocation_snapshot;Adult allocation only. Post says this should be a young cow.
+2015/2016;Nyåker;242;2015-07-05;;;;3;3;6;allocation_snapshot;Adult allocation only.
