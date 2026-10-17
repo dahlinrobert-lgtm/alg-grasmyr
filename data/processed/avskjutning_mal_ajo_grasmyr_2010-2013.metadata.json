@@ -19,6 +19,7 @@
     "The area is kept separate from Hörneåns ÄSO; no geographic identity or direct series merge is assumed.",
     "The value 4,795 ha matches the area size displayed in this portal report, but historical boundary comparability should still be checked.",
     "Values are kept as displayed by the source, including decimal commas and percent signs.",
-    "fallda_totalt is actual reported shot moose; avskjutningsmal_totalt is the harvest target."
+    "fallda_totalt is actual reported shot moose; avskjutningsmal_totalt is the harvest target.",
+    "A separate attempt on 2026-10-17 using the portal's historical-boundary selector for 2020/2021–2025/2026 also did not expose portal ID 718148 among the available areas. This is a missing area/series in the portal selection, not a measured zero harvest."
   ]
 }
