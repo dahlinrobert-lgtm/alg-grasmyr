@@ -1,0 +1,68 @@
+name: Audit historic area registers 2009-2013
+
+on:
+  push:
+    paths:
+      - ".github/workflows/audit-historical-area-registers.yml"
+      - "scripts/download_statistics.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Playwright
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Mullsjö VVO 2009/10–2012/13
+        run: |
+          python scripts/download_statistics.py --out out/2009-2013/mullsjo --area-id 718143 --afo-name "Sydöstra älgförvaltningsområdet" --from-year "2009/2010" --to-year "2012/2013" --boundary-mode historical
+      - name: Tallbergslidens VVO 2009/10–2012/13
+        run: |
+          python scripts/download_statistics.py --out out/2009-2013/tallbergslidens --area-id 718145 --afo-name "Sydöstra älgförvaltningsområdet" --from-year "2009/2010" --to-year "2012/2013" --boundary-mode historical
+      - name: Gräsmyrs VVO 2009/10–2012/13
+        run: |
+          python scripts/download_statistics.py --out out/2009-2013/grasmyr --area-id 718148 --afo-name "Sydöstra älgförvaltningsområdet" --from-year "2009/2010" --to-year "2012/2013" --boundary-mode historical
+      - name: Hörnsjö VVO 2009/10–2012/13
+        run: |
+          python scripts/download_statistics.py --out out/2009-2013/hornsjo --area-id 718150 --afo-name "Sydöstra älgförvaltningsområdet" --from-year "2009/2010" --to-year "2012/2013" --boundary-mode historical
+      - name: Hummelholms VVO 2009/10–2012/13
+        run: |
+          python scripts/download_statistics.py --out out/2009-2013/hummelholm --area-id 718153 --afo-name "Sydöstra älgförvaltningsområdet" --from-year "2009/2010" --to-year "2012/2013" --boundary-mode historical
+      - name: Nyåkers VVO 2009/10–2012/13
+        run: |
+          python scripts/download_statistics.py --out out/2009-2013/nyaker --area-id 718155 --afo-name "Sydöstra älgförvaltningsområdet" --from-year "2009/2010" --to-year "2012/2013" --boundary-mode historical
+      - name: Djupsjö VVO 2009/10–2012/13
+        run: |
+          python scripts/download_statistics.py --out out/2009-2013/djupsjo --area-id 718168 --afo-name "Sydöstra älgförvaltningsområdet" --from-year "2009/2010" --to-year "2012/2013" --boundary-mode historical
+      - name: Höglågdal 2009/10–2012/13
+        run: |
+          python scripts/download_statistics.py --out out/2009-2013/hoglagdal --area-id 718169 --afo-name "Sydöstra älgförvaltningsområdet" --from-year "2009/2010" --to-year "2012/2013" --boundary-mode historical
+      - name: Torrböle VVO 2009/10–2012/13
+        run: |
+          python scripts/download_statistics.py --out out/2009-2013/torrbole --area-id 718170 --afo-name "Sydöstra älgförvaltningsområdet" --from-year "2009/2010" --to-year "2012/2013" --boundary-mode historical
+      - name: Unnamed registration 183 2009/10–2012/13
+        run: |
+          python scripts/download_statistics.py --out out/2009-2013/unnamed-183 --area-id 718179 --afo-name "Sydöstra älgförvaltningsområdet" --from-year "2009/2010" --to-year "2012/2013" --boundary-mode historical
+
+      - name: Upload complete diagnostics and tables
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: algdata-historic-area-register-audit-2009-2013
+          path: out/
+          if-no-files-found: warn
+          retention-days: 14
