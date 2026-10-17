@@ -1,0 +1,25 @@
+{
+  "source": "Länsstyrelsernas Älgdata statistikportal",
+  "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+  "report_id": "25",
+  "report_name": "Älgobservationer — ÄJO",
+  "area_name": "Hörneåns älgskötselområde",
+  "area_display_id": "24-01-02-342-Ä",
+  "area_internal_id": 724577,
+  "county": "Västerbottens län",
+  "management_area": "Sydöstra älgförvaltningsområdet",
+  "boundary_mode": "Historiska gränser",
+  "retrieved_on": "2026-10-17",
+  "requested_period": "2010/2011–2019/2020",
+  "raw_source": "data/raw/portal_tables/hornean_algobs_ajo_historical_boundaries_2010-2020.csv",
+  "raw_rows": 10,
+  "normalized_extension": "data/processed/algobs_hornean_historical_boundaries_2010-2013.csv",
+  "normalized_rows": 3,
+  "notes": [
+    "The portal returned Älgobs rows for all ten seasons in the requested interval when the historical-boundary selection was used.",
+    "The normalized extension contains only 2010/2011–2012/2013, which are not present in the current-boundary normalized series beginning in 2013/2014.",
+    "Values for 2013/2014–2019/2020 match the already-recorded Älgobs values in the current-boundary series, but the historical-boundary selection was used for this raw capture. Keep boundary mode explicit rather than assuming geometrical identity.",
+    "Decimal commas and the portal's statistical-significance flag are preserved.",
+    "This does not establish that Gräsmyrs VVO and Hörneåns ÄSO have identical historical boundaries. These are separate area identities until official history/geometries prove otherwise."
+  ]
+}
