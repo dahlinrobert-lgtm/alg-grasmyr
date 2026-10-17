@@ -4,8 +4,8 @@
 
 Behandla dessa som separata geografiska enheter tills Länsstyrelsens områdesregister, ID:n och gränser visar hur de hänger ihop.
 
-- **Gräsmyrs viltvårdsområde** är den historiska identitet som ska sökas i äldre statistik.
-- **Hörneåns älgskötselområde** är den nuvarande/större förvaltningsidentitet som ska sökas i den moderna statistiken. Statistikportalens områdeslista visar det som `24-01-02-342-Ä - Hörneåns älgskötselområde`, med internt `AjoId=724577`, i **Sydöstra älgförvaltningsområdet** (verifierat 2026-10-17).
+- **Gräsmyrs viltvårdsområde** är den historiska identitet som ska sökas i äldre statistik. Statistikportalens områdeslista visar `24-01-02-017-A - GRÄSMYRS VILTVÅRDSOMRÅDE`, internt `AjoId=718148`.
+- **Hörneåns älgskötselområde** är den nuvarande/större förvaltningsidentitet som ska sökas i den moderna statistiken. Statistikportalens områdeslista visar `24-01-02-342-Ä - Hörneåns älgskötselområde`, internt `AjoId=724577`. Båda finns under **Sydöstra älgförvaltningsområdet** och är två skilda val i portalens jaktområdeslista (verifierat 2026-10-17).
 
 Ett äldre lokalt jaktområde/VVO kan vara en del av ett senare ÄSO utan att de har samma gräns eller omfattning.
 
