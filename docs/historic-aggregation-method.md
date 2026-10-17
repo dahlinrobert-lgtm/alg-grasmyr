@@ -256,3 +256,37 @@ Begränsningar:
 - För att bekräfta hypotesen krävs fortfarande historiska registrerings-/ändringsbeslut, fastighetsbilagor eller gränskartor från Länsstyrelsen.
 
 Den sammanfattande CSV-filen finns här: `data/official_historical_area_summary_2009_2013.csv`. Detta underlag ersätter inte kontrollen av faktisk geografisk täckning och överlapp, så delområdenas avskjutning ska inte summeras med Hörneåns ÄSO-totalen ännu.
+
+
+## Arealavstämning mot Hörneåns ÄSO per rapporterat arealsteg
+
+Den säsongsvisa sammanställningen finns i [`data/area_reconciliation_by_season.csv`](../data/area_reconciliation_by_season.csv). Den summerar kända äldre områdesarealer mot Hörneåns rapporterade areal och håller aritmetiska träffar åtskilda från bekräftade gräns-/medlemskapsbeslut.
+
+| Jaktår | Hörneåns rapporterade areal | Förändring | Kandidatsumma | Kvarstående differens | Bedömning |
+|---|---:|---:|---:|---:|---|
+| 2013/2014 | 26 777 ha | – | 26 777 ha | 0 ha | Sex äldre områden matchar exakt aritmetiskt |
+| 2014/2015 | 32 355 ha | +5 578 ha | 5 578 ha | 0 ha | Djupsjö + Nyåker + registrering 183 |
+| 2017/2018 | 32 355 ha | 0 ha | – | – | Ingen redovisad arealändring |
+| 2018/2019 | 35 506 ha | +3 151 ha | 3 151 ha | 0 ha | Öre-Brattfors VVO är den ledande kandidaten |
+| 2020/2021 | 35 567,05 ha | +61,05 ha | ingen identifierad kandidat | 61,05 ha | Kan vara mindre gräns-/registerjustering |
+| 2023/2024 | 37 132,8 ha | +1 565,75 ha | Hallens 1 553 ha | 12,75 ha | Nära, men inte exakt match |
+
+### Särskilt om 2018/2019
+
+Ökningen **+3 151 ha** mellan 2017/2018 och 2018/2019 sammanfaller exakt med den äldre arealen för **Öre-Brattfors viltvårdsområde (kod 01-02-049)** i 2012 års tilldelningslista. Det är därför den tydligaste kandidaten till en tillkommen enhet vid just det arealsteget. Än så länge saknas dock en officiell karta eller ett ändringsbeslut som bekräftar att Öre-Brattfors faktiskt införlivades i Hörneåns ÄSO under 2018/2019. Behandla den som en stark arealhypotes, inte ett verifierat medlemskap.
+
+### Namnförtydligande: Högland och Höglågdal
+
+Skärmbilderna visar **Höglågdal jaktområde**, registrering `24-01-02-098-A`, internt portal-ID `718169`. Det motsvarar den äldre kodraden `01-02-098` och arealen anges som 340 ha i 2009/2010-rapporten; i skärmbilden med nuvarande gränser visas 340,25 ha. Det är en separat registrering från den lokala beteckningen **Högland**. Vi ska inte likställa dem.
+
+Registrering `24-01-02-183-A` (portal-ID `718179`) har däremot tomt områdesnamn i Älgdata. Dess arealserie är 303 ha 2009/2010 och 504 ha 2010/2011–2012/2013. Den kan vara relevant för Höglandshypotesen, men kopplingen är fortfarande obevisad.
+
+### Slutsats och nästa luckor
+
+- **Basen 2013/2014:** sex områden summerar exakt till 26 777 ha.
+- **Steget 2014/2015:** Djupsjö + Nyåker + registrering 183 summerar exakt till 5 578 ha.
+- **Steget 2018/2019:** Öre-Brattfors summerar exakt till 3 151 ha och är den ledande kandidaten.
+- **Steget 2020/2021:** 61,05 ha återstår oförklarat.
+- **Steget 2023/2024:** Hallens ligger 12,75 ha under ökningen; annan mark eller en areal-/geometrikorrigering kan behövas.
+
+Arealmatchningar är ett sätt att prioritera vilka beslut och kartor som ska hämtas. De bevisar inte i sig polygonidentitet, medlemskap eller att områdenas avskjutning kan adderas utan överlapp. Avskjutningsserier ska därför inte aggregeras till Hörneåns förrän gränsövergång och överlapp har verifierats.
