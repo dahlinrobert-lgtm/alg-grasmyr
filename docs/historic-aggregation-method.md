@@ -82,3 +82,11 @@ En lokal källa, Hörnsjö VVO:s gästbok (https://www3.olzzon.com/g/g.php?a=s&i
 Hörneåns rapporterade areal ökar från 26 777 ha 2013/14 till 32 355 ha 2014/15 (+5 578 ha), 35 506 ha 2018/19 (+3 151 ha), 35 567,05 ha 2020/21 (+61,05 ha) och 37 132,8 ha 2023/24 (+1 565,75 ha). Dessa steg kan användas för att prioritera sökningen efter beslut men bevisar inte i sig någon viss anslutning. De kan även bero på korrigeringar eller gränsjusteringar.
 
 Fil `data/area_membership_timeline.csv` håller isär första källomnämnande, giltighetsår och bekräftat anslutningsdatum. Okända år lagras som `unknown`; första omnämnande eller arealförändring får aldrig automatiskt omvandlas till ett påstått anslutningsår. Nästa steg är att hitta Länsstyrelsens beslut, äldre älgskötselplaner och historiska polygoner och sedan kontrollera täckning/överlapp innan en avskjutningsserie rekonstrueras.
+
+## Tidigare källa som listar samtliga nio jaktlag (2026-10-17)
+
+Hörnsjö VVO:s gästbok innehåller en post daterad **23 november 2014** med rubriken/innehållet om avskjutning och tilldelning till och med vecka 44. Den listar Hörnsjö, Gräsmyr, Mullsjö, Torrböle, Tallberg, Djupsjö, Hummelholm, Högland och Nyåker. Källa: https://www3.olzzon.com/g/g.php?a=s&i=g32-03680-34&m=alla&p=1 (post nr 234).
+
+Det här flyttar det tidigaste belägget för Djupsjö, Högland och Nyåker från 2015 till senast **23 november 2014**. Det bevisar dock inte att de anslöt just 2014/15: listan visar att lagen redovisades inom sammanhanget för Hörneåns ÄSO då. En faktisk anslutningsdag eller giltighetsperiod måste fortfarande bekräftas från officiella beslut, äldre skötselplaner eller kartunderlag.
+
+Den tidigare källan från **5 december 2012** fortsätter att vara belägg för de sex namn som nämndes i bildande-/anslutningssammanhang. Tidslinjen skiljer nu på första lokala belägg och formellt verifierat anslutningsdatum.
