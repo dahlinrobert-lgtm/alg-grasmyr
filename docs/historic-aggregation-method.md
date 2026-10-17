@@ -8,10 +8,10 @@ Bygga en år-för-år-serie som så långt källorna medger motsvarar det områd
 
 En lokal källa, Hörnsjö VVO:s gästbok, ger två användbara uppgifter:
 
-- **5 december 2012:** ett informationsmöte för det nya Hörneåns älgskötselområde beskrivs, och Hörnsjö, Gräsmyr, Mullsjö, Torrböle, Hummelholm och Tallberg nämns som anslutna jaktlag/grupper.
+- **2 december 2012:** ett informationsmöte för det nya Hörneåns älgskötselområde beskrivs, och Hörnsjö, Gräsmyr, Mullsjö, Torrböle, Hummelholm och Tallberg nämns som anslutna jaktlag/grupper.
 - **5 juli 2015:** en lokal tilldelningsnotis för Hörneåns ÄSO listar Hummelholm, Mullsjö, Tallberg, Gräsmyr, Hörnsjö, Torrböle, Djupsjö, Högland och Nyåker.
 
-Källa: [Hörnsjö VVO:s historiska gästbok](https://www3.olzzon.com/g/g.php?a=s&i=g32-03680-34&m=alla&p=1), särskilt inläggen daterade 5 december 2012, 2 december 2012 och 5 juli 2015.
+Källa: [Hörnsjö VVO:s historiska gästbok](https://www3.olzzon.com/g/g.php?a=s&i=g32-03680-34&m=alla&p=1), särskilt inläggen daterade 2 december 2012, 2 december 2012 och 5 juli 2015.
 
 Det ger **nio lokala jaktlags-/områdesnamn att följa upp**. Källan belägger inte att alla nio var egna registrerade VVO eller ÄSO. Sex namn förekommer i samband med bildandet/anslutningen 2012/13; tre ytterligare namn förekommer i 2015 års lokala tilldelningslista. Det officiella registreringsförhållandet, exakta startår och historiska geometrier behöver fortfarande verifieras.
 
@@ -77,7 +77,7 @@ Källfil med årsvärden och förändringar: [data/area_annual.csv](../data/area
 
 Det är möjligt att jaktlag eller marker anslöts vid olika jaktår. Alla namn ska därför ha separat från-/till-jaktår; vi får inte anta att dagens Hörneåns ÄSO hade samma geografiska täckning under hela statistikserien.
 
-En lokal källa, Hörnsjö VVO:s gästbok (https://www3.olzzon.com/g/g.php?a=s&i=g32-03680-34&m=alla&p=1), nämner sex namn i bildande-/anslutningssammanhang den 5 december 2012 och listar nio namn i en lokal tilldelningsnotis den 5 juli 2015. För de sex första är detta belägg för omnämnande i det sammanhanget senast 2012, inte fastställd juridisk anslutningsdag. För Djupsjö, Högland och Nyåker fastställer 2015-listan endast att de redovisades då, inte att de anslöt då.
+En lokal källa, Hörnsjö VVO:s gästbok (https://www3.olzzon.com/g/g.php?a=s&i=g32-03680-34&m=alla&p=1), nämner sex namn i bildande-/anslutningssammanhang den 2 december 2012 och listar nio namn i en lokal tilldelningsnotis den 5 juli 2015. För de sex första är detta belägg för omnämnande i det sammanhanget senast 2012, inte fastställd juridisk anslutningsdag. För Djupsjö, Högland och Nyåker fastställer 2015-listan endast att de redovisades då, inte att de anslöt då.
 
 Hörneåns rapporterade areal ökar från 26 777 ha 2013/14 till 32 355 ha 2014/15 (+5 578 ha), 35 506 ha 2018/19 (+3 151 ha), 35 567,05 ha 2020/21 (+61,05 ha) och 37 132,8 ha 2023/24 (+1 565,75 ha). Dessa steg kan användas för att prioritera sökningen efter beslut men bevisar inte i sig någon viss anslutning. De kan även bero på korrigeringar eller gränsjusteringar.
 
@@ -85,8 +85,19 @@ Fil `data/area_membership_timeline.csv` håller isär första källomnämnande, 
 
 ## Tidigare källa som listar samtliga nio jaktlag (2026-10-17)
 
-Hörnsjö VVO:s gästbok innehåller en post daterad **23 november 2014** med rubriken/innehållet om avskjutning och tilldelning till och med vecka 44. Den listar Hörnsjö, Gräsmyr, Mullsjö, Torrböle, Tallberg, Djupsjö, Hummelholm, Högland och Nyåker. Källa: https://www3.olzzon.com/g/g.php?a=s&i=g32-03680-34&m=alla&p=1 (post nr 234).
+Hörnsjö VVO:s gästbok innehåller en post daterad **14 december 2014** med rubriken/innehållet om avskjutning och tilldelning till och med vecka 44. Den listar Hörnsjö, Gräsmyr, Mullsjö, Torrböle, Tallberg, Djupsjö, Hummelholm, Högland och Nyåker. Källa: https://www3.olzzon.com/g/g.php?a=s&i=g32-03680-34&m=alla&p=1 (post nr 234).
 
-Det här flyttar det tidigaste belägget för Djupsjö, Högland och Nyåker från 2015 till senast **23 november 2014**. Det bevisar dock inte att de anslöt just 2014/15: listan visar att lagen redovisades inom sammanhanget för Hörneåns ÄSO då. En faktisk anslutningsdag eller giltighetsperiod måste fortfarande bekräftas från officiella beslut, äldre skötselplaner eller kartunderlag.
+Det här flyttar det tidigaste belägget för Djupsjö, Högland och Nyåker från 2015 till senast **14 december 2014**. Det bevisar dock inte att de anslöt just 2014/15: listan visar att lagen redovisades inom sammanhanget för Hörneåns ÄSO då. En faktisk anslutningsdag eller giltighetsperiod måste fortfarande bekräftas från officiella beslut, äldre skötselplaner eller kartunderlag.
 
-Den tidigare källan från **5 december 2012** fortsätter att vara belägg för de sex namn som nämndes i bildande-/anslutningssammanhang. Tidslinjen skiljer nu på första lokala belägg och formellt verifierat anslutningsdatum.
+Den tidigare källan från **2 december 2012** fortsätter att vara belägg för de sex namn som nämndes i bildande-/anslutningssammanhang. Tidslinjen skiljer nu på första lokala belägg och formellt verifierat anslutningsdatum.
+
+
+## Källkontroll och datumrättning (2026-10-17)
+
+Vid kontroll av originalposterna i Hörnsjö VVO:s gästbok rättas två datum som tidigare återgetts fel:
+- **Post 161 är daterad 2 december 2012** och listar Hörnsjö, Gräsmyr, Mullsjö, Torrböle, Hummelholm och Tallberg som jaktlag anslutna till det nya älgskötselområdet.
+- **Post 163 är daterad 13 december 2012** och upprepar listan i samband med informationsmötet.
+- **Post 168 är daterad 25 mars 2013** och säger att Hörneåns ÄSO bildats under vintern och att skribentens jaktlag gått med.
+- **Post 234 är daterad 14 december 2014**, inte 23 november. Den innehåller avskjutning till och med vecka 44 och tilldelning för samtliga nio namn. Post 233 är den som är daterad 23 november 2014 och innehåller inte denna nio-radiga tabell.
+
+Originalkälla: https://www3.olzzon.com/g/g.php?a=s&i=g32-03680-34&m=alla&p=1. Den här rättningen gäller källornas publiceringsdatum. Den fastställer inte i sig exakta juridiska anslutningsdatum eller historiska gränser.
