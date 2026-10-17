@@ -55,6 +55,8 @@ Frågan för Gräsmyrs VVO gav data för 2010/2011, 2011/2012 och 2012/2013. Fö
 - [Portalens historiska områdeskoder för jaktåret 2009/2010](data/portal_area_crosswalk_2009_2010.csv): säsongsfiltrerade ID:n och försiktigt bedömda kopplingar för de äldre Nordmalingsområdena.
 - [Fullständigt officiellt avskjutningsuttag för tio områden 2009/2010](data/official_historical_area_stats_2009_2010_full.csv): rapporterad areal, fällda älgar, avskjutningsmål, nyttjandegrad och portal-ID.
 - [Historik för namnlös registrering 24-01-02-183-A, 2009/10–2012/13](data/official_area_history_24-01-02-183-A_2009-2013.csv): bekräftar arealsteget 303 → 504 ha från 2010/11.
+- [Officiell flerårstabell för tio historiska områden 2009/10–2012/13](data/official_historical_area_summary_2009_2013.csv): 40 rader med areal, fällda älgar och avskjutningsmål.
+- [Workflow: full historisk registergranskning](.github/workflows/audit-historical-area-registers.yml), körning [39067657897](https://github.com/dahlinrobert-lgtm/alg-grasmyr/actions/runs/39067657897) med fullständiga tabeller och diagnostik.
 - [Workflow: hämta historisk statistik för de identifierade områdena](.github/workflows/download-2009-historical-areas.yml): testar avskjutningsrapporten för nio namngivna områden och den namnlösa posten 24-01-02-183-A.
 - [Områdesregister](data/area_registry.csv)
 - [Datadictionary och kvalitetsregler](docs/data-dictionary.md)
