@@ -91,10 +91,10 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
   <h3 style="margin-top:6px">Tillgängliga gränsexporter per jaktår</h3>
   <p>Den historiska arealgranskningen bygger endast på myndighetens publicerade Excel-exporter från Älgdata. Här skiljs de två exporttyperna åt; saknade filer fylls inte med antaganden.</p>
   <div class="table-wrap"><table><thead><tr><th>Exporttyp</th><th>Tillgängliga jaktår</th><th>Begränsning</th></tr></thead><tbody>
-   <tr><td>Nuvarande gränser</td><td>2000/01–2016/17 och 2019/20–2026/27</td><td>2017/18 och 2018/19 saknas</td></tr>
-   <tr><td>Historiska gränser</td><td>2012/13–2016/17 och 2019/20–2026/27</td><td>2017/18 och 2018/19 saknas</td></tr>
+   <tr><td>Nuvarande gränser</td><td>2000/01–2026/27</td><td>Sammanhängande säsongsserie i de tillgängliga filerna</td></tr>
+   <tr><td>Historiska gränser</td><td>2012/13–2026/27</td><td>Sammanhängande säsongsserie i de tillgängliga filerna</td></tr>
   </tbody></table></div>
-  <p class="small muted">För 2000/01–2011/12 finns i den inventerade serien endast exporterna med nuvarande gränser. Se <a href="data/processed/boundary-comparison-summary.md">sammanfattningen av Excel-granskningen</a> och <a href="data/processed/area-registration-boundary-audit.csv">registreringshistoriken per säsong</a>.</p>
+  <p class="small muted">För 2000/01–2011/12 finns endast exporterna med nuvarande gränser. För 2012/13–2026/27 finns båda exporttyperna. Se <a href="data/processed/boundary-comparison-summary.md">sammanfattningen av Excel-granskningen</a> och <a href="data/processed/area-registration-boundary-audit.csv">registreringshistoriken per säsong</a>.</p>
  </div>
  <div class="note">Historiska jaktlagsuppgifter och lokala listor används inte som underlag för denna offentliga statistik. Registrerade arealer, områdesnamn och jaktår redovisas endast när de kan spåras till myndighetens Excel-exporter. Att en registrering förekommer i Excel visar inte i sig att den ingår i Hörneåns ÄSO under en viss säsong.</div>
  <div class="panel" style="margin-top:14px">
@@ -123,9 +123,9 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
   </div>
   <div class="table-wrap"><table><thead><tr><th>Jaktår</th><th>Rapporterad areal</th><th>Förändring mot föregående rapportår</th></tr></thead><tbody>
    <tr><td>2013/14</td><td>26 777 ha</td><td>Basår</td></tr>
-   <tr><td>2014/15–2016/17</td><td>32 355 ha</td><td>+5 578 ha (+20,8 %)</td></tr>
-   <tr><td>2017/18–2018/19</td><td>Ej verifierad i tillgängliga Excel-exporter</td><td>Lucka i källunderlaget</td></tr>
-   <tr><td>2019/20</td><td>35 506 ha</td><td>+3 151 ha jämfört med senaste tillgängliga värde 2016/17; förändringens exakta säsong okänd</td></tr>
+   <tr><td>2014/15–2017/18</td><td>32 355 ha</td><td>+5 578 ha (+20,8 %)</td></tr>
+   <tr><td>2018/19</td><td>35 506 ha</td><td>+3 151 ha (+9,7 %)</td></tr>
+   <tr><td>2019/20</td><td>35 506 ha</td><td>Ingen rapporterad förändring</td></tr>
    <tr><td>2020/21–2022/23</td><td>35 567,05 ha</td><td>+61,05 ha (+0,2 %)</td></tr>
    <tr><td>2023/24–2025/26</td><td>37 132,8 ha</td><td>+1 565,75 ha (+4,4 %)</td></tr>
   </tbody></table></div>
@@ -140,7 +140,7 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
   <div class="table-wrap"><table><thead><tr><th>Jämförelse</th><th>Äldre områden som summeras</th><th>Summa äldre areal</th><th>Hörneåns arealförändring</th><th>Bedömning</th></tr></thead><tbody>
    <tr><td>Basår 2013/14</td><td>Gräsmyr 4 795 + Mullsjö 3 492 + Tallbergsliden 3 172 + Hummelholm 5 508 + Hörnsjö 6 601 + Torrböle 3 209 ha</td><td><strong>26 777 ha</strong></td><td>26 777 ha total areal</td><td><span class="tag">Exakt summa</span><br>Stark aritmetisk träff</td></tr>
    <tr><td>Ökning 2014/15</td><td>Djupsjö 2 506 + Nyåker 2 568 + oidentifierat område 504 ha</td><td><strong>5 578 ha</strong></td><td>+5 578 ha</td><td><span class="tag">Exakt summa</span><br>Området på 504 ha är ännu inte identifierat</td></tr>
-   <tr><td>Förändring mellan 2016/17 och 2019/20</td><td>Öre-Brattfors VVO i 2016/17-exporten</td><td><strong>3 151 ha</strong></td><td>+3 151 ha i första tillgängliga exporten 2019/20 efter luckan</td><td><span class="tag">Excel-matchning</span><br>Exakt förändringssäsong och eventuell överföring kan inte fastställas</td></tr>
+   <tr><td>Ökning 2018/19</td><td>Öre-Brattfors VVO</td><td><strong>3 151 ha</strong></td><td>+3 151 ha</td><td><span class="tag">Excel-matchning</span><br>Exakt arealmatchning samma säsong, men formell överföring och identiska gränser är inte fastställda</td></tr>
    <tr><td>Ökning 2023/24</td><td>Hallens VVO (24-01-02-067-A)</td><td>1 567,62 ha i Excel 2021/22–2022/23</td><td>+1 565,75 ha</td><td><span class="tag">Excel-matchning</span><br>Skillnad 1,87 ha; medlemskap kan inte fastställas</td></tr>
   </tbody></table></div>
   <div class="note">Excel-kontrollen av både historiska och nuvarande gränser visar att Öre-Brattfors VVO (3 151 ha) finns som separat registrering till och med 2016/17 men inte i de tillgängliga filerna från 2019/20; 2017/18 och 2018/19 saknas, så exakt övergångssäsong kan inte bevisas av dessa exporter. Hallens VVO finns separat till och med 2022/23; Excel anger 1 567,62 ha för 2021/22 och 2022/23, och Hallens saknas som separat registrering från 2023/24. Ökningen för Hörneåns på 1 565,75 ha skiljer då bara 1,87 ha från Hallens senaste rapporterade area. Dessa observationer visar endast registrerade värden och om en separat rad finns i de tillgängliga exporterna. De bevisar inte identiska polygoner eller formella beslutsdatum. Posten på 504 ha är namnlös i Excel och kopplas inte till något annat namn.</div>
@@ -156,7 +156,7 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
  <div class="cards">
   <div class="card"><div class="kpi-label">Senast rapporterad areal</div><div class="kpi">37 132,8</div><div class="kpi-foot">ha · 2025/26</div></div>
   <div class="card"><div class="kpi-label">Förändring sedan 2013/14</div><div class="kpi">+10 355,8</div><div class="kpi-foot">ha · +38,7 %</div></div>
-  <div class="card"><div class="kpi-label">Arealsteg med aritmetisk kandidat</div><div class="kpi">2</div><div class="kpi-foot">2019/20 efter källucka och 2023/24; medlemskap ej fastställt</div></div>
+  <div class="card"><div class="kpi-label">Arealsteg med aritmetisk kandidat</div><div class="kpi">2</div><div class="kpi-foot">2018/19 och 2023/24; medlemskap ej fastställt</div></div>
   <div class="card"><div class="kpi-label">Öppna arealavvikelser</div><div class="kpi">1</div><div class="kpi-foot">+61,05 ha under 2020/21; orsak okänd i Excel</div></div>
  </div>
  <div class="panel" style="margin-top:14px">
@@ -166,9 +166,9 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
   <div class="table-wrap"><table><thead><tr><th>Jaktår</th><th>Rapporterad areal</th><th>Förändring</th><th>Excel-observation</th></tr></thead><tbody>
    <tr><td>2013/14</td><td>26 777 ha</td><td>Basår</td><td>Basen i den nedladdade Hörneåns-serien; sex registreringar i Excel summerar till samma belopp; geometrierna är inte verifierade</td></tr>
    <tr><td>2014/15</td><td>32 355 ha</td><td>+5 578 ha</td><td>Exakt aritmetisk match mot Djupsjö + Nyåker + namnlös registrering 183; medlemskap inte formellt verifierat</td></tr>
-   <tr><td>2015/16–2016/17</td><td>32 355 ha</td><td>Ingen rapporterad förändring</td><td>Stabilt värde i tillgängliga Excel-exporter</td></tr>
-   <tr><td>2017/18–2018/19</td><td>—</td><td>—</td><td>Original-Excel-exporter saknas</td></tr>
-   <tr><td>2019/20</td><td>35 506 ha</td><td>+3 151 ha jämfört med 2016/17</td><td>Första tillgängliga Excel-värdet efter luckan. Öre-Brattfors 3 151 ha i 2016/17 är en aritmetisk match, inte bevis för överföring.</td></tr>
+   <tr><td>2015/16–2017/18</td><td>32 355 ha</td><td>Ingen rapporterad förändring</td><td>Stabilt värde i Excel-exporterna</td></tr>
+   <tr><td>2018/19</td><td>35 506 ha</td><td>+3 151 ha</td><td>Öre-Brattfors finns separat med 3 151 ha i Excel 2017/18 och saknas separat i 2018/19. Matchningen stöder ett samband men bevisar inte överföring.</td></tr>
+   <tr><td>2019/20</td><td>35 506 ha</td><td>Ingen rapporterad förändring</td><td>Stabilt värde i Excel-exporterna</td></tr>
    
    <tr><td>2020/21</td><td>35 567,05 ha</td><td>+61,05 ha</td><td>Orsak inte fastställd i Excel; ingen separat motsvarande registrering identifierad</td></tr>
    <tr><td>2021/22–2022/23</td><td>35 567,05 ha</td><td>Ingen rapporterad förändring</td><td>Stabil rapporterad areal</td></tr>
@@ -222,8 +222,8 @@ const elkHarvest=[
 {season:"2014/2015",year:2014,total:112,adult:57,calves:55,target:143,area:32355},
 {season:"2015/2016",year:2015,total:103,adult:58,calves:45,target:132,area:32355},
 {season:"2016/2017",year:2016,total:106,adult:54,calves:52,target:100,area:32355},
-{season:"2017/2018",year:2017,total:98,adult:55,calves:43,target:100,area:null},
-{season:"2018/2019",year:2018,total:123,adult:66,calves:57,target:145,area:null},
+{season:"2017/2018",year:2017,total:98,adult:55,calves:43,target:100,area:32355},
+{season:"2018/2019",year:2018,total:123,adult:66,calves:57,target:145,area:35506},
 {season:"2019/2020",year:2019,total:127,adult:71,calves:56,target:163,area:35506},
 {season:"2020/2021",year:2020,total:120,adult:66,calves:54,target:131,area:35567.05},
 {season:"2021/2022",year:2021,total:114,adult:70,calves:44,target:128,area:35567.05},
@@ -319,9 +319,9 @@ function drawAreaHistory(){
   {season:"2014/15",area:32355,label:"+5 578 ha"},
   {season:"2015/16",area:32355,label:""},
   {season:"2016/17",area:32355,label:""},
-  {season:"2017/18",area:null,label:""},
-  {season:"2018/19",area:null,label:""},
-  {season:"2019/20",area:35506,label:"Efter lucka: +3 151 ha"},
+  {season:"2017/18",area:32355,label:""},
+  {season:"2018/19",area:35506,label:"+3 151 ha"},
+  {season:"2019/20",area:35506,label:""},
   {season:"2020/21",area:35567.05,label:"+61,05 ha"},
   {season:"2021/22",area:35567.05,label:""},
   {season:"2022/23",area:35567.05,label:""},
