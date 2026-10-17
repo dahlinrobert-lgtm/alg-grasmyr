@@ -294,10 +294,6 @@ async def main() -> None:
                 if data_csv_rows == 0:
                     errors.append("Could not locate data rows in the rendered statistics table")
         except Exception as exc:
-                    errors.append("Excel export unavailable: " + str(exc)[:500])
-            else:
-                errors.append("Excel export button was missing or disabled")
-        except Exception as exc:
             errors.append(type(exc).__name__ + ": " + str(exc)[:1000])
         finally:
             if response_tasks:
