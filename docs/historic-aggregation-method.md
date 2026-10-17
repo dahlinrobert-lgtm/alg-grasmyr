@@ -101,3 +101,14 @@ Vid kontroll av originalposterna i Hörnsjö VVO:s gästbok rättas två datum s
 - **Post 234 är daterad 14 december 2014**, inte 23 november. Den innehåller avskjutning till och med vecka 44 och tilldelning för samtliga nio namn. Post 233 är den som är daterad 23 november 2014 och innehåller inte denna nio-radiga tabell.
 
 Originalkälla: https://www3.olzzon.com/g/g.php?a=s&i=g32-03680-34&m=alla&p=1. Den här rättningen gäller källornas publiceringsdatum. Den fastställer inte i sig exakta juridiska anslutningsdatum eller historiska gränser.
+
+
+## Historiska jaktlagsvärden från lokala notiser (2026-10-17)
+
+En separat tabell i `data/historical_team_harvest_allocations.csv` lagrar jaktlagsdata från två lokala notiser:
+- **Post 234, daterad 14 december 2014:** avskjutning till och med vecka 44 samt vuxentilldelning per jaktlag för jaktåret 2014/15.
+- **Post 242, daterad 5 juli 2015:** vuxentilldelning per jaktlag för jaktåret 2015/16. Texten anger totalt 59 vuxna älgar för hela ÄSO.
+
+2014 års redovisade avskjutning summerar till 30 tjurar, 26 hondjur och 53 kalvar till och med vecka 44. 2015 års tilldelning summerar till 59 vuxna. I 2014 års tabell är Hummelholm förkortat H-holm. Värdena beskriver jaktlagens interna redovisning, inte fristående registrerade områden. De ska inte summeras med Älgdatas områdesstatistik, eftersom det skulle kunna dubbelräkna samma fällda djur.
+
+Dessa två snapshots kan användas för att följa vilka lokala namn som redovisades vid respektive tidpunkt, men de bevisar inte formella anslutningsdatum eller geografisk täckning. Källan är https://www3.olzzon.com/g/g.php?a=s&i=g32-03680-34&m=alla&p=1.
