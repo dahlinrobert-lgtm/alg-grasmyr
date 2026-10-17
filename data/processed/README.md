@@ -12,3 +12,13 @@ När en första verklig export har inspekterats skapas en källspecifik normalis
 Fälten är översatta från statistikportalens grupperade tabellrubriker. Originalets visningsvärden bevaras, inklusive decimalcomma och procenttecken. Värdena i `fallda_*` beskriver faktiskt fällda älgar. Värdena i `avskjutningsmal_*` beskriver avskjutningsmålet och ska inte tolkas som faktisk avskjutning. Nyttjandegrad är rapportens nyttjandegrad av avskjutningsmålet.
 
 Se motsvarande `.metadata.json` för källa, filter och begränsningar. Nya uttag sparas med egna urvalsmetadata i stället för att skriva över äldre data.
+
+
+## Sammanställda uttag (2026-10-17)
+
+- `avskjutning_mal_ajo_hornean_2013-2026.csv`: 13 säsonger, 2013/2014–2025/2026, Hörneåns ÄSO. Sammanställd från två rapportuttag med nuvarande gränser.
+- `avskjutning_mal_ajo_hornean_2013-2026.metadata.json`: källa, filter, period och total avskjutning per säsong.
+- `avskjutning_mal_ajo_grasmyr_2010-2013.csv`: 3 säsonger, 2010/2011–2012/2013, Gräsmyrs VVO.
+- `avskjutning_mal_ajo_grasmyr_2010-2013.metadata.json`: källa, filter, period och notering om att området inte fanns i listan för aktuella gränser i senare period.
+
+Den senaste portalen gav ingen rad för Gräsmyrs VVO efter 2012/2013 och gick inte att välja för perioden 2020/2021–2025/2026 med nuvarande gränser. Detta ska tolkas som att den valda områdesidentiteten/rapporten inte ger senare rader, inte som att avskjutningen var noll. Undersök historiska gränser och eventuell övergång till annat område innan du drar slutsatser.
