@@ -102,6 +102,7 @@ python scripts/download_statistics.py \
 
 - [Säsongsvis arealavstämning mot Hörneåns ÄSO](data/area_reconciliation_by_season.csv): visar aritmetiska kandidatmatchningar och kvarstående differenser. Hallens äldre listning är 1 553 ha, men original-Excel rapporterar 1 567,62 ha 2021/22–2022/23.
 - [Jämförelse av original-Excel med historiska respektive nuvarande gränser](data/processed/boundary-comparison-summary.md): jämför registreringsnummer, registrerade arealer och övriga fält för alla säsonger där båda exportvarianterna finns.
+- [Registreringshistorik för äldre delområden](data/processed/area-registration-boundary-audit.csv) och [direkt Excel-kontroll av Hörneåns rapporterade areal](data/processed/hornean-area-source-check.csv): källvärden för identifierade registreringsnummer i båda gränsvarianterna.
 
 
 ## Källhierarki och granskningsprincip
