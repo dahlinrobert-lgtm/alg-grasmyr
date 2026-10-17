@@ -99,3 +99,5 @@ python scripts/download_statistics.py \
 3. Skilj alltid faktiskt fällda älgar från avskjutningsmål.
 4. Jaktår ska behållas som text tills formatet är verifierat.
 5. Ändrade områdesgränser och områdes-ID ska dokumenteras; blanda inte statistik från olika geografiska enheter utan belägg.
+
+- [Säsongsvis arealavstämning mot Hörneåns ÄSO](data/area_reconciliation_by_season.csv): visar exakta kandidatmatchningar 2013/14, 2014/15 och 2018/19 samt kvarstående differenser.
