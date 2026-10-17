@@ -1,0 +1,162 @@
+#!/usr/bin/env python3
+"""Inspect the public Älgdata statistics portal and capture network metadata.
+
+No cookies, credentials, request bodies or response bodies are collected. The
+report is intended to reveal the portal's public data endpoints and form
+structure before source-specific automation is written.
+"""
+from __future__ import annotations
+
+import argparse
+import asyncio
+import json
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+from playwright.async_api import async_playwright
+
+URL = "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/"
+
+
+async def inspect_dom(page) -> dict[str, Any]:
+    return await page.evaluate("""() => {
+      const labelFor = (el) => {
+        const labels = el.labels ? Array.from(el.labels).map(x => x.innerText.trim()).filter(Boolean) : [];
+        const parent = el.parentElement ? (el.parentElement.innerText || '').trim().slice(0, 180) : '';
+        return labels.join(' / ') || el.getAttribute('aria-label') || el.getAttribute('title') || parent;
+      };
+      const controls = Array.from(document.querySelectorAll('select, input, button, [role="combobox"], [role="listbox"], [role="option"]'))
+        .slice(0, 250).map(el => ({
+          tag: el.tagName.toLowerCase(),
+          role: el.getAttribute('role') || '',
+          type: el.getAttribute('type') || '',
+          name: el.getAttribute('name') || '',
+          label: labelFor(el),
+          value: 'value' in el ? String(el.value || '') : '',
+          text: (el.innerText || el.value || '').trim().slice(0, 180),
+          placeholder: el.getAttribute('placeholder') || '',
+          options: el.tagName === 'SELECT' ? Array.from(el.options).slice(0, 250).map(o => ({
+            label: o.text.trim(), value: o.value, selected: o.selected
+          })) : []
+        }));
+      return {
+        title: document.title,
+        url: location.href,
+        text: (document.body ? document.body.innerText : '').slice(0, 12000),
+        controls,
+        scripts: Array.from(document.scripts).map(s => s.src).filter(Boolean),
+        links: Array.from(document.querySelectorAll('a[href]')).slice(0, 150).map(a => ({
+          text: (a.innerText || '').trim().slice(0, 100), href: a.href
+        }))
+      };
+    }""")
+
+
+async def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, default=Path("portal-inspection.json"))
+    parser.add_argument("--seconds", type=int, default=8, help="Seconds to let the SPA load (default: 8)")
+    args = parser.parse_args()
+
+    requests: list[dict[str, Any]] = []
+    responses: list[dict[str, Any]] = []
+    page_errors: list[str] = []
+    console_errors: list[str] = []
+
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        page = await browser.new_page(viewport={"width": 1440, "height": 1000})
+        page.on("request", lambda req: requests.append({
+            "url": req.url, "method": req.method, "resource_type": req.resource_type
+        }))
+        page.on("response", lambda res: responses.append({
+            "url": res.url, "status": res.status,
+            "content_type": res.headers.get("content-type", ""),
+            "resource_type": res.request.resource_type
+        }))
+        page.on("pageerror", lambda err: page_errors.append(str(err)[:500]))
+        page.on("console", lambda msg: console_errors.append(msg.text[:500]) if msg.type == "error" else None)
+
+        navigation_error = None
+        try:
+            await page.goto(URL, wait_until="domcontentloaded", timeout=60000)
+        except Exception as exc:
+            navigation_error = str(exc)[:1000]
+        try:
+            await page.wait_for_load_state("networkidle", timeout=15000)
+        except Exception:
+            pass
+        await page.wait_for_timeout(max(0, min(args.seconds, 20)) * 1000)
+        dom = await inspect_dom(page)
+
+        # If native select boxes exist, expand data dependencies by selecting
+        # the county and area when those exact labels are present. This only
+        # reads public data; it does not submit or change server-side records.
+        exploratory_actions: list[dict[str, str]] = []
+        for target in ("Västerbottens län", "Hörneåns älgskötselområde", "Gräsmyrs viltvårdsområde"):
+            selects = page.locator("select")
+            count = await selects.count()
+            chosen = False
+            for idx in range(count):
+                select = selects.nth(idx)
+                try:
+                    option_texts = await select.locator("option").all_text_contents()
+                    match = next((t.strip() for t in option_texts if t.strip().casefold() == target.casefold()), None)
+                    if match:
+                        current = (await select.input_value()).strip()
+                        target_value = await select.locator("option").filter(has_text=match).first.get_attribute("value")
+                        if target_value and current != target_value:
+                            await select.select_option(value=target_value)
+                            exploratory_actions.append({"target": target, "action": "selected native option"})
+                            await page.wait_for_timeout(1500)
+                        else:
+                            exploratory_actions.append({"target": target, "action": "already selected or empty value"})
+                        chosen = True
+                        break
+                except Exception:
+                    continue
+            if not chosen:
+                exploratory_actions.append({"target": target, "action": "not found in native select options"})
+        final_dom = await inspect_dom(page)
+
+        # Re-capture any late-loaded requests, but do not inspect response bodies.
+        report = {
+            "inspected_at_utc": datetime.now(timezone.utc).isoformat(),
+            "source_url": URL,
+            "navigation_error": navigation_error,
+            "initial_dom": dom,
+            "exploratory_actions": exploratory_actions,
+            "final_dom": final_dom,
+            "requests": requests,
+            "responses": responses,
+            "page_errors": page_errors,
+            "console_errors": console_errors[:100],
+            "limitations": [
+                "Only public page structure and request/response metadata are recorded.",
+                "Response bodies, authentication data, cookies, and form submissions are not collected.",
+                "The portal may load statistics only after selecting a statistics type or filters."
+            ]
+        }
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(json.dumps({
+            "output": str(args.output),
+            "title": final_dom.get("title"),
+            "controls": len(final_dom.get("controls", [])),
+            "requests": len(requests),
+            "responses": len(responses),
+            "exploratory_actions": exploratory_actions,
+            "likely_data_requests": [
+                x for x in responses
+                if x.get("resource_type") in ("xhr", "fetch")
+                or any(k in x.get("url", "").lower() for k in ("api", "query", "export", "statistik", "jaktomrade", "jaktområde"))
+            ][:120],
+            "navigation_error": navigation_error,
+            "page_errors": page_errors[:15],
+        }, ensure_ascii=False, indent=2))
+        await browser.close()
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
