@@ -107,7 +107,7 @@ python scripts/download_statistics.py \
 
 ## Inventering av publicerade Excel-exporter
 
-Den befintliga Excel-granskningen visar följande säsongstäckning i repot:
+Den genomförda Excel-granskningen visar följande säsongstäckning i det samlade underlaget, inklusive kompletterande uppladdade originalfiler:
 
 - **Nuvarande gränser:** 2000/2001–2026/2027.
 - **Historiska gränser:** 2012/2013–2026/2027.
