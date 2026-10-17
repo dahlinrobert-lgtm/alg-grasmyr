@@ -29,11 +29,11 @@ def number(value: str):
         return value
 
 def site_rows(array_name: str):
-    match = re.search(rf"const\\s+{re.escape(array_name)}\\s*=\\s*\\[(.*?)\\];", HTML, re.S)
+    match = re.search(rf"const\s+{re.escape(array_name)}\s*=\s*\[(.*?)\];", HTML, re.S)
     if not match:
         raise ValueError(f"Could not find JavaScript array {array_name}")
     rows = []
-    for obj in re.finditer(r"\\{([^{}]+)\\}", match.group(1)):
+    for obj in re.finditer(r"\{([^{}]+)\}", match.group(1)):
         row = {}
         for pair in obj.group(1).split(","):
             if ":" not in pair:
