@@ -55,7 +55,11 @@ Workflowet [Download expanded Älgdata history](../.github/workflows/download-ex
 - Gräsmyrs VVO: 2010/2011–2019/2020 med historiska gränser samt ett separat försök för 2020/2021–2025/2026.
 - Vid manuell körning kan workflowet även försöka rapporterna medelålder (rapport 9), slaktvikt (rapport 20) och älgobservationer (rapport 25).
 
-Råa CSV-utdrag och `download-report.json` ligger i GitHub Actions-artifacts, inte i repots versionshanterade `data/processed`. Granska rapportens valda områdes-ID, jaktår, fel och tabellrader innan du för över något till analysfilerna. Vissa statistiktyper eller äldre områden kan sakna täckning; det ska registreras som saknad data, inte noll.
+Testhämtningen den 17 oktober 2026 lyckades för båda rapportjobben. Verifierade utdrag för Hörneåns ÄSO har nu lagts i `data/raw/lansstyrelsen/2026-10-17/`; tolkade analysscheman finns i `data/processed/algobs_ajo_hornean_2010-2026.csv` och `data/processed/medelalder_ajo_hornean_2013-2026.csv`. Metadata beskriver källans rapport-ID, områdes-ID, period, gränsläge och täckning. Slaktvikt finns endast som rå gruppad tabell eftersom dess dubbla rubrikrader behöver mappas varsamt.
+
+Gräsmyrs VVO kunde väljas för äldre period, men de tre extra rapporterna gav inga användbara älgobs-/slaktviktsrader och bara två säsonger med nollantal i medelåldersrapporten. För 2020/2021–2025/2026 gick områdes-ID `718148` inte att välja i avskjutningsrapporten. Det ska behandlas som frånvaro av rapporterad data i det urvalet – inte som noll fällda älgar.
+
+Hörneåns äldre tabeller returnerade rapportdata till och med 2019/2020 och den nuvarande gränsuppsättningen gav 2020/2021–2025/2026. För trendanalyser över denna skarv måste gräns-/arealförändringar verifieras. Råa exportfiler bevarar källans decimalcomma, rubriker och sammanfattningsrad utan att påstå att alla gruppade viktkolumner är semantiskt tolkade.
 
 ## Automatisering – beslutskriterier
 
