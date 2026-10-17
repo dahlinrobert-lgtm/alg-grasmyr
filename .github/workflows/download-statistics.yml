@@ -1,4 +1,4 @@
-name: Download initial Älgdata report
+name: Download initial Älgdata reports
 
 on:
   push:
@@ -6,15 +6,6 @@ on:
       - "scripts/download_statistics.py"
       - ".github/workflows/download-statistics.yml"
   workflow_dispatch:
-    inputs:
-      from_year:
-        description: First hunting year
-        required: true
-        default: "2010/2011"
-      to_year:
-        description: Last hunting year
-        required: true
-        default: "2025/2026"
 
 permissions:
   contents: read
@@ -22,7 +13,7 @@ permissions:
 jobs:
   download:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 12
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -35,20 +26,48 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install playwright
           python -m playwright install --with-deps chromium
-      - name: Download official statistics report
-        env:
-          FROM_YEAR: ${{ inputs.from_year || '2010/2011' }}
-          TO_YEAR: ${{ inputs.to_year || '2025/2026' }}
+
+      - name: Download Hörneåns ÄSO — 2010/2011 to 2019/2020
         run: |
           python scripts/download_statistics.py \
-            --out out/hornean-avskjutning \
-            --from-year "$FROM_YEAR" \
-            --to-year "$TO_YEAR"
-      - name: Upload raw workbook and report
+            --out out/hornean_2010-2019 \
+            --area-id 724577 \
+            --from-year "2010/2011" \
+            --to-year "2019/2020" \
+            --boundary-mode current
+
+      - name: Download Hörneåns ÄSO — 2020/2021 to 2025/2026
+        run: |
+          python scripts/download_statistics.py \
+            --out out/hornean_2020-2025 \
+            --area-id 724577 \
+            --from-year "2020/2021" \
+            --to-year "2025/2026" \
+            --boundary-mode current
+
+      - name: Download Gräsmyrs VVO — 2010/2011 to 2019/2020
+        run: |
+          python scripts/download_statistics.py \
+            --out out/grasmyr_2010-2019 \
+            --area-id 718148 \
+            --from-year "2010/2011" \
+            --to-year "2019/2020" \
+            --boundary-mode current
+
+      - name: Download Gräsmyrs VVO — 2020/2021 to 2025/2026
+        run: |
+          python scripts/download_statistics.py \
+            --out out/grasmyr_2020-2025 \
+            --area-id 718148 \
+            --from-year "2020/2021" \
+            --to-year "2025/2026" \
+            --boundary-mode current
+
+      - name: Upload CSVs and diagnostics
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: hornean-avskjutning-first-export
-          path: out/hornean-avskjutning/
+          name: algdata-avskjutning-and-grasmyr-hornean
+          path: out/
           if-no-files-found: warn
-          retention-days: 7
+          retention-days: 14
