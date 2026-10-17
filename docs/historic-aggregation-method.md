@@ -194,3 +194,22 @@ Ett automatiserat Playwright-uttag från Länsstyrelsens publika Älgdata-portal
 ### Ytterligare kontroll
 
 Nästa test är att ta ut `24-01-02-183-A` och `24-01-02-098-A` för flera jaktår med historiska gränser. Om den rapporterade arealen för 183 ändras under 2009/10–2012/13 kan det bidra till att förklara skillnaden 303/504 ha. Om inte behöver vi äldre beslut, registerutdrag och kartbilagor från Länsstyrelsen. Dessa lokala områdesresultat ska fortfarande hållas åtskilda från Hörneåns ÄSO:s egen rapporterade avskjutning tills geografisk täckning och överlapp har verifierats.
+
+## Verifierad arealserie för registrering 24-01-02-183-A (2026-10-17)
+
+Uttaget av de två kritiska registreringarna för 2009/10–2012/13 slutfördes utan fel i [GitHub Actions-körning 39067137153](https://github.com/dahlinrobert-lgtm/alg-grasmyr/actions/runs/39067137153). Portalens rapport *Avskjutning med mål — ÄJO*, med historiska gränser, visar följande för registrering `24-01-02-183-A` (internt ID 718179; namn saknas):
+
+| Jaktår | Rapporterad areal | Fällda totalt | Avskjutningsmål totalt |
+|---|---:|---:|---:|
+| 2009/2010 | 303 ha | 2 | 1 |
+| 2010/2011 | 504 ha | 1 | 1 |
+| 2011/2012 | 504 ha | 1 | 1 |
+| 2012/2013 | 504 ha | 3 | 4 |
+
+Det här löser en del av den tidigare arealfrågan: **ökningen med 201 ha inträffar mellan jaktåren 2009/10 och 2010/11 i portalens serie.** Den äldre tilldelningslistan från 2012 anger 504 ha för kod `01-02-183`, vilket stämmer med portalens areal från 2010/11 och framåt. Det verkar alltså inte vara en kvarstående 303/504-konflikt mellan källorna; de beskriver olika jaktår.
+
+Däremot fastställer arealserien inte varför arealen ändrades 2010/11 (t.ex. en faktisk gräns-/anslutningsändring eller uppdatering av register-/arealberäkning) och inte heller vilket lokalt jaktlag den namnlösa registreringen motsvarar. En lokal tilldelningslista från 2014 nämner Högland, men det finns ännu inget beslut eller kartunderlag som knyter namnet till `24-01-02-183-A`. Högland ska därför fortsatt vara oidentifierat i registerkopplingen.
+
+Samma perioduttag för `24-01-02-098-A — Höglågdal jaktområde` visar stabil areal **340 ha** alla fyra säsonger 2009/10–2012/13. Det stärker kopplingen till den namnlösa raden `01-02-098` med 340 ha i 2012-listan.
+
+De årsvisa värdena för `24-01-02-183-A` finns i `data/official_area_history_24-01-02-183-A_2009-2013.csv`. Den fullständiga ettårsbaserade tvärsnittstabellen för tio områden finns i `data/official_historical_area_stats_2009_2010_full.csv`. Fortsatt sammanräkning med Hörneåns ÄSO kräver fortfarande verifierad geografisk täckning och överlapp; rapporterade delområden får inte läggas ovanpå ÄSO-totalen automatiskt.
