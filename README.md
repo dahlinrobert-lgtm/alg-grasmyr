@@ -33,7 +33,8 @@ En responsiv statistikwebb publiceras via GitHub Pages från [index.html](index.
 - [Metadata för Gräsmyrs VVO](data/processed/avskjutning_mal_ajo_grasmyr_2010-2013.metadata.json): källa, urval och begränsningar.
 - [Hörneåns ÄSO – medelålder 2013/2014–2025/2026](data/processed/medelalder_vuxna_hornean_2013-2026.csv): 13 säsonger.
 - [Hörneåns ÄSO – slaktvikter 2013/2014–2025/2026](data/processed/slaktvikt_hornean_2013-2026.csv): 13 säsonger.
-- [Hörneåns ÄSO – älgobservationer 2013/2014–2025/2026](data/processed/algobs_hornean_2013-2026.csv): 13 säsonger.
+- [Hörneåns ÄSO – älgobservationer 2013/2014–2025/2026](data/processed/algobs_hornean_2013-2026.csv): 13 säsonger med nuvarande gränser.
+- [Tillägg – älgobs 2010/2011–2012/2013 med historiska gränser](data/processed/algobs_hornean_historical_boundaries_2010-2013.csv): tre äldre säsonger som kompletterar tidslinjen, men ska hållas åtskilda från serien med nuvarande gränser. Källtabellen för hela uttaget finns under [rådata](data/raw/portal_tables/hornean_algobs_ajo_historical_boundaries_2010-2020.csv); [metadata](data/processed/algobs_hornean_historical_boundaries_2010-2013.metadata.json) beskriver urvalet.
 - [Metadata för de tre statistikserierna](data/processed/other-statistics-hornean-2013-2026.metadata.json).
 - [Äldre deluttag 2020/2021–2025/2026](data/processed/other-statistics-hornean-2020-2026.metadata.json) finns kvar som dokumentation för det första uttaget.
 - [Täckning för övriga rapporter](data/processed/other-statistics-coverage.json): rapporttyper med data och rapporter där portalen saknade prov/data.
