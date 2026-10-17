@@ -59,6 +59,27 @@ def main():
         w=csv.DictWriter(f,fieldnames=["file","mode","season","size_bytes","sha256","duplicate_of"],delimiter=";")
         w.writeheader(); w.writerows(records)
     comparisons=[]
+    # Detailed inventory keyed by official registration number and actual reported area/harvest columns.
+    missing_registration_details = []
+    for season, modes in sorted(by_key.items()):
+        old_files = modes.get("historical", [])
+        new_files = modes.get("current", [])
+        if not old_files or not new_files:
+            continue
+        for oldp in old_files:
+            oldrows = workbook_rows(oldp)
+            for newp in new_files:
+                newrows = workbook_rows(newp)
+                for reg in sorted(set(newrows) - set(oldrows)):
+                    for row in newrows[reg]:
+                        missing_registration_details.append({
+                            "season": season, "registration": reg,
+                            "name": row.get("Jaktområdets namn", ""),
+                            "area_ha": row.get("Registrerad areal ha", ""),
+                            "total_harvest": row.get("Totalt", ""),
+                            "source_file": newp.name
+                        })
+
     for season,modes in sorted(by_key.items()):
         olds=modes.get("historical",[]); news=modes.get("current",[])
         if not olds or not news:
@@ -116,7 +137,10 @@ def main():
         if x["only_historical"]:
             report.append("Registreringar endast i historisk fil: "+", ".join(x["only_historical"]))
         if x["only_current"]:
-            report.append("Registreringar endast i nuvarande fil: "+", ".join(x["only_current"]))
+            report.append("Registreringar endast i nuvarande fil:")
+            details = [d for d in missing_registration_details if d["season"] == x["season"]]
+            for d in details:
+                report.append(f"- \`{d['registration']}\` — {d['name']}; areal {d['area_ha']} ha; totalt fällda {d['total_harvest']}. Källa: \`{d['source_file']}\`")
         if x["duplicate_keys"]: report.append("Dubbletter av registreringsnummer: "+json.dumps(x["duplicate_keys"],ensure_ascii=False))
         report.extend(["","| Registreringsnummer | Jaktområde | Fält | Historiskt | Nuvarande |","|---|---|---|---|---|"])
         for d in x["field_differences"][:250]:
