@@ -72,3 +72,13 @@ Källfil med årsvärden och förändringar: [data/area_annual.csv](../data/area
 - De övriga åtta lokala namnen saknar ännu verifierade registrerade arealer och separata gränspolygoner.
 - Det går därför inte att summera de nio namnen eller testa om deras arealer tillsammans motsvarar 37 132,8 ha.
 - Nästa steg är att hämta nuvarande och historiska polygoner samt beslut från Länsstyrelsens karttjänst/områdesregister. Beräkna polygonareal i ett lämpligt projicerat koordinatsystem, jämför unionen av historiska polygoner med dagens polygon, och redovisa täckningsgrad, överlapp och yta utanför. Rapportera separat både geometrisk polygonarea och den administrativa areal som Älgdata redovisar; de kan skilja sig.
+
+## Tidsatt rekonstruktion: möjlig etappvis anslutning
+
+Det är möjligt att jaktlag eller marker anslöts vid olika jaktår. Alla namn ska därför ha separat från-/till-jaktår; vi får inte anta att dagens Hörneåns ÄSO hade samma geografiska täckning under hela statistikserien.
+
+En lokal källa, Hörnsjö VVO:s gästbok (https://www3.olzzon.com/g/g.php?a=s&i=g32-03680-34&m=alla&p=1), nämner sex namn i bildande-/anslutningssammanhang den 5 december 2012 och listar nio namn i en lokal tilldelningsnotis den 5 juli 2015. För de sex första är detta belägg för omnämnande i det sammanhanget senast 2012, inte fastställd juridisk anslutningsdag. För Djupsjö, Högland och Nyåker fastställer 2015-listan endast att de redovisades då, inte att de anslöt då.
+
+Hörneåns rapporterade areal ökar från 26 777 ha 2013/14 till 32 355 ha 2014/15 (+5 578 ha), 35 506 ha 2018/19 (+3 151 ha), 35 567,05 ha 2020/21 (+61,05 ha) och 37 132,8 ha 2023/24 (+1 565,75 ha). Dessa steg kan användas för att prioritera sökningen efter beslut men bevisar inte i sig någon viss anslutning. De kan även bero på korrigeringar eller gränsjusteringar.
+
+Fil `data/area_membership_timeline.csv` håller isär första källomnämnande, giltighetsår och bekräftat anslutningsdatum. Okända år lagras som `unknown`; första omnämnande eller arealförändring får aldrig automatiskt omvandlas till ett påstått anslutningsår. Nästa steg är att hitta Länsstyrelsens beslut, äldre älgskötselplaner och historiska polygoner och sedan kontrollera täckning/överlapp innan en avskjutningsserie rekonstrueras.
