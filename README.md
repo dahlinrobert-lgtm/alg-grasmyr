@@ -27,9 +27,11 @@ Detta är två separata val i portalen. De ska inte automatiskt behandlas som sa
 - [Metadata för Hörneåns ÄSO](data/processed/avskjutning_mal_ajo_hornean_2013-2026.metadata.json): källa, områdes-ID, urval och täckningsnoteringar.
 - [Gräsmyrs VVO – avskjutning 2010/2011–2012/2013](data/processed/avskjutning_mal_ajo_grasmyr_2010-2013.csv): 3 säsonger i det historiska områdets egen portalserie.
 - [Metadata för Gräsmyrs VVO](data/processed/avskjutning_mal_ajo_grasmyr_2010-2013.metadata.json): källa, urval och begränsningar.
-- [Hörneåns ÄSO – medelålder 2020/2021–2025/2026](data/processed/medelalder_vuxna_hornean_2020-2026.csv)
-- [Hörneåns ÄSO – slaktvikter 2020/2021–2025/2026](data/processed/slaktvikt_hornean_2020-2026.csv)
-- [Hörneåns ÄSO – älgobservationer 2020/2021–2025/2026](data/processed/algobs_hornean_2020-2026.csv)
+- [Hörneåns ÄSO – medelålder 2013/2014–2025/2026](data/processed/medelalder_vuxna_hornean_2013-2026.csv): 13 säsonger.
+- [Hörneåns ÄSO – slaktvikter 2013/2014–2025/2026](data/processed/slaktvikt_hornean_2013-2026.csv): 13 säsonger.
+- [Hörneåns ÄSO – älgobservationer 2013/2014–2025/2026](data/processed/algobs_hornean_2013-2026.csv): 13 säsonger.
+- [Metadata för de tre statistikserierna](data/processed/other-statistics-hornean-2013-2026.metadata.json).
+- [Äldre deluttag 2020/2021–2025/2026](data/processed/other-statistics-hornean-2020-2026.metadata.json) finns kvar som dokumentation för det första uttaget.
 - [Täckning för övriga rapporter](data/processed/other-statistics-coverage.json): rapporttyper med data och rapporter där portalen saknade prov/data.
 - [Råa tabellfångster](data/raw/portal_tables/README.md): de ursprungliga rubrikerna och portalens explicita tomdata-meddelanden.
 
@@ -47,7 +49,7 @@ Frågan för Gräsmyrs VVO gav data för 2010/2011, 2011/2012 och 2012/2013. Fö
 - [Områdesregister](data/area_registry.csv)
 - [Datadictionary och kvalitetsregler](docs/data-dictionary.md)
 
-Skripten använder statistikportalens publika webbgränssnitt med Playwright. Avskjutning, medelålder, slaktvikt och älgobs finns nu i separata bearbetade CSV-filer; andra rapporttyper kan fortfarande behöva källspecifik normalisering. Hämtningarna lämnar inga syntetiska nollor för saknade år.
+Skripten använder statistikportalens publika webbgränssnitt med Playwright. Avskjutning, medelålder, slaktvikt och älgobs finns nu i separata bearbetade CSV-filer för Hörneåns ÄSO 2013/2014–2025/2026; andra rapporttyper kan fortfarande behöva källspecifik normalisering. Hämtningarna lämnar inga syntetiska nollor för saknade år.
 
 ## Lokal körning
 
