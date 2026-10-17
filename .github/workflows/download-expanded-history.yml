@@ -1,6 +1,9 @@
 name: Download expanded Älgdata history
 
 on:
+  push:
+    paths:
+      - ".github/workflows/download-expanded-history.yml"
   workflow_dispatch:
     inputs:
       run_extra_statistics:
@@ -98,7 +101,7 @@ jobs:
       - name: Gräsmyrs VVO — moose observations (report 25)
         continue-on-error: true
         run: |
-          python scripts/download_statistics.py --out out/extra/grasmyr-moose-observations --area-id 718148 --report-id 25 --from-year "2010/2011" --to-year "2019/2020" --boundary-mode historical
+          python scripts/download_statistics.py --out out/extra/grasmyr-moose-observations --area-id 718148 --report-id 25 --to-year "2019/2020" --from-year "2010/2011" --boundary-mode historical
 
       - name: Upload additional statistics and diagnostics
         if: always()
