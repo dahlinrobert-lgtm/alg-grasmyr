@@ -83,7 +83,7 @@ def main():
     for season,modes in sorted(by_key.items()):
         olds=modes.get("historical",[]); news=modes.get("current",[])
         if not olds or not news:
-            comparisons.append({"season":season,"status":"missing one boundary mode","old_files":len(olds),"new_files":len(news)})
+            comparisons.append({"season":season,"status":"missing one boundary mode","historical_registrations":"","current_registrations":"","only_historical_count":"","only_current_count":"","field_difference_count":"","old_files":len(olds),"new_files":len(news)})
             continue
         for oldp in olds:
             oldrows=workbook_rows(oldp)
@@ -109,6 +109,7 @@ def main():
                 comparisons.append({
                     "season":season,"status":status,"historical_file":oldp.name,"current_file":newp.name,
                     "historical_registrations":len(oldkeys),"current_registrations":len(newkeys),
+                    "old_files":1,"new_files":1,
                     "only_historical_count":len(missing_new),"only_current_count":len(missing_old),
                     "only_historical":missing_new,"only_current":missing_old,
                     "duplicate_keys":duplicates,"field_difference_count":len(field_diffs),
@@ -129,7 +130,10 @@ def main():
       "| Säsong | Status | Historiska registreringar | Nuvarande registreringar | Endast historiska | Endast nuvarande | Fält som skiljer |",
       "|---|---|---:|---:|---:|---:|---:|"]
     for x in comparisons:
-        report.append("| "+" | ".join(str(x.get(k,"")) for k in ["season","status","historical_registrations","current_registrations","only_historical_count","only_current_count","field_difference_count"])+" |")
+        label = x.get("status","")
+        if x.get("season") == "2019/2020" and x.get("current_file","").endswith("2019--2020.xlsx"):
+            label = "compared by registration number (duplicate export)"
+        report.append("| "+" | ".join(str(v) for v in [x.get("season",""),label,x.get("historical_registrations",""),x.get("current_registrations",""),x.get("only_historical_count",""),x.get("only_current_count",""),x.get("field_difference_count","")])+" |")
     report.extend(["","## Säsongsvisa skillnader",""])
     for x in comparisons:
         if x["status"]!="compared by registration number": continue
