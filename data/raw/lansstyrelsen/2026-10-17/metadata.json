@@ -1,0 +1,73 @@
+{
+  "project": "alg-grasmyr",
+  "source": "Länsstyrelsernas Älgdata statistikportal",
+  "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+  "retrieved_on": "2026-10-17",
+  "portal_internal_area_id": 724577,
+  "official_area_id": "24-01-02-342-Ä",
+  "area_name": "Hörneåns älgskötselområde",
+  "management_area": "Sydöstra älgförvaltningsområdet",
+  "files": [
+    {
+      "file": "algobs_hornean_2010-2020.csv",
+      "report_id": 25,
+      "boundary_mode": "historical",
+      "period_requested": "2010/2011–2019/2020",
+      "period_returned": "2010/2011–2019/2020",
+      "rows": 10,
+      "description": "Älgobservationer per jaktår. Källa: tabellens värden bevarade med decimalcomma."
+    },
+    {
+      "file": "algobs_hornean_2020-2026.csv",
+      "report_id": 25,
+      "boundary_mode": "current",
+      "period_requested": "2020/2021–2025/2026",
+      "period_returned": "2020/2021–2025/2026",
+      "rows": 6,
+      "description": "Älgobservationer per jaktår."
+    },
+    {
+      "file": "medelalder_hornean_2013-2020.csv",
+      "report_id": 9,
+      "boundary_mode": "historical",
+      "period_requested": "2010/2011–2019/2020",
+      "period_returned": "2013/2014–2019/2020",
+      "rows": 7,
+      "description": "Källans grupperade tabell; två rubrikrader är bevarade."
+    },
+    {
+      "file": "medelalder_hornean_2020-2026.csv",
+      "report_id": 9,
+      "boundary_mode": "current",
+      "period_requested": "2020/2021–2025/2026",
+      "period_returned": "2020/2021–2025/2026",
+      "rows": 6,
+      "description": "Källans grupperade tabell; två rubrikrader är bevarade. Var försiktig med små antal för 2022/2023."
+    },
+    {
+      "file": "slaktvikt_hornean_2013-2020.csv",
+      "report_id": 20,
+      "boundary_mode": "historical",
+      "period_requested": "2010/2011–2019/2020",
+      "period_returned": "2013/2014–2019/2020",
+      "rows": 7,
+      "description": "Grupperad tabell med vikt- och antalskolumner, källrubriker och sammanfattningsrad bevarade."
+    },
+    {
+      "file": "slaktvikt_hornean_2020-2026.csv",
+      "report_id": 20,
+      "boundary_mode": "current",
+      "period_requested": "2020/2021–2025/2026",
+      "period_returned": "2020/2021–2025/2026",
+      "rows": 6,
+      "description": "Grupperad tabell med vikt- och antalskolumner, källrubriker och sammanfattningsrad bevarade."
+    }
+  ],
+  "notes": [
+    "Råa CSV-filer återger portalens visade tabeller utan semantisk omtolkning.",
+    "Gräsmyrs VVO (portal-ID 718148) är ett separat val från Hörneåns ÄSO (724577). De tre kompletterande Gräsmyr-rapporterna gav inga användbara observations-/slaktviktsrader och medelåldersrapporten visade endast nollantal för två säsonger; detta ska inte tolkas som bevis för noll fällda älgar.",
+    "För Hörneåns ÄSO begärdes historiska gränser för äldre period och nuvarande gränser för 2020/2021–2025/2026. Sammanställning över gränsbytet ska tolkas försiktigt tills geometrisk jämförbarhet har verifierats.",
+    "Den begärda äldre perioden gav rapporttyp 9 och 20 endast från 2013/2014 trots urval från 2010/2011.",
+    "Medelålder och slaktvikt är rapporterade sammanfattningar med varierande urvalsstorlekar; tolka inte medelålder utan antal djur."
+  ]
+}
