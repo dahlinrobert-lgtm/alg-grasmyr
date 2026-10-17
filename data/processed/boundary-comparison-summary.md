@@ -92,11 +92,11 @@ Nuvarande fil: `Avskjutning med mål - Förvaltningsområde - Nuvarande gränser
 
 ### 2017/2018
 
-De fyra uppladdade Excel-exporterna för 2017/2018 jämfördes per registreringsnummer. Båda gränsvarianterna innehåller 116 registreringar. Inga registreringsnummer eller registrerade fält skiljer sig.
+De två uppladdade Excel-exporterna för 2017/2018 jämfördes per registreringsnummer. Båda gränsvarianterna innehåller 116 registreringar. Inga registreringsnummer eller registrerade fält skiljer sig.
 
 ### 2018/2019
 
-De fyra uppladdade Excel-exporterna för 2018/2019 jämfördes per registreringsnummer. Båda gränsvarianterna innehåller 109 registreringar. Inga registreringsnummer eller registrerade fält skiljer sig.
+De två uppladdade Excel-exporterna för 2018/2019 jämfördes per registreringsnummer. Båda gränsvarianterna innehåller 109 registreringar. Inga registreringsnummer eller registrerade fält skiljer sig.
 
 ### 2019/2020
 
@@ -196,8 +196,8 @@ Nuvarande fil: `Avskjutning med mål - Förvaltningsområde - Nuvarande gränser
 | 2014/2015 | historical | 32355 | 32355 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2014--2015.xlsx |
 | 2015/2016 | historical | 32355 | 32355 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2015--2016(1).xlsx |
 | 2016/2017 | historical | 32355 | 32355 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2016--2017.xlsx |
-| 2017/2018 | historical | 32355 | 32355 | True | Uploaded Excel file - Historiska gränser - 2017--2018.xlsx |
-| 2018/2019 | historical | 35506 | 35506 | True | Uploaded Excel file - Historiska gränser - 2018--2019.xlsx |
+| 2017/2018 | historical | 32355 | 32355 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2017--2018.xlsx |
+| 2018/2019 | historical | 35506 | 35506 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2018--2019.xlsx |
 | 2019/2020 | historical | 35506 | 35506 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2019--2020.xlsx |
 | 2020/2021 | historical | 35567.05 | 35567.05 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2020--2021.xlsx |
 | 2021/2022 | historical | 35567.05 | 35567.05 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2021--2022.xlsx |
@@ -210,8 +210,8 @@ Nuvarande fil: `Avskjutning med mål - Förvaltningsområde - Nuvarande gränser
 | 2014/2015 | current | 32355 | 32355 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2014--2015.xlsx |
 | 2015/2016 | current | 32355 | 32355 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2015--2016.xlsx |
 | 2016/2017 | current | 32355 | 32355 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2016--2017.xlsx |
-| 2017/2018 | current | 32355 | 32355 | True | Uploaded Excel file - Nuvarande gränser - 2017--2018.xlsx |
-| 2018/2019 | current | 35506 | 35506 | True | Uploaded Excel file - Nuvarande gränser - 2018--2019.xlsx |
+| 2017/2018 | current | 32355 | 32355 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2017--2018.xlsx |
+| 2018/2019 | current | 35506 | 35506 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2018--2019.xlsx |
 | 2019/2020 | current | 35506 | 35506 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2019--2020(1).xlsx |
 | 2019/2020 | current | 35506 | 35506 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2019--2020.xlsx |
 | 2020/2021 | current | 35567.05 | 35567.05 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2020--2021.xlsx |
