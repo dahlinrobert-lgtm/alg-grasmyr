@@ -40,7 +40,10 @@ Jämförelsen matchar rader på **registreringsnummer**, inte Excel-radnummer. D
 Historisk fil: `Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2012--2013.xlsx`  
 Nuvarande fil: `Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2012--2013.xlsx`
 
-Registreringar endast i nuvarande fil: 24-04-01-504-A, 24-80-03-143-A, 24-82-09-045-A
+Registreringar endast i nuvarande fil:
+- \`24-04-01-504-A\` — Berg - Evertsson; areal 0 ha; totalt fällda -. Källa: \`Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2012--2013.xlsx\`
+- \`24-80-03-143-A\` — Trätbäckens jakt; areal 0 ha; totalt fällda -. Källa: \`Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2012--2013.xlsx\`
+- \`24-82-09-045-A\` — ; areal 177 ha; totalt fällda -. Källa: \`Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2012--2013.xlsx\`
 
 | Registreringsnummer | Jaktområde | Fält | Historiskt | Nuvarande |
 |---|---|---|---|---|
