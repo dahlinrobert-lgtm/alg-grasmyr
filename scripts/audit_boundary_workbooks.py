@@ -147,9 +147,10 @@ def main():
                     "harvest_total": row.get("Totalt", ""),
                     "reported_status": row.get("Slut-rapporterat", "")
                 })
-    with (OUT/"tracked_registration_history.csv").open("w",newline="",encoding="utf-8-sig") as f:
-        fields=["season","boundary_mode","registration","tracked_label","reported_name","reported_area_ha","harvest_total","reported_status","file"]
-        w=csv.DictWriter(f,fieldnames=fields,delimiter=";"); w.writeheader(); w.writerows(tracked_rows)
+    tracked_fields=["season","boundary_mode","registration","tracked_label","reported_name","reported_area_ha","harvest_total","reported_status","file"]
+    for outpath in [OUT/"tracked_registration_history.csv", DATA/"processed"/"area-registration-boundary-audit.csv"]:
+        with outpath.open("w",newline="",encoding="utf-8-sig") as f:
+            w=csv.DictWriter(f,fieldnames=tracked_fields,delimiter=";"); w.writeheader(); w.writerows(tracked_rows)
     # Direct comparison of the target ÄSO's reported area with the site's published series.
     target_rows = [r for r in tracked_rows if r["registration"] == "24-01-02-342-Ä"]
     annual_path = DATA / "area_annual.csv"
@@ -172,9 +173,10 @@ def main():
             "site_series_area_ha":site_area,
             "matches_site_series": str(r["reported_area_ha"]) == str(site_area) if site_area else ""
         })
-    with (OUT/"hornean_area_source_check.csv").open("w",newline="",encoding="utf-8-sig") as f:
-        fields=["season","boundary_mode","registration","excel_reported_area_ha","site_series_area_ha","matches_site_series","file"]
-        w=csv.DictWriter(f,fieldnames=fields,delimiter=";"); w.writeheader(); w.writerows(area_check)
+    area_fields=["season","boundary_mode","registration","excel_reported_area_ha","site_series_area_ha","matches_site_series","file"]
+    for outpath in [OUT/"hornean_area_source_check.csv", DATA/"processed"/"hornean-area-source-check.csv"]:
+        with outpath.open("w",newline="",encoding="utf-8-sig") as f:
+            w=csv.DictWriter(f,fieldnames=area_fields,delimiter=";"); w.writeheader(); w.writerows(area_check)
     (OUT/"boundary_comparison.json").write_text(json.dumps(comparisons,ensure_ascii=False,indent=2),encoding="utf-8")
     with (OUT/"boundary_comparison_summary.csv").open("w",newline="",encoding="utf-8-sig") as f:
         fields=["season","status","historical_file","current_file","historical_registrations","current_registrations","only_historical_count","only_current_count","field_difference_count"]
