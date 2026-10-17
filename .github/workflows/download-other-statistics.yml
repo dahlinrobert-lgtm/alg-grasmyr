@@ -50,6 +50,30 @@ jobs:
             --from-year "2020/2021" --to-year "2025/2026" \
             --boundary-mode current
 
+      - name: Hörneåns — mean age of adult moose (report 9), 2013/2014–2019/2020
+        run: |
+          python scripts/download_statistics.py \
+            --out out/other/hornean_mean-age_2013-2020 \
+            --area-id 724577 --report-id 9 \
+            --from-year "2013/2014" --to-year "2019/2020" \
+            --boundary-mode current
+
+      - name: Hörneåns — carcass weight (report 20), 2013/2014–2019/2020
+        run: |
+          python scripts/download_statistics.py \
+            --out out/other/hornean_carcass-weight_2013-2020 \
+            --area-id 724577 --report-id 20 \
+            --from-year "2013/2014" --to-year "2019/2020" \
+            --boundary-mode current
+
+      - name: Hörneåns — moose observations (report 25), 2013/2014–2019/2020
+        run: |
+          python scripts/download_statistics.py \
+            --out out/other/hornean_moose-observations_2013-2020 \
+            --area-id 724577 --report-id 25 \
+            --from-year "2013/2014" --to-year "2019/2020" \
+            --boundary-mode current
+
       - name: Gräsmyrs VVO — mean age of adult moose (report 9)
         run: |
           python scripts/download_statistics.py \
@@ -81,4 +105,4 @@ jobs:
           name: algdata-extra-statistics
           path: out/other/
           if-no-files-found: warn
-          retention-days: 13
+          retention-days: 14
