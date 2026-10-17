@@ -60,7 +60,7 @@ jobs:
           retention-days: 30
 
   download-other-statistics:
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.run_extra_statistics }}
+    if: ${{ (github.event_name == 'workflow_dispatch' && inputs.run_extra_statistics) || github.event_name == 'push' }}
     runs-on: ubuntu-latest
     timeout-minutes: 22
     steps:
