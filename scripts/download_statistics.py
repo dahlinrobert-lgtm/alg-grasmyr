@@ -153,7 +153,7 @@ def save_statistics_table(state: dict[str, Any] | None, output_path: Path) -> in
             written += 1
     return written
 
-async def save_rendered_table(state: dict[str, Any] | None, output_path: Path) -> int:
+def save_rendered_table(state: dict[str, Any] | None, output_path: Path) -> int:
     """Write the longest rendered result table verbatim as a semicolon CSV.
 
     This is a raw capture for report types whose columns have not yet been
@@ -179,7 +179,7 @@ async def save_rendered_table(state: dict[str, Any] | None, output_path: Path) -
     return len(rows)
 
 
-def main() -> None:
+async def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", type=Path, default=Path("out/hornean-avskjutning"))
     parser.add_argument("--from-year", default="2010/2011")
