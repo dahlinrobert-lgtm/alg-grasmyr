@@ -124,7 +124,11 @@ Vid avstämning ska vi skilja mellan:
 - **Beräknat värde:** exempelvis differens mellan två rapporterade arealer; beräkningen ska redovisas.
 - **Obekräftad tolkning:** slutsats som inte direkt framgår av Excel-filerna; den ska inte presenteras som statistik eller fastställd områdestillhörighet.
 
-### Excel-baserad tolkning av arealhistoriken
+### Automatisk kontroll av webbplatsens statistik
+
+GitHub Actions-workflowen `Validate website statistics against processed CSVs` kör `scripts/validate_site_series.py` när webbplatsens statistik eller relevanta bearbetade CSV-filer ändras. Kontrollen jämför de 13 säsongerna i webbplatsens serier för avskjutning, älgobs och medelålder mot respektive CSV, med exakta säsongsnycklar och numeriska värden. Den kontrollerar inte i sig CSV-filerna mot original-XLSX; den kontrollen är separat och ska fortsatt utgå från myndighetens Excel-exporter.
+
+## Excel-baserad tolkning av arealhistoriken
 
 För offentlig statistik i detta projekt används endast myndighetens publicerade Excel-exporter som belägg för registrerade arealer, områdesnamn, registreringsnummer och jaktår. Externa listor, lokala källor och andra webbplatser används inte för att fylla luckor eller fastställa historiska medlemskap.
 
