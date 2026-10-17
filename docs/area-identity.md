@@ -30,3 +30,10 @@ Detta är **endast en ledtråd för sökning**. ID, areal, status och koppling t
 5. Upprepa kontrollen i [statistikportalen](https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/) genom att växla mellan historiska och nuvarande gränser.
 
 Registrera resultatet i `data/area_registry.csv`. Ändra inte till verifierad status utan en primärkälla.
+
+
+## Result of later-period test (2026-10-17)
+
+The download workflow tested Gräsmyrs portal ID `718148` for 2020/2021–2025/2026 using both the current-boundary selector and the historical-boundary selector. Neither returned the Gräsmyrs area as a selectable option under Sydöstra ÄFO. The separate 2010/2011–2019/2020 query returned actual rows only for 2010/2011–2012/2013.
+
+This establishes a **coverage break in this report/area selection**, not that harvest was zero after 2012/2013. To establish continuity, use Länsstyrelsen's historical area register/decisions or ask the county board whether Gräsmyrs VVO's reporting was moved to a new ÄJO/ÄSO identity and from which hunting year. Do not append Hörneåns ÄSO totals to Gräsmyrs VVO as though they were the same geographic unit without this evidence.
