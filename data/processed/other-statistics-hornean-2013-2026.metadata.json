@@ -1,0 +1,56 @@
+{
+  "source": "Länsstyrelsernas Älgdata statistikportal",
+  "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+  "area_name": "Hörneåns älgskötselområde",
+  "area_display_id": "24-01-02-342-Ä",
+  "area_internal_id": 724577,
+  "county": "Västerbottens län",
+  "management_area": "Sydöstra älgförvaltningsområdet",
+  "boundary_mode": "Nuvarande gränser",
+  "retrieved_on": "2026-10-17",
+  "reports": [
+    {
+      "report_id": "9",
+      "name": "Medelålder — Vuxna djur — ÄJO",
+      "period": "2013/2014–2025/2026",
+      "rows": 13,
+      "raw_sources": [
+        "data/raw/portal_tables/hornean_medelalder_ajo_2013-2020.csv",
+        "data/raw/portal_tables/hornean_medelalder_ajo_2020-2026.csv"
+      ],
+      "normalized": "data/processed/medelalder_vuxna_hornean_2013-2026.csv",
+      "fields": "Medelålder i år och antal prov/individer för vuxna handjur och hondjur."
+    },
+    {
+      "report_id": "20",
+      "name": "Slaktvikt — ÄJO",
+      "period": "2013/2014–2025/2026",
+      "rows": 13,
+      "raw_sources": [
+        "data/raw/portal_tables/hornean_slaktvikt_ajo_2013-2020.csv",
+        "data/raw/portal_tables/hornean_slaktvikt_ajo_2020-2026.csv"
+      ],
+      "normalized": "data/processed/slaktvikt_hornean_2013-2026.csv",
+      "fields": "Vikt (kg) och antal prov för grupper av vuxna älgar och kalvar, inkl. månadsgrupper där de visas."
+    },
+    {
+      "report_id": "25",
+      "name": "Älgobservationer — ÄJO",
+      "period": "2013/2014–2025/2026",
+      "rows": 13,
+      "raw_sources": [
+        "data/raw/portal_tables/hornean_algobs_ajo_2013-2020.csv",
+        "data/raw/portal_tables/hornean_algobs_ajo_2020-2026.csv"
+      ],
+      "normalized": "data/processed/algobs_hornean_2013-2026.csv",
+      "fields": "Älgobs per mantimme, kalv/hondjur-indikatorer, andel handjur, observationsräknare och statistisk säkerställning."
+    }
+  ],
+  "notes": [
+    "Combined from two official portal queries per report type: seasons 2013/2014–2019/2020 and 2020/2021–2025/2026.",
+    "Current boundary mode was selected in both queries. Do not assume the series reflects a geometrically identical area in every year; the portal's reported registered area can vary.",
+    "Raw rendered-table captures retain grouped headers and summary row. Normalized CSVs have explicit field names and exclude table headers/summaries.",
+    "Decimal commas and portal's original source flags are preserved.",
+    "Sample sizes are included and should be assessed before comparing average age or carcass weights."
+  ]
+}
