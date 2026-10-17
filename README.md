@@ -101,3 +101,24 @@ python scripts/download_statistics.py \
 5. Ändrade områdesgränser och områdes-ID ska dokumenteras; blanda inte statistik från olika geografiska enheter utan belägg.
 
 - [Säsongsvis arealavstämning mot Hörneåns ÄSO](data/area_reconciliation_by_season.csv): visar exakta kandidatmatchningar 2013/14, 2014/15 och 2018/19 samt kvarstående differenser.
+
+
+## Källhierarki och granskningsprincip
+
+**De ursprungliga Excel-exporterna i `data/` är projektets primära källmaterial.** Bearbetade CSV-filer, metadata, manuellt sammanställda tabeller och webbplatsens JavaScript är sekundära representationer. Vid avvikelse ska uppgiften kontrolleras mot relevant Excel-fil och blad, och sekundärfilen eller webbplatsen korrigeras. En CSV-kopia får inte tyst ersätta originalexporten som facit.
+
+Vid avstämning ska vi skilja mellan:
+- **Direkt källvärde:** värde som går att återfinna i Excel-exporten.
+- **Beräknat värde:** exempelvis differens mellan två rapporterade arealer; beräkningen ska redovisas.
+- **Arbetshypotes om områdestillhörighet:** tolkning av vilken enhet som tillkommit; ska inte beskrivas som ett bevisat formellt anslutningsbeslut om det inte stöds av källmaterialet.
+
+### Låsta arbetshypoteser om arealhistoriken
+
+För den fortsatta analysen antar vi att **Öre-Brattfors VVO tillkom i Hörneåns ÄSO senast säsongen 2018/2019** och att **Hallens VVO ingår i Hörneåns ÄSO senast säsongen 2023/2024**. Detta är användarens fastställda arbetsantaganden för analysen. De rapporterade arealerna ska ändå behållas exakt som de står i Excel-underlaget; mindre skillnader mellan förändringen i rapporterad totalareal och delområdets angivna areal accepteras och ska dokumenteras, inte justeras bort.
+
+Nuvarande arbetsmodell:
+- 2018/2019: rapporterad ökning **3 151 ha**, som sammanfaller med den angivna arealen för Öre-Brattfors VVO.
+- 2023/2024: rapporterad ökning **1 565,75 ha**; Hallens VVO anges till **1 553 ha**, en skillnad på **12,75 ha** som accepteras i arbetsmodellen.
+- Dessa samband stöder arbetshypoteserna men är inte i sig formella beslut eller bevis på identiska gränspolygoner.
+
+Alla areal- och avskjutningsvärden på webbplatsen ska kontrolleras mot primära Excel-exporter innan de markeras som avstämda. Där en relevant Excel-export eller säsong saknas ska luckan anges öppet.
