@@ -151,45 +151,61 @@ async def main() -> None:
         area_discovery: list[dict[str, Any]] = []
         afo_select = page.locator("select").nth(2)
         area_select = page.locator("select").nth(5)
-        try:
-            afo_options = await afo_select.locator("option").evaluate_all(
-                "(els) => els.map(o => ({label: o.text.trim(), value: o.value}))"
-            )
-        except Exception:
-            afo_options = []
-
-        for afo in afo_options:
-            if afo["value"] == "-1" or not afo["label"]:
-                continue
+        target_terms = (
+            "Högland", "Hogland", "01-02-183", "01-02-098",
+            "Hörneåns älgskötselområde", "Hörneåns ÄSO",
+            "Gräsmyrs viltvårdsområde", "Gräsmyr",
+            "Djupsjö", "Nyåker", "Tallbergslidens",
+        )
+        # Search both historical and current boundary modes. In the earlier
+        # implementation, finding Hörneåns/Gräsmyr stopped the search early.
+        for boundary_mode, radio_value in (("historical", "F"), ("current", "G")):
             try:
-                await afo_select.select_option(value=afo["value"])
-                await page.wait_for_timeout(1200)
-                opts = await area_select.locator("option").evaluate_all(
+                mode_radio = page.locator(f'input[name="optTypeAFO"][value="{radio_value}"]')
+                if await mode_radio.count():
+                    await mode_radio.check()
+                    await page.wait_for_timeout(500)
+                afo_options = await afo_select.locator("option").evaluate_all(
                     "(els) => els.map(o => ({label: o.text.trim(), value: o.value}))"
                 )
-                discovered_names = [o["label"] for o in opts if o["value"] != "-1" and o["label"]]
-                area_discovery.append({
-                    "afo_name": afo["label"], "afo_id": afo["value"],
-                    "areas_loaded": len(discovered_names), "area_options": opts,
-                })
-                found = False
-                for target in ("Hörneåns älgskötselområde", "Hörneåns ÄSO", "Gräsmyrs viltvårdsområde"):
-                    match = next((o for o in opts if target.casefold() in o["label"].casefold()), None)
-                    if match:
-                        await area_select.select_option(value=match["value"])
-                        exploratory_actions.append({
-                            "target": target,
-                            "action": f"found under {afo['label']} (area value {match['value']})"
-                        })
-                        found = True
-                        break
-                if found:
-                    break
             except Exception as exc:
                 area_discovery.append({
-                    "afo_name": afo["label"], "afo_id": afo["value"],
-                    "error": str(exc)[:180],
+                    "boundary_mode": boundary_mode,
+                    "error": "Could not load AFO options: " + str(exc)[:180],
                 })
+                continue
+
+            for afo in afo_options:
+                if afo["value"] == "-1" or not afo["label"]:
+                    continue
+                try:
+                    await afo_select.select_option(value=afo["value"])
+                    await page.wait_for_timeout(1000)
+                    opts = await area_select.locator("option").evaluate_all(
+                        "(els) => els.map(o => ({label: o.text.trim(), value: o.value}))"
+                    )
+                    discovered = [o for o in opts if o["value"] != "-1" and o["label"]]
+                    matches = [
+                        {"term": term, "options": [o for o in discovered if term.casefold() in o["label"].casefold()]}
+                        for term in target_terms
+                    ]
+                    matches = [m for m in matches if m["options"]]
+                    area_discovery.append({
+                        "boundary_mode": boundary_mode,
+                        "afo_name": afo["label"],
+                        "afo_id": afo["value"],
+                        "areas_loaded": len(discovered),
+                        "area_options": discovered,
+                        "target_matches": matches,
+                    })
+                    # Search all AFOs in each boundary mode. This is a public,
+                    # read-only inspection of the portal's visible selectors.
+                except Exception as exc:
+                    area_discovery.append({
+                        "boundary_mode": boundary_mode,
+                        "afo_name": afo["label"], "afo_id": afo["value"],
+                        "error": str(exc)[:180],
+                    })
         final_dom = await inspect_dom(page)
         if response_tasks:
             await asyncio.gather(*list(response_tasks), return_exceptions=True)
@@ -225,8 +241,9 @@ async def main() -> None:
             "responses": len(responses),
             "exploratory_actions": exploratory_actions,
             "area_discovery": [
-                {"afo_name": x.get("afo_name"), "afo_id": x.get("afo_id"),
-                 "areas_loaded": x.get("areas_loaded"), "error": x.get("error")}
+                {"boundary_mode": x.get("boundary_mode"), "afo_name": x.get("afo_name"),
+                 "afo_id": x.get("afo_id"), "areas_loaded": x.get("areas_loaded"),
+                 "target_matches": x.get("target_matches", []), "error": x.get("error")}
                 for x in area_discovery
             ],
             "likely_data_requests": [
