@@ -27,6 +27,9 @@ Detta är två separata val i portalen. De ska inte automatiskt behandlas som sa
 - [Metadata för Hörneåns ÄSO](data/processed/avskjutning_mal_ajo_hornean_2013-2026.metadata.json): källa, områdes-ID, urval och täckningsnoteringar.
 - [Gräsmyrs VVO – avskjutning 2010/2011–2012/2013](data/processed/avskjutning_mal_ajo_grasmyr_2010-2013.csv): 3 säsonger i det historiska områdets egen portalserie.
 - [Metadata för Gräsmyrs VVO](data/processed/avskjutning_mal_ajo_grasmyr_2010-2013.metadata.json): källa, urval och begränsningar.
+- [Hörneåns ÄSO – älgobs 2010/2011–2025/2026](data/processed/algobs_ajo_hornean_2010-2026.csv): 16 säsonger. Äldre period hämtad med historiska gränser; den nyare med nuvarande gränser.
+- [Hörneåns ÄSO – medelålder för vuxna djur 2013/2014–2025/2026](data/processed/medelalder_ajo_hornean_2013-2026.csv): 13 säsonger, med antal undersökta handjur/hondjur så att små underlag kan identifieras.
+- [Råa portalexporter](data/raw/lansstyrelsen/2026-10-17/): oförändrade tabellutdrag för älgobs, medelålder och slaktvikt. Källdata och urval dokumenteras i [metadata.json](data/raw/lansstyrelsen/2026-10-17/metadata.json).
 
 Rapporttypen är **Avskjutning med mål — ÄJO**. I CSV-filerna är `fallda_totalt` faktiskt rapporterat antal fällda älgar. `avskjutningsmal_totalt` är måltalet, inte utfallet. Källans visningsformat har bevarats, exempelvis decimalcomma och procenttecken.
 
