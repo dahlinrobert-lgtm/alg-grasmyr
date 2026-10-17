@@ -109,11 +109,11 @@ python scripts/download_statistics.py \
 
 Den befintliga Excel-granskningen visar följande säsongstäckning i repot:
 
-- **Nuvarande gränser:** 2000/2001–2016/2017 samt 2019/2020–2026/2027.
-- **Historiska gränser:** 2012/2013–2016/2017 samt 2019/2020–2026/2027.
-- **Lucka i båda exportserierna:** 2017/2018 och 2018/2019.
+- **Nuvarande gränser:** 2000/2001–2026/2027.
+- **Historiska gränser:** 2012/2013–2026/2027.
+- **2017/2018 och 2018/2019:** båda exporttyperna finns nu bland de uppladdade originalfilerna och har jämförts.
 
-Det innebär att de tillgängliga nuvarande-gränser-filerna från 2000/2001 och framåt redan är representerade i den granskade säsongsserien; vi ska inte be om att de laddas upp igen. För 2000/2001–2011/2012 finns bara nuvarande-gränser-exporter i den inventerade serien. Åren 2017/2018 och 2018/2019 ska markeras som saknade källfiler, inte fyllas med antaganden. Se [registreringshistoriken från Excel-granskningen](data/processed/area-registration-boundary-audit.csv) och [jämförelsesammanfattningen](data/processed/boundary-comparison-summary.md).
+Det innebär att de tillgängliga nuvarande-gränser-filerna från 2000/2001 och framåt redan är representerade i den granskade säsongsserien; vi ska inte be om att de laddas upp igen. För 2000/2001–2011/2012 finns endast nuvarande-gränser-exporter. För 2012/2013–2026/2027 finns både historiska och nuvarande gränser. Jämförelsen för 2017/2018 och 2018/2019 visar identiska registreringsnummer och fält mellan de två exporttyperna. Se [registreringshistoriken från Excel-granskningen](data/processed/area-registration-boundary-audit.csv) och [jämförelsesammanfattningen](data/processed/boundary-comparison-summary.md).
 
 ## Källhierarki och granskningsprincip
 
@@ -128,10 +128,10 @@ Vid avstämning ska vi skilja mellan:
 
 För offentlig statistik i detta projekt används endast myndighetens publicerade Excel-exporter som belägg för registrerade arealer, områdesnamn, registreringsnummer och jaktår. Externa listor, lokala källor och andra webbplatser används inte för att fylla luckor eller fastställa historiska medlemskap.
 
-- **2019/2020:** Den första tillgängliga Excel-exporten efter luckan visar 35 506 ha, 3 151 ha mer än 2016/2017. Öre-Brattfors finns separat med 3 151 ha i Excel 2016/2017. Det är en aritmetisk matchning över en källucka, inte bevis för överföring eller för att förändringen skedde 2018/2019.
+- **2018/2019:** Hörneåns rapporterade areal ökar från 32 355 till 35 506 ha (+3 151 ha). Öre-Brattfors finns separat med 3 151 ha i Excel 2017/2018 och saknas som separat rad i 2018/2019. Det är förenligt med ett samband men bevisar inte formellt medlemskap eller identiska gränser.
 - **2020/2021:** rapporterad ökning är 61,05 ha. Ingen motsvarande separat registrering har identifierats i den granskade Excel-serien. Orsaken är okänd; vi antar varken felinmatning eller anslutning.
 - **2023/2024:** Hörneåns rapporterade areal ökar med 1 565,75 ha. Hallens finns separat med 1 567,62 ha i Excel 2021/2022 och 2022/2023, en differens på 1,87 ha. Det bevisar inte överföring eller identiska gränser.
 - Öre-Brattfors finns separat i tillgängliga filer till och med 2016/2017 men inte i tillgängliga filer från 2019/2020. Hallens finns separat till och med 2022/2023 men saknas separat från 2023/2024.
-- Excel-filer för 2017/2018 och 2018/2019 saknas i båda gränsserierna. Övergångar kan därför inte fastställas exakt från det tillgängliga Excel-materialet.
+- Excel-filer för 2017/2018 och 2018/2019 finns tillgängliga för båda gränsserierna och har jämförts per registreringsnummer.
 
 Alla areal- och avskjutningsvärden på webbplatsen ska kontrolleras mot primära Excel-exporter innan de markeras som avstämda. Där en relevant Excel-export eller säsong saknas ska luckan anges öppet.
