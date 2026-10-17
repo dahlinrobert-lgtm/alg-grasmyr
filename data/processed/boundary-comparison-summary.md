@@ -24,7 +24,7 @@ Jämförelsen matchar rader på **registreringsnummer**, inte Excel-radnummer. D
 | 2015/2016 | compared by registration number | 148 | 148 | 0 | 0 | 0 |
 | 2016/2017 | compared by registration number | 144 | 144 | 0 | 0 | 0 |
 | 2019/2020 | compared by registration number | 108 | 108 | 0 | 0 | 0 |
-| 2019/2020 | compared by registration number | 108 | 108 | 0 | 0 | 0 |
+| 2019/2020 | compared by registration number (duplicate export) | 108 | 108 | 0 | 0 | 0 |
 | 2020/2021 | compared by registration number | 108 | 108 | 0 | 0 | 0 |
 | 2021/2022 | compared by registration number | 108 | 108 | 0 | 0 | 0 |
 | 2022/2023 | compared by registration number | 106 | 106 | 0 | 0 | 0 |
