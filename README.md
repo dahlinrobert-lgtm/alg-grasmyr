@@ -52,6 +52,8 @@ Frågan för Gräsmyrs VVO gav data för 2010/2011, 2011/2012 och 2012/2013. Fö
 - [Actions: fler statistiktyper](https://github.com/dahlinrobert-lgtm/alg-grasmyr/actions/workflows/download-other-statistics.yml) testar medelålder, slaktvikt och älgobservationer för de områdes-/periodkombinationer som går att välja.
 - [Guide för datahämtning](docs/acquisition.md)
 - [Historisk arealmatchning – äldre VVO-arealer och kandidater för arealsteg](data/historical_area_crosswalk_candidates.csv).
+- [Portalens historiska områdeskoder för jaktåret 2009/2010](data/portal_area_crosswalk_2009_2010.csv): säsongsfiltrerade ID:n och försiktigt bedömda kopplingar för de äldre Nordmalingsområdena.
+- [Workflow: hämta historisk statistik för de identifierade områdena](.github/workflows/download-2009-historical-areas.yml): testar avskjutningsrapporten för nio namngivna områden och den namnlösa posten 24-01-02-183-A.
 - [Områdesregister](data/area_registry.csv)
 - [Datadictionary och kvalitetsregler](docs/data-dictionary.md)
 
