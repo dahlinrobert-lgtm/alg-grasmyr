@@ -1,0 +1,37 @@
+{
+  "source": "Länsstyrelsernas Älgdata statistikportal",
+  "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+  "report": "Avskjutning med mål — ÄJO",
+  "portal_report_id": "4",
+  "area": "Hörneåns älgskötselområde",
+  "official_display_id": "24-01-02-342-Ä",
+  "portal_internal_id": 724577,
+  "county": "Västerbottens län",
+  "management_area": "Sydöstra älgförvaltningsområdet",
+  "boundary_mode": "Nuvarande gränser",
+  "period": "2013/2014–2025/2026",
+  "rows": 13,
+  "actual_harvest_totals_by_season": {
+    "2013/2014": 109,
+    "2014/2015": 112,
+    "2015/2016": 103,
+    "2016/2017": 106,
+    "2017/2018": 98,
+    "2018/2019": 123,
+    "2019/2020": 127,
+    "2020/2021": 120,
+    "2021/2022": 114,
+    "2022/2023": 118,
+    "2023/2024": 105,
+    "2024/2025": 112,
+    "2025/2026": 116
+  },
+  "retrieved_on": "2026-10-17",
+  "notes": [
+    "Merged from two successful portal queries: 2010/2011-2019/2020 and 2020/2021-2025/2026; overlap is absent.",
+    "Only the 2013/2014–2019/2020 seasons were returned in the first period; no rows were invented for earlier years.",
+    "Current boundary mode used for both queries, so the selected modern geometry is the portal's current area boundaries.",
+    "Values are kept as displayed by the source, including decimal commas and percent signs.",
+    "fallda_totalt is the reported number of shot moose. avskjutningsmal_totalt is the target and must not be confused with actual shot count."
+  ]
+}
