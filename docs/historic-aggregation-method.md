@@ -136,3 +136,21 @@ Den lokala tilldelningslistan från 14 december 2014 innehåller nio namn. Jämf
 En viktig alternativ förklaring till senare arealsteg är ändrad register- och arealberäkning. Länsstyrelsen Västerbottens årsredovisning för 2020 beskriver att ett nytt administrativt system infördes, att jaktområdenas geometrier behövde kontrolleras och föras över och att nya registreringsbeslut med kartor och fastighetslistor skickades ut. Länsstyrelsens information om kvalitetssäkring förklarar dessutom att arealer i registreringsbeslut beräknas digitalt utifrån Lantmäteriets fastighetsskikt och att endast registrerad landareal ligger till grund för tilldelningen. Se [årsredovisning 2020](https://www.lansstyrelsen.se/download/18.8cd5a1b19362fb4fc2370f/1732539429770/%25C3%2585rsredovisning%2520L%25C3%25A4nsstyrelsen%2520V%C3%A4sterbotten%25202020.pdf) och [information om kvalitetssäkring av älgjaktområden](https://www.lansstyrelsen.se/download/18.4adf753a1791c8ec4551a426/1622009058466/Information-om-kvalitetss%C3%A4kring-av-%C3%A4lgjaktomr%C3%A5den.pdf).
 
 Det betyder att en ändring i rapporterad areal – särskilt kring den period då geometrier digitaliserades och registreringsbeslut uppdaterades – inte automatiskt betyder att ett nytt område anslöts. För att styrka en faktisk anslutning behövs registreringsbeslut, skötselplan eller jämförbara historiska gränser. De exakta aritmetiska träffarna används därför som sökspår, inte som fastställd historik.
+
+## Uppdatering efter fler officiella Älgdata-skärmbilder (2026-10-17)
+
+Ytterligare tre poster från Länsstyrelsens statistikportal har dokumenterats för jaktåret 2009/2010 med urvalet **historiska gränser**:
+- Djupsjö VVO, registreringsnummer `24-01-02-093-A`, 2 506 ha.
+- Tallbergslidens VVO, `24-01-02-008-A`, 3 172 ha.
+- Nyåkers VVO, `24-01-02-052-A`, 2 568 ha.
+
+Värdena har transkriberats från användarens skärmbilder av den officiella portalen och sparats i `data/official_historical_area_stats_2009_2010_additional.csv`. Huvudtabellen för de fem första områdena finns i `data/official_historical_area_stats_2009_2010.csv`. Detta är en dokumenterad transkription från myndighetskällan, inte ett direkt API-uttag.
+
+### Högland och de namnlösa posterna
+
+Den publicerade listan *Älgtilldelning 2012* visar en namnlös post med kod `01-02-183` och 504 ha. Den aritmetiska summan Djupsjö (2 506) + Nyåker (2 568) + 504 = 5 578 ha sammanfaller med Hörneåns rapporterade arealökning 2014/15. Detta ger en sökhypotes, men identifierar inte posten.
+
+Viktigt: samma lista innehåller även andra poster utan namn, exempelvis `01-02-098` med 340 ha. Det finns alltså flera möjliga oidentifierade registreringsenheter i källan. Högland förekommer i en lokal tilldelningslista från 2014 men har ännu inte kopplats till något av dessa registreringsnummer; Högland förekommer inte bland de åtta områden som användaren hittills visat i Älgdata för 2009/10. Inget av detta bevisar att Högland saknade separat registrering — endast att sambandet inte har verifierats.
+
+Officiell allmän vägledning: Länsstyrelsen beskriver att älgskötsel- och licensområden registreras av myndigheten och att ändringar kräver ansökan/beslut ([Älgförvaltning och jaktområden](https://www.lansstyrelsen.se/vasterbotten/djur/jakt-och-vilt/algjakt/algforvaltning-och-jaktomraden.html)). För att sluta frågan behövs historiskt registerutdrag, registreringsbeslut med karta/fastighetslista eller bekräftelse från Länsstyrelsen Västerbotten.
+
