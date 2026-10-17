@@ -33,6 +33,7 @@ jobs:
           git add data/processed/boundary-comparison-summary.md data/processed/area-registration-boundary-audit.csv data/processed/hornean-area-source-check.csv
           if ! git diff --cached --quiet; then
             git commit -m "Publish old-vs-current boundary audit summary"
+            git pull --rebase origin main
             git push
           fi
       - name: Upload audit outputs
