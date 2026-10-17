@@ -1,0 +1,84 @@
+{
+  "source": "Länsstyrelsernas Älgdata statistikportal",
+  "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+  "county": "Västerbottens län",
+  "management_area": "Sydöstra älgförvaltningsområdet",
+  "boundary_mode": "Nuvarande gränser",
+  "retrieved_on": "2026-10-17",
+  "reports": {
+    "medelalder": {
+      "report_id": "9",
+      "report_label": "Medelålder — Vuxna djur — ÄJO",
+      "area_id": 724577,
+      "area_display_id": "24-01-02-342-Ä",
+      "area_name": "Hörneåns älgskötselområde",
+      "seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024",
+        "2024/2025",
+        "2025/2026"
+      ],
+      "rows": 6,
+      "source_raw_csv": "data/raw/portal_tables/hornean_medelalder_ajo_2020-2026.csv",
+      "normalized_csv": "data/processed/medelalder_vuxna_hornean_2020-2026.csv",
+      "meaning": "Medelålder (år) och antal prov/individer för vuxna handjur och hondjur enligt portalens rubriker."
+    },
+    "slaktvikt": {
+      "report_id": "20",
+      "report_label": "Slaktvikt — ÄJO",
+      "area_id": 724577,
+      "area_display_id": "24-01-02-342-Ä",
+      "area_name": "Hörneåns älgskötselområde",
+      "seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024",
+        "2024/2025",
+        "2025/2026"
+      ],
+      "rows": 6,
+      "source_raw_csv": "data/raw/portal_tables/hornean_slaktvikt_ajo_2020-2026.csv",
+      "normalized_csv": "data/processed/slaktvikt_hornean_2020-2026.csv",
+      "meaning": "Vikt (kg) och antal prov för vuxna djur och kalvgrupperna som presenteras i portalens tabell. Råuttaget har två grupperade rubrikrader och en summeringsrad."
+    },
+    "algobs": {
+      "report_id": "25",
+      "report_label": "Älgobservationer — ÄJO",
+      "area_id": 724577,
+      "area_display_id": "24-01-02-342-Ä",
+      "area_name": "Hörneåns älgskötselområde",
+      "seasons": [
+        "2020/2021",
+        "2021/2022",
+        "2022/2023",
+        "2023/2024",
+        "2024/2025",
+        "2025/2026"
+      ],
+      "rows": 6,
+      "source_raw_csv": "data/raw/portal_tables/hornean_algobs_ajo_2020-2026.csv",
+      "normalized_csv": "data/processed/algobs_hornean_2020-2026.csv",
+      "meaning": "Älgobs/effort indicators and counts by observation category from the portal. Preserve statistical significance flag as returned."
+    }
+  },
+  "no_data_tests": {
+    "area_id": 718148,
+    "area_display_id": "24-01-02-017-A",
+    "area_name": "Gräsmyrs viltvårdsområde",
+    "period_requested": "2010/2011–2019/2020",
+    "reports": {
+      "mean_age": "Portal table returned 0 counts for 2010/2011 and 2011/2012; no additional data rows were shown.",
+      "carcass_weight": "Portal explicitly stated 'Tabellen innehåller ingen data'.",
+      "moose_observations": "Portal explicitly stated 'Tabellen innehåller ingen data'."
+    },
+    "meaning": "These are report-availability outcomes, not proof that no moose were harvested or observed in all of these years."
+  },
+  "notes": [
+    "Data is captured from the rendered statistics table in the public portal, not through an undocumented or guessed API endpoint.",
+    "Raw table snapshots retain grouped headers and summary rows; normalized CSVs omit group-header and summary rows and use explicit field names.",
+    "Decimal commas and source units are preserved. Sample counts should be evaluated before making conclusions from mean age or carcass weights."
+  ]
+}
