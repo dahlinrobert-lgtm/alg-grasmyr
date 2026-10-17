@@ -1,72 +1,82 @@
 # Älgdata – Gräsmyr och Hörneåns älgskötselområde
 
-Projekt för att samla in, versionshantera och analysera älgstatistik med fokus på **Gräsmyrs viltvårdsområde (historisk områdesidentitet)** och **Hörneåns älgskötselområde (nuvarande förvaltningsområde)**.
+Projekt för att hämta, versionshantera och analysera älgstatistik från Länsstyrelsernas Älgdata, med särskilt fokus på Gräsmyrs viltvårdsområde och Hörneåns älgskötselområde.
 
 ## Datakällor
 
 - [Länsstyrelsernas statistikportal Älgdata](https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/)
 - [Länsstyrelsens Älgdata WebbGIS](https://ext-webbgis.lansstyrelsen.se/lst_algdata/)
-- [Älgdata – översikt och information](https://www.algdata.se/)
-- [Älgdata – statistikens startsida och vägledning](https://www.algdata.se/statistik/)
+- [Älgdata – översikt och statistik](https://www.algdata.se/)
 
-Statistikportalen har diagram/tabeller och stöd för export till bland annat Excel. Den beskriver statistik om avskjutning, slaktvikter, viltolyckor, älgobservationer och biologiska uppgifter. WebbGIS kan användas för att kontrollera områdesnamn, ID och gränser.
+Statistikportalen har flera rapporttyper, bland annat avskjutning med mål, medelålder, åldersstruktur, slaktvikt, älgobservationer, biologiska data och viltolyckor. Vilka rapporter som går att få på ÄJO-nivå varierar. <Cite refs={["turn629708view0","turn629708search1"]}/>
 
-## Viktigt om geografisk jämförbarhet
+## Områdesidentiteter
 
-Gräsmyrs viltvårdsområde och Hörneåns älgskötselområde ska tills vidare behandlas som **två separata områdesidentiteter**. Älgdata skiljer mellan jaktområden (till exempel licensområden) och älgskötselområden. Ett äldre område kan ha ingått i eller motsvaras av endast en del av ett senare område. Jämför inte deras råa totalsiffror som om geografin vore oförändrad innan officiella ID:n och historiska gränser har kontrollerats.
+Portalen visar följande områden under **Sydöstra älgförvaltningsområdet**:
 
-## Prioriterad inhämtning
+| Område | Officiell beteckning i statistikportalen | Internt portal-ID |
+|---|---|---:|
+| Gräsmyrs viltvårdsområde | `24-01-02-017-A` | `718148` |
+| Hörneåns älgskötselområde | `24-01-02-342-Ä` | `724577` |
 
-1. **Avskjutning** – antal fällda älgar, uppdelat efter de dimensioner som faktiskt finns i exporten.
-2. **Älgobservationer (älgobs)** – observerade älgar och relevanta mått enligt källans definitioner.
-3. **Slaktvikter/kalvvikter** – när antal observationer och viktdefinitioner framgår.
-4. **Övriga tillgängliga kategorier** – biologiska data, viltolyckor och andra relevanta indikatorer, med tydlig notering om geografisk nivå.
+Detta är två separata val i portalen. De ska inte automatiskt behandlas som samma geografiska enhet. För att länka tidsserierna behövs historik över beslut, områdesgränser och eventuell ändrad rapportering.
 
-Börja med en export för Hörneåns ÄSO och en separat export för historiska Gräsmyrs VVO. Ta med så många jaktår som portalen erbjuder och upprepa för varje statistiktyp.
+## Data som redan finns i repot
 
-## Kom igång
+- [Hörneåns ÄSO – avskjutning 2013/2014–2025/2026](data/processed/avskjutning_mal_ajo_hornean_2013-2026.csv): 13 säsonger, med både faktiskt fällda älgar, avskjutningsmål och rapporterad nyttjandegrad.
+- [Metadata för Hörneåns ÄSO](data/processed/avskjutning_mal_ajo_hornean_2013-2026.metadata.json): källa, områdes-ID, urval och täckningsnoteringar.
+- [Gräsmyrs VVO – avskjutning 2010/2011–2012/2013](data/processed/avskjutning_mal_ajo_grasmyr_2010-2013.csv): 3 säsonger i det historiska områdets egen portalserie.
+- [Metadata för Gräsmyrs VVO](data/processed/avskjutning_mal_ajo_grasmyr_2010-2013.metadata.json): källa, urval och begränsningar.
 
-Se [guide för datahämtning](docs/acquisition.md).
+Rapporttypen är **Avskjutning med mål — ÄJO**. I CSV-filerna är `fallda_totalt` faktiskt rapporterat antal fällda älgar. `avskjutningsmal_totalt` är måltalet, inte utfallet. Källans visningsformat har bevarats, exempelvis decimalcomma och procenttecken.
 
-När en Excel-export har laddats ned kan den granskas utan att anta att kolumnerna redan är kända:
+### Viktig täckningslucka för Gräsmyr
+
+Frågan för Gräsmyrs VVO gav data för 2010/2011, 2011/2012 och 2012/2013. För 2020/2021–2025/2026 gick områdes-ID `718148` inte att välja varken med nuvarande eller historiska gränser. Detta betyder **att området inte finns tillgängligt i den valda rapportens/urvalets senare serie**, inte att avskjutningen var noll. Ta reda på om rapporteringen flyttades till en annan områdesidentitet innan serierna knyts ihop.
+
+## Hämta uppgifter på nytt
+
+- [Actions: avskjutning för båda områdena](https://github.com/dahlinrobert-lgtm/alg-grasmyr/actions/workflows/download-statistics.yml) hämtar två jaktårsintervall för varje område och sparar CSV samt diagnostik som ett GitHub Actions-artifact.
+- [Actions: fler statistiktyper](https://github.com/dahlinrobert-lgtm/alg-grasmyr/actions/workflows/download-other-statistics.yml) testar medelålder, slaktvikt och älgobservationer för de områdes-/periodkombinationer som går att välja.
+- [Guide för datahämtning](docs/acquisition.md)
+- [Områdesregister](data/area_registry.csv)
+- [Datadictionary och kvalitetsregler](docs/data-dictionary.md)
+
+Skripten använder statistikportalens publika webbgränssnitt med Playwright. Råa tabeller sparas utan att gissa kolumnbetydelser; för rapporttyper utöver avskjutning behöver de exporterna normaliseras i ett separat, dokumenterat steg. Hämtningarna lämnar inga syntetiska nollor för saknade år.
+
+## Lokal körning
+
+Installera beroenden:
 
 ```bash
 python -m pip install -r requirements.txt
+python -m pip install -r requirements-portal.txt
+python -m playwright install chromium
+```
+
+Inspektera en Excel-fil:
+
+```bash
 python scripts/inspect_export.py path/to/export.xlsx
 python scripts/prepare_export.py path/to/export.xlsx --out data/processed
 ```
 
-Skriptet förbereder CSV-kopior per kalkylblad och en manifestfil; det bevarar värdena från exporten men gör inte ännu någon källspecifik tolkning av statistikvariabler. En riktig export måste granskas innan en pålitlig normalisering och helt automatiserad hämtning kan implementeras.
+Hämta en rapport manuellt via portalen:
 
-## Projektstruktur
-
-```
-data/
-  raw/                 # oförändrade exporter från Älgdata
-  processed/           # CSV-kopior och senare standardiserade tabeller
-docs/
-  acquisition.md       # steg-för-steg för datainsamling
-  data-dictionary.md   # preliminärt schema och kvalitetsregler
-scripts/
-  inspect_export.py    # inspekterar exempel på exportfiler
-  prepare_export.py    # CSV-kopior + manifest från xlsx
-  inspect_portal.py    # kontrollerar publika fält, områden och endpoints
-  download_statistics.py # hämtar en Excel-rapport via statistikportalen
+```bash
+python scripts/download_statistics.py \
+  --out out/hornean_2020-2025 \
+  --area-id 724577 \
+  --from-year "2020/2021" \
+  --to-year "2025/2026" \
+  --boundary-mode current \
+  --report-id 4
 ```
 
-## Status
+## Kvalitetsregler
 
-- [x] Identifierat statistikportalen och WebbGIS som relevanta primärkällor.
-- [x] Lagt till verktyg för att inspektera och förbereda exporter.
-- [x] Identifierat Hörneåns ÄSO i statistikportalens områdeslista: `24-01-02-342-Ä`, portal-ID `724577`, under Sydöstra ÄFO.
-- [x] Identifierat Gräsmyrs VVO i statistikportalens områdeslista: `24-01-02-017-A`, portal-ID `718148`, också under Sydöstra ÄFO.
-- [ ] Verifiera det historiska ID:t och gränserna för Gräsmyrs viltvårdsområde.
-- [x] Hämtat och sparat den första rapporttabellen för Hörneåns ÄSO: 7 säsonger (2013/2014–2019/2020), med metadata.
-- [ ] Hämta separata tidsperioder och motsvarande tabell för Gräsmyrs VVO.
-- [ ] Jämför historiska gränser mot nuvarande gränser innan tidsserierna länkas.
-- [ ] Mappa exporternas verkliga kolumner till ett stabilt schema.
-- [ ] Undersöka statistikportalens faktiska nätverksanrop/exportväg innan eventuell schemalagd automatisering byggs.
-
-## Källhantering
-
-Behåll alltid originalexporterna, notera hämtningstidpunkt och valda filter, dokumentera definitioner och följ Länsstyrelsens villkor för återanvändning. Saknade värden ska inte ersättas med noll. Jaktår ska behållas i källans format tills formatet är verifierat.
+1. Behåll original-/råexporter och spara källa, urval, områdes-ID, gränsläge och hämtningstidpunkt.
+2. Saknade år är saknade värden, inte nollor.
+3. Skilj alltid faktiskt fällda älgar från avskjutningsmål.
+4. Jaktår ska behållas som text tills formatet är verifierat.
+5. Ändrade områdesgränser och områdes-ID ska dokumenteras; blanda inte statistik från olika geografiska enheter utan belägg.
