@@ -113,7 +113,7 @@ Den befintliga Excel-granskningen visar följande säsongstäckning i repot:
 - **Historiska gränser:** 2012/2013–2026/2027.
 - **2017/2018 och 2018/2019:** båda exporttyperna finns nu bland de uppladdade originalfilerna och har jämförts.
 
-Det innebär att de tillgängliga nuvarande-gränser-filerna från 2000/2001 och framåt redan är representerade i den granskade säsongsserien; vi ska inte be om att de laddas upp igen. För 2000/2001–2011/2012 finns endast nuvarande-gränser-exporter. För 2012/2013–2026/2027 finns både historiska och nuvarande gränser. Jämförelsen för 2017/2018 och 2018/2019 visar identiska registreringsnummer och fält mellan de två exporttyperna. Se [registreringshistoriken från Excel-granskningen](data/processed/area-registration-boundary-audit.csv) och [jämförelsesammanfattningen](data/processed/boundary-comparison-summary.md).
+Det innebär att de tillgängliga nuvarande-gränser-filerna från 2000/2001 och framåt redan är representerade i den granskade säsongsserien; vi ska inte be om att de laddas upp igen. För 2000/2001–2011/2012 finns endast nuvarande-gränser-exporter. För 2012/2013–2026/2027 finns både historiska och nuvarande gränser. Jämförelsen för 2017/2018 och 2018/2019 visar identiska registreringsnummer och fält mellan de två exporttyperna. De fyra kompletterande XLSX-filerna för 2017/2018 och 2018/2019 granskades som uppladdade originalfiler men är inte incheckade som binärfiler i repot. Deras relevanta registreringsrader och jämförelser finns i gransknings-CSV:erna. Se [registreringshistoriken från Excel-granskningen](data/processed/area-registration-boundary-audit.csv) och [jämförelsesammanfattningen](data/processed/boundary-comparison-summary.md).
 
 ## Källhierarki och granskningsprincip
 
