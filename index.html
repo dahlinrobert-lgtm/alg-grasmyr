@@ -333,13 +333,20 @@ function drawAreaHistory(){
  const x=i=>ml+i*pw/(data.length-1),y=v=>mt+ph-(v-min)/(max-min)*ph;
  svg.innerHTML="";
  [25000,30000,35000,40000].forEach(v=>{let yy=y(v);svg.insertAdjacentHTML("beforeend",'<line x1="'+ml+'" y1="'+yy+'" x2="'+(w-mr)+'" y2="'+yy+'" stroke="#e5ebe4"/><text x="'+(ml-10)+'" y="'+(yy+4)+'" text-anchor="end" fill="#63736b" font-size="12">'+v.toLocaleString("sv-SE")+'</text>')});
- const pts=data.map((d,i)=>x(i)+","+y(d.area)).join(" ");
- svg.insertAdjacentHTML("beforeend",'<polyline points="'+pts+'" fill="none" stroke="#244c3d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>');
+ let segment=[];
+ const drawSegment=()=>{if(segment.length>1)svg.insertAdjacentHTML("beforeend",'<polyline points="'+segment.join(" ")+'" fill="none" stroke="#244c3d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>');segment=[];};
+ data.forEach((d,i)=>{if(d.area==null){drawSegment();return;}segment.push(x(i)+","+y(d.area));});drawSegment();
  data.forEach((d,i)=>{
-  const highlight=[1,5,7,10].includes(i),xx=x(i),yy=y(d.area);
-  svg.insertAdjacentHTML("beforeend",'<circle cx="'+xx+'" cy="'+yy+'" r="'+(highlight?6:4)+'" fill="'+(i===5||i===10?"#bb7b2a":"#244c3d")+'" stroke="white" stroke-width="2" tabindex="0" role="img" aria-label="'+d.season+": "+d.area.toLocaleString("sv-SE")+' hektar"><title>'+d.season+": "+d.area.toLocaleString("sv-SE")+" ha"+(d.label?" · "+d.label:"")+'</title></circle>');
+  const xx=x(i);
+  if(d.area==null){
+   svg.insertAdjacentHTML("beforeend",'<text x="'+xx+'" y="'+(mt+ph/2)+'" text-anchor="middle" fill="#9a5a20" font-size="11">Excel saknas</text>');
+   svg.insertAdjacentHTML("beforeend",'<text x="'+xx+'" y="'+(h-22)+'" text-anchor="middle" fill="#63736b" font-size="11">'+d.season+'</text>');
+   return;
+  }
+  const highlight=[1,7,10].includes(i),yy=y(d.area);
+  svg.insertAdjacentHTML("beforeend",'<circle cx="'+xx+'" cy="'+yy+'" r="'+(highlight?6:4)+'" fill="'+(i===6||i===10?"#bb7b2a":"#244c3d")+'" stroke="white" stroke-width="2" tabindex="0" role="img" aria-label="'+d.season+": "+d.area.toLocaleString("sv-SE")+' hektar"><title>'+d.season+": "+d.area.toLocaleString("sv-SE")+" ha"+(d.label?" · "+d.label:"")+'</title></circle>');
   svg.insertAdjacentHTML("beforeend",'<text x="'+xx+'" y="'+(h-22)+'" text-anchor="middle" fill="#63736b" font-size="11">'+d.season+'</text>');
-  if(d.label)svg.insertAdjacentHTML("beforeend",'<text x="'+xx+'" y="'+(yy-13-(i===1?2:0))+'" text-anchor="middle" fill="'+(i===5||i===10?"#8a5a1c":"#244c3d")+'" font-size="11" font-weight="700">'+d.label+'</text>');
+  if(d.label)svg.insertAdjacentHTML("beforeend",'<text x="'+xx+'" y="'+(yy-13-(i===1?2:0))+'" text-anchor="middle" fill="'+(i===6||i===10?"#8a5a1c":"#244c3d")+'" font-size="11" font-weight="700">'+d.label+'</text>');
  });
  svg.insertAdjacentHTML("beforeend",'<text x="'+ml+'" y="18" fill="#63736b" font-size="12">Hektar</text>');
 }
