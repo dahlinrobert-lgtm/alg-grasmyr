@@ -22,3 +22,13 @@ Se motsvarande `.metadata.json` för källa, filter och begränsningar. Nya utta
 - `avskjutning_mal_ajo_grasmyr_2010-2013.metadata.json`: källa, filter, period och notering om att området inte fanns i listan för aktuella gränser i senare period.
 
 Den senaste portalen gav ingen rad för Gräsmyrs VVO efter 2012/2013 och gick inte att välja för perioden 2020/2021–2025/2026 med nuvarande gränser. Detta ska tolkas som att den valda områdesidentiteten/rapporten inte ger senare rader, inte som att avskjutningen var noll. Undersök historiska gränser och eventuell övergång till annat område innan du drar slutsatser.
+
+
+## Övriga statistiktyper (2026-10-17)
+
+För Hörneåns ÄSO har tre rapporttyper fångats för 2020/2021–2025/2026:
+- `medelalder_vuxna_hornean_2020-2026.csv`: medelålder och provantal för vuxna handjur/hondjur.
+- `slaktvikt_hornean_2020-2026.csv`: slaktvikt (kg) och provantal per kategori, med månadsuppdelningar för kalvar som i källan.
+- `algobs_hornean_2020-2026.csv`: älgobs per mantimme, kalv/hondjur- och könsandelar, antal efter observationskategori samt statistisk säkerställning.
+
+Råa tabellfångster ligger i `data/raw/portal_tables/`. Se `other-statistics-hornean-2020-2026.metadata.json` för fältförklaringar och `other-statistics-coverage.json` för utfall per område/rapport. Gräsmyrs rapporter för medelålder, slaktvikt och älgobs returnerade noll provantal eller ingen data i de kontrollerade urvalen; detta får inte tolkas som noll fällda eller observerade älgar.
