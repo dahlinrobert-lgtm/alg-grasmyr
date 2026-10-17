@@ -1,0 +1,44 @@
+name: Test historical Gräsmyrs boundaries
+
+on:
+  push:
+    paths:
+      - ".github/workflows/test-historical-grasmyr.yml"
+      - "scripts/download_statistics.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  historical-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Playwright
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Test Gräsmyrs VVO with historical boundaries
+        run: |
+          python scripts/download_statistics.py \
+            --out out/grasmyr-historical-2020-2025 \
+            --area-id 718148 \
+            --from-year "2020/2021" \
+            --to-year "2025/2026" \
+            --boundary-mode historical
+      - name: Upload diagnostic
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: grasmyr-historical-boundary-test
+          path: out/grasmyr-historical-2020-2025/
+          if-no-files-found: warn
+          retention-days: 7
