@@ -117,12 +117,12 @@ Det innebär att de tillgängliga nuvarande-gränser-filerna från 2000/2001 och
 
 ## Källhierarki och granskningsprincip
 
-**De ursprungliga Excel-exporterna i `data/` är projektets primära källmaterial.** Bearbetade CSV-filer, metadata, manuellt sammanställda tabeller och webbplatsens JavaScript är sekundära representationer. Vid avvikelse ska uppgiften kontrolleras mot relevant Excel-fil och blad, och sekundärfilen eller webbplatsen korrigeras. En CSV-kopia får inte tyst ersätta originalexporten som facit.
+**Endast myndighetens publicerade Excel-exporter är primärkälla för statistiken i projektet.** Bearbetade CSV-filer, metadata, manuellt sammanställda tabeller och webbplatsens JavaScript är sekundära representationer. Varje redovisat värde ska kunna spåras till en relevant Excel-fil, ett jaktår och en registrering. Vid avvikelse ska Excel-filen styra. En CSV-kopia eller en uppgift från en annan webbplats får inte ersätta originalexporten som facit.
 
 Vid avstämning ska vi skilja mellan:
 - **Direkt källvärde:** värde som går att återfinna i Excel-exporten.
 - **Beräknat värde:** exempelvis differens mellan två rapporterade arealer; beräkningen ska redovisas.
-- **Arbetshypotes om områdestillhörighet:** tolkning av vilken enhet som tillkommit; ska inte beskrivas som ett bevisat formellt anslutningsbeslut om det inte stöds av källmaterialet.
+- **Obekräftad tolkning:** slutsats som inte direkt framgår av Excel-filerna; den ska inte presenteras som statistik eller fastställd områdestillhörighet.
 
 ### Excel-baserad tolkning av arealhistoriken
 
