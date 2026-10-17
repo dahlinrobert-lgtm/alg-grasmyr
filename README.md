@@ -8,7 +8,7 @@ Projekt för att hämta, versionshantera och analysera älgstatistik från Läns
 - [Länsstyrelsens Älgdata WebbGIS](https://ext-webbgis.lansstyrelsen.se/lst_algdata/)
 - [Älgdata – översikt och statistik](https://www.algdata.se/)
 
-Statistikportalen har flera rapporttyper, bland annat avskjutning med mål, medelålder, åldersstruktur, slaktvikt, älgobservationer, biologiska data och viltolyckor. Vilka rapporter som går att få på ÄJO-nivå varierar. <Cite refs={["turn629708view0","turn629708search1"]}/>
+Statistikportalen har flera rapporttyper, bland annat avskjutning med mål, medelålder, åldersstruktur, slaktvikt, älgobservationer, biologiska data och viltolyckor. Se [statistikportalen](https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/) och [Älgdatas statistiksida](https://www.algdata.se/statistik/). Vilka rapporter som går att få på ÄJO-nivå varierar.
 
 ## Områdesidentiteter
 
