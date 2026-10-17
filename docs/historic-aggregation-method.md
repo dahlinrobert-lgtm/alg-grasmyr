@@ -48,3 +48,27 @@ Primärkällor för områdesidentitet och beslut: [Länsstyrelsens Älgdata-stat
 ## Nuvarande status
 
 Nio lokala namn har nu dokumenterats som historiska ledtrådar. Endast Gräsmyrs VVO har ett separat historiskt registrerings-ID och tre normaliserade avskjutningsår i det nuvarande dataunderlaget. Det finns ännu inte tillräckligt officiellt underlag för att summera alla namn som separata områden eller att slå ihop dem till en obruten totalsiffra.
+
+
+## Arealjämförelse (2026-10-17)
+
+Arealuppgifterna i de inlästa avskjutningsrapporterna visar en tydlig förändring för Hörneåns ÄSO:
+
+| Jaktår | Rapporterad areal |
+|---|---:|
+| 2013/2014 | 26 777 ha |
+| 2014/2015–2017/2018 | 32 355 ha |
+| 2018/2019–2019/2020 | 35 506 ha |
+| 2020/2021–2022/2023 | 35 567,05 ha |
+| 2023/2024–2025/2026 | 37 132,8 ha |
+
+Det innebär +10 355,8 ha eller cirka +38,7 % mellan första och senaste rapportåret. Gräsmyrs VVO redovisas med 4 795 ha 2010/2011–2012/2013. Den historiska Gräsmyr-arealen motsvarar cirka 12,9 % av den rapporterade Hörneåns-arealen 2025/2026. **Detta visar endast relativ storlek, inte att Gräsmyr är helt inneslutet i Hörneåns nuvarande geometri eller att Gräsmyr ska adderas till den.**
+
+Källfil med årsvärden och förändringar: [data/area_annual.csv](../data/area_annual.csv). Årsarealerna är hämtade ur rapporten *Avskjutning med mål — ÄJO* i Älgdata. Ökningarna 2014/15, 2018/19, 2020/21 och 2023/24 är kandidater för kontroll mot ändringsbeslut och historiska kartor, inte i sig bevis på exakt gränsändring.
+
+### Slutsats om arealmatchning
+
+- Endast Gräsmyrs VVO har en historisk areal i nuvarande underlag (4 795 ha).
+- De övriga åtta lokala namnen saknar ännu verifierade registrerade arealer och separata gränspolygoner.
+- Det går därför inte att summera de nio namnen eller testa om deras arealer tillsammans motsvarar 37 132,8 ha.
+- Nästa steg är att hämta nuvarande och historiska polygoner samt beslut från Länsstyrelsens karttjänst/områdesregister. Beräkna polygonareal i ett lämpligt projicerat koordinatsystem, jämför unionen av historiska polygoner med dagens polygon, och redovisa täckningsgrad, överlapp och yta utanför. Rapportera separat både geometrisk polygonarea och den administrativa areal som Älgdata redovisar; de kan skilja sig.
