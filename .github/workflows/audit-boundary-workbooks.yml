@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/processed/boundary-comparison-summary.md
+          git add data/processed/boundary-comparison-summary.md data/processed/area-registration-boundary-audit.csv data/processed/hornean-area-source-check.csv
           if ! git diff --cached --quiet; then
             git commit -m "Publish old-vs-current boundary audit summary"
             git push
