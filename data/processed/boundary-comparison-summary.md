@@ -178,6 +178,40 @@ Nuvarande fil: `Avskjutning med mål - Förvaltningsområde - Nuvarande gränser
 |---|---|---|---|---|
 | — | — | — | Inga värdeskillnader identifierade | — |
 
+## Kontroll av arealen för Hörneåns ÄSO (24-01-02-342-Ä)
+
+| Säsong | Gränsvariant | Excel: registrerad areal (ha) | Webbseriens areal (ha) | Matchar | Fil |
+|---|---|---:|---:|---|---|
+| 2013/2014 | historical | 26777 | 26777 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2013--2014.xlsx |
+| 2014/2015 | historical | 32355 | 32355 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2014--2015.xlsx |
+| 2015/2016 | historical | 32355 | 32355 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2015--2016(1).xlsx |
+| 2016/2017 | historical | 32355 | 32355 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2016--2017.xlsx |
+| 2019/2020 | historical | 35506 | 35506 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2019--2020.xlsx |
+| 2020/2021 | historical | 35567.05 | 35567.05 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2020--2021.xlsx |
+| 2021/2022 | historical | 35567.05 | 35567.05 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2021--2022.xlsx |
+| 2022/2023 | historical | 35567.05 | 35567.05 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2022--2023.xlsx |
+| 2023/2024 | historical | 37132.8 | 37132.8 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2023--2024.xlsx |
+| 2024/2025 | historical | 37132.8 | 37132.8 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2024--2025.xlsx |
+| 2025/2026 | historical | 37132.8 | 37132.8 | True | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2025--2026.xlsx |
+| 2026/2027 | historical | 37132.8 |  |  | Avskjutning med mål - Förvaltningsområde - Historiska gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2026--2027.xlsx |
+| 2013/2014 | current | 26777 | 26777 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2013--2014.xlsx |
+| 2014/2015 | current | 32355 | 32355 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2014--2015.xlsx |
+| 2015/2016 | current | 32355 | 32355 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2015--2016.xlsx |
+| 2016/2017 | current | 32355 | 32355 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2016--2017.xlsx |
+| 2019/2020 | current | 35506 | 35506 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2019--2020(1).xlsx |
+| 2019/2020 | current | 35506 | 35506 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2019--2020.xlsx |
+| 2020/2021 | current | 35567.05 | 35567.05 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2020--2021.xlsx |
+| 2021/2022 | current | 35567.05 | 35567.05 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2021--2022.xlsx |
+| 2022/2023 | current | 35567.05 | 35567.05 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2022--2023.xlsx |
+| 2023/2024 | current | 37132.8 | 37132.8 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2023--2024.xlsx |
+| 2024/2025 | current | 37132.8 | 37132.8 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2024--2025.xlsx |
+| 2025/2026 | current | 37132.8 | 37132.8 | True | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2025--2026.xlsx |
+| 2026/2027 | current | 37132.8 |  |  | Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Västerbottens länSydöstra älgförvaltningsområdet - 2026--2027.xlsx |
+
+## Historiska jaktområden och kandidater
+
+Fulla radvärden för de kända äldre områdeskoderna finns i \`out/boundary-workbook-audit/tracked_registration_history.csv\` i körningens artefakt. De är avsiktligt inte automatiskt summerade till Hörneåns ÄSO: medlemskap och geometri kräver separat belägg.
+
 ## Viktiga reservationer
 
 - Perioder utan båda filtyperna kan inte jämföras direkt.
