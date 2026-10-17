@@ -10,11 +10,11 @@ CSV-filer och webbplatsens tabeller är bearbetade representationer av Excel-upp
 
 Inventeringen av original-Excel visar följande täckning:
 
-- **Nuvarande gränser:** 2000/2001–2016/2017 och 2019/2020–2026/2027.
-- **Historiska gränser:** 2012/2013–2016/2017 och 2019/2020–2026/2027.
-- **Saknade Excel-exporter i båda serierna:** 2017/2018 och 2018/2019.
+- **Nuvarande gränser:** 2000/2001–2026/2027.
+- **Historiska gränser:** 2012/2013–2026/2027.
+- **2017/2018 och 2018/2019:** båda exporttyperna finns tillgängliga och har jämförts per registreringsnummer.
 
-För 2000/2001–2011/2012 finns i den inventerade serien endast exporter för nuvarande gränser. Saknade säsonger ska lämnas som luckor; fyll dem inte med uppskattningar.
+För 2000/2001–2011/2012 finns endast exporter för nuvarande gränser. För 2012/2013–2026/2027 finns både historiska och nuvarande gränser. Jämförelsen för 2017/2018 och 2018/2019 visar identiska registreringsnummer och registrerade fält mellan exporttyperna.
 
 ## Regler för jämförelser
 
@@ -34,7 +34,9 @@ Hörneåns rapporterade arealserie i Excel börjar 2013/2014 med 26 777 ha. De r
 | 2013/2014 | 26 777 ha | Basår |
 | 2014/2015 | 32 355 ha | +5 578 ha |
 | 2015/2016–2016/2017 | 32 355 ha | Ingen rapporterad förändring i tillgängliga Excel-exporter |
-| 2017/2018–2018/2019 | — | Gränsexporter saknas. Arealvärden redovisas inte för dessa säsonger. |
+| 2017/2018 | 32 355 ha | Ingen rapporterad förändring |
+| 2018/2019 | 35 506 ha | +3 151 ha |
+| 2019/2020 | 35 506 ha | Ingen rapporterad förändring |
 | 2019/2020 | 35 506 ha | +3 151 ha jämfört med senaste tillgängliga observationen 2016/2017. Den exakta förändringssäsongen är okänd. |
 | 2020/2021 | 35 567,05 ha | +61,05 ha |
 | 2021/2022–2022/2023 | 35 567,05 ha | Ingen rapporterad förändring |
