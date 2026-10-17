@@ -53,10 +53,8 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
     <button type="button" data-mode="age" aria-pressed="false">Medelålder</button>
   </div>
   <div class="toolbar">
-   <div class="field"><label for="areaSelect">Område/serie</label><select id="areaSelect"><option value="hornean">Hörneåns ÄSO · rapporterad serie</option><option value="grasmyr">Gräsmyrs VVO · historisk serie</option></select></div>
-   <div class="field"><label for="startYear">Från jaktår</label><select id="startYear"><option value="2010">2010/2011</option><option value="2013" selected>2013/2014</option><option value="2017">2017/2018</option><option value="2020">2020/2021</option></select></div>
-   <div class="field"><label for="endYear">Till jaktår</label><select id="endYear"><option value="2019">2019/2020</option><option value="2022">2022/2023</option><option value="2025" selected>2025/2026</option></select></div>
-   <button type="button" class="secondary" id="resetFilters">Återställ</button>
+   <div class="field"><label for="areaSelect">Område/serie</label><select id="areaSelect"><option value="hornean">Hörneåns ÄSO · hela rapporterade serien</option><option value="grasmyr">Gräsmyrs VVO · historisk serie</option></select></div>
+   <p class="small muted">Hela tidsserien visas automatiskt. Saknade jaktår visas som dataluckor, inte som noll.</p>
   </div>
   <div class="chart-wrap"><svg id="algChart" class="chart" viewBox="0 0 900 320" role="img" aria-label="Diagram över älgstatistik per jaktår"></svg></div>
   <div class="legend" id="algLegend"></div>
@@ -89,9 +87,25 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
 <section class="section" id="historik">
  <div class="section-head"><div><div class="eyebrow">Geografisk kontinuitet</div><h2>Områdeshistorik</h2></div><p>För att beskriva utvecklingen behöver vi skilja på historisk avskjutning i lokala områden och statistik från det större eller förändrade förvaltningsområdet.</p></div>
  <div class="timeline">
-  <article><div class="year">2010/11–2012/13</div><h3>Gräsmyrs viltvårdsområde</h3><p>Separat historisk portalserie. Registrerad areal i dessa tabeller: 4 795 ha. Rapporterad avskjutning: 15, 17 respektive 15 älgar per jaktår.</p></article>
-  <article><div class="year">2013/14–2019/20</div><h3>Hörneåns ÄSO – historiska uttag</h3><p>Avskjutningsserie finns från 2013/14. Älgobs har dessutom kompletterats med en äldre serie där historiska gränser valts. Exakt geometri måste fortsatt verifieras.</p></article>
-  <article><div class="year">2020/21–2025/26</div><h3>Hörneåns ÄSO – aktuell serie</h3><p>Senare data visar den nuvarande områdesidentiteten i statistikportalen. Gräsmyrs tidigare ID var inte tillgängligt i de senare områdesurvalen som testats.</p></article>
+  <article><div class="year">Vintern 2012/13</div><h3>ÄSO bildas – sex anslutna jaktlag nämns</h3><p>En daterad lokal föreningsgästbok nämner Hörnsjö, Gräsmyr, Mullsjö, Torrböle, Hummelholm och Tallberg i samband med information om det nya Hörneåns ÄSO. Detta belägger historiskt medlemskap/anslutning enligt den lokala källan, men inte att varje namn var ett separat registrerat älgskötselområde.</p></article>
+  <article><div class="year">2014/15–2015/16</div><h3>Minst nio lokala jaktlag redovisas</h3><p>En lokal avskjutnings-/tilldelningsnotis från 2015 listar Hummelholm, Mullsjö, Tallberg, Gräsmyr, Hörnsjö, Torrböle, Djupsjö, Högland och Nyåker. Det ger ytterligare tre namn att kontrollera mot äldre kartor och beslut: Djupsjö, Högland och Nyåker.</p></article>
+  <article><div class="year">2013/14–2025/26</div><h3>Hörneåns ÄSO – rapporterad serie</h3><p>Älgdata har rapporterad avskjutning och indikatorer för Hörneåns ÄSO. Hela tillgängliga tidsserien visas nu utan filter för start- och slutår. Äldre Gräsmyr-data visas separat tills historisk geografi och full täckning har verifierats.</p></article>
+ </div>
+ <div class="panel" style="margin-top:14px">
+  <div class="eyebrow">Äldre lokala jaktlag som identifierats</div>
+  <h3 style="margin-top:6px">Namn från historiska lokala uppgifter</h3>
+  <div class="table-wrap"><table><thead><tr><th>Namn</th><th>Belägg</th><th>Tolkning</th></tr></thead><tbody>
+   <tr><td>Hörnsjö</td><td>Gästboksnotis 2012/13; tilldelningslista 2015</td><td>Jaktlag/ansluten lokal enhet enligt källan</td></tr>
+   <tr><td>Gräsmyr</td><td>Gästboksnotis 2012/13; eget VVO-ID i Älgdata</td><td>Historiskt VVO och senare omnämnt som jaktlag i ÄSO</td></tr>
+   <tr><td>Mullsjö</td><td>Gästboksnotis 2012/13; tilldelningslista 2015</td><td>Jaktlag/ansluten lokal enhet enligt källan</td></tr>
+   <tr><td>Torrböle</td><td>Gästboksnotis 2012/13; tilldelningslista 2015</td><td>Jaktlag/ansluten lokal enhet enligt källan</td></tr>
+   <tr><td>Hummelholm</td><td>Gästboksnotis 2012/13; tilldelningslista 2015</td><td>Jaktlag/ansluten lokal enhet enligt källan</td></tr>
+   <tr><td>Tallberg</td><td>Gästboksnotis 2012/13; tilldelningslista 2015</td><td>Jaktlag/ansluten lokal enhet enligt källan</td></tr>
+   <tr><td>Djupsjö</td><td>Tilldelningslista 2015</td><td>Förekommer i senare lokal fördelning; anslutningsår behöver verifieras</td></tr>
+   <tr><td>Högland</td><td>Tilldelningslista 2015</td><td>Förekommer i senare lokal fördelning; anslutningsår behöver verifieras</td></tr>
+   <tr><td>Nyåker</td><td>Tilldelningslista 2015</td><td>Förekommer i senare lokal fördelning; anslutningsår behöver verifieras</td></tr>
+  </tbody></table></div>
+  <p class="small muted">Källa: <a href="https://www3.olzzon.com/g/g.php?a=s&i=g32-03680-34&m=alla&p=1" target="_blank" rel="noopener">Hörnsjö VVO:s historiska gästbok</a>, inlägg daterade 5 december 2012, 2 december 2012 och 5 juli 2015. Dessa är starka historiska ledtrådar, men officiella registreringsbeslut och kartgeometrier behövs innan en statistisk områdesaggregering kan göras.</p>
  </div>
  <div class="panel" style="margin-top:14px">
   <div class="eyebrow">Rekonstruktion av äldre områden</div>
@@ -105,7 +119,7 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
   <p class="small muted">Aggregering görs först när områdenas giltighetsår och geografi är kända. Fällda djur kan summeras för icke överlappande områden; älgobs per mantimme måste viktas med mantimmar. Saknade rapporter visas som luckor, aldrig som noll.</p>
   <p><a href="data/area_lineage.csv">Öppna områdesregistret</a> · <a href="docs/historic-aggregation-method.md">Läs metoden för historisk aggregering</a></p>
  </div>
- <div class="note green">Din områdeskunskap – att Gräsmyr och andra tidigare områden numera ingår i Hörneåns ÄSO – är viktig för den historiska tolkningen. För att kvantifiera utvecklingen utan att dubbelräkna behövs dock en årtalssatt lista över tidigare områden och officiella gränser eller beslut. Sidan håller därför historikserierna åtskilda i stället för att summera dem som om de vore samma område.</div>
+ <div class="note green">De lokala historiska uppgifterna gör att vi nu kan namnge minst nio jaktlags-/lokalområdesnamn som förekommer i Hörneåns förvaltning. Det är inte samma sak som att alla nio var egna registrerade ÄSO/VVO. Nästa steg är att matcha namnen mot länsstyrelsens beslut, äldre områdesregister och kartgeometrier innan historiska avskjutningsvärden summeras.</div>
 </section>
 
 <section class="section" id="metod">
@@ -181,9 +195,8 @@ let mode="harvest";
 const byId=id=>document.getElementById(id);
 const fmt=(n,d=1)=>n===null||n===undefined||Number.isNaN(n)?"Saknas":Number(n).toLocaleString("sv-SE",{maximumFractionDigits:d});
 function selectedData(){
- const area=byId("areaSelect").value;let arr=area==="grasmyr"?grasmyr:(mode==="harvest"?elkHarvest:mode==="obs"?elkObs:elkAge);
- const from=Number(byId("startYear").value),to=Number(byId("endYear").value);
- return arr.filter(d=>d.year>=from&&d.year<=to);
+ const area=byId("areaSelect").value;
+ return area==="grasmyr"?grasmyr:(mode==="harvest"?elkHarvest:mode==="obs"?elkObs:elkAge);
 }
 function drawChart(svg, data, series, opts={}){
  const w=900,h=320,ml=54,mr=22,mt=18,mb=48,pw=w-ml-mr,ph=h-mt-mb;
@@ -234,12 +247,7 @@ function renderElk(){
 document.querySelectorAll("[data-mode]").forEach(btn=>btn.addEventListener("click",()=>{
  mode=btn.dataset.mode;document.querySelectorAll("[data-mode]").forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));renderElk();
 }));
-["areaSelect","startYear","endYear"].forEach(id=>byId(id).addEventListener("change",()=>{
- const start=Number(byId("startYear").value),end=Number(byId("endYear").value);
- if(start>end){byId("endYear").value=String(start>2020?2025:start>2017?2019:2022);}
- renderElk();
-}));
-byId("resetFilters").addEventListener("click",()=>{byId("areaSelect").value="hornean";byId("startYear").value="2013";byId("endYear").value="2025";mode="harvest";document.querySelectorAll("[data-mode]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.mode===mode)));renderElk();});
+byId("areaSelect").addEventListener("change",renderElk);
 drawChart(byId("deerChart"),[],[{key:"total",label:"Totalt fällda",color:"#244c3d"}]);
 byId("deerMetric").addEventListener("change",()=>{byId("deerStatus").textContent="Inga verifierade kronhjortsvärden har laddats in. Vald indikator: "+byId("deerMetric").selectedOptions[0].text+". Ingen linje betyder okänd rapportering, inte noll avskjutning.";});
 byId("deerPeriod").addEventListener("change",()=>{byId("deerStatus").textContent="Kronhjortsdata saknas ännu för det valda intervallet; lägg endast in verifierade årsrapporter från Hörneåns KSO.";});
