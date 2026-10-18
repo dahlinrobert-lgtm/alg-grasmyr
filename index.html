@@ -51,6 +51,7 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
    <div class="field"><label for="elkMetricSelect">Typ av statistik</label><select id="elkMetricSelect">
     <option value="harvest">Avskjutning</option><option value="obs">Älgobs</option><option value="age">Medelålder</option><option value="weight">Slaktvikt</option>
    </select></div>
+   <div class="field"><label for="elkMeasureSelect">Mått i diagrammet</label><select id="elkMeasureSelect"></select></div>
   </div>
   <p class="small muted">Sammanställd serie för ett rekonstruerat område. Saknade indikatorvärden visas som dataluckor, inte som noll.</p>
   <div class="chart-wrap"><svg id="algChart" class="chart" viewBox="0 0 900 320" role="img" aria-label="Diagram över älgstatistik per jaktår"></svg></div>
@@ -342,12 +343,44 @@ const grasmyr=[
 {season:"2010/2011",year:2010,total:15,adult:9,calves:6,target:13,area:4795},
 {season:"2011/2012",year:2011,total:17,adult:11,calves:6,target:17,area:4795},
 {season:"2012/2013",year:2012,total:15,adult:7,calves:8,target:15,area:4795}];
+// Extra mått från officiella bearbetade Älgdata-exporter.
+const harvestExtra={"2013/2014":{"adultMale":24,"adultFemale":29,"calfMale":23,"calfFemale":33,"per1000":4.1,"maleShare":45,"calfShare":51,"utilization":82},"2014/2015":{"adultMale":31,"adultFemale":26,"calfMale":30,"calfFemale":25,"per1000":3.5,"maleShare":54,"calfShare":49,"utilization":78},"2015/2016":{"adultMale":31,"adultFemale":27,"calfMale":19,"calfFemale":26,"per1000":3.2,"maleShare":53,"calfShare":44,"utilization":78},"2016/2017":{"adultMale":32,"adultFemale":22,"calfMale":32,"calfFemale":20,"per1000":3.3,"maleShare":59,"calfShare":49,"utilization":106},"2017/2018":{"adultMale":33,"adultFemale":22,"calfMale":23,"calfFemale":20,"per1000":3,"maleShare":60,"calfShare":44,"utilization":98},"2018/2019":{"adultMale":35,"adultFemale":31,"calfMale":34,"calfFemale":23,"per1000":3.5,"maleShare":53,"calfShare":46,"utilization":85},"2019/2020":{"adultMale":39,"adultFemale":32,"calfMale":40,"calfFemale":16,"per1000":3.6,"maleShare":55,"calfShare":44,"utilization":78},"2020/2021":{"adultMale":35,"adultFemale":31,"calfMale":29,"calfFemale":25,"per1000":3.4,"maleShare":53,"calfShare":45,"utilization":92},"2021/2022":{"adultMale":38,"adultFemale":32,"calfMale":25,"calfFemale":19,"per1000":3.2,"maleShare":54,"calfShare":39,"utilization":89},"2022/2023":{"adultMale":38,"adultFemale":31,"calfMale":21,"calfFemale":28,"per1000":3.3,"maleShare":55,"calfShare":42,"utilization":93},"2023/2024":{"adultMale":39,"adultFemale":23,"calfMale":24,"calfFemale":19,"per1000":2.8,"maleShare":63,"calfShare":41,"utilization":88},"2024/2025":{"adultMale":37,"adultFemale":27,"calfMale":25,"calfFemale":23,"per1000":3,"maleShare":58,"calfShare":43,"utilization":83},"2025/2026":{"adultMale":38,"adultFemale":33,"calfMale":28,"calfFemale":17,"per1000":3.1,"maleShare":54,"calfShare":39,"utilization":61}};
+Object.entries(harvestExtra).forEach(([season,extra])=>{const row=elkHarvest.find(d=>d.season===season);if(row)Object.assign(row,extra);});
+const obsExtra={"2013/2014":{"maleShare":0.307,"twinCowShare":0.191,"maleObs":100,"loneFemale":137,"femaleOneCalf":72,"femaleTwoCalves":17,"loneCalf":5,"unidentified":23},"2014/2015":{"maleShare":0.338,"twinCowShare":0.144,"maleObs":96,"loneFemale":91,"femaleOneCalf":83,"femaleTwoCalves":14,"loneCalf":19,"unidentified":50},"2015/2016":{"maleShare":0.492,"twinCowShare":0.222,"maleObs":94,"loneFemale":52,"femaleOneCalf":35,"femaleTwoCalves":10,"loneCalf":3,"unidentified":27},"2016/2017":{"maleShare":0.297,"twinCowShare":0.317,"maleObs":55,"loneFemale":70,"femaleOneCalf":41,"femaleTwoCalves":19,"loneCalf":9,"unidentified":19},"2017/2018":{"maleShare":0.387,"twinCowShare":0.281,"maleObs":75,"loneFemale":62,"femaleOneCalf":41,"femaleTwoCalves":16,"loneCalf":12,"unidentified":17},"2018/2019":{"maleShare":0.333,"twinCowShare":0.255,"maleObs":74,"loneFemale":93,"femaleOneCalf":41,"femaleTwoCalves":14,"loneCalf":5,"unidentified":29},"2019/2020":{"maleShare":0.274,"twinCowShare":0.37,"maleObs":23,"loneFemale":34,"femaleOneCalf":17,"femaleTwoCalves":10,"loneCalf":3,"unidentified":6},"2020/2021":{"maleShare":0.447,"twinCowShare":0.143,"maleObs":59,"loneFemale":45,"femaleOneCalf":24,"femaleTwoCalves":4,"loneCalf":2,"unidentified":27},"2021/2022":{"maleShare":0.314,"twinCowShare":0.065,"maleObs":38,"loneFemale":52,"femaleOneCalf":29,"femaleTwoCalves":2,"loneCalf":0,"unidentified":12},"2022/2023":{"maleShare":0.311,"twinCowShare":0.184,"maleObs":37,"loneFemale":44,"femaleOneCalf":31,"femaleTwoCalves":7,"loneCalf":15,"unidentified":11},"2023/2024":{"maleShare":0.362,"twinCowShare":0.193,"maleObs":72,"loneFemale":70,"femaleOneCalf":46,"femaleTwoCalves":11,"loneCalf":7,"unidentified":35},"2024/2025":{"maleShare":0.341,"twinCowShare":0.371,"maleObs":58,"loneFemale":50,"femaleOneCalf":39,"femaleTwoCalves":23,"loneCalf":5,"unidentified":12},"2025/2026":{"maleShare":0.447,"twinCowShare":0.414,"maleObs":51,"loneFemale":34,"femaleOneCalf":17,"femaleTwoCalves":12,"loneCalf":3,"unidentified":10}};
+Object.entries(obsExtra).forEach(([season,extra])=>{const row=elkObs.find(d=>d.season===season);if(row)Object.assign(row,extra);});
 const modes={
  harvest:{title:"Avskjutning av älg",description:"Rapporterat antal fällda älgar per jaktår. Måltal visas som separat jämförelseserie.",series:[{key:"total",label:"Totalt fällda",color:"#244c3d"},{key:"target",label:"Avskjutningsmål",color:"#bb7b2a"}]},
  obs:{title:"Älgobservationer",description:"Älgobs per mantimme. 2010/2011–2012/2013 hämtas från Älgdata för Hörneåns ÄSO med historiska gränser; 2009/2010 saknas. Det är en observationsindikator, inte en direkt uppskattning av totalt antal älgar.",series:[{key:"obs",label:"Älgobs per mantimme",color:"#557ca8"}]},
  age:{title:"Medelålder på undersökta vuxna älgar",description:"Medelålder för handjur och hondjur, med antal undersökta djur i tabellen. Äldre värden saknas i tillgängligt verifierat underlag och visas som dataluckor.",series:[{key:"male",label:"Handjur, år",color:"#244c3d"},{key:"female",label:"Hondjur, år",color:"#bb7b2a"}]},
  weight:{title:"Slaktvikt",description:"Rapporterad genomsnittlig slaktvikt i kg för handjur, hondjur och kalvar. Provantal visas i tabellen; kalvvikter redovisas också separat för september och oktober.",series:[{key:"male",label:"Handjur, kg",color:"#244c3d"},{key:"female",label:"Hondjur, kg",color:"#bb7b2a"},{key:"calves",label:"Kalvar totalt, kg",color:"#557ca8"}]}
 };
+const measureOptions={
+ harvest:[
+  {value:"target",label:"Fällda jämfört med mål",series:[{key:"total",label:"Totalt fällda",color:"#244c3d"},{key:"target",label:"Avskjutningsmål",color:"#bb7b2a"}]},
+  {value:"total",label:"Totalt fällda",series:[{key:"total",label:"Totalt fällda älgar",color:"#244c3d"}]},
+  {value:"adultCalves",label:"Vuxna och kalvar",series:[{key:"adult",label:"Vuxna",color:"#244c3d"},{key:"calves",label:"Kalvar",color:"#bb7b2a"}]},
+  {value:"sex",label:"Avskjutning efter kön",series:[{key:"adultMale",label:"Vuxna handjur",color:"#244c3d"},{key:"adultFemale",label:"Vuxna hondjur",color:"#bb7b2a"},{key:"calfMale",label:"Handkalvar",color:"#557ca8"},{key:"calfFemale",label:"Honkalvar",color:"#8b78a8"}]},
+  {value:"density",label:"Fällda per 1 000 ha",series:[{key:"per1000",label:"Fällda per 1 000 ha",color:"#557ca8"}]},
+  {value:"utilization",label:"Nyttjandegrad av målet",series:[{key:"utilization",label:"Nyttjandegrad, %",color:"#bb7b2a"}]}
+ ],
+ obs:[
+  {value:"obs",label:"Älgobs per mantimme",series:[{key:"obs",label:"Älgobs per mantimme",color:"#557ca8"}]},
+  {value:"calves",label:"Kalvar per hondjur",series:[{key:"calves",label:"Kalvar per hondjur",color:"#244c3d"}]},
+  {value:"sex",label:"Andel handjur bland vuxna",series:[{key:"maleShare",label:"Andel handjur, %",color:"#bb7b2a"}]},
+  {value:"twins",label:"Andel tvillingkor",series:[{key:"twinCowShare",label:"Andel tvillingkor, %",color:"#557ca8"}]},
+  {value:"hours",label:"Observationstid",series:[{key:"hours",label:"Mantimmar",color:"#244c3d"}]},
+  {value:"categories",label:"Observationer efter kategori",series:[{key:"maleObs",label:"Handjur",color:"#244c3d"},{key:"loneFemale",label:"Ensamt hondjur",color:"#bb7b2a"},{key:"femaleOneCalf",label:"Hondjur med en kalv",color:"#557ca8"},{key:"femaleTwoCalves",label:"Hondjur med två kalvar",color:"#8b78a8"},{key:"loneCalf",label:"Ensam kalv",color:"#8b9c61"},{key:"unidentified",label:"Oidentifierad",color:"#8d9892"}]}
+ ],
+ age:[{value:"age",label:"Medelålder vuxna",series:[{key:"male",label:"Handjur, år",color:"#244c3d"},{key:"female",label:"Hondjur, år",color:"#bb7b2a"}]}],
+ weight:[
+  {value:"adults",label:"Slaktvikt vuxna och kalvar",series:[{key:"male",label:"Handjur, kg",color:"#244c3d"},{key:"female",label:"Hondjur, kg",color:"#bb7b2a"},{key:"calves",label:"Kalvar totalt, kg",color:"#557ca8"}]},
+  {value:"calfMonths",label:"Kalvvikter: september och oktober",series:[{key:"calvesSep",label:"Kalvar september, kg",color:"#244c3d"},{key:"calvesOct",label:"Kalvar oktober, kg",color:"#bb7b2a"}]},
+  {value:"calfSex",label:"Kalvvikter efter kön",series:[{key:"maleCalf",label:"Han-kalv, kg",color:"#244c3d"},{key:"femaleCalf",label:"Hon-kalv, kg",color:"#bb7b2a"}]}
+ ]};
+let selectedMeasure={harvest:"target",obs:"obs",age:"age",weight:"adults"};
+function getMeasureSpec(){return measureOptions[mode].find(x=>x.value===selectedMeasure[mode])||measureOptions[mode][0];}
+function refreshMeasureOptions(){const sel=byId("elkMeasureSelect"),options=measureOptions[mode];sel.innerHTML=options.map(o=>'<option value="'+o.value+'">'+o.label+'</option>').join("");sel.value=selectedMeasure[mode]||options[0].value;}
+
 let mode="harvest";
 const byId=id=>document.getElementById(id);
 const fmt=(n,d=1)=>n===null||n===undefined||Number.isNaN(n)?"Saknas":Number(n).toLocaleString("sv-SE",{maximumFractionDigits:d});
@@ -376,11 +409,11 @@ function setTable(data){
  const table=byId("algTable"),head=table.querySelector("thead"),body=table.querySelector("tbody");
  let headers,rows;
  if(mode==="harvest"){
-  headers=["Jaktår","Totalt fällda","Vuxna","Kalvar","Avskjutningsmål","Registrerad areal"];
-  rows=data.map(d=>[d.season,fmt(d.total,0),fmt(d.adult,0),fmt(d.calves,0),fmt(d.target,0),fmt(d.area,2)+" ha"]);
+  headers=["Jaktår","Totalt fällda","Vuxna","Kalvar","Avskjutningsmål","Registrerad areal","Vuxna handjur","Vuxna hondjur","Handkalvar","Honkalvar","Fällda/1 000 ha","Nyttjandegrad"];
+  rows=data.map(d=>[d.season,fmt(d.total,0),fmt(d.adult,0),fmt(d.calves,0),fmt(d.target,0),fmt(d.area,2)+" ha",fmt(d.adultMale,0),fmt(d.adultFemale,0),fmt(d.calfMale,0),fmt(d.calfFemale,0),fmt(d.per1000,2),d.utilization==null?"Saknas":fmt(d.utilization,0)+"%"]);
  } else if(mode==="obs"){
-  headers=["Jaktår","Älgobs/mantimme","Mantimmar","Kalvar per hondjur","Statistiskt säkerställd"];
-  rows=data.map(d=>[d.season,fmt(d.obs,4),fmt(d.hours,0),fmt(d.calves,3),d.significant||"—"]);
+  headers=["Jaktår","Älgobs/mantimme","Mantimmar","Kalvar per hondjur","Statistiskt säkerställd","Andel handjur vuxna","Andel tvillingkor","Handjur","Ensamt hondjur","Hondjur 1 kalv","Hondjur 2 kalvar","Ensam kalv","Oidentifierad"];
+  rows=data.map(d=>[d.season,fmt(d.obs,4),fmt(d.hours,0),fmt(d.calves,3),d.significant||"—",d.maleShare==null?"Saknas":fmt(d.maleShare*100,1)+"%",d.twinCowShare==null?"Saknas":fmt(d.twinCowShare*100,1)+"%",fmt(d.maleObs,0),fmt(d.loneFemale,0),fmt(d.femaleOneCalf,0),fmt(d.femaleTwoCalves,0),fmt(d.loneCalf,0),fmt(d.unidentified,0)]);
  } else if(mode==="age"){
   headers=["Jaktår","Medelålder handjur","Antal handjur","Medelålder hondjur","Antal hondjur"];
   rows=data.map(d=>[d.season,fmt(d.male,1),fmt(d.nMale,0),fmt(d.female,1),fmt(d.nFemale,0)]);
@@ -430,16 +463,16 @@ function drawAreaHistory(){
  svg.insertAdjacentHTML("beforeend",'<text x="'+ml+'" y="18" fill="#63736b" font-size="12">Hektar</text>');
 }
 function renderElk(){
- const data=selectedData(),spec=modes[mode];drawChart(byId("algChart"),data,spec.series);
+ const data=selectedData(),baseSpec=modes[mode],measure=getMeasureSpec(),spec={...baseSpec,series:measure.series};
+ drawChart(byId("algChart"),data,spec.series);
  byId("algLegend").innerHTML=spec.series.map(s=>'<span><i class="swatch" style="background:'+s.color+'"></i>'+s.label+'</span>').join("");
  byId("algDescription").textContent=spec.description;
  setTable(data);
  byId("algNote").textContent=mode==="harvest"?"2009/2010–2012/2013 är summor av sex historiska VVO: Gräsmyr, Mullsjö, Tallbergsliden, Hummelholm, Hörnsjö och Torrböle. Från 2013/2014 visas Hörneåns ÄSO:s rapporterade serie. Areal och geografisk täckning är inte verifierat konstanta.":mode==="obs"?"2010/2011–2012/2013 är rapporterade älgobs-värden för Hörneåns ÄSO med historiska gränser från Länsstyrelsens Älgdata; de är inte summor av de sex VVO:na. 2009/2010 saknas. Från 2013/2014 fortsätter den rapporterade serien.":mode==="age"?"För 2009/2010–2012/2013 saknas verifierade medelåldersvärden för de sex VVO:na i det tillgängliga underlaget. De visas som saknade, inte som noll. Gräsmyrs historiska medelålderstabell visar inga registrerade åldersdata och kan inte användas för att beräkna ett områdesmedel.":"Slaktvikterna är rapporterade medelvärden i kg från Hörneåns ÄSO 2013/2014–2025/2026. Antalet vägda djur varierar mellan år och grupper; använd därför provantalet i tabellen vid tolkning. Kalvar totalt och kalvgrupper efter månad/kön är separata mått och ska inte summeras som om de vore oberoende grupper.";
 }
-byId("elkMetricSelect").addEventListener("change",()=>{
- mode=byId("elkMetricSelect").value;
- renderElk();
-});
+byId("elkMetricSelect").addEventListener("change",()=>{mode=byId("elkMetricSelect").value;refreshMeasureOptions();renderElk();});
+byId("elkMeasureSelect").addEventListener("change",()=>{selectedMeasure[mode]=byId("elkMeasureSelect").value;renderElk();});
+refreshMeasureOptions();
 drawChart(byId("deerChart"),[],[{key:"total",label:"Totalt fällda",color:"#244c3d"}]);
 byId("deerMetric").addEventListener("change",()=>{byId("deerStatus").textContent="Inga verifierade kronhjortsvärden har laddats in. Vald indikator: "+byId("deerMetric").selectedOptions[0].text+". Ingen linje betyder okänd rapportering, inte noll avskjutning.";});
 byId("deerPeriod").addEventListener("change",()=>{byId("deerStatus").textContent="Kronhjortsdata saknas ännu för det valda intervallet; lägg endast in verifierade årsrapporter från Hörneåns KSO.";});
