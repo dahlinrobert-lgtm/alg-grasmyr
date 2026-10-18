@@ -17,6 +17,18 @@ SPECS = [
     ("elkAge", "data/processed/medelalder_vuxna_hornean_2013-2026.csv",
      {"male": "handjur_medelalder_ar", "nMale": "handjur_antal",
       "female": "hondjur_medelalder_ar", "nFemale": "hondjur_antal"}),
+    ("elkWeight", "data/processed/slaktvikt_hornean_2013-2026.csv",
+     {"male": "handjur_vikt_kg", "nMale": "handjur_antal",
+      "female": "hondjur_vikt_kg", "nFemale": "hondjur_antal",
+      "calves": "kalvar_totalt_vikt_kg", "nCalves": "kalvar_totalt_antal",
+      "maleCalf": "han_kalv_vikt_kg", "nMaleCalf": "han_kalv_antal",
+      "femaleCalf": "hon_kalv_vikt_kg", "nFemaleCalf": "hon_kalv_antal",
+      "calvesSep": "kalvar_sep_vikt_kg", "nCalvesSep": "kalvar_sep_antal",
+      "maleCalfSep": "han_kalv_sep_vikt_kg", "nMaleCalfSep": "han_kalv_sep_antal",
+      "femaleCalfSep": "hon_kalv_sep_vikt_kg", "nFemaleCalfSep": "hon_kalv_sep_antal",
+      "calvesOct": "kalvar_okt_vikt_kg", "nCalvesOct": "kalvar_okt_antal",
+      "maleCalfOct": "han_kalv_okt_vikt_kg", "nMaleCalfOct": "han_kalv_okt_antal",
+      "femaleCalfOct": "hon_kalv_okt_vikt_kg", "nFemaleCalfOct": "hon_kalv_okt_antal"}),
 ]
 HISTORICAL_CSV = "data/official_historical_area_summary_2009_2013.csv"
 HISTORICAL_OBS_CSV = "data/processed/algobs_hornean_historical_boundaries_2010-2013.csv"
@@ -142,7 +154,7 @@ def main():
     for array_name, csv_path, field_map in SPECS:
         web = site_rows(array_name)
         source = csv_rows(csv_path)
-        if array_name in ("elkHarvest", "elkObs", "elkAge"):
+        if array_name in ("elkHarvest", "elkObs", "elkAge", "elkWeight"):
             web = [row for row in web if row.get("season") not in HISTORICAL_SEASONS]
         by_season = {row["jaktsasong"]: row for row in source}
         if len(web) != len(source):
