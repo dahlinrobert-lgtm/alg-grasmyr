@@ -52,11 +52,11 @@ Frågan för Gräsmyrs VVO gav data för 2010/2011, 2011/2012 och 2012/2013. Fö
 - [Actions: fler statistiktyper](https://github.com/dahlinrobert-lgtm/alg-grasmyr/actions/workflows/download-other-statistics.yml) testar medelålder, slaktvikt och älgobservationer för de områdes-/periodkombinationer som går att välja.
 - [Guide för datahämtning](docs/acquisition.md)
 - [Excel-baserad arealavstämning – registrerade arealer och differenser](data/historical_area_crosswalk_candidates.csv).
-- [Officiell flerårstabell för tio historiska områden 2009/10–2012/13](data/official_historical_area_summary_2009_2013.csv): 40 rapporterade rader med areal, fällda älgar och avskjutningsmål.
+- [Officiell flerårstabell för tio historiska områden 2009/2010–2012/2013](data/official_historical_area_summary_2009_2013.csv): 40 rapporterade rader med areal, fällda älgar och avskjutningsmål.
 - [Workflow: full historisk registergranskning](.github/workflows/audit-historical-area-registers.yml), körning [39067657897](https://github.com/dahlinrobert-lgtm/alg-grasmyr/actions/runs/39067657897), med fullständiga tabeller och diagnostik.
 - [Portalens historiska områdeskoder för jaktåret 2009/2010](data/portal_area_crosswalk_2009_2010.csv): säsongsfiltrerade ID:n och försiktigt bedömda kopplingar för de äldre Nordmalingsområdena.
 - [Fullständigt officiellt avskjutningsuttag för tio områden 2009/2010](data/official_historical_area_stats_2009_2010_full.csv): rapporterad areal, fällda älgar, avskjutningsmål, nyttjandegrad och portal-ID.
-- [Historik för namnlös registrering 24-01-02-183-A, 2009/10–2012/13](data/official_area_history_24-01-02-183-A_2009-2013.csv): bekräftar arealsteget 303 → 504 ha från 2010/11.
+- [Historik för namnlös registrering 24-01-02-183-A, 2009/2010–2012/2013](data/official_area_history_24-01-02-183-A_2009-2013.csv): bekräftar arealsteget 303 → 504 ha från 2010/2011.
 - [Workflow: hämta historisk statistik för de identifierade områdena](.github/workflows/download-2009-historical-areas.yml): testar avskjutningsrapporten för nio namngivna områden och den namnlösa posten 24-01-02-183-A.
 - [Områdesregister](data/area_registry.csv)
 - [Datadictionary och kvalitetsregler](docs/data-dictionary.md)
@@ -100,7 +100,7 @@ python scripts/download_statistics.py \
 4. Jaktår ska behållas som text tills formatet är verifierat.
 5. Ändrade områdesgränser och områdes-ID ska dokumenteras; blanda inte statistik från olika geografiska enheter utan belägg.
 
-- [Säsongsvis arealavstämning mot Hörneåns ÄSO](data/area_reconciliation_by_season.csv): visar aritmetiska kandidatmatchningar och kvarstående differenser. Hallens separata registrering i Excel anger 1 567,62 ha 2021/22–2022/23.
+- [Säsongsvis arealavstämning mot Hörneåns ÄSO](data/area_reconciliation_by_season.csv): visar aritmetiska kandidatmatchningar och kvarstående differenser. Hallens separata registrering i Excel anger 1 567,62 ha 2021/2022–2022/2023.
 - [Jämförelse av original-Excel med historiska respektive nuvarande gränser](data/processed/boundary-comparison-summary.md): jämför registreringsnummer, registrerade arealer och övriga fält för alla säsonger där båda exportvarianterna finns.
 - [Registreringshistorik för äldre delområden](data/processed/area-registration-boundary-audit.csv) och [direkt Excel-kontroll av Hörneåns rapporterade areal](data/processed/hornean-area-source-check.csv): källvärden för identifierade registreringsnummer i båda gränsvarianterna.
 
