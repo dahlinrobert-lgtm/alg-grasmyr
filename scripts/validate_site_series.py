@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the three 13-season elk series embedded in index.html against processed CSVs."""
+"""Validate the reconstructed elk harvest series against source CSVs."""
 from __future__ import annotations
 import csv
 import re
@@ -18,6 +18,16 @@ SPECS = [
      {"male": "handjur_medelalder_ar", "nMale": "handjur_antal",
       "female": "hondjur_medelalder_ar", "nFemale": "hondjur_antal"}),
 ]
+HISTORICAL_CSV = "data/official_historical_area_summary_2009_2013.csv"
+RECONSTRUCTED_AREAS = {
+    "GRÄSMYRS VILTVÅRDSOMRÅDE",
+    "MULLSJÖ VILTVÅRDSOMRÅDE",
+    "TALLBERGSLIDENS VILTVÅRDSOMRÅDE",
+    "HUMMELHOLMS VILTVÅRDSOMRÅDE",
+    "HÖRNSJÖ VILTVÅRDSOMRÅDE",
+    "TORRBÖLE VILTVÅRDSOMRÅDE",
+}
+HISTORICAL_SEASONS = ["2009/2010", "2010/2011", "2011/2012", "2012/2013"]
 
 def number(value: str):
     value = value.strip().replace("%", "").replace(",", ".")
@@ -54,12 +64,49 @@ def csv_rows(path: str):
 def main():
     errors = []
     totals = []
+
+    # The visible harvest series has four additional reconstructed years, before
+    # the official 13-season Hörneåns ÄSO series. Validate those against the six
+    # named historical VVO registrations, not against the newer ÄSO CSV.
+    harvest = site_rows("elkHarvest")
+    historical = csv_rows(HISTORICAL_CSV)
+    historical_by_season: dict[str, dict[str, float]] = {}
+    for season in HISTORICAL_SEASONS:
+        source_rows = [
+            row for row in historical
+            if row["hunting_year"] == season
+            and row["area_name"].strip().upper() in RECONSTRUCTED_AREAS
+        ]
+        if {r["area_name"].strip().upper() for r in source_rows} != RECONSTRUCTED_AREAS:
+            errors.append(f"{HISTORICAL_CSV} {season}: expected exactly the six reconstructed VVOs")
+        historical_by_season[season] = {
+            "total": sum(int(r["harvest_total"]) for r in source_rows),
+            "target": sum(int(r["quota_total"]) for r in source_rows),
+        }
+    for season in HISTORICAL_SEASONS:
+        rows = [r for r in harvest if r.get("season") == season]
+        if len(rows) != 1:
+            errors.append(f"elkHarvest {season}: expected exactly one reconstructed site row, found {len(rows)}")
+            continue
+        row = rows[0]
+        for field in ("total", "target"):
+            actual, expected = number(row.get(field, "")), historical_by_season[season][field]
+            if actual != expected:
+                errors.append(f"elkHarvest {season} {field}: site={actual!r}, sum of six VVOs={expected!r}")
+        if number(row.get("adult", "")) is not None or number(row.get("calves", "")) is not None:
+            errors.append(f"elkHarvest {season}: adult/calves should remain unknown for the reconstructed historic totals")
+    totals.append(("elkHarvest historical VVO sums", len(HISTORICAL_SEASONS), len(HISTORICAL_SEASONS)))
+
+    # The post-reconstruction segment remains checked against the processed ÄSO
+    # series exactly, with the original 13 seasonal records.
     for array_name, csv_path, field_map in SPECS:
         web = site_rows(array_name)
         source = csv_rows(csv_path)
+        if array_name == "elkHarvest":
+            web = [row for row in web if row.get("season") not in HISTORICAL_SEASONS]
         by_season = {row["jaktsasong"]: row for row in source}
-        if len(web) != 13 or len(source) != 13:
-            errors.append(f"{array_name}: expected 13 seasons in both sources, site={len(web)}, CSV={len(source)}")
+        if len(web) != len(source):
+            errors.append(f"{array_name}: expected {len(source)} rows in both sources, site={len(web)}, CSV={len(source)}")
         if len(by_season) != len(source):
             errors.append(f"{csv_path}: duplicate season keys")
         for row in web:
@@ -73,14 +120,15 @@ def main():
                 if actual != expected:
                     errors.append(f"{array_name} {season} {site_field}: site={actual!r}, CSV {csv_field}={expected!r}")
         totals.append((array_name, len(web), len(source)))
-    for name, web_count, csv_count in totals:
-        print(f"PASS {name}: {web_count} site rows, {csv_count} CSV rows")
+
+    for name, web_count, source_count in totals:
+        print(f"PASS {name}: {web_count} site rows, {source_count} source rows")
     if errors:
         print("VALIDATION FAILED")
         for error in errors:
             print(f" - {error}")
         raise SystemExit(1)
-    print("PASS: all selected website values match processed CSV values.")
+    print("PASS: reconstructed historical sums and all current ÄSO series match their source CSVs.")
 
 if __name__ == "__main__":
     main()
