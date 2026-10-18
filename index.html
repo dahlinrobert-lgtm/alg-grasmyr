@@ -201,18 +201,16 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
  <div class="panel">
   <div class="details"><details open><summary>Älgstatistik</summary><p>Avskjutning kommer från rapporttypen ”Avskjutning med mål — ÄJO”. Fällda djur och avskjutningsmål är separata mått. Älgobs per mantimme, medelålder och slaktvikter är andra indikatorer och ska inte behandlas som antal fällda.</p></details></div>
   <div class="details"><details><summary>Historiska områden och gränser</summary><p>Gräsmyrs VVO (portal-ID 718148; beteckning 24-01-02-017-A) och Hörneåns ÄSO (portal-ID 724577; beteckning 24-01-02-342-Ä) förekommer som separata områdesval i portalen. Det bekräftar inte i sig när eller exakt hur gränserna ändrats. Historiska jämförelser ska vara märkta med områdesidentitet och gränsläge.</p></details></div>
-  <div class="details"><details><summary>Kronhjort</summary><p>Kronhjortsskötselområdet (KSO) redovisas separat från älgens ÄSO. Kronhjortens årsserie behöver bekräftas från den rapportfunktion eller de officiella årsrapporter som faktiskt gäller Hörneåns KSO. Tills dess redovisas inga påhittade årsvärden.</p></details></div>
   <div class="details"><details><summary>Uppdatering och versionshantering</summary><p>Publicerade filer ligger i GitHub-repot och sidan kan läsa inbearbetade CSV-filer när de finns på main. När ny officiell data hämtas ska råkälla, datum, områdes-ID, gränsläge och jaktår sparas. Saknade observationer förblir saknade värden.</p></details></div>
  </div>
  <div class="sources" style="margin-top:14px">
   <a href="https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/" target="_blank" rel="noreferrer">Älgdata statistikportal<span>Avskjutning och biologiska rapporter</span></a>
   <a href="https://ext-webbgis.lansstyrelsen.se/lst_algdata/" target="_blank" rel="noreferrer">Älgdata WebbGIS<span>Områden och kartlager</span></a>
-  <a href="https://www.lansstyrelsen.se/vasterbotten/djur/jakt-och-vilt/kronhjortsjakt.html" target="_blank" rel="noreferrer">Länsstyrelsen – kronhjort<span>Rapportering och förvaltning av kronhjort</span></a>
  </div>
  <p class="small muted">Källor som granskats: Älgdata statistikportal, Länsstyrelsen Västerbotten. Sidan är ett fristående statistikprojekt och inte en officiell publikation från Länsstyrelsen.</p>
 </section>
 </main>
-<footer><div class="wrap"><span>Hörneåns viltstatistik · Älg och kronhjort</span><span>Öppen sammanställning · <a href="https://github.com/dahlinrobert-lgtm/alg-grasmyr">GitHub-repository</a></span></div></footer>
+<footer><div class="wrap"><span>Hörneåns älgstatistik</span><span>Öppen sammanställning · <a href="https://github.com/dahlinrobert-lgtm/alg-grasmyr">GitHub-repository</a></span></div></footer>
 <script>
 
 const historicVvoData=[
@@ -346,13 +344,13 @@ const measureOptions={
   {value:"calfTarget",label:"Kalvar: fällda jämfört med mål",series:[{key:"calves",label:"Kalvar fällda",color:"#244c3d"},{key:"targetCalves",label:"Mål kalvar",color:"#bb7b2a"}]},
   {value:"density",label:"Fällda per 1 000 ha",series:[{key:"per1000",label:"Fällda per 1 000 ha",color:"#557ca8"}]},
   {value:"targetDensity",label:"Mål per 1 000 ha",series:[{key:"targetPer1000",label:"Mål per 1 000 ha",color:"#bb7b2a"}]},
-  {value:"utilization",label:"Nyttjandegrad av målet",series:[{key:"utilization",label:"Totalt, %",color:"#244c3d"},{key:"adultUtilization",label:"Vuxna, %",color:"#bb7b2a"},{key:"calfUtilization",label:"Kalvar, %",color:"#557ca8"}]}
+  {value:"utilization",label:"Nyttjandegrad av målet",series:[{key:"utilization",label:"Totalt, %",color:"#244c3d",factor:100},{key:"adultUtilization",label:"Vuxna, %",color:"#bb7b2a",factor:100},{key:"calfUtilization",label:"Kalvar, %",color:"#557ca8",factor:100}]}
  ],
  obs:[
   {value:"obs",label:"Älgobs per mantimme",series:[{key:"obs",label:"Älgobs per mantimme",color:"#557ca8"}]},
   {value:"calves",label:"Kalvar per hondjur",series:[{key:"calves",label:"Kalvar per hondjur",color:"#244c3d"}]},
-  {value:"sex",label:"Andel handjur bland vuxna",series:[{key:"maleShare",label:"Andel handjur, %",color:"#bb7b2a"}]},
-  {value:"twins",label:"Andel tvillingkor",series:[{key:"twinCowShare",label:"Andel tvillingkor, %",color:"#557ca8"}]},
+  {value:"sex",label:"Andel handjur bland vuxna",series:[{key:"maleShare",label:"Andel handjur, %",color:"#bb7b2a",factor:100}]},
+  {value:"twins",label:"Andel tvillingkor",series:[{key:"twinCowShare",label:"Andel tvillingkor, %",color:"#557ca8",factor:100}]},
   {value:"hours",label:"Observationstid",series:[{key:"hours",label:"Mantimmar",color:"#244c3d"}]},
   {value:"categories",label:"Observationer efter kategori",series:[{key:"maleObs",label:"Handjur",color:"#244c3d"},{key:"loneFemale",label:"Ensamt hondjur",color:"#bb7b2a"},{key:"femaleOneCalf",label:"Hondjur med en kalv",color:"#557ca8"},{key:"femaleTwoCalves",label:"Hondjur med två kalvar",color:"#8b78a8"},{key:"loneCalf",label:"Ensam kalv",color:"#8b9c61"},{key:"unidentified",label:"Oidentifierad",color:"#8d9892"}]}
  ],
@@ -388,7 +386,7 @@ function drawChart(svg, data, series, opts={}){
   let points=data.map((d,i)=>d[s.key]===undefined||d[s.key]===null?null:[x(i),y(d[s.key])]);
   let seg=[];const flush=()=>{if(seg.length>1)svg.insertAdjacentHTML("beforeend",'<polyline fill="none" stroke="'+s.color+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="'+seg.map(p=>p.join(",")).join(" ")+'"/>');seg=[];};
   points.forEach(p=>{if(p){seg.push(p)}else flush()});flush();
-  points.forEach((p,i)=>{if(p)svg.insertAdjacentHTML("beforeend",'<circle cx="'+p[0]+'" cy="'+p[1]+'" r="4.3" fill="'+s.color+'" stroke="white" stroke-width="1.5"><title>'+data[i].season+': '+fmt(data[i][s.key],3)+'</title></circle>');});
+  points.forEach((p,i)=>{if(p)svg.insertAdjacentHTML("beforeend",'<circle cx="'+p[0]+'" cy="'+p[1]+'" r="4.3" fill="'+s.color+'" stroke="white" stroke-width="1.5"><title>'+data[i].season+': '+fmt(data[i][s.key]*(s.factor||1),3)+'</title></circle>');});
  });
  svg.insertAdjacentHTML("beforeend",'<line x1="'+ml+'" y1="'+(mt+ph)+'" x2="'+(w-mr)+'" y2="'+(mt+ph)+'" stroke="#adbaaf"/>');
 }
@@ -396,8 +394,8 @@ function setTable(data){
  const table=byId("algTable"),head=table.querySelector("thead"),body=table.querySelector("tbody");
  let headers,rows;
  if(mode==="harvest"){
-  headers=["Jaktår","Totalt fällda","Vuxna","Kalvar","Avskjutningsmål","Registrerad areal","Vuxna handjur","Vuxna hondjur","Handkalvar","Honkalvar","Fällda/1 000 ha","Nyttjandegrad"];
-  rows=data.map(d=>[d.season,fmt(d.total,0),fmt(d.adult,0),fmt(d.calves,0),fmt(d.target,0),fmt(d.area,2)+" ha",fmt(d.adultMale,0),fmt(d.adultFemale,0),fmt(d.calfMale,0),fmt(d.calfFemale,0),fmt(d.per1000,2),d.utilization==null?"Saknas":fmt(d.utilization,0)+"%"]);
+  headers=["Jaktår","Totalt fällda","Vuxna","Kalvar","Avskjutningsmål","Registrerad areal","Vuxna handjur","Vuxna hondjur","Handkalvar","Honkalvar","Fällda/1 000 ha","Mål vuxna","Mål handjur","Mål hondjur","Mål kalvar","Mål/1 000 ha","Nyttjandegrad vuxna","Nyttjandegrad kalvar","Nyttjandegrad totalt"];
+  rows=data.map(d=>[d.season,fmt(d.total,0),fmt(d.adult,0),fmt(d.calves,0),fmt(d.target,0),fmt(d.area,2)+" ha",fmt(d.adultMale,0),fmt(d.adultFemale,0),fmt(d.calfMale,0),fmt(d.calfFemale,0),fmt(d.per1000,2),fmt(d.targetAdult,0),fmt(d.targetMale,0),fmt(d.targetFemale,0),fmt(d.targetCalves,0),fmt(d.targetPer1000,2),d.adultUtilization==null?"Saknas":fmt(d.adultUtilization*100,0)+"%",d.calfUtilization==null?"Saknas":fmt(d.calfUtilization*100,0)+"%",d.utilization==null?"Saknas":fmt(d.utilization*100,0)+"%"]);
  } else if(mode==="obs"){
   headers=["Jaktår","Älgobs/mantimme","Mantimmar","Kalvar per hondjur","Statistiskt säkerställd","Andel handjur vuxna","Andel tvillingkor","Handjur","Ensamt hondjur","Hondjur 1 kalv","Hondjur 2 kalvar","Ensam kalv","Oidentifierad"];
   rows=data.map(d=>[d.season,fmt(d.obs,4),fmt(d.hours,0),fmt(d.calves,3),d.significant||"—",d.maleShare==null?"Saknas":fmt(d.maleShare*100,1)+"%",d.twinCowShare==null?"Saknas":fmt(d.twinCowShare*100,1)+"%",fmt(d.maleObs,0),fmt(d.loneFemale,0),fmt(d.femaleOneCalf,0),fmt(d.femaleTwoCalves,0),fmt(d.loneCalf,0),fmt(d.unidentified,0)]);
