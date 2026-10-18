@@ -30,7 +30,7 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
   </div>
 </header>
 <nav class="nav" aria-label="Huvudnavigation"><div class="wrap">
-<a href="#oversikt">Översikt</a><a href="#alg">Älg</a><a href="#kronhjort">Kronhjort</a><a href="#historik">Områdeshistorik</a><a href="#arealutveckling">Areal & delområden</a><a href="#metod">Metod och källor</a>
+<a href="#oversikt">Översikt</a><a href="#alg">Älg</a><a href="#historiska-vvo">Historiska VVO</a><a href="#kronhjort">Kronhjort</a><a href="#historik">Områdeshistorik</a><a href="#arealutveckling">Areal & delområden</a><a href="#metod">Metod och källor</a>
 </div></nav>
 <main class="wrap">
 <section class="section" id="oversikt">
@@ -61,6 +61,24 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
   <p class="small muted" id="algDescription">Avskjutning för Hörneåns ÄSO enligt statistikportalen. Bruten tidsaxel visar inte att värdet är noll när data saknas.</p>
   <div class="table-wrap"><table id="algTable"><thead></thead><tbody></tbody></table></div>
   <div class="note" id="algNote">Gräsmyrs VVO har hittills verifierade avskjutningsvärden för 2010/2011–2012/2013. För senare år var områdes-ID:t inte valbart i portalens urval. Saknade värden tolkas inte som noll.</div>
+ </div>
+</section>
+
+
+<section class="section" id="historiska-vvo">
+ <div class="section-head"><div><div class="eyebrow">Historiska jaktområden</div><h2>Älgavskjutning i äldre VVO</h2></div><p>Historiska värden från Länsstyrelsens Älgdata för registrerade viltvårdsområden. Välj ett VVO för att se avskjutning och mål per jaktår.</p></div>
+ <div class="panel">
+  <div class="toolbar">
+   <div class="field"><label for="historicVvoSelect">Historiskt VVO</label><select id="historicVvoSelect">
+    <option value="GRÄSMYRS VILTVÅRDSOMRÅDE">Gräsmyr</option><option value="MULLSJÖ VILTVÅRDSOMRÅDE">Mullsjö</option><option value="TALLBERGSLIDENS VILTVÅRDSOMRÅDE">Tallbergsliden</option><option value="HUMMELHOLMS VILTVÅRDSOMRÅDE">Hummelholm</option><option value="HÖRNSJÖ VILTVÅRDSOMRÅDE">Hörnsjö</option><option value="TORRBÖLE VILTVÅRDSOMRÅDE">Torrböle</option>
+   </select></div>
+   <p class="small muted">Jaktår 2009/2010–2012/2013 · registrerade historiska gränser</p>
+  </div>
+  <div class="cards" id="historicVvoKpis"></div>
+  <div class="chart-wrap"><svg id="historicVvoChart" class="chart" viewBox="0 0 900 320" role="img" aria-label="Historisk älgavskjutning per jaktår"></svg></div>
+  <div class="legend"><span><i class="swatch"></i>Totalt fällda</span><span><i class="swatch gold"></i>Avskjutningsmål</span></div>
+  <div class="table-wrap"><table id="historicVvoTable"><thead></thead><tbody></tbody></table></div>
+  <div class="note">Detta är statistik för separata historiska registreringar, inte en rekonstruerad tidsserie för Hörneåns ÄSO. Att ett VVO senare kan ha ingått i eller sammanfallit med ett större område är inte fastställt enbart av dessa siffror. Källfil: <a href="data/official_historical_area_summary_2009_2013.csv">historisk sammanställning (CSV)</a>.</div>
  </div>
 </section>
 
@@ -218,6 +236,42 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
 </main>
 <footer><div class="wrap"><span>Hörneåns viltstatistik · Älg och kronhjort</span><span>Öppen sammanställning · <a href="https://github.com/dahlinrobert-lgtm/alg-grasmyr">GitHub-repository</a></span></div></footer>
 <script>
+
+const historicVvoData=[
+{area:"GRÄSMYRS VILTVÅRDSOMRÅDE",season:"2009/2010",ha:4795,harvest:18,target:11},
+{area:"GRÄSMYRS VILTVÅRDSOMRÅDE",season:"2010/2011",ha:4795,harvest:15,target:13},
+{area:"GRÄSMYRS VILTVÅRDSOMRÅDE",season:"2011/2012",ha:4795,harvest:17,target:17},
+{area:"GRÄSMYRS VILTVÅRDSOMRÅDE",season:"2012/2013",ha:4795,harvest:15,target:34},
+{area:"MULLSJÖ VILTVÅRDSOMRÅDE",season:"2009/2010",ha:3492,harvest:9,target:8},
+{area:"MULLSJÖ VILTVÅRDSOMRÅDE",season:"2010/2011",ha:3492,harvest:12,target:11},
+{area:"MULLSJÖ VILTVÅRDSOMRÅDE",season:"2011/2012",ha:3492,harvest:13,target:12},
+{area:"MULLSJÖ VILTVÅRDSOMRÅDE",season:"2012/2013",ha:3492,harvest:7,target:24},
+{area:"TALLBERGSLIDENS VILTVÅRDSOMRÅDE",season:"2009/2010",ha:3172,harvest:12,target:8},
+{area:"TALLBERGSLIDENS VILTVÅRDSOMRÅDE",season:"2010/2011",ha:3172,harvest:19,target:9},
+{area:"TALLBERGSLIDENS VILTVÅRDSOMRÅDE",season:"2011/2012",ha:3172,harvest:13,target:10},
+{area:"TALLBERGSLIDENS VILTVÅRDSOMRÅDE",season:"2012/2013",ha:3172,harvest:18,target:24},
+{area:"HUMMELHOLMS VILTVÅRDSOMRÅDE",season:"2009/2010",ha:5508,harvest:22,target:13},
+{area:"HUMMELHOLMS VILTVÅRDSOMRÅDE",season:"2010/2011",ha:5508,harvest:25,target:16},
+{area:"HUMMELHOLMS VILTVÅRDSOMRÅDE",season:"2011/2012",ha:5508,harvest:26,target:19},
+{area:"HUMMELHOLMS VILTVÅRDSOMRÅDE",season:"2012/2013",ha:5508,harvest:22,target:39},
+{area:"HÖRNSJÖ VILTVÅRDSOMRÅDE",season:"2009/2010",ha:6601,harvest:23,target:16},
+{area:"HÖRNSJÖ VILTVÅRDSOMRÅDE",season:"2010/2011",ha:6601,harvest:27,target:18},
+{area:"HÖRNSJÖ VILTVÅRDSOMRÅDE",season:"2011/2012",ha:6601,harvest:29,target:24},
+{area:"HÖRNSJÖ VILTVÅRDSOMRÅDE",season:"2012/2013",ha:6601,harvest:27,target:47},
+{area:"TORRBÖLE VILTVÅRDSOMRÅDE",season:"2009/2010",ha:3210,harvest:14,target:7},
+{area:"TORRBÖLE VILTVÅRDSOMRÅDE",season:"2010/2011",ha:3210,harvest:17,target:10},
+{area:"TORRBÖLE VILTVÅRDSOMRÅDE",season:"2011/2012",ha:3209,harvest:16,target:11},
+{area:"TORRBÖLE VILTVÅRDSOMRÅDE",season:"2012/2013",ha:3209,harvest:12,target:23}
+];
+function renderHistoricVvo(){
+ const name=byId("historicVvoSelect").value,data=historicVvoData.filter(d=>d.area===name);
+ const total=data.reduce((s,d)=>s+d.harvest,0),last=data[data.length-1];
+ byId("historicVvoKpis").innerHTML='<div class="card"><div class="kpi-label">Registrerad areal</div><div class="kpi">'+fmt(last.ha,0)+'</div><div class="kpi-foot">hektar enligt historisk export</div></div><div class="card"><div class="kpi-label">Fällda, fyra jaktår</div><div class="kpi">'+fmt(total,0)+'</div><div class="kpi-foot">summa 2009/2010–2012/2013</div></div><div class="card"><div class="kpi-label">Senaste redovisade jaktår</div><div class="kpi" style="font-size:1.5rem">'+last.season+'</div><div class="kpi-foot">historisk VVO-registrering</div></div>';
+ drawChart(byId("historicVvoChart"),data,[{key:"harvest",label:"Totalt fällda",color:"#244c3d"},{key:"target",label:"Avskjutningsmål",color:"#bb7b2a"}]);
+ const head=byId("historicVvoTable").querySelector("thead"),body=byId("historicVvoTable").querySelector("tbody");
+ head.innerHTML="<tr><th>Jaktår</th><th>Registrerad areal</th><th>Fällda älgar</th><th>Avskjutningsmål</th><th>Fällda per 1 000 ha</th></tr>";
+ body.innerHTML=data.map(d=>"<tr><td>"+d.season+"</td><td>"+fmt(d.ha,0)+" ha</td><td>"+d.harvest+"</td><td>"+d.target+"</td><td>"+fmt(d.harvest/d.ha*1000,2)+"</td></tr>").join("");
+}
 const elkHarvest=[
 {season:"2013/2014",year:2013,total:109,adult:53,calves:56,target:133,area:26777},
 {season:"2014/2015",year:2014,total:112,adult:57,calves:55,target:143,area:32355},
