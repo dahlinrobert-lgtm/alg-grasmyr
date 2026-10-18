@@ -141,3 +141,5 @@ För offentlig statistik i detta projekt används endast myndighetens publicerad
 - Excel-filer för 2017/2018 och 2018/2019 finns tillgängliga för båda gränsserierna och har jämförts per registreringsnummer.
 
 Alla areal- och avskjutningsvärden på webbplatsen ska kontrolleras mot primära Excel-exporter innan de markeras som avstämda. Där en relevant Excel-export eller säsong saknas ska luckan anges öppet.
+
+- [Säsongsvis registerspårning – Gräsmyr och möjliga områdeskopplingar](docs/season-by-season-register-trace.md): sammanfattar vad Excel visar direkt och skiljer det från aritmetiska matchningar och hypoteser.
