@@ -45,7 +45,7 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
 </section>
 
 <section class="section" id="alg">
- <div class="section-head"><div><div class="eyebrow">Art 1</div><h2>Älg – avskjutning och indikatorer</h2></div><p>Återkonstruerat Hörneåns älgförvaltningsområde (ÄFO). Äldre jaktår bygger på summerad avskjutning från sex underliggande VVO; senare år bygger på rapporterad statistik för Hörneåns ÄSO.</p></div>
+ <div class="section-head"><div><div class="eyebrow">Art 1</div><h2>Älg – avskjutning och indikatorer</h2></div><p>Historisk proxyserie för Hörneåns närområde. 2000/2001–2008/2009 summerar sex VVO i exporter med nuvarande gränser; 2009/2010–2012/2013 använder historiska gränsexporter. Från 2013/2014 visas rapporterad statistik för Hörneåns ÄSO. Geografisk kontinuitet är inte fastställd.</p></div>
  <div class="panel">
   <div class="toolbar">
    <div class="field"><label for="elkMetricSelect">Typ av statistik</label><select id="elkMetricSelect">
@@ -58,19 +58,19 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
   <div class="legend" id="algLegend"></div>
   <p class="small muted" id="algDescription">Avskjutning för återkonstruerat Hörneåns ÄFO. Tidiga år är summerade VVO-värden; senare år är rapporterade ÄSO-värden.</p>
   <div class="table-wrap"><table id="algTable"><thead></thead><tbody></tbody></table></div>
-  <div class="note" id="algNote">Rekonstruktion: 2009/2010–2012/2013 summeras Gräsmyr, Mullsjö, Tallbergsliden, Hummelholm, Hörnsjö och Torrböle VVO. Från 2013/2014 används Hörneåns ÄSO:s rapporterade serie. Detta är en sammanfogad arbetsserie, inte en fastställd historisk ÄFO-gräns; rapporterad areal och geografisk täckning förändras över tid. Älgobs och medelålder finns endast från 2013/2014 i den här serien.</div>
+  <div class="note" id="algNote">Rekonstruktion: 2000/2001–2008/2009 summeras Gräsmyr, Mullsjö, Tallbergsliden, Hummelholm, Hörnsjö och Torrböle VVO från exporter med nuvarande gränser. 2009/2010–2012/2013 bygger på historiska gränsexporter. Från 2013/2014 används Hörneåns ÄSO:s rapporterade serie. Det är en sammanfogad arbetsserie, inte en fastställd historisk ÄSO/ÄFO-gräns. Exporternas gränsindelning och rapporterad areal ändras över tid; jämför därför nivåer med försiktighet. Älgobs och medelålder är inte verifierade för dessa äldre sammanlagda VVO-år.</div>
  </div>
 </section>
 
 
 <section class="section" id="historiska-vvo">
- <div class="section-head"><div><div class="eyebrow">Historiska jaktområden</div><h2>Älgavskjutning i äldre VVO</h2></div><p>Historiska värden från Länsstyrelsens Älgdata för registrerade viltvårdsområden. Välj ett VVO för att se avskjutning och mål per jaktår. Länsstyrelsens lista över viltbesiktare 2023 anger dessutom Hörneån som älgskötselområde och listar Hörnsjö VVO, Mullsjö VVO, Torrböle VVO och Gräsmyr VVO under Hörneån; Hummelholm VVO förekommer i en rad märkt Hörneån/Åsele.</p></div>
+ <div class="section-head"><div><div class="eyebrow">Historiska jaktområden</div><h2>Älgavskjutning i äldre VVO</h2></div><p>Värden från Länsstyrelsens Älgdata för registrerade viltvårdsområden. 2000/2001–2008/2009 bygger på export med nuvarande gränser; 2009/2010–2012/2013 bygger på historiska gränser. Välj ett VVO för att se avskjutning och mål per jaktår. Länsstyrelsens lista över viltbesiktare 2023 anger dessutom Hörneån som älgskötselområde och listar Hörnsjö VVO, Mullsjö VVO, Torrböle VVO och Gräsmyr VVO under Hörneån; Hummelholm VVO förekommer i en rad märkt Hörneån/Åsele.</p></div>
  <div class="panel">
   <div class="toolbar">
    <div class="field"><label for="historicVvoSelect">Historiskt VVO</label><select id="historicVvoSelect">
     <option value="GRÄSMYRS VILTVÅRDSOMRÅDE">Gräsmyr</option><option value="MULLSJÖ VILTVÅRDSOMRÅDE">Mullsjö</option><option value="TALLBERGSLIDENS VILTVÅRDSOMRÅDE">Tallbergsliden</option><option value="HUMMELHOLMS VILTVÅRDSOMRÅDE">Hummelholm</option><option value="HÖRNSJÖ VILTVÅRDSOMRÅDE">Hörnsjö</option><option value="TORRBÖLE VILTVÅRDSOMRÅDE">Torrböle</option>
    </select></div>
-   <p class="small muted">Jaktår 2009/2010–2012/2013 · registrerade historiska gränser</p>
+   <p class="small muted">Jaktår 2000/2001–2012/2013 · gränstyp anges i källnoteringen</p>
   </div>
   <div class="cards" id="historicVvoKpis"></div>
   <div class="chart-wrap"><svg id="historicVvoChart" class="chart" viewBox="0 0 900 320" role="img" aria-label="Historisk älgavskjutning per jaktår"></svg></div>
@@ -306,6 +306,17 @@ function renderHistoricVvo(){
  body.innerHTML=data.map(d=>"<tr><td>"+d.season+"</td><td>"+fmt(d.ha,0)+" ha</td><td>"+d.harvest+"</td><td>"+d.target+"</td><td>"+fmt(d.harvest/d.ha*1000,2)+"</td></tr>").join("");
 }
 const elkHarvest=[
+/* 2000/2001–2008/2009: sum of six tracked VVOs from current-boundary exports.
+   The series changes to historical-boundary exports in 2009/2010; it is a proxy trend, not a proven fixed-area ÄSO series. */
+{season:"2000/2001",year:2000,total:126,adult:74,calves:52,target:72,area:26778,boundary:"Nuvarande gränser"},
+{season:"2001/2002",year:2001,total:129,adult:68,calves:61,target:72,area:26778,boundary:"Nuvarande gränser"},
+{season:"2002/2003",year:2002,total:133,adult:79,calves:54,target:97,area:26778,boundary:"Nuvarande gränser"},
+{season:"2003/2004",year:2003,total:117,adult:71,calves:46,target:106,area:26778,boundary:"Nuvarande gränser"},
+{season:"2004/2005",year:2004,total:112,adult:67,calves:45,target:78,area:26778,boundary:"Nuvarande gränser"},
+{season:"2005/2006",year:2005,total:100,adult:53,calves:47,target:64,area:26778,boundary:"Nuvarande gränser"},
+{season:"2006/2007",year:2006,total:81,adult:45,calves:36,target:53,area:26778,boundary:"Nuvarande gränser"},
+{season:"2007/2008",year:2007,total:95,adult:53,calves:42,target:60,area:26778,boundary:"Nuvarande gränser"},
+{season:"2008/2009",year:2008,total:89,adult:46,calves:43,target:58,area:26778,boundary:"Nuvarande gränser"},
 {season:"2009/2010",year:2009,total:98,adult:null,calves:null,target:63,area:26778},
 {season:"2010/2011",year:2010,total:115,adult:null,calves:null,target:77,area:26778},
 {season:"2011/2012",year:2011,total:114,adult:null,calves:null,target:93,area:26777},
