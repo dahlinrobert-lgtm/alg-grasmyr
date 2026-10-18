@@ -40,3 +40,16 @@ Prioritera att få fram mer direkt Excel-belägg för:
 4. vad som kan och inte kan sägas om 61,05 ha-förändringen.
 
 Det behövs fortfarande uttryckligt källstöd innan någon historisk sammanslagning märks som bekräftad.
+
+
+## Slutlig avgränsning: arealkopplingar är antaganden
+
+Projektet ska inte försöka tvinga fram en exakt polygonmatchning mellan historiska Excel-rader och dagens geodata när källorna inte räcker för det. De aritmetiska sambanden mellan arealsteg och lokala VVO-arealer redovisas som **arbetshypoteser**, inte som fastställd historik:
+
+- 2013/14: sex lokala arealer summerar till 26 777 ha. Det är en exakt summa, inte bevis på identiska polygoner eller medlemskap.
+- 2014/15: ökningen 5 578 ha matchar aritmetiskt Djupsjö + Nyåker + namnlös registrering 183. Registrering 183 ska inte ges ett namn utan separat belägg.
+- 2018/19: ökningen 3 151 ha sammanfaller med Öre-Brattfors VVO:s redovisade areal och att området inte längre visas separat i senare Excel-utdrag. Det bevisar inte formell överföring.
+- 2020/21: ökningen 61,05 ha är oförklarad i det tillgängliga Excel-underlaget.
+- 2023/24: ökningen 1 565,75 ha ligger nära Hallens tidigare redovisade 1 567,62 ha, med 1,87 ha skillnad. Detta är inte en exakt match och bevisar inte medlemskap.
+
+**Beslut för projektet:** behåll arealserierna och dessa noterade hypoteser på webbplatsen. Avsluta arbetet med att försöka härleda historiska gränser från enbart arealsummor eller traktnamn. Återuppta den frågan endast om ett nytt starkt underlag dyker upp, exempelvis ett originalbeslut, en historisk karta eller en officiell fastighetsförteckning.
