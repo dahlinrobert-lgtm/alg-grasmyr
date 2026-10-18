@@ -376,7 +376,7 @@ function drawChart(svg, data, series, opts={}){
  const w=900,h=320,ml=54,mr=22,mt=18,mb=48,pw=w-ml-mr,ph=h-mt-mb;
  svg.innerHTML="";
  if(!data.length){svg.innerHTML='<text x="450" y="150" text-anchor="middle" fill="#63736b" font-size="16">Inga rapporterade värden för valt intervall</text>';return;}
- const all=data.flatMap(d=>series.map(s=>d[s.key])).filter(v=>Number.isFinite(v));
+ const all=data.flatMap(d=>series.map(s=>d[s.key]===undefined||d[s.key]===null?null:d[s.key]*(s.factor||1))).filter(v=>Number.isFinite(v));
  let min=0,max=Math.max(...all)*1.16;if(max===min)max=1;if(opts.zeroLine===false)min=Math.min(...all)*.8;
  const y=v=>mt+ph-(v-min)/(max-min)*ph;
  const x=i=>data.length===1?ml+pw/2:ml+i*pw/(data.length-1);
