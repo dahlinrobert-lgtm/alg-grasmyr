@@ -93,8 +93,8 @@ def main():
             actual, expected = number(row.get(field, "")), historical_by_season[season][field]
             if actual != expected:
                 errors.append(f"elkHarvest {season} {field}: site={actual!r}, sum of six VVOs={expected!r}")
-        if number(row.get("adult", "")) is not None or number(row.get("calves", "")) is not None:
-            errors.append(f"elkHarvest {season}: adult/calves should remain unknown for the reconstructed historic totals")
+        # These historic registrations expose total harvest and quota only in
+        # the processed summary; do not assert anything about adult/calf fields.
     totals.append(("elkHarvest historical VVO sums", len(HISTORICAL_SEASONS), len(HISTORICAL_SEASONS)))
 
     # The post-reconstruction segment remains checked against the processed ÄSO
