@@ -59,3 +59,17 @@ Det visar vilka lager som ingår i kartkonfigurationen, men CSV:n innehåller in
 2. Hämta relevanta polygoner som GeoJSON eller shapefile.
 3. Kontrollera aktuell polygonarea och geometri i EPSG:3006.
 4. Jämför endast som separat evidens med Excel-historiken; märk inte historiskt medlemskap bekräftat utan historiska gränser eller beslutsstöd.
+
+
+## Alternativ geodatakälla: viltvårdsområden (VVO)
+
+En separat Länsstyrelse-publicerad ArcGIS Feature Layer finns för **LstZ Viltvårdsområden**:
+
+- [REST-lager 8 – LstZ Viltvårdsområden](https://ext-geodata-lokala.lansstyrelsen.se/arcgis/rest/services/LSTZ/lstz_extern_jakt2/MapServer/8)
+- [Metadata för viltvårdsområden](https://ext-geodatakatalog.lansstyrelsen.se/GeodataKatalogen/srv/api/records/GetMetaDataById?id=73d176e7-ba23-4656-8123-a5bbb5a2f603)
+
+REST-sidan anger polygongeometri, EPSG:3006 och fälten `Namn`, `VVO` och `AREA_HA`. Det är en annan datamängd än beslutade älgjaktsområden och därför en potentiellt relevant väg för att hitta geometri för äldre eller nuvarande viltvårdsområden som Gräsmyrs VVO.
+
+**Begränsningar:** tjänstens synliga utbredning är regional och den öppnade REST-sidan bevisar inte att Gräsmyr finns som post eller att polygonen motsvarar gränsen under 2000–2013. Vi behöver göra en attributfråga på `Namn`/`VVO`, kontrollera eventuell träff och jämföra `AREA_HA` samt polygonen med de officiella Excel-uppgifterna. Även en aktuell matchning är bara aktuell geometri, inte i sig historisk gränsbevisning.
+
+Den här källan bör undersökas parallellt med `LST Älgjaktsområden`: den ena avser VVO-polygoner, den andra beslutade älgjaktsområden.
