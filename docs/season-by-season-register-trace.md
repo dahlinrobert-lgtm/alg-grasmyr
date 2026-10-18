@@ -53,3 +53,10 @@ Projektet ska inte försöka tvinga fram en exakt polygonmatchning mellan histor
 - 2023/24: ökningen 1 565,75 ha ligger nära Hallens tidigare redovisade 1 567,62 ha, med 1,87 ha skillnad. Detta är inte en exakt match och bevisar inte medlemskap.
 
 **Beslut för projektet:** behåll arealserierna och dessa noterade hypoteser på webbplatsen. Avsluta arbetet med att försöka härleda historiska gränser från enbart arealsummor eller traktnamn. Återuppta den frågan endast om ett nytt starkt underlag dyker upp, exempelvis ett originalbeslut, en historisk karta eller en officiell fastighetsförteckning.
+
+
+## Projektets arbetshypotes om äldre delområden
+
+För den fortsatta analysen använder vi följande **arbetshypotes**: de äldre lokala VVO-områdena Gräsmyr, Mullsjö, Tallbergsliden, Hummelholm, Hörnsjö och Torrböle utgör den geografiska bas som ligger bakom Hörneåns ÄSO:s rapporterade areal 2013/2014. Djupsjö och Nyåker antas vara möjliga tillkommande delar i samband med arealsteget 2014/2015; Öre-Brattfors är kandidat för steget 2018/2019; Hallen är kandidat för steget 2023/2024.
+
+Detta är det antagande projektet arbetar utifrån, inte en fastställd gränshistorik. Excel-filerna stöder att namnen/arealerna förekommer och att några arealsteg aritmetiskt sammanfaller eller ligger nära dem. De styrker inte ensamma exakta polygoner, formella anslutningsdatum eller att alla gränser är identiska. Vi ska därför presentera antagandet tydligt och inte återöppna polygonmatchningen utan nytt historiskt underlag.
