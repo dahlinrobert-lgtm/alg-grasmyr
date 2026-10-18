@@ -19,6 +19,7 @@ SPECS = [
       "female": "hondjur_medelalder_ar", "nFemale": "hondjur_antal"}),
 ]
 HISTORICAL_CSV = "data/official_historical_area_summary_2009_2013.csv"
+HISTORICAL_OBS_CSV = "data/processed/algobs_hornean_historical_boundaries_2010-2013.csv"
 RECONSTRUCTED_AREAS = {
     "GRÄSMYRS VILTVÅRDSOMRÅDE",
     "MULLSJÖ VILTVÅRDSOMRÅDE",
@@ -31,7 +32,7 @@ HISTORICAL_SEASONS = ["2009/2010", "2010/2011", "2011/2012", "2012/2013"]
 
 def number(value: str):
     value = value.strip().replace("%", "").replace(",", ".")
-    if value in ("", "-"):
+    if value in ("", "-", "null", "None"):
         return None
     try:
         return float(value)
@@ -97,12 +98,51 @@ def main():
         # the processed summary; do not assert anything about adult/calf fields.
     totals.append(("elkHarvest historical VVO sums", len(HISTORICAL_SEASONS), len(HISTORICAL_SEASONS)))
 
+    # Historical Älgobs exists as a direct ÄSO report with historical boundaries
+    # for 2010/2011–2012/2013. It is not a sum of the six VVO harvest records.
+    obs = site_rows("elkObs")
+    historical_obs = csv_rows(HISTORICAL_OBS_CSV)
+    obs_by_season = {row["jaktsasong"]: row for row in historical_obs}
+    obs_fields = {"obs": "algobs_per_mantimme", "hours": "mantimmar",
+                  "calves": "antal_kalvar_per_hondjur"}
+    for season in HISTORICAL_SEASONS:
+        rows = [row for row in obs if row.get("season") == season]
+        if len(rows) != 1:
+            errors.append(f"elkObs {season}: expected exactly one historical row, found {len(rows)}")
+            continue
+        row = rows[0]
+        if season == "2009/2010":
+            if any(number(row.get(field, "")) is not None for field in obs_fields):
+                errors.append("elkObs 2009/2010: values should remain missing; no source record is available")
+            continue
+        source_row = obs_by_season.get(season)
+        if source_row is None:
+            errors.append(f"{HISTORICAL_OBS_CSV}: missing season {season}")
+            continue
+        for site_field, csv_field in obs_fields.items():
+            actual, expected = number(row.get(site_field, "")), number(source_row.get(csv_field, ""))
+            if actual != expected:
+                errors.append(f"elkObs {season} {site_field}: site={actual!r}, historical CSV {csv_field}={expected!r}")
+    totals.append(("elkObs historical-boundary extension", 3, 3))
+
+    # Older mean-age values cannot be reconstructed from available source files.
+    # Keep explicit null rows for timeline alignment and ensure they stay null.
+    age = site_rows("elkAge")
+    for season in HISTORICAL_SEASONS:
+        rows = [row for row in age if row.get("season") == season]
+        if len(rows) != 1:
+            errors.append(f"elkAge {season}: expected one explicit missing-value row, found {len(rows)}")
+            continue
+        if any(number(rows[0].get(field, "")) is not None for field in ("male", "nMale", "female", "nFemale")):
+            errors.append(f"elkAge {season}: unsupported historical age values must remain missing")
+    totals.append(("elkAge historical missing-value rows", 4, 4))
+
     # The post-reconstruction segment remains checked against the processed ÄSO
     # series exactly, with the original 13 seasonal records.
     for array_name, csv_path, field_map in SPECS:
         web = site_rows(array_name)
         source = csv_rows(csv_path)
-        if array_name == "elkHarvest":
+        if array_name in ("elkHarvest", "elkObs", "elkAge"):
             web = [row for row in web if row.get("season") not in HISTORICAL_SEASONS]
         by_season = {row["jaktsasong"]: row for row in source}
         if len(web) != len(source):
@@ -128,7 +168,7 @@ def main():
         for error in errors:
             print(f" - {error}")
         raise SystemExit(1)
-    print("PASS: reconstructed historical sums and all current ÄSO series match their source CSVs.")
+    print("PASS: reconstructed harvest sums, historical-boundary Älgobs, explicit age gaps, and current ÄSO series match their source CSVs.")
 
 if __name__ == "__main__":
     main()
