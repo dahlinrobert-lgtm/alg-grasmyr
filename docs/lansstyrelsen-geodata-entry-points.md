@@ -95,3 +95,35 @@ Källor:
 Länsstyrelsens officiella information för Västerbotten beskriver tre former av älgjakt: registrerat älgskötselområde, registrerat licensområde och oregistrerad mark. Den hänvisar till Länsstyrelsens geodatakatalog som ingång till länsvisa och rikstäckande data. Se [Älgförvaltning och jaktområden – Västerbotten](https://www.lansstyrelsen.se/vasterbotten/djur/jakt-och-vilt/algjakt/algforvaltning-och-jaktomraden.html) och [Kartor och geodata – Västerbotten](https://www.lansstyrelsen.se/vasterbotten/om-oss/vara-tjanster/kartor-och-geodata.html).
 
 I nuläget har vi en användbar officiell tjänst för dagens beslutade älgjaktområden, men ingen verifierad historisk VVO-polygon för Gräsmyr. Nästa avgörande källa vore ett äldre beslut/bilaga med karta eller en arkiverad version av polygonlagret.
+
+
+## Traktnamn i fastighetsbeteckningar – sökstrategi för Nordmaling
+
+Målet är att använda traktledet i fastighetsbeteckningar som en söknyckel för att hitta handlingar om de historiska viltvårdsområdena. En fullständig beteckning består normalt av kommun/registerområde, trakt, block och enhet; exempelvis kan den skrivas `Nordmaling Gräsmyr 15:1`. Traktnamnet är inte i sig en juridisk gräns för ett älgjaktsområde.
+
+### Traktnamn med direkt officiellt belägg i Nordmaling
+
+| Traktled / namn | Vad källan bekräftar | Evidens |
+|---|---|---|
+| Gräsmyr | Länsstyrelsens beslut om Hörnån naturreservat listar fastigheten Gräsmyr 15:1 i Nordmalings kommun. | Direkt exempel på fastighetsbeteckning |
+| Mullsjö | Samma beslut listar flera Mullsjö-fastigheter i Nordmaling, bland annat 1:13, 1:14, 1:21, 1:22 och fler. | Direkt exempel på fastighetsbeteckningar |
+| Hörnsjö | Länsstyrelsens beslut om Rötjärnbergets naturreservat listar Hörnsjö 2:40, 2:74 och 3:72 i Nordmaling. | Direkt exempel på fastighetsbeteckningar |
+
+Källor: [Hörnån naturreservat, beslut 2019](https://www.lansstyrelsen.se/download/18.6585fd516e4501062871a34/1574932728179/24FS%202019-24%20H%C3%B6rn%C3%A5n%20naturreservat.pdf) och [Rötjärnbergets naturreservat, beslut 2025](https://www.lansstyrelsen.se/download/18.1a7d70ab19a0a379be476c/1761119496660/R%C3%B6tj%C3%A4rnbergets%20naturreservat_Beslut20251021us.pdf).
+
+### Kandidater att testa mot fastighetsregistret
+
+Utifrån de historiska områdesnamnen i Excel-registret ska nästa sökning testa följande traktled: `Gräsmyr`, `Mullsjö`, `Hörnsjö`, `Hummelholm`, `Torrböle`, `Tallberg`, `Nyåker`, `Djupsjö`, `Öre-Brattfors` och `Hallen`. Detta är en **söklista**, inte en bekräftelse på att varje namn förekommer som trakt i Nordmalings fastighetsregister; vissa kan vara bynamn, äldre områdesnamn eller ligga i annan kommun/registerindelning.
+
+### Viktig metodbegränsning
+
+Lantmäteriets öppna Min karta kan visa fastighetsgränser och fullständig fastighetsbeteckning när man zoomar in, men kartans fastighetsgränser är uttryckligen inte juridiskt gällande. Fastighetsregistrets uppgifter om nuvarande och tidigare beteckningar samt fastighetsrättsliga åtgärder kan vara relevanta för historik. För att fastställa vilka fastigheter som ingick i ett jaktområde krävs dock helst Länsstyrelsens registreringsbeslut med fastighetsförteckning och kartbilaga.
+
+Länkar: [Lantmäteriet – hitta fastighetsbeteckning i Min karta](https://www.lantmateriet.se/sv/kartor/vara-karttjanster/min-karta/hitta-fastighetsbeteckning-i-min-karta/) · [Lantmäteriet – fastighetsregistrets innehåll](https://www2.lantmateriet.se/sv/fastighet-och-mark/information-om-fastigheter/Fastighetsregistret/registrets-innehall/).
+
+### Rekommenderad fortsättning
+
+1. Samla officiella beslut och kartbilagor för Gräsmyrs VVO och Hörneåns ÄSO.
+2. Extrahera varje fastighetsbeteckning ur beslutsbilagorna och normalisera kommun, trakt, block och enhet.
+3. Gruppera listan efter trakt och jämför den med Excel-arealerna per säsong.
+4. Märk varje resultat som direkt dokumenterat, namnlikhet eller ännu obekräftad hypotes. Använd inte enbart traktledet för att tilldela en fastighet till ett historiskt jaktområde.
