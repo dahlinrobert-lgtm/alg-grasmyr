@@ -130,6 +130,8 @@ GitHub Actions-workflowen `Validate website statistics against processed CSVs` k
 
 ## Excel-baserad tolkning av arealhistoriken
 
+Projektägarens geografiska kontext om sammanhängande grannbyar och historiska fastighets-/traktnamn dokumenteras separat i [geografisk kontext och bevisnivå](docs/geographic-context-and-evidence.md). Den används för att prioritera undersökningsspår, men hålls åtskild från vad myndighetens Excel-exporter direkt belägger.
+
 För offentlig statistik i detta projekt används endast myndighetens publicerade Excel-exporter som belägg för registrerade arealer, områdesnamn, registreringsnummer och jaktår. Externa listor, lokala källor och andra webbplatser används inte för att fylla luckor eller fastställa historiska medlemskap.
 
 - **2018/2019:** Hörneåns rapporterade areal ökar från 32 355 till 35 506 ha (+3 151 ha). Öre-Brattfors finns separat med 3 151 ha i Excel 2017/2018 och saknas som separat rad i 2018/2019. Det är förenligt med ett samband men bevisar inte formellt medlemskap eller identiska gränser.
