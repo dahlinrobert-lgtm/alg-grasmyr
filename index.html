@@ -47,10 +47,10 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
 <section class="section" id="alg">
  <div class="section-head"><div><div class="eyebrow">Art 1</div><h2>Älg – avskjutning och indikatorer</h2></div><p>Återkonstruerat Hörneåns älgförvaltningsområde (ÄFO). Äldre jaktår bygger på summerad avskjutning från sex underliggande VVO; senare år bygger på rapporterad statistik för Hörneåns ÄSO.</p></div>
  <div class="panel">
-  <div class="species-tabs" aria-label="Välj statistiktyp">
-    <button type="button" data-mode="harvest" aria-pressed="true">Avskjutning</button>
-    <button type="button" data-mode="obs" aria-pressed="false">Älgobs</button>
-    <button type="button" data-mode="age" aria-pressed="false">Medelålder</button>
+  <div class="toolbar">
+   <div class="field"><label for="elkMetricSelect">Typ av statistik</label><select id="elkMetricSelect">
+    <option value="harvest">Avskjutning</option><option value="obs">Älgobs</option><option value="age">Medelålder</option>
+   </select></div>
   </div>
   <p class="small muted">Sammanställd serie för ett rekonstruerat område. Saknade indikatorvärden visas som dataluckor, inte som noll.</p>
   <div class="chart-wrap"><svg id="algChart" class="chart" viewBox="0 0 900 320" role="img" aria-label="Diagram över älgstatistik per jaktår"></svg></div>
@@ -359,10 +359,7 @@ function drawChart(svg, data, series, opts={}){
 function setTable(data){
  const table=byId("algTable"),head=table.querySelector("thead"),body=table.querySelector("tbody");
  let headers,rows;
- if(mode==="harvest" && byId("areaSelect").value==="grasmyr"){
-  headers=["Jaktår","Totalt fällda","Vuxna","Kalvar","Avskjutningsmål","Registrerad areal"];
-  rows=data.map(d=>[d.season,fmt(d.total,0),fmt(d.adult,0),fmt(d.calves,0),fmt(d.target,0),fmt(d.area,2)+" ha"]);
- } else if(mode==="harvest"){
+ if(mode==="harvest"){
   headers=["Jaktår","Totalt fällda","Vuxna","Kalvar","Avskjutningsmål","Registrerad areal"];
   rows=data.map(d=>[d.season,fmt(d.total,0),fmt(d.adult,0),fmt(d.calves,0),fmt(d.target,0),fmt(d.area,2)+" ha"]);
  } else if(mode==="obs"){
@@ -420,9 +417,10 @@ function renderElk(){
  setTable(data);
  byId("algNote").textContent=mode==="harvest"?"2009/2010–2012/2013 är summor av sex historiska VVO: Gräsmyr, Mullsjö, Tallbergsliden, Hummelholm, Hörnsjö och Torrböle. Från 2013/2014 visas Hörneåns ÄSO:s rapporterade serie. Areal och geografisk täckning är inte verifierat konstanta.":mode==="obs"?"2010/2011–2012/2013 är rapporterade älgobs-värden för Hörneåns ÄSO med historiska gränser från Länsstyrelsens Älgdata; de är inte summor av de sex VVO:na. 2009/2010 saknas. Från 2013/2014 fortsätter den rapporterade serien.":"För 2009/2010–2012/2013 saknas verifierade medelåldersvärden för de sex VVO:na i det tillgängliga underlaget. De visas som saknade, inte som noll. Gräsmyrs historiska medelålderstabell visar inga registrerade åldersdata och kan inte användas för att beräkna ett områdesmedel.";
 }
-document.querySelectorAll("[data-mode]").forEach(btn=>btn.addEventListener("click",()=>{
- mode=btn.dataset.mode;document.querySelectorAll("[data-mode]").forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));renderElk();
-}));
+byId("elkMetricSelect").addEventListener("change",()=>{
+ mode=byId("elkMetricSelect").value;
+ renderElk();
+});
 drawChart(byId("deerChart"),[],[{key:"total",label:"Totalt fällda",color:"#244c3d"}]);
 byId("deerMetric").addEventListener("change",()=>{byId("deerStatus").textContent="Inga verifierade kronhjortsvärden har laddats in. Vald indikator: "+byId("deerMetric").selectedOptions[0].text+". Ingen linje betyder okänd rapportering, inte noll avskjutning.";});
 byId("deerPeriod").addEventListener("change",()=>{byId("deerStatus").textContent="Kronhjortsdata saknas ännu för det valda intervallet; lägg endast in verifierade årsrapporter från Hörneåns KSO.";});
