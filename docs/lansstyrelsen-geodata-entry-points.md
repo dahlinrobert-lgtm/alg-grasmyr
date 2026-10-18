@@ -70,6 +70,11 @@ En separat Länsstyrelse-publicerad ArcGIS Feature Layer finns för **LstZ Viltv
 
 REST-sidan anger polygongeometri, EPSG:3006 och fälten `Namn`, `VVO` och `AREA_HA`. Det är en annan datamängd än beslutade älgjaktsområden och därför en potentiellt relevant väg för att hitta geometri för äldre eller nuvarande viltvårdsområden som Gräsmyrs VVO.
 
-**Begränsningar:** tjänstens synliga utbredning är regional och den öppnade REST-sidan bevisar inte att Gräsmyr finns som post eller att polygonen motsvarar gränsen under 2000–2013. Vi behöver göra en attributfråga på `Namn`/`VVO`, kontrollera eventuell träff och jämföra `AREA_HA` samt polygonen med de officiella Excel-uppgifterna. Även en aktuell matchning är bara aktuell geometri, inte i sig historisk gränsbevisning.
+**Viktig korrigering efter kontroll av tjänstens utbredning:** lagrets utbredningsrektangel är X 388 328–585 694 och Y 6 834 307–7 184 827 i EPSG:3006. Den ligger väster om Gräsmyr/Umeå-området och omfattar inte målområdet i Västerbotten. Därför är detta lager inte en lämplig källa för Gräsmyrs polygon, även om attributschemat är relevant som exempel på hur Länsstyrelsen publicerar VVO-data. Vi ska inte lägga tid på att söka Gräsmyr i just denna regionala tjänst. En separat Västerbottenskälla behöver identifieras. Även om en liknande VVO-polygon hittas i en annan tjänst är en aktuell geometri inte i sig historisk gränsbevisning.
 
 Den här källan bör undersökas parallellt med `LST Älgjaktsområden`: den ena avser VVO-polygoner, den andra beslutade älgjaktsområden.
+
+
+## Status för VVO-lagret i den här analysen
+
+REST-metadata för [LstZ Viltvårdsområden, lager 8](https://ext-geodata-lokala.lansstyrelsen.se/arcgis/rest/services/LSTZ/lstz_extern_jakt2/MapServer/8) anger extent i EPSG:3006: X 388 328–585 694, Y 6 834 307–7 184 827. Det geografiska intervallet täcker inte Gräsmyr/Umeå-området. Lagret har därför klassats som **regionalt sidospår – inte relevant geometri för målområdet**. Nästa steg är att hitta motsvarande VVO-data för Västerbotten eller att använda den länsövergripande tjänsten för beslutade älgjaktområden.
