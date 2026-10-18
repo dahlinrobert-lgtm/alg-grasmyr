@@ -78,9 +78,10 @@ def main():
     errors = []
     totals = []
 
-    # The visible harvest series has four additional reconstructed years, before
-    # the official 13-season Hörneåns ÄSO series. Validate those against the six
-    # named historical VVO registrations, not against the newer ÄSO CSV.
+    # The visible harvest series has a 2000s VVO proxy segment, four historical-boundary
+    # VVO seasons, and then the official 13-season Hörneåns ÄSO series. Validate the
+    # 2000s sums against transcribed official current-boundary workbook rows and the
+    # 2009/2010–2012/2013 segment against the historical-boundary summary CSV.
     harvest = site_rows("elkHarvest")
     historical = csv_rows(HISTORICAL_CSV)
     historical_by_season: dict[str, dict[str, float]] = {}
@@ -96,6 +97,24 @@ def main():
             "total": sum(int(r["harvest_total"]) for r in source_rows),
             "target": sum(int(r["quota_total"]) for r in source_rows),
         }
+    current_boundary_expected = {
+        "2000/2001": (126, 72), "2001/2002": (129, 72),
+        "2002/2003": (133, 97), "2003/2004": (117, 106),
+        "2004/2005": (112, 78), "2005/2006": (100, 64),
+        "2006/2007": (81, 53), "2007/2008": (95, 60),
+        "2008/2009": (89, 58),
+    }
+    for season, (expected_total, expected_target) in current_boundary_expected.items():
+        rows = [r for r in harvest if r.get("season") == season]
+        if len(rows) != 1:
+            errors.append(f"elkHarvest {season}: expected one six-VVO proxy row, found {len(rows)}")
+            continue
+        if number(rows[0].get("total", "")) != expected_total:
+            errors.append(f"elkHarvest {season} total: site={rows[0].get('total')}, workbook sum={expected_total}")
+        if number(rows[0].get("target", "")) != expected_target:
+            errors.append(f"elkHarvest {season} target: site={rows[0].get('target')}, workbook sum={expected_target}")
+    totals.append(("elkHarvest current-boundary VVO sums 2000/2001–2008/2009", 9, 9))
+
     for season in HISTORICAL_SEASONS:
         rows = [r for r in harvest if r.get("season") == season]
         if len(rows) != 1:
@@ -155,7 +174,7 @@ def main():
         web = site_rows(array_name)
         source = csv_rows(csv_path)
         if array_name in ("elkHarvest", "elkObs", "elkAge", "elkWeight"):
-            web = [row for row in web if row.get("season") not in HISTORICAL_SEASONS]
+            web = [row for row in web if int(row.get("season", "0").split("/")[0]) >= 2013]
         by_season = {row["jaktsasong"]: row for row in source}
         if len(web) != len(source):
             errors.append(f"{array_name}: expected {len(source)} rows in both sources, site={len(web)}, CSV={len(source)}")
@@ -180,7 +199,7 @@ def main():
         for error in errors:
             print(f" - {error}")
         raise SystemExit(1)
-    print("PASS: reconstructed harvest sums, historical-boundary Älgobs, explicit age gaps, and current ÄSO series match their source CSVs.")
+    print("PASS: 2000s VVO proxy sums, 2009/2010–2012/2013 historical VVO sums, historical-boundary Älgobs, explicit age gaps, and current ÄSO series match their validation sources.")
 
 if __name__ == "__main__":
     main()
