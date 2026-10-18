@@ -288,6 +288,10 @@ const elkHarvest=[
 {season:"2024/2025",year:2024,total:112,adult:64,calves:48,target:135,area:37132.8},
 {season:"2025/2026",year:2025,total:116,adult:71,calves:45,target:190,area:37132.8}];
 const elkObs=[
+{season:"2009/2010",year:2009,obs:null,hours:null,calves:null,significant:null,source:"Saknas"},
+{season:"2010/2011",year:2010,obs:0.0712,hours:7777,calves:0.868,significant:"Ja",source:"Historiska gränser"},
+{season:"2011/2012",year:2011,obs:0.0676,hours:7934,calves:0.726,significant:"Ja",source:"Historiska gränser"},
+{season:"2012/2013",year:2012,obs:0.0563,hours:7607,calves:0.713,significant:"Ja",source:"Historiska gränser"},
 {season:"2013/2014",year:2013,obs:0.0659,hours:6978,calves:0.491,significant:"Ja"},
 {season:"2014/2015",year:2014,obs:0.069,hours:6724,calves:0.691,significant:"Ja"},
 {season:"2015/2016",year:2015,obs:0.057,hours:4838,calves:0.598,significant:"Nej"},
@@ -302,6 +306,10 @@ const elkObs=[
 {season:"2024/2025",year:2024,obs:0.0542,hours:5020,calves:0.804,significant:"Ja"},
 {season:"2025/2026",year:2025,obs:0.0386,hours:4353,calves:0.698,significant:"Nej"}];
 const elkAge=[
+{season:"2009/2010",year:2009,male:null,nMale:null,female:null,nFemale:null,source:"Saknas"},
+{season:"2010/2011",year:2010,male:null,nMale:null,female:null,nFemale:null,source:"Saknas"},
+{season:"2011/2012",year:2011,male:null,nMale:null,female:null,nFemale:null,source:"Saknas"},
+{season:"2012/2013",year:2012,male:null,nMale:null,female:null,nFemale:null,source:"Saknas"},
 {season:"2013/2014",year:2013,male:1.9,nMale:16,female:2.5,nFemale:20},
 {season:"2014/2015",year:2014,male:2.4,nMale:28,female:3.7,nFemale:23},
 {season:"2015/2016",year:2015,male:2.5,nMale:27,female:2.2,nFemale:23},
@@ -321,8 +329,8 @@ const grasmyr=[
 {season:"2012/2013",year:2012,total:15,adult:7,calves:8,target:15,area:4795}];
 const modes={
  harvest:{title:"Avskjutning av älg",description:"Rapporterat antal fällda älgar per jaktår. Måltal visas som separat jämförelseserie.",series:[{key:"total",label:"Totalt fällda",color:"#244c3d"},{key:"target",label:"Avskjutningsmål",color:"#bb7b2a"}]},
- obs:{title:"Älgobservationer",description:"Älgobs per mantimme. Det är en observationsindikator och inte en direkt uppskattning av totalt antal älgar.",series:[{key:"obs",label:"Älgobs per mantimme",color:"#557ca8"}]},
- age:{title:"Medelålder på undersökta vuxna älgar",description:"Medelålder för handjur och hondjur, med antal undersökta djur i tabellen. Små urval kan ge stora svängningar.",series:[{key:"male",label:"Handjur, år",color:"#244c3d"},{key:"female",label:"Hondjur, år",color:"#bb7b2a"}]}
+ obs:{title:"Älgobservationer",description:"Älgobs per mantimme. 2010/2011–2012/2013 hämtas från Älgdata för Hörneåns ÄSO med historiska gränser; 2009/2010 saknas. Det är en observationsindikator, inte en direkt uppskattning av totalt antal älgar.",series:[{key:"obs",label:"Älgobs per mantimme",color:"#557ca8"}]},
+ age:{title:"Medelålder på undersökta vuxna älgar",description:"Medelålder för handjur och hondjur, med antal undersökta djur i tabellen. Äldre värden saknas i tillgängligt verifierat underlag och visas som dataluckor.",series:[{key:"male",label:"Handjur, år",color:"#244c3d"},{key:"female",label:"Hondjur, år",color:"#bb7b2a"}]}
 };
 let mode="harvest";
 const byId=id=>document.getElementById(id);
@@ -410,7 +418,7 @@ function renderElk(){
  byId("algLegend").innerHTML=spec.series.map(s=>'<span><i class="swatch" style="background:'+s.color+'"></i>'+s.label+'</span>').join("");
  byId("algDescription").textContent=spec.description;
  setTable(data);
- byId("algNote").textContent=mode==="harvest"?"2009/2010–2012/2013 är summor av sex historiska VVO: Gräsmyr, Mullsjö, Tallbergsliden, Hummelholm, Hörnsjö och Torrböle. Från 2013/2014 visas Hörneåns ÄSO:s rapporterade serie. Areal och geografisk täckning är inte verifierat konstanta.":"Älgobs och medelålder har verifierade värden från 2013/2014 i underlaget. Äldre indikatorvärden saknas och ska inte tolkas som noll.";
+ byId("algNote").textContent=mode==="harvest"?"2009/2010–2012/2013 är summor av sex historiska VVO: Gräsmyr, Mullsjö, Tallbergsliden, Hummelholm, Hörnsjö och Torrböle. Från 2013/2014 visas Hörneåns ÄSO:s rapporterade serie. Areal och geografisk täckning är inte verifierat konstanta.":mode==="obs"?"2010/2011–2012/2013 är rapporterade älgobs-värden för Hörneåns ÄSO med historiska gränser från Länsstyrelsens Älgdata; de är inte summor av de sex VVO:na. 2009/2010 saknas. Från 2013/2014 fortsätter den rapporterade serien.":"För 2009/2010–2012/2013 saknas verifierade medelåldersvärden för de sex VVO:na i det tillgängliga underlaget. De visas som saknade, inte som noll. Gräsmyrs historiska medelålderstabell visar inga registrerade åldersdata och kan inte användas för att beräkna ett områdesmedel.";
 }
 document.querySelectorAll("[data-mode]").forEach(btn=>btn.addEventListener("click",()=>{
  mode=btn.dataset.mode;document.querySelectorAll("[data-mode]").forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));renderElk();
