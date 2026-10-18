@@ -7,6 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 HTML = (ROOT / "index.html").read_text(encoding="utf-8")
+METHOD_HTML = (ROOT / "metod-data.html").read_text(encoding="utf-8")
 SPECS = [
     ("elkHarvest", "data/processed/avskjutning_mal_ajo_hornean_2013-2026.csv",
      {"total": "fallda_totalt", "adult": "fallda_vuxna_totalt",
@@ -77,6 +78,32 @@ def csv_rows(path: str):
 def main():
     errors = []
     totals = []
+
+    # Keep the landing page focused on charts, while ensuring the moved source
+    # notes remain available on the dedicated methodology page.
+    for label, needle in [
+        ("method page link", 'href="metod-data.html"'),
+        ("chart section", 'id="alg"'),
+        ("historic VVO section", 'id="historiska-vvo"'),
+        ("area chart", 'id="areaHistoryChart"'),
+    ]:
+        if needle not in HTML:
+            errors.append(f"index.html: missing {label} ({needle})")
+    for label, needle in [
+        ("page title", "<title>Metod & data"),
+        ("historical boundaries section", 'id="granser"'),
+        ("area data section", 'id="arealdata"'),
+        ("sources section", 'id="kallor"'),
+        ("link back to charts", 'href="index.html"'),
+        ("official statistics portal", "algdata-apps-stat"),
+    ]:
+        if needle not in METHOD_HTML:
+            errors.append(f"metod-data.html: missing {label} ({needle})")
+    if "<script>" in METHOD_HTML:
+        errors.append("metod-data.html: should be a content-only page, not a duplicate dashboard")
+    if "Arbetshypotes – inte verifierad gränshistorik" in HTML:
+        errors.append("index.html: long area-history hypothesis should live on metod-data.html")
+    totals.append(("page structure and methodology links", 1 if not errors else 0, 1))
 
     # The visible harvest series has a 2000s VVO proxy segment, four historical-boundary
     # VVO seasons, and then the official 13-season Hörneåns ÄSO series. Validate the
