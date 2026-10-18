@@ -423,6 +423,8 @@ byId("deerMetric").addEventListener("change",()=>{byId("deerStatus").textContent
 byId("deerPeriod").addEventListener("change",()=>{byId("deerStatus").textContent="Kronhjortsdata saknas ännu för det valda intervallet; lägg endast in verifierade årsrapporter från Hörneåns KSO.";});
 renderElk();
 drawAreaHistory();
+byId("historicVvoSelect").addEventListener("change",renderHistoricVvo);
+renderHistoricVvo();
 </script>
 </body>
 </html>
