@@ -78,3 +78,20 @@ Den här källan bör undersökas parallellt med `LST Älgjaktsområden`: den en
 ## Status för VVO-lagret i den här analysen
 
 REST-metadata för [LstZ Viltvårdsområden, lager 8](https://ext-geodata-lokala.lansstyrelsen.se/arcgis/rest/services/LSTZ/lstz_extern_jakt2/MapServer/8) anger extent i EPSG:3006: X 388 328–585 694, Y 6 834 307–7 184 827. Det geografiska intervallet täcker inte Gräsmyr/Umeå-området. Lagret har därför klassats som **regionalt sidospår – inte relevant geometri för målområdet**. Nästa steg är att hitta motsvarande VVO-data för Västerbotten eller att använda den länsövergripande tjänsten för beslutade älgjaktområden.
+
+
+## Extern historisk ledtråd (inte primärkälla)
+
+En webbsökning hittade en återpublicerad sammanställning med rubriken **”Älgtilldelning 2012”**. Den listar bland annat Gräsmyrs VVO (4 795 ha), Öre-Brattfors VVO (3 151 ha), Hallens VVO (1 553 ha), Djupsjö VVO (2 506 ha), Nyåkers VVO (2 568 ha), Mullsjö VVO (3 492 ha), Tallbergslidens VVO (3 172 ha), Hörnsjö VVO (6 601 ha), Hummelholms VVO (5 508 ha) och Torrböle VVO (3 209 ha). En separat återpublicerad gästbokstråd från 2012 nämner ett nytt älgskötselområde och anger att Hörnsjö, Gräsmyr, Mullsjö, Torrböle, Hummelholm och Tallberg skulle delta.
+
+Källor:
+- [Återpublicerad ”Älgtilldelning 2012”](https://www.yumpu.com/sv/document/view/27615173/pdf-dokument-algtilldelning-2012-svt)
+- [Hörnsjö VVO:s återpublicerade gästbok](https://www3.olzzon.com/g/g.php?a=s&i=g32-03680-34&m=alla&p=1)
+
+**Bevisvärde:** detta är en sekundär webbkopia, inte ett officiellt originalbeslut och inte polygondata. Den fungerar som sökledtråd för att hitta äldre tilldelningslistor eller beslut hos Länsstyrelsen, men ska inte ersätta de officiella Älgdata-Excelutdragen. Den antyder att flera av de lokala områdena redan 2012 kopplades till ett nytt ÄSO, men fastställer inte exakt geometri, datum för registreringsändring eller om alla gränser var identiska.
+
+## Nästa geodatasteg
+
+Länsstyrelsens officiella information för Västerbotten beskriver tre former av älgjakt: registrerat älgskötselområde, registrerat licensområde och oregistrerad mark. Den hänvisar till Länsstyrelsens geodatakatalog som ingång till länsvisa och rikstäckande data. Se [Älgförvaltning och jaktområden – Västerbotten](https://www.lansstyrelsen.se/vasterbotten/djur/jakt-och-vilt/algjakt/algforvaltning-och-jaktomraden.html) och [Kartor och geodata – Västerbotten](https://www.lansstyrelsen.se/vasterbotten/om-oss/vara-tjanster/kartor-och-geodata.html).
+
+I nuläget har vi en användbar officiell tjänst för dagens beslutade älgjaktområden, men ingen verifierad historisk VVO-polygon för Gräsmyr. Nästa avgörande källa vore ett äldre beslut/bilaga med karta eller en arkiverad version av polygonlagret.
