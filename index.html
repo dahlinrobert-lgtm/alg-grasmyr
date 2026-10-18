@@ -45,22 +45,19 @@ footer{background:#e7ece5;border-top:1px solid var(--line);padding:24px 18px;col
 </section>
 
 <section class="section" id="alg">
- <div class="section-head"><div><div class="eyebrow">Art 1</div><h2>Älg – avskjutning och indikatorer</h2></div><p>Hörneåns älgskötselområde (ÄSO) i Sydöstra älgförvaltningsområdet. Historisk Gräsmyr-statistik visas separat tills områdessambandet kan dokumenteras.</p></div>
+ <div class="section-head"><div><div class="eyebrow">Art 1</div><h2>Älg – avskjutning och indikatorer</h2></div><p>Återkonstruerat Hörneåns älgförvaltningsområde (ÄFO). Äldre jaktår bygger på summerad avskjutning från sex underliggande VVO; senare år bygger på rapporterad statistik för Hörneåns ÄSO.</p></div>
  <div class="panel">
   <div class="species-tabs" aria-label="Välj statistiktyp">
     <button type="button" data-mode="harvest" aria-pressed="true">Avskjutning</button>
     <button type="button" data-mode="obs" aria-pressed="false">Älgobs</button>
     <button type="button" data-mode="age" aria-pressed="false">Medelålder</button>
   </div>
-  <div class="toolbar">
-   <div class="field"><label for="areaSelect">Område/serie</label><select id="areaSelect"><option value="hornean">Hörneåns ÄSO · hela rapporterade serien</option><option value="grasmyr">Gräsmyrs VVO · historisk serie</option></select></div>
-   <p class="small muted">Hela tidsserien visas automatiskt. Saknade jaktår visas som dataluckor, inte som noll.</p>
-  </div>
+  <p class="small muted">Sammanställd serie för ett rekonstruerat område. Saknade indikatorvärden visas som dataluckor, inte som noll.</p>
   <div class="chart-wrap"><svg id="algChart" class="chart" viewBox="0 0 900 320" role="img" aria-label="Diagram över älgstatistik per jaktår"></svg></div>
   <div class="legend" id="algLegend"></div>
-  <p class="small muted" id="algDescription">Avskjutning för Hörneåns ÄSO enligt statistikportalen. Bruten tidsaxel visar inte att värdet är noll när data saknas.</p>
+  <p class="small muted" id="algDescription">Avskjutning för återkonstruerat Hörneåns ÄFO. Tidiga år är summerade VVO-värden; senare år är rapporterade ÄSO-värden.</p>
   <div class="table-wrap"><table id="algTable"><thead></thead><tbody></tbody></table></div>
-  <div class="note" id="algNote">Gräsmyrs VVO har hittills verifierade avskjutningsvärden för 2010/2011–2012/2013. För senare år var områdes-ID:t inte valbart i portalens urval. Saknade värden tolkas inte som noll.</div>
+  <div class="note" id="algNote">Rekonstruktion: 2009/2010–2012/2013 summeras Gräsmyr, Mullsjö, Tallbergsliden, Hummelholm, Hörnsjö och Torrböle VVO. Från 2013/2014 används Hörneåns ÄSO:s rapporterade serie. Detta är en sammanfogad arbetsserie, inte en fastställd historisk ÄFO-gräns; rapporterad areal och geografisk täckning förändras över tid. Älgobs och medelålder finns endast från 2013/2014 i den här serien.</div>
  </div>
 </section>
 
@@ -273,6 +270,10 @@ function renderHistoricVvo(){
  body.innerHTML=data.map(d=>"<tr><td>"+d.season+"</td><td>"+fmt(d.ha,0)+" ha</td><td>"+d.harvest+"</td><td>"+d.target+"</td><td>"+fmt(d.harvest/d.ha*1000,2)+"</td></tr>").join("");
 }
 const elkHarvest=[
+{season:"2009/2010",year:2009,total:98,adult:null,calves:null,target:63,area:26777},
+{season:"2010/2011",year:2010,total:115,adult:null,calves:null,target:77,area:26777},
+{season:"2011/2012",year:2011,total:114,adult:null,calves:null,target:93,area:26777},
+{season:"2012/2013",year:2012,total:101,adult:null,calves:null,target:191,area:26777},
 {season:"2013/2014",year:2013,total:109,adult:53,calves:56,target:133,area:26777},
 {season:"2014/2015",year:2014,total:112,adult:57,calves:55,target:143,area:32355},
 {season:"2015/2016",year:2015,total:103,adult:58,calves:45,target:132,area:32355},
@@ -327,8 +328,7 @@ let mode="harvest";
 const byId=id=>document.getElementById(id);
 const fmt=(n,d=1)=>n===null||n===undefined||Number.isNaN(n)?"Saknas":Number(n).toLocaleString("sv-SE",{maximumFractionDigits:d});
 function selectedData(){
- const area=byId("areaSelect").value;
- return area==="grasmyr"?grasmyr:(mode==="harvest"?elkHarvest:mode==="obs"?elkObs:elkAge);
+ return mode==="harvest"?elkHarvest:mode==="obs"?elkObs:elkAge;
 }
 function drawChart(svg, data, series, opts={}){
  const w=900,h=320,ml=54,mr=22,mt=18,mb=48,pw=w-ml-mr,ph=h-mt-mb;
@@ -406,18 +406,15 @@ function drawAreaHistory(){
  svg.insertAdjacentHTML("beforeend",'<text x="'+ml+'" y="18" fill="#63736b" font-size="12">Hektar</text>');
 }
 function renderElk(){
- const area=byId("areaSelect").value;
- if(area==="grasmyr" && mode!=="harvest"){byId("algChart").innerHTML='<text x="450" y="150" text-anchor="middle" fill="#63736b" font-size="15">Ingen användbar serie för vald statistiktyp</text>';byId("algLegend").innerHTML="";byId("algTable").querySelector("thead").innerHTML="<tr><th>Status</th></tr>";byId("algTable").querySelector("tbody").innerHTML='<tr><td>Portalens test gav inga användbara data. Detta är inte noll avskjutning.</td></tr>';byId("algDescription").textContent="Ingen användbar serie i undersökt Gräsmyrs VVO-underlag.";byId("algNote").textContent="Gräsmyrs VVO har här endast avskjutningsdata för tre säsonger. Älgobs och övriga indikatorer saknar verifierade data i försöken.";return;}
  const data=selectedData(),spec=modes[mode];drawChart(byId("algChart"),data,spec.series);
  byId("algLegend").innerHTML=spec.series.map(s=>'<span><i class="swatch" style="background:'+s.color+'"></i>'+s.label+'</span>').join("");
  byId("algDescription").textContent=spec.description;
  setTable(data);
- byId("algNote").textContent=area==="grasmyr"?"Historisk Gräsmyrs VVO-serie (portal-ID 718148). Endast de tre redovisade jaktåren har verifierad avskjutning här.":"Hörneåns ÄSO (portal-ID 724577). Områdets registrerade areal ändras mellan vissa rapportår; tolka jämförelser över tid tillsammans med gränshistoriken.";
+ byId("algNote").textContent=mode==="harvest"?"2009/2010–2012/2013 är summor av sex historiska VVO: Gräsmyr, Mullsjö, Tallbergsliden, Hummelholm, Hörnsjö och Torrböle. Från 2013/2014 visas Hörneåns ÄSO:s rapporterade serie. Areal och geografisk täckning är inte verifierat konstanta.":"Älgobs och medelålder har verifierade värden från 2013/2014 i underlaget. Äldre indikatorvärden saknas och ska inte tolkas som noll.";
 }
 document.querySelectorAll("[data-mode]").forEach(btn=>btn.addEventListener("click",()=>{
  mode=btn.dataset.mode;document.querySelectorAll("[data-mode]").forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));renderElk();
 }));
-byId("areaSelect").addEventListener("change",renderElk);
 drawChart(byId("deerChart"),[],[{key:"total",label:"Totalt fällda",color:"#244c3d"}]);
 byId("deerMetric").addEventListener("change",()=>{byId("deerStatus").textContent="Inga verifierade kronhjortsvärden har laddats in. Vald indikator: "+byId("deerMetric").selectedOptions[0].text+". Ingen linje betyder okänd rapportering, inte noll avskjutning.";});
 byId("deerPeriod").addEventListener("change",()=>{byId("deerStatus").textContent="Kronhjortsdata saknas ännu för det valda intervallet; lägg endast in verifierade årsrapporter från Hörneåns KSO.";});
