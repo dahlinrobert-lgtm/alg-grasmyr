@@ -68,5 +68,12 @@ def main():
     print(f"target rows extracted: {len(output)}")
     print(f"seasons with target rows: {', '.join(seasons)}")
     print(f"outputs: {OUT}")
+    # Emit a compact, inspectable sample for the 2005/2006 season into the workflow log.
+    for row in output:
+        if row["season"] == "2005/2006":
+            print("SAMPLE_2005_2006 " + row["registration"] + " " + row["boundary_mode"] + " " + row["raw_cells_json"])
+    for row in schema:
+        if row["season"] == "2005/2006" and row["row_number"] <= 3:
+            print("SCHEMA_2005_2006 " + row["boundary_mode"] + " row=" + str(row["row_number"]) + " " + row["cells_json"])
 if __name__ == "__main__":
     main()
