@@ -1,0 +1,25 @@
+metric,value,unit,interpretation
+source_file,_ags_shape__20261018112335.zip,filename,User-supplied geometry archive
+area_name,Hörneåns älgskötselområde,text,Feature attribute
+area_id,24-01-02-342-Ä,text,Feature attribute
+decision_date,2023-12-05,date,Feature attribute
+decision_area,37134,ha,Source attribute bslarea_ha; retain as reported value
+computed_planar_area,37987.068947,ha,Area calculated from geometry coordinates in EPSG:3006
+computed_minus_decision_area,853.068947,ha,Computed geometry area minus source decision area
+geometry_type,MultiPolygon,text,Source geometry type
+component_count,8,count,Number of polygon components
+validity,false,boolean,Original geometry fails validity test
+validity_reason,Ring Self-intersection [729802.259 7069521.38],text,Shapely validity diagnostic in EPSG:3006 coordinates
+component_1_area,33789.46,ha,Approximate component area
+component_2_area,3341.00,ha,Approximate component area
+component_3_area,600.16,ha,Approximate component area
+component_4_area,247.50,ha,Approximate component area
+component_5_area,6.46,ha,Approximate component area
+component_6_area,1.23,ha,Approximate component area
+component_7_area,0.96,ha,Approximate component area
+component_8_area,0.30,ha,Approximate component area
+bbox_min_easting,709643.740,m,Bounding box in EPSG:3006
+bbox_min_northing,7060831.902,m,Bounding box in EPSG:3006
+bbox_max_easting,735843.879,m,Bounding box in EPSG:3006
+bbox_max_northing,7089861.446,m,Bounding box in EPSG:3006
+recommended_use,spatial_reference_with_caveat,text,Use a repaired working copy for overlays; preserve original and do not substitute calculated area for decision area
