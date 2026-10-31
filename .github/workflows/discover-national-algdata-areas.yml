@@ -1,0 +1,43 @@
+name: Discover national Älgdata area catalogue
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Refresh the public selector catalogue weekly; daily statistics collection
+    # will consume this verified catalogue in a separate workflow.
+    - cron: "20 4 * * 1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: national-algdata-area-catalogue
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Playwright and Chromium
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Discover counties, management areas and hunting areas
+        run: python scripts/discover_national_areas.py
+      - name: Commit dated national catalogue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/national_area_catalog/
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh national Älgdata area catalogue"
+            git push
+          else
+            echo "National area catalogue unchanged."
+          fi
