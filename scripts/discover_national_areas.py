@@ -81,7 +81,7 @@ async def main():
                                                  "from_year":starts[0]["label"],"to_year":ends[-1]["label"],"area_count":len(areas)})
                                 for area in areas:
                                     label = area["label"]
-                                    match = re.match(r"^\\s*([^\\s]+)\\s*[-–]\\s*(.*?)\\s*$", label)
+                                    match = re.match(r"^\s*([^\s]+)\s*[-–]\s*(.*?)\s*$", label)
                                     rows.append({
                                         "county":county["label"], "county_portal_value":county["value"],
                                         "afo_name":afo["label"], "afo_portal_value":afo["value"],
@@ -106,7 +106,7 @@ async def main():
               "report_id":args.report_id,"area_observations":len(rows),"unique_portal_area_ids":len({r["area_portal_id"] for r in rows}),
               "counties_seen":len(counties),"county_afo_coverage":coverage,"errors":errors,
               "interpretation":"Selector catalogue only. IDs and labels are observations, not verified stable geographic identities; current/historical modes and year coverage must be retained."}
-    (args.out/"national_area_catalog.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+    (args.out/"national_area_catalog.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"csv":str(csv_path),"area_observations":len(rows),"unique_portal_area_ids":report["unique_portal_area_ids"],
                       "counties":len(counties),"afo_combinations":len(coverage),"errors":len(errors)},ensure_ascii=False,indent=2))
     if not rows: raise SystemExit("No area options discovered")
