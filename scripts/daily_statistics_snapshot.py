@@ -13,7 +13,6 @@ import argparse
 import csv
 import hashlib
 import json
-import re
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -96,8 +95,10 @@ def main() -> int:
             raise RuntimeError("Downloader completed without both report metadata and CSV data")
         report = json.loads(reports[0].read_text(encoding="utf-8"))
         source_csv = csv_files[0]
-        if report.get("errors"):
-            raise RuntimeError("Älgdata report contains errors: " + "; ".join(report["errors"]))
+        warnings = [message for message in report.get("errors", []) if message.startswith("Requested end year ")]
+        fatal_errors = [message for message in report.get("errors", []) if message not in warnings]
+        if fatal_errors:
+            raise RuntimeError("Älgdata report contains errors: " + "; ".join(fatal_errors))
         if not report.get("data_csv_rows"):
             raise RuntimeError("Älgdata report returned no data rows")
         raw_bytes = source_csv.read_bytes()
@@ -125,6 +126,7 @@ def main() -> int:
         "requested_season_range": [args.from_year, args.to_year],
         "selected_season_end": report.get("hunting_year_to_selected"),
         "download_report": report,
+        "warnings": warnings,
         "csv_file": dated_csv.name,
         "sha256": digest,
         "season_count": len(current_rows),
