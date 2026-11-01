@@ -1,0 +1,5354 @@
+{
+  "snapshot_date_utc": "2026-11-01",
+  "captured_at_utc": "2026-11-01T13:42:47.523745+00:00",
+  "source": "Länsstyrelsernas Älgdata statistikportal",
+  "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+  "area_key": "hornean",
+  "area_id": "724577",
+  "afo": "Sydöstra älgförvaltningsområdet",
+  "boundary_mode": "current",
+  "report_id": "4",
+  "report_name": "Avskjutning med mål — ÄJO",
+  "requested_season_range": [
+    "2020/2021",
+    "2026/2027"
+  ],
+  "selected_season_end": "2026/2027",
+  "download_report": {
+    "inspected_at_utc": "2026-11-01T13:42:56.374181+00:00",
+    "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+    "county": "Västerbottens län",
+    "afo": "Sydöstra älgförvaltningsområdet",
+    "selected_area": {
+      "area_id": "724577",
+      "display_label": "24-01-02-342-Ä - Hörneåns älgskötselområde"
+    },
+    "report_config": {
+      "ReportCategoryId": 1,
+      "Name": "ÄJO",
+      "ReportType": 0,
+      "Report": 1,
+      "ReportLevel": 3,
+      "SearchTypeChoice": "1",
+      "Id": "4",
+      "County": "1",
+      "TypeCounty": null,
+      "TypeCountyDefault": null,
+      "TypeCountyManagement": null,
+      "TypeCountyManagementDefault": null,
+      "ElkManagement": "1",
+      "HuntingArea": "1",
+      "HuntingYearFrom": "1",
+      "HuntingYearTo": "1",
+      "ExcelReport": false,
+      "AlertInfoBeforeLoad": null,
+      "ShowOnlyYearFromForHistoricalAFO": null,
+      "option_label": "ÄJO"
+    },
+    "hunting_year_from": "2020/2021",
+    "hunting_year_to_requested": "2026/2027",
+    "hunting_year_to_selected": "2026/2027",
+    "boundary_mode": "current",
+    "navigation_error": null,
+    "errors": [],
+    "data_csv": "avskjutning_mal_ajo_724577_2020-2021_2026-2027.csv",
+    "data_csv_rows": 7,
+    "data_csv_size_bytes": 1474,
+    "before_stats": {
+      "title": "Statistik Älgdata",
+      "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+      "visible_text": "Statistik\nVälj...\nNationell\nLän\nÄFO\nÄJO\nGeografiskt - Nationell\nNationell\nLän\nÄFO\nVuxna djur - Nationell\nVuxna djur - Län\nVuxna djur - ÄFO\nVuxna djur - ÄJO\nVuxna djur - Nationell\nVuxna djur - Län\nVuxna djur - ÄFO\nVuxna djur - ÄJO\nNationell\nLän\nÄFO\nNationell\nLän\nÄFO\nÄJO\nNationell\nNationell (per ÄFO)\nLän\nÄFO\nÄJO\nNationell\nLän\nÄFO\nÄJO\nÄBIN Län\nÄBIN Äfo samtliga\nÄBIN Äfo\nFoderprognos Län\nFoderprognos Äfo samtliga\nFoderprognos Äfo\nVald statistiktyp:\nAvskjutning med mål\nÄFO gränser\n Historiska gränser\n Nuvarande gränser\nLän\nVälj...\nBlekinge län\nDalarnas län\nGävleborgs län\nHallands län\nJämtlands län\nJönköpings län\nKalmar län\nKronobergs län\nNorrbottens län\nSkåne län\nStockholms län\nSödermanlands län\nUppsala län\nVärmlands län\nVästerbottens län\nVästernorrlands län\nVästmanlands län\nVästra Götalands län\nÖrebro län\nÖstergötlands län\nÄFO\nVälj...\nNordvästra älgförvaltningsområdet\nMellersta älgförvaltningsområdet\nSydvästra älgförvaltningsområdet\nNordöstra älgförvaltningsområdet\nSydöstra älgförvaltningsområdet\nJaktår - från\n1947/1948\n1961/1962\n1967/1968\n1972/1973\n1981/1982\n1986/1987\n1987/1988\n1988/1989\n1989/1990\n1990/1991\n1991/1992\n1992/1993\n1993/1994\n1994/1995\n1995/1996\n1996/1997\n1997/1998\n1998/1999\n1999/2000\n2000/2001\n2001/2002\n2002/2003\n2003/2004\n2004/2005\n2005/2006\n2006/2007\n2007/2008\n2008/2009\n2009/2010\n2010/2011\n2011/2012\n2012/2013\n2013/2014\n2014/2015\n2015/2016\n2016/2017\n2017/2018\n2018/2019\n2019/2020\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\nJaktår - till\n1947/1948\n1961/1962\n1967/1968\n1972/1973\n1981/1982\n1986/1987\n1987/1988\n1988/1989\n1989/1990\n1990/1991\n1991/1992\n1992/1993\n1993/1994\n1994/1995\n1995/1996\n1996/1997\n1997/1998\n1998/1999\n1999/2000\n2000/2001\n2001/2002\n2002/2003\n2003/2004\n2004/2005\n2005/2006\n2006/2007\n2007/2008\n2008/2009\n2009/2010\n2010/2011\n2011/2012\n2012/2013\n2013/2014\n2014/2015\n2015/2016\n2016/2017\n2017/2018\n2018/2019\n2019/2020\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\nJaktområde\nVälj...\n24-00-99-005-A - Oregistrerad mark\n24-01-01-001-A - BRATTSBACKA VÄSTRA JAKTOMRÅDE\n24-01-01-006-A - BJÄRTENS JAKTLAG\n24-01-01-008-A - LÅNGVATTNET-BJÄRTENS JAKTLAG\n24-01-01-009-A - VÅNGSJÖ JAKTLAG\n24-01-01-041-A - NYGÅRDS JAKTLAG\n24-01-02-007-A - LEDUSJÖ VILTVÅRDSOMRÅDE\n24-01-02-016-A - ORRBÖLE VILTVÅRDSOMRÅDE\n24-01-02-027-A - AVA VILTVÅRDSOMRÅDE\n24-01-02-044-A - BAGGÅRD VILTVÅRDSOMRÅDESFÖRENING\n24-01-02-055-A - ASPEÅ VILTVÅRDSOMRÅDE\n24-01-02-056-A - STAVSJÖHOLMS JAKTLAG\n24-01-02-066-A - BERGSJÖ JAKTKLUBB\n24-01-02-067-A - HALLENS VILTVÅRDSOMRÅDE\n24-01-02-069-A - BRATTSBACKA SÖDRA LICENSOMRÅDE\n24-01-02-071-A - NORDANBÄCK O G:A BRATTSB. JAKTKLUBB\n24-01-02-074-A - ÖRSBÄCKS VILTVÅRDSOMRÅDE\n24-01-02-076-A - RÖNNHOLMS JAKTLAG\n24-01-02-098-A - Höglågdal jaktområde\n24-01-02-102-A - LÖGDEÅ VILTVÅRDSOMRÅDE\n24-01-02-105-A - ÖRESUNDS JAKTLAG\n24-01-02-112-A - Gabrielsbergets jaktområde\n24-01-02-128-A - KOMMUNANSTÄLLDAS JAKTKLUBB\n24-01-02-231-A - STENBERGS VILTVÅRDSOMRÅDE\n24-01-02-290-A - Sunnansjö södra jaktområde\n24-01-02-341-Ä - JÄRNÄSHALVÖNS ÄLGSKÖTSELOMRÅDE\n24-01-02-342-Ä - Hörneåns älgskötselområde\n24-03-01-009-A - Vitvattnet jaktområde\n24-03-01-011-A - VÄSTERNYLIDENS VILTVÅRDSOMRÅDE\n24-03-01-017-A - Bjurholm östra\n24-03-01-020-Ä - Bjurholm östra ÄSO\n24-03-01-030-A - MELLANÅ JAKTLAG\n24-03-01-052-A - BJURVATTNETS VILTVÅRDSOMRÅDE\n24-03-01-080-A - KARLSBÄCKS VILTVÅRDSOMRÅDE\n24-03-01-288-Ä - Lögdeälvens älgskötselområde\n24-03-01-289-Ä - Bjurholmsbygdens älgskötselområde\n24-04-01-001-A - Fällvikens jaktlag\n24-04-01-008-A - KVARNLUNDS VILTVÅRDSOMRÅDE\n24-04-01-011-A - Lillsandsjö jaktlag\n24-04-01-016-A - TROLLBERGETS VILTVÅRDSOMRÅDE\n24-04-01-018-A - STRANDÅKERS VILTVÅRDSOMRÅDE\n24-04-01-024-A - SIRAPSBACKENS VILTVÅRDSOMRÅDE\n24-04-01-033-A - ÖVERRÖDÅ VILTVÅRDSOMRÅDE\n24-04-01-034-A - Risliden jaktområde\n24-04-01-039-A - VINDELÅNÄSETS JAKTKLUBB\n24-04-01-082-A - MALTJÄLENS JAKTKLUBB\n24-04-01-083-A - VIDELUNDS VILTVÅRDSOMRÅDE\n24-04-01-098-A - TVÄRÅTRÄSK JAKTLAG\n24-04-01-099-A - ABBORRTJÄRNS VILTVÅRDSOMRÅDE\n24-04-01-111-A - GRANÖ VILTVÅRDSOMRÅDE\n24-04-01-134-A - BERGNÄS VILTVÅRDSOMRÅDE\n24-04-01-138-A - STORSANDSJÖNS JAKTKLUBB\n24-04-01-143-A - HJUKENS JAKTKLUBB\n24-04-01-253-A - Strycksele-Böjern jaktområde\n24-04-01-263-A - Bubergets jaktlag\n24-04-01-282-A - KAMSJÖ VILTVÅRDSOMRÅDE\n24-04-01-341-A - Skivsjöåns jaktlag\n24-04-01-444-A - Yttersjöns jaktklubb\n24-04-01-455-A - Stenträsk-Fällsjöliden jaktområde\n24-04-01-456-A - Stenträsk jaktområde\n24-04-01-500-Ä - Umans älgskötselområde\n24-04-01-504-A - Stöttingbrånet jaktområde\n24-04-01-519-Ä - VINDELNS ÄLGSKÖTSELOMRÅDE\n24-04-01-522-A - Stenträsk östra jaktområde\n24-04-02-006-A - MÅRDSELE VILTVÅRDSOMRÅDE\n24-04-02-009-A - Fäbodarna jaktområde\n24-04-02-029-A - MALTTRÄSK BYALAG\n24-04-02-039-A - ABBORRTRÄSK JAKTKLUBB\n24-04-02-118-A - Krokträsk jaktområde\n24-60-02-036-A - STÄRKESMARK JAKTLAG\n24-60-02-037-A - HÄLLFORS O PENGFORS JAKTLAG\n24-60-02-038-A - HÖGBÄCKS JAKTLAG\n24-60-02-057-A - VINBÄCKS JAKTKLUBB\n24-60-02-086-A - Österselet jaktområde\n24-60-02-093-A - ULRIKSDALS JAKTLAG\n24-60-02-237-A - Sarsjölidens jaktlag\n24-60-02-237-A - Selsberg jaktområde\n24-60-02-239-A - STÄRKESMARKS VÄSTRA JAKTLAG\n24-60-02-325-Ä - Vännäs Norr 92 älgskötselområde\n24-60-02-326-Ä - Vännäs älgskötselområde\n24-80-02-004-A - Holmsunds jaktvårdsförening\n24-80-02-006-A - BRATTBY JAKTKLUBB\n24-80-02-019-A - Anumarks jaktklubb\n24-80-02-023-A - Berttjärn jaktområde\n24-80-02-025-A - HISSJÖ VILTVÅRDSOMRÅDE\n24-80-02-039-A - HÅKMARKS JAKTKLUBB\n24-80-02-075-A - Flurkbränna jaktområde\n24-80-02-154-A - TEGS O ÖHNS VILTVÅRDSOMRÅDE\n24-80-02-159-A - Baggböle jaktområde\n24-80-02-166-Ä - Umeå Västra älgskötselområde\n24-80-02-167-Ä - Umeå Nordvästra älgskötselområde\n24-80-03-015-A - LÅNGBERGETS JAKTKLUBB\n24-80-03-046-A - Granön jaktområde\n24-80-03-116-A - Lillsjöberg jaktområde\n24-80-03-134-A - NORRA STRÖMBÄCK-BRATTÅKERS JAKTKLUBB\n24-80-03-142-A - Tavelsjö licensområde\n24-80-03-143-A - Trätbäckens jakt\n24-80-03-144-Ä - Tavelsjö älgskötselområde\n24-80-04-001-A - Stöcksjö jaktområde\n24-80-04-026-A - RÖBÄCKS JAKTKLUBB\n24-80-04-102-Ä - Umeå Södra älgskötselområde\n24-80-07-056-A - ÅHEDENS JAKTKLUBB\n24-80-07-080-A - NORRMJÖLE VILTVÅRDSOMRÅDESFÖRENING\n24-80-07-087-Ä - HÖRNEFORS ÄLGSKÖTSELOMRÅDE\n24-80-08-002-A - Gamla Bäcknäs jaktområde\n24-80-08-003-A - Bergvalls jaktlag\n24-80-08-005-A - Tväråmark-Åbyns jaktområde\n24-80-08-007-A - GRAVFORS VILTVÅRDSOMRÅDE\n24-80-08-059-A - GRAVÅNS JAKTKLUBB\n24-80-08-077-A - HEMMESMARKS JAKTLAG\n24-80-09-003-A - Ostnäs jaktlag\n24-80-09-004-A - Ytterboda jaktlag\n24-80-09-005-A - Sävar by jaktklubb\n24-80-09-006-A - Täfteå jaktklubb\n24-80-09-010-A - Tålsmarks jaktlag\n24-80-09-011-A - Växtholms jaktlag\n24-80-09-037-A - NYBYNS JAKTLAG\n24-80-09-137-A - Fjäderbäck jaktområde\n24-80-09-137-A - Fjäderbäck-Berttjärn jaktområde\n24-80-09-222-Ä - UMEÅ NORRA ÄLGSKÖTSELOMRÅDE\n24-80-09-225-Ä - Umeå Nordöstra älgskötselområde\n24-80-09-226-Ä - Sävar Nedre älgskötselområde\n24-80-10-002-Ä - HOLMÖNS ÄLGSKÖTSELOMRÅDE\n24-80-10-006-A - KA 5 JAKTVÅRDSKLUBB\nv1.9.0\nStatistik älgdata\nKontakta oss\nÄlgdata\nStatistik för älgdata\n\nHär finns statistik om älgstammen och dess påverkan på skog och trafik. I menyn till vänster väljer du ut den statistik du är intresserad av. Resultatet visas i tabeller och grafer över hela skärmen.\n\nDu kan välja att exportera data för att öppna upp i bl.a. Excel.\n\nNågra tips när du använder sidan:\nDu kan välja att dölja eller visa menyn för att kunna se mer på skärmen. När du för muspekaren över graferna visas mer information. Om du klickar på graferna kan du ändra inställningarna för hur de visas. För att komma tillbaka till förstasidan för statistiken kan du klicka på Länstyrelsens logga längst upp på sidan. Vill du komma tillbaka till www.algdata.se klickar du på länken uppe till höger på sidan.\n\nDu har även möjlighet att skapa bilder, tabeller och grafer. En ny bild, graf eller tabell skapas utifrån den data som finns synlig på skärmen. Uppmärksamma att bara data som är synlig på skärmen tas med när man skapar bilder, inte den data som ligger utanför i rullistorna.\n\nStatistik\n\nÄlgdata syftar till att samla all viktig information om älgstammen och dess påverkan på skog och trafik på en plats på internet.\n\nDet här medför att älgförvaltningsgrupper, enskilda jägare och andra på ett lättare sätt kommer att hitta information, vilket underlättar en kunskapsbaserad och flexibel älgförvaltning.\n\nLänsstyrelsen har samlat in statistik över fällda älgar, slaktvikt, viltolyckor, älgobservationer, biologiskt data m.m. Statistiken hämtar även information från andra system som viltdata.\n\nLän\n\nSverige består av 21 län. Länsstyrelserna samverkar och älgstatistik samlas in från de 20 myndigheter som har älgar inom sitt geografiska område.\n\nPå älgdata kan du se statistik per län och över hela landet. I den nationella statistiken omfattas data från alla län.\n\nÄFO\n\nÄlgförvaltningsområde, benämns ofta som ÄFO. Ett älgförvaltningsområde inrättas av länsstyrelsen och motsvarar i stort sett en egen älgstam. När förvaltningen sker över stora områden kan jakten i större utsträckning planeras strategiskt utifrån bland annat skador på skog och förekomst av trafikolyckor.\n\nFörvaltningen ska vara väl förankrad i lokalsamhället och bygga på kunskap utifrån inventeringar av älg, skador och statistik.\n\nJaktområde\n\nDet finns två sorters jaktområde: älgskötselområde och licensområde.\n\nEtt älgskötselområde är en frivillig sammanslutning av jaktlag och marker som jagar inom ett område. Området ska tåla en avskjutning av minst 10 vuxna älgar per år.\n\nLicensområde kallades tidigare A-, B-, E- områden. Den nya typen av licensområden skall enligt jaktlagstiftningen klara av en avskjutning av minst en årskalv per år. Detta är ett steg i riktning mot att älgjakten och avskjutningen skall vara produktionsbaserad. En produktionsbaserad avskjutning innebär att antalet älgar som skjuts inom ett område skall motsvara det antal som marken klarar av att producera.\n\n\n",
+      "headings": [
+        "Statistik för älgdata",
+        "Statistik",
+        "Län",
+        "ÄFO",
+        "Jaktområde"
+      ],
+      "tables": [
+        {
+          "caption": "",
+          "rows": []
+        }
+      ],
+      "table_count": 1,
+      "form_controls": [
+        {
+          "id": "select-statistics",
+          "label": "rapport",
+          "value": "{\"ReportCategoryId\":1,\"Name\":\"ÄJO\",\"ReportType\":0,\"Report\":1,\"ReportLevel\":3,\"SearchTypeChoice\":\"1\",\"Id\":\"4\",\"County\":\"1\",\"TypeCounty\":null,\"TypeCountyDefault\":null,\"TypeCountyManagement\":null,\"TypeCountyManagementDefault\":null,\"ElkManagement\":\"1\",\"HuntingArea\":\"1\",\"HuntingYearFrom\":\"1\",\"HuntingYearTo\":\"1\",\"ExcelReport\":false,\"AlertInfoBeforeLoad\":null,\"ShowOnlyYearFromForHistoricalAFO\":null}",
+          "selected_text": "ÄJO",
+          "options_count": 39
+        },
+        {
+          "id": "select-county",
+          "label": "menuItemHead",
+          "value": "24",
+          "selected_text": "Västerbottens län",
+          "options_count": 21
+        },
+        {
+          "id": "select-afo",
+          "label": "menuItemHead",
+          "value": "5",
+          "selected_text": "Sydöstra älgförvaltningsområdet",
+          "options_count": 6
+        },
+        {
+          "id": "select-season-from",
+          "label": "menuItemHead",
+          "value": "2020/2021",
+          "selected_text": "2020/2021",
+          "options_count": 46
+        },
+        {
+          "id": "select-season-to",
+          "label": "menuItemHead",
+          "value": "2026/2027",
+          "selected_text": "2026/2027",
+          "options_count": 46
+        },
+        {
+          "id": "select-ajo",
+          "label": "menuItemHead",
+          "value": "724577",
+          "selected_text": "24-01-02-342-Ä - Hörneåns älgskötselområde",
+          "options_count": 125
+        }
+      ],
+      "radios": [
+        {
+          "name": "optTypeAFO",
+          "value": "F",
+          "checked": false,
+          "label": ""
+        },
+        {
+          "name": "optTypeAFO",
+          "value": "G",
+          "checked": true,
+          "label": ""
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "input",
+          "value": "Visa statistik",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Excel",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "SKV",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "SKV",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        }
+      ]
+    },
+    "after_stats": {
+      "title": "Statistik Älgdata",
+      "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+      "visible_text": "Statistik\nVälj...\nNationell\nLän\nÄFO\nÄJO\nGeografiskt - Nationell\nNationell\nLän\nÄFO\nVuxna djur - Nationell\nVuxna djur - Län\nVuxna djur - ÄFO\nVuxna djur - ÄJO\nVuxna djur - Nationell\nVuxna djur - Län\nVuxna djur - ÄFO\nVuxna djur - ÄJO\nNationell\nLän\nÄFO\nNationell\nLän\nÄFO\nÄJO\nNationell\nNationell (per ÄFO)\nLän\nÄFO\nÄJO\nNationell\nLän\nÄFO\nÄJO\nÄBIN Län\nÄBIN Äfo samtliga\nÄBIN Äfo\nFoderprognos Län\nFoderprognos Äfo samtliga\nFoderprognos Äfo\nVald statistiktyp:\nAvskjutning med mål\nÄFO gränser\n Historiska gränser\n Nuvarande gränser\nLän\nVälj...\nBlekinge län\nDalarnas län\nGävleborgs län\nHallands län\nJämtlands län\nJönköpings län\nKalmar län\nKronobergs län\nNorrbottens län\nSkåne län\nStockholms län\nSödermanlands län\nUppsala län\nVärmlands län\nVästerbottens län\nVästernorrlands län\nVästmanlands län\nVästra Götalands län\nÖrebro län\nÖstergötlands län\nÄFO\nVälj...\nNordvästra älgförvaltningsområdet\nMellersta älgförvaltningsområdet\nSydvästra älgförvaltningsområdet\nNordöstra älgförvaltningsområdet\nSydöstra älgförvaltningsområdet\nJaktår - från\n1947/1948\n1961/1962\n1967/1968\n1972/1973\n1981/1982\n1986/1987\n1987/1988\n1988/1989\n1989/1990\n1990/1991\n1991/1992\n1992/1993\n1993/1994\n1994/1995\n1995/1996\n1996/1997\n1997/1998\n1998/1999\n1999/2000\n2000/2001\n2001/2002\n2002/2003\n2003/2004\n2004/2005\n2005/2006\n2006/2007\n2007/2008\n2008/2009\n2009/2010\n2010/2011\n2011/2012\n2012/2013\n2013/2014\n2014/2015\n2015/2016\n2016/2017\n2017/2018\n2018/2019\n2019/2020\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\nJaktår - till\n1947/1948\n1961/1962\n1967/1968\n1972/1973\n1981/1982\n1986/1987\n1987/1988\n1988/1989\n1989/1990\n1990/1991\n1991/1992\n1992/1993\n1993/1994\n1994/1995\n1995/1996\n1996/1997\n1997/1998\n1998/1999\n1999/2000\n2000/2001\n2001/2002\n2002/2003\n2003/2004\n2004/2005\n2005/2006\n2006/2007\n2007/2008\n2008/2009\n2009/2010\n2010/2011\n2011/2012\n2012/2013\n2013/2014\n2014/2015\n2015/2016\n2016/2017\n2017/2018\n2018/2019\n2019/2020\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\nJaktområde\nVälj...\n24-00-99-005-A - Oregistrerad mark\n24-01-01-001-A - BRATTSBACKA VÄSTRA JAKTOMRÅDE\n24-01-01-006-A - BJÄRTENS JAKTLAG\n24-01-01-008-A - LÅNGVATTNET-BJÄRTENS JAKTLAG\n24-01-01-009-A - VÅNGSJÖ JAKTLAG\n24-01-01-041-A - NYGÅRDS JAKTLAG\n24-01-02-007-A - LEDUSJÖ VILTVÅRDSOMRÅDE\n24-01-02-016-A - ORRBÖLE VILTVÅRDSOMRÅDE\n24-01-02-027-A - AVA VILTVÅRDSOMRÅDE\n24-01-02-044-A - BAGGÅRD VILTVÅRDSOMRÅDESFÖRENING\n24-01-02-055-A - ASPEÅ VILTVÅRDSOMRÅDE\n24-01-02-056-A - STAVSJÖHOLMS JAKTLAG\n24-01-02-066-A - BERGSJÖ JAKTKLUBB\n24-01-02-067-A - HALLENS VILTVÅRDSOMRÅDE\n24-01-02-069-A - BRATTSBACKA SÖDRA LICENSOMRÅDE\n24-01-02-071-A - NORDANBÄCK O G:A BRATTSB. JAKTKLUBB\n24-01-02-074-A - ÖRSBÄCKS VILTVÅRDSOMRÅDE\n24-01-02-076-A - RÖNNHOLMS JAKTLAG\n24-01-02-098-A - Höglågdal jaktområde\n24-01-02-102-A - LÖGDEÅ VILTVÅRDSOMRÅDE\n24-01-02-105-A - ÖRESUNDS JAKTLAG\n24-01-02-112-A - Gabrielsbergets jaktområde\n24-01-02-128-A - KOMMUNANSTÄLLDAS JAKTKLUBB\n24-01-02-231-A - STENBERGS VILTVÅRDSOMRÅDE\n24-01-02-290-A - Sunnansjö södra jaktområde\n24-01-02-341-Ä - JÄRNÄSHALVÖNS ÄLGSKÖTSELOMRÅDE\n24-01-02-342-Ä - Hörneåns älgskötselområde\n24-03-01-009-A - Vitvattnet jaktområde\n24-03-01-011-A - VÄSTERNYLIDENS VILTVÅRDSOMRÅDE\n24-03-01-017-A - Bjurholm östra\n24-03-01-020-Ä - Bjurholm östra ÄSO\n24-03-01-030-A - MELLANÅ JAKTLAG\n24-03-01-052-A - BJURVATTNETS VILTVÅRDSOMRÅDE\n24-03-01-080-A - KARLSBÄCKS VILTVÅRDSOMRÅDE\n24-03-01-288-Ä - Lögdeälvens älgskötselområde\n24-03-01-289-Ä - Bjurholmsbygdens älgskötselområde\n24-04-01-001-A - Fällvikens jaktlag\n24-04-01-008-A - KVARNLUNDS VILTVÅRDSOMRÅDE\n24-04-01-011-A - Lillsandsjö jaktlag\n24-04-01-016-A - TROLLBERGETS VILTVÅRDSOMRÅDE\n24-04-01-018-A - STRANDÅKERS VILTVÅRDSOMRÅDE\n24-04-01-024-A - SIRAPSBACKENS VILTVÅRDSOMRÅDE\n24-04-01-033-A - ÖVERRÖDÅ VILTVÅRDSOMRÅDE\n24-04-01-034-A - Risliden jaktområde\n24-04-01-039-A - VINDELÅNÄSETS JAKTKLUBB\n24-04-01-082-A - MALTJÄLENS JAKTKLUBB\n24-04-01-083-A - VIDELUNDS VILTVÅRDSOMRÅDE\n24-04-01-098-A - TVÄRÅTRÄSK JAKTLAG\n24-04-01-099-A - ABBORRTJÄRNS VILTVÅRDSOMRÅDE\n24-04-01-111-A - GRANÖ VILTVÅRDSOMRÅDE\n24-04-01-134-A - BERGNÄS VILTVÅRDSOMRÅDE\n24-04-01-138-A - STORSANDSJÖNS JAKTKLUBB\n24-04-01-143-A - HJUKENS JAKTKLUBB\n24-04-01-253-A - Strycksele-Böjern jaktområde\n24-04-01-263-A - Bubergets jaktlag\n24-04-01-282-A - KAMSJÖ VILTVÅRDSOMRÅDE\n24-04-01-341-A - Skivsjöåns jaktlag\n24-04-01-444-A - Yttersjöns jaktklubb\n24-04-01-455-A - Stenträsk-Fällsjöliden jaktområde\n24-04-01-456-A - Stenträsk jaktområde\n24-04-01-500-Ä - Umans älgskötselområde\n24-04-01-504-A - Stöttingbrånet jaktområde\n24-04-01-519-Ä - VINDELNS ÄLGSKÖTSELOMRÅDE\n24-04-01-522-A - Stenträsk östra jaktområde\n24-04-02-006-A - MÅRDSELE VILTVÅRDSOMRÅDE\n24-04-02-009-A - Fäbodarna jaktområde\n24-04-02-029-A - MALTTRÄSK BYALAG\n24-04-02-039-A - ABBORRTRÄSK JAKTKLUBB\n24-04-02-118-A - Krokträsk jaktområde\n24-60-02-036-A - STÄRKESMARK JAKTLAG\n24-60-02-037-A - HÄLLFORS O PENGFORS JAKTLAG\n24-60-02-038-A - HÖGBÄCKS JAKTLAG\n24-60-02-057-A - VINBÄCKS JAKTKLUBB\n24-60-02-086-A - Österselet jaktområde\n24-60-02-093-A - ULRIKSDALS JAKTLAG\n24-60-02-237-A - Sarsjölidens jaktlag\n24-60-02-237-A - Selsberg jaktområde\n24-60-02-239-A - STÄRKESMARKS VÄSTRA JAKTLAG\n24-60-02-325-Ä - Vännäs Norr 92 älgskötselområde\n24-60-02-326-Ä - Vännäs älgskötselområde\n24-80-02-004-A - Holmsunds jaktvårdsförening\n24-80-02-006-A - BRATTBY JAKTKLUBB\n24-80-02-019-A - Anumarks jaktklubb\n24-80-02-023-A - Berttjärn jaktområde\n24-80-02-025-A - HISSJÖ VILTVÅRDSOMRÅDE\n24-80-02-039-A - HÅKMARKS JAKTKLUBB\n24-80-02-075-A - Flurkbränna jaktområde\n24-80-02-154-A - TEGS O ÖHNS VILTVÅRDSOMRÅDE\n24-80-02-159-A - Baggböle jaktområde\n24-80-02-166-Ä - Umeå Västra älgskötselområde\n24-80-02-167-Ä - Umeå Nordvästra älgskötselområde\n24-80-03-015-A - LÅNGBERGETS JAKTKLUBB\n24-80-03-046-A - Granön jaktområde\n24-80-03-116-A - Lillsjöberg jaktområde\n24-80-03-134-A - NORRA STRÖMBÄCK-BRATTÅKERS JAKTKLUBB\n24-80-03-142-A - Tavelsjö licensområde\n24-80-03-143-A - Trätbäckens jakt\n24-80-03-144-Ä - Tavelsjö älgskötselområde\n24-80-04-001-A - Stöcksjö jaktområde\n24-80-04-026-A - RÖBÄCKS JAKTKLUBB\n24-80-04-102-Ä - Umeå Södra älgskötselområde\n24-80-07-056-A - ÅHEDENS JAKTKLUBB\n24-80-07-080-A - NORRMJÖLE VILTVÅRDSOMRÅDESFÖRENING\n24-80-07-087-Ä - HÖRNEFORS ÄLGSKÖTSELOMRÅDE\n24-80-08-002-A - Gamla Bäcknäs jaktområde\n24-80-08-003-A - Bergvalls jaktlag\n24-80-08-005-A - Tväråmark-Åbyns jaktområde\n24-80-08-007-A - GRAVFORS VILTVÅRDSOMRÅDE\n24-80-08-059-A - GRAVÅNS JAKTKLUBB\n24-80-08-077-A - HEMMESMARKS JAKTLAG\n24-80-09-003-A - Ostnäs jaktlag\n24-80-09-004-A - Ytterboda jaktlag\n24-80-09-005-A - Sävar by jaktklubb\n24-80-09-006-A - Täfteå jaktklubb\n24-80-09-010-A - Tålsmarks jaktlag\n24-80-09-011-A - Växtholms jaktlag\n24-80-09-037-A - NYBYNS JAKTLAG\n24-80-09-137-A - Fjäderbäck jaktområde\n24-80-09-137-A - Fjäderbäck-Berttjärn jaktområde\n24-80-09-222-Ä - UMEÅ NORRA ÄLGSKÖTSELOMRÅDE\n24-80-09-225-Ä - Umeå Nordöstra älgskötselområde\n24-80-09-226-Ä - Sävar Nedre älgskötselområde\n24-80-10-002-Ä - HOLMÖNS ÄLGSKÖTSELOMRÅDE\n24-80-10-006-A - KA 5 JAKTVÅRDSKLUBB\nv1.9.0\nStatistik älgdata\nKontakta oss\nÄlgdata\n Förvaltande län - Län som administrerar älgförvaltningsområden som kan vara indelade oberoende av länsgräns. I kolumnstycket \"Avskjutningsmål ÄJO\" behöver summan av han- och hondjur inte vara samma som antalet vuxna djur då det finns jaktområden som inte har könskvoterad tilldelning.\n\n\nI urvalet ingår ett eller flera jaktår där rapportering fortfarande pågår. För dessa år kan data saknas och statistiken därmed vara inkomplett.\n Kom ihåg inställningar för tabellen.\nVisa 10 rader\nDölj/visa kolumner\nExcel\nSKV\nSpara som bild\nSök:\nRegistreringsnummer\tJaktområdets namn\tSäsong\tRegistrerad areal ha\tFällda älgar\tTjur %\tKalv %\tAvskjutningsmål ÄJO\tNyttjandegrad - ÄJO\nVuxen\tHandjur\tHondjur\tKalv\tHandjur kalv\tHondjur kalv\tTotalt\tVarav otjänliga\tVarav oregistrerad mark\tÄlgar/ 1000 ha\tVuxen\tHandjur\tHondjur\tKalv\tTotalt\tÄlgar/ 1000 ha\tVuxen\tKalv\tTotalt\nRegistreringsnummer\n\t\nJaktområdets namn\n\t\nSäsong\n\t\nRegistrerad areal ha\n\t\nFällda älgar\n\t\nTjur %\n\t\nKalv %\n\t\nAvskjutningsmål ÄJO\n\t\nNyttjandegrad - ÄJO\n\n\nVuxen\n\t\nHandjur\n\t\nHondjur\n\t\nKalv\n\t\nHandjur kalv\n\t\nHondjur kalv\n\t\nTotalt\n\t\nVarav otjänliga\n\t\nVarav oregistrerad mark\n\t\nÄlgar/ 1000 ha\n\t\nVuxen\n\t\nHandjur\n\t\nHondjur\n\t\nKalv\n\t\nTotalt\n\t\nÄlgar/ 1000 ha\n\t\nVuxen\n\t\nKalv\n\t\nTotalt\n\n\nSumma:\n\t\n\t\n\t\n255 232,35 (255 232,35)\n\t\n445 (445)\n\t\n246 (246)\n\t\n199 (199)\n\t\n311 (311)\n\t\n166 (166)\n\t\n145 (145)\n\t\n756 (756)\n\t\n1 (1)\n\t\n0 (0)\n\t\n\t\n55% (55%)\n\t\n41% (41%)\n\t\n511 (511)\n\t\n249 (249)\n\t\n262 (262)\n\t\n459 (459)\n\t\n970 (970)\n\t\n\t\n\t\n\t\n\n24-01-02-342-Ä\tHörneåns älgskötselområde\t2020/2021\t35567,05\t66\t35\t31\t54\t29\t25\t120\t0\t0\t3,4\t53%\t45%\t72\t36\t36\t59\t131\t3,7\t92%\t92%\t92%\n24-01-02-342-Ä\tHörneåns älgskötselområde\t2021/2022\t35567,05\t70\t38\t32\t44\t25\t19\t114\t0\t0\t3,2\t54%\t39%\t70\t35\t35\t58\t128\t3,6\t100%\t76%\t89%\n24-01-02-342-Ä\tHörneåns älgskötselområde\t2022/2023\t35567,05\t69\t38\t31\t49\t21\t28\t118\t1\t0\t3,3\t55%\t42%\t64\t32\t32\t63\t127\t3,6\t108%\t78%\t93%\n24-01-02-342-Ä\tHörneåns älgskötselområde\t2023/2024\t37132,8\t62\t39\t23\t43\t24\t19\t105\t0\t0\t2,8\t63%\t41%\t60\t30\t30\t59\t119\t3,2\t103%\t73%\t88%\n24-01-02-342-Ä\tHörneåns älgskötselområde\t2024/2025\t37132,8\t64\t37\t27\t48\t25\t23\t112\t0\t0\t3\t58%\t43%\t68\t34\t34\t67\t135\t3,6\t94%\t72%\t83%\n24-01-02-342-Ä\tHörneåns älgskötselområde\t2025/2026\t37132,8\t71\t38\t33\t45\t28\t17\t116\t0\t0\t3,1\t54%\t39%\t100\t45\t55\t90\t190\t5,1\t71%\t50%\t61%\n24-01-02-342-Ä\tHörneåns älgskötselområde\t2026/2027\t37132,8\t43\t21\t22\t28\t14\t14\t71\t0\t0\t1,9\t49%\t39%\t77\t37\t40\t63\t140\t3,8\t56%\t44%\t51%\nSumma:\t\t\t255 232,35 (255 232,35)\t445 (445)\t246 (246)\t199 (199)\t311 (311)\t166 (166)\t145 (145)\t756 (756)\t1 (1)\t0 (0)\t\t55% (55%)\t41% (41%)\t511 (511)\t249 (249)\t262 (262)\t459 (459)\t970 (970)\t\t\t\t\nVisar 1 till 7 av totalt 7 rader\nFöregående\n1\nNästa\nTotalt antal fällda älgar - Jaktområde - Nuvarande gränser - 24-01-02-342-Ä - Hörneåns älgskötselområde - 2020/2021 - 2026/2027\nLine chart with 7 data points.\nGenererad av www.algdata.se\nThe chart has 1 X axis displaying Säsong.\nThe chart has 1 Y axis displaying Antal. Data ranges from 71 to 120.\nSäsong\nAntal\nTotalt antal fällda älgar - Jaktområde - Nuvarande gränser - 24-01-02-342-Ä - Hörneåns älgskötselområde - 2020/2021 - 2026/2027\nGenererad av www.algdata.se\n24-01-02-342-Ä\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\n70\n75\n80\n85\n90\n95\n100\n105\n110\n115\n120\nEnd of interactive chart.\n\n\nNyttjandegrad av avskjutningsmål ÄJO - Jaktområde - Nuvarande gränser - 24-01-02-342-Ä - Hörneåns älgskötselområde - 2020/2021 - 2026/2027\nLine chart with 7 data points.\nGenererad av www.algdata.se\nThe chart has 1 X axis displaying Säsong.\nThe chart has 1 Y axis displaying Nyttjandegrad. Data ranges from 51 to 93.\nSäsong\nNyttjandegrad\nNyttjandegrad av avskjutningsmål ÄJO - Jaktområde - Nuvarande gränser - 24-01-02-342-Ä - Hörneåns älgskötselområde - 2020/2021 - 2026/2027\nGenererad av www.algdata.se\n24-01-02-342-Ä\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\n50%\n55%\n60%\n65%\n70%\n75%\n80%\n85%\n90%\n95%\nEnd of interactive chart.\n\n\n\n\n\n\n\n\n\n\n\n",
+      "headings": [
+        "Statistik för älgdata",
+        "Statistik",
+        "Län",
+        "ÄFO",
+        "Jaktområde"
+      ],
+      "tables": [
+        {
+          "caption": "",
+          "rows": [
+            [
+              "Registreringsnummer",
+              "Jaktområdets namn",
+              "Säsong",
+              "Registrerad areal ha",
+              "Fällda älgar",
+              "Tjur %",
+              "Kalv %",
+              "Avskjutningsmål ÄJO",
+              "Nyttjandegrad - ÄJO"
+            ],
+            [
+              "Vuxen",
+              "Handjur",
+              "Hondjur",
+              "Kalv",
+              "Handjur kalv",
+              "Hondjur kalv",
+              "Totalt",
+              "Varav otjänliga",
+              "Varav oregistrerad mark",
+              "Älgar/ 1000 ha",
+              "Vuxen",
+              "Handjur",
+              "Hondjur",
+              "Kalv",
+              "Totalt",
+              "Älgar/ 1000 ha",
+              "Vuxen",
+              "Kalv",
+              "Totalt"
+            ]
+          ]
+        },
+        {
+          "caption": "",
+          "rows": [
+            [
+              "Registreringsnummer",
+              "Jaktområdets namn",
+              "Säsong",
+              "Registrerad areal ha",
+              "Fällda älgar",
+              "Tjur %",
+              "Kalv %",
+              "Avskjutningsmål ÄJO",
+              "Nyttjandegrad - ÄJO"
+            ],
+            [
+              "Vuxen",
+              "Handjur",
+              "Hondjur",
+              "Kalv",
+              "Handjur kalv",
+              "Hondjur kalv",
+              "Totalt",
+              "Varav otjänliga",
+              "Varav oregistrerad mark",
+              "Älgar/ 1000 ha",
+              "Vuxen",
+              "Handjur",
+              "Hondjur",
+              "Kalv",
+              "Totalt",
+              "Älgar/ 1000 ha",
+              "Vuxen",
+              "Kalv",
+              "Totalt"
+            ],
+            [
+              "Summa:",
+              "",
+              "",
+              "255 232,35 (255 232,35)",
+              "445 (445)",
+              "246 (246)",
+              "199 (199)",
+              "311 (311)",
+              "166 (166)",
+              "145 (145)",
+              "756 (756)",
+              "1 (1)",
+              "0 (0)",
+              "",
+              "55% (55%)",
+              "41% (41%)",
+              "511 (511)",
+              "249 (249)",
+              "262 (262)",
+              "459 (459)",
+              "970 (970)",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "24-01-02-342-Ä",
+              "Hörneåns älgskötselområde",
+              "2020/2021",
+              "35567,05",
+              "66",
+              "35",
+              "31",
+              "54",
+              "29",
+              "25",
+              "120",
+              "0",
+              "0",
+              "3,4",
+              "53%",
+              "45%",
+              "72",
+              "36",
+              "36",
+              "59",
+              "131",
+              "3,7",
+              "92%",
+              "92%",
+              "92%"
+            ],
+            [
+              "24-01-02-342-Ä",
+              "Hörneåns älgskötselområde",
+              "2021/2022",
+              "35567,05",
+              "70",
+              "38",
+              "32",
+              "44",
+              "25",
+              "19",
+              "114",
+              "0",
+              "0",
+              "3,2",
+              "54%",
+              "39%",
+              "70",
+              "35",
+              "35",
+              "58",
+              "128",
+              "3,6",
+              "100%",
+              "76%",
+              "89%"
+            ],
+            [
+              "24-01-02-342-Ä",
+              "Hörneåns älgskötselområde",
+              "2022/2023",
+              "35567,05",
+              "69",
+              "38",
+              "31",
+              "49",
+              "21",
+              "28",
+              "118",
+              "1",
+              "0",
+              "3,3",
+              "55%",
+              "42%",
+              "64",
+              "32",
+              "32",
+              "63",
+              "127",
+              "3,6",
+              "108%",
+              "78%",
+              "93%"
+            ],
+            [
+              "24-01-02-342-Ä",
+              "Hörneåns älgskötselområde",
+              "2023/2024",
+              "37132,8",
+              "62",
+              "39",
+              "23",
+              "43",
+              "24",
+              "19",
+              "105",
+              "0",
+              "0",
+              "2,8",
+              "63%",
+              "41%",
+              "60",
+              "30",
+              "30",
+              "59",
+              "119",
+              "3,2",
+              "103%",
+              "73%",
+              "88%"
+            ],
+            [
+              "24-01-02-342-Ä",
+              "Hörneåns älgskötselområde",
+              "2024/2025",
+              "37132,8",
+              "64",
+              "37",
+              "27",
+              "48",
+              "25",
+              "23",
+              "112",
+              "0",
+              "0",
+              "3",
+              "58%",
+              "43%",
+              "68",
+              "34",
+              "34",
+              "67",
+              "135",
+              "3,6",
+              "94%",
+              "72%",
+              "83%"
+            ],
+            [
+              "24-01-02-342-Ä",
+              "Hörneåns älgskötselområde",
+              "2025/2026",
+              "37132,8",
+              "71",
+              "38",
+              "33",
+              "45",
+              "28",
+              "17",
+              "116",
+              "0",
+              "0",
+              "3,1",
+              "54%",
+              "39%",
+              "100",
+              "45",
+              "55",
+              "90",
+              "190",
+              "5,1",
+              "71%",
+              "50%",
+              "61%"
+            ],
+            [
+              "24-01-02-342-Ä",
+              "Hörneåns älgskötselområde",
+              "2026/2027",
+              "37132,8",
+              "43",
+              "21",
+              "22",
+              "28",
+              "14",
+              "14",
+              "71",
+              "0",
+              "0",
+              "1,9",
+              "49%",
+              "39%",
+              "77",
+              "37",
+              "40",
+              "63",
+              "140",
+              "3,8",
+              "56%",
+              "44%",
+              "51%"
+            ]
+          ]
+        },
+        {
+          "caption": "",
+          "rows": [
+            [
+              "Summa:",
+              "",
+              "",
+              "255 232,35 (255 232,35)",
+              "445 (445)",
+              "246 (246)",
+              "199 (199)",
+              "311 (311)",
+              "166 (166)",
+              "145 (145)",
+              "756 (756)",
+              "1 (1)",
+              "0 (0)",
+              "",
+              "55% (55%)",
+              "41% (41%)",
+              "511 (511)",
+              "249 (249)",
+              "262 (262)",
+              "459 (459)",
+              "970 (970)",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      "table_count": 3,
+      "form_controls": [
+        {
+          "id": "select-statistics",
+          "label": "rapport",
+          "value": "{\"ReportCategoryId\":1,\"Name\":\"ÄJO\",\"ReportType\":0,\"Report\":1,\"ReportLevel\":3,\"SearchTypeChoice\":\"1\",\"Id\":\"4\",\"County\":\"1\",\"TypeCounty\":null,\"TypeCountyDefault\":null,\"TypeCountyManagement\":null,\"TypeCountyManagementDefault\":null,\"ElkManagement\":\"1\",\"HuntingArea\":\"1\",\"HuntingYearFrom\":\"1\",\"HuntingYearTo\":\"1\",\"ExcelReport\":false,\"AlertInfoBeforeLoad\":null,\"ShowOnlyYearFromForHistoricalAFO\":null}",
+          "selected_text": "ÄJO",
+          "options_count": 39
+        },
+        {
+          "id": "select-county",
+          "label": "menuItemHead",
+          "value": "24",
+          "selected_text": "Västerbottens län",
+          "options_count": 21
+        },
+        {
+          "id": "select-afo",
+          "label": "menuItemHead",
+          "value": "5",
+          "selected_text": "Sydöstra älgförvaltningsområdet",
+          "options_count": 6
+        },
+        {
+          "id": "select-season-from",
+          "label": "menuItemHead",
+          "value": "2020/2021",
+          "selected_text": "2020/2021",
+          "options_count": 46
+        },
+        {
+          "id": "select-season-to",
+          "label": "menuItemHead",
+          "value": "2026/2027",
+          "selected_text": "2026/2027",
+          "options_count": 46
+        },
+        {
+          "id": "select-ajo",
+          "label": "menuItemHead",
+          "value": "724577",
+          "selected_text": "24-01-02-342-Ä - Hörneåns älgskötselområde",
+          "options_count": 125
+        }
+      ],
+      "radios": [
+        {
+          "name": "optTypeAFO",
+          "value": "F",
+          "checked": false,
+          "label": ""
+        },
+        {
+          "name": "optTypeAFO",
+          "value": "G",
+          "checked": true,
+          "label": ""
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "input",
+          "value": "Visa statistik",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "Visa 10 rader",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "Dölj/visa kolumner",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "Excel",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "SKV",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "Spara som bild",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Excel",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "SKV",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "SKV",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        }
+      ]
+    },
+    "request_metadata": [
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+        "method": "GET",
+        "resource_type": "document"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/dist/app/Home/assets/app.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/dist/app/Home/assets/app.js",
+        "method": "GET",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/modernizr-2.8.3.js",
+        "method": "GET",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/download.js",
+        "method": "GET",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/custom.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/variables.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/Site.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/open-menu.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/medium.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/respond.js",
+        "method": "GET",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/lst_topplogo.gif",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/statistik.png",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/lan.png",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/AFOmap.jpg",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/ajo.png",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAfoInCounty/24?_=1793540570029",
+        "method": "GET",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/elkAnimation.gif",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasonsByLanAndAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasons/?_=1793540570030",
+        "method": "GET",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/LoadData/GetData",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/CLientApp/Src/assets/Images/sort_both.png",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/CLientApp/Src/assets/Images/sort_asc.png",
+        "method": "GET",
+        "resource_type": "image"
+      }
+    ],
+    "response_metadata": [
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "resource_type": "document"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/variables.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/custom.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/open-menu.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/modernizr-2.8.3.js",
+        "status": 200,
+        "content_type": "application/javascript",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/medium.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/Site.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/lst_topplogo.gif",
+        "status": 200,
+        "content_type": "image/gif",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/statistik.png",
+        "status": 200,
+        "content_type": "image/png",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/download.js",
+        "status": 200,
+        "content_type": "application/javascript",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/respond.js",
+        "status": 200,
+        "content_type": "application/javascript",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/dist/app/Home/assets/app.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/lan.png",
+        "status": 200,
+        "content_type": "image/png",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/AFOmap.jpg",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/dist/app/Home/assets/app.js",
+        "status": 200,
+        "content_type": "application/javascript",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/ajo.png",
+        "status": 200,
+        "content_type": "image/png",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAfoInCounty/24?_=1793540570029",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/elkAnimation.gif",
+        "status": 200,
+        "content_type": "image/gif",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasonsByLanAndAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasons/?_=1793540570030",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/LoadData/GetData",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/CLientApp/Src/assets/Images/sort_both.png",
+        "status": 404,
+        "content_type": "text/html",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/CLientApp/Src/assets/Images/sort_asc.png",
+        "status": 404,
+        "content_type": "text/html",
+        "resource_type": "image"
+      }
+    ],
+    "public_json_responses": [
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAfoInCounty/24?_=1793540570029",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AfoId": -1,
+            "CountyNo": null,
+            "Name": "Välj...",
+            "DisplayId": "äfo---001"
+          },
+          {
+            "AfoId": 1,
+            "CountyNo": "24",
+            "Name": "Nordvästra älgförvaltningsområdet",
+            "DisplayId": "äfo-24-001"
+          },
+          {
+            "AfoId": 2,
+            "CountyNo": "24",
+            "Name": "Mellersta älgförvaltningsområdet",
+            "DisplayId": "äfo-24-002"
+          },
+          {
+            "AfoId": 3,
+            "CountyNo": "24",
+            "Name": "Sydvästra älgförvaltningsområdet",
+            "DisplayId": "äfo-24-003"
+          },
+          {
+            "AfoId": 4,
+            "CountyNo": "24",
+            "Name": "Nordöstra älgförvaltningsområdet",
+            "DisplayId": "äfo-24-004"
+          },
+          {
+            "AfoId": 5,
+            "CountyNo": "24",
+            "Name": "Sydöstra älgförvaltningsområdet",
+            "DisplayId": "äfo-24-005"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 718134,
+            "AfoId": 5,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "24-00-99-005-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 718135,
+            "AfoId": 5,
+            "Name": "BRATTSBACKA VÄSTRA JAKTOMRÅDE",
+            "AjoDisplayFullName": "24-01-01-001-A - BRATTSBACKA VÄSTRA JAKTOMRÅDE"
+          },
+          {
+            "AjoId": 718136,
+            "AfoId": 5,
+            "Name": "BJÄRTENS JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-006-A - BJÄRTENS JAKTLAG"
+          },
+          {
+            "AjoId": 718137,
+            "AfoId": 5,
+            "Name": "LÅNGVATTNET-BJÄRTENS JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-008-A - LÅNGVATTNET-BJÄRTENS JAKTLAG"
+          },
+          {
+            "AjoId": 718138,
+            "AfoId": 5,
+            "Name": "VÅNGSJÖ JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-009-A - VÅNGSJÖ JAKTLAG"
+          },
+          {
+            "AjoId": 718142,
+            "AfoId": 5,
+            "Name": "NYGÅRDS JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-041-A - NYGÅRDS JAKTLAG"
+          },
+          {
+            "AjoId": 718144,
+            "AfoId": 5,
+            "Name": "LEDUSJÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-007-A - LEDUSJÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718147,
+            "AfoId": 5,
+            "Name": "ORRBÖLE VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-016-A - ORRBÖLE VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718149,
+            "AfoId": 5,
+            "Name": "AVA VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-027-A - AVA VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718152,
+            "AfoId": 5,
+            "Name": "BAGGÅRD VILTVÅRDSOMRÅDESFÖRENING",
+            "AjoDisplayFullName": "24-01-02-044-A - BAGGÅRD VILTVÅRDSOMRÅDESFÖRENING"
+          },
+          {
+            "AjoId": 718156,
+            "AfoId": 5,
+            "Name": "ASPEÅ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-055-A - ASPEÅ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718157,
+            "AfoId": 5,
+            "Name": "STAVSJÖHOLMS JAKTLAG",
+            "AjoDisplayFullName": "24-01-02-056-A - STAVSJÖHOLMS JAKTLAG"
+          },
+          {
+            "AjoId": 718163,
+            "AfoId": 5,
+            "Name": "BRATTSBACKA SÖDRA LICENSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-069-A - BRATTSBACKA SÖDRA LICENSOMRÅDE"
+          },
+          {
+            "AjoId": 718166,
+            "AfoId": 5,
+            "Name": "ÖRSBÄCKS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-074-A - ÖRSBÄCKS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718169,
+            "AfoId": 5,
+            "Name": "Höglågdal jaktområde",
+            "AjoDisplayFullName": "24-01-02-098-A - Höglågdal jaktområde"
+          },
+          {
+            "AjoId": 718171,
+            "AfoId": 5,
+            "Name": "LÖGDEÅ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-102-A - LÖGDEÅ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718172,
+            "AfoId": 5,
+            "Name": "ÖRESUNDS JAKTLAG",
+            "AjoDisplayFullName": "24-01-02-105-A - ÖRESUNDS JAKTLAG"
+          },
+          {
+            "AjoId": 718175,
+            "AfoId": 5,
+            "Name": "KOMMUNANSTÄLLDAS JAKTKLUBB",
+            "AjoDisplayFullName": "24-01-02-128-A - KOMMUNANSTÄLLDAS JAKTKLUBB"
+          },
+          {
+            "AjoId": 718180,
+            "AfoId": 5,
+            "Name": "STENBERGS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-231-A - STENBERGS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718188,
+            "AfoId": 5,
+            "Name": "JÄRNÄSHALVÖNS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-341-Ä - JÄRNÄSHALVÖNS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 724577,
+            "AfoId": 5,
+            "Name": "Hörneåns älgskötselområde",
+            "AjoDisplayFullName": "24-01-02-342-Ä - Hörneåns älgskötselområde"
+          },
+          {
+            "AjoId": 772700,
+            "AfoId": 5,
+            "Name": "Vitvattnet jaktområde",
+            "AjoDisplayFullName": "24-03-01-009-A - Vitvattnet jaktområde"
+          },
+          {
+            "AjoId": 718196,
+            "AfoId": 5,
+            "Name": "VÄSTERNYLIDENS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-03-01-011-A - VÄSTERNYLIDENS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 772887,
+            "AfoId": 5,
+            "Name": "Bjurholm östra ÄSO",
+            "AjoDisplayFullName": "24-03-01-020-Ä - Bjurholm östra ÄSO"
+          },
+          {
+            "AjoId": 718206,
+            "AfoId": 5,
+            "Name": "MELLANÅ JAKTLAG",
+            "AjoDisplayFullName": "24-03-01-030-A - MELLANÅ JAKTLAG"
+          },
+          {
+            "AjoId": 718216,
+            "AfoId": 5,
+            "Name": "BJURVATTNETS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-03-01-052-A - BJURVATTNETS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722668,
+            "AfoId": 5,
+            "Name": "KARLSBÄCKS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-03-01-080-A - KARLSBÄCKS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 724612,
+            "AfoId": 5,
+            "Name": "Lögdeälvens älgskötselområde",
+            "AjoDisplayFullName": "24-03-01-288-Ä - Lögdeälvens älgskötselområde"
+          },
+          {
+            "AjoId": 724613,
+            "AfoId": 5,
+            "Name": "Bjurholmsbygdens älgskötselområde",
+            "AjoDisplayFullName": "24-03-01-289-Ä - Bjurholmsbygdens älgskötselområde"
+          },
+          {
+            "AjoId": 772400,
+            "AfoId": 5,
+            "Name": "Fällvikens jaktlag",
+            "AjoDisplayFullName": "24-04-01-001-A - Fällvikens jaktlag"
+          },
+          {
+            "AjoId": 722678,
+            "AfoId": 5,
+            "Name": "KVARNLUNDS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-008-A - KVARNLUNDS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 772655,
+            "AfoId": 5,
+            "Name": "Lillsandsjö jaktlag",
+            "AjoDisplayFullName": "24-04-01-011-A - Lillsandsjö jaktlag"
+          },
+          {
+            "AjoId": 722680,
+            "AfoId": 5,
+            "Name": "TROLLBERGETS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-016-A - TROLLBERGETS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722681,
+            "AfoId": 5,
+            "Name": "STRANDÅKERS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-018-A - STRANDÅKERS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722683,
+            "AfoId": 5,
+            "Name": "SIRAPSBACKENS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-024-A - SIRAPSBACKENS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722684,
+            "AfoId": 5,
+            "Name": "ÖVERRÖDÅ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-033-A - ÖVERRÖDÅ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722685,
+            "AfoId": 5,
+            "Name": "Risliden jaktområde",
+            "AjoDisplayFullName": "24-04-01-034-A - Risliden jaktområde"
+          },
+          {
+            "AjoId": 722688,
+            "AfoId": 5,
+            "Name": "VINDELÅNÄSETS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-039-A - VINDELÅNÄSETS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722691,
+            "AfoId": 5,
+            "Name": "MALTJÄLENS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-082-A - MALTJÄLENS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722692,
+            "AfoId": 5,
+            "Name": "VIDELUNDS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-083-A - VIDELUNDS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722694,
+            "AfoId": 5,
+            "Name": "TVÄRÅTRÄSK JAKTLAG",
+            "AjoDisplayFullName": "24-04-01-098-A - TVÄRÅTRÄSK JAKTLAG"
+          },
+          {
+            "AjoId": 722695,
+            "AfoId": 5,
+            "Name": "ABBORRTJÄRNS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-099-A - ABBORRTJÄRNS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722698,
+            "AfoId": 5,
+            "Name": "GRANÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-111-A - GRANÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722703,
+            "AfoId": 5,
+            "Name": "BERGNÄS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-134-A - BERGNÄS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722706,
+            "AfoId": 5,
+            "Name": "HJUKENS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-143-A - HJUKENS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722716,
+            "AfoId": 5,
+            "Name": "Strycksele-Böjern jaktområde",
+            "AjoDisplayFullName": "24-04-01-253-A - Strycksele-Böjern jaktområde"
+          },
+          {
+            "AjoId": 722717,
+            "AfoId": 5,
+            "Name": "Bubergets jaktlag",
+            "AjoDisplayFullName": "24-04-01-263-A - Bubergets jaktlag"
+          },
+          {
+            "AjoId": 722720,
+            "AfoId": 5,
+            "Name": "Skivsjöåns jaktlag",
+            "AjoDisplayFullName": "24-04-01-341-A - Skivsjöåns jaktlag"
+          },
+          {
+            "AjoId": 722724,
+            "AfoId": 5,
+            "Name": "Yttersjöns jaktklubb",
+            "AjoDisplayFullName": "24-04-01-444-A - Yttersjöns jaktklubb"
+          },
+          {
+            "AjoId": 722725,
+            "AfoId": 5,
+            "Name": "Stenträsk-Fällsjöliden jaktområde",
+            "AjoDisplayFullName": "24-04-01-455-A - Stenträsk-Fällsjöliden jaktområde"
+          },
+          {
+            "AjoId": 722726,
+            "AfoId": 5,
+            "Name": "Stenträsk jaktområde",
+            "AjoDisplayFullName": "24-04-01-456-A - Stenträsk jaktområde"
+          },
+          {
+            "AjoId": 724614,
+            "AfoId": 5,
+            "Name": "Umans älgskötselområde",
+            "AjoDisplayFullName": "24-04-01-500-Ä - Umans älgskötselområde"
+          },
+          {
+            "AjoId": 724578,
+            "AfoId": 5,
+            "Name": "Stöttingbrånet jaktområde",
+            "AjoDisplayFullName": "24-04-01-504-A - Stöttingbrånet jaktområde"
+          },
+          {
+            "AjoId": 722736,
+            "AfoId": 5,
+            "Name": "VINDELNS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-519-Ä - VINDELNS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 722734,
+            "AfoId": 5,
+            "Name": "Stenträsk östra jaktområde",
+            "AjoDisplayFullName": "24-04-01-522-A - Stenträsk östra jaktområde"
+          },
+          {
+            "AjoId": 722737,
+            "AfoId": 5,
+            "Name": "MÅRDSELE VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-02-006-A - MÅRDSELE VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722739,
+            "AfoId": 5,
+            "Name": "Fäbodarna jaktområde",
+            "AjoDisplayFullName": "24-04-02-009-A - Fäbodarna jaktområde"
+          },
+          {
+            "AjoId": 722740,
+            "AfoId": 5,
+            "Name": "MALTTRÄSK BYALAG",
+            "AjoDisplayFullName": "24-04-02-029-A - MALTTRÄSK BYALAG"
+          },
+          {
+            "AjoId": 722743,
+            "AfoId": 5,
+            "Name": "Krokträsk jaktområde",
+            "AjoDisplayFullName": "24-04-02-118-A - Krokträsk jaktområde"
+          },
+          {
+            "AjoId": 718349,
+            "AfoId": 5,
+            "Name": "HÄLLFORS O PENGFORS JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-037-A - HÄLLFORS O PENGFORS JAKTLAG"
+          },
+          {
+            "AjoId": 718350,
+            "AfoId": 5,
+            "Name": "HÖGBÄCKS JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-038-A - HÖGBÄCKS JAKTLAG"
+          },
+          {
+            "AjoId": 719047,
+            "AfoId": 5,
+            "Name": "VINBÄCKS JAKTKLUBB",
+            "AjoDisplayFullName": "24-60-02-057-A - VINBÄCKS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719055,
+            "AfoId": 5,
+            "Name": "Österselet jaktområde",
+            "AjoDisplayFullName": "24-60-02-086-A - Österselet jaktområde"
+          },
+          {
+            "AjoId": 719056,
+            "AfoId": 5,
+            "Name": "ULRIKSDALS JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-093-A - ULRIKSDALS JAKTLAG"
+          },
+          {
+            "AjoId": 719061,
+            "AfoId": 5,
+            "Name": "Sarsjölidens jaktlag",
+            "AjoDisplayFullName": "24-60-02-237-A - Sarsjölidens jaktlag"
+          },
+          {
+            "AjoId": 719062,
+            "AfoId": 5,
+            "Name": "STÄRKESMARKS VÄSTRA JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-239-A - STÄRKESMARKS VÄSTRA JAKTLAG"
+          },
+          {
+            "AjoId": 724761,
+            "AfoId": 5,
+            "Name": "Vännäs Norr 92 älgskötselområde",
+            "AjoDisplayFullName": "24-60-02-325-Ä - Vännäs Norr 92 älgskötselområde"
+          },
+          {
+            "AjoId": 724760,
+            "AfoId": 5,
+            "Name": "Vännäs älgskötselområde",
+            "AjoDisplayFullName": "24-60-02-326-Ä - Vännäs älgskötselområde"
+          },
+          {
+            "AjoId": 772212,
+            "AfoId": 5,
+            "Name": "Holmsunds jaktvårdsförening",
+            "AjoDisplayFullName": "24-80-02-004-A - Holmsunds jaktvårdsförening"
+          },
+          {
+            "AjoId": 719541,
+            "AfoId": 5,
+            "Name": "BRATTBY JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-02-006-A - BRATTBY JAKTKLUBB"
+          },
+          {
+            "AjoId": 772656,
+            "AfoId": 5,
+            "Name": "Anumarks jaktklubb",
+            "AjoDisplayFullName": "24-80-02-019-A - Anumarks jaktklubb"
+          },
+          {
+            "AjoId": 719553,
+            "AfoId": 5,
+            "Name": "HISSJÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-80-02-025-A - HISSJÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 719559,
+            "AfoId": 5,
+            "Name": "HÅKMARKS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-02-039-A - HÅKMARKS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719562,
+            "AfoId": 5,
+            "Name": "Flurkbränna jaktområde",
+            "AjoDisplayFullName": "24-80-02-075-A - Flurkbränna jaktområde"
+          },
+          {
+            "AjoId": 719570,
+            "AfoId": 5,
+            "Name": "TEGS O ÖHNS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-80-02-154-A - TEGS O ÖHNS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 719572,
+            "AfoId": 5,
+            "Name": "Baggböle jaktområde",
+            "AjoDisplayFullName": "24-80-02-159-A - Baggböle jaktområde"
+          },
+          {
+            "AjoId": 724618,
+            "AfoId": 5,
+            "Name": "Umeå Västra älgskötselområde",
+            "AjoDisplayFullName": "24-80-02-166-Ä - Umeå Västra älgskötselområde"
+          },
+          {
+            "AjoId": 725901,
+            "AfoId": 5,
+            "Name": "Umeå Nordvästra älgskötselområde",
+            "AjoDisplayFullName": "24-80-02-167-Ä - Umeå Nordvästra älgskötselområde"
+          },
+          {
+            "AjoId": 719575,
+            "AfoId": 5,
+            "Name": "LÅNGBERGETS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-03-015-A - LÅNGBERGETS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719578,
+            "AfoId": 5,
+            "Name": "Granön jaktområde",
+            "AjoDisplayFullName": "24-80-03-046-A - Granön jaktområde"
+          },
+          {
+            "AjoId": 719580,
+            "AfoId": 5,
+            "Name": "Lillsjöberg jaktområde",
+            "AjoDisplayFullName": "24-80-03-116-A - Lillsjöberg jaktområde"
+          },
+          {
+            "AjoId": 719581,
+            "AfoId": 5,
+            "Name": "NORRA STRÖMBÄCK-BRATTÅKERS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-03-134-A - NORRA STRÖMBÄCK-BRATTÅKERS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719582,
+            "AfoId": 5,
+            "Name": "Tavelsjö licensområde",
+            "AjoDisplayFullName": "24-80-03-142-A - Tavelsjö licensområde"
+          },
+          {
+            "AjoId": 724681,
+            "AfoId": 5,
+            "Name": "Trätbäckens jakt",
+            "AjoDisplayFullName": "24-80-03-143-A - Trätbäckens jakt"
+          },
+          {
+            "AjoId": 726019,
+            "AfoId": 5,
+            "Name": "Tavelsjö älgskötselområde",
+            "AjoDisplayFullName": "24-80-03-144-Ä - Tavelsjö älgskötselområde"
+          },
+          {
+            "AjoId": 772099,
+            "AfoId": 5,
+            "Name": "Stöcksjö jaktområde",
+            "AjoDisplayFullName": "24-80-04-001-A - Stöcksjö jaktområde"
+          },
+          {
+            "AjoId": 719594,
+            "AfoId": 5,
+            "Name": "RÖBÄCKS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-04-026-A - RÖBÄCKS JAKTKLUBB"
+          },
+          {
+            "AjoId": 724619,
+            "AfoId": 5,
+            "Name": "Umeå Södra älgskötselområde",
+            "AjoDisplayFullName": "24-80-04-102-Ä - Umeå Södra älgskötselområde"
+          },
+          {
+            "AjoId": 719601,
+            "AfoId": 5,
+            "Name": "ÅHEDENS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-07-056-A - ÅHEDENS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719602,
+            "AfoId": 5,
+            "Name": "NORRMJÖLE VILTVÅRDSOMRÅDESFÖRENING",
+            "AjoDisplayFullName": "24-80-07-080-A - NORRMJÖLE VILTVÅRDSOMRÅDESFÖRENING"
+          },
+          {
+            "AjoId": 719603,
+            "AfoId": 5,
+            "Name": "HÖRNEFORS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-80-07-087-Ä - HÖRNEFORS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 771989,
+            "AfoId": 5,
+            "Name": "Gamla Bäcknäs jaktområde",
+            "AjoDisplayFullName": "24-80-08-002-A - Gamla Bäcknäs jaktområde"
+          },
+          {
+            "AjoId": 772772,
+            "AfoId": 5,
+            "Name": "Bergvalls jaktlag",
+            "AjoDisplayFullName": "24-80-08-003-A - Bergvalls jaktlag"
+          },
+          {
+            "AjoId": 772904,
+            "AfoId": 5,
+            "Name": "Tväråmark-Åbyns jaktområde",
+            "AjoDisplayFullName": "24-80-08-005-A - Tväråmark-Åbyns jaktområde"
+          },
+          {
+            "AjoId": 719606,
+            "AfoId": 5,
+            "Name": "GRAVFORS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-80-08-007-A - GRAVFORS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 719610,
+            "AfoId": 5,
+            "Name": "GRAVÅNS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-08-059-A - GRAVÅNS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719614,
+            "AfoId": 5,
+            "Name": "HEMMESMARKS JAKTLAG",
+            "AjoDisplayFullName": "24-80-08-077-A - HEMMESMARKS JAKTLAG"
+          },
+          {
+            "AjoId": 772654,
+            "AfoId": 5,
+            "Name": "Ytterboda jaktlag",
+            "AjoDisplayFullName": "24-80-09-004-A - Ytterboda jaktlag"
+          },
+          {
+            "AjoId": 772657,
+            "AfoId": 5,
+            "Name": "Sävar by jaktklubb",
+            "AjoDisplayFullName": "24-80-09-005-A - Sävar by jaktklubb"
+          },
+          {
+            "AjoId": 772658,
+            "AfoId": 5,
+            "Name": "Täfteå jaktklubb",
+            "AjoDisplayFullName": "24-80-09-006-A - Täfteå jaktklubb"
+          },
+          {
+            "AjoId": 772819,
+            "AfoId": 5,
+            "Name": "Tålsmarks jaktlag",
+            "AjoDisplayFullName": "24-80-09-010-A - Tålsmarks jaktlag"
+          },
+          {
+            "AjoId": 772946,
+            "AfoId": 5,
+            "Name": "Växtholms jaktlag",
+            "AjoDisplayFullName": "24-80-09-011-A - Växtholms jaktlag"
+          },
+          {
+            "AjoId": 719628,
+            "AfoId": 5,
+            "Name": "NYBYNS JAKTLAG",
+            "AjoDisplayFullName": "24-80-09-037-A - NYBYNS JAKTLAG"
+          },
+          {
+            "AjoId": 719633,
+            "AfoId": 5,
+            "Name": "Fjäderbäck-Berttjärn jaktområde",
+            "AjoDisplayFullName": "24-80-09-137-A - Fjäderbäck-Berttjärn jaktområde"
+          },
+          {
+            "AjoId": 719640,
+            "AfoId": 5,
+            "Name": "UMEÅ NORRA ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-80-09-222-Ä - UMEÅ NORRA ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 719642,
+            "AfoId": 5,
+            "Name": "HOLMÖNS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-80-10-002-Ä - HOLMÖNS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 719641,
+            "AfoId": 5,
+            "Name": "KA 5 JAKTVÅRDSKLUBB",
+            "AjoDisplayFullName": "24-80-10-006-A - KA 5 JAKTVÅRDSKLUBB"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasonsByLanAndAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "Value": "1990/1991",
+            "Title": "1990/1991"
+          },
+          {
+            "Value": "1991/1992",
+            "Title": "1991/1992"
+          },
+          {
+            "Value": "1992/1993",
+            "Title": "1992/1993"
+          },
+          {
+            "Value": "1993/1994",
+            "Title": "1993/1994"
+          },
+          {
+            "Value": "1994/1995",
+            "Title": "1994/1995"
+          },
+          {
+            "Value": "1995/1996",
+            "Title": "1995/1996"
+          },
+          {
+            "Value": "1996/1997",
+            "Title": "1996/1997"
+          },
+          {
+            "Value": "1997/1998",
+            "Title": "1997/1998"
+          },
+          {
+            "Value": "1998/1999",
+            "Title": "1998/1999"
+          },
+          {
+            "Value": "1999/2000",
+            "Title": "1999/2000"
+          },
+          {
+            "Value": "2000/2001",
+            "Title": "2000/2001"
+          },
+          {
+            "Value": "2001/2002",
+            "Title": "2001/2002"
+          },
+          {
+            "Value": "2002/2003",
+            "Title": "2002/2003"
+          },
+          {
+            "Value": "2003/2004",
+            "Title": "2003/2004"
+          },
+          {
+            "Value": "2004/2005",
+            "Title": "2004/2005"
+          },
+          {
+            "Value": "2005/2006",
+            "Title": "2005/2006"
+          },
+          {
+            "Value": "2006/2007",
+            "Title": "2006/2007"
+          },
+          {
+            "Value": "2007/2008",
+            "Title": "2007/2008"
+          },
+          {
+            "Value": "2008/2009",
+            "Title": "2008/2009"
+          },
+          {
+            "Value": "2009/2010",
+            "Title": "2009/2010"
+          },
+          {
+            "Value": "2010/2011",
+            "Title": "2010/2011"
+          },
+          {
+            "Value": "2011/2012",
+            "Title": "2011/2012"
+          },
+          {
+            "Value": "2012/2013",
+            "Title": "2012/2013"
+          },
+          {
+            "Value": "2013/2014",
+            "Title": "2013/2014"
+          },
+          {
+            "Value": "2014/2015",
+            "Title": "2014/2015"
+          },
+          {
+            "Value": "2015/2016",
+            "Title": "2015/2016"
+          },
+          {
+            "Value": "2016/2017",
+            "Title": "2016/2017"
+          },
+          {
+            "Value": "2017/2018",
+            "Title": "2017/2018"
+          },
+          {
+            "Value": "2018/2019",
+            "Title": "2018/2019"
+          },
+          {
+            "Value": "2019/2020",
+            "Title": "2019/2020"
+          },
+          {
+            "Value": "2020/2021",
+            "Title": "2020/2021"
+          },
+          {
+            "Value": "2021/2022",
+            "Title": "2021/2022"
+          },
+          {
+            "Value": "2022/2023",
+            "Title": "2022/2023"
+          },
+          {
+            "Value": "2023/2024",
+            "Title": "2023/2024"
+          },
+          {
+            "Value": "2024/2025",
+            "Title": "2024/2025"
+          },
+          {
+            "Value": "2025/2026",
+            "Title": "2025/2026"
+          },
+          {
+            "Value": "2026/2027",
+            "Title": "2026/2027"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 718134,
+            "AfoId": 5,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "24-00-99-005-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 718135,
+            "AfoId": 5,
+            "Name": "BRATTSBACKA VÄSTRA JAKTOMRÅDE",
+            "AjoDisplayFullName": "24-01-01-001-A - BRATTSBACKA VÄSTRA JAKTOMRÅDE"
+          },
+          {
+            "AjoId": 718136,
+            "AfoId": 5,
+            "Name": "BJÄRTENS JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-006-A - BJÄRTENS JAKTLAG"
+          },
+          {
+            "AjoId": 718137,
+            "AfoId": 5,
+            "Name": "LÅNGVATTNET-BJÄRTENS JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-008-A - LÅNGVATTNET-BJÄRTENS JAKTLAG"
+          },
+          {
+            "AjoId": 718138,
+            "AfoId": 5,
+            "Name": "VÅNGSJÖ JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-009-A - VÅNGSJÖ JAKTLAG"
+          },
+          {
+            "AjoId": 718142,
+            "AfoId": 5,
+            "Name": "NYGÅRDS JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-041-A - NYGÅRDS JAKTLAG"
+          },
+          {
+            "AjoId": 718144,
+            "AfoId": 5,
+            "Name": "LEDUSJÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-007-A - LEDUSJÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718147,
+            "AfoId": 5,
+            "Name": "ORRBÖLE VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-016-A - ORRBÖLE VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718149,
+            "AfoId": 5,
+            "Name": "AVA VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-027-A - AVA VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718152,
+            "AfoId": 5,
+            "Name": "BAGGÅRD VILTVÅRDSOMRÅDESFÖRENING",
+            "AjoDisplayFullName": "24-01-02-044-A - BAGGÅRD VILTVÅRDSOMRÅDESFÖRENING"
+          },
+          {
+            "AjoId": 718156,
+            "AfoId": 5,
+            "Name": "ASPEÅ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-055-A - ASPEÅ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718157,
+            "AfoId": 5,
+            "Name": "STAVSJÖHOLMS JAKTLAG",
+            "AjoDisplayFullName": "24-01-02-056-A - STAVSJÖHOLMS JAKTLAG"
+          },
+          {
+            "AjoId": 718163,
+            "AfoId": 5,
+            "Name": "BRATTSBACKA SÖDRA LICENSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-069-A - BRATTSBACKA SÖDRA LICENSOMRÅDE"
+          },
+          {
+            "AjoId": 718166,
+            "AfoId": 5,
+            "Name": "ÖRSBÄCKS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-074-A - ÖRSBÄCKS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718169,
+            "AfoId": 5,
+            "Name": "Höglågdal jaktområde",
+            "AjoDisplayFullName": "24-01-02-098-A - Höglågdal jaktområde"
+          },
+          {
+            "AjoId": 718171,
+            "AfoId": 5,
+            "Name": "LÖGDEÅ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-102-A - LÖGDEÅ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718172,
+            "AfoId": 5,
+            "Name": "ÖRESUNDS JAKTLAG",
+            "AjoDisplayFullName": "24-01-02-105-A - ÖRESUNDS JAKTLAG"
+          },
+          {
+            "AjoId": 718175,
+            "AfoId": 5,
+            "Name": "KOMMUNANSTÄLLDAS JAKTKLUBB",
+            "AjoDisplayFullName": "24-01-02-128-A - KOMMUNANSTÄLLDAS JAKTKLUBB"
+          },
+          {
+            "AjoId": 718180,
+            "AfoId": 5,
+            "Name": "STENBERGS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-231-A - STENBERGS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718188,
+            "AfoId": 5,
+            "Name": "JÄRNÄSHALVÖNS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-341-Ä - JÄRNÄSHALVÖNS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 724577,
+            "AfoId": 5,
+            "Name": "Hörneåns älgskötselområde",
+            "AjoDisplayFullName": "24-01-02-342-Ä - Hörneåns älgskötselområde"
+          },
+          {
+            "AjoId": 772700,
+            "AfoId": 5,
+            "Name": "Vitvattnet jaktområde",
+            "AjoDisplayFullName": "24-03-01-009-A - Vitvattnet jaktområde"
+          },
+          {
+            "AjoId": 718196,
+            "AfoId": 5,
+            "Name": "VÄSTERNYLIDENS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-03-01-011-A - VÄSTERNYLIDENS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 772887,
+            "AfoId": 5,
+            "Name": "Bjurholm östra ÄSO",
+            "AjoDisplayFullName": "24-03-01-020-Ä - Bjurholm östra ÄSO"
+          },
+          {
+            "AjoId": 718206,
+            "AfoId": 5,
+            "Name": "MELLANÅ JAKTLAG",
+            "AjoDisplayFullName": "24-03-01-030-A - MELLANÅ JAKTLAG"
+          },
+          {
+            "AjoId": 718216,
+            "AfoId": 5,
+            "Name": "BJURVATTNETS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-03-01-052-A - BJURVATTNETS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722668,
+            "AfoId": 5,
+            "Name": "KARLSBÄCKS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-03-01-080-A - KARLSBÄCKS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 724612,
+            "AfoId": 5,
+            "Name": "Lögdeälvens älgskötselområde",
+            "AjoDisplayFullName": "24-03-01-288-Ä - Lögdeälvens älgskötselområde"
+          },
+          {
+            "AjoId": 724613,
+            "AfoId": 5,
+            "Name": "Bjurholmsbygdens älgskötselområde",
+            "AjoDisplayFullName": "24-03-01-289-Ä - Bjurholmsbygdens älgskötselområde"
+          },
+          {
+            "AjoId": 772400,
+            "AfoId": 5,
+            "Name": "Fällvikens jaktlag",
+            "AjoDisplayFullName": "24-04-01-001-A - Fällvikens jaktlag"
+          },
+          {
+            "AjoId": 722678,
+            "AfoId": 5,
+            "Name": "KVARNLUNDS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-008-A - KVARNLUNDS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 772655,
+            "AfoId": 5,
+            "Name": "Lillsandsjö jaktlag",
+            "AjoDisplayFullName": "24-04-01-011-A - Lillsandsjö jaktlag"
+          },
+          {
+            "AjoId": 722680,
+            "AfoId": 5,
+            "Name": "TROLLBERGETS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-016-A - TROLLBERGETS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722681,
+            "AfoId": 5,
+            "Name": "STRANDÅKERS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-018-A - STRANDÅKERS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722683,
+            "AfoId": 5,
+            "Name": "SIRAPSBACKENS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-024-A - SIRAPSBACKENS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722684,
+            "AfoId": 5,
+            "Name": "ÖVERRÖDÅ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-033-A - ÖVERRÖDÅ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722685,
+            "AfoId": 5,
+            "Name": "Risliden jaktområde",
+            "AjoDisplayFullName": "24-04-01-034-A - Risliden jaktområde"
+          },
+          {
+            "AjoId": 722688,
+            "AfoId": 5,
+            "Name": "VINDELÅNÄSETS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-039-A - VINDELÅNÄSETS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722691,
+            "AfoId": 5,
+            "Name": "MALTJÄLENS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-082-A - MALTJÄLENS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722692,
+            "AfoId": 5,
+            "Name": "VIDELUNDS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-083-A - VIDELUNDS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722694,
+            "AfoId": 5,
+            "Name": "TVÄRÅTRÄSK JAKTLAG",
+            "AjoDisplayFullName": "24-04-01-098-A - TVÄRÅTRÄSK JAKTLAG"
+          },
+          {
+            "AjoId": 722695,
+            "AfoId": 5,
+            "Name": "ABBORRTJÄRNS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-099-A - ABBORRTJÄRNS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722698,
+            "AfoId": 5,
+            "Name": "GRANÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-111-A - GRANÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722703,
+            "AfoId": 5,
+            "Name": "BERGNÄS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-134-A - BERGNÄS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722706,
+            "AfoId": 5,
+            "Name": "HJUKENS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-143-A - HJUKENS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722716,
+            "AfoId": 5,
+            "Name": "Strycksele-Böjern jaktområde",
+            "AjoDisplayFullName": "24-04-01-253-A - Strycksele-Böjern jaktområde"
+          },
+          {
+            "AjoId": 722717,
+            "AfoId": 5,
+            "Name": "Bubergets jaktlag",
+            "AjoDisplayFullName": "24-04-01-263-A - Bubergets jaktlag"
+          },
+          {
+            "AjoId": 722720,
+            "AfoId": 5,
+            "Name": "Skivsjöåns jaktlag",
+            "AjoDisplayFullName": "24-04-01-341-A - Skivsjöåns jaktlag"
+          },
+          {
+            "AjoId": 722724,
+            "AfoId": 5,
+            "Name": "Yttersjöns jaktklubb",
+            "AjoDisplayFullName": "24-04-01-444-A - Yttersjöns jaktklubb"
+          },
+          {
+            "AjoId": 722725,
+            "AfoId": 5,
+            "Name": "Stenträsk-Fällsjöliden jaktområde",
+            "AjoDisplayFullName": "24-04-01-455-A - Stenträsk-Fällsjöliden jaktområde"
+          },
+          {
+            "AjoId": 722726,
+            "AfoId": 5,
+            "Name": "Stenträsk jaktområde",
+            "AjoDisplayFullName": "24-04-01-456-A - Stenträsk jaktområde"
+          },
+          {
+            "AjoId": 724614,
+            "AfoId": 5,
+            "Name": "Umans älgskötselområde",
+            "AjoDisplayFullName": "24-04-01-500-Ä - Umans älgskötselområde"
+          },
+          {
+            "AjoId": 724578,
+            "AfoId": 5,
+            "Name": "Stöttingbrånet jaktområde",
+            "AjoDisplayFullName": "24-04-01-504-A - Stöttingbrånet jaktområde"
+          },
+          {
+            "AjoId": 722736,
+            "AfoId": 5,
+            "Name": "VINDELNS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-519-Ä - VINDELNS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 722734,
+            "AfoId": 5,
+            "Name": "Stenträsk östra jaktområde",
+            "AjoDisplayFullName": "24-04-01-522-A - Stenträsk östra jaktområde"
+          },
+          {
+            "AjoId": 722737,
+            "AfoId": 5,
+            "Name": "MÅRDSELE VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-02-006-A - MÅRDSELE VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722739,
+            "AfoId": 5,
+            "Name": "Fäbodarna jaktområde",
+            "AjoDisplayFullName": "24-04-02-009-A - Fäbodarna jaktområde"
+          },
+          {
+            "AjoId": 722740,
+            "AfoId": 5,
+            "Name": "MALTTRÄSK BYALAG",
+            "AjoDisplayFullName": "24-04-02-029-A - MALTTRÄSK BYALAG"
+          },
+          {
+            "AjoId": 722743,
+            "AfoId": 5,
+            "Name": "Krokträsk jaktområde",
+            "AjoDisplayFullName": "24-04-02-118-A - Krokträsk jaktområde"
+          },
+          {
+            "AjoId": 718349,
+            "AfoId": 5,
+            "Name": "HÄLLFORS O PENGFORS JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-037-A - HÄLLFORS O PENGFORS JAKTLAG"
+          },
+          {
+            "AjoId": 718350,
+            "AfoId": 5,
+            "Name": "HÖGBÄCKS JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-038-A - HÖGBÄCKS JAKTLAG"
+          },
+          {
+            "AjoId": 719047,
+            "AfoId": 5,
+            "Name": "VINBÄCKS JAKTKLUBB",
+            "AjoDisplayFullName": "24-60-02-057-A - VINBÄCKS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719055,
+            "AfoId": 5,
+            "Name": "Österselet jaktområde",
+            "AjoDisplayFullName": "24-60-02-086-A - Österselet jaktområde"
+          },
+          {
+            "AjoId": 719056,
+            "AfoId": 5,
+            "Name": "ULRIKSDALS JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-093-A - ULRIKSDALS JAKTLAG"
+          },
+          {
+            "AjoId": 719061,
+            "AfoId": 5,
+            "Name": "Sarsjölidens jaktlag",
+            "AjoDisplayFullName": "24-60-02-237-A - Sarsjölidens jaktlag"
+          },
+          {
+            "AjoId": 719062,
+            "AfoId": 5,
+            "Name": "STÄRKESMARKS VÄSTRA JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-239-A - STÄRKESMARKS VÄSTRA JAKTLAG"
+          },
+          {
+            "AjoId": 724761,
+            "AfoId": 5,
+            "Name": "Vännäs Norr 92 älgskötselområde",
+            "AjoDisplayFullName": "24-60-02-325-Ä - Vännäs Norr 92 älgskötselområde"
+          },
+          {
+            "AjoId": 724760,
+            "AfoId": 5,
+            "Name": "Vännäs älgskötselområde",
+            "AjoDisplayFullName": "24-60-02-326-Ä - Vännäs älgskötselområde"
+          },
+          {
+            "AjoId": 772212,
+            "AfoId": 5,
+            "Name": "Holmsunds jaktvårdsförening",
+            "AjoDisplayFullName": "24-80-02-004-A - Holmsunds jaktvårdsförening"
+          },
+          {
+            "AjoId": 719541,
+            "AfoId": 5,
+            "Name": "BRATTBY JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-02-006-A - BRATTBY JAKTKLUBB"
+          },
+          {
+            "AjoId": 772656,
+            "AfoId": 5,
+            "Name": "Anumarks jaktklubb",
+            "AjoDisplayFullName": "24-80-02-019-A - Anumarks jaktklubb"
+          },
+          {
+            "AjoId": 719553,
+            "AfoId": 5,
+            "Name": "HISSJÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-80-02-025-A - HISSJÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 719559,
+            "AfoId": 5,
+            "Name": "HÅKMARKS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-02-039-A - HÅKMARKS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719562,
+            "AfoId": 5,
+            "Name": "Flurkbränna jaktområde",
+            "AjoDisplayFullName": "24-80-02-075-A - Flurkbränna jaktområde"
+          },
+          {
+            "AjoId": 719570,
+            "AfoId": 5,
+            "Name": "TEGS O ÖHNS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-80-02-154-A - TEGS O ÖHNS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 719572,
+            "AfoId": 5,
+            "Name": "Baggböle jaktområde",
+            "AjoDisplayFullName": "24-80-02-159-A - Baggböle jaktområde"
+          },
+          {
+            "AjoId": 724618,
+            "AfoId": 5,
+            "Name": "Umeå Västra älgskötselområde",
+            "AjoDisplayFullName": "24-80-02-166-Ä - Umeå Västra älgskötselområde"
+          },
+          {
+            "AjoId": 725901,
+            "AfoId": 5,
+            "Name": "Umeå Nordvästra älgskötselområde",
+            "AjoDisplayFullName": "24-80-02-167-Ä - Umeå Nordvästra älgskötselområde"
+          },
+          {
+            "AjoId": 719575,
+            "AfoId": 5,
+            "Name": "LÅNGBERGETS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-03-015-A - LÅNGBERGETS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719578,
+            "AfoId": 5,
+            "Name": "Granön jaktområde",
+            "AjoDisplayFullName": "24-80-03-046-A - Granön jaktområde"
+          },
+          {
+            "AjoId": 719580,
+            "AfoId": 5,
+            "Name": "Lillsjöberg jaktområde",
+            "AjoDisplayFullName": "24-80-03-116-A - Lillsjöberg jaktområde"
+          },
+          {
+            "AjoId": 719581,
+            "AfoId": 5,
+            "Name": "NORRA STRÖMBÄCK-BRATTÅKERS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-03-134-A - NORRA STRÖMBÄCK-BRATTÅKERS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719582,
+            "AfoId": 5,
+            "Name": "Tavelsjö licensområde",
+            "AjoDisplayFullName": "24-80-03-142-A - Tavelsjö licensområde"
+          },
+          {
+            "AjoId": 724681,
+            "AfoId": 5,
+            "Name": "Trätbäckens jakt",
+            "AjoDisplayFullName": "24-80-03-143-A - Trätbäckens jakt"
+          },
+          {
+            "AjoId": 726019,
+            "AfoId": 5,
+            "Name": "Tavelsjö älgskötselområde",
+            "AjoDisplayFullName": "24-80-03-144-Ä - Tavelsjö älgskötselområde"
+          },
+          {
+            "AjoId": 772099,
+            "AfoId": 5,
+            "Name": "Stöcksjö jaktområde",
+            "AjoDisplayFullName": "24-80-04-001-A - Stöcksjö jaktområde"
+          },
+          {
+            "AjoId": 719594,
+            "AfoId": 5,
+            "Name": "RÖBÄCKS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-04-026-A - RÖBÄCKS JAKTKLUBB"
+          },
+          {
+            "AjoId": 724619,
+            "AfoId": 5,
+            "Name": "Umeå Södra älgskötselområde",
+            "AjoDisplayFullName": "24-80-04-102-Ä - Umeå Södra älgskötselområde"
+          },
+          {
+            "AjoId": 719601,
+            "AfoId": 5,
+            "Name": "ÅHEDENS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-07-056-A - ÅHEDENS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719602,
+            "AfoId": 5,
+            "Name": "NORRMJÖLE VILTVÅRDSOMRÅDESFÖRENING",
+            "AjoDisplayFullName": "24-80-07-080-A - NORRMJÖLE VILTVÅRDSOMRÅDESFÖRENING"
+          },
+          {
+            "AjoId": 719603,
+            "AfoId": 5,
+            "Name": "HÖRNEFORS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-80-07-087-Ä - HÖRNEFORS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 771989,
+            "AfoId": 5,
+            "Name": "Gamla Bäcknäs jaktområde",
+            "AjoDisplayFullName": "24-80-08-002-A - Gamla Bäcknäs jaktområde"
+          },
+          {
+            "AjoId": 772772,
+            "AfoId": 5,
+            "Name": "Bergvalls jaktlag",
+            "AjoDisplayFullName": "24-80-08-003-A - Bergvalls jaktlag"
+          },
+          {
+            "AjoId": 772904,
+            "AfoId": 5,
+            "Name": "Tväråmark-Åbyns jaktområde",
+            "AjoDisplayFullName": "24-80-08-005-A - Tväråmark-Åbyns jaktområde"
+          },
+          {
+            "AjoId": 719606,
+            "AfoId": 5,
+            "Name": "GRAVFORS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-80-08-007-A - GRAVFORS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 719610,
+            "AfoId": 5,
+            "Name": "GRAVÅNS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-08-059-A - GRAVÅNS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719614,
+            "AfoId": 5,
+            "Name": "HEMMESMARKS JAKTLAG",
+            "AjoDisplayFullName": "24-80-08-077-A - HEMMESMARKS JAKTLAG"
+          },
+          {
+            "AjoId": 772654,
+            "AfoId": 5,
+            "Name": "Ytterboda jaktlag",
+            "AjoDisplayFullName": "24-80-09-004-A - Ytterboda jaktlag"
+          },
+          {
+            "AjoId": 772657,
+            "AfoId": 5,
+            "Name": "Sävar by jaktklubb",
+            "AjoDisplayFullName": "24-80-09-005-A - Sävar by jaktklubb"
+          },
+          {
+            "AjoId": 772658,
+            "AfoId": 5,
+            "Name": "Täfteå jaktklubb",
+            "AjoDisplayFullName": "24-80-09-006-A - Täfteå jaktklubb"
+          },
+          {
+            "AjoId": 772819,
+            "AfoId": 5,
+            "Name": "Tålsmarks jaktlag",
+            "AjoDisplayFullName": "24-80-09-010-A - Tålsmarks jaktlag"
+          },
+          {
+            "AjoId": 772946,
+            "AfoId": 5,
+            "Name": "Växtholms jaktlag",
+            "AjoDisplayFullName": "24-80-09-011-A - Växtholms jaktlag"
+          },
+          {
+            "AjoId": 719628,
+            "AfoId": 5,
+            "Name": "NYBYNS JAKTLAG",
+            "AjoDisplayFullName": "24-80-09-037-A - NYBYNS JAKTLAG"
+          },
+          {
+            "AjoId": 719633,
+            "AfoId": 5,
+            "Name": "Fjäderbäck-Berttjärn jaktområde",
+            "AjoDisplayFullName": "24-80-09-137-A - Fjäderbäck-Berttjärn jaktområde"
+          },
+          {
+            "AjoId": 719640,
+            "AfoId": 5,
+            "Name": "UMEÅ NORRA ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-80-09-222-Ä - UMEÅ NORRA ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 719642,
+            "AfoId": 5,
+            "Name": "HOLMÖNS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-80-10-002-Ä - HOLMÖNS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 719641,
+            "AfoId": 5,
+            "Name": "KA 5 JAKTVÅRDSKLUBB",
+            "AjoDisplayFullName": "24-80-10-006-A - KA 5 JAKTVÅRDSKLUBB"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasons/?_=1793540570030",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "Value": "1947/1948",
+            "Title": "1947/1948"
+          },
+          {
+            "Value": "1961/1962",
+            "Title": "1961/1962"
+          },
+          {
+            "Value": "1967/1968",
+            "Title": "1967/1968"
+          },
+          {
+            "Value": "1972/1973",
+            "Title": "1972/1973"
+          },
+          {
+            "Value": "1981/1982",
+            "Title": "1981/1982"
+          },
+          {
+            "Value": "1986/1987",
+            "Title": "1986/1987"
+          },
+          {
+            "Value": "1987/1988",
+            "Title": "1987/1988"
+          },
+          {
+            "Value": "1988/1989",
+            "Title": "1988/1989"
+          },
+          {
+            "Value": "1989/1990",
+            "Title": "1989/1990"
+          },
+          {
+            "Value": "1990/1991",
+            "Title": "1990/1991"
+          },
+          {
+            "Value": "1991/1992",
+            "Title": "1991/1992"
+          },
+          {
+            "Value": "1992/1993",
+            "Title": "1992/1993"
+          },
+          {
+            "Value": "1993/1994",
+            "Title": "1993/1994"
+          },
+          {
+            "Value": "1994/1995",
+            "Title": "1994/1995"
+          },
+          {
+            "Value": "1995/1996",
+            "Title": "1995/1996"
+          },
+          {
+            "Value": "1996/1997",
+            "Title": "1996/1997"
+          },
+          {
+            "Value": "1997/1998",
+            "Title": "1997/1998"
+          },
+          {
+            "Value": "1998/1999",
+            "Title": "1998/1999"
+          },
+          {
+            "Value": "1999/2000",
+            "Title": "1999/2000"
+          },
+          {
+            "Value": "2000/2001",
+            "Title": "2000/2001"
+          },
+          {
+            "Value": "2001/2002",
+            "Title": "2001/2002"
+          },
+          {
+            "Value": "2002/2003",
+            "Title": "2002/2003"
+          },
+          {
+            "Value": "2003/2004",
+            "Title": "2003/2004"
+          },
+          {
+            "Value": "2004/2005",
+            "Title": "2004/2005"
+          },
+          {
+            "Value": "2005/2006",
+            "Title": "2005/2006"
+          },
+          {
+            "Value": "2006/2007",
+            "Title": "2006/2007"
+          },
+          {
+            "Value": "2007/2008",
+            "Title": "2007/2008"
+          },
+          {
+            "Value": "2008/2009",
+            "Title": "2008/2009"
+          },
+          {
+            "Value": "2009/2010",
+            "Title": "2009/2010"
+          },
+          {
+            "Value": "2010/2011",
+            "Title": "2010/2011"
+          },
+          {
+            "Value": "2011/2012",
+            "Title": "2011/2012"
+          },
+          {
+            "Value": "2012/2013",
+            "Title": "2012/2013"
+          },
+          {
+            "Value": "2013/2014",
+            "Title": "2013/2014"
+          },
+          {
+            "Value": "2014/2015",
+            "Title": "2014/2015"
+          },
+          {
+            "Value": "2015/2016",
+            "Title": "2015/2016"
+          },
+          {
+            "Value": "2016/2017",
+            "Title": "2016/2017"
+          },
+          {
+            "Value": "2017/2018",
+            "Title": "2017/2018"
+          },
+          {
+            "Value": "2018/2019",
+            "Title": "2018/2019"
+          },
+          {
+            "Value": "2019/2020",
+            "Title": "2019/2020"
+          },
+          {
+            "Value": "2020/2021",
+            "Title": "2020/2021"
+          },
+          {
+            "Value": "2021/2022",
+            "Title": "2021/2022"
+          },
+          {
+            "Value": "2022/2023",
+            "Title": "2022/2023"
+          },
+          {
+            "Value": "2023/2024",
+            "Title": "2023/2024"
+          },
+          {
+            "Value": "2024/2025",
+            "Title": "2024/2025"
+          },
+          {
+            "Value": "2025/2026",
+            "Title": "2025/2026"
+          },
+          {
+            "Value": "2026/2027",
+            "Title": "2026/2027"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 718134,
+            "AfoId": 5,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "24-00-99-005-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 718135,
+            "AfoId": 5,
+            "Name": "BRATTSBACKA VÄSTRA JAKTOMRÅDE",
+            "AjoDisplayFullName": "24-01-01-001-A - BRATTSBACKA VÄSTRA JAKTOMRÅDE"
+          },
+          {
+            "AjoId": 718136,
+            "AfoId": 5,
+            "Name": "BJÄRTENS JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-006-A - BJÄRTENS JAKTLAG"
+          },
+          {
+            "AjoId": 718137,
+            "AfoId": 5,
+            "Name": "LÅNGVATTNET-BJÄRTENS JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-008-A - LÅNGVATTNET-BJÄRTENS JAKTLAG"
+          },
+          {
+            "AjoId": 718138,
+            "AfoId": 5,
+            "Name": "VÅNGSJÖ JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-009-A - VÅNGSJÖ JAKTLAG"
+          },
+          {
+            "AjoId": 718142,
+            "AfoId": 5,
+            "Name": "NYGÅRDS JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-041-A - NYGÅRDS JAKTLAG"
+          },
+          {
+            "AjoId": 718144,
+            "AfoId": 5,
+            "Name": "LEDUSJÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-007-A - LEDUSJÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718147,
+            "AfoId": 5,
+            "Name": "ORRBÖLE VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-016-A - ORRBÖLE VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718149,
+            "AfoId": 5,
+            "Name": "AVA VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-027-A - AVA VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718152,
+            "AfoId": 5,
+            "Name": "BAGGÅRD VILTVÅRDSOMRÅDESFÖRENING",
+            "AjoDisplayFullName": "24-01-02-044-A - BAGGÅRD VILTVÅRDSOMRÅDESFÖRENING"
+          },
+          {
+            "AjoId": 718156,
+            "AfoId": 5,
+            "Name": "ASPEÅ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-055-A - ASPEÅ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718157,
+            "AfoId": 5,
+            "Name": "STAVSJÖHOLMS JAKTLAG",
+            "AjoDisplayFullName": "24-01-02-056-A - STAVSJÖHOLMS JAKTLAG"
+          },
+          {
+            "AjoId": 718163,
+            "AfoId": 5,
+            "Name": "BRATTSBACKA SÖDRA LICENSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-069-A - BRATTSBACKA SÖDRA LICENSOMRÅDE"
+          },
+          {
+            "AjoId": 718166,
+            "AfoId": 5,
+            "Name": "ÖRSBÄCKS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-074-A - ÖRSBÄCKS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718169,
+            "AfoId": 5,
+            "Name": "Höglågdal jaktområde",
+            "AjoDisplayFullName": "24-01-02-098-A - Höglågdal jaktområde"
+          },
+          {
+            "AjoId": 718171,
+            "AfoId": 5,
+            "Name": "LÖGDEÅ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-102-A - LÖGDEÅ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718172,
+            "AfoId": 5,
+            "Name": "ÖRESUNDS JAKTLAG",
+            "AjoDisplayFullName": "24-01-02-105-A - ÖRESUNDS JAKTLAG"
+          },
+          {
+            "AjoId": 718175,
+            "AfoId": 5,
+            "Name": "KOMMUNANSTÄLLDAS JAKTKLUBB",
+            "AjoDisplayFullName": "24-01-02-128-A - KOMMUNANSTÄLLDAS JAKTKLUBB"
+          },
+          {
+            "AjoId": 718180,
+            "AfoId": 5,
+            "Name": "STENBERGS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-231-A - STENBERGS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718188,
+            "AfoId": 5,
+            "Name": "JÄRNÄSHALVÖNS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-341-Ä - JÄRNÄSHALVÖNS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 724577,
+            "AfoId": 5,
+            "Name": "Hörneåns älgskötselområde",
+            "AjoDisplayFullName": "24-01-02-342-Ä - Hörneåns älgskötselområde"
+          },
+          {
+            "AjoId": 772700,
+            "AfoId": 5,
+            "Name": "Vitvattnet jaktområde",
+            "AjoDisplayFullName": "24-03-01-009-A - Vitvattnet jaktområde"
+          },
+          {
+            "AjoId": 718196,
+            "AfoId": 5,
+            "Name": "VÄSTERNYLIDENS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-03-01-011-A - VÄSTERNYLIDENS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 772887,
+            "AfoId": 5,
+            "Name": "Bjurholm östra ÄSO",
+            "AjoDisplayFullName": "24-03-01-020-Ä - Bjurholm östra ÄSO"
+          },
+          {
+            "AjoId": 718206,
+            "AfoId": 5,
+            "Name": "MELLANÅ JAKTLAG",
+            "AjoDisplayFullName": "24-03-01-030-A - MELLANÅ JAKTLAG"
+          },
+          {
+            "AjoId": 718216,
+            "AfoId": 5,
+            "Name": "BJURVATTNETS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-03-01-052-A - BJURVATTNETS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722668,
+            "AfoId": 5,
+            "Name": "KARLSBÄCKS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-03-01-080-A - KARLSBÄCKS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 724612,
+            "AfoId": 5,
+            "Name": "Lögdeälvens älgskötselområde",
+            "AjoDisplayFullName": "24-03-01-288-Ä - Lögdeälvens älgskötselområde"
+          },
+          {
+            "AjoId": 724613,
+            "AfoId": 5,
+            "Name": "Bjurholmsbygdens älgskötselområde",
+            "AjoDisplayFullName": "24-03-01-289-Ä - Bjurholmsbygdens älgskötselområde"
+          },
+          {
+            "AjoId": 772400,
+            "AfoId": 5,
+            "Name": "Fällvikens jaktlag",
+            "AjoDisplayFullName": "24-04-01-001-A - Fällvikens jaktlag"
+          },
+          {
+            "AjoId": 722678,
+            "AfoId": 5,
+            "Name": "KVARNLUNDS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-008-A - KVARNLUNDS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 772655,
+            "AfoId": 5,
+            "Name": "Lillsandsjö jaktlag",
+            "AjoDisplayFullName": "24-04-01-011-A - Lillsandsjö jaktlag"
+          },
+          {
+            "AjoId": 722680,
+            "AfoId": 5,
+            "Name": "TROLLBERGETS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-016-A - TROLLBERGETS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722681,
+            "AfoId": 5,
+            "Name": "STRANDÅKERS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-018-A - STRANDÅKERS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722683,
+            "AfoId": 5,
+            "Name": "SIRAPSBACKENS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-024-A - SIRAPSBACKENS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722684,
+            "AfoId": 5,
+            "Name": "ÖVERRÖDÅ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-033-A - ÖVERRÖDÅ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722685,
+            "AfoId": 5,
+            "Name": "Risliden jaktområde",
+            "AjoDisplayFullName": "24-04-01-034-A - Risliden jaktområde"
+          },
+          {
+            "AjoId": 722688,
+            "AfoId": 5,
+            "Name": "VINDELÅNÄSETS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-039-A - VINDELÅNÄSETS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722691,
+            "AfoId": 5,
+            "Name": "MALTJÄLENS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-082-A - MALTJÄLENS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722692,
+            "AfoId": 5,
+            "Name": "VIDELUNDS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-083-A - VIDELUNDS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722694,
+            "AfoId": 5,
+            "Name": "TVÄRÅTRÄSK JAKTLAG",
+            "AjoDisplayFullName": "24-04-01-098-A - TVÄRÅTRÄSK JAKTLAG"
+          },
+          {
+            "AjoId": 722695,
+            "AfoId": 5,
+            "Name": "ABBORRTJÄRNS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-099-A - ABBORRTJÄRNS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722698,
+            "AfoId": 5,
+            "Name": "GRANÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-111-A - GRANÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722703,
+            "AfoId": 5,
+            "Name": "BERGNÄS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-134-A - BERGNÄS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722706,
+            "AfoId": 5,
+            "Name": "HJUKENS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-143-A - HJUKENS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722716,
+            "AfoId": 5,
+            "Name": "Strycksele-Böjern jaktområde",
+            "AjoDisplayFullName": "24-04-01-253-A - Strycksele-Böjern jaktområde"
+          },
+          {
+            "AjoId": 722717,
+            "AfoId": 5,
+            "Name": "Bubergets jaktlag",
+            "AjoDisplayFullName": "24-04-01-263-A - Bubergets jaktlag"
+          },
+          {
+            "AjoId": 722720,
+            "AfoId": 5,
+            "Name": "Skivsjöåns jaktlag",
+            "AjoDisplayFullName": "24-04-01-341-A - Skivsjöåns jaktlag"
+          },
+          {
+            "AjoId": 722724,
+            "AfoId": 5,
+            "Name": "Yttersjöns jaktklubb",
+            "AjoDisplayFullName": "24-04-01-444-A - Yttersjöns jaktklubb"
+          },
+          {
+            "AjoId": 722725,
+            "AfoId": 5,
+            "Name": "Stenträsk-Fällsjöliden jaktområde",
+            "AjoDisplayFullName": "24-04-01-455-A - Stenträsk-Fällsjöliden jaktområde"
+          },
+          {
+            "AjoId": 722726,
+            "AfoId": 5,
+            "Name": "Stenträsk jaktområde",
+            "AjoDisplayFullName": "24-04-01-456-A - Stenträsk jaktområde"
+          },
+          {
+            "AjoId": 724614,
+            "AfoId": 5,
+            "Name": "Umans älgskötselområde",
+            "AjoDisplayFullName": "24-04-01-500-Ä - Umans älgskötselområde"
+          },
+          {
+            "AjoId": 724578,
+            "AfoId": 5,
+            "Name": "Stöttingbrånet jaktområde",
+            "AjoDisplayFullName": "24-04-01-504-A - Stöttingbrånet jaktområde"
+          },
+          {
+            "AjoId": 722736,
+            "AfoId": 5,
+            "Name": "VINDELNS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-519-Ä - VINDELNS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 722734,
+            "AfoId": 5,
+            "Name": "Stenträsk östra jaktområde",
+            "AjoDisplayFullName": "24-04-01-522-A - Stenträsk östra jaktområde"
+          },
+          {
+            "AjoId": 722737,
+            "AfoId": 5,
+            "Name": "MÅRDSELE VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-02-006-A - MÅRDSELE VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722739,
+            "AfoId": 5,
+            "Name": "Fäbodarna jaktområde",
+            "AjoDisplayFullName": "24-04-02-009-A - Fäbodarna jaktområde"
+          },
+          {
+            "AjoId": 722740,
+            "AfoId": 5,
+            "Name": "MALTTRÄSK BYALAG",
+            "AjoDisplayFullName": "24-04-02-029-A - MALTTRÄSK BYALAG"
+          },
+          {
+            "AjoId": 722743,
+            "AfoId": 5,
+            "Name": "Krokträsk jaktområde",
+            "AjoDisplayFullName": "24-04-02-118-A - Krokträsk jaktområde"
+          },
+          {
+            "AjoId": 718349,
+            "AfoId": 5,
+            "Name": "HÄLLFORS O PENGFORS JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-037-A - HÄLLFORS O PENGFORS JAKTLAG"
+          },
+          {
+            "AjoId": 718350,
+            "AfoId": 5,
+            "Name": "HÖGBÄCKS JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-038-A - HÖGBÄCKS JAKTLAG"
+          },
+          {
+            "AjoId": 719047,
+            "AfoId": 5,
+            "Name": "VINBÄCKS JAKTKLUBB",
+            "AjoDisplayFullName": "24-60-02-057-A - VINBÄCKS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719055,
+            "AfoId": 5,
+            "Name": "Österselet jaktområde",
+            "AjoDisplayFullName": "24-60-02-086-A - Österselet jaktområde"
+          },
+          {
+            "AjoId": 719056,
+            "AfoId": 5,
+            "Name": "ULRIKSDALS JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-093-A - ULRIKSDALS JAKTLAG"
+          },
+          {
+            "AjoId": 719061,
+            "AfoId": 5,
+            "Name": "Sarsjölidens jaktlag",
+            "AjoDisplayFullName": "24-60-02-237-A - Sarsjölidens jaktlag"
+          },
+          {
+            "AjoId": 719062,
+            "AfoId": 5,
+            "Name": "STÄRKESMARKS VÄSTRA JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-239-A - STÄRKESMARKS VÄSTRA JAKTLAG"
+          },
+          {
+            "AjoId": 724761,
+            "AfoId": 5,
+            "Name": "Vännäs Norr 92 älgskötselområde",
+            "AjoDisplayFullName": "24-60-02-325-Ä - Vännäs Norr 92 älgskötselområde"
+          },
+          {
+            "AjoId": 724760,
+            "AfoId": 5,
+            "Name": "Vännäs älgskötselområde",
+            "AjoDisplayFullName": "24-60-02-326-Ä - Vännäs älgskötselområde"
+          },
+          {
+            "AjoId": 772212,
+            "AfoId": 5,
+            "Name": "Holmsunds jaktvårdsförening",
+            "AjoDisplayFullName": "24-80-02-004-A - Holmsunds jaktvårdsförening"
+          },
+          {
+            "AjoId": 719541,
+            "AfoId": 5,
+            "Name": "BRATTBY JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-02-006-A - BRATTBY JAKTKLUBB"
+          },
+          {
+            "AjoId": 772656,
+            "AfoId": 5,
+            "Name": "Anumarks jaktklubb",
+            "AjoDisplayFullName": "24-80-02-019-A - Anumarks jaktklubb"
+          },
+          {
+            "AjoId": 719553,
+            "AfoId": 5,
+            "Name": "HISSJÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-80-02-025-A - HISSJÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 719559,
+            "AfoId": 5,
+            "Name": "HÅKMARKS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-02-039-A - HÅKMARKS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719562,
+            "AfoId": 5,
+            "Name": "Flurkbränna jaktområde",
+            "AjoDisplayFullName": "24-80-02-075-A - Flurkbränna jaktområde"
+          },
+          {
+            "AjoId": 719570,
+            "AfoId": 5,
+            "Name": "TEGS O ÖHNS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-80-02-154-A - TEGS O ÖHNS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 719572,
+            "AfoId": 5,
+            "Name": "Baggböle jaktområde",
+            "AjoDisplayFullName": "24-80-02-159-A - Baggböle jaktområde"
+          },
+          {
+            "AjoId": 724618,
+            "AfoId": 5,
+            "Name": "Umeå Västra älgskötselområde",
+            "AjoDisplayFullName": "24-80-02-166-Ä - Umeå Västra älgskötselområde"
+          },
+          {
+            "AjoId": 725901,
+            "AfoId": 5,
+            "Name": "Umeå Nordvästra älgskötselområde",
+            "AjoDisplayFullName": "24-80-02-167-Ä - Umeå Nordvästra älgskötselområde"
+          },
+          {
+            "AjoId": 719575,
+            "AfoId": 5,
+            "Name": "LÅNGBERGETS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-03-015-A - LÅNGBERGETS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719578,
+            "AfoId": 5,
+            "Name": "Granön jaktområde",
+            "AjoDisplayFullName": "24-80-03-046-A - Granön jaktområde"
+          },
+          {
+            "AjoId": 719580,
+            "AfoId": 5,
+            "Name": "Lillsjöberg jaktområde",
+            "AjoDisplayFullName": "24-80-03-116-A - Lillsjöberg jaktområde"
+          },
+          {
+            "AjoId": 719581,
+            "AfoId": 5,
+            "Name": "NORRA STRÖMBÄCK-BRATTÅKERS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-03-134-A - NORRA STRÖMBÄCK-BRATTÅKERS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719582,
+            "AfoId": 5,
+            "Name": "Tavelsjö licensområde",
+            "AjoDisplayFullName": "24-80-03-142-A - Tavelsjö licensområde"
+          },
+          {
+            "AjoId": 724681,
+            "AfoId": 5,
+            "Name": "Trätbäckens jakt",
+            "AjoDisplayFullName": "24-80-03-143-A - Trätbäckens jakt"
+          },
+          {
+            "AjoId": 726019,
+            "AfoId": 5,
+            "Name": "Tavelsjö älgskötselområde",
+            "AjoDisplayFullName": "24-80-03-144-Ä - Tavelsjö älgskötselområde"
+          },
+          {
+            "AjoId": 772099,
+            "AfoId": 5,
+            "Name": "Stöcksjö jaktområde",
+            "AjoDisplayFullName": "24-80-04-001-A - Stöcksjö jaktområde"
+          },
+          {
+            "AjoId": 719594,
+            "AfoId": 5,
+            "Name": "RÖBÄCKS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-04-026-A - RÖBÄCKS JAKTKLUBB"
+          },
+          {
+            "AjoId": 724619,
+            "AfoId": 5,
+            "Name": "Umeå Södra älgskötselområde",
+            "AjoDisplayFullName": "24-80-04-102-Ä - Umeå Södra älgskötselområde"
+          },
+          {
+            "AjoId": 719601,
+            "AfoId": 5,
+            "Name": "ÅHEDENS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-07-056-A - ÅHEDENS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719602,
+            "AfoId": 5,
+            "Name": "NORRMJÖLE VILTVÅRDSOMRÅDESFÖRENING",
+            "AjoDisplayFullName": "24-80-07-080-A - NORRMJÖLE VILTVÅRDSOMRÅDESFÖRENING"
+          },
+          {
+            "AjoId": 719603,
+            "AfoId": 5,
+            "Name": "HÖRNEFORS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-80-07-087-Ä - HÖRNEFORS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 771989,
+            "AfoId": 5,
+            "Name": "Gamla Bäcknäs jaktområde",
+            "AjoDisplayFullName": "24-80-08-002-A - Gamla Bäcknäs jaktområde"
+          },
+          {
+            "AjoId": 772772,
+            "AfoId": 5,
+            "Name": "Bergvalls jaktlag",
+            "AjoDisplayFullName": "24-80-08-003-A - Bergvalls jaktlag"
+          },
+          {
+            "AjoId": 772904,
+            "AfoId": 5,
+            "Name": "Tväråmark-Åbyns jaktområde",
+            "AjoDisplayFullName": "24-80-08-005-A - Tväråmark-Åbyns jaktområde"
+          },
+          {
+            "AjoId": 719606,
+            "AfoId": 5,
+            "Name": "GRAVFORS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-80-08-007-A - GRAVFORS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 719610,
+            "AfoId": 5,
+            "Name": "GRAVÅNS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-08-059-A - GRAVÅNS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719614,
+            "AfoId": 5,
+            "Name": "HEMMESMARKS JAKTLAG",
+            "AjoDisplayFullName": "24-80-08-077-A - HEMMESMARKS JAKTLAG"
+          },
+          {
+            "AjoId": 772654,
+            "AfoId": 5,
+            "Name": "Ytterboda jaktlag",
+            "AjoDisplayFullName": "24-80-09-004-A - Ytterboda jaktlag"
+          },
+          {
+            "AjoId": 772657,
+            "AfoId": 5,
+            "Name": "Sävar by jaktklubb",
+            "AjoDisplayFullName": "24-80-09-005-A - Sävar by jaktklubb"
+          },
+          {
+            "AjoId": 772658,
+            "AfoId": 5,
+            "Name": "Täfteå jaktklubb",
+            "AjoDisplayFullName": "24-80-09-006-A - Täfteå jaktklubb"
+          },
+          {
+            "AjoId": 772819,
+            "AfoId": 5,
+            "Name": "Tålsmarks jaktlag",
+            "AjoDisplayFullName": "24-80-09-010-A - Tålsmarks jaktlag"
+          },
+          {
+            "AjoId": 772946,
+            "AfoId": 5,
+            "Name": "Växtholms jaktlag",
+            "AjoDisplayFullName": "24-80-09-011-A - Växtholms jaktlag"
+          },
+          {
+            "AjoId": 719628,
+            "AfoId": 5,
+            "Name": "NYBYNS JAKTLAG",
+            "AjoDisplayFullName": "24-80-09-037-A - NYBYNS JAKTLAG"
+          },
+          {
+            "AjoId": 719633,
+            "AfoId": 5,
+            "Name": "Fjäderbäck-Berttjärn jaktområde",
+            "AjoDisplayFullName": "24-80-09-137-A - Fjäderbäck-Berttjärn jaktområde"
+          },
+          {
+            "AjoId": 719640,
+            "AfoId": 5,
+            "Name": "UMEÅ NORRA ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-80-09-222-Ä - UMEÅ NORRA ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 719642,
+            "AfoId": 5,
+            "Name": "HOLMÖNS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-80-10-002-Ä - HOLMÖNS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 719641,
+            "AfoId": 5,
+            "Name": "KA 5 JAKTVÅRDSKLUBB",
+            "AjoDisplayFullName": "24-80-10-006-A - KA 5 JAKTVÅRDSKLUBB"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 718134,
+            "AfoId": 5,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "24-00-99-005-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 718135,
+            "AfoId": 5,
+            "Name": "BRATTSBACKA VÄSTRA JAKTOMRÅDE",
+            "AjoDisplayFullName": "24-01-01-001-A - BRATTSBACKA VÄSTRA JAKTOMRÅDE"
+          },
+          {
+            "AjoId": 718136,
+            "AfoId": 5,
+            "Name": "BJÄRTENS JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-006-A - BJÄRTENS JAKTLAG"
+          },
+          {
+            "AjoId": 718137,
+            "AfoId": 5,
+            "Name": "LÅNGVATTNET-BJÄRTENS JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-008-A - LÅNGVATTNET-BJÄRTENS JAKTLAG"
+          },
+          {
+            "AjoId": 718138,
+            "AfoId": 5,
+            "Name": "VÅNGSJÖ JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-009-A - VÅNGSJÖ JAKTLAG"
+          },
+          {
+            "AjoId": 718142,
+            "AfoId": 5,
+            "Name": "NYGÅRDS JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-041-A - NYGÅRDS JAKTLAG"
+          },
+          {
+            "AjoId": 718144,
+            "AfoId": 5,
+            "Name": "LEDUSJÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-007-A - LEDUSJÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718147,
+            "AfoId": 5,
+            "Name": "ORRBÖLE VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-016-A - ORRBÖLE VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718149,
+            "AfoId": 5,
+            "Name": "AVA VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-027-A - AVA VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718152,
+            "AfoId": 5,
+            "Name": "BAGGÅRD VILTVÅRDSOMRÅDESFÖRENING",
+            "AjoDisplayFullName": "24-01-02-044-A - BAGGÅRD VILTVÅRDSOMRÅDESFÖRENING"
+          },
+          {
+            "AjoId": 718156,
+            "AfoId": 5,
+            "Name": "ASPEÅ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-055-A - ASPEÅ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718157,
+            "AfoId": 5,
+            "Name": "STAVSJÖHOLMS JAKTLAG",
+            "AjoDisplayFullName": "24-01-02-056-A - STAVSJÖHOLMS JAKTLAG"
+          },
+          {
+            "AjoId": 718161,
+            "AfoId": 5,
+            "Name": "BERGSJÖ JAKTKLUBB",
+            "AjoDisplayFullName": "24-01-02-066-A - BERGSJÖ JAKTKLUBB"
+          },
+          {
+            "AjoId": 718162,
+            "AfoId": 5,
+            "Name": "HALLENS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-067-A - HALLENS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718163,
+            "AfoId": 5,
+            "Name": "BRATTSBACKA SÖDRA LICENSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-069-A - BRATTSBACKA SÖDRA LICENSOMRÅDE"
+          },
+          {
+            "AjoId": 718165,
+            "AfoId": 5,
+            "Name": "NORDANBÄCK O G:A BRATTSB. JAKTKLUBB",
+            "AjoDisplayFullName": "24-01-02-071-A - NORDANBÄCK O G:A BRATTSB. JAKTKLUBB"
+          },
+          {
+            "AjoId": 718166,
+            "AfoId": 5,
+            "Name": "ÖRSBÄCKS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-074-A - ÖRSBÄCKS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718167,
+            "AfoId": 5,
+            "Name": "RÖNNHOLMS JAKTLAG",
+            "AjoDisplayFullName": "24-01-02-076-A - RÖNNHOLMS JAKTLAG"
+          },
+          {
+            "AjoId": 718169,
+            "AfoId": 5,
+            "Name": "Höglågdal jaktområde",
+            "AjoDisplayFullName": "24-01-02-098-A - Höglågdal jaktområde"
+          },
+          {
+            "AjoId": 718171,
+            "AfoId": 5,
+            "Name": "LÖGDEÅ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-102-A - LÖGDEÅ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718172,
+            "AfoId": 5,
+            "Name": "ÖRESUNDS JAKTLAG",
+            "AjoDisplayFullName": "24-01-02-105-A - ÖRESUNDS JAKTLAG"
+          },
+          {
+            "AjoId": 718173,
+            "AfoId": 5,
+            "Name": "Gabrielsbergets jaktområde",
+            "AjoDisplayFullName": "24-01-02-112-A - Gabrielsbergets jaktområde"
+          },
+          {
+            "AjoId": 718175,
+            "AfoId": 5,
+            "Name": "KOMMUNANSTÄLLDAS JAKTKLUBB",
+            "AjoDisplayFullName": "24-01-02-128-A - KOMMUNANSTÄLLDAS JAKTKLUBB"
+          },
+          {
+            "AjoId": 718180,
+            "AfoId": 5,
+            "Name": "STENBERGS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-231-A - STENBERGS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718182,
+            "AfoId": 5,
+            "Name": "Sunnansjö södra jaktområde",
+            "AjoDisplayFullName": "24-01-02-290-A - Sunnansjö södra jaktområde"
+          },
+          {
+            "AjoId": 718188,
+            "AfoId": 5,
+            "Name": "JÄRNÄSHALVÖNS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-341-Ä - JÄRNÄSHALVÖNS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 724577,
+            "AfoId": 5,
+            "Name": "Hörneåns älgskötselområde",
+            "AjoDisplayFullName": "24-01-02-342-Ä - Hörneåns älgskötselområde"
+          },
+          {
+            "AjoId": 772700,
+            "AfoId": 5,
+            "Name": "Vitvattnet jaktområde",
+            "AjoDisplayFullName": "24-03-01-009-A - Vitvattnet jaktområde"
+          },
+          {
+            "AjoId": 718196,
+            "AfoId": 5,
+            "Name": "VÄSTERNYLIDENS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-03-01-011-A - VÄSTERNYLIDENS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 772770,
+            "AfoId": 5,
+            "Name": "Bjurholm östra",
+            "AjoDisplayFullName": "24-03-01-017-A - Bjurholm östra"
+          },
+          {
+            "AjoId": 772887,
+            "AfoId": 5,
+            "Name": "Bjurholm östra ÄSO",
+            "AjoDisplayFullName": "24-03-01-020-Ä - Bjurholm östra ÄSO"
+          },
+          {
+            "AjoId": 718206,
+            "AfoId": 5,
+            "Name": "MELLANÅ JAKTLAG",
+            "AjoDisplayFullName": "24-03-01-030-A - MELLANÅ JAKTLAG"
+          },
+          {
+            "AjoId": 718216,
+            "AfoId": 5,
+            "Name": "BJURVATTNETS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-03-01-052-A - BJURVATTNETS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722668,
+            "AfoId": 5,
+            "Name": "KARLSBÄCKS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-03-01-080-A - KARLSBÄCKS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 724612,
+            "AfoId": 5,
+            "Name": "Lögdeälvens älgskötselområde",
+            "AjoDisplayFullName": "24-03-01-288-Ä - Lögdeälvens älgskötselområde"
+          },
+          {
+            "AjoId": 724613,
+            "AfoId": 5,
+            "Name": "Bjurholmsbygdens älgskötselområde",
+            "AjoDisplayFullName": "24-03-01-289-Ä - Bjurholmsbygdens älgskötselområde"
+          },
+          {
+            "AjoId": 772400,
+            "AfoId": 5,
+            "Name": "Fällvikens jaktlag",
+            "AjoDisplayFullName": "24-04-01-001-A - Fällvikens jaktlag"
+          },
+          {
+            "AjoId": 722678,
+            "AfoId": 5,
+            "Name": "KVARNLUNDS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-008-A - KVARNLUNDS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 772655,
+            "AfoId": 5,
+            "Name": "Lillsandsjö jaktlag",
+            "AjoDisplayFullName": "24-04-01-011-A - Lillsandsjö jaktlag"
+          },
+          {
+            "AjoId": 722680,
+            "AfoId": 5,
+            "Name": "TROLLBERGETS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-016-A - TROLLBERGETS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722681,
+            "AfoId": 5,
+            "Name": "STRANDÅKERS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-018-A - STRANDÅKERS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722683,
+            "AfoId": 5,
+            "Name": "SIRAPSBACKENS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-024-A - SIRAPSBACKENS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722684,
+            "AfoId": 5,
+            "Name": "ÖVERRÖDÅ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-033-A - ÖVERRÖDÅ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722685,
+            "AfoId": 5,
+            "Name": "Risliden jaktområde",
+            "AjoDisplayFullName": "24-04-01-034-A - Risliden jaktområde"
+          },
+          {
+            "AjoId": 722688,
+            "AfoId": 5,
+            "Name": "VINDELÅNÄSETS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-039-A - VINDELÅNÄSETS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722691,
+            "AfoId": 5,
+            "Name": "MALTJÄLENS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-082-A - MALTJÄLENS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722692,
+            "AfoId": 5,
+            "Name": "VIDELUNDS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-083-A - VIDELUNDS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722694,
+            "AfoId": 5,
+            "Name": "TVÄRÅTRÄSK JAKTLAG",
+            "AjoDisplayFullName": "24-04-01-098-A - TVÄRÅTRÄSK JAKTLAG"
+          },
+          {
+            "AjoId": 722695,
+            "AfoId": 5,
+            "Name": "ABBORRTJÄRNS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-099-A - ABBORRTJÄRNS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722698,
+            "AfoId": 5,
+            "Name": "GRANÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-111-A - GRANÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722703,
+            "AfoId": 5,
+            "Name": "BERGNÄS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-134-A - BERGNÄS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722704,
+            "AfoId": 5,
+            "Name": "STORSANDSJÖNS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-138-A - STORSANDSJÖNS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722706,
+            "AfoId": 5,
+            "Name": "HJUKENS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-143-A - HJUKENS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722716,
+            "AfoId": 5,
+            "Name": "Strycksele-Böjern jaktområde",
+            "AjoDisplayFullName": "24-04-01-253-A - Strycksele-Böjern jaktområde"
+          },
+          {
+            "AjoId": 722717,
+            "AfoId": 5,
+            "Name": "Bubergets jaktlag",
+            "AjoDisplayFullName": "24-04-01-263-A - Bubergets jaktlag"
+          },
+          {
+            "AjoId": 722718,
+            "AfoId": 5,
+            "Name": "KAMSJÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-282-A - KAMSJÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722720,
+            "AfoId": 5,
+            "Name": "Skivsjöåns jaktlag",
+            "AjoDisplayFullName": "24-04-01-341-A - Skivsjöåns jaktlag"
+          },
+          {
+            "AjoId": 722724,
+            "AfoId": 5,
+            "Name": "Yttersjöns jaktklubb",
+            "AjoDisplayFullName": "24-04-01-444-A - Yttersjöns jaktklubb"
+          },
+          {
+            "AjoId": 722725,
+            "AfoId": 5,
+            "Name": "Stenträsk-Fällsjöliden jaktområde",
+            "AjoDisplayFullName": "24-04-01-455-A - Stenträsk-Fällsjöliden jaktområde"
+          },
+          {
+            "AjoId": 722726,
+            "AfoId": 5,
+            "Name": "Stenträsk jaktområde",
+            "AjoDisplayFullName": "24-04-01-456-A - Stenträsk jaktområde"
+          },
+          {
+            "AjoId": 724614,
+            "AfoId": 5,
+            "Name": "Umans älgskötselområde",
+            "AjoDisplayFullName": "24-04-01-500-Ä - Umans älgskötselområde"
+          },
+          {
+            "AjoId": 724578,
+            "AfoId": 5,
+            "Name": "Stöttingbrånet jaktområde",
+            "AjoDisplayFullName": "24-04-01-504-A - Stöttingbrånet jaktområde"
+          },
+          {
+            "AjoId": 722736,
+            "AfoId": 5,
+            "Name": "VINDELNS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-519-Ä - VINDELNS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 722734,
+            "AfoId": 5,
+            "Name": "Stenträsk östra jaktområde",
+            "AjoDisplayFullName": "24-04-01-522-A - Stenträsk östra jaktområde"
+          },
+          {
+            "AjoId": 722737,
+            "AfoId": 5,
+            "Name": "MÅRDSELE VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-02-006-A - MÅRDSELE VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722739,
+            "AfoId": 5,
+            "Name": "Fäbodarna jaktområde",
+            "AjoDisplayFullName": "24-04-02-009-A - Fäbodarna jaktområde"
+          },
+          {
+            "AjoId": 722740,
+            "AfoId": 5,
+            "Name": "MALTTRÄSK BYALAG",
+            "AjoDisplayFullName": "24-04-02-029-A - MALTTRÄSK BYALAG"
+          },
+          {
+            "AjoId": 722741,
+            "AfoId": 5,
+            "Name": "ABBORRTRÄSK JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-02-039-A - ABBORRTRÄSK JAKTKLUBB"
+          },
+          {
+            "AjoId": 722743,
+            "AfoId": 5,
+            "Name": "Krokträsk jaktområde",
+            "AjoDisplayFullName": "24-04-02-118-A - Krokträsk jaktområde"
+          },
+          {
+            "AjoId": 718348,
+            "AfoId": 5,
+            "Name": "STÄRKESMARK JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-036-A - STÄRKESMARK JAKTLAG"
+          },
+          {
+            "AjoId": 718349,
+            "AfoId": 5,
+            "Name": "HÄLLFORS O PENGFORS JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-037-A - HÄLLFORS O PENGFORS JAKTLAG"
+          },
+          {
+            "AjoId": 718350,
+            "AfoId": 5,
+            "Name": "HÖGBÄCKS JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-038-A - HÖGBÄCKS JAKTLAG"
+          },
+          {
+            "AjoId": 719047,
+            "AfoId": 5,
+            "Name": "VINBÄCKS JAKTKLUBB",
+            "AjoDisplayFullName": "24-60-02-057-A - VINBÄCKS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719055,
+            "AfoId": 5,
+            "Name": "Österselet jaktområde",
+            "AjoDisplayFullName": "24-60-02-086-A - Österselet jaktområde"
+          },
+          {
+            "AjoId": 719056,
+            "AfoId": 5,
+            "Name": "ULRIKSDALS JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-093-A - ULRIKSDALS JAKTLAG"
+          },
+          {
+            "AjoId": 719061,
+            "AfoId": 5,
+            "Name": "Sarsjölidens jaktlag",
+            "AjoDisplayFullName": "24-60-02-237-A - Sarsjölidens jaktlag"
+          },
+          {
+            "AjoId": 719061,
+            "AfoId": 5,
+            "Name": "Selsberg jaktområde",
+            "AjoDisplayFullName": "24-60-02-237-A - Selsberg jaktområde"
+          },
+          {
+            "AjoId": 719062,
+            "AfoId": 5,
+            "Name": "STÄRKESMARKS VÄSTRA JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-239-A - STÄRKESMARKS VÄSTRA JAKTLAG"
+          },
+          {
+            "AjoId": 724761,
+            "AfoId": 5,
+            "Name": "Vännäs Norr 92 älgskötselområde",
+            "AjoDisplayFullName": "24-60-02-325-Ä - Vännäs Norr 92 älgskötselområde"
+          },
+          {
+            "AjoId": 724760,
+            "AfoId": 5,
+            "Name": "Vännäs älgskötselområde",
+            "AjoDisplayFullName": "24-60-02-326-Ä - Vännäs älgskötselområde"
+          },
+          {
+            "AjoId": 772212,
+            "AfoId": 5,
+            "Name": "Holmsunds jaktvårdsförening",
+            "AjoDisplayFullName": "24-80-02-004-A - Holmsunds jaktvårdsförening"
+          },
+          {
+            "AjoId": 719541,
+            "AfoId": 5,
+            "Name": "BRATTBY JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-02-006-A - BRATTBY JAKTKLUBB"
+          },
+          {
+            "AjoId": 772656,
+            "AfoId": 5,
+            "Name": "Anumarks jaktklubb",
+            "AjoDisplayFullName": "24-80-02-019-A - Anumarks jaktklubb"
+          },
+          {
+            "AjoId": 719552,
+            "AfoId": 5,
+            "Name": "Berttjärn jaktområde",
+            "AjoDisplayFullName": "24-80-02-023-A - Berttjärn jaktområde"
+          },
+          {
+            "AjoId": 719553,
+            "AfoId": 5,
+            "Name": "HISSJÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-80-02-025-A - HISSJÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 719559,
+            "AfoId": 5,
+            "Name": "HÅKMARKS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-02-039-A - HÅKMARKS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719562,
+            "AfoId": 5,
+            "Name": "Flurkbränna jaktområde",
+            "AjoDisplayFullName": "24-80-02-075-A - Flurkbränna jaktområde"
+          },
+          {
+            "AjoId": 719570,
+            "AfoId": 5,
+            "Name": "TEGS O ÖHNS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-80-02-154-A - TEGS O ÖHNS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 719572,
+            "AfoId": 5,
+            "Name": "Baggböle jaktområde",
+            "AjoDisplayFullName": "24-80-02-159-A - Baggböle jaktområde"
+          },
+          {
+            "AjoId": 724618,
+            "AfoId": 5,
+            "Name": "Umeå Västra älgskötselområde",
+            "AjoDisplayFullName": "24-80-02-166-Ä - Umeå Västra älgskötselområde"
+          },
+          {
+            "AjoId": 725901,
+            "AfoId": 5,
+            "Name": "Umeå Nordvästra älgskötselområde",
+            "AjoDisplayFullName": "24-80-02-167-Ä - Umeå Nordvästra älgskötselområde"
+          },
+          {
+            "AjoId": 719575,
+            "AfoId": 5,
+            "Name": "LÅNGBERGETS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-03-015-A - LÅNGBERGETS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719578,
+            "AfoId": 5,
+            "Name": "Granön jaktområde",
+            "AjoDisplayFullName": "24-80-03-046-A - Granön jaktområde"
+          },
+          {
+            "AjoId": 719580,
+            "AfoId": 5,
+            "Name": "Lillsjöberg jaktområde",
+            "AjoDisplayFullName": "24-80-03-116-A - Lillsjöberg jaktområde"
+          },
+          {
+            "AjoId": 719581,
+            "AfoId": 5,
+            "Name": "NORRA STRÖMBÄCK-BRATTÅKERS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-03-134-A - NORRA STRÖMBÄCK-BRATTÅKERS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719582,
+            "AfoId": 5,
+            "Name": "Tavelsjö licensområde",
+            "AjoDisplayFullName": "24-80-03-142-A - Tavelsjö licensområde"
+          },
+          {
+            "AjoId": 724681,
+            "AfoId": 5,
+            "Name": "Trätbäckens jakt",
+            "AjoDisplayFullName": "24-80-03-143-A - Trätbäckens jakt"
+          },
+          {
+            "AjoId": 726019,
+            "AfoId": 5,
+            "Name": "Tavelsjö älgskötselområde",
+            "AjoDisplayFullName": "24-80-03-144-Ä - Tavelsjö älgskötselområde"
+          },
+          {
+            "AjoId": 772099,
+            "AfoId": 5,
+            "Name": "Stöcksjö jaktområde",
+            "AjoDisplayFullName": "24-80-04-001-A - Stöcksjö jaktområde"
+          },
+          {
+            "AjoId": 719594,
+            "AfoId": 5,
+            "Name": "RÖBÄCKS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-04-026-A - RÖBÄCKS JAKTKLUBB"
+          },
+          {
+            "AjoId": 724619,
+            "AfoId": 5,
+            "Name": "Umeå Södra älgskötselområde",
+            "AjoDisplayFullName": "24-80-04-102-Ä - Umeå Södra älgskötselområde"
+          },
+          {
+            "AjoId": 719601,
+            "AfoId": 5,
+            "Name": "ÅHEDENS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-07-056-A - ÅHEDENS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719602,
+            "AfoId": 5,
+            "Name": "NORRMJÖLE VILTVÅRDSOMRÅDESFÖRENING",
+            "AjoDisplayFullName": "24-80-07-080-A - NORRMJÖLE VILTVÅRDSOMRÅDESFÖRENING"
+          },
+          {
+            "AjoId": 719603,
+            "AfoId": 5,
+            "Name": "HÖRNEFORS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-80-07-087-Ä - HÖRNEFORS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 771989,
+            "AfoId": 5,
+            "Name": "Gamla Bäcknäs jaktområde",
+            "AjoDisplayFullName": "24-80-08-002-A - Gamla Bäcknäs jaktområde"
+          },
+          {
+            "AjoId": 772772,
+            "AfoId": 5,
+            "Name": "Bergvalls jaktlag",
+            "AjoDisplayFullName": "24-80-08-003-A - Bergvalls jaktlag"
+          },
+          {
+            "AjoId": 772904,
+            "AfoId": 5,
+            "Name": "Tväråmark-Åbyns jaktområde",
+            "AjoDisplayFullName": "24-80-08-005-A - Tväråmark-Åbyns jaktområde"
+          },
+          {
+            "AjoId": 719606,
+            "AfoId": 5,
+            "Name": "GRAVFORS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-80-08-007-A - GRAVFORS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 719610,
+            "AfoId": 5,
+            "Name": "GRAVÅNS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-08-059-A - GRAVÅNS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719614,
+            "AfoId": 5,
+            "Name": "HEMMESMARKS JAKTLAG",
+            "AjoDisplayFullName": "24-80-08-077-A - HEMMESMARKS JAKTLAG"
+          },
+          {
+            "AjoId": 772401,
+            "AfoId": 5,
+            "Name": "Ostnäs jaktlag",
+            "AjoDisplayFullName": "24-80-09-003-A - Ostnäs jaktlag"
+          },
+          {
+            "AjoId": 772654,
+            "AfoId": 5,
+            "Name": "Ytterboda jaktlag",
+            "AjoDisplayFullName": "24-80-09-004-A - Ytterboda jaktlag"
+          },
+          {
+            "AjoId": 772657,
+            "AfoId": 5,
+            "Name": "Sävar by jaktklubb",
+            "AjoDisplayFullName": "24-80-09-005-A - Sävar by jaktklubb"
+          },
+          {
+            "AjoId": 772658,
+            "AfoId": 5,
+            "Name": "Täfteå jaktklubb",
+            "AjoDisplayFullName": "24-80-09-006-A - Täfteå jaktklubb"
+          },
+          {
+            "AjoId": 772819,
+            "AfoId": 5,
+            "Name": "Tålsmarks jaktlag",
+            "AjoDisplayFullName": "24-80-09-010-A - Tålsmarks jaktlag"
+          },
+          {
+            "AjoId": 772946,
+            "AfoId": 5,
+            "Name": "Växtholms jaktlag",
+            "AjoDisplayFullName": "24-80-09-011-A - Växtholms jaktlag"
+          },
+          {
+            "AjoId": 719628,
+            "AfoId": 5,
+            "Name": "NYBYNS JAKTLAG",
+            "AjoDisplayFullName": "24-80-09-037-A - NYBYNS JAKTLAG"
+          },
+          {
+            "AjoId": 719633,
+            "AfoId": 5,
+            "Name": "Fjäderbäck jaktområde",
+            "AjoDisplayFullName": "24-80-09-137-A - Fjäderbäck jaktområde"
+          },
+          {
+            "AjoId": 719633,
+            "AfoId": 5,
+            "Name": "Fjäderbäck-Berttjärn jaktområde",
+            "AjoDisplayFullName": "24-80-09-137-A - Fjäderbäck-Berttjärn jaktområde"
+          },
+          {
+            "AjoId": 719640,
+            "AfoId": 5,
+            "Name": "UMEÅ NORRA ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-80-09-222-Ä - UMEÅ NORRA ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 725897,
+            "AfoId": 5,
+            "Name": "Umeå Nordöstra älgskötselområde",
+            "AjoDisplayFullName": "24-80-09-225-Ä - Umeå Nordöstra älgskötselområde"
+          },
+          {
+            "AjoId": 725899,
+            "AfoId": 5,
+            "Name": "Sävar Nedre älgskötselområde",
+            "AjoDisplayFullName": "24-80-09-226-Ä - Sävar Nedre älgskötselområde"
+          },
+          {
+            "AjoId": 719642,
+            "AfoId": 5,
+            "Name": "HOLMÖNS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-80-10-002-Ä - HOLMÖNS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 719641,
+            "AfoId": 5,
+            "Name": "KA 5 JAKTVÅRDSKLUBB",
+            "AjoDisplayFullName": "24-80-10-006-A - KA 5 JAKTVÅRDSKLUBB"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 718134,
+            "AfoId": 5,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "24-00-99-005-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 718135,
+            "AfoId": 5,
+            "Name": "BRATTSBACKA VÄSTRA JAKTOMRÅDE",
+            "AjoDisplayFullName": "24-01-01-001-A - BRATTSBACKA VÄSTRA JAKTOMRÅDE"
+          },
+          {
+            "AjoId": 718136,
+            "AfoId": 5,
+            "Name": "BJÄRTENS JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-006-A - BJÄRTENS JAKTLAG"
+          },
+          {
+            "AjoId": 718137,
+            "AfoId": 5,
+            "Name": "LÅNGVATTNET-BJÄRTENS JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-008-A - LÅNGVATTNET-BJÄRTENS JAKTLAG"
+          },
+          {
+            "AjoId": 718138,
+            "AfoId": 5,
+            "Name": "VÅNGSJÖ JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-009-A - VÅNGSJÖ JAKTLAG"
+          },
+          {
+            "AjoId": 718142,
+            "AfoId": 5,
+            "Name": "NYGÅRDS JAKTLAG",
+            "AjoDisplayFullName": "24-01-01-041-A - NYGÅRDS JAKTLAG"
+          },
+          {
+            "AjoId": 718144,
+            "AfoId": 5,
+            "Name": "LEDUSJÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-007-A - LEDUSJÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718147,
+            "AfoId": 5,
+            "Name": "ORRBÖLE VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-016-A - ORRBÖLE VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718149,
+            "AfoId": 5,
+            "Name": "AVA VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-027-A - AVA VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718152,
+            "AfoId": 5,
+            "Name": "BAGGÅRD VILTVÅRDSOMRÅDESFÖRENING",
+            "AjoDisplayFullName": "24-01-02-044-A - BAGGÅRD VILTVÅRDSOMRÅDESFÖRENING"
+          },
+          {
+            "AjoId": 718156,
+            "AfoId": 5,
+            "Name": "ASPEÅ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-055-A - ASPEÅ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718157,
+            "AfoId": 5,
+            "Name": "STAVSJÖHOLMS JAKTLAG",
+            "AjoDisplayFullName": "24-01-02-056-A - STAVSJÖHOLMS JAKTLAG"
+          },
+          {
+            "AjoId": 718161,
+            "AfoId": 5,
+            "Name": "BERGSJÖ JAKTKLUBB",
+            "AjoDisplayFullName": "24-01-02-066-A - BERGSJÖ JAKTKLUBB"
+          },
+          {
+            "AjoId": 718162,
+            "AfoId": 5,
+            "Name": "HALLENS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-067-A - HALLENS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718163,
+            "AfoId": 5,
+            "Name": "BRATTSBACKA SÖDRA LICENSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-069-A - BRATTSBACKA SÖDRA LICENSOMRÅDE"
+          },
+          {
+            "AjoId": 718165,
+            "AfoId": 5,
+            "Name": "NORDANBÄCK O G:A BRATTSB. JAKTKLUBB",
+            "AjoDisplayFullName": "24-01-02-071-A - NORDANBÄCK O G:A BRATTSB. JAKTKLUBB"
+          },
+          {
+            "AjoId": 718166,
+            "AfoId": 5,
+            "Name": "ÖRSBÄCKS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-074-A - ÖRSBÄCKS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718167,
+            "AfoId": 5,
+            "Name": "RÖNNHOLMS JAKTLAG",
+            "AjoDisplayFullName": "24-01-02-076-A - RÖNNHOLMS JAKTLAG"
+          },
+          {
+            "AjoId": 718169,
+            "AfoId": 5,
+            "Name": "Höglågdal jaktområde",
+            "AjoDisplayFullName": "24-01-02-098-A - Höglågdal jaktområde"
+          },
+          {
+            "AjoId": 718171,
+            "AfoId": 5,
+            "Name": "LÖGDEÅ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-102-A - LÖGDEÅ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718172,
+            "AfoId": 5,
+            "Name": "ÖRESUNDS JAKTLAG",
+            "AjoDisplayFullName": "24-01-02-105-A - ÖRESUNDS JAKTLAG"
+          },
+          {
+            "AjoId": 718173,
+            "AfoId": 5,
+            "Name": "Gabrielsbergets jaktområde",
+            "AjoDisplayFullName": "24-01-02-112-A - Gabrielsbergets jaktområde"
+          },
+          {
+            "AjoId": 718175,
+            "AfoId": 5,
+            "Name": "KOMMUNANSTÄLLDAS JAKTKLUBB",
+            "AjoDisplayFullName": "24-01-02-128-A - KOMMUNANSTÄLLDAS JAKTKLUBB"
+          },
+          {
+            "AjoId": 718180,
+            "AfoId": 5,
+            "Name": "STENBERGS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-231-A - STENBERGS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 718182,
+            "AfoId": 5,
+            "Name": "Sunnansjö södra jaktområde",
+            "AjoDisplayFullName": "24-01-02-290-A - Sunnansjö södra jaktområde"
+          },
+          {
+            "AjoId": 718188,
+            "AfoId": 5,
+            "Name": "JÄRNÄSHALVÖNS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-01-02-341-Ä - JÄRNÄSHALVÖNS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 724577,
+            "AfoId": 5,
+            "Name": "Hörneåns älgskötselområde",
+            "AjoDisplayFullName": "24-01-02-342-Ä - Hörneåns älgskötselområde"
+          },
+          {
+            "AjoId": 772700,
+            "AfoId": 5,
+            "Name": "Vitvattnet jaktområde",
+            "AjoDisplayFullName": "24-03-01-009-A - Vitvattnet jaktområde"
+          },
+          {
+            "AjoId": 718196,
+            "AfoId": 5,
+            "Name": "VÄSTERNYLIDENS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-03-01-011-A - VÄSTERNYLIDENS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 772770,
+            "AfoId": 5,
+            "Name": "Bjurholm östra",
+            "AjoDisplayFullName": "24-03-01-017-A - Bjurholm östra"
+          },
+          {
+            "AjoId": 772887,
+            "AfoId": 5,
+            "Name": "Bjurholm östra ÄSO",
+            "AjoDisplayFullName": "24-03-01-020-Ä - Bjurholm östra ÄSO"
+          },
+          {
+            "AjoId": 718206,
+            "AfoId": 5,
+            "Name": "MELLANÅ JAKTLAG",
+            "AjoDisplayFullName": "24-03-01-030-A - MELLANÅ JAKTLAG"
+          },
+          {
+            "AjoId": 718216,
+            "AfoId": 5,
+            "Name": "BJURVATTNETS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-03-01-052-A - BJURVATTNETS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722668,
+            "AfoId": 5,
+            "Name": "KARLSBÄCKS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-03-01-080-A - KARLSBÄCKS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 724612,
+            "AfoId": 5,
+            "Name": "Lögdeälvens älgskötselområde",
+            "AjoDisplayFullName": "24-03-01-288-Ä - Lögdeälvens älgskötselområde"
+          },
+          {
+            "AjoId": 724613,
+            "AfoId": 5,
+            "Name": "Bjurholmsbygdens älgskötselområde",
+            "AjoDisplayFullName": "24-03-01-289-Ä - Bjurholmsbygdens älgskötselområde"
+          },
+          {
+            "AjoId": 772400,
+            "AfoId": 5,
+            "Name": "Fällvikens jaktlag",
+            "AjoDisplayFullName": "24-04-01-001-A - Fällvikens jaktlag"
+          },
+          {
+            "AjoId": 722678,
+            "AfoId": 5,
+            "Name": "KVARNLUNDS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-008-A - KVARNLUNDS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 772655,
+            "AfoId": 5,
+            "Name": "Lillsandsjö jaktlag",
+            "AjoDisplayFullName": "24-04-01-011-A - Lillsandsjö jaktlag"
+          },
+          {
+            "AjoId": 722680,
+            "AfoId": 5,
+            "Name": "TROLLBERGETS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-016-A - TROLLBERGETS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722681,
+            "AfoId": 5,
+            "Name": "STRANDÅKERS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-018-A - STRANDÅKERS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722683,
+            "AfoId": 5,
+            "Name": "SIRAPSBACKENS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-024-A - SIRAPSBACKENS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722684,
+            "AfoId": 5,
+            "Name": "ÖVERRÖDÅ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-033-A - ÖVERRÖDÅ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722685,
+            "AfoId": 5,
+            "Name": "Risliden jaktområde",
+            "AjoDisplayFullName": "24-04-01-034-A - Risliden jaktområde"
+          },
+          {
+            "AjoId": 722688,
+            "AfoId": 5,
+            "Name": "VINDELÅNÄSETS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-039-A - VINDELÅNÄSETS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722691,
+            "AfoId": 5,
+            "Name": "MALTJÄLENS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-082-A - MALTJÄLENS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722692,
+            "AfoId": 5,
+            "Name": "VIDELUNDS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-083-A - VIDELUNDS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722694,
+            "AfoId": 5,
+            "Name": "TVÄRÅTRÄSK JAKTLAG",
+            "AjoDisplayFullName": "24-04-01-098-A - TVÄRÅTRÄSK JAKTLAG"
+          },
+          {
+            "AjoId": 722695,
+            "AfoId": 5,
+            "Name": "ABBORRTJÄRNS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-099-A - ABBORRTJÄRNS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722698,
+            "AfoId": 5,
+            "Name": "GRANÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-111-A - GRANÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722703,
+            "AfoId": 5,
+            "Name": "BERGNÄS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-134-A - BERGNÄS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722704,
+            "AfoId": 5,
+            "Name": "STORSANDSJÖNS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-138-A - STORSANDSJÖNS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722706,
+            "AfoId": 5,
+            "Name": "HJUKENS JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-01-143-A - HJUKENS JAKTKLUBB"
+          },
+          {
+            "AjoId": 722716,
+            "AfoId": 5,
+            "Name": "Strycksele-Böjern jaktområde",
+            "AjoDisplayFullName": "24-04-01-253-A - Strycksele-Böjern jaktområde"
+          },
+          {
+            "AjoId": 722717,
+            "AfoId": 5,
+            "Name": "Bubergets jaktlag",
+            "AjoDisplayFullName": "24-04-01-263-A - Bubergets jaktlag"
+          },
+          {
+            "AjoId": 722718,
+            "AfoId": 5,
+            "Name": "KAMSJÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-282-A - KAMSJÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722720,
+            "AfoId": 5,
+            "Name": "Skivsjöåns jaktlag",
+            "AjoDisplayFullName": "24-04-01-341-A - Skivsjöåns jaktlag"
+          },
+          {
+            "AjoId": 722724,
+            "AfoId": 5,
+            "Name": "Yttersjöns jaktklubb",
+            "AjoDisplayFullName": "24-04-01-444-A - Yttersjöns jaktklubb"
+          },
+          {
+            "AjoId": 722725,
+            "AfoId": 5,
+            "Name": "Stenträsk-Fällsjöliden jaktområde",
+            "AjoDisplayFullName": "24-04-01-455-A - Stenträsk-Fällsjöliden jaktområde"
+          },
+          {
+            "AjoId": 722726,
+            "AfoId": 5,
+            "Name": "Stenträsk jaktområde",
+            "AjoDisplayFullName": "24-04-01-456-A - Stenträsk jaktområde"
+          },
+          {
+            "AjoId": 724614,
+            "AfoId": 5,
+            "Name": "Umans älgskötselområde",
+            "AjoDisplayFullName": "24-04-01-500-Ä - Umans älgskötselområde"
+          },
+          {
+            "AjoId": 724578,
+            "AfoId": 5,
+            "Name": "Stöttingbrånet jaktområde",
+            "AjoDisplayFullName": "24-04-01-504-A - Stöttingbrånet jaktområde"
+          },
+          {
+            "AjoId": 722736,
+            "AfoId": 5,
+            "Name": "VINDELNS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-04-01-519-Ä - VINDELNS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 722734,
+            "AfoId": 5,
+            "Name": "Stenträsk östra jaktområde",
+            "AjoDisplayFullName": "24-04-01-522-A - Stenträsk östra jaktområde"
+          },
+          {
+            "AjoId": 722737,
+            "AfoId": 5,
+            "Name": "MÅRDSELE VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-04-02-006-A - MÅRDSELE VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 722739,
+            "AfoId": 5,
+            "Name": "Fäbodarna jaktområde",
+            "AjoDisplayFullName": "24-04-02-009-A - Fäbodarna jaktområde"
+          },
+          {
+            "AjoId": 722740,
+            "AfoId": 5,
+            "Name": "MALTTRÄSK BYALAG",
+            "AjoDisplayFullName": "24-04-02-029-A - MALTTRÄSK BYALAG"
+          },
+          {
+            "AjoId": 722741,
+            "AfoId": 5,
+            "Name": "ABBORRTRÄSK JAKTKLUBB",
+            "AjoDisplayFullName": "24-04-02-039-A - ABBORRTRÄSK JAKTKLUBB"
+          },
+          {
+            "AjoId": 722743,
+            "AfoId": 5,
+            "Name": "Krokträsk jaktområde",
+            "AjoDisplayFullName": "24-04-02-118-A - Krokträsk jaktområde"
+          },
+          {
+            "AjoId": 718348,
+            "AfoId": 5,
+            "Name": "STÄRKESMARK JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-036-A - STÄRKESMARK JAKTLAG"
+          },
+          {
+            "AjoId": 718349,
+            "AfoId": 5,
+            "Name": "HÄLLFORS O PENGFORS JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-037-A - HÄLLFORS O PENGFORS JAKTLAG"
+          },
+          {
+            "AjoId": 718350,
+            "AfoId": 5,
+            "Name": "HÖGBÄCKS JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-038-A - HÖGBÄCKS JAKTLAG"
+          },
+          {
+            "AjoId": 719047,
+            "AfoId": 5,
+            "Name": "VINBÄCKS JAKTKLUBB",
+            "AjoDisplayFullName": "24-60-02-057-A - VINBÄCKS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719055,
+            "AfoId": 5,
+            "Name": "Österselet jaktområde",
+            "AjoDisplayFullName": "24-60-02-086-A - Österselet jaktområde"
+          },
+          {
+            "AjoId": 719056,
+            "AfoId": 5,
+            "Name": "ULRIKSDALS JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-093-A - ULRIKSDALS JAKTLAG"
+          },
+          {
+            "AjoId": 719061,
+            "AfoId": 5,
+            "Name": "Sarsjölidens jaktlag",
+            "AjoDisplayFullName": "24-60-02-237-A - Sarsjölidens jaktlag"
+          },
+          {
+            "AjoId": 719061,
+            "AfoId": 5,
+            "Name": "Selsberg jaktområde",
+            "AjoDisplayFullName": "24-60-02-237-A - Selsberg jaktområde"
+          },
+          {
+            "AjoId": 719062,
+            "AfoId": 5,
+            "Name": "STÄRKESMARKS VÄSTRA JAKTLAG",
+            "AjoDisplayFullName": "24-60-02-239-A - STÄRKESMARKS VÄSTRA JAKTLAG"
+          },
+          {
+            "AjoId": 724761,
+            "AfoId": 5,
+            "Name": "Vännäs Norr 92 älgskötselområde",
+            "AjoDisplayFullName": "24-60-02-325-Ä - Vännäs Norr 92 älgskötselområde"
+          },
+          {
+            "AjoId": 724760,
+            "AfoId": 5,
+            "Name": "Vännäs älgskötselområde",
+            "AjoDisplayFullName": "24-60-02-326-Ä - Vännäs älgskötselområde"
+          },
+          {
+            "AjoId": 772212,
+            "AfoId": 5,
+            "Name": "Holmsunds jaktvårdsförening",
+            "AjoDisplayFullName": "24-80-02-004-A - Holmsunds jaktvårdsförening"
+          },
+          {
+            "AjoId": 719541,
+            "AfoId": 5,
+            "Name": "BRATTBY JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-02-006-A - BRATTBY JAKTKLUBB"
+          },
+          {
+            "AjoId": 772656,
+            "AfoId": 5,
+            "Name": "Anumarks jaktklubb",
+            "AjoDisplayFullName": "24-80-02-019-A - Anumarks jaktklubb"
+          },
+          {
+            "AjoId": 719552,
+            "AfoId": 5,
+            "Name": "Berttjärn jaktområde",
+            "AjoDisplayFullName": "24-80-02-023-A - Berttjärn jaktområde"
+          },
+          {
+            "AjoId": 719553,
+            "AfoId": 5,
+            "Name": "HISSJÖ VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-80-02-025-A - HISSJÖ VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 719559,
+            "AfoId": 5,
+            "Name": "HÅKMARKS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-02-039-A - HÅKMARKS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719562,
+            "AfoId": 5,
+            "Name": "Flurkbränna jaktområde",
+            "AjoDisplayFullName": "24-80-02-075-A - Flurkbränna jaktområde"
+          },
+          {
+            "AjoId": 719570,
+            "AfoId": 5,
+            "Name": "TEGS O ÖHNS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-80-02-154-A - TEGS O ÖHNS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 719572,
+            "AfoId": 5,
+            "Name": "Baggböle jaktområde",
+            "AjoDisplayFullName": "24-80-02-159-A - Baggböle jaktområde"
+          },
+          {
+            "AjoId": 724618,
+            "AfoId": 5,
+            "Name": "Umeå Västra älgskötselområde",
+            "AjoDisplayFullName": "24-80-02-166-Ä - Umeå Västra älgskötselområde"
+          },
+          {
+            "AjoId": 725901,
+            "AfoId": 5,
+            "Name": "Umeå Nordvästra älgskötselområde",
+            "AjoDisplayFullName": "24-80-02-167-Ä - Umeå Nordvästra älgskötselområde"
+          },
+          {
+            "AjoId": 719575,
+            "AfoId": 5,
+            "Name": "LÅNGBERGETS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-03-015-A - LÅNGBERGETS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719578,
+            "AfoId": 5,
+            "Name": "Granön jaktområde",
+            "AjoDisplayFullName": "24-80-03-046-A - Granön jaktområde"
+          },
+          {
+            "AjoId": 719580,
+            "AfoId": 5,
+            "Name": "Lillsjöberg jaktområde",
+            "AjoDisplayFullName": "24-80-03-116-A - Lillsjöberg jaktområde"
+          },
+          {
+            "AjoId": 719581,
+            "AfoId": 5,
+            "Name": "NORRA STRÖMBÄCK-BRATTÅKERS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-03-134-A - NORRA STRÖMBÄCK-BRATTÅKERS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719582,
+            "AfoId": 5,
+            "Name": "Tavelsjö licensområde",
+            "AjoDisplayFullName": "24-80-03-142-A - Tavelsjö licensområde"
+          },
+          {
+            "AjoId": 724681,
+            "AfoId": 5,
+            "Name": "Trätbäckens jakt",
+            "AjoDisplayFullName": "24-80-03-143-A - Trätbäckens jakt"
+          },
+          {
+            "AjoId": 726019,
+            "AfoId": 5,
+            "Name": "Tavelsjö älgskötselområde",
+            "AjoDisplayFullName": "24-80-03-144-Ä - Tavelsjö älgskötselområde"
+          },
+          {
+            "AjoId": 772099,
+            "AfoId": 5,
+            "Name": "Stöcksjö jaktområde",
+            "AjoDisplayFullName": "24-80-04-001-A - Stöcksjö jaktområde"
+          },
+          {
+            "AjoId": 719594,
+            "AfoId": 5,
+            "Name": "RÖBÄCKS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-04-026-A - RÖBÄCKS JAKTKLUBB"
+          },
+          {
+            "AjoId": 724619,
+            "AfoId": 5,
+            "Name": "Umeå Södra älgskötselområde",
+            "AjoDisplayFullName": "24-80-04-102-Ä - Umeå Södra älgskötselområde"
+          },
+          {
+            "AjoId": 719601,
+            "AfoId": 5,
+            "Name": "ÅHEDENS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-07-056-A - ÅHEDENS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719602,
+            "AfoId": 5,
+            "Name": "NORRMJÖLE VILTVÅRDSOMRÅDESFÖRENING",
+            "AjoDisplayFullName": "24-80-07-080-A - NORRMJÖLE VILTVÅRDSOMRÅDESFÖRENING"
+          },
+          {
+            "AjoId": 719603,
+            "AfoId": 5,
+            "Name": "HÖRNEFORS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-80-07-087-Ä - HÖRNEFORS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 771989,
+            "AfoId": 5,
+            "Name": "Gamla Bäcknäs jaktområde",
+            "AjoDisplayFullName": "24-80-08-002-A - Gamla Bäcknäs jaktområde"
+          },
+          {
+            "AjoId": 772772,
+            "AfoId": 5,
+            "Name": "Bergvalls jaktlag",
+            "AjoDisplayFullName": "24-80-08-003-A - Bergvalls jaktlag"
+          },
+          {
+            "AjoId": 772904,
+            "AfoId": 5,
+            "Name": "Tväråmark-Åbyns jaktområde",
+            "AjoDisplayFullName": "24-80-08-005-A - Tväråmark-Åbyns jaktområde"
+          },
+          {
+            "AjoId": 719606,
+            "AfoId": 5,
+            "Name": "GRAVFORS VILTVÅRDSOMRÅDE",
+            "AjoDisplayFullName": "24-80-08-007-A - GRAVFORS VILTVÅRDSOMRÅDE"
+          },
+          {
+            "AjoId": 719610,
+            "AfoId": 5,
+            "Name": "GRAVÅNS JAKTKLUBB",
+            "AjoDisplayFullName": "24-80-08-059-A - GRAVÅNS JAKTKLUBB"
+          },
+          {
+            "AjoId": 719614,
+            "AfoId": 5,
+            "Name": "HEMMESMARKS JAKTLAG",
+            "AjoDisplayFullName": "24-80-08-077-A - HEMMESMARKS JAKTLAG"
+          },
+          {
+            "AjoId": 772401,
+            "AfoId": 5,
+            "Name": "Ostnäs jaktlag",
+            "AjoDisplayFullName": "24-80-09-003-A - Ostnäs jaktlag"
+          },
+          {
+            "AjoId": 772654,
+            "AfoId": 5,
+            "Name": "Ytterboda jaktlag",
+            "AjoDisplayFullName": "24-80-09-004-A - Ytterboda jaktlag"
+          },
+          {
+            "AjoId": 772657,
+            "AfoId": 5,
+            "Name": "Sävar by jaktklubb",
+            "AjoDisplayFullName": "24-80-09-005-A - Sävar by jaktklubb"
+          },
+          {
+            "AjoId": 772658,
+            "AfoId": 5,
+            "Name": "Täfteå jaktklubb",
+            "AjoDisplayFullName": "24-80-09-006-A - Täfteå jaktklubb"
+          },
+          {
+            "AjoId": 772819,
+            "AfoId": 5,
+            "Name": "Tålsmarks jaktlag",
+            "AjoDisplayFullName": "24-80-09-010-A - Tålsmarks jaktlag"
+          },
+          {
+            "AjoId": 772946,
+            "AfoId": 5,
+            "Name": "Växtholms jaktlag",
+            "AjoDisplayFullName": "24-80-09-011-A - Växtholms jaktlag"
+          },
+          {
+            "AjoId": 719628,
+            "AfoId": 5,
+            "Name": "NYBYNS JAKTLAG",
+            "AjoDisplayFullName": "24-80-09-037-A - NYBYNS JAKTLAG"
+          },
+          {
+            "AjoId": 719633,
+            "AfoId": 5,
+            "Name": "Fjäderbäck jaktområde",
+            "AjoDisplayFullName": "24-80-09-137-A - Fjäderbäck jaktområde"
+          },
+          {
+            "AjoId": 719633,
+            "AfoId": 5,
+            "Name": "Fjäderbäck-Berttjärn jaktområde",
+            "AjoDisplayFullName": "24-80-09-137-A - Fjäderbäck-Berttjärn jaktområde"
+          },
+          {
+            "AjoId": 719640,
+            "AfoId": 5,
+            "Name": "UMEÅ NORRA ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-80-09-222-Ä - UMEÅ NORRA ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 725897,
+            "AfoId": 5,
+            "Name": "Umeå Nordöstra älgskötselområde",
+            "AjoDisplayFullName": "24-80-09-225-Ä - Umeå Nordöstra älgskötselområde"
+          },
+          {
+            "AjoId": 725899,
+            "AfoId": 5,
+            "Name": "Sävar Nedre älgskötselområde",
+            "AjoDisplayFullName": "24-80-09-226-Ä - Sävar Nedre älgskötselområde"
+          },
+          {
+            "AjoId": 719642,
+            "AfoId": 5,
+            "Name": "HOLMÖNS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "24-80-10-002-Ä - HOLMÖNS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 719641,
+            "AfoId": 5,
+            "Name": "KA 5 JAKTVÅRDSKLUBB",
+            "AjoDisplayFullName": "24-80-10-006-A - KA 5 JAKTVÅRDSKLUBB"
+          }
+        ]
+      }
+    ],
+    "note": "One official portal report configuration; CSV fields map the rendered grouped table, values preserved as displayed. The historical Gräsmyrs VVO is a separate identity and is not treated as the same area."
+  },
+  "warnings": [],
+  "csv_file": "2026-11-01.csv",
+  "sha256": "da9b8964d9f5331572514ee91123220feea63853088e11e9317c4d8b6d32e5b1",
+  "season_count": 7,
+  "previous_snapshot": null,
+  "changes_since_previous_snapshot": [
+    {
+      "season": "2020/2021",
+      "change": "new_season",
+      "current": {
+        "registreringsnummer": "24-01-02-342-Ä",
+        "jaktomradesnamn": "Hörneåns älgskötselområde",
+        "jaktsasong": "2020/2021",
+        "registrerad_areal_ha": "35567,05",
+        "fallda_vuxna_totalt": "66",
+        "fallda_vuxna_handjur": "35",
+        "fallda_vuxna_hondjur": "31",
+        "fallda_kalvar_totalt": "54",
+        "fallda_kalvar_handjur": "29",
+        "fallda_kalvar_hondjur": "25",
+        "fallda_totalt": "120",
+        "fallda_otjanliga": "0",
+        "fallda_oregistrerad_mark": "0",
+        "fallda_per_1000_ha": "3,4",
+        "tjur_andel_pct": "53%",
+        "kalv_andel_pct": "45%",
+        "avskjutningsmal_vuxna": "72",
+        "avskjutningsmal_handjur": "36",
+        "avskjutningsmal_hondjur": "36",
+        "avskjutningsmal_kalv": "59",
+        "avskjutningsmal_totalt": "131",
+        "avskjutningsmal_per_1000_ha": "3,7",
+        "nyttjandegrad_vuxna_pct": "92%",
+        "nyttjandegrad_kalv_pct": "92%",
+        "nyttjandegrad_totalt_pct": "92%"
+      }
+    },
+    {
+      "season": "2021/2022",
+      "change": "new_season",
+      "current": {
+        "registreringsnummer": "24-01-02-342-Ä",
+        "jaktomradesnamn": "Hörneåns älgskötselområde",
+        "jaktsasong": "2021/2022",
+        "registrerad_areal_ha": "35567,05",
+        "fallda_vuxna_totalt": "70",
+        "fallda_vuxna_handjur": "38",
+        "fallda_vuxna_hondjur": "32",
+        "fallda_kalvar_totalt": "44",
+        "fallda_kalvar_handjur": "25",
+        "fallda_kalvar_hondjur": "19",
+        "fallda_totalt": "114",
+        "fallda_otjanliga": "0",
+        "fallda_oregistrerad_mark": "0",
+        "fallda_per_1000_ha": "3,2",
+        "tjur_andel_pct": "54%",
+        "kalv_andel_pct": "39%",
+        "avskjutningsmal_vuxna": "70",
+        "avskjutningsmal_handjur": "35",
+        "avskjutningsmal_hondjur": "35",
+        "avskjutningsmal_kalv": "58",
+        "avskjutningsmal_totalt": "128",
+        "avskjutningsmal_per_1000_ha": "3,6",
+        "nyttjandegrad_vuxna_pct": "100%",
+        "nyttjandegrad_kalv_pct": "76%",
+        "nyttjandegrad_totalt_pct": "89%"
+      }
+    },
+    {
+      "season": "2022/2023",
+      "change": "new_season",
+      "current": {
+        "registreringsnummer": "24-01-02-342-Ä",
+        "jaktomradesnamn": "Hörneåns älgskötselområde",
+        "jaktsasong": "2022/2023",
+        "registrerad_areal_ha": "35567,05",
+        "fallda_vuxna_totalt": "69",
+        "fallda_vuxna_handjur": "38",
+        "fallda_vuxna_hondjur": "31",
+        "fallda_kalvar_totalt": "49",
+        "fallda_kalvar_handjur": "21",
+        "fallda_kalvar_hondjur": "28",
+        "fallda_totalt": "118",
+        "fallda_otjanliga": "1",
+        "fallda_oregistrerad_mark": "0",
+        "fallda_per_1000_ha": "3,3",
+        "tjur_andel_pct": "55%",
+        "kalv_andel_pct": "42%",
+        "avskjutningsmal_vuxna": "64",
+        "avskjutningsmal_handjur": "32",
+        "avskjutningsmal_hondjur": "32",
+        "avskjutningsmal_kalv": "63",
+        "avskjutningsmal_totalt": "127",
+        "avskjutningsmal_per_1000_ha": "3,6",
+        "nyttjandegrad_vuxna_pct": "108%",
+        "nyttjandegrad_kalv_pct": "78%",
+        "nyttjandegrad_totalt_pct": "93%"
+      }
+    },
+    {
+      "season": "2023/2024",
+      "change": "new_season",
+      "current": {
+        "registreringsnummer": "24-01-02-342-Ä",
+        "jaktomradesnamn": "Hörneåns älgskötselområde",
+        "jaktsasong": "2023/2024",
+        "registrerad_areal_ha": "37132,8",
+        "fallda_vuxna_totalt": "62",
+        "fallda_vuxna_handjur": "39",
+        "fallda_vuxna_hondjur": "23",
+        "fallda_kalvar_totalt": "43",
+        "fallda_kalvar_handjur": "24",
+        "fallda_kalvar_hondjur": "19",
+        "fallda_totalt": "105",
+        "fallda_otjanliga": "0",
+        "fallda_oregistrerad_mark": "0",
+        "fallda_per_1000_ha": "2,8",
+        "tjur_andel_pct": "63%",
+        "kalv_andel_pct": "41%",
+        "avskjutningsmal_vuxna": "60",
+        "avskjutningsmal_handjur": "30",
+        "avskjutningsmal_hondjur": "30",
+        "avskjutningsmal_kalv": "59",
+        "avskjutningsmal_totalt": "119",
+        "avskjutningsmal_per_1000_ha": "3,2",
+        "nyttjandegrad_vuxna_pct": "103%",
+        "nyttjandegrad_kalv_pct": "73%",
+        "nyttjandegrad_totalt_pct": "88%"
+      }
+    },
+    {
+      "season": "2024/2025",
+      "change": "new_season",
+      "current": {
+        "registreringsnummer": "24-01-02-342-Ä",
+        "jaktomradesnamn": "Hörneåns älgskötselområde",
+        "jaktsasong": "2024/2025",
+        "registrerad_areal_ha": "37132,8",
+        "fallda_vuxna_totalt": "64",
+        "fallda_vuxna_handjur": "37",
+        "fallda_vuxna_hondjur": "27",
+        "fallda_kalvar_totalt": "48",
+        "fallda_kalvar_handjur": "25",
+        "fallda_kalvar_hondjur": "23",
+        "fallda_totalt": "112",
+        "fallda_otjanliga": "0",
+        "fallda_oregistrerad_mark": "0",
+        "fallda_per_1000_ha": "3",
+        "tjur_andel_pct": "58%",
+        "kalv_andel_pct": "43%",
+        "avskjutningsmal_vuxna": "68",
+        "avskjutningsmal_handjur": "34",
+        "avskjutningsmal_hondjur": "34",
+        "avskjutningsmal_kalv": "67",
+        "avskjutningsmal_totalt": "135",
+        "avskjutningsmal_per_1000_ha": "3,6",
+        "nyttjandegrad_vuxna_pct": "94%",
+        "nyttjandegrad_kalv_pct": "72%",
+        "nyttjandegrad_totalt_pct": "83%"
+      }
+    },
+    {
+      "season": "2025/2026",
+      "change": "new_season",
+      "current": {
+        "registreringsnummer": "24-01-02-342-Ä",
+        "jaktomradesnamn": "Hörneåns älgskötselområde",
+        "jaktsasong": "2025/2026",
+        "registrerad_areal_ha": "37132,8",
+        "fallda_vuxna_totalt": "71",
+        "fallda_vuxna_handjur": "38",
+        "fallda_vuxna_hondjur": "33",
+        "fallda_kalvar_totalt": "45",
+        "fallda_kalvar_handjur": "28",
+        "fallda_kalvar_hondjur": "17",
+        "fallda_totalt": "116",
+        "fallda_otjanliga": "0",
+        "fallda_oregistrerad_mark": "0",
+        "fallda_per_1000_ha": "3,1",
+        "tjur_andel_pct": "54%",
+        "kalv_andel_pct": "39%",
+        "avskjutningsmal_vuxna": "100",
+        "avskjutningsmal_handjur": "45",
+        "avskjutningsmal_hondjur": "55",
+        "avskjutningsmal_kalv": "90",
+        "avskjutningsmal_totalt": "190",
+        "avskjutningsmal_per_1000_ha": "5,1",
+        "nyttjandegrad_vuxna_pct": "71%",
+        "nyttjandegrad_kalv_pct": "50%",
+        "nyttjandegrad_totalt_pct": "61%"
+      }
+    },
+    {
+      "season": "2026/2027",
+      "change": "new_season",
+      "current": {
+        "registreringsnummer": "24-01-02-342-Ä",
+        "jaktomradesnamn": "Hörneåns älgskötselområde",
+        "jaktsasong": "2026/2027",
+        "registrerad_areal_ha": "37132,8",
+        "fallda_vuxna_totalt": "43",
+        "fallda_vuxna_handjur": "21",
+        "fallda_vuxna_hondjur": "22",
+        "fallda_kalvar_totalt": "28",
+        "fallda_kalvar_handjur": "14",
+        "fallda_kalvar_hondjur": "14",
+        "fallda_totalt": "71",
+        "fallda_otjanliga": "0",
+        "fallda_oregistrerad_mark": "0",
+        "fallda_per_1000_ha": "1,9",
+        "tjur_andel_pct": "49%",
+        "kalv_andel_pct": "39%",
+        "avskjutningsmal_vuxna": "77",
+        "avskjutningsmal_handjur": "37",
+        "avskjutningsmal_hondjur": "40",
+        "avskjutningsmal_kalv": "63",
+        "avskjutningsmal_totalt": "140",
+        "avskjutningsmal_per_1000_ha": "3,8",
+        "nyttjandegrad_vuxna_pct": "56%",
+        "nyttjandegrad_kalv_pct": "44%",
+        "nyttjandegrad_totalt_pct": "51%"
+      }
+    }
+  ],
+  "interpretation": "Changes are changes in the cumulative values registered in the portal. They are not exact individual kill dates and may reflect delayed reporting."
+}
