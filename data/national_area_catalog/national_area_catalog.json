@@ -1,0 +1,2370 @@
+{
+  "catalogued_at_utc": "2026-11-02T12:49:50.634673+00:00",
+  "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+  "report_id": "4",
+  "area_observations": 17260,
+  "unique_portal_area_ids": 8589,
+  "counties_seen": 20,
+  "county_afo_coverage": [
+    {
+      "county": "Blekinge län",
+      "afo": "Blekinge Väst",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 43
+    },
+    {
+      "county": "Blekinge län",
+      "afo": "Blekinge Öst",
+      "afo_id": "3",
+      "boundary_mode": "current",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 32
+    },
+    {
+      "county": "Blekinge län",
+      "afo": "Blekinge Väst",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 43
+    },
+    {
+      "county": "Blekinge län",
+      "afo": "Blekinge Öst",
+      "afo_id": "3",
+      "boundary_mode": "historical",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 32
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Särna-Idre ÄFO",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 12
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Älvdalens ÄFO",
+      "afo_id": "3",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 22
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Noppikoski ÄFO",
+      "afo_id": "4",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 23
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Malungs västra ÄFO",
+      "afo_id": "5",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 3
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Malungs östra-Venjans ÄFO",
+      "afo_id": "6",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 14
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Siljansringens ÄFO",
+      "afo_id": "7",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 5
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Bingsjö ÄFO",
+      "afo_id": "8",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 3
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Siljansnäs ÄFO",
+      "afo_id": "9",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 25
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Bjursås ÄFO",
+      "afo_id": "10",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 16
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Gimmens ÄFO",
+      "afo_id": "11",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 7
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Fredriksbergs ÄFO",
+      "afo_id": "13",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 25
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Gyllbergens ÄFO",
+      "afo_id": "14",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 8
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Gävle-Dala ÄFO",
+      "afo_id": "15",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 5
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Norns ÄFO",
+      "afo_id": "16",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 34
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Särna-Idre ÄFO",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 12
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Älvdalens ÄFO",
+      "afo_id": "3",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 22
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Noppikoski ÄFO",
+      "afo_id": "4",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 23
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Malungs västra ÄFO",
+      "afo_id": "5",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 3
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Malungs östra-Venjans ÄFO",
+      "afo_id": "6",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 14
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Siljansringens ÄFO",
+      "afo_id": "7",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 5
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Bingsjö ÄFO",
+      "afo_id": "8",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 3
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Siljansnäs ÄFO",
+      "afo_id": "9",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 25
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Bjursås ÄFO",
+      "afo_id": "10",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 16
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Gimmens ÄFO",
+      "afo_id": "11",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 7
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Fredriksbergs ÄFO",
+      "afo_id": "13",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 25
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Gyllbergens ÄFO",
+      "afo_id": "14",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 8
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Gävle-Dala ÄFO",
+      "afo_id": "15",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 5
+    },
+    {
+      "county": "Dalarnas län",
+      "afo": "Norns ÄFO",
+      "afo_id": "16",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 34
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Strömsbruk",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1986/1987",
+      "to_year": "1995/1996",
+      "area_count": 2
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Norra Hälsingland",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1986/1987",
+      "to_year": "1995/1996",
+      "area_count": 8
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Ljusdal-Ramsjö",
+      "afo_id": "3",
+      "boundary_mode": "current",
+      "from_year": "2012/2013",
+      "to_year": "2021/2022",
+      "area_count": 9
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Ljusnan-Voxnan",
+      "afo_id": "5",
+      "boundary_mode": "current",
+      "from_year": "1986/1987",
+      "to_year": "1995/1996",
+      "area_count": 6
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Öster Ljusnan",
+      "afo_id": "6",
+      "boundary_mode": "current",
+      "from_year": "1986/1987",
+      "to_year": "1995/1996",
+      "area_count": 18
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Långvind",
+      "afo_id": "7",
+      "boundary_mode": "current",
+      "from_year": "2012/2013",
+      "to_year": "2021/2022",
+      "area_count": 4
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Ödmården",
+      "afo_id": "8",
+      "boundary_mode": "current",
+      "from_year": "1986/1987",
+      "to_year": "1995/1996",
+      "area_count": 2
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Hamrångefjärden",
+      "afo_id": "9",
+      "boundary_mode": "current",
+      "from_year": "2012/2013",
+      "to_year": "2021/2022",
+      "area_count": 4
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Södra Gästrikland",
+      "afo_id": "13",
+      "boundary_mode": "current",
+      "from_year": "1986/1987",
+      "to_year": "1995/1996",
+      "area_count": 9
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Furuvik (Ej aktiv)",
+      "afo_id": "14",
+      "boundary_mode": "current",
+      "from_year": "2012/2013",
+      "to_year": "2021/2022",
+      "area_count": 4
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Strömsbruk",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1986/1987",
+      "to_year": "1995/1996",
+      "area_count": 2
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Norra Hälsingland",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1986/1987",
+      "to_year": "1995/1996",
+      "area_count": 8
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Ljusdal-Ramsjö",
+      "afo_id": "3",
+      "boundary_mode": "historical",
+      "from_year": "2012/2013",
+      "to_year": "2021/2022",
+      "area_count": 9
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Ljusnan-Voxnan",
+      "afo_id": "5",
+      "boundary_mode": "historical",
+      "from_year": "1986/1987",
+      "to_year": "1995/1996",
+      "area_count": 6
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Öster Ljusnan",
+      "afo_id": "6",
+      "boundary_mode": "historical",
+      "from_year": "1986/1987",
+      "to_year": "1995/1996",
+      "area_count": 18
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Långvind",
+      "afo_id": "7",
+      "boundary_mode": "historical",
+      "from_year": "2012/2013",
+      "to_year": "2021/2022",
+      "area_count": 4
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Ödmården",
+      "afo_id": "8",
+      "boundary_mode": "historical",
+      "from_year": "1986/1987",
+      "to_year": "1995/1996",
+      "area_count": 2
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Hamrångefjärden",
+      "afo_id": "9",
+      "boundary_mode": "historical",
+      "from_year": "2012/2013",
+      "to_year": "2021/2022",
+      "area_count": 4
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Södra Gästrikland",
+      "afo_id": "13",
+      "boundary_mode": "historical",
+      "from_year": "1986/1987",
+      "to_year": "1995/1996",
+      "area_count": 9
+    },
+    {
+      "county": "Gävleborgs län",
+      "afo": "Furuvik (Ej aktiv)",
+      "afo_id": "14",
+      "boundary_mode": "historical",
+      "from_year": "2012/2013",
+      "to_year": "2021/2022",
+      "area_count": 4
+    },
+    {
+      "county": "Hallands län",
+      "afo": "Norra älgförvaltningsområdet",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 62
+    },
+    {
+      "county": "Hallands län",
+      "afo": "Centrala älgförvaltningsområdet",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 83
+    },
+    {
+      "county": "Hallands län",
+      "afo": "Östra älgförvaltningsområdet",
+      "afo_id": "3",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 43
+    },
+    {
+      "county": "Hallands län",
+      "afo": "Södra älgförvaltningsområdet",
+      "afo_id": "4",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 85
+    },
+    {
+      "county": "Hallands län",
+      "afo": "Norra älgförvaltningsområdet",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 62
+    },
+    {
+      "county": "Hallands län",
+      "afo": "Centrala älgförvaltningsområdet",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 83
+    },
+    {
+      "county": "Hallands län",
+      "afo": "Östra älgförvaltningsområdet",
+      "afo_id": "3",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 43
+    },
+    {
+      "county": "Hallands län",
+      "afo": "Södra älgförvaltningsområdet",
+      "afo_id": "4",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 85
+    },
+    {
+      "county": "Jämtlands län",
+      "afo": "Strömsund/Sollefteå",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 25
+    },
+    {
+      "county": "Jämtlands län",
+      "afo": "Hammerdal/Ragunda",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 25
+    },
+    {
+      "county": "Jämtlands län",
+      "afo": "Västjämtland",
+      "afo_id": "3",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 86
+    },
+    {
+      "county": "Jämtlands län",
+      "afo": "Östersund/Sundsvall",
+      "afo_id": "4",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 15
+    },
+    {
+      "county": "Jämtlands län",
+      "afo": "Berg",
+      "afo_id": "5",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 23
+    },
+    {
+      "county": "Jämtlands län",
+      "afo": "Härjedalen",
+      "afo_id": "6",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 114
+    },
+    {
+      "county": "Jämtlands län",
+      "afo": "Strömsund/Sollefteå",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 25
+    },
+    {
+      "county": "Jämtlands län",
+      "afo": "Hammerdal/Ragunda",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 25
+    },
+    {
+      "county": "Jämtlands län",
+      "afo": "Västjämtland",
+      "afo_id": "3",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 86
+    },
+    {
+      "county": "Jämtlands län",
+      "afo": "Östersund/Sundsvall",
+      "afo_id": "4",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 15
+    },
+    {
+      "county": "Jämtlands län",
+      "afo": "Berg",
+      "afo_id": "5",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 23
+    },
+    {
+      "county": "Jämtlands län",
+      "afo": "Härjedalen",
+      "afo_id": "6",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 114
+    },
+    {
+      "county": "Jönköpings län",
+      "afo": "ÄFO 1 Nordöst",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 108
+    },
+    {
+      "county": "Jönköpings län",
+      "afo": "ÄFO 2 Sydöstra (Vetlanda)",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 126
+    },
+    {
+      "county": "Jönköpings län",
+      "afo": "ÄFO 3 Centrala Väster-E4",
+      "afo_id": "3",
+      "boundary_mode": "current",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 101
+    },
+    {
+      "county": "Jönköpings län",
+      "afo": "ÄFO 4 Centrala Öster-E4",
+      "afo_id": "4",
+      "boundary_mode": "current",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 115
+    },
+    {
+      "county": "Jönköpings län",
+      "afo": "ÄFO 5 Sydvästra",
+      "afo_id": "5",
+      "boundary_mode": "current",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 113
+    },
+    {
+      "county": "Jönköpings län",
+      "afo": "ÄFO 6 Syd Öster-E4",
+      "afo_id": "6",
+      "boundary_mode": "current",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 94
+    },
+    {
+      "county": "Jönköpings län",
+      "afo": "ÄFO 7 Öst (Eksjö)",
+      "afo_id": "7",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 55
+    },
+    {
+      "county": "Jönköpings län",
+      "afo": "ÄFO 8 Nordvästra",
+      "afo_id": "8",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 31
+    },
+    {
+      "county": "Jönköpings län",
+      "afo": "ÄFO 1 Nordöst",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 108
+    },
+    {
+      "county": "Jönköpings län",
+      "afo": "ÄFO 2 Sydöstra (Vetlanda)",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 126
+    },
+    {
+      "county": "Jönköpings län",
+      "afo": "ÄFO 3 Centrala Väster-E4",
+      "afo_id": "3",
+      "boundary_mode": "historical",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 101
+    },
+    {
+      "county": "Jönköpings län",
+      "afo": "ÄFO 4 Centrala Öster-E4",
+      "afo_id": "4",
+      "boundary_mode": "historical",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 115
+    },
+    {
+      "county": "Jönköpings län",
+      "afo": "ÄFO 5 Sydvästra",
+      "afo_id": "5",
+      "boundary_mode": "historical",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 113
+    },
+    {
+      "county": "Jönköpings län",
+      "afo": "ÄFO 6 Syd Öster-E4",
+      "afo_id": "6",
+      "boundary_mode": "historical",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 94
+    },
+    {
+      "county": "Jönköpings län",
+      "afo": "ÄFO 7 Öst (Eksjö)",
+      "afo_id": "7",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 55
+    },
+    {
+      "county": "Jönköpings län",
+      "afo": "ÄFO 8 Nordvästra",
+      "afo_id": "8",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 31
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "1. Västervik norra",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 16
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "2. Västervik södra",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 12
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "3. Vimmerby",
+      "afo_id": "3",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 16
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "4. Hultsfred",
+      "afo_id": "4",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 18
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "5. Oskarshamn",
+      "afo_id": "5",
+      "boundary_mode": "current",
+      "from_year": "1972/1973",
+      "to_year": "1998/1999",
+      "area_count": 32
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "6. Emåns",
+      "afo_id": "6",
+      "boundary_mode": "current",
+      "from_year": "1981/1982",
+      "to_year": "1998/1999",
+      "area_count": 61
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "7. Kalmar västra",
+      "afo_id": "7",
+      "boundary_mode": "current",
+      "from_year": "1981/1982",
+      "to_year": "1998/1999",
+      "area_count": 44
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "8. Kalmarsunds",
+      "afo_id": "8",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 38
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "9. Ölands",
+      "afo_id": "9",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 10
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "10. Kalmar södra",
+      "afo_id": "10",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 70
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "1. Västervik norra",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 16
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "2. Västervik södra",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 12
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "3. Vimmerby",
+      "afo_id": "3",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 16
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "4. Hultsfred",
+      "afo_id": "4",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 18
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "5. Oskarshamn",
+      "afo_id": "5",
+      "boundary_mode": "historical",
+      "from_year": "1972/1973",
+      "to_year": "1998/1999",
+      "area_count": 32
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "6. Emåns",
+      "afo_id": "6",
+      "boundary_mode": "historical",
+      "from_year": "1981/1982",
+      "to_year": "1998/1999",
+      "area_count": 61
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "7. Kalmar västra",
+      "afo_id": "7",
+      "boundary_mode": "historical",
+      "from_year": "1981/1982",
+      "to_year": "1998/1999",
+      "area_count": 44
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "8. Kalmarsunds",
+      "afo_id": "8",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 38
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "9. Ölands",
+      "afo_id": "9",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 10
+    },
+    {
+      "county": "Kalmar län",
+      "afo": "10. Kalmar södra",
+      "afo_id": "10",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 70
+    },
+    {
+      "county": "Kronobergs län",
+      "afo": "1",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 49
+    },
+    {
+      "county": "Kronobergs län",
+      "afo": "2",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 48
+    },
+    {
+      "county": "Kronobergs län",
+      "afo": "3",
+      "afo_id": "3",
+      "boundary_mode": "current",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 40
+    },
+    {
+      "county": "Kronobergs län",
+      "afo": "4",
+      "afo_id": "4",
+      "boundary_mode": "current",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 13
+    },
+    {
+      "county": "Kronobergs län",
+      "afo": "5",
+      "afo_id": "5",
+      "boundary_mode": "current",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 16
+    },
+    {
+      "county": "Kronobergs län",
+      "afo": "6",
+      "afo_id": "6",
+      "boundary_mode": "current",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 94
+    },
+    {
+      "county": "Kronobergs län",
+      "afo": "7",
+      "afo_id": "7",
+      "boundary_mode": "current",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 39
+    },
+    {
+      "county": "Kronobergs län",
+      "afo": "1",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 49
+    },
+    {
+      "county": "Kronobergs län",
+      "afo": "2",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 48
+    },
+    {
+      "county": "Kronobergs län",
+      "afo": "3",
+      "afo_id": "3",
+      "boundary_mode": "historical",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 40
+    },
+    {
+      "county": "Kronobergs län",
+      "afo": "4",
+      "afo_id": "4",
+      "boundary_mode": "historical",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 13
+    },
+    {
+      "county": "Kronobergs län",
+      "afo": "5",
+      "afo_id": "5",
+      "boundary_mode": "historical",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 16
+    },
+    {
+      "county": "Kronobergs län",
+      "afo": "6",
+      "afo_id": "6",
+      "boundary_mode": "historical",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 94
+    },
+    {
+      "county": "Kronobergs län",
+      "afo": "7",
+      "afo_id": "7",
+      "boundary_mode": "historical",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 39
+    },
+    {
+      "county": "Norrbottens län",
+      "afo": "ÄFO 1",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 57
+    },
+    {
+      "county": "Norrbottens län",
+      "afo": "ÄFO 2",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 79
+    },
+    {
+      "county": "Norrbottens län",
+      "afo": "ÄFO 3",
+      "afo_id": "3",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 102
+    },
+    {
+      "county": "Norrbottens län",
+      "afo": "ÄFO 4",
+      "afo_id": "4",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 172
+    },
+    {
+      "county": "Norrbottens län",
+      "afo": "ÄFO 5",
+      "afo_id": "5",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 72
+    },
+    {
+      "county": "Norrbottens län",
+      "afo": "ÄFO 6",
+      "afo_id": "6",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 105
+    },
+    {
+      "county": "Norrbottens län",
+      "afo": "ÄFO 1",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 57
+    },
+    {
+      "county": "Norrbottens län",
+      "afo": "ÄFO 2",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 79
+    },
+    {
+      "county": "Norrbottens län",
+      "afo": "ÄFO 3",
+      "afo_id": "3",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 102
+    },
+    {
+      "county": "Norrbottens län",
+      "afo": "ÄFO 4",
+      "afo_id": "4",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 172
+    },
+    {
+      "county": "Norrbottens län",
+      "afo": "ÄFO 5",
+      "afo_id": "5",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 72
+    },
+    {
+      "county": "Norrbottens län",
+      "afo": "ÄFO 6",
+      "afo_id": "6",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 105
+    },
+    {
+      "county": "Skåne län",
+      "afo": "Södra älgförvaltningsområdet",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1993/1994",
+      "to_year": "2002/2003",
+      "area_count": 154
+    },
+    {
+      "county": "Skåne län",
+      "afo": "Mellersta Älgförvaltningsområdet",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1993/1994",
+      "to_year": "2002/2003",
+      "area_count": 120
+    },
+    {
+      "county": "Skåne län",
+      "afo": "Mellersta Norra älgförvaltningsområdet",
+      "afo_id": "3",
+      "boundary_mode": "current",
+      "from_year": "1993/1994",
+      "to_year": "2002/2003",
+      "area_count": 44
+    },
+    {
+      "county": "Skåne län",
+      "afo": "Nordvästra älgförvaltningsområdet",
+      "afo_id": "4",
+      "boundary_mode": "current",
+      "from_year": "1993/1994",
+      "to_year": "2002/2003",
+      "area_count": 17
+    },
+    {
+      "county": "Skåne län",
+      "afo": "Nordöstra älgförvaltningsområdet",
+      "afo_id": "5",
+      "boundary_mode": "current",
+      "from_year": "1993/1994",
+      "to_year": "2002/2003",
+      "area_count": 66
+    },
+    {
+      "county": "Skåne län",
+      "afo": "Södra älgförvaltningsområdet",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1993/1994",
+      "to_year": "2002/2003",
+      "area_count": 154
+    },
+    {
+      "county": "Skåne län",
+      "afo": "Mellersta Älgförvaltningsområdet",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1993/1994",
+      "to_year": "2002/2003",
+      "area_count": 120
+    },
+    {
+      "county": "Skåne län",
+      "afo": "Mellersta Norra älgförvaltningsområdet",
+      "afo_id": "3",
+      "boundary_mode": "historical",
+      "from_year": "1993/1994",
+      "to_year": "2002/2003",
+      "area_count": 44
+    },
+    {
+      "county": "Skåne län",
+      "afo": "Nordvästra älgförvaltningsområdet",
+      "afo_id": "4",
+      "boundary_mode": "historical",
+      "from_year": "1993/1994",
+      "to_year": "2002/2003",
+      "area_count": 17
+    },
+    {
+      "county": "Skåne län",
+      "afo": "Nordöstra älgförvaltningsområdet",
+      "afo_id": "5",
+      "boundary_mode": "historical",
+      "from_year": "1993/1994",
+      "to_year": "2002/2003",
+      "area_count": 66
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Norrtälje Norra",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 24
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Sigtuna",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 38
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Mälaröarna",
+      "afo_id": "3",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 21
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Södertörn",
+      "afo_id": "4",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 92
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Skärgården",
+      "afo_id": "5",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 35
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Vallentuna/Närtuna",
+      "afo_id": "6",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 64
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Södra Roslagen",
+      "afo_id": "7",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 46
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Södertälje",
+      "afo_id": "8",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 23
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Äfo ej specificerat",
+      "afo_id": "99",
+      "boundary_mode": "current",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 19
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Norrtälje Norra",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 24
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Sigtuna",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 38
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Mälaröarna",
+      "afo_id": "3",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 21
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Södertörn",
+      "afo_id": "4",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 92
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Skärgården",
+      "afo_id": "5",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 35
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Vallentuna/Närtuna",
+      "afo_id": "6",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 64
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Södra Roslagen",
+      "afo_id": "7",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 46
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Södertälje",
+      "afo_id": "8",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 23
+    },
+    {
+      "county": "Stockholms län",
+      "afo": "Äfo ej specificerat",
+      "afo_id": "99",
+      "boundary_mode": "historical",
+      "from_year": "1991/1992",
+      "to_year": "2000/2001",
+      "area_count": 19
+    },
+    {
+      "county": "Södermanlands län",
+      "afo": "ÄFO 1",
+      "afo_id": "11",
+      "boundary_mode": "current",
+      "from_year": "2009/2010",
+      "to_year": "2026/2027",
+      "area_count": 30
+    },
+    {
+      "county": "Södermanlands län",
+      "afo": "ÄFO 2",
+      "afo_id": "12",
+      "boundary_mode": "current",
+      "from_year": "2009/2010",
+      "to_year": "2026/2027",
+      "area_count": 31
+    },
+    {
+      "county": "Södermanlands län",
+      "afo": "ÄFO 1",
+      "afo_id": "11",
+      "boundary_mode": "historical",
+      "from_year": "2009/2010",
+      "to_year": "2026/2027",
+      "area_count": 30
+    },
+    {
+      "county": "Södermanlands län",
+      "afo": "ÄFO 2",
+      "afo_id": "12",
+      "boundary_mode": "historical",
+      "from_year": "2009/2010",
+      "to_year": "2026/2027",
+      "area_count": 31
+    },
+    {
+      "county": "Uppsala län",
+      "afo": "Östervåla Älgförvaltningsområde",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 28
+    },
+    {
+      "county": "Uppsala län",
+      "afo": "Österbybruks Älgförvaltningsområde",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 15
+    },
+    {
+      "county": "Uppsala län",
+      "afo": "Almunge Älgförvaltningsområde",
+      "afo_id": "4",
+      "boundary_mode": "current",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 9
+    },
+    {
+      "county": "Uppsala län",
+      "afo": "Trögds Älgförvaltningsområde",
+      "afo_id": "5",
+      "boundary_mode": "current",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 8
+    },
+    {
+      "county": "Uppsala län",
+      "afo": "Fjärdhundra Älgförvaltningsområde",
+      "afo_id": "6",
+      "boundary_mode": "current",
+      "from_year": "2012/2013",
+      "to_year": "2021/2022",
+      "area_count": 34
+    },
+    {
+      "county": "Uppsala län",
+      "afo": "Östervåla Älgförvaltningsområde",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 28
+    },
+    {
+      "county": "Uppsala län",
+      "afo": "Österbybruks Älgförvaltningsområde",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 15
+    },
+    {
+      "county": "Uppsala län",
+      "afo": "Almunge Älgförvaltningsområde",
+      "afo_id": "4",
+      "boundary_mode": "historical",
+      "from_year": "1995/1996",
+      "to_year": "2004/2005",
+      "area_count": 9
+    },
+    {
+      "county": "Uppsala län",
+      "afo": "Trögds Älgförvaltningsområde",
+      "afo_id": "5",
+      "boundary_mode": "historical",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 8
+    },
+    {
+      "county": "Uppsala län",
+      "afo": "Fjärdhundra Älgförvaltningsområde",
+      "afo_id": "6",
+      "boundary_mode": "historical",
+      "from_year": "2012/2013",
+      "to_year": "2021/2022",
+      "area_count": 34
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Finnskogens ÄFO",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 71
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Fryken-Glafsfjorden ÄFO",
+      "afo_id": "3",
+      "boundary_mode": "current",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 53
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Klarälven-Fryken ÄFO",
+      "afo_id": "4",
+      "boundary_mode": "current",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 53
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Örtens ÄFO",
+      "afo_id": "5",
+      "boundary_mode": "current",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 66
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Wermlandsbergs ÄFO",
+      "afo_id": "6",
+      "boundary_mode": "current",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 33
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Glaskogens ÄFO",
+      "afo_id": "7",
+      "boundary_mode": "current",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 58
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Vänerbygdens ÄFO",
+      "afo_id": "8",
+      "boundary_mode": "current",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 93
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Bergslagskanalens ÄFO",
+      "afo_id": "9",
+      "boundary_mode": "current",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 28
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Vänern-Möckeln ÄFO",
+      "afo_id": "10",
+      "boundary_mode": "current",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 36
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Finnskogens ÄFO",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 71
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Fryken-Glafsfjorden ÄFO",
+      "afo_id": "3",
+      "boundary_mode": "historical",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 53
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Klarälven-Fryken ÄFO",
+      "afo_id": "4",
+      "boundary_mode": "historical",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 53
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Örtens ÄFO",
+      "afo_id": "5",
+      "boundary_mode": "historical",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 66
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Wermlandsbergs ÄFO",
+      "afo_id": "6",
+      "boundary_mode": "historical",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 33
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Glaskogens ÄFO",
+      "afo_id": "7",
+      "boundary_mode": "historical",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 58
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Vänerbygdens ÄFO",
+      "afo_id": "8",
+      "boundary_mode": "historical",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 93
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Bergslagskanalens ÄFO",
+      "afo_id": "9",
+      "boundary_mode": "historical",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 28
+    },
+    {
+      "county": "Värmlands län",
+      "afo": "Vänern-Möckeln ÄFO",
+      "afo_id": "10",
+      "boundary_mode": "historical",
+      "from_year": "1998/1999",
+      "to_year": "2007/2008",
+      "area_count": 36
+    },
+    {
+      "county": "Västerbottens län",
+      "afo": "Nordvästra älgförvaltningsområdet",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 134
+    },
+    {
+      "county": "Västerbottens län",
+      "afo": "Mellersta älgförvaltningsområdet",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 286
+    },
+    {
+      "county": "Västerbottens län",
+      "afo": "Sydvästra älgförvaltningsområdet",
+      "afo_id": "3",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 273
+    },
+    {
+      "county": "Västerbottens län",
+      "afo": "Nordöstra älgförvaltningsområdet",
+      "afo_id": "4",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 411
+    },
+    {
+      "county": "Västerbottens län",
+      "afo": "Sydöstra älgförvaltningsområdet",
+      "afo_id": "5",
+      "boundary_mode": "current",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 361
+    },
+    {
+      "county": "Västerbottens län",
+      "afo": "Nordvästra älgförvaltningsområdet",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 134
+    },
+    {
+      "county": "Västerbottens län",
+      "afo": "Mellersta älgförvaltningsområdet",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 286
+    },
+    {
+      "county": "Västerbottens län",
+      "afo": "Sydvästra älgförvaltningsområdet",
+      "afo_id": "3",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 273
+    },
+    {
+      "county": "Västerbottens län",
+      "afo": "Nordöstra älgförvaltningsområdet",
+      "afo_id": "4",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 411
+    },
+    {
+      "county": "Västerbottens län",
+      "afo": "Sydöstra älgförvaltningsområdet",
+      "afo_id": "5",
+      "boundary_mode": "historical",
+      "from_year": "1990/1991",
+      "to_year": "1999/2000",
+      "area_count": 361
+    },
+    {
+      "county": "Västernorrlands län",
+      "afo": "Örnsköldsvik",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1988/1989",
+      "to_year": "1997/1998",
+      "area_count": 264
+    },
+    {
+      "county": "Västernorrlands län",
+      "afo": "Älvarna",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1988/1989",
+      "to_year": "1997/1998",
+      "area_count": 141
+    },
+    {
+      "county": "Västernorrlands län",
+      "afo": "Örnsköldsvik",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1988/1989",
+      "to_year": "1997/1998",
+      "area_count": 264
+    },
+    {
+      "county": "Västernorrlands län",
+      "afo": "Älvarna",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1988/1989",
+      "to_year": "1997/1998",
+      "area_count": 141
+    },
+    {
+      "county": "Västmanlands län",
+      "afo": "Fagersta-Möklinta ÄFO 1",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 26
+    },
+    {
+      "county": "Västmanlands län",
+      "afo": "Gunnilbo ÄFO 2",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 20
+    },
+    {
+      "county": "Västmanlands län",
+      "afo": "Kungsör ÄFO 3",
+      "afo_id": "5",
+      "boundary_mode": "current",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 21
+    },
+    {
+      "county": "Västmanlands län",
+      "afo": "Fagersta-Möklinta ÄFO 1",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 26
+    },
+    {
+      "county": "Västmanlands län",
+      "afo": "Gunnilbo ÄFO 2",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 20
+    },
+    {
+      "county": "Västmanlands län",
+      "afo": "Kungsör ÄFO 3",
+      "afo_id": "5",
+      "boundary_mode": "historical",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 21
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 1 Norra Dal",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 237
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 2 Norra Bohuslän",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 292
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 3",
+      "afo_id": "3",
+      "boundary_mode": "current",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 160
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 4",
+      "afo_id": "4",
+      "boundary_mode": "current",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 153
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 5",
+      "afo_id": "5",
+      "boundary_mode": "current",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 161
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 6 Norra Skaraborgs äfo",
+      "afo_id": "6",
+      "boundary_mode": "current",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 192
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 7",
+      "afo_id": "7",
+      "boundary_mode": "current",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 338
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 8",
+      "afo_id": "8",
+      "boundary_mode": "current",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 105
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 9 ÄFO söder R40",
+      "afo_id": "9",
+      "boundary_mode": "current",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 212
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 1 Norra Dal",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 237
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 2 Norra Bohuslän",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 292
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 3",
+      "afo_id": "3",
+      "boundary_mode": "historical",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 160
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 4",
+      "afo_id": "4",
+      "boundary_mode": "historical",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 153
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 5",
+      "afo_id": "5",
+      "boundary_mode": "historical",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 161
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 6 Norra Skaraborgs äfo",
+      "afo_id": "6",
+      "boundary_mode": "historical",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 192
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 7",
+      "afo_id": "7",
+      "boundary_mode": "historical",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 338
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 8",
+      "afo_id": "8",
+      "boundary_mode": "historical",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 105
+    },
+    {
+      "county": "Västra Götalands län",
+      "afo": "Älgförvaltningsområde 9 ÄFO söder R40",
+      "afo_id": "9",
+      "boundary_mode": "historical",
+      "from_year": "1996/1997",
+      "to_year": "2005/2006",
+      "area_count": 212
+    },
+    {
+      "county": "Örebro län",
+      "afo": "1. Hökhöjden",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1992/1993",
+      "to_year": "2001/2002",
+      "area_count": 40
+    },
+    {
+      "county": "Örebro län",
+      "afo": "2. Malingsbo",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1992/1993",
+      "to_year": "2001/2002",
+      "area_count": 15
+    },
+    {
+      "county": "Örebro län",
+      "afo": "3. Kilsbergen",
+      "afo_id": "3",
+      "boundary_mode": "current",
+      "from_year": "1992/1993",
+      "to_year": "2001/2002",
+      "area_count": 14
+    },
+    {
+      "county": "Örebro län",
+      "afo": "4. Frövi",
+      "afo_id": "4",
+      "boundary_mode": "current",
+      "from_year": "1992/1993",
+      "to_year": "2001/2002",
+      "area_count": 11
+    },
+    {
+      "county": "Örebro län",
+      "afo": "5. Örebro läns västra",
+      "afo_id": "5",
+      "boundary_mode": "current",
+      "from_year": "1992/1993",
+      "to_year": "2001/2002",
+      "area_count": 45
+    },
+    {
+      "county": "Örebro län",
+      "afo": "6. Örebro läns sydöstra",
+      "afo_id": "6",
+      "boundary_mode": "current",
+      "from_year": "1992/1993",
+      "to_year": "2001/2002",
+      "area_count": 27
+    },
+    {
+      "county": "Örebro län",
+      "afo": "7. Tiveden",
+      "afo_id": "7",
+      "boundary_mode": "current",
+      "from_year": "1992/1993",
+      "to_year": "2001/2002",
+      "area_count": 38
+    },
+    {
+      "county": "Örebro län",
+      "afo": "1. Hökhöjden",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1992/1993",
+      "to_year": "2001/2002",
+      "area_count": 40
+    },
+    {
+      "county": "Örebro län",
+      "afo": "2. Malingsbo",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1992/1993",
+      "to_year": "2001/2002",
+      "area_count": 15
+    },
+    {
+      "county": "Örebro län",
+      "afo": "3. Kilsbergen",
+      "afo_id": "3",
+      "boundary_mode": "historical",
+      "from_year": "1992/1993",
+      "to_year": "2001/2002",
+      "area_count": 14
+    },
+    {
+      "county": "Örebro län",
+      "afo": "4. Frövi",
+      "afo_id": "4",
+      "boundary_mode": "historical",
+      "from_year": "1992/1993",
+      "to_year": "2001/2002",
+      "area_count": 11
+    },
+    {
+      "county": "Örebro län",
+      "afo": "5. Örebro läns västra",
+      "afo_id": "5",
+      "boundary_mode": "historical",
+      "from_year": "1992/1993",
+      "to_year": "2001/2002",
+      "area_count": 45
+    },
+    {
+      "county": "Örebro län",
+      "afo": "6. Örebro läns sydöstra",
+      "afo_id": "6",
+      "boundary_mode": "historical",
+      "from_year": "1992/1993",
+      "to_year": "2001/2002",
+      "area_count": 27
+    },
+    {
+      "county": "Örebro län",
+      "afo": "7. Tiveden",
+      "afo_id": "7",
+      "boundary_mode": "historical",
+      "from_year": "1992/1993",
+      "to_year": "2001/2002",
+      "area_count": 38
+    },
+    {
+      "county": "Östergötlands län",
+      "afo": "Finspång och del av Norrköpings kommun",
+      "afo_id": "1",
+      "boundary_mode": "current",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 63
+    },
+    {
+      "county": "Östergötlands län",
+      "afo": "Vikbolandet och kusten öster om E 22 ner till läns",
+      "afo_id": "2",
+      "boundary_mode": "current",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 62
+    },
+    {
+      "county": "Östergötlands län",
+      "afo": "Åtvidaberg samt del av Linköpings, Valdemarsviks S",
+      "afo_id": "3",
+      "boundary_mode": "current",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 112
+    },
+    {
+      "county": "Östergötlands län",
+      "afo": "Boxholm samt del av Linköping, Mjölby och Ödeshög",
+      "afo_id": "4",
+      "boundary_mode": "current",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 41
+    },
+    {
+      "county": "Östergötlands län",
+      "afo": "Kinda",
+      "afo_id": "5",
+      "boundary_mode": "current",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 46
+    },
+    {
+      "county": "Östergötlands län",
+      "afo": "Vadstenaslätten mellan Motala Ström och E4:an",
+      "afo_id": "6",
+      "boundary_mode": "current",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 23
+    },
+    {
+      "county": "Östergötlands län",
+      "afo": "Ydre",
+      "afo_id": "7",
+      "boundary_mode": "current",
+      "from_year": "2013/2014",
+      "to_year": "2022/2023",
+      "area_count": 19
+    },
+    {
+      "county": "Östergötlands län",
+      "afo": "Motala och del av Linköping",
+      "afo_id": "8",
+      "boundary_mode": "current",
+      "from_year": "2013/2014",
+      "to_year": "2022/2023",
+      "area_count": 28
+    },
+    {
+      "county": "Östergötlands län",
+      "afo": "Finspång och del av Norrköpings kommun",
+      "afo_id": "1",
+      "boundary_mode": "historical",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 63
+    },
+    {
+      "county": "Östergötlands län",
+      "afo": "Vikbolandet och kusten öster om E 22 ner till läns",
+      "afo_id": "2",
+      "boundary_mode": "historical",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 62
+    },
+    {
+      "county": "Östergötlands län",
+      "afo": "Åtvidaberg samt del av Linköpings, Valdemarsviks S",
+      "afo_id": "3",
+      "boundary_mode": "historical",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 112
+    },
+    {
+      "county": "Östergötlands län",
+      "afo": "Boxholm samt del av Linköping, Mjölby och Ödeshög",
+      "afo_id": "4",
+      "boundary_mode": "historical",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 41
+    },
+    {
+      "county": "Östergötlands län",
+      "afo": "Kinda",
+      "afo_id": "5",
+      "boundary_mode": "historical",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 46
+    },
+    {
+      "county": "Östergötlands län",
+      "afo": "Vadstenaslätten mellan Motala Ström och E4:an",
+      "afo_id": "6",
+      "boundary_mode": "historical",
+      "from_year": "1989/1990",
+      "to_year": "1998/1999",
+      "area_count": 23
+    },
+    {
+      "county": "Östergötlands län",
+      "afo": "Ydre",
+      "afo_id": "7",
+      "boundary_mode": "historical",
+      "from_year": "2013/2014",
+      "to_year": "2022/2023",
+      "area_count": 19
+    },
+    {
+      "county": "Östergötlands län",
+      "afo": "Motala och del av Linköping",
+      "afo_id": "8",
+      "boundary_mode": "historical",
+      "from_year": "2013/2014",
+      "to_year": "2022/2023",
+      "area_count": 28
+    }
+  ],
+  "errors": [],
+  "interpretation": "Selector catalogue only. IDs and labels are observations, not verified stable geographic identities; current/historical modes and year coverage must be retained."
+}
