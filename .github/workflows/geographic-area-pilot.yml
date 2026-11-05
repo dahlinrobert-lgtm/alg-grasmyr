@@ -45,8 +45,8 @@ jobs:
         run: python -m unittest tests.test_geographic_pilot -v
       - name: Run bounded regional portal pilot
         env:
-          PILOT_COUNTIES: \${{ inputs.counties }}
-          MIN_END_YEAR: \${{ inputs.min_end_year }}
+          PILOT_COUNTIES: ${{ inputs.counties || '' }}
+          MIN_END_YEAR: ${{ inputs.min_end_year || 2024 }}
         run: |
           if [ -n "$PILOT_COUNTIES" ]; then
             python scripts/run_geographic_pilot.py --counties $PILOT_COUNTIES --min-end-year "$MIN_END_YEAR"
