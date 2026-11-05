@@ -55,7 +55,7 @@ class GeographicPilotTests(unittest.TestCase):
                 writer = csv.writer(handle, delimiter=";")
                 writer.writerow(fields)
                 writer.writerows(rows)
-            selected, missing, collisions = select_candidates(path, ["Norrbottens län"])
+            selected, missing, collisions = select_candidates(path, ["Norrbottens län"], areas_per_county=1)
             self.assertEqual([r["area_portal_id"] for r in selected], ["301"])
             self.assertEqual(missing, [])
 
