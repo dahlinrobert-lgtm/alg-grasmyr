@@ -1,0 +1,26 @@
+name: Test geographic Älgdata pilot
+
+on:
+  pull_request:
+    paths:
+      - "scripts/run_geographic_pilot.py"
+      - "scripts/download_statistics.py"
+      - "tests/test_geographic_pilot.py"
+      - ".github/workflows/test-geographic-pilot.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test candidate selection
+        run: python -m unittest tests.test_geographic_pilot -v
+      - name: Compile pilot scripts
+        run: python -m py_compile scripts/run_geographic_pilot.py scripts/download_statistics.py
