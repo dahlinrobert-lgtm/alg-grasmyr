@@ -47,3 +47,17 @@ CSV-exporten följer rapportens tvådelade tabellhuvud. Tredje källkolumnen är
 Standardpiloten väljer högst fem områden per län och prioriterar geografisk/organisatorisk spridning genom att gå igenom ÄFO i rundor. Först väljs ett område från varje ÄFO, därefter ett andra område från respektive ÄFO och så vidare. Portal-ID:n dedupliceras inom katalogurvalet och får inte tilldelas flera län. Om samma ID förekommer i flera län registreras kollisionen och den andra förekomsten hoppas över. Sammanfattningen redovisar antal valda områden och antal unika ÄFO per län, saknade län, ID-kollisioner, portalframgångar, datarader och fel.
 
 Ett område som saknas efter urvalet betyder att katalogen inte hade tillräckligt många kandidater som uppfyllde säsongs- och identitetsfiltren; det är inte bevis för att länet saknar jaktområden. Pilotresultaten lagras som workflow-artefakt och förs inte automatiskt in i produktionshistoriken.
+
+
+## Automatisk kvalitetskontroll av pilotartefakter
+
+Efter portalhämtningen körs `scripts/validate_geographic_pilot.py` innan artefakten laddas upp. Valideringen jämför urvalskatalogen, pilotsammanfattningen, varje portalrapport och CSV-fil. Den kontrollerar bland annat:
+
+- att antal kandidater, resultat och unika portal-ID:n stämmer överens;
+- att län, ÄFO, jaktår och gränsläge överensstämmer mellan katalog och rapport;
+- att portalens faktiskt valda ID och slutår matchar begäran;
+- att CSV:ns registreringsnummer matchar portalens valda område;
+- att CSV-kolumnerna har samma schema i alla uttag och att `Slutrapporterat` innehåller Ja/Nej;
+- att radantal och status i CSV, portalrapport och sammanfattning är konsekventa.
+
+Tomma tabeller och diagnostiska statusar skiljs från felaktig identitet eller säsong. Valideringen gör inte anspråk på att bevisa att portalens värden motsvarar en separat Excel-export; den säkrar att pilotens egna uttag är internt konsekventa och spårbara.
