@@ -7,7 +7,6 @@ import csv
 import hashlib
 import json
 import re
-from datetime import datetime, timezone
 from pathlib import Path
 
 EVENT_FIELDS = [
@@ -206,7 +205,7 @@ def main() -> int:
     for event in all_events:
         counts[event["event_type"]] = counts.get(event["event_type"], 0) + 1
     quality = {
-        "generated_at_utc": max((e["observed_at_utc"] for e in all_events if e["observed_at_utc"]), default=""),
+        "generated_at_utc": (max((a["latest_snapshot"] for a in areas if a["latest_snapshot"]), default="") + "T00:00:00Z") if areas else "",
         "scope": "daily portal snapshots; report 4 (Avskjutning med mål — ÄJO)",
         "area_count": len(areas),
         "snapshot_count": sum(a["snapshot_count"] for a in areas),
