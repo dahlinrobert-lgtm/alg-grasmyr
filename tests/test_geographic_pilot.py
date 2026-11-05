@@ -24,7 +24,7 @@ class GeographicPilotTests(unittest.TestCase):
                 writer = csv.writer(handle, delimiter=";")
                 writer.writerow(fields)
                 writer.writerows(rows)
-            selected, missing, collisions = select_candidates(path, ["Norrbottens län", "Västerbottens län", "Skåne län"])
+            selected, missing, collisions = select_candidates(path, ["Norrbottens län", "Västerbottens län", "Skåne län"], areas_per_county=1)
             self.assertEqual([r["area_portal_id"] for r in selected], ["101", "200"])
             self.assertEqual(missing, ["Skåne län"])
             self.assertEqual(collisions, [])
@@ -74,6 +74,56 @@ class GeographicPilotTests(unittest.TestCase):
                 writer.writerows(rows)
             selected, missing, collisions = select_candidates(path, ["Jämtlands län", "Gävleborgs län"])
             self.assertEqual([r["area_portal_id"] for r in selected], ["722495", "722496"])
+            self.assertEqual(missing, [])
+            self.assertEqual(len(collisions), 1)
+            self.assertEqual(collisions[0]["already_assigned_county"], "Jämtlands län")
+
+    def test_selects_up_to_five_areas_spread_across_afos(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "catalog.csv"
+            fields = ["county", "boundary_mode", "area_portal_id", "from_year", "to_year",
+                      "afo_name", "area_name", "area_label_raw"]
+            rows = [
+                ["Norrbottens län", "current", "101", "2026/2027", "2026/2027", "AFO A", "Area A1", "A1"],
+                ["Norrbottens län", "current", "102", "2026/2027", "2026/2027", "AFO A", "Area A2", "A2"],
+                ["Norrbottens län", "current", "103", "2026/2027", "2026/2027", "AFO A", "Area A3", "A3"],
+                ["Norrbottens län", "current", "104", "2026/2027", "2026/2027", "AFO B", "Area B1", "B1"],
+                ["Norrbottens län", "current", "105", "2026/2027", "2026/2027", "AFO C", "Area C1", "C1"],
+                ["Norrbottens län", "current", "106", "2026/2027", "2026/2027", "AFO D", "Area D1", "D1"],
+                ["Norrbottens län", "current", "107", "2025/2026", "2025/2026", "AFO E", "Old season", "Old"],
+                ["Norrbottens län", "historical", "108", "2026/2027", "2026/2027", "AFO F", "Historical", "Hist"],
+            ]
+            with path.open("w", encoding="utf-8", newline="") as handle:
+                writer = csv.writer(handle, delimiter=";")
+                writer.writerow(fields)
+                writer.writerows(rows)
+            selected, missing, collisions = select_candidates(
+                path, ["Norrbottens län"], min_end_year=2026, areas_per_county=5
+            )
+            self.assertEqual(len(selected), 5)
+            self.assertEqual({r["afo_name"] for r in selected}, {"AFO A", "AFO B", "AFO C", "AFO D"})
+            self.assertEqual([r["area_portal_id"] for r in selected], ["101", "104", "105", "106", "102"])
+            self.assertEqual(missing, [])
+            self.assertEqual(collisions, [])
+
+    def test_multi_area_sample_never_reuses_portal_id_across_counties(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "catalog.csv"
+            fields = ["county", "boundary_mode", "area_portal_id", "from_year", "to_year", "afo_name", "area_name"]
+            rows = [
+                ["Jämtlands län", "current", "722495", "2026/2027", "2026/2027", "AFO J", "Area J"],
+                ["Jämtlands län", "current", "722496", "2026/2027", "2026/2027", "AFO J", "Area J2"],
+                ["Gävleborgs län", "current", "722495", "2026/2027", "2026/2027", "AFO G", "Area G"],
+                ["Gävleborgs län", "current", "722497", "2026/2027", "2026/2027", "AFO G", "Area G2"],
+            ]
+            with path.open("w", encoding="utf-8", newline="") as handle:
+                writer = csv.writer(handle, delimiter=";")
+                writer.writerow(fields)
+                writer.writerows(rows)
+            selected, missing, collisions = select_candidates(
+                path, ["Jämtlands län", "Gävleborgs län"], min_end_year=2026, areas_per_county=5
+            )
+            self.assertEqual([r["area_portal_id"] for r in selected], ["722495", "722496", "722497"])
             self.assertEqual(missing, [])
             self.assertEqual(len(collisions), 1)
             self.assertEqual(collisions[0]["already_assigned_county"], "Jämtlands län")
