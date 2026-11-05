@@ -1,0 +1,35 @@
+name: Audit Älgdata original exports
+
+on:
+  push:
+    paths:
+      - "data/source_exports/**"
+      - "data/raw/**"
+      - "scripts/verify_source_exports.py"
+      - "tests/test_verify_source_exports.py"
+      - ".github/workflows/verify-source-exports.yml"
+  schedule:
+    - cron: "50 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test source audit
+        run: python -m unittest discover -s tests -p "test_verify_source_exports.py" -v
+      - name: Audit source export manifest
+        run: python scripts/verify_source_exports.py
+      - name: Upload audit artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-export-audit
+          path: data/quality/source_export_audit.json
