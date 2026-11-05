@@ -185,6 +185,7 @@ async def main() -> None:
     parser.add_argument("--from-year", default="2010/2011")
     parser.add_argument("--to-year", default="2025/2026")
     parser.add_argument("--area-id", default=AREA_ID)
+    parser.add_argument("--county", default=COUNTY_NAME, help="Exact county label from the portal selector")
     parser.add_argument("--afo-name", default=AFO_NAME)
     parser.add_argument("--boundary-mode", choices=("current", "historical"), default="current")
     parser.add_argument("--report-id", default=REPORT_ID)
@@ -254,7 +255,7 @@ async def main() -> None:
             report_config = await choose_report(page.locator("select").nth(0), args.report_id)
 
             # County and AFO trigger official dependent JSON lookups.
-            await choose_by_label(page.locator("select").nth(1), COUNTY_NAME)
+            await choose_by_label(page.locator("select").nth(1), args.county)
             await page.wait_for_timeout(500)
             await choose_by_label(page.locator("select").nth(2), args.afo_name)
             await page.wait_for_timeout(900)
@@ -334,7 +335,7 @@ async def main() -> None:
     report = {
         "inspected_at_utc": datetime.now(timezone.utc).isoformat(),
         "source_url": URL,
-        "county": COUNTY_NAME,
+        "county": args.county,
         "afo": args.afo_name,
         "selected_area": selected_area,
         "report_config": report_config,
