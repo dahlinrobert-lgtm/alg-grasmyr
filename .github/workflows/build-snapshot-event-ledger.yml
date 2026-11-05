@@ -38,6 +38,7 @@ jobs:
         run: python scripts/build_snapshot_event_ledger.py
 
       - name: Commit generated ledger and report
+        if: github.ref == 'refs/heads/main'
         run: |
           if [[ -n "$(git status --porcelain data/events data/quality)" ]]; then
             git config user.name "github-actions[bot]"
