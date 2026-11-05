@@ -5,7 +5,7 @@ on:
     paths:
       - "data/daily_snapshots/**"
       - "scripts/validate_daily_snapshots.py"
-      - "tests/test_validate_daily_snapshots.py"
+      - "tests/**"
       - ".github/workflows/validate-daily-snapshots.yml"
   schedule:
     # Run after the daily snapshot job (06:35 UTC).
