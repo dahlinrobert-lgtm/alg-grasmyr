@@ -4,10 +4,12 @@ on:
   push:
     paths:
       - "scripts/run_geographic_pilot.py"
+      - "scripts/validate_geographic_pilot.py"
       - "scripts/download_statistics.py"
       - "scripts/discover_national_areas.py"
       - "tests/test_current_season_pilot.py"
       - "tests/test_geographic_pilot.py"
+      - "tests/test_geographic_pilot_validation.py"
       - "data/national_area_catalog/**"
       - ".github/workflows/geographic-area-pilot.yml"
   workflow_dispatch:
@@ -51,8 +53,8 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Test current-season selection and portal identity checks
         run: |
-          python -m unittest tests.test_geographic_pilot tests.test_current_season_pilot -v
-          python -m py_compile scripts/discover_national_areas.py scripts/run_geographic_pilot.py scripts/download_statistics.py
+          python -m unittest tests.test_geographic_pilot tests.test_current_season_pilot tests.test_geographic_pilot_validation -v
+          python -m py_compile scripts/discover_national_areas.py scripts/run_geographic_pilot.py scripts/validate_geographic_pilot.py scripts/download_statistics.py
       - name: Refresh selector catalogue for the six pilot counties
         run: |
           python scripts/discover_national_areas.py \
@@ -73,6 +75,11 @@ jobs:
           else
             python scripts/run_geographic_pilot.py --min-end-year "$MIN_END_YEAR" --areas-per-county "$AREAS_PER_COUNTY"
           fi
+      - name: Validate downloaded pilot data and identities
+        if: always()
+        run: python scripts/validate_geographic_pilot.py --directory out/geographic-pilot --min-end-year "$MIN_END_YEAR"
+        env:
+          MIN_END_YEAR: ${{ inputs.min_end_year || 2026 }}
       - name: Upload regional pilot results
         if: always()
         uses: actions/upload-artifact@v4
