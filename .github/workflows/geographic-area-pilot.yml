@@ -5,6 +5,9 @@ on:
     paths:
       - "scripts/run_geographic_pilot.py"
       - "scripts/download_statistics.py"
+      - "scripts/discover_national_areas.py"
+      - "tests/test_current_season_pilot.py"
+      - "tests/test_geographic_pilot.py"
       - "data/national_area_catalog/**"
       - ".github/workflows/geographic-area-pilot.yml"
   workflow_dispatch:
@@ -41,8 +44,19 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install playwright
           python -m playwright install --with-deps chromium
-      - name: Test regional candidate selection
-        run: python -m unittest tests.test_geographic_pilot -v
+      - name: Test current-season selection and portal identity checks
+        run: |
+          python -m unittest tests.test_geographic_pilot tests.test_current_season_pilot -v
+          python -m py_compile scripts/discover_national_areas.py scripts/run_geographic_pilot.py scripts/download_statistics.py
+      - name: Refresh selector catalogue for the six pilot counties
+        run: |
+          python scripts/discover_national_areas.py \
+            --county "Norrbottens län" \
+            --county "Västerbottens län" \
+            --county "Jämtlands län" \
+            --county "Dalarnas län" \
+            --county "Gävleborgs län" \
+            --county "Skåne län"
       - name: Run bounded regional portal pilot
         env:
           PILOT_COUNTIES: ${{ inputs.counties || '' }}
