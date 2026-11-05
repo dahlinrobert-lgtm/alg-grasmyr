@@ -26,11 +26,23 @@ def year_number(season: str) -> int:
     return int(match.group(1)) if match else -1
 
 
-def select_candidates(catalog_path: Path, counties: list[str], min_end_year: int = 0) -> tuple[list[dict], list[str], list[dict]]:
+def select_candidates(
+    catalog_path: Path,
+    counties: list[str],
+    min_end_year: int = 0,
+    areas_per_county: int = 5,
+) -> tuple[list[dict], list[str], list[dict]]:
+    """Select a bounded current-boundary sample, spread across AFOs first."""
+    if areas_per_county < 1:
+        raise ValueError("areas_per_county must be at least 1")
     with catalog_path.open("r", encoding="utf-8-sig", newline="") as handle:
         rows = list(csv.DictReader(handle, delimiter=";"))
-    selected, missing, collisions = [], [], []
-    used_ids = {}
+
+    selected: list[dict] = []
+    missing: list[str] = []
+    collisions: list[dict] = []
+    used_ids: dict[str, str] = {}
+
     for county in counties:
         candidates = [
             row for row in rows
@@ -41,31 +53,51 @@ def select_candidates(catalog_path: Path, counties: list[str], min_end_year: int
             and year_number(row.get("to_year", "")) >= min_end_year
             and row.get("afo_name")
         ]
-        if not candidates:
-            missing.append(county)
-            continue
-        # Prefer the broadest recent coverage, then stable lexical ordering.
         candidates.sort(key=lambda r: (
             -year_number(r.get("to_year", "")),
-            year_number(r.get("from_year", "")),
+            r.get("afo_name", "").casefold(),
             r.get("area_name", "").casefold(),
             r.get("area_portal_id", ""),
         ))
-        chosen = None
+
+        # Deduplicate repeated catalogue observations for the same portal ID.
+        by_id: dict[str, dict] = {}
         for candidate in candidates:
-            area_id = candidate["area_portal_id"]
-            if area_id in used_ids:
-                collisions.append({"area_id": area_id, "county": county,
-                                   "already_assigned_county": used_ids[area_id],
-                                   "afo_name": candidate.get("afo_name", "")})
-                continue
-            chosen = candidate
-            used_ids[area_id] = county
-            break
-        if chosen is None:
+            by_id.setdefault(candidate["area_portal_id"], candidate)
+
+        # Round-robin across AFOs: first choose one area per AFO, then a
+        # second area per AFO, etc. This avoids a sample dominated by one AFO.
+        by_afo: dict[str, list[dict]] = {}
+        for candidate in by_id.values():
+            by_afo.setdefault(candidate["afo_name"], []).append(candidate)
+        afo_names = sorted(by_afo, key=str.casefold)
+        county_selected: list[dict] = []
+        for round_index in range(max((len(v) for v in by_afo.values()), default=0)):
+            for afo_name in afo_names:
+                options = by_afo[afo_name]
+                if round_index >= len(options):
+                    continue
+                candidate = options[round_index]
+                area_id = candidate["area_portal_id"]
+                if area_id in used_ids:
+                    collisions.append({
+                        "area_id": area_id,
+                        "county": county,
+                        "already_assigned_county": used_ids[area_id],
+                        "afo_name": candidate.get("afo_name", ""),
+                    })
+                    continue
+                used_ids[area_id] = county
+                county_selected.append(candidate)
+                if len(county_selected) >= areas_per_county:
+                    break
+            if len(county_selected) >= areas_per_county:
+                break
+
+        if not county_selected:
             missing.append(county)
-        else:
-            selected.append(chosen)
+        selected.extend(county_selected)
+
     return selected, missing, collisions
 
 
@@ -74,11 +106,12 @@ def main() -> int:
     parser.add_argument("--catalog", type=Path, default=Path("data/national_area_catalog/national_area_catalog.csv"))
     parser.add_argument("--out", type=Path, default=Path("out/geographic-pilot"))
     parser.add_argument("--counties", nargs="*", default=DEFAULT_COUNTIES)
-    parser.add_argument("--min-end-year", type=int, default=0, help="Optional minimum end-season start year; 0 includes all catalogued periods")
+    parser.add_argument("--min-end-year", type=int, default=2026, help="Minimum end-season start year; defaults to the 2026/2027 season")
+    parser.add_argument("--areas-per-county", type=int, default=5, help="Maximum areas sampled per county, spread across AFOs first")
     parser.add_argument("--report-id", default="4")
     args = parser.parse_args()
 
-    candidates, missing, collisions = select_candidates(args.catalog, args.counties, args.min_end_year)
+    candidates, missing, collisions = select_candidates(args.catalog, args.counties, args.min_end_year, args.areas_per_county)
     args.out.mkdir(parents=True, exist_ok=True)
     (args.out / "selected_candidates.json").write_text(
         json.dumps({"counties_requested": args.counties, "missing_counties": missing,
@@ -137,7 +170,7 @@ def main() -> int:
         "portal_selection_success_count": sum(x["portal_selection_success"] for x in results),
         "data_available_count": sum(x["data_available"] for x in results),
         "no_data_count": sum(x["data_status"] == "no_rendered_rows" for x in results),
-        "failure_count": sum(not x["portal_selection_success"] for x in results),
+        "failure_count": sum(not x["portal_selection_success"] for x in results),\n        "data_row_count": sum(x["data_csv_rows"] for x in results),\n        "nonempty_report_count": sum(x["data_status"] == "data_rows" for x in results),
         "results": results,
         "interpretation": (
             "A successful run proves that this area could be selected and a report table was returned "
