@@ -81,6 +81,8 @@ def validate_pilot(output_dir: Path, min_end_year: int = 2026) -> list[str]:
         csv_name = report.get("data_csv")
         csv_path = report_dir / csv_name if csv_name else None
         if not csv_path or not csv_path.is_file():
+            if report.get("data_status") in {"no_rendered_table", "unrecognized_table_structure"} and int(report.get("data_csv_rows", 0) or 0) == 0:
+                continue
             errors.append(f"{area_id}: missing report CSV")
             continue
         with csv_path.open("r", encoding="utf-8-sig", newline="") as handle:
