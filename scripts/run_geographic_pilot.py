@@ -26,7 +26,7 @@ def year_number(season: str) -> int:
     return int(match.group(1)) if match else -1
 
 
-def select_candidates(catalog_path: Path, counties: list[str], min_end_year: int = 2024) -> tuple[list[dict], list[str]]:
+def select_candidates(catalog_path: Path, counties: list[str], min_end_year: int = 0) -> tuple[list[dict], list[str]]:
     with catalog_path.open("r", encoding="utf-8-sig", newline="") as handle:
         rows = list(csv.DictReader(handle, delimiter=";"))
     selected, missing = [], []
@@ -37,7 +37,6 @@ def select_candidates(catalog_path: Path, counties: list[str], min_end_year: int
             and row.get("boundary_mode") == "current"
             and row.get("area_portal_id")
             and row.get("area_portal_id") not in EXCLUDED_AREA_IDS
-            and year_number(row.get("from_year", "")) >= 1990
             and year_number(row.get("to_year", "")) >= min_end_year
             and row.get("afo_name")
         ]
@@ -60,7 +59,7 @@ def main() -> int:
     parser.add_argument("--catalog", type=Path, default=Path("data/national_area_catalog/national_area_catalog.csv"))
     parser.add_argument("--out", type=Path, default=Path("out/geographic-pilot"))
     parser.add_argument("--counties", nargs="*", default=DEFAULT_COUNTIES)
-    parser.add_argument("--min-end-year", type=int, default=2024)
+    parser.add_argument("--min-end-year", type=int, default=0, help="Optional minimum end-season start year; 0 includes all catalogued periods")
     parser.add_argument("--report-id", default="4")
     args = parser.parse_args()
 
@@ -76,9 +75,8 @@ def main() -> int:
         area_id = candidate["area_portal_id"]
         county_slug = re.sub(r"[^a-z0-9]+", "-", candidate["county"].casefold()).strip("-")
         target = args.out / f"{index:02d}-{county_slug}-{area_id}"
+        # Use the exact catalogue-supported period; do not force a newer start year.
         start = candidate["from_year"]
-        if year_number(start) < 2020:
-            start = "2020/2021"
         command = [
             sys.executable, "scripts/download_statistics.py",
             "--out", str(target),
