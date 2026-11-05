@@ -1,6 +1,12 @@
 name: Geographic Älgdata pilot
 
 on:
+  push:
+    paths:
+      - "scripts/run_geographic_pilot.py"
+      - "scripts/download_statistics.py"
+      - "data/national_area_catalog/**"
+      - ".github/workflows/geographic-area-pilot.yml"
   workflow_dispatch:
     inputs:
       counties:
