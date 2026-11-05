@@ -5,7 +5,9 @@ on:
     paths:
       - "scripts/run_geographic_pilot.py"
       - "scripts/download_statistics.py"
+      - "scripts/discover_national_areas.py"
       - "tests/test_geographic_pilot.py"
+      - "tests/test_current_season_pilot.py"
       - ".github/workflows/test-geographic-pilot.yml"
   workflow_dispatch:
 
@@ -20,7 +22,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Test candidate selection
-        run: python -m unittest tests.test_geographic_pilot -v
+      - name: Test regional and current-season pilot
+        run: python -m unittest tests.test_geographic_pilot tests.test_current_season_pilot -v
       - name: Compile pilot scripts
-        run: python -m py_compile scripts/run_geographic_pilot.py scripts/download_statistics.py
+        run: python -m py_compile scripts/discover_national_areas.py scripts/run_geographic_pilot.py scripts/download_statistics.py
