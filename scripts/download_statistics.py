@@ -122,6 +122,16 @@ CSV_FIELDS = [
 ]
 
 
+def classify_data_status(rows: int, state: dict[str, Any] | None) -> str:
+    if rows > 0:
+        return "data_rows"
+    if not state or not state.get("tables"):
+        return "no_rendered_table"
+    if any(table.get("rows") for table in state.get("tables", [])):
+        return "unrecognized_table_structure"
+    return "no_rendered_rows"
+
+
 def save_statistics_table(state: dict[str, Any] | None, output_path: Path) -> int:
     """Save the rendered Älgdata 'Avskjutning med mål — ÄJO' table as CSV."""
     if not state:
@@ -323,8 +333,9 @@ async def main() -> None:
                 data_csv_rows = save_statistics_table(after_stats, data_csv_path)
             else:
                 data_csv_rows = save_rendered_table(after_stats, data_csv_path)
-            if data_csv_rows == 0:
-                errors.append("Could not locate data rows in the rendered statistics table")
+            data_status = classify_data_status(data_csv_rows, after_stats)
+            if data_status == "unrecognized_table_structure":
+                errors.append("Rendered table exists but does not match the expected report-4 header structure")
         except Exception as exc:
             errors.append(type(exc).__name__ + ": " + str(exc)[:1000])
         finally:
@@ -347,6 +358,7 @@ async def main() -> None:
         "errors": errors,
         "data_csv": str(data_csv_path.name) if data_csv_path and data_csv_path.exists() else None,
         "data_csv_rows": data_csv_rows,
+        "data_status": classify_data_status(data_csv_rows, after_stats),
         "data_csv_size_bytes": data_csv_path.stat().st_size if data_csv_path and data_csv_path.exists() else None,
         "before_stats": before_stats,
         "after_stats": after_stats,
@@ -364,6 +376,7 @@ async def main() -> None:
         "report": str(report_path),
         "data_csv": report["data_csv"],
         "data_csv_rows": report["data_csv_rows"],
+        "data_status": report["data_status"],
         "data_csv_size_bytes": report["data_csv_size_bytes"],
         "selected_area": selected_area,
         "report_config": report_config,

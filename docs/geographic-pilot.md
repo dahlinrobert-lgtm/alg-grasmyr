@@ -6,9 +6,21 @@ Verifiera att portalens rapport 4 (Avskjutning med mål — ÄJO) kan hämtas f�
 
 ## Urval
 
-Workflowen väljer högst ett område per län ur den senast insamlade nationella väljarkatalogen. Standardurvalet täcker Norrbottens, Västerbottens, Jämtlands, Dalarnas, Gävleborgs och Skåne län. Endast observationer med nuvarande gränsläge väljs. Katalogen innehåller områden med olika historiska tidsintervall; urvalet väljer därför den senaste tillgängliga perioden per län utan att kräva att alla områden har data till 2024/2025. Ett valfritt minsta slutår kan anges vid manuell körning. Hämtningen använder exakt katalogens start- och slutår och tvingar inte fram ett senare startår. Hörneåns ÄSO (724577) och Gräsmyrs VVO (718148) exkluderas från urvalet för att undvika att piloten blir en upprepning av befintliga identiteter.
+Workflowen väljer högst ett område per län ur den senast insamlade nationella väljarkatalogen. Standardurvalet täcker Norrbottens, Västerbottens, Jämtlands, Dalarnas, Gävleborgs och Skåne län. Endast observationer med nuvarande gränsläge väljs. Katalogen måste avse aktuell säsong. Den tidigare upptäcktslogiken valde första (äldsta) startåret och gav därför historiska fönster som 1990/1991–1999/2000 trots att 2026/2027 fanns i portalens väljare. Upptäckten väljer nu senaste aktiverade startår och senaste aktiverade slutår. Pilotworkflowen uppdaterar katalogen live för de sex länen före urvalet. Ett valfritt minsta slutår kan anges vid manuell körning. Hämtningen använder exakt katalogens start- och slutår och tvingar inte fram ett senare startår. Hörneåns ÄSO (724577) och Gräsmyrs VVO (718148) exkluderas från urvalet för att undvika att piloten blir en upprepning av befintliga identiteter.
 
 Urvalet är en teknisk provtagning, inte en rekommendation om områdenas representativitet. Om ett län saknar aktuell kandidat redovisas det som saknat; ingen identitet gissas fram.
+
+## Aktuell säsong och rapporteringsfördröjning
+
+Piloten avser jaktåret 2026/2027. Jakttiderna varierar geografiskt: i Norrbotten, Västerbotten och Jämtland börjar ordinarie jakt normalt 1 september; i Skåne 8 oktober; Dalarna och Gävleborg har olika startdatum beroende på område. Lokala beslut kan också innebära uppehåll. Att ett område saknar synliga rader tidigt under säsongen är därför inte bevis för att portalhämtningen misslyckats eller att området saknar avskjutning. Fällda älgar ska rapporteras inom två veckor efter fällning, vilket också kan ge eftersläpning.
+
+Piloten skiljer därför på:
+- portalurval och rapportanrop lyckades;
+- tabellen innehöll registrerade datarader;
+- portalen visade ingen datarad för vald period;
+- tabellstruktur kunde inte tolkas.
+
+Tomt resultat är en giltig observation och ska inte klassas som parserfel. Det är inte heller ett bevis för noll fällda älgar.
 
 ## Vad testet mäter
 
@@ -22,4 +34,4 @@ Varje län körs separat. Ett misslyckat område hindrar inte de övriga försö
 
 ## Tolkningsgränser
 
-En lyckad hämtning visar endast att en rapport kunde hämtas vid testtillfället. Den bekräftar inte permanent geografisk identitet, Excel-cellernas överensstämmelse, historiska områdesrelationer eller daglig stabilitet. Först efter analys av resultatet väljs områden för en separat, kontrollerad snapshotfas.
+En lyckad portalhämtning visar endast att urvalet och rapportanropet fungerade vid testtillfället. Tomma säsongstabeller måste följas upp vid senare snapshots. Den bekräftar inte permanent geografisk identitet, Excel-cellernas överensstämmelse, historiska områdesrelationer eller daglig stabilitet. Först efter analys av resultatet väljs områden för en separat, kontrollerad snapshotfas.

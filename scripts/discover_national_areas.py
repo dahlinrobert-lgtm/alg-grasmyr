@@ -29,6 +29,17 @@ async def choose_report(select, report_id):
             return
     raise RuntimeError(f"Report Id={report_id} unavailable")
 
+def latest_year_window(starts, ends):
+    """Choose the newest enabled start season and its newest enabled end season."""
+    valid_starts = [x for x in starts if x.get("value") and not x.get("disabled")]
+    valid_ends = [x for x in ends if x.get("value") and not x.get("disabled")]
+    if not valid_starts or not valid_ends:
+        raise ValueError("No enabled hunting-year options")
+    # Portal option order is chronological; selecting the first start produced
+    # decade-old pilot windows even though 2026/2027 was available.
+    return valid_starts[-1], valid_ends[-1]
+
+
 async def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", type=Path, default=Path("data/national_area_catalog"))
@@ -68,24 +79,26 @@ async def main():
                                 starts = [x for x in await options(selects.nth(3)) if not x["disabled"] and x["value"]]
                                 if not starts:
                                     raise RuntimeError("No enabled start-year options")
-                                # Select earliest supported season to maximize catalogue coverage.
-                                await selects.nth(3).select_option(value=starts[0]["value"])
+                                # Select the newest supported season for the current
+                                # availability catalogue. Historical ranges are a
+                                # separate discovery concern and must not masquerade
+                                # as a current-season regional pilot.
+                                await selects.nth(3).select_option(value=starts[-1]["value"])
                                 await page.wait_for_timeout(250)
                                 ends = [x for x in await options(selects.nth(4)) if not x["disabled"] and x["value"]]
-                                if not ends:
-                                    raise RuntimeError("No enabled end-year options")
-                                await selects.nth(4).select_option(value=ends[-1]["value"])
+                                start_choice, end_choice = latest_year_window(starts, ends)
+                                await selects.nth(4).select_option(value=end_choice["value"])
                                 await page.wait_for_timeout(450)
                                 areas = [x for x in await options(selects.nth(5)) if x["value"] not in ("", "-1") and x["label"]]
                                 coverage.append({"county":county["label"],"afo":afo["label"],"afo_id":afo["value"],"boundary_mode":mode,
-                                                 "from_year":starts[0]["label"],"to_year":ends[-1]["label"],"area_count":len(areas)})
+                                                 "from_year":start_choice["label"],"to_year":end_choice["label"],"area_count":len(areas)})
                                 for area in areas:
                                     label = area["label"]
                                     match = re.match(r"^\s*([^\s]+)\s*[-–]\s*(.*?)\s*$", label)
                                     rows.append({
                                         "county":county["label"], "county_portal_value":county["value"],
                                         "afo_name":afo["label"], "afo_portal_value":afo["value"],
-                                        "boundary_mode":mode, "from_year":starts[0]["label"], "to_year":ends[-1]["label"],
+                                        "boundary_mode":mode, "from_year":start_choice["label"], "to_year":end_choice["label"],
                                         "area_portal_id":area["value"], "area_display_id":match.group(1) if match else "",
                                         "area_name":match.group(2) if match else label,
                                         "area_label_raw":label, "catalogued_at_utc":datetime.now(timezone.utc).isoformat(),
