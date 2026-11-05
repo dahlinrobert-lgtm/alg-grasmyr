@@ -26,10 +26,11 @@ def year_number(season: str) -> int:
     return int(match.group(1)) if match else -1
 
 
-def select_candidates(catalog_path: Path, counties: list[str], min_end_year: int = 0) -> tuple[list[dict], list[str]]:
+def select_candidates(catalog_path: Path, counties: list[str], min_end_year: int = 0) -> tuple[list[dict], list[str], list[dict]]:
     with catalog_path.open("r", encoding="utf-8-sig", newline="") as handle:
         rows = list(csv.DictReader(handle, delimiter=";"))
-    selected, missing = [], []
+    selected, missing, collisions = [], [], []
+    used_ids = {}
     for county in counties:
         candidates = [
             row for row in rows
@@ -50,8 +51,22 @@ def select_candidates(catalog_path: Path, counties: list[str], min_end_year: int
             r.get("area_name", "").casefold(),
             r.get("area_portal_id", ""),
         ))
-        selected.append(candidates[0])
-    return selected, missing
+        chosen = None
+        for candidate in candidates:
+            area_id = candidate["area_portal_id"]
+            if area_id in used_ids:
+                collisions.append({"area_id": area_id, "county": county,
+                                   "already_assigned_county": used_ids[area_id],
+                                   "afo_name": candidate.get("afo_name", "")})
+                continue
+            chosen = candidate
+            used_ids[area_id] = county
+            break
+        if chosen is None:
+            missing.append(county)
+        else:
+            selected.append(chosen)
+    return selected, missing, collisions
 
 
 def main() -> int:
@@ -63,7 +78,7 @@ def main() -> int:
     parser.add_argument("--report-id", default="4")
     args = parser.parse_args()
 
-    candidates, missing = select_candidates(args.catalog, args.counties, args.min_end_year)
+    candidates, missing, collisions = select_candidates(args.catalog, args.counties, args.min_end_year)
     args.out.mkdir(parents=True, exist_ok=True)
     (args.out / "selected_candidates.json").write_text(
         json.dumps({"counties_requested": args.counties, "missing_counties": missing,
@@ -93,7 +108,9 @@ def main() -> int:
         report = json.loads(report_path.read_text(encoding="utf-8")) if report_path.exists() else {}
         selected = report.get("selected_area") or {}
         errors = report.get("errors") or ([completed.stderr[-2000:]] if completed.returncode else [])
-        success = completed.returncode == 0 and bool(report.get("data_csv_rows")) and selected.get("area_id") == area_id
+        portal_success = completed.returncode == 0 and selected.get("area_id") == area_id
+        data_rows = int(report.get("data_csv_rows", 0) or 0)
+        data_status = report.get("data_status", "unknown")
         results.append({
             "county": candidate["county"],
             "afo_name": candidate["afo_name"],
@@ -104,8 +121,10 @@ def main() -> int:
             "requested_to_year": candidate["to_year"],
             "selected_area": selected,
             "selected_to_year": report.get("hunting_year_to_selected"),
-            "data_csv_rows": report.get("data_csv_rows", 0),
-            "success": success,
+            "data_csv_rows": data_rows,
+            "data_status": data_status,
+            "portal_selection_success": portal_success,
+            "data_available": data_rows > 0,
             "errors": errors,
         })
         print(json.dumps(results[-1], ensure_ascii=False))
@@ -114,8 +133,11 @@ def main() -> int:
         "pilot_counties": args.counties,
         "candidate_count": len(candidates),
         "missing_counties": missing,
-        "success_count": sum(x["success"] for x in results),
-        "failure_count": sum(not x["success"] for x in results),
+        "identity_collisions": collisions,
+        "portal_selection_success_count": sum(x["portal_selection_success"] for x in results),
+        "data_available_count": sum(x["data_available"] for x in results),
+        "no_data_count": sum(x["data_status"] == "no_rendered_rows" for x in results),
+        "failure_count": sum(not x["portal_selection_success"] for x in results),
         "results": results,
         "interpretation": (
             "A successful run proves that this area could be selected and a report table was returned "
@@ -126,8 +148,11 @@ def main() -> int:
     (args.out / "pilot_summary.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
-    print(json.dumps({k: summary[k] for k in ("candidate_count", "missing_counties", "success_count", "failure_count")}, ensure_ascii=False))
-    return 0 if summary["success_count"] else 1
+    print(json.dumps({k: summary[k] for k in ("candidate_count", "missing_counties", "identity_collisions",
+                                                  "portal_selection_success_count", "data_available_count",
+                                                  "no_data_count", "failure_count")}, ensure_ascii=False))
+    # Empty current-season statistics are a valid observation, not a failed portal run.
+    return 0 if summary["portal_selection_success_count"] == len(candidates) and candidates else 1
 
 
 if __name__ == "__main__":
