@@ -18,10 +18,15 @@ on:
         type: string
         default: ""
       min_end_year:
-        description: "Optional minimum final hunting-season start year; 0 includes all available years"
+        description: "Minimum hunting-season start year; 2026 means 2026/2027"
         required: true
         type: number
-        default: 0
+        default: 2026
+      areas_per_county:
+        description: "Maximum number of current-season areas to test per county"
+        required: true
+        type: number
+        default: 5
 
 permissions:
   contents: read
@@ -60,12 +65,13 @@ jobs:
       - name: Run bounded regional portal pilot
         env:
           PILOT_COUNTIES: ${{ inputs.counties || '' }}
-          MIN_END_YEAR: ${{ inputs.min_end_year || 0 }}
+          MIN_END_YEAR: ${{ inputs.min_end_year || 2026 }}
+          AREAS_PER_COUNTY: ${{ inputs.areas_per_county || 5 }}
         run: |
           if [ -n "$PILOT_COUNTIES" ]; then
-            python scripts/run_geographic_pilot.py --counties $PILOT_COUNTIES --min-end-year "$MIN_END_YEAR"
+            python scripts/run_geographic_pilot.py --counties $PILOT_COUNTIES --min-end-year "$MIN_END_YEAR" --areas-per-county "$AREAS_PER_COUNTY"
           else
-            python scripts/run_geographic_pilot.py --min-end-year "$MIN_END_YEAR"
+            python scripts/run_geographic_pilot.py --min-end-year "$MIN_END_YEAR" --areas-per-county "$AREAS_PER_COUNTY"
           fi
       - name: Upload regional pilot results
         if: always()
