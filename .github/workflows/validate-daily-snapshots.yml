@@ -1,0 +1,39 @@
+name: Validate daily Älgdata snapshots
+
+on:
+  push:
+    paths:
+      - "data/daily_snapshots/**"
+      - "scripts/validate_daily_snapshots.py"
+      - "tests/test_validate_daily_snapshots.py"
+      - ".github/workflows/validate-daily-snapshots.yml"
+  schedule:
+    # Run after the daily snapshot job (06:35 UTC).
+    - cron: "15 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-daily-algdata-snapshots
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run validator unit tests
+        run: python -m unittest discover -s tests -p "test_validate_daily_snapshots.py" -v
+
+      - name: Validate stored snapshots and change logs
+        run: python scripts/validate_daily_snapshots.py
