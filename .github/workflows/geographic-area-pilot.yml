@@ -15,10 +15,10 @@ on:
         type: string
         default: ""
       min_end_year:
-        description: "Minimum final hunting-season start year in the catalogue"
+        description: "Optional minimum final hunting-season start year; 0 includes all available years"
         required: true
         type: number
-        default: 2024
+        default: 0
 
 permissions:
   contents: read
@@ -46,7 +46,7 @@ jobs:
       - name: Run bounded regional portal pilot
         env:
           PILOT_COUNTIES: ${{ inputs.counties || '' }}
-          MIN_END_YEAR: ${{ inputs.min_end_year || 2024 }}
+          MIN_END_YEAR: ${{ inputs.min_end_year || 0 }}
         run: |
           if [ -n "$PILOT_COUNTIES" ]; then
             python scripts/run_geographic_pilot.py --counties $PILOT_COUNTIES --min-end-year "$MIN_END_YEAR"
