@@ -1,0 +1,57 @@
+{
+  "area_count": 1,
+  "areas": [
+    {
+      "area_id": "724577",
+      "area_key": "hornean",
+      "area_name": "24-01-02-342-Ä - Hörneåns älgskötselområde",
+      "event_count": 28,
+      "first_snapshot": "2026-11-01",
+      "latest_snapshot": "2026-11-05",
+      "season_counts": [
+        {
+          "date": "2026-11-01",
+          "season_count": 7
+        },
+        {
+          "date": "2026-11-02",
+          "season_count": 7
+        },
+        {
+          "date": "2026-11-03",
+          "season_count": 7
+        },
+        {
+          "date": "2026-11-04",
+          "season_count": 7
+        },
+        {
+          "date": "2026-11-05",
+          "season_count": 7
+        }
+      ],
+      "snapshot_count": 5
+    }
+  ],
+  "event_count": 28,
+  "event_counts_by_type": {
+    "correction": 14,
+    "reported_value_increase": 14
+  },
+  "generated_at_utc": "2026-11-05T00:00:00Z",
+  "interpretation_limits": [
+    "Events compare adjacent available snapshots; they do not identify exact dates when an animal was harvested.",
+    "A missing season is a portal-output absence, not proof that source statistics were deleted or equal to zero.",
+    "The Excel inventory is a filename inventory only; no primary-source match is claimed without a verified manifest.",
+    "Only fields that changed are emitted; unchanged daily observations are not duplicated as events."
+  ],
+  "scope": "daily portal snapshots; report 4 (Avskjutning med mål — ÄJO)",
+  "snapshot_count": 5,
+  "source_export_inventory": {
+    "automatic_snapshot_matches": [],
+    "candidate_file_count": 0,
+    "candidate_files": [],
+    "note": "Filnamnsinventeringen fastställer inte att en Excel-export motsvarar ett visst snapshot. Matchning kräver verifierat manifest med område, jaktår och exportidentitet.",
+    "verification_status": "not_verified"
+  }
+}
