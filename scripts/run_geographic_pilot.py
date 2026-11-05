@@ -115,6 +115,7 @@ def main() -> int:
     args.out.mkdir(parents=True, exist_ok=True)
     (args.out / "selected_candidates.json").write_text(
         json.dumps({"counties_requested": args.counties, "missing_counties": missing,
+                    "min_end_year": args.min_end_year, "areas_per_county": args.areas_per_county,
                     "candidates": candidates}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
@@ -164,13 +165,25 @@ def main() -> int:
     summary = {
         "report_id": args.report_id,
         "pilot_counties": args.counties,
+        "min_end_year": args.min_end_year,
+        "areas_per_county_target": args.areas_per_county,
         "candidate_count": len(candidates),
+        "county_coverage": {
+            county: {
+                "selected_count": sum(x["county"] == county for x in candidates),
+                "afo_count": len({x["afo_name"] for x in candidates if x["county"] == county}),
+                "area_ids": [x["area_portal_id"] for x in candidates if x["county"] == county],
+            }
+            for county in args.counties
+        },
         "missing_counties": missing,
         "identity_collisions": collisions,
         "portal_selection_success_count": sum(x["portal_selection_success"] for x in results),
         "data_available_count": sum(x["data_available"] for x in results),
         "no_data_count": sum(x["data_status"] == "no_rendered_rows" for x in results),
-        "failure_count": sum(not x["portal_selection_success"] for x in results),\n        "data_row_count": sum(x["data_csv_rows"] for x in results),\n        "nonempty_report_count": sum(x["data_status"] == "data_rows" for x in results),
+        "failure_count": sum(not x["portal_selection_success"] for x in results),
+        "data_row_count": sum(x["data_csv_rows"] for x in results),
+        "nonempty_report_count": sum(x["data_status"] == "data_rows" for x in results),
         "results": results,
         "interpretation": (
             "A successful run proves that this area could be selected and a report table was returned "
