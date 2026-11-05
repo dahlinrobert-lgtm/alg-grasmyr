@@ -37,7 +37,7 @@ class GeographicPilotTests(unittest.TestCase):
                 writer.writeheader()
                 writer.writerow({"county":"Skåne län","boundary_mode":"current","area_portal_id":"300",
                                  "from_year":"2010/2011","to_year":"2022/2023","afo_name":"AFO"})
-            selected, missing = select_candidates(path, ["Skåne län"])
+            selected, missing = select_candidates(path, ["Skåne län"], min_end_year=2024)
             self.assertEqual(selected, [])
             self.assertEqual(missing, ["Skåne län"])
 
