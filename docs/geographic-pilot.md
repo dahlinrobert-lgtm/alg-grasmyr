@@ -20,7 +20,7 @@ Piloten skiljer därför på:
 - portalen visade ingen datarad för vald period;
 - tabellstruktur kunde inte tolkas.
 
-Tomt resultat är en giltig observation och ska inte klassas som parserfel. Det är inte heller ett bevis för noll fällda älgar.
+Tomt resultat är en giltig observation och ska inte klassas som parserfel. Det är inte heller ett bevis för noll fällda älgar. I rapport 4 heter den tredje kolumnen **Slutrapporterat** och innehåller Ja/Nej. Den är inte en jaktårskolumn; CSV-fältet normaliseras därför till `slutrapporterat`.
 
 ## Vad testet mäter
 
@@ -35,3 +35,7 @@ Varje län körs separat. Ett misslyckat område hindrar inte de övriga försö
 ## Tolkningsgränser
 
 En lyckad portalhämtning visar endast att urvalet och rapportanropet fungerade vid testtillfället. Tomma säsongstabeller måste följas upp vid senare snapshots. Den bekräftar inte permanent geografisk identitet, Excel-cellernas överensstämmelse, historiska områdesrelationer eller daglig stabilitet. Först efter analys av resultatet väljs områden för en separat, kontrollerad snapshotfas.
+
+## CSV-fält och källrubriker
+
+CSV-exporten följer rapportens tvådelade tabellhuvud. Tredje källkolumnen är `Slut- rapporterat` och anger om jaktområdet är slutrapporterat. Den får inte benämnas `jaktsasong`, eftersom det felaktigt antyder att Ja/Nej-värdet avser jaktsäsongens status. Jaktåret framgår i stället av uttagets metadata och filnamn.

@@ -111,7 +111,7 @@ async def capture_visible_state(page) -> dict[str, Any]:
 
 
 CSV_FIELDS = [
-    "registreringsnummer", "jaktomradesnamn", "jaktsasong", "registrerad_areal_ha",
+    "registreringsnummer", "jaktomradesnamn", "slutrapporterat", "registrerad_areal_ha",
     "fallda_vuxna_totalt", "fallda_vuxna_handjur", "fallda_vuxna_hondjur",
     "fallda_kalvar_totalt", "fallda_kalvar_handjur", "fallda_kalvar_hondjur",
     "fallda_totalt", "fallda_otjanliga", "fallda_oregistrerad_mark",
@@ -152,8 +152,9 @@ def save_statistics_table(state: dict[str, Any] | None, output_path: Path) -> in
         writer = csv.writer(handle, delimiter=";", quoting=csv.QUOTE_MINIMAL)
         writer.writerow(CSV_FIELDS)
         # The rendered DataTable has a two-row grouped header followed by a
-        # summary row. The rest are one row per hunting season. Preserve source
-        # display values, including percent signs and decimal commas.
+        # summary row. Column 3 is explicitly "Slut- rapporterat" (Ja/Nej),
+        # not the hunting season. Preserve source display values, including
+        # percent signs and decimal commas.
         for row in target_table[2:]:
             if not row or not row[0] or row[0].strip().casefold().startswith("summa"):
                 continue

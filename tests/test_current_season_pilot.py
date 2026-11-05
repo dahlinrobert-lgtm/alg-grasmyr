@@ -1,7 +1,7 @@
 import unittest
 
 from scripts.discover_national_areas import latest_year_window
-from scripts.download_statistics import classify_data_status
+from scripts.download_statistics import CSV_FIELDS, classify_data_status
 
 
 class CurrentSeasonTests(unittest.TestCase):
@@ -17,6 +17,10 @@ class CurrentSeasonTests(unittest.TestCase):
         start, end = latest_year_window(starts, ends)
         self.assertEqual(start["label"], "2026/2027")
         self.assertEqual(end["label"], "2026/2027")
+
+    def test_report4_third_column_is_end_reported_flag_not_hunting_season(self):
+        self.assertEqual(CSV_FIELDS[2], "slutrapporterat")
+        self.assertNotIn("jaktsasong", CSV_FIELDS)
 
     def test_empty_current_season_is_not_parser_failure(self):
         self.assertEqual(classify_data_status(0, {"tables": [{"rows": []}]}), "no_rendered_rows")
