@@ -29,7 +29,8 @@ class RegionalPilotSnapshotTests(unittest.TestCase):
                   "portal_selection_success":True,"selected_to_year":"2026/2027",
                   "boundary_mode":"current"}
         summary={"candidate_count":1,"min_end_year":2026,"results":[result],
-                 "portal_selection_success_count":1,"failure_count":0,"identity_collisions":[]}
+                 "portal_selection_success_count":1,"data_available_count":1,"data_row_count":1,
+                 "failure_count":0,"identity_collisions":[]}
         (root/"pilot_summary.json").write_text(json.dumps(summary),encoding="utf-8")
 
     def test_archives_immutable_snapshot_and_validates(self):
