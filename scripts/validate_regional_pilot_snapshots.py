@@ -40,6 +40,8 @@ def validate_area(folder: Path) -> list[str]:
         try:
             datetime.strptime(date, "%Y-%m-%d")
             meta = json.loads(jp.read_text(encoding="utf-8"))
+            if hashlib.sha256(cp.read_bytes()).hexdigest() != meta.get("sha256"):
+                errors.append(f"{folder.name}/{date}: SHA-256 mismatch")
             row = read_one(cp)
         except Exception as exc:
             errors.append(f"{folder.name}/{date}: cannot read snapshot: {exc}")
@@ -62,8 +64,6 @@ def validate_area(folder: Path) -> list[str]:
             errors.append(f"{folder.name}/{date}: unexpected report or boundary mode")
         if meta.get("row_count") != 1:
             errors.append(f"{folder.name}/{date}: row_count is not 1")
-        if hashlib.sha256(cp.read_bytes()).hexdigest() != meta.get("sha256"):
-            errors.append(f"{folder.name}/{date}: SHA-256 mismatch")
         if row.get("slutrapporterat") not in {"Ja", "Nej"}:
             errors.append(f"{folder.name}/{date}: invalid slutrapporterat flag")
         if not row.get("registreringsnummer"):
