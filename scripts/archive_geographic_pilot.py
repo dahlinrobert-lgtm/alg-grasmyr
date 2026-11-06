@@ -122,6 +122,8 @@ def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | No
             "area_id": portal_id,
             "area_display_id": candidate.get("area_display_id", ""),
             "area_name": row.get("jaktomradesnamn", ""),
+            "catalogue_area_name": candidate.get("area_name", ""),
+            "quality_flags": ["missing_jaktomradesnamn"] if not row.get("jaktomradesnamn") else [],
             "county": candidate["county"],
             "afo": candidate["afo_name"],
             "boundary_mode": "current",
