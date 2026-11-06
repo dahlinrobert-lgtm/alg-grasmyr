@@ -44,8 +44,11 @@ def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | No
     results = summary.get("results", [])
     if not candidates or len(candidates) != summary.get("candidate_count"):
         raise ValueError("Pilot candidate count is empty or inconsistent")
-    if len(results) != len(candidates) or summary.get("portal_selection_success_count") != len(candidates):
-        raise ValueError("Refusing to archive an incomplete portal pilot")
+    if (len(results) != len(candidates)
+            or summary.get("portal_selection_success_count") != len(candidates)
+            or summary.get("data_available_count") != len(candidates)
+            or summary.get("data_row_count") != len(candidates)):
+        raise ValueError("Pilot must return exactly one data row for every selected area")
     if summary.get("failure_count") != 0 or summary.get("identity_collisions"):
         raise ValueError("Refusing to archive pilot with failures or identity collisions")
     by_id = {str(x["area_portal_id"]): x for x in candidates}
@@ -79,6 +82,8 @@ def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | No
         source_csv = folder / csv_name if csv_name else None
         if source_csv is None or not source_csv.is_file():
             raise ValueError(f"{portal_id}: missing source CSV")
+        if report.get("errors"):
+            raise ValueError(f"{portal_id}: portal report contains errors: {report.get('errors')}")
         row = read_one_row(source_csv)
         if row.get("registreringsnummer") != str(selected_area.get("display_label", "")).split(" - ")[0]:
             raise ValueError(f"{portal_id}: CSV registration number does not match portal selection")
