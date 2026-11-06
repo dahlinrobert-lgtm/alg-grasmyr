@@ -9,7 +9,7 @@ from scripts.validate_regional_pilot_snapshots import validate_root
 class RegionalPilotSnapshotTests(unittest.TestCase):
     def make_pilot(self, root: Path, total="3"):
         folder = root / "01-test-lan-123456"
-        folder.mkdir(parents=True)
+        folder.mkdir(parents=True, exist_ok=True)
         candidate = {
             "county": "Test län", "afo_name": "Test ÄFO",
             "area_portal_id": "123456", "area_display_id": "12-34-56-A",
