@@ -68,6 +68,9 @@ def validate_area(folder: Path) -> list[str]:
             errors.append(f"{folder.name}/{date}: invalid slutrapporterat flag")
         if not row.get("registreringsnummer"):
             errors.append(f"{folder.name}/{date}: missing registration number")
+        expected_flags = ["missing_jaktomradesnamn"] if not row.get("jaktomradesnamn") else []
+        if meta.get("quality_flags", []) != expected_flags:
+            errors.append(f"{folder.name}/{date}: area-name quality flags mismatch")
         if meta.get("previous_snapshot") != previous_name:
             errors.append(f"{folder.name}/{date}: previous_snapshot pointer mismatch")
         expected_changes = compare_rows(previous_row, row) if previous_name else []
