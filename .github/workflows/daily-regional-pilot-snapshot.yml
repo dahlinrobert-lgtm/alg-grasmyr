@@ -1,0 +1,74 @@
+name: Daily regional Älgdata pilot snapshots
+
+on:
+  schedule:
+    # Run after the national selector catalogue has been refreshed by the pilot workflow.
+    - cron: "20 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-regional-algdata-snapshots
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install portal dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Run snapshot archive tests
+        run: python -m unittest tests.test_regional_pilot_snapshots tests.test_geographic_pilot_validation -v
+      - name: Refresh selector catalogue
+        run: |
+          python scripts/discover_national_areas.py \
+            --county "Norrbottens län" \
+            --county "Västerbottens län" \
+            --county "Jämtlands län" \
+            --county "Dalarnas län" \
+            --county "Gävleborgs län" \
+            --county "Skåne län"
+      - name: Download current-season reports for the 30-area sample
+        run: |
+          python scripts/run_geographic_pilot.py \
+            --min-end-year 2026 \
+            --areas-per-county 5
+      - name: Validate pilot selection and source reports
+        run: python scripts/validate_geographic_pilot.py --directory out/geographic-pilot --min-end-year 2026
+      - name: Archive immutable daily snapshots
+        run: python scripts/archive_geographic_pilot.py --pilot-dir out/geographic-pilot --output-root data/regional_pilot_snapshots
+      - name: Validate archived history and change logs
+        run: python scripts/validate_regional_pilot_snapshots.py --root data/regional_pilot_snapshots
+      - name: Commit validated daily snapshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/regional_pilot_snapshots/
+          if ! git diff --cached --quiet; then
+            git commit -m "Store daily regional Älgdata pilot snapshots"
+            git push
+          else
+            echo "No new regional snapshot changes to commit."
+          fi
+      - name: Upload run diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-regional-algdata-snapshot
+          path: |
+            out/geographic-pilot/
+            data/regional_pilot_snapshots/
+          if-no-files-found: warn
+          retention-days: 30

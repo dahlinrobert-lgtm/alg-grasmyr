@@ -61,3 +61,12 @@ Efter portalhämtningen körs `scripts/validate_geographic_pilot.py` innan artef
 - att radantal och status i CSV, portalrapport och sammanfattning är konsekventa.
 
 Tomma tabeller och diagnostiska statusar skiljs från felaktig identitet eller säsong. Valideringen gör inte anspråk på att bevisa att portalens värden motsvarar en separat Excel-export; den säkrar att pilotens egna uttag är internt konsekventa och spårbara.
+
+
+## Daglig historik för 30 pilotområden
+
+Workflowen `Daily regional Älgdata pilot snapshots` körs dagligen och håller en separat historik under `data/regional_pilot_snapshots/<area_key>/`. Varje område får ett CSV-uttag och en JSON-metadatafil per UTC-datum. `area_key` byggs av län och områdets visnings-/registreringskod, medan portal-ID sparas separat så att ett ändrat portal-ID kan upptäckas utan att historiken tyst delas upp.
+
+Endast en komplett pilot med exakt en rapporterad rad per valt område, 2026/2027, aktuellt gränsläge, korrekta portalidentiteter och utan portal-/ID-fel får arkiveras. Ofullständiga körningar stoppas före arkivering. Daterade filer skrivs aldrig över: identiskt innehåll samma dag är idempotent, men ändrat innehåll på samma datum ger fel i stället för att historiken ersätts.
+
+Varje metadatafil innehåller SHA-256, län, ÄFO, områdeskoder, portal-ID, jaktår, slutrapporteringsstatus, föregående snapshot och fältvisa skillnader. Ändringar av kumulativa avskjutningsvärden ska tolkas som förändringar i portalens registrerade rapportering, inte som exakta fälldatum. Historiken är en separat pilotserie och blandas inte med Hörneåns befintliga produktions-/pilotserie.

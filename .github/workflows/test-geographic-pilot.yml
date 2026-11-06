@@ -4,13 +4,17 @@ on:
   pull_request:
     paths:
       - "scripts/run_geographic_pilot.py"
+      - "scripts/archive_geographic_pilot.py"
+      - "scripts/validate_regional_pilot_snapshots.py"
       - "scripts/validate_geographic_pilot.py"
       - "scripts/download_statistics.py"
       - "scripts/discover_national_areas.py"
       - "tests/test_geographic_pilot.py"
       - "tests/test_geographic_pilot_validation.py"
+      - "tests/test_regional_pilot_snapshots.py"
       - "tests/test_current_season_pilot.py"
       - ".github/workflows/test-geographic-pilot.yml"
+      - ".github/workflows/daily-regional-pilot-snapshot.yml"
   workflow_dispatch:
 
 permissions:
@@ -27,6 +31,6 @@ jobs:
       - name: Install Python test dependency
         run: python -m pip install playwright
       - name: Test regional and current-season pilot
-        run: python -m unittest tests.test_geographic_pilot tests.test_current_season_pilot tests.test_geographic_pilot_validation -v
+        run: python -m unittest tests.test_geographic_pilot tests.test_current_season_pilot tests.test_geographic_pilot_validation tests.test_regional_pilot_snapshots -v
       - name: Compile pilot scripts
-        run: python -m py_compile scripts/discover_national_areas.py scripts/run_geographic_pilot.py scripts/validate_geographic_pilot.py scripts/download_statistics.py
+        run: python -m py_compile scripts/discover_national_areas.py scripts/run_geographic_pilot.py scripts/validate_geographic_pilot.py scripts/archive_geographic_pilot.py scripts/validate_regional_pilot_snapshots.py scripts/download_statistics.py
