@@ -1,0 +1,5709 @@
+{
+  "snapshot_date_utc": "2026-11-07",
+  "captured_at_utc": "2026-11-07T10:05:33.123203+00:00",
+  "source": "Länsstyrelsernas Älgdata statistikportal",
+  "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+  "area_key": "norrbottens-l-n-25-12-01-101-a",
+  "area_id": "722084",
+  "area_display_id": "25-12-01-101-A",
+  "area_name": "Abborrträsk Vvo",
+  "catalogue_area_name": "Abborrträsk Vvo",
+  "quality_flags": [],
+  "county": "Norrbottens län",
+  "afo": "ÄFO 3",
+  "boundary_mode": "current",
+  "report_id": "4",
+  "report_name": "Avskjutning med mål — ÄJO",
+  "hunting_season": "2026/2027",
+  "slutrapporterat": "Nej",
+  "csv_file": "2026-11-07.csv",
+  "sha256": "032afdc16581c11c3de945f2b13700bf65f555d8cf4444efa683476f97f7df17",
+  "row_count": 1,
+  "previous_snapshot": "2026-11-06.csv",
+  "previous_area_id": "722084",
+  "changes_since_previous_snapshot": [],
+  "download_report": {
+    "inspected_at_utc": "2026-11-07T10:01:40.974488+00:00",
+    "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+    "county": "Norrbottens län",
+    "afo": "ÄFO 3",
+    "selected_area": {
+      "area_id": "722084",
+      "display_label": "25-12-01-101-A - Abborrträsk Vvo"
+    },
+    "report_config": {
+      "ReportCategoryId": 1,
+      "Name": "ÄJO",
+      "ReportType": 0,
+      "Report": 1,
+      "ReportLevel": 3,
+      "SearchTypeChoice": "1",
+      "Id": "4",
+      "County": "1",
+      "TypeCounty": null,
+      "TypeCountyDefault": null,
+      "TypeCountyManagement": null,
+      "TypeCountyManagementDefault": null,
+      "ElkManagement": "1",
+      "HuntingArea": "1",
+      "HuntingYearFrom": "1",
+      "HuntingYearTo": "1",
+      "ExcelReport": false,
+      "AlertInfoBeforeLoad": null,
+      "ShowOnlyYearFromForHistoricalAFO": null,
+      "option_label": "ÄJO"
+    },
+    "hunting_year_from": "2026/2027",
+    "hunting_year_to_requested": "2026/2027",
+    "hunting_year_to_selected": "2026/2027",
+    "boundary_mode": "current",
+    "navigation_error": null,
+    "errors": [],
+    "data_csv": "avskjutning_mal_ajo_722084_2026-2027_2026-2027.csv",
+    "data_csv_rows": 1,
+    "data_status": "data_rows",
+    "data_csv_size_bytes": 609,
+    "before_stats": {
+      "title": "Statistik Älgdata",
+      "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+      "visible_text": "Statistik\nVälj...\nNationell\nLän\nÄFO\nÄJO\nGeografiskt - Nationell\nNationell\nLän\nÄFO\nVuxna djur - Nationell\nVuxna djur - Län\nVuxna djur - ÄFO\nVuxna djur - ÄJO\nVuxna djur - Nationell\nVuxna djur - Län\nVuxna djur - ÄFO\nVuxna djur - ÄJO\nNationell\nLän\nÄFO\nNationell\nLän\nÄFO\nÄJO\nNationell\nNationell (per ÄFO)\nLän\nÄFO\nÄJO\nNationell\nLän\nÄFO\nÄJO\nÄBIN Län\nÄBIN Äfo samtliga\nÄBIN Äfo\nFoderprognos Län\nFoderprognos Äfo samtliga\nFoderprognos Äfo\nVald statistiktyp:\nAvskjutning med mål\nÄFO gränser\n Historiska gränser\n Nuvarande gränser\nLän\nVälj...\nBlekinge län\nDalarnas län\nGävleborgs län\nHallands län\nJämtlands län\nJönköpings län\nKalmar län\nKronobergs län\nNorrbottens län\nSkåne län\nStockholms län\nSödermanlands län\nUppsala län\nVärmlands län\nVästerbottens län\nVästernorrlands län\nVästmanlands län\nVästra Götalands län\nÖrebro län\nÖstergötlands län\nÄFO\nVälj...\nÄFO 1\nÄFO 2\nÄFO 3\nÄFO 4\nÄFO 5\nÄFO 6\nJaktår - från\n1947/1948\n1961/1962\n1967/1968\n1972/1973\n1981/1982\n1986/1987\n1987/1988\n1988/1989\n1989/1990\n1990/1991\n1991/1992\n1992/1993\n1993/1994\n1994/1995\n1995/1996\n1996/1997\n1997/1998\n1998/1999\n1999/2000\n2000/2001\n2001/2002\n2002/2003\n2003/2004\n2004/2005\n2005/2006\n2006/2007\n2007/2008\n2008/2009\n2009/2010\n2010/2011\n2011/2012\n2012/2013\n2013/2014\n2014/2015\n2015/2016\n2016/2017\n2017/2018\n2018/2019\n2019/2020\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\nJaktår - till\n1947/1948\n1961/1962\n1967/1968\n1972/1973\n1981/1982\n1986/1987\n1987/1988\n1988/1989\n1989/1990\n1990/1991\n1991/1992\n1992/1993\n1993/1994\n1994/1995\n1995/1996\n1996/1997\n1997/1998\n1998/1999\n1999/2000\n2000/2001\n2001/2002\n2002/2003\n2003/2004\n2004/2005\n2005/2006\n2006/2007\n2007/2008\n2008/2009\n2009/2010\n2010/2011\n2011/2012\n2012/2013\n2013/2014\n2014/2015\n2015/2016\n2016/2017\n2017/2018\n2018/2019\n2019/2020\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\nJaktområde\nVälj...\n25-00-99-003-A - Oregistrerad mark\n25-11-01-001-A - Torborg Jaktlag\n25-11-01-002-A - Västra Uddjaure\n25-11-01-003-A - Lövnäs Trollberg\n25-11-01-004-A - Krittja Jakt\n25-11-01-005-A - Nåddok Jaktlag\n25-11-01-006-A - Sakkavare älgjaktsområde\n25-11-01-101-A - Racksund-Östansjö Jvf\n25-11-01-103-A - Semisjaur-Njargs Sameby\n25-11-01-104-A - Svaipa Sameby\n25-11-01-106-A - Ståkke Sameby\n25-11-01-107-A - Maskaure Sameby\n25-11-01-108-A - Adolfströms Jaktlag\n25-11-01-109-A - Luokta Mavas Sameby\n25-11-01-110-A - Länsstyrelsens upplåtelsejaktlag\n25-11-01-111-A - Båtsjaur Jaktlag\n25-11-01-112-A - Västerfjäll\n25-11-01-113-A - Sundnäs\n25-11-01-114-A - Märsa Älgjaktsområde\n25-11-01-116-A - Gauto jaktområde\n25-11-01-117-A - Höglidens Jaktlag\n25-11-01-119-A - Björklidens Jaktlag\n25-11-01-120-A - Hällbackens Jaktlag\n25-11-01-121-A - Laisviks Jaktv.förening\n25-11-01-122-A - Loholms Byalag\n25-11-01-123-A - Korsträsk jaktområde\n25-11-01-124-A - Laisvalls Jaktklubb\n25-11-01-125-A - Jäkkviks Byalag\n25-11-01-126-A - Laisvalls jaktlag\n25-11-01-127-A - Akkapakte\n25-11-01-128-A - Jutis Byalag\n25-11-01-129-A - Tjärnbergs Jaktlag\n25-11-01-130-A - Galtisjaur Jaktlag\n25-11-01-132-A - Lestanders Jaktlag\n25-11-01-133-A - Höghedens Jaktlag\n25-11-01-134-A - Nya Bergnäs jaktområde\n25-11-01-135-A - Vaxnäs Jaktlag\n25-11-01-136-A - Komyrans Jaktlag\n25-11-01-137-A - Sundnäs jaktområde\n25-11-01-138-A - Laisvall\n25-11-02-001-A - Laby Jaktlag\n25-11-02-002-Ä - Arjeplogs ÄSO\n25-11-02-004-A - Granselets Jakt\n25-11-02-005-A - Ringhultsheden Jaktlag\n25-11-02-101-A - Arjeplogs Jaktvårdsförening\n25-11-02-102-A - Bukts Jaktvårdsförening\n25-11-02-104-A - Mjölkbergs JVF\n25-11-02-105-A - Järvtandlidens Vvo\n25-11-02-106-A - Kallöns Vvo\n25-11-02-107-A - Stensunds Jaktlag\n25-11-02-108-A - Långvikens Vvo\n25-11-02-109-A - Kuorrokveiks Jaktlag\n25-11-02-110-A - Marielunds Jaktvårdsförening\n25-11-02-111-A - Mellanström Vvo\n25-11-02-112-A - Mullholms Vvo\n25-11-02-113-A - Nyby Jaktlag\n25-11-02-114-A - Nylidens Vvo\n25-11-02-115-A - Pilbergets Vvo\n25-11-02-116-A - Radnejaurs Jaktvårdsförening\n25-11-02-117-A - Sundås Jaktlag\n25-11-02-119-A - Balkis Jaktvårdsförening\n25-11-02-123-A - Ståkke Sameby\n25-11-02-124-A - Svannäs\n25-11-02-125-A - Oxmyrens Jaktlag\n25-11-02-126-A - Maskaure Sameby\n25-11-02-128-A - Nurrholm & Ulljabouda VVO\n25-11-02-129-A - Målke Jaktlag\n25-11-02-130-A - Svannäs Jaktlag\n25-11-02-131-A - Sveggejaurs Jaktlag\n25-11-02-132-A - Skellefteå Krafts\n25-11-02-133-A - Bellonäs älgjaktslag\n25-11-02-134-A - Brattforsmorets Jaktlag\n25-11-02-135-A - Röjbergets Jaktlag\n25-11-02-138-A - Östra Mullejaur\n25-11-02-140-A - Slagnäs Jaktlag\n25-11-02-141-A - Öregrund\n25-11-02-142-A - Arvliden\n25-11-02-143-A - Stråtjejaur\n25-11-02-144-A - Stor-Ståkke\n25-11-02-145-A - Enberget\n25-11-02-146-A - Bäcknäs\n25-12-01-001-A - Norra Hornlidens Jaktlag\n25-12-01-002-Ä - Arvidsjaurs ÄSO\n25-12-01-003-A - Lilla Tallberg\n25-12-01-004-A - Lauker-Lövviken Jaktklubb\n25-12-01-005-A - Fridhems jaktlag\n25-12-01-101-A - Abborrträsk Vvo\n25-12-01-102-A - Aspliden Vvo\n25-12-01-104-A - Grundträsk Vvo\n25-12-01-106-A - Lövvikens Vvo\n25-12-01-108-A - Pjesker-Granudds Jaktlag\n25-12-01-109-A - Pjeskers Vvo\n25-12-01-111-A - Saltmyrans Jaktklubb\n25-12-01-112-A - Siksjö Vvo\n25-12-01-116-A - Utterlidens Vvo\n25-12-01-117-A - Vuotners Vvo\n25-12-01-118-A - Ånäs Vvo\n25-12-01-120-A - Baktsjaurs Jaktklubb\n25-12-01-121-A - Bäcknäs Vvo\n25-12-01-122-A - Hällbergs Jaktvårdsförening\n25-12-01-123-A - Laukers Jaktsällskap\n25-12-01-125-A - Mausjaurs Sameby\n25-12-01-126-A - Akkavare vvo\n25-12-01-127-A - Auktsjaurs Vvo\n25-12-01-128-A - Deppis Vvo\n25-12-01-129-A - Fjällbonäs Vvo\n25-12-01-130-A - Gullöns Jaktvårdsklubb\n25-12-01-131-A - Renvallens Jaktlag\n25-12-01-132-A - Serrejaur Vvo\n25-12-01-133-A - Sjöträsk Vvo\n25-12-01-134-A - Tjappsåive VVO\n25-12-01-135-A - Arvidsjaurs Allmänningsskog\n25-12-01-136-A - Storbergs Vvo\n25-12-01-137-A - K4 Jaktklubb\n25-12-01-138-A - Rönnbergets Jaktlag\n25-12-01-139-A - Avavikens Vvo\n25-12-01-140-A - Baktåive Vvo\n25-12-01-142-A - Hedbergs Jaktklubb\n25-12-01-143-A - Jerfojaur Vvo\n25-12-01-144-A - Lomträsk Vvo\n25-12-01-145-A - Långuddens Jaktklubb\n25-12-01-146-A - Suddesjaur Vvo\n25-12-01-147-A - Åkroken-Städdjejaur Vvo\n25-12-01-148-A - Hornlidens Jaktlag\n25-12-01-150-A - Grundträsklidens Jaktlag\n25-12-01-153-A - Östra Kikkejaur\n25-12-01-154-A - V Kikkejaur Sameby\n25-12-01-157-A - Tjintokk AB\n25-12-01-159-A - Utterträsk Jaktklubb\n25-12-01-160-A - Kläppens Jaktlag\n25-12-01-161-A - Stormyråsens Jaktlag\n25-12-01-162-A - Palkovare\n25-12-01-163-A - Muorrejaurs Jaktklubb\n25-12-01-165-A - Brännholm jaktområde\n25-12-01-167-A - Björknäs\n25-12-01-168-A - Strittjomvare 6\n25-12-01-169-A - Lauker-Östansjö Jaktlag\n25-12-01-202-Ä - Glommersträsk ÄSO\nv1.9.0\nStatistik älgdata\nKontakta oss\nÄlgdata\nStatistik för älgdata\n\nHär finns statistik om älgstammen och dess påverkan på skog och trafik. I menyn till vänster väljer du ut den statistik du är intresserad av. Resultatet visas i tabeller och grafer över hela skärmen.\n\nDu kan välja att exportera data för att öppna upp i bl.a. Excel.\n\nNågra tips när du använder sidan:\nDu kan välja att dölja eller visa menyn för att kunna se mer på skärmen. När du för muspekaren över graferna visas mer information. Om du klickar på graferna kan du ändra inställningarna för hur de visas. För att komma tillbaka till förstasidan för statistiken kan du klicka på Länstyrelsens logga längst upp på sidan. Vill du komma tillbaka till www.algdata.se klickar du på länken uppe till höger på sidan.\n\nDu har även möjlighet att skapa bilder, tabeller och grafer. En ny bild, graf eller tabell skapas utifrån den data som finns synlig på skärmen. Uppmärksamma att bara data som är synlig på skärmen tas med när man skapar bilder, inte den data som ligger utanför i rullistorna.\n\nStatistik\n\nÄlgdata syftar till att samla all viktig information om älgstammen och dess påverkan på skog och trafik på en plats på internet.\n\nDet här medför att älgförvaltningsgrupper, enskilda jägare och andra på ett lättare sätt kommer att hitta information, vilket underlättar en kunskapsbaserad och flexibel älgförvaltning.\n\nLänsstyrelsen har samlat in statistik över fällda älgar, slaktvikt, viltolyckor, älgobservationer, biologiskt data m.m. Statistiken hämtar även information från andra system som viltdata.\n\nLän\n\nSverige består av 21 län. Länsstyrelserna samverkar och älgstatistik samlas in från de 20 myndigheter som har älgar inom sitt geografiska område.\n\nPå älgdata kan du se statistik per län och över hela landet. I den nationella statistiken omfattas data från alla län.\n\nÄFO\n\nÄlgförvaltningsområde, benämns ofta som ÄFO. Ett älgförvaltningsområde inrättas av länsstyrelsen och motsvarar i stort sett en egen älgstam. När förvaltningen sker över stora områden kan jakten i större utsträckning planeras strategiskt utifrån bland annat skador på skog och förekomst av trafikolyckor.\n\nFörvaltningen ska vara väl förankrad i lokalsamhället och bygga på kunskap utifrån inventeringar av älg, skador och statistik.\n\nJaktområde\n\nDet finns två sorters jaktområde: älgskötselområde och licensområde.\n\nEtt älgskötselområde är en frivillig sammanslutning av jaktlag och marker som jagar inom ett område. Området ska tåla en avskjutning av minst 10 vuxna älgar per år.\n\nLicensområde kallades tidigare A-, B-, E- områden. Den nya typen av licensområden skall enligt jaktlagstiftningen klara av en avskjutning av minst en årskalv per år. Detta är ett steg i riktning mot att älgjakten och avskjutningen skall vara produktionsbaserad. En produktionsbaserad avskjutning innebär att antalet älgar som skjuts inom ett område skall motsvara det antal som marken klarar av att producera.\n\n\n",
+      "headings": [
+        "Statistik för älgdata",
+        "Statistik",
+        "Län",
+        "ÄFO",
+        "Jaktområde"
+      ],
+      "tables": [
+        {
+          "caption": "",
+          "rows": []
+        }
+      ],
+      "table_count": 1,
+      "form_controls": [
+        {
+          "id": "select-statistics",
+          "label": "rapport",
+          "value": "{\"ReportCategoryId\":1,\"Name\":\"ÄJO\",\"ReportType\":0,\"Report\":1,\"ReportLevel\":3,\"SearchTypeChoice\":\"1\",\"Id\":\"4\",\"County\":\"1\",\"TypeCounty\":null,\"TypeCountyDefault\":null,\"TypeCountyManagement\":null,\"TypeCountyManagementDefault\":null,\"ElkManagement\":\"1\",\"HuntingArea\":\"1\",\"HuntingYearFrom\":\"1\",\"HuntingYearTo\":\"1\",\"ExcelReport\":false,\"AlertInfoBeforeLoad\":null,\"ShowOnlyYearFromForHistoricalAFO\":null}",
+          "selected_text": "ÄJO",
+          "options_count": 39
+        },
+        {
+          "id": "select-county",
+          "label": "menuItemHead",
+          "value": "25",
+          "selected_text": "Norrbottens län",
+          "options_count": 21
+        },
+        {
+          "id": "select-afo",
+          "label": "menuItemHead",
+          "value": "3",
+          "selected_text": "ÄFO 3",
+          "options_count": 7
+        },
+        {
+          "id": "select-season-from",
+          "label": "menuItemHead",
+          "value": "2026/2027",
+          "selected_text": "2026/2027",
+          "options_count": 46
+        },
+        {
+          "id": "select-season-to",
+          "label": "menuItemHead",
+          "value": "2026/2027",
+          "selected_text": "2026/2027",
+          "options_count": 46
+        },
+        {
+          "id": "select-ajo",
+          "label": "menuItemHead",
+          "value": "722084",
+          "selected_text": "25-12-01-101-A - Abborrträsk Vvo",
+          "options_count": 139
+        }
+      ],
+      "radios": [
+        {
+          "name": "optTypeAFO",
+          "value": "F",
+          "checked": false,
+          "label": ""
+        },
+        {
+          "name": "optTypeAFO",
+          "value": "G",
+          "checked": true,
+          "label": ""
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "input",
+          "value": "Visa statistik",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Excel",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "SKV",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "SKV",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        }
+      ]
+    },
+    "after_stats": {
+      "title": "Statistik Älgdata",
+      "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+      "visible_text": "Statistik\nVälj...\nNationell\nLän\nÄFO\nÄJO\nGeografiskt - Nationell\nNationell\nLän\nÄFO\nVuxna djur - Nationell\nVuxna djur - Län\nVuxna djur - ÄFO\nVuxna djur - ÄJO\nVuxna djur - Nationell\nVuxna djur - Län\nVuxna djur - ÄFO\nVuxna djur - ÄJO\nNationell\nLän\nÄFO\nNationell\nLän\nÄFO\nÄJO\nNationell\nNationell (per ÄFO)\nLän\nÄFO\nÄJO\nNationell\nLän\nÄFO\nÄJO\nÄBIN Län\nÄBIN Äfo samtliga\nÄBIN Äfo\nFoderprognos Län\nFoderprognos Äfo samtliga\nFoderprognos Äfo\nVald statistiktyp:\nAvskjutning med mål\nÄFO gränser\n Historiska gränser\n Nuvarande gränser\nLän\nVälj...\nBlekinge län\nDalarnas län\nGävleborgs län\nHallands län\nJämtlands län\nJönköpings län\nKalmar län\nKronobergs län\nNorrbottens län\nSkåne län\nStockholms län\nSödermanlands län\nUppsala län\nVärmlands län\nVästerbottens län\nVästernorrlands län\nVästmanlands län\nVästra Götalands län\nÖrebro län\nÖstergötlands län\nÄFO\nVälj...\nÄFO 1\nÄFO 2\nÄFO 3\nÄFO 4\nÄFO 5\nÄFO 6\nJaktår - från\n1947/1948\n1961/1962\n1967/1968\n1972/1973\n1981/1982\n1986/1987\n1987/1988\n1988/1989\n1989/1990\n1990/1991\n1991/1992\n1992/1993\n1993/1994\n1994/1995\n1995/1996\n1996/1997\n1997/1998\n1998/1999\n1999/2000\n2000/2001\n2001/2002\n2002/2003\n2003/2004\n2004/2005\n2005/2006\n2006/2007\n2007/2008\n2008/2009\n2009/2010\n2010/2011\n2011/2012\n2012/2013\n2013/2014\n2014/2015\n2015/2016\n2016/2017\n2017/2018\n2018/2019\n2019/2020\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\nJaktår - till\n1947/1948\n1961/1962\n1967/1968\n1972/1973\n1981/1982\n1986/1987\n1987/1988\n1988/1989\n1989/1990\n1990/1991\n1991/1992\n1992/1993\n1993/1994\n1994/1995\n1995/1996\n1996/1997\n1997/1998\n1998/1999\n1999/2000\n2000/2001\n2001/2002\n2002/2003\n2003/2004\n2004/2005\n2005/2006\n2006/2007\n2007/2008\n2008/2009\n2009/2010\n2010/2011\n2011/2012\n2012/2013\n2013/2014\n2014/2015\n2015/2016\n2016/2017\n2017/2018\n2018/2019\n2019/2020\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\nJaktområde\nVälj...\n25-00-99-003-A - Oregistrerad mark\n25-11-01-001-A - Torborg Jaktlag\n25-11-01-002-A - Västra Uddjaure\n25-11-01-003-A - Lövnäs Trollberg\n25-11-01-004-A - Krittja Jakt\n25-11-01-005-A - Nåddok Jaktlag\n25-11-01-006-A - Sakkavare älgjaktsområde\n25-11-01-101-A - Racksund-Östansjö Jvf\n25-11-01-103-A - Semisjaur-Njargs Sameby\n25-11-01-104-A - Svaipa Sameby\n25-11-01-106-A - Ståkke Sameby\n25-11-01-107-A - Maskaure Sameby\n25-11-01-108-A - Adolfströms Jaktlag\n25-11-01-109-A - Luokta Mavas Sameby\n25-11-01-110-A - Länsstyrelsens upplåtelsejaktlag\n25-11-01-111-A - Båtsjaur Jaktlag\n25-11-01-112-A - Västerfjäll\n25-11-01-113-A - Sundnäs\n25-11-01-114-A - Märsa Älgjaktsområde\n25-11-01-116-A - Gauto jaktområde\n25-11-01-117-A - Höglidens Jaktlag\n25-11-01-119-A - Björklidens Jaktlag\n25-11-01-120-A - Hällbackens Jaktlag\n25-11-01-121-A - Laisviks Jaktv.förening\n25-11-01-122-A - Loholms Byalag\n25-11-01-123-A - Korsträsk jaktområde\n25-11-01-124-A - Laisvalls Jaktklubb\n25-11-01-125-A - Jäkkviks Byalag\n25-11-01-126-A - Laisvalls jaktlag\n25-11-01-127-A - Akkapakte\n25-11-01-128-A - Jutis Byalag\n25-11-01-129-A - Tjärnbergs Jaktlag\n25-11-01-130-A - Galtisjaur Jaktlag\n25-11-01-132-A - Lestanders Jaktlag\n25-11-01-133-A - Höghedens Jaktlag\n25-11-01-134-A - Nya Bergnäs jaktområde\n25-11-01-135-A - Vaxnäs Jaktlag\n25-11-01-136-A - Komyrans Jaktlag\n25-11-01-137-A - Sundnäs jaktområde\n25-11-01-138-A - Laisvall\n25-11-02-001-A - Laby Jaktlag\n25-11-02-002-Ä - Arjeplogs ÄSO\n25-11-02-004-A - Granselets Jakt\n25-11-02-005-A - Ringhultsheden Jaktlag\n25-11-02-101-A - Arjeplogs Jaktvårdsförening\n25-11-02-102-A - Bukts Jaktvårdsförening\n25-11-02-104-A - Mjölkbergs JVF\n25-11-02-105-A - Järvtandlidens Vvo\n25-11-02-106-A - Kallöns Vvo\n25-11-02-107-A - Stensunds Jaktlag\n25-11-02-108-A - Långvikens Vvo\n25-11-02-109-A - Kuorrokveiks Jaktlag\n25-11-02-110-A - Marielunds Jaktvårdsförening\n25-11-02-111-A - Mellanström Vvo\n25-11-02-112-A - Mullholms Vvo\n25-11-02-113-A - Nyby Jaktlag\n25-11-02-114-A - Nylidens Vvo\n25-11-02-115-A - Pilbergets Vvo\n25-11-02-116-A - Radnejaurs Jaktvårdsförening\n25-11-02-117-A - Sundås Jaktlag\n25-11-02-119-A - Balkis Jaktvårdsförening\n25-11-02-123-A - Ståkke Sameby\n25-11-02-124-A - Svannäs\n25-11-02-125-A - Oxmyrens Jaktlag\n25-11-02-126-A - Maskaure Sameby\n25-11-02-128-A - Nurrholm & Ulljabouda VVO\n25-11-02-129-A - Målke Jaktlag\n25-11-02-130-A - Svannäs Jaktlag\n25-11-02-131-A - Sveggejaurs Jaktlag\n25-11-02-132-A - Skellefteå Krafts\n25-11-02-133-A - Bellonäs älgjaktslag\n25-11-02-134-A - Brattforsmorets Jaktlag\n25-11-02-135-A - Röjbergets Jaktlag\n25-11-02-138-A - Östra Mullejaur\n25-11-02-140-A - Slagnäs Jaktlag\n25-11-02-141-A - Öregrund\n25-11-02-142-A - Arvliden\n25-11-02-143-A - Stråtjejaur\n25-11-02-144-A - Stor-Ståkke\n25-11-02-145-A - Enberget\n25-11-02-146-A - Bäcknäs\n25-12-01-001-A - Norra Hornlidens Jaktlag\n25-12-01-002-Ä - Arvidsjaurs ÄSO\n25-12-01-003-A - Lilla Tallberg\n25-12-01-004-A - Lauker-Lövviken Jaktklubb\n25-12-01-005-A - Fridhems jaktlag\n25-12-01-101-A - Abborrträsk Vvo\n25-12-01-102-A - Aspliden Vvo\n25-12-01-104-A - Grundträsk Vvo\n25-12-01-106-A - Lövvikens Vvo\n25-12-01-108-A - Pjesker-Granudds Jaktlag\n25-12-01-109-A - Pjeskers Vvo\n25-12-01-111-A - Saltmyrans Jaktklubb\n25-12-01-112-A - Siksjö Vvo\n25-12-01-116-A - Utterlidens Vvo\n25-12-01-117-A - Vuotners Vvo\n25-12-01-118-A - Ånäs Vvo\n25-12-01-120-A - Baktsjaurs Jaktklubb\n25-12-01-121-A - Bäcknäs Vvo\n25-12-01-122-A - Hällbergs Jaktvårdsförening\n25-12-01-123-A - Laukers Jaktsällskap\n25-12-01-125-A - Mausjaurs Sameby\n25-12-01-126-A - Akkavare vvo\n25-12-01-127-A - Auktsjaurs Vvo\n25-12-01-128-A - Deppis Vvo\n25-12-01-129-A - Fjällbonäs Vvo\n25-12-01-130-A - Gullöns Jaktvårdsklubb\n25-12-01-131-A - Renvallens Jaktlag\n25-12-01-132-A - Serrejaur Vvo\n25-12-01-133-A - Sjöträsk Vvo\n25-12-01-134-A - Tjappsåive VVO\n25-12-01-135-A - Arvidsjaurs Allmänningsskog\n25-12-01-136-A - Storbergs Vvo\n25-12-01-137-A - K4 Jaktklubb\n25-12-01-138-A - Rönnbergets Jaktlag\n25-12-01-139-A - Avavikens Vvo\n25-12-01-140-A - Baktåive Vvo\n25-12-01-142-A - Hedbergs Jaktklubb\n25-12-01-143-A - Jerfojaur Vvo\n25-12-01-144-A - Lomträsk Vvo\n25-12-01-145-A - Långuddens Jaktklubb\n25-12-01-146-A - Suddesjaur Vvo\n25-12-01-147-A - Åkroken-Städdjejaur Vvo\n25-12-01-148-A - Hornlidens Jaktlag\n25-12-01-150-A - Grundträsklidens Jaktlag\n25-12-01-153-A - Östra Kikkejaur\n25-12-01-154-A - V Kikkejaur Sameby\n25-12-01-157-A - Tjintokk AB\n25-12-01-159-A - Utterträsk Jaktklubb\n25-12-01-160-A - Kläppens Jaktlag\n25-12-01-161-A - Stormyråsens Jaktlag\n25-12-01-162-A - Palkovare\n25-12-01-163-A - Muorrejaurs Jaktklubb\n25-12-01-165-A - Brännholm jaktområde\n25-12-01-167-A - Björknäs\n25-12-01-168-A - Strittjomvare 6\n25-12-01-169-A - Lauker-Östansjö Jaktlag\n25-12-01-202-Ä - Glommersträsk ÄSO\nv1.9.0\nStatistik älgdata\nKontakta oss\nÄlgdata\n Förvaltande län - Län som administrerar älgförvaltningsområden som kan vara indelade oberoende av länsgräns. I kolumnstycket \"Avskjutningsmål ÄJO\" behöver summan av han- och hondjur inte vara samma som antalet vuxna djur då det finns jaktområden som inte har könskvoterad tilldelning.\n\n\nI urvalet ingår ett eller flera jaktår där rapportering fortfarande pågår. För dessa år kan data saknas och statistiken därmed vara inkomplett.\n Kom ihåg inställningar för tabellen.\nVisa 10 rader\nDölj/visa kolumner\nExcel\nSKV\nSpara som bild\nSök:\nRegistreringsnummer\tJaktområdets namn\tSlut- rapporterat\tRegistrerad areal ha\tFällda älgar\tTjur %\tKalv %\tAvskjutningsmål ÄJO\tNyttjandegrad - ÄJO\nVuxen\tHandjur\tHondjur\tKalv\tHandjur kalv\tHondjur kalv\tTotalt\tVarav otjänliga\tVarav oregistrerad mark\tÄlgar/ 1000 ha\tVuxen\tHandjur\tHondjur\tKalv\tTotalt\tÄlgar/ 1000 ha\tVuxen\tKalv\tTotalt\nRegistreringsnummer\n\t\nJaktområdets namn\n\t\nSlut- rapporterat\n\t\nRegistrerad areal ha\n\t\nFällda älgar\n\t\nTjur %\n\t\nKalv %\n\t\nAvskjutningsmål ÄJO\n\t\nNyttjandegrad - ÄJO\n\n\nVuxen\n\t\nHandjur\n\t\nHondjur\n\t\nKalv\n\t\nHandjur kalv\n\t\nHondjur kalv\n\t\nTotalt\n\t\nVarav otjänliga\n\t\nVarav oregistrerad mark\n\t\nÄlgar/ 1000 ha\n\t\nVuxen\n\t\nHandjur\n\t\nHondjur\n\t\nKalv\n\t\nTotalt\n\t\nÄlgar/ 1000 ha\n\t\nVuxen\n\t\nKalv\n\t\nTotalt\n\n\nSumma:\n\t\n\t\n\t\n5 437 (5 437)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n\t\n\t\n\t\n4 (4)\n\t\n0 (0)\n\t\n0 (0)\n\t\n3 (3)\n\t\n7 (7)\n\t\n\t\n\t\n\t\n\n25-12-01-101-A\tAbborrträsk Vvo\tNej\t5437\t0\t0\t0\t0\t0\t0\t0\t0\t0\t-\t-\t-\t4\t0\t0\t3\t7\t1,3\t-\t-\t-\nSumma:\t\t\t5 437 (5 437)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t\t\t\t4 (4)\t0 (0)\t0 (0)\t3 (3)\t7 (7)\t\t\t\t\nVisar 1 till 1 av totalt 1 rader\nFöregående\n1\nNästa\nTotalt antal fällda älgar - Jaktområde - Nuvarande gränser - 25-12-01-101-A - Abborrträsk Vvo - 2026/2027\nBar chart with 1 bar.\nGenererad av www.algdata.se\nThe chart has 1 X axis displaying Säsong.\nThe chart has 1 Y axis displaying Antal. Data ranges from -0.5 to 0.5.\nSäsong\nAntal\nTotalt antal fällda älgar - Jaktområde - Nuvarande gränser - 25-12-01-101-A - Abborrträsk Vvo - 2026/2027\nGenererad av www.algdata.se\n25-12-01-101-A\n2026/2027\n0\nEnd of interactive chart.\n\n\nNyttjandegrad av avskjutningsmål ÄJO - Jaktområde - Nuvarande gränser - 25-12-01-101-A - Abborrträsk Vvo - 2026/2027\nBar chart with 1 bar.\nGenererad av www.algdata.se\nThe chart has 1 X axis displaying Säsong.\nThe chart has 1 Y axis displaying Nyttjandegrad. Data ranges from 0 to 0.\nSäsong\nNyttjandegrad\nNyttjandegrad av avskjutningsmål ÄJO - Jaktområde - Nuvarande gränser - 25-12-01-101-A - Abborrträsk Vvo - 2026/2027\nGenererad av www.algdata.se\n25-12-01-101-A\n2026/2027\nEnd of interactive chart.\n\n\n\n\n\n\n\n\n\n\n\n",
+      "headings": [
+        "Statistik för älgdata",
+        "Statistik",
+        "Län",
+        "ÄFO",
+        "Jaktområde"
+      ],
+      "tables": [
+        {
+          "caption": "",
+          "rows": [
+            [
+              "Registreringsnummer",
+              "Jaktområdets namn",
+              "Slut- rapporterat",
+              "Registrerad areal ha",
+              "Fällda älgar",
+              "Tjur %",
+              "Kalv %",
+              "Avskjutningsmål ÄJO",
+              "Nyttjandegrad - ÄJO"
+            ],
+            [
+              "Vuxen",
+              "Handjur",
+              "Hondjur",
+              "Kalv",
+              "Handjur kalv",
+              "Hondjur kalv",
+              "Totalt",
+              "Varav otjänliga",
+              "Varav oregistrerad mark",
+              "Älgar/ 1000 ha",
+              "Vuxen",
+              "Handjur",
+              "Hondjur",
+              "Kalv",
+              "Totalt",
+              "Älgar/ 1000 ha",
+              "Vuxen",
+              "Kalv",
+              "Totalt"
+            ]
+          ]
+        },
+        {
+          "caption": "",
+          "rows": [
+            [
+              "Registreringsnummer",
+              "Jaktområdets namn",
+              "Slut- rapporterat",
+              "Registrerad areal ha",
+              "Fällda älgar",
+              "Tjur %",
+              "Kalv %",
+              "Avskjutningsmål ÄJO",
+              "Nyttjandegrad - ÄJO"
+            ],
+            [
+              "Vuxen",
+              "Handjur",
+              "Hondjur",
+              "Kalv",
+              "Handjur kalv",
+              "Hondjur kalv",
+              "Totalt",
+              "Varav otjänliga",
+              "Varav oregistrerad mark",
+              "Älgar/ 1000 ha",
+              "Vuxen",
+              "Handjur",
+              "Hondjur",
+              "Kalv",
+              "Totalt",
+              "Älgar/ 1000 ha",
+              "Vuxen",
+              "Kalv",
+              "Totalt"
+            ],
+            [
+              "Summa:",
+              "",
+              "",
+              "5 437 (5 437)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "",
+              "",
+              "",
+              "4 (4)",
+              "0 (0)",
+              "0 (0)",
+              "3 (3)",
+              "7 (7)",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "25-12-01-101-A",
+              "Abborrträsk Vvo",
+              "Nej",
+              "5437",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-",
+              "-",
+              "-",
+              "4",
+              "0",
+              "0",
+              "3",
+              "7",
+              "1,3",
+              "-",
+              "-",
+              "-"
+            ]
+          ]
+        },
+        {
+          "caption": "",
+          "rows": [
+            [
+              "Summa:",
+              "",
+              "",
+              "5 437 (5 437)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "",
+              "",
+              "",
+              "4 (4)",
+              "0 (0)",
+              "0 (0)",
+              "3 (3)",
+              "7 (7)",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      "table_count": 3,
+      "form_controls": [
+        {
+          "id": "select-statistics",
+          "label": "rapport",
+          "value": "{\"ReportCategoryId\":1,\"Name\":\"ÄJO\",\"ReportType\":0,\"Report\":1,\"ReportLevel\":3,\"SearchTypeChoice\":\"1\",\"Id\":\"4\",\"County\":\"1\",\"TypeCounty\":null,\"TypeCountyDefault\":null,\"TypeCountyManagement\":null,\"TypeCountyManagementDefault\":null,\"ElkManagement\":\"1\",\"HuntingArea\":\"1\",\"HuntingYearFrom\":\"1\",\"HuntingYearTo\":\"1\",\"ExcelReport\":false,\"AlertInfoBeforeLoad\":null,\"ShowOnlyYearFromForHistoricalAFO\":null}",
+          "selected_text": "ÄJO",
+          "options_count": 39
+        },
+        {
+          "id": "select-county",
+          "label": "menuItemHead",
+          "value": "25",
+          "selected_text": "Norrbottens län",
+          "options_count": 21
+        },
+        {
+          "id": "select-afo",
+          "label": "menuItemHead",
+          "value": "3",
+          "selected_text": "ÄFO 3",
+          "options_count": 7
+        },
+        {
+          "id": "select-season-from",
+          "label": "menuItemHead",
+          "value": "2026/2027",
+          "selected_text": "2026/2027",
+          "options_count": 46
+        },
+        {
+          "id": "select-season-to",
+          "label": "menuItemHead",
+          "value": "2026/2027",
+          "selected_text": "2026/2027",
+          "options_count": 46
+        },
+        {
+          "id": "select-ajo",
+          "label": "menuItemHead",
+          "value": "722084",
+          "selected_text": "25-12-01-101-A - Abborrträsk Vvo",
+          "options_count": 139
+        }
+      ],
+      "radios": [
+        {
+          "name": "optTypeAFO",
+          "value": "F",
+          "checked": false,
+          "label": ""
+        },
+        {
+          "name": "optTypeAFO",
+          "value": "G",
+          "checked": true,
+          "label": ""
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "input",
+          "value": "Visa statistik",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "Visa 10 rader",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "Dölj/visa kolumner",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "Excel",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "SKV",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "Spara som bild",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Excel",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "SKV",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "SKV",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        }
+      ]
+    },
+    "request_metadata": [
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+        "method": "GET",
+        "resource_type": "document"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/dist/app/Home/assets/app.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/dist/app/Home/assets/app.js",
+        "method": "GET",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/modernizr-2.8.3.js",
+        "method": "GET",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/download.js",
+        "method": "GET",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/custom.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/variables.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/Site.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/open-menu.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/medium.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/respond.js",
+        "method": "GET",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/lst_topplogo.gif",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/statistik.png",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/lan.png",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/AFOmap.jpg",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/ajo.png",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAfoInCounty/25?_=1794045694246",
+        "method": "GET",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/elkAnimation.gif",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasonsByLanAndAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasons/?_=1794045694247",
+        "method": "GET",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/LoadData/GetData",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/CLientApp/Src/assets/Images/sort_both.png",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/CLientApp/Src/assets/Images/sort_asc.png",
+        "method": "GET",
+        "resource_type": "image"
+      }
+    ],
+    "response_metadata": [
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "resource_type": "document"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/dist/app/Home/assets/app.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/custom.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/modernizr-2.8.3.js",
+        "status": 200,
+        "content_type": "application/javascript",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/variables.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/download.js",
+        "status": 200,
+        "content_type": "application/javascript",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/Site.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/open-menu.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/medium.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/statistik.png",
+        "status": 200,
+        "content_type": "image/png",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/lst_topplogo.gif",
+        "status": 200,
+        "content_type": "image/gif",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/respond.js",
+        "status": 200,
+        "content_type": "application/javascript",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/dist/app/Home/assets/app.js",
+        "status": 200,
+        "content_type": "application/javascript",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/lan.png",
+        "status": 200,
+        "content_type": "image/png",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/ajo.png",
+        "status": 200,
+        "content_type": "image/png",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/AFOmap.jpg",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAfoInCounty/25?_=1794045694246",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/elkAnimation.gif",
+        "status": 200,
+        "content_type": "image/gif",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasonsByLanAndAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasons/?_=1794045694247",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/LoadData/GetData",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/CLientApp/Src/assets/Images/sort_both.png",
+        "status": 404,
+        "content_type": "text/html",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/CLientApp/Src/assets/Images/sort_asc.png",
+        "status": 404,
+        "content_type": "text/html",
+        "resource_type": "image"
+      }
+    ],
+    "public_json_responses": [
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAfoInCounty/25?_=1794045694246",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AfoId": -1,
+            "CountyNo": null,
+            "Name": "Välj...",
+            "DisplayId": "äfo---001"
+          },
+          {
+            "AfoId": 1,
+            "CountyNo": "25",
+            "Name": "ÄFO 1",
+            "DisplayId": "äfo-25-001"
+          },
+          {
+            "AfoId": 2,
+            "CountyNo": "25",
+            "Name": "ÄFO 2",
+            "DisplayId": "äfo-25-002"
+          },
+          {
+            "AfoId": 3,
+            "CountyNo": "25",
+            "Name": "ÄFO 3",
+            "DisplayId": "äfo-25-003"
+          },
+          {
+            "AfoId": 4,
+            "CountyNo": "25",
+            "Name": "ÄFO 4",
+            "DisplayId": "äfo-25-004"
+          },
+          {
+            "AfoId": 5,
+            "CountyNo": "25",
+            "Name": "ÄFO 5",
+            "DisplayId": "äfo-25-005"
+          },
+          {
+            "AfoId": 6,
+            "CountyNo": "25",
+            "Name": "ÄFO 6",
+            "DisplayId": "äfo-25-006"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 719265,
+            "AfoId": 3,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "25-00-99-003-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 771962,
+            "AfoId": 3,
+            "Name": "Torborg Jaktlag",
+            "AjoDisplayFullName": "25-11-01-001-A - Torborg Jaktlag"
+          },
+          {
+            "AjoId": 772460,
+            "AfoId": 3,
+            "Name": "Västra Uddjaure",
+            "AjoDisplayFullName": "25-11-01-002-A - Västra Uddjaure"
+          },
+          {
+            "AjoId": 772461,
+            "AfoId": 3,
+            "Name": "Lövnäs Trollberg",
+            "AjoDisplayFullName": "25-11-01-003-A - Lövnäs Trollberg"
+          },
+          {
+            "AjoId": 772634,
+            "AfoId": 3,
+            "Name": "Krittja Jakt",
+            "AjoDisplayFullName": "25-11-01-004-A - Krittja Jakt"
+          },
+          {
+            "AjoId": 772765,
+            "AfoId": 3,
+            "Name": "Nåddok Jaktlag",
+            "AjoDisplayFullName": "25-11-01-005-A - Nåddok Jaktlag"
+          },
+          {
+            "AjoId": 773002,
+            "AfoId": 3,
+            "Name": "Sakkavare älgjaktsområde",
+            "AjoDisplayFullName": "25-11-01-006-A - Sakkavare älgjaktsområde"
+          },
+          {
+            "AjoId": 721876,
+            "AfoId": 3,
+            "Name": "Racksund-Östansjö Jvf",
+            "AjoDisplayFullName": "25-11-01-101-A - Racksund-Östansjö Jvf"
+          },
+          {
+            "AjoId": 721878,
+            "AfoId": 3,
+            "Name": "Semisjaur-Njargs Sameby",
+            "AjoDisplayFullName": "25-11-01-103-A - Semisjaur-Njargs Sameby"
+          },
+          {
+            "AjoId": 721879,
+            "AfoId": 3,
+            "Name": "Svaipa Sameby",
+            "AjoDisplayFullName": "25-11-01-104-A - Svaipa Sameby"
+          },
+          {
+            "AjoId": 721881,
+            "AfoId": 3,
+            "Name": "Ståkke Sameby",
+            "AjoDisplayFullName": "25-11-01-106-A - Ståkke Sameby"
+          },
+          {
+            "AjoId": 721882,
+            "AfoId": 3,
+            "Name": "Maskaure Sameby",
+            "AjoDisplayFullName": "25-11-01-107-A - Maskaure Sameby"
+          },
+          {
+            "AjoId": 721883,
+            "AfoId": 3,
+            "Name": "Adolfströms Jaktlag",
+            "AjoDisplayFullName": "25-11-01-108-A - Adolfströms Jaktlag"
+          },
+          {
+            "AjoId": 721884,
+            "AfoId": 3,
+            "Name": "Luokta Mavas Sameby",
+            "AjoDisplayFullName": "25-11-01-109-A - Luokta Mavas Sameby"
+          },
+          {
+            "AjoId": 721885,
+            "AfoId": 3,
+            "Name": "Länsstyrelsens upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-11-01-110-A - Länsstyrelsens upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 721886,
+            "AfoId": 3,
+            "Name": "Båtsjaur Jaktlag",
+            "AjoDisplayFullName": "25-11-01-111-A - Båtsjaur Jaktlag"
+          },
+          {
+            "AjoId": 722022,
+            "AfoId": 3,
+            "Name": "Västerfjäll",
+            "AjoDisplayFullName": "25-11-01-112-A - Västerfjäll"
+          },
+          {
+            "AjoId": 722023,
+            "AfoId": 3,
+            "Name": "Sundnäs",
+            "AjoDisplayFullName": "25-11-01-113-A - Sundnäs"
+          },
+          {
+            "AjoId": 722024,
+            "AfoId": 3,
+            "Name": "Märsa Älgjaktsområde",
+            "AjoDisplayFullName": "25-11-01-114-A - Märsa Älgjaktsområde"
+          },
+          {
+            "AjoId": 722025,
+            "AfoId": 3,
+            "Name": "Gauto jaktområde",
+            "AjoDisplayFullName": "25-11-01-116-A - Gauto jaktområde"
+          },
+          {
+            "AjoId": 722026,
+            "AfoId": 3,
+            "Name": "Höglidens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-117-A - Höglidens Jaktlag"
+          },
+          {
+            "AjoId": 722027,
+            "AfoId": 3,
+            "Name": "Björklidens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-119-A - Björklidens Jaktlag"
+          },
+          {
+            "AjoId": 722028,
+            "AfoId": 3,
+            "Name": "Hällbackens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-120-A - Hällbackens Jaktlag"
+          },
+          {
+            "AjoId": 722029,
+            "AfoId": 3,
+            "Name": "Laisviks Jaktv.förening",
+            "AjoDisplayFullName": "25-11-01-121-A - Laisviks Jaktv.förening"
+          },
+          {
+            "AjoId": 722030,
+            "AfoId": 3,
+            "Name": "Loholms Byalag",
+            "AjoDisplayFullName": "25-11-01-122-A - Loholms Byalag"
+          },
+          {
+            "AjoId": 722031,
+            "AfoId": 3,
+            "Name": "Korsträsk jaktområde",
+            "AjoDisplayFullName": "25-11-01-123-A - Korsträsk jaktområde"
+          },
+          {
+            "AjoId": 722032,
+            "AfoId": 3,
+            "Name": "Laisvalls Jaktklubb",
+            "AjoDisplayFullName": "25-11-01-124-A - Laisvalls Jaktklubb"
+          },
+          {
+            "AjoId": 722033,
+            "AfoId": 3,
+            "Name": "Jäkkviks Byalag",
+            "AjoDisplayFullName": "25-11-01-125-A - Jäkkviks Byalag"
+          },
+          {
+            "AjoId": 722034,
+            "AfoId": 3,
+            "Name": "Laisvalls jaktlag",
+            "AjoDisplayFullName": "25-11-01-126-A - Laisvalls jaktlag"
+          },
+          {
+            "AjoId": 722035,
+            "AfoId": 3,
+            "Name": "Akkapakte",
+            "AjoDisplayFullName": "25-11-01-127-A - Akkapakte"
+          },
+          {
+            "AjoId": 722036,
+            "AfoId": 3,
+            "Name": "Jutis Byalag",
+            "AjoDisplayFullName": "25-11-01-128-A - Jutis Byalag"
+          },
+          {
+            "AjoId": 722037,
+            "AfoId": 3,
+            "Name": "Tjärnbergs Jaktlag",
+            "AjoDisplayFullName": "25-11-01-129-A - Tjärnbergs Jaktlag"
+          },
+          {
+            "AjoId": 722038,
+            "AfoId": 3,
+            "Name": "Galtisjaur Jaktlag",
+            "AjoDisplayFullName": "25-11-01-130-A - Galtisjaur Jaktlag"
+          },
+          {
+            "AjoId": 722040,
+            "AfoId": 3,
+            "Name": "Lestanders Jaktlag",
+            "AjoDisplayFullName": "25-11-01-132-A - Lestanders Jaktlag"
+          },
+          {
+            "AjoId": 722041,
+            "AfoId": 3,
+            "Name": "Höghedens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-133-A - Höghedens Jaktlag"
+          },
+          {
+            "AjoId": 722042,
+            "AfoId": 3,
+            "Name": "Nya Bergnäs jaktområde",
+            "AjoDisplayFullName": "25-11-01-134-A - Nya Bergnäs jaktområde"
+          },
+          {
+            "AjoId": 722043,
+            "AfoId": 3,
+            "Name": "Vaxnäs Jaktlag",
+            "AjoDisplayFullName": "25-11-01-135-A - Vaxnäs Jaktlag"
+          },
+          {
+            "AjoId": 722044,
+            "AfoId": 3,
+            "Name": "Komyrans Jaktlag",
+            "AjoDisplayFullName": "25-11-01-136-A - Komyrans Jaktlag"
+          },
+          {
+            "AjoId": 722045,
+            "AfoId": 3,
+            "Name": "Sundnäs jaktområde",
+            "AjoDisplayFullName": "25-11-01-137-A - Sundnäs jaktområde"
+          },
+          {
+            "AjoId": 724573,
+            "AfoId": 3,
+            "Name": "Laisvall",
+            "AjoDisplayFullName": "25-11-01-138-A - Laisvall"
+          },
+          {
+            "AjoId": 771910,
+            "AfoId": 3,
+            "Name": "Laby Jaktlag",
+            "AjoDisplayFullName": "25-11-02-001-A - Laby Jaktlag"
+          },
+          {
+            "AjoId": 771927,
+            "AfoId": 3,
+            "Name": "Arjeplogs ÄSO",
+            "AjoDisplayFullName": "25-11-02-002-Ä - Arjeplogs ÄSO"
+          },
+          {
+            "AjoId": 772462,
+            "AfoId": 3,
+            "Name": "Granselets Jakt",
+            "AjoDisplayFullName": "25-11-02-004-A - Granselets Jakt"
+          },
+          {
+            "AjoId": 773014,
+            "AfoId": 3,
+            "Name": "Ringhultsheden Jaktlag",
+            "AjoDisplayFullName": "25-11-02-005-A - Ringhultsheden Jaktlag"
+          },
+          {
+            "AjoId": 722046,
+            "AfoId": 3,
+            "Name": "Arjeplogs Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-101-A - Arjeplogs Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722047,
+            "AfoId": 3,
+            "Name": "Bukts Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-102-A - Bukts Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722049,
+            "AfoId": 3,
+            "Name": "Mjölkbergs JVF",
+            "AjoDisplayFullName": "25-11-02-104-A - Mjölkbergs JVF"
+          },
+          {
+            "AjoId": 722050,
+            "AfoId": 3,
+            "Name": "Järvtandlidens Vvo",
+            "AjoDisplayFullName": "25-11-02-105-A - Järvtandlidens Vvo"
+          },
+          {
+            "AjoId": 722051,
+            "AfoId": 3,
+            "Name": "Kallöns Vvo",
+            "AjoDisplayFullName": "25-11-02-106-A - Kallöns Vvo"
+          },
+          {
+            "AjoId": 722052,
+            "AfoId": 3,
+            "Name": "Stensunds Jaktlag",
+            "AjoDisplayFullName": "25-11-02-107-A - Stensunds Jaktlag"
+          },
+          {
+            "AjoId": 722053,
+            "AfoId": 3,
+            "Name": "Långvikens Vvo",
+            "AjoDisplayFullName": "25-11-02-108-A - Långvikens Vvo"
+          },
+          {
+            "AjoId": 722054,
+            "AfoId": 3,
+            "Name": "Kuorrokveiks Jaktlag",
+            "AjoDisplayFullName": "25-11-02-109-A - Kuorrokveiks Jaktlag"
+          },
+          {
+            "AjoId": 722055,
+            "AfoId": 3,
+            "Name": "Marielunds Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-110-A - Marielunds Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722056,
+            "AfoId": 3,
+            "Name": "Mellanström Vvo",
+            "AjoDisplayFullName": "25-11-02-111-A - Mellanström Vvo"
+          },
+          {
+            "AjoId": 722057,
+            "AfoId": 3,
+            "Name": "Mullholms Vvo",
+            "AjoDisplayFullName": "25-11-02-112-A - Mullholms Vvo"
+          },
+          {
+            "AjoId": 722058,
+            "AfoId": 3,
+            "Name": "Nyby Jaktlag",
+            "AjoDisplayFullName": "25-11-02-113-A - Nyby Jaktlag"
+          },
+          {
+            "AjoId": 722059,
+            "AfoId": 3,
+            "Name": "Nylidens Vvo",
+            "AjoDisplayFullName": "25-11-02-114-A - Nylidens Vvo"
+          },
+          {
+            "AjoId": 722060,
+            "AfoId": 3,
+            "Name": "Pilbergets Vvo",
+            "AjoDisplayFullName": "25-11-02-115-A - Pilbergets Vvo"
+          },
+          {
+            "AjoId": 722061,
+            "AfoId": 3,
+            "Name": "Radnejaurs Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-116-A - Radnejaurs Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722062,
+            "AfoId": 3,
+            "Name": "Sundås Jaktlag",
+            "AjoDisplayFullName": "25-11-02-117-A - Sundås Jaktlag"
+          },
+          {
+            "AjoId": 722063,
+            "AfoId": 3,
+            "Name": "Balkis Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-119-A - Balkis Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722066,
+            "AfoId": 3,
+            "Name": "Ståkke Sameby",
+            "AjoDisplayFullName": "25-11-02-123-A - Ståkke Sameby"
+          },
+          {
+            "AjoId": 722067,
+            "AfoId": 3,
+            "Name": "Svannäs",
+            "AjoDisplayFullName": "25-11-02-124-A - Svannäs"
+          },
+          {
+            "AjoId": 722068,
+            "AfoId": 3,
+            "Name": "Oxmyrens Jaktlag",
+            "AjoDisplayFullName": "25-11-02-125-A - Oxmyrens Jaktlag"
+          },
+          {
+            "AjoId": 722069,
+            "AfoId": 3,
+            "Name": "Maskaure Sameby",
+            "AjoDisplayFullName": "25-11-02-126-A - Maskaure Sameby"
+          },
+          {
+            "AjoId": 722071,
+            "AfoId": 3,
+            "Name": "Nurrholm & Ulljabouda VVO",
+            "AjoDisplayFullName": "25-11-02-128-A - Nurrholm & Ulljabouda VVO"
+          },
+          {
+            "AjoId": 722072,
+            "AfoId": 3,
+            "Name": "Målke Jaktlag",
+            "AjoDisplayFullName": "25-11-02-129-A - Målke Jaktlag"
+          },
+          {
+            "AjoId": 722073,
+            "AfoId": 3,
+            "Name": "Svannäs Jaktlag",
+            "AjoDisplayFullName": "25-11-02-130-A - Svannäs Jaktlag"
+          },
+          {
+            "AjoId": 722074,
+            "AfoId": 3,
+            "Name": "Sveggejaurs Jaktlag",
+            "AjoDisplayFullName": "25-11-02-131-A - Sveggejaurs Jaktlag"
+          },
+          {
+            "AjoId": 722075,
+            "AfoId": 3,
+            "Name": "Skellefteå Krafts",
+            "AjoDisplayFullName": "25-11-02-132-A - Skellefteå Krafts"
+          },
+          {
+            "AjoId": 722076,
+            "AfoId": 3,
+            "Name": "Bellonäs älgjaktslag",
+            "AjoDisplayFullName": "25-11-02-133-A - Bellonäs älgjaktslag"
+          },
+          {
+            "AjoId": 722077,
+            "AfoId": 3,
+            "Name": "Brattforsmorets Jaktlag",
+            "AjoDisplayFullName": "25-11-02-134-A - Brattforsmorets Jaktlag"
+          },
+          {
+            "AjoId": 722078,
+            "AfoId": 3,
+            "Name": "Röjbergets Jaktlag",
+            "AjoDisplayFullName": "25-11-02-135-A - Röjbergets Jaktlag"
+          },
+          {
+            "AjoId": 722081,
+            "AfoId": 3,
+            "Name": "Östra Mullejaur",
+            "AjoDisplayFullName": "25-11-02-138-A - Östra Mullejaur"
+          },
+          {
+            "AjoId": 722083,
+            "AfoId": 3,
+            "Name": "Slagnäs Jaktlag",
+            "AjoDisplayFullName": "25-11-02-140-A - Slagnäs Jaktlag"
+          },
+          {
+            "AjoId": 724582,
+            "AfoId": 3,
+            "Name": "Öregrund",
+            "AjoDisplayFullName": "25-11-02-141-A - Öregrund"
+          },
+          {
+            "AjoId": 724682,
+            "AfoId": 3,
+            "Name": "Arvliden",
+            "AjoDisplayFullName": "25-11-02-142-A - Arvliden"
+          },
+          {
+            "AjoId": 724574,
+            "AfoId": 3,
+            "Name": "Stråtjejaur",
+            "AjoDisplayFullName": "25-11-02-143-A - Stråtjejaur"
+          },
+          {
+            "AjoId": 724683,
+            "AfoId": 3,
+            "Name": "Stor-Ståkke",
+            "AjoDisplayFullName": "25-11-02-144-A - Stor-Ståkke"
+          },
+          {
+            "AjoId": 724752,
+            "AfoId": 3,
+            "Name": "Enberget",
+            "AjoDisplayFullName": "25-11-02-145-A - Enberget"
+          },
+          {
+            "AjoId": 725922,
+            "AfoId": 3,
+            "Name": "Bäcknäs",
+            "AjoDisplayFullName": "25-11-02-146-A - Bäcknäs"
+          },
+          {
+            "AjoId": 771913,
+            "AfoId": 3,
+            "Name": "Norra Hornlidens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-001-A - Norra Hornlidens Jaktlag"
+          },
+          {
+            "AjoId": 771929,
+            "AfoId": 3,
+            "Name": "Arvidsjaurs ÄSO",
+            "AjoDisplayFullName": "25-12-01-002-Ä - Arvidsjaurs ÄSO"
+          },
+          {
+            "AjoId": 771937,
+            "AfoId": 3,
+            "Name": "Lilla Tallberg",
+            "AjoDisplayFullName": "25-12-01-003-A - Lilla Tallberg"
+          },
+          {
+            "AjoId": 772467,
+            "AfoId": 3,
+            "Name": "Lauker-Lövviken Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-004-A - Lauker-Lövviken Jaktklubb"
+          },
+          {
+            "AjoId": 773035,
+            "AfoId": 3,
+            "Name": "Fridhems jaktlag",
+            "AjoDisplayFullName": "25-12-01-005-A - Fridhems jaktlag"
+          },
+          {
+            "AjoId": 722084,
+            "AfoId": 3,
+            "Name": "Abborrträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-101-A - Abborrträsk Vvo"
+          },
+          {
+            "AjoId": 722085,
+            "AfoId": 3,
+            "Name": "Aspliden Vvo",
+            "AjoDisplayFullName": "25-12-01-102-A - Aspliden Vvo"
+          },
+          {
+            "AjoId": 722086,
+            "AfoId": 3,
+            "Name": "Grundträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-104-A - Grundträsk Vvo"
+          },
+          {
+            "AjoId": 722087,
+            "AfoId": 3,
+            "Name": "Lövvikens Vvo",
+            "AjoDisplayFullName": "25-12-01-106-A - Lövvikens Vvo"
+          },
+          {
+            "AjoId": 722088,
+            "AfoId": 3,
+            "Name": "Pjesker-Granudds Jaktlag",
+            "AjoDisplayFullName": "25-12-01-108-A - Pjesker-Granudds Jaktlag"
+          },
+          {
+            "AjoId": 722089,
+            "AfoId": 3,
+            "Name": "Pjeskers Vvo",
+            "AjoDisplayFullName": "25-12-01-109-A - Pjeskers Vvo"
+          },
+          {
+            "AjoId": 722091,
+            "AfoId": 3,
+            "Name": "Saltmyrans Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-111-A - Saltmyrans Jaktklubb"
+          },
+          {
+            "AjoId": 722092,
+            "AfoId": 3,
+            "Name": "Siksjö Vvo",
+            "AjoDisplayFullName": "25-12-01-112-A - Siksjö Vvo"
+          },
+          {
+            "AjoId": 722094,
+            "AfoId": 3,
+            "Name": "Utterlidens Vvo",
+            "AjoDisplayFullName": "25-12-01-116-A - Utterlidens Vvo"
+          },
+          {
+            "AjoId": 722095,
+            "AfoId": 3,
+            "Name": "Vuotners Vvo",
+            "AjoDisplayFullName": "25-12-01-117-A - Vuotners Vvo"
+          },
+          {
+            "AjoId": 722096,
+            "AfoId": 3,
+            "Name": "Ånäs Vvo",
+            "AjoDisplayFullName": "25-12-01-118-A - Ånäs Vvo"
+          },
+          {
+            "AjoId": 722097,
+            "AfoId": 3,
+            "Name": "Baktsjaurs Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-120-A - Baktsjaurs Jaktklubb"
+          },
+          {
+            "AjoId": 722098,
+            "AfoId": 3,
+            "Name": "Bäcknäs Vvo",
+            "AjoDisplayFullName": "25-12-01-121-A - Bäcknäs Vvo"
+          },
+          {
+            "AjoId": 722099,
+            "AfoId": 3,
+            "Name": "Hällbergs Jaktvårdsförening",
+            "AjoDisplayFullName": "25-12-01-122-A - Hällbergs Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722100,
+            "AfoId": 3,
+            "Name": "Laukers Jaktsällskap",
+            "AjoDisplayFullName": "25-12-01-123-A - Laukers Jaktsällskap"
+          },
+          {
+            "AjoId": 722101,
+            "AfoId": 3,
+            "Name": "Mausjaurs Sameby",
+            "AjoDisplayFullName": "25-12-01-125-A - Mausjaurs Sameby"
+          },
+          {
+            "AjoId": 722102,
+            "AfoId": 3,
+            "Name": "Akkavare vvo",
+            "AjoDisplayFullName": "25-12-01-126-A - Akkavare vvo"
+          },
+          {
+            "AjoId": 722103,
+            "AfoId": 3,
+            "Name": "Auktsjaurs Vvo",
+            "AjoDisplayFullName": "25-12-01-127-A - Auktsjaurs Vvo"
+          },
+          {
+            "AjoId": 722104,
+            "AfoId": 3,
+            "Name": "Deppis Vvo",
+            "AjoDisplayFullName": "25-12-01-128-A - Deppis Vvo"
+          },
+          {
+            "AjoId": 722105,
+            "AfoId": 3,
+            "Name": "Fjällbonäs Vvo",
+            "AjoDisplayFullName": "25-12-01-129-A - Fjällbonäs Vvo"
+          },
+          {
+            "AjoId": 722106,
+            "AfoId": 3,
+            "Name": "Gullöns Jaktvårdsklubb",
+            "AjoDisplayFullName": "25-12-01-130-A - Gullöns Jaktvårdsklubb"
+          },
+          {
+            "AjoId": 722107,
+            "AfoId": 3,
+            "Name": "Renvallens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-131-A - Renvallens Jaktlag"
+          },
+          {
+            "AjoId": 722108,
+            "AfoId": 3,
+            "Name": "Serrejaur Vvo",
+            "AjoDisplayFullName": "25-12-01-132-A - Serrejaur Vvo"
+          },
+          {
+            "AjoId": 722109,
+            "AfoId": 3,
+            "Name": "Sjöträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-133-A - Sjöträsk Vvo"
+          },
+          {
+            "AjoId": 722110,
+            "AfoId": 3,
+            "Name": "Tjappsåive VVO",
+            "AjoDisplayFullName": "25-12-01-134-A - Tjappsåive VVO"
+          },
+          {
+            "AjoId": 722111,
+            "AfoId": 3,
+            "Name": "Arvidsjaurs Allmänningsskog",
+            "AjoDisplayFullName": "25-12-01-135-A - Arvidsjaurs Allmänningsskog"
+          },
+          {
+            "AjoId": 722112,
+            "AfoId": 3,
+            "Name": "Storbergs Vvo",
+            "AjoDisplayFullName": "25-12-01-136-A - Storbergs Vvo"
+          },
+          {
+            "AjoId": 722113,
+            "AfoId": 3,
+            "Name": "K4 Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-137-A - K4 Jaktklubb"
+          },
+          {
+            "AjoId": 722114,
+            "AfoId": 3,
+            "Name": "Rönnbergets Jaktlag",
+            "AjoDisplayFullName": "25-12-01-138-A - Rönnbergets Jaktlag"
+          },
+          {
+            "AjoId": 722115,
+            "AfoId": 3,
+            "Name": "Avavikens Vvo",
+            "AjoDisplayFullName": "25-12-01-139-A - Avavikens Vvo"
+          },
+          {
+            "AjoId": 722116,
+            "AfoId": 3,
+            "Name": "Baktåive Vvo",
+            "AjoDisplayFullName": "25-12-01-140-A - Baktåive Vvo"
+          },
+          {
+            "AjoId": 722118,
+            "AfoId": 3,
+            "Name": "Hedbergs Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-142-A - Hedbergs Jaktklubb"
+          },
+          {
+            "AjoId": 722119,
+            "AfoId": 3,
+            "Name": "Jerfojaur Vvo",
+            "AjoDisplayFullName": "25-12-01-143-A - Jerfojaur Vvo"
+          },
+          {
+            "AjoId": 722120,
+            "AfoId": 3,
+            "Name": "Lomträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-144-A - Lomträsk Vvo"
+          },
+          {
+            "AjoId": 722121,
+            "AfoId": 3,
+            "Name": "Långuddens Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-145-A - Långuddens Jaktklubb"
+          },
+          {
+            "AjoId": 722122,
+            "AfoId": 3,
+            "Name": "Suddesjaur Vvo",
+            "AjoDisplayFullName": "25-12-01-146-A - Suddesjaur Vvo"
+          },
+          {
+            "AjoId": 722123,
+            "AfoId": 3,
+            "Name": "Åkroken-Städdjejaur Vvo",
+            "AjoDisplayFullName": "25-12-01-147-A - Åkroken-Städdjejaur Vvo"
+          },
+          {
+            "AjoId": 722124,
+            "AfoId": 3,
+            "Name": "Hornlidens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-148-A - Hornlidens Jaktlag"
+          },
+          {
+            "AjoId": 722126,
+            "AfoId": 3,
+            "Name": "Grundträsklidens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-150-A - Grundträsklidens Jaktlag"
+          },
+          {
+            "AjoId": 722128,
+            "AfoId": 3,
+            "Name": "Östra Kikkejaur",
+            "AjoDisplayFullName": "25-12-01-153-A - Östra Kikkejaur"
+          },
+          {
+            "AjoId": 722129,
+            "AfoId": 3,
+            "Name": "V Kikkejaur Sameby",
+            "AjoDisplayFullName": "25-12-01-154-A - V Kikkejaur Sameby"
+          },
+          {
+            "AjoId": 722131,
+            "AfoId": 3,
+            "Name": "Tjintokk AB",
+            "AjoDisplayFullName": "25-12-01-157-A - Tjintokk AB"
+          },
+          {
+            "AjoId": 722132,
+            "AfoId": 3,
+            "Name": "Utterträsk Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-159-A - Utterträsk Jaktklubb"
+          },
+          {
+            "AjoId": 722133,
+            "AfoId": 3,
+            "Name": "Kläppens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-160-A - Kläppens Jaktlag"
+          },
+          {
+            "AjoId": 722134,
+            "AfoId": 3,
+            "Name": "Stormyråsens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-161-A - Stormyråsens Jaktlag"
+          },
+          {
+            "AjoId": 722135,
+            "AfoId": 3,
+            "Name": "Palkovare",
+            "AjoDisplayFullName": "25-12-01-162-A - Palkovare"
+          },
+          {
+            "AjoId": 722136,
+            "AfoId": 3,
+            "Name": "Muorrejaurs Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-163-A - Muorrejaurs Jaktklubb"
+          },
+          {
+            "AjoId": 722138,
+            "AfoId": 3,
+            "Name": "Brännholm jaktområde",
+            "AjoDisplayFullName": "25-12-01-165-A - Brännholm jaktområde"
+          },
+          {
+            "AjoId": 724583,
+            "AfoId": 3,
+            "Name": "Björknäs ",
+            "AjoDisplayFullName": "25-12-01-167-A - Björknäs "
+          },
+          {
+            "AjoId": 725786,
+            "AfoId": 3,
+            "Name": "Strittjomvare 6",
+            "AjoDisplayFullName": "25-12-01-168-A - Strittjomvare 6"
+          },
+          {
+            "AjoId": 725787,
+            "AfoId": 3,
+            "Name": "Lauker-Östansjö Jaktlag",
+            "AjoDisplayFullName": "25-12-01-169-A - Lauker-Östansjö Jaktlag"
+          },
+          {
+            "AjoId": 722141,
+            "AfoId": 3,
+            "Name": "Glommersträsk ÄSO",
+            "AjoDisplayFullName": "25-12-01-202-Ä - Glommersträsk ÄSO"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasonsByLanAndAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "Value": "1990/1991",
+            "Title": "1990/1991"
+          },
+          {
+            "Value": "1991/1992",
+            "Title": "1991/1992"
+          },
+          {
+            "Value": "1992/1993",
+            "Title": "1992/1993"
+          },
+          {
+            "Value": "1993/1994",
+            "Title": "1993/1994"
+          },
+          {
+            "Value": "1994/1995",
+            "Title": "1994/1995"
+          },
+          {
+            "Value": "1995/1996",
+            "Title": "1995/1996"
+          },
+          {
+            "Value": "1996/1997",
+            "Title": "1996/1997"
+          },
+          {
+            "Value": "1997/1998",
+            "Title": "1997/1998"
+          },
+          {
+            "Value": "1998/1999",
+            "Title": "1998/1999"
+          },
+          {
+            "Value": "1999/2000",
+            "Title": "1999/2000"
+          },
+          {
+            "Value": "2000/2001",
+            "Title": "2000/2001"
+          },
+          {
+            "Value": "2001/2002",
+            "Title": "2001/2002"
+          },
+          {
+            "Value": "2002/2003",
+            "Title": "2002/2003"
+          },
+          {
+            "Value": "2003/2004",
+            "Title": "2003/2004"
+          },
+          {
+            "Value": "2004/2005",
+            "Title": "2004/2005"
+          },
+          {
+            "Value": "2005/2006",
+            "Title": "2005/2006"
+          },
+          {
+            "Value": "2006/2007",
+            "Title": "2006/2007"
+          },
+          {
+            "Value": "2007/2008",
+            "Title": "2007/2008"
+          },
+          {
+            "Value": "2008/2009",
+            "Title": "2008/2009"
+          },
+          {
+            "Value": "2009/2010",
+            "Title": "2009/2010"
+          },
+          {
+            "Value": "2010/2011",
+            "Title": "2010/2011"
+          },
+          {
+            "Value": "2011/2012",
+            "Title": "2011/2012"
+          },
+          {
+            "Value": "2012/2013",
+            "Title": "2012/2013"
+          },
+          {
+            "Value": "2013/2014",
+            "Title": "2013/2014"
+          },
+          {
+            "Value": "2014/2015",
+            "Title": "2014/2015"
+          },
+          {
+            "Value": "2015/2016",
+            "Title": "2015/2016"
+          },
+          {
+            "Value": "2016/2017",
+            "Title": "2016/2017"
+          },
+          {
+            "Value": "2017/2018",
+            "Title": "2017/2018"
+          },
+          {
+            "Value": "2018/2019",
+            "Title": "2018/2019"
+          },
+          {
+            "Value": "2019/2020",
+            "Title": "2019/2020"
+          },
+          {
+            "Value": "2020/2021",
+            "Title": "2020/2021"
+          },
+          {
+            "Value": "2021/2022",
+            "Title": "2021/2022"
+          },
+          {
+            "Value": "2022/2023",
+            "Title": "2022/2023"
+          },
+          {
+            "Value": "2023/2024",
+            "Title": "2023/2024"
+          },
+          {
+            "Value": "2024/2025",
+            "Title": "2024/2025"
+          },
+          {
+            "Value": "2025/2026",
+            "Title": "2025/2026"
+          },
+          {
+            "Value": "2026/2027",
+            "Title": "2026/2027"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 719265,
+            "AfoId": 3,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "25-00-99-003-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 771962,
+            "AfoId": 3,
+            "Name": "Torborg Jaktlag",
+            "AjoDisplayFullName": "25-11-01-001-A - Torborg Jaktlag"
+          },
+          {
+            "AjoId": 772460,
+            "AfoId": 3,
+            "Name": "Västra Uddjaure",
+            "AjoDisplayFullName": "25-11-01-002-A - Västra Uddjaure"
+          },
+          {
+            "AjoId": 772461,
+            "AfoId": 3,
+            "Name": "Lövnäs Trollberg",
+            "AjoDisplayFullName": "25-11-01-003-A - Lövnäs Trollberg"
+          },
+          {
+            "AjoId": 772634,
+            "AfoId": 3,
+            "Name": "Krittja Jakt",
+            "AjoDisplayFullName": "25-11-01-004-A - Krittja Jakt"
+          },
+          {
+            "AjoId": 772765,
+            "AfoId": 3,
+            "Name": "Nåddok Jaktlag",
+            "AjoDisplayFullName": "25-11-01-005-A - Nåddok Jaktlag"
+          },
+          {
+            "AjoId": 773002,
+            "AfoId": 3,
+            "Name": "Sakkavare älgjaktsområde",
+            "AjoDisplayFullName": "25-11-01-006-A - Sakkavare älgjaktsområde"
+          },
+          {
+            "AjoId": 721876,
+            "AfoId": 3,
+            "Name": "Racksund-Östansjö Jvf",
+            "AjoDisplayFullName": "25-11-01-101-A - Racksund-Östansjö Jvf"
+          },
+          {
+            "AjoId": 721878,
+            "AfoId": 3,
+            "Name": "Semisjaur-Njargs Sameby",
+            "AjoDisplayFullName": "25-11-01-103-A - Semisjaur-Njargs Sameby"
+          },
+          {
+            "AjoId": 721879,
+            "AfoId": 3,
+            "Name": "Svaipa Sameby",
+            "AjoDisplayFullName": "25-11-01-104-A - Svaipa Sameby"
+          },
+          {
+            "AjoId": 721881,
+            "AfoId": 3,
+            "Name": "Ståkke Sameby",
+            "AjoDisplayFullName": "25-11-01-106-A - Ståkke Sameby"
+          },
+          {
+            "AjoId": 721882,
+            "AfoId": 3,
+            "Name": "Maskaure Sameby",
+            "AjoDisplayFullName": "25-11-01-107-A - Maskaure Sameby"
+          },
+          {
+            "AjoId": 721883,
+            "AfoId": 3,
+            "Name": "Adolfströms Jaktlag",
+            "AjoDisplayFullName": "25-11-01-108-A - Adolfströms Jaktlag"
+          },
+          {
+            "AjoId": 721884,
+            "AfoId": 3,
+            "Name": "Luokta Mavas Sameby",
+            "AjoDisplayFullName": "25-11-01-109-A - Luokta Mavas Sameby"
+          },
+          {
+            "AjoId": 721885,
+            "AfoId": 3,
+            "Name": "Länsstyrelsens upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-11-01-110-A - Länsstyrelsens upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 721886,
+            "AfoId": 3,
+            "Name": "Båtsjaur Jaktlag",
+            "AjoDisplayFullName": "25-11-01-111-A - Båtsjaur Jaktlag"
+          },
+          {
+            "AjoId": 722022,
+            "AfoId": 3,
+            "Name": "Västerfjäll",
+            "AjoDisplayFullName": "25-11-01-112-A - Västerfjäll"
+          },
+          {
+            "AjoId": 722023,
+            "AfoId": 3,
+            "Name": "Sundnäs",
+            "AjoDisplayFullName": "25-11-01-113-A - Sundnäs"
+          },
+          {
+            "AjoId": 722024,
+            "AfoId": 3,
+            "Name": "Märsa Älgjaktsområde",
+            "AjoDisplayFullName": "25-11-01-114-A - Märsa Älgjaktsområde"
+          },
+          {
+            "AjoId": 722025,
+            "AfoId": 3,
+            "Name": "Gauto jaktområde",
+            "AjoDisplayFullName": "25-11-01-116-A - Gauto jaktområde"
+          },
+          {
+            "AjoId": 722026,
+            "AfoId": 3,
+            "Name": "Höglidens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-117-A - Höglidens Jaktlag"
+          },
+          {
+            "AjoId": 722027,
+            "AfoId": 3,
+            "Name": "Björklidens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-119-A - Björklidens Jaktlag"
+          },
+          {
+            "AjoId": 722028,
+            "AfoId": 3,
+            "Name": "Hällbackens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-120-A - Hällbackens Jaktlag"
+          },
+          {
+            "AjoId": 722029,
+            "AfoId": 3,
+            "Name": "Laisviks Jaktv.förening",
+            "AjoDisplayFullName": "25-11-01-121-A - Laisviks Jaktv.förening"
+          },
+          {
+            "AjoId": 722030,
+            "AfoId": 3,
+            "Name": "Loholms Byalag",
+            "AjoDisplayFullName": "25-11-01-122-A - Loholms Byalag"
+          },
+          {
+            "AjoId": 722031,
+            "AfoId": 3,
+            "Name": "Korsträsk jaktområde",
+            "AjoDisplayFullName": "25-11-01-123-A - Korsträsk jaktområde"
+          },
+          {
+            "AjoId": 722032,
+            "AfoId": 3,
+            "Name": "Laisvalls Jaktklubb",
+            "AjoDisplayFullName": "25-11-01-124-A - Laisvalls Jaktklubb"
+          },
+          {
+            "AjoId": 722033,
+            "AfoId": 3,
+            "Name": "Jäkkviks Byalag",
+            "AjoDisplayFullName": "25-11-01-125-A - Jäkkviks Byalag"
+          },
+          {
+            "AjoId": 722034,
+            "AfoId": 3,
+            "Name": "Laisvalls jaktlag",
+            "AjoDisplayFullName": "25-11-01-126-A - Laisvalls jaktlag"
+          },
+          {
+            "AjoId": 722035,
+            "AfoId": 3,
+            "Name": "Akkapakte",
+            "AjoDisplayFullName": "25-11-01-127-A - Akkapakte"
+          },
+          {
+            "AjoId": 722036,
+            "AfoId": 3,
+            "Name": "Jutis Byalag",
+            "AjoDisplayFullName": "25-11-01-128-A - Jutis Byalag"
+          },
+          {
+            "AjoId": 722037,
+            "AfoId": 3,
+            "Name": "Tjärnbergs Jaktlag",
+            "AjoDisplayFullName": "25-11-01-129-A - Tjärnbergs Jaktlag"
+          },
+          {
+            "AjoId": 722038,
+            "AfoId": 3,
+            "Name": "Galtisjaur Jaktlag",
+            "AjoDisplayFullName": "25-11-01-130-A - Galtisjaur Jaktlag"
+          },
+          {
+            "AjoId": 722040,
+            "AfoId": 3,
+            "Name": "Lestanders Jaktlag",
+            "AjoDisplayFullName": "25-11-01-132-A - Lestanders Jaktlag"
+          },
+          {
+            "AjoId": 722041,
+            "AfoId": 3,
+            "Name": "Höghedens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-133-A - Höghedens Jaktlag"
+          },
+          {
+            "AjoId": 722042,
+            "AfoId": 3,
+            "Name": "Nya Bergnäs jaktområde",
+            "AjoDisplayFullName": "25-11-01-134-A - Nya Bergnäs jaktområde"
+          },
+          {
+            "AjoId": 722043,
+            "AfoId": 3,
+            "Name": "Vaxnäs Jaktlag",
+            "AjoDisplayFullName": "25-11-01-135-A - Vaxnäs Jaktlag"
+          },
+          {
+            "AjoId": 722044,
+            "AfoId": 3,
+            "Name": "Komyrans Jaktlag",
+            "AjoDisplayFullName": "25-11-01-136-A - Komyrans Jaktlag"
+          },
+          {
+            "AjoId": 722045,
+            "AfoId": 3,
+            "Name": "Sundnäs jaktområde",
+            "AjoDisplayFullName": "25-11-01-137-A - Sundnäs jaktområde"
+          },
+          {
+            "AjoId": 724573,
+            "AfoId": 3,
+            "Name": "Laisvall",
+            "AjoDisplayFullName": "25-11-01-138-A - Laisvall"
+          },
+          {
+            "AjoId": 771910,
+            "AfoId": 3,
+            "Name": "Laby Jaktlag",
+            "AjoDisplayFullName": "25-11-02-001-A - Laby Jaktlag"
+          },
+          {
+            "AjoId": 771927,
+            "AfoId": 3,
+            "Name": "Arjeplogs ÄSO",
+            "AjoDisplayFullName": "25-11-02-002-Ä - Arjeplogs ÄSO"
+          },
+          {
+            "AjoId": 772462,
+            "AfoId": 3,
+            "Name": "Granselets Jakt",
+            "AjoDisplayFullName": "25-11-02-004-A - Granselets Jakt"
+          },
+          {
+            "AjoId": 773014,
+            "AfoId": 3,
+            "Name": "Ringhultsheden Jaktlag",
+            "AjoDisplayFullName": "25-11-02-005-A - Ringhultsheden Jaktlag"
+          },
+          {
+            "AjoId": 722046,
+            "AfoId": 3,
+            "Name": "Arjeplogs Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-101-A - Arjeplogs Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722047,
+            "AfoId": 3,
+            "Name": "Bukts Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-102-A - Bukts Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722049,
+            "AfoId": 3,
+            "Name": "Mjölkbergs JVF",
+            "AjoDisplayFullName": "25-11-02-104-A - Mjölkbergs JVF"
+          },
+          {
+            "AjoId": 722050,
+            "AfoId": 3,
+            "Name": "Järvtandlidens Vvo",
+            "AjoDisplayFullName": "25-11-02-105-A - Järvtandlidens Vvo"
+          },
+          {
+            "AjoId": 722051,
+            "AfoId": 3,
+            "Name": "Kallöns Vvo",
+            "AjoDisplayFullName": "25-11-02-106-A - Kallöns Vvo"
+          },
+          {
+            "AjoId": 722052,
+            "AfoId": 3,
+            "Name": "Stensunds Jaktlag",
+            "AjoDisplayFullName": "25-11-02-107-A - Stensunds Jaktlag"
+          },
+          {
+            "AjoId": 722053,
+            "AfoId": 3,
+            "Name": "Långvikens Vvo",
+            "AjoDisplayFullName": "25-11-02-108-A - Långvikens Vvo"
+          },
+          {
+            "AjoId": 722054,
+            "AfoId": 3,
+            "Name": "Kuorrokveiks Jaktlag",
+            "AjoDisplayFullName": "25-11-02-109-A - Kuorrokveiks Jaktlag"
+          },
+          {
+            "AjoId": 722055,
+            "AfoId": 3,
+            "Name": "Marielunds Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-110-A - Marielunds Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722056,
+            "AfoId": 3,
+            "Name": "Mellanström Vvo",
+            "AjoDisplayFullName": "25-11-02-111-A - Mellanström Vvo"
+          },
+          {
+            "AjoId": 722057,
+            "AfoId": 3,
+            "Name": "Mullholms Vvo",
+            "AjoDisplayFullName": "25-11-02-112-A - Mullholms Vvo"
+          },
+          {
+            "AjoId": 722058,
+            "AfoId": 3,
+            "Name": "Nyby Jaktlag",
+            "AjoDisplayFullName": "25-11-02-113-A - Nyby Jaktlag"
+          },
+          {
+            "AjoId": 722059,
+            "AfoId": 3,
+            "Name": "Nylidens Vvo",
+            "AjoDisplayFullName": "25-11-02-114-A - Nylidens Vvo"
+          },
+          {
+            "AjoId": 722060,
+            "AfoId": 3,
+            "Name": "Pilbergets Vvo",
+            "AjoDisplayFullName": "25-11-02-115-A - Pilbergets Vvo"
+          },
+          {
+            "AjoId": 722061,
+            "AfoId": 3,
+            "Name": "Radnejaurs Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-116-A - Radnejaurs Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722062,
+            "AfoId": 3,
+            "Name": "Sundås Jaktlag",
+            "AjoDisplayFullName": "25-11-02-117-A - Sundås Jaktlag"
+          },
+          {
+            "AjoId": 722063,
+            "AfoId": 3,
+            "Name": "Balkis Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-119-A - Balkis Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722066,
+            "AfoId": 3,
+            "Name": "Ståkke Sameby",
+            "AjoDisplayFullName": "25-11-02-123-A - Ståkke Sameby"
+          },
+          {
+            "AjoId": 722067,
+            "AfoId": 3,
+            "Name": "Svannäs",
+            "AjoDisplayFullName": "25-11-02-124-A - Svannäs"
+          },
+          {
+            "AjoId": 722068,
+            "AfoId": 3,
+            "Name": "Oxmyrens Jaktlag",
+            "AjoDisplayFullName": "25-11-02-125-A - Oxmyrens Jaktlag"
+          },
+          {
+            "AjoId": 722069,
+            "AfoId": 3,
+            "Name": "Maskaure Sameby",
+            "AjoDisplayFullName": "25-11-02-126-A - Maskaure Sameby"
+          },
+          {
+            "AjoId": 722071,
+            "AfoId": 3,
+            "Name": "Nurrholm & Ulljabouda VVO",
+            "AjoDisplayFullName": "25-11-02-128-A - Nurrholm & Ulljabouda VVO"
+          },
+          {
+            "AjoId": 722072,
+            "AfoId": 3,
+            "Name": "Målke Jaktlag",
+            "AjoDisplayFullName": "25-11-02-129-A - Målke Jaktlag"
+          },
+          {
+            "AjoId": 722073,
+            "AfoId": 3,
+            "Name": "Svannäs Jaktlag",
+            "AjoDisplayFullName": "25-11-02-130-A - Svannäs Jaktlag"
+          },
+          {
+            "AjoId": 722074,
+            "AfoId": 3,
+            "Name": "Sveggejaurs Jaktlag",
+            "AjoDisplayFullName": "25-11-02-131-A - Sveggejaurs Jaktlag"
+          },
+          {
+            "AjoId": 722075,
+            "AfoId": 3,
+            "Name": "Skellefteå Krafts",
+            "AjoDisplayFullName": "25-11-02-132-A - Skellefteå Krafts"
+          },
+          {
+            "AjoId": 722076,
+            "AfoId": 3,
+            "Name": "Bellonäs älgjaktslag",
+            "AjoDisplayFullName": "25-11-02-133-A - Bellonäs älgjaktslag"
+          },
+          {
+            "AjoId": 722077,
+            "AfoId": 3,
+            "Name": "Brattforsmorets Jaktlag",
+            "AjoDisplayFullName": "25-11-02-134-A - Brattforsmorets Jaktlag"
+          },
+          {
+            "AjoId": 722078,
+            "AfoId": 3,
+            "Name": "Röjbergets Jaktlag",
+            "AjoDisplayFullName": "25-11-02-135-A - Röjbergets Jaktlag"
+          },
+          {
+            "AjoId": 722081,
+            "AfoId": 3,
+            "Name": "Östra Mullejaur",
+            "AjoDisplayFullName": "25-11-02-138-A - Östra Mullejaur"
+          },
+          {
+            "AjoId": 722083,
+            "AfoId": 3,
+            "Name": "Slagnäs Jaktlag",
+            "AjoDisplayFullName": "25-11-02-140-A - Slagnäs Jaktlag"
+          },
+          {
+            "AjoId": 724582,
+            "AfoId": 3,
+            "Name": "Öregrund",
+            "AjoDisplayFullName": "25-11-02-141-A - Öregrund"
+          },
+          {
+            "AjoId": 724682,
+            "AfoId": 3,
+            "Name": "Arvliden",
+            "AjoDisplayFullName": "25-11-02-142-A - Arvliden"
+          },
+          {
+            "AjoId": 724574,
+            "AfoId": 3,
+            "Name": "Stråtjejaur",
+            "AjoDisplayFullName": "25-11-02-143-A - Stråtjejaur"
+          },
+          {
+            "AjoId": 724683,
+            "AfoId": 3,
+            "Name": "Stor-Ståkke",
+            "AjoDisplayFullName": "25-11-02-144-A - Stor-Ståkke"
+          },
+          {
+            "AjoId": 724752,
+            "AfoId": 3,
+            "Name": "Enberget",
+            "AjoDisplayFullName": "25-11-02-145-A - Enberget"
+          },
+          {
+            "AjoId": 725922,
+            "AfoId": 3,
+            "Name": "Bäcknäs",
+            "AjoDisplayFullName": "25-11-02-146-A - Bäcknäs"
+          },
+          {
+            "AjoId": 771913,
+            "AfoId": 3,
+            "Name": "Norra Hornlidens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-001-A - Norra Hornlidens Jaktlag"
+          },
+          {
+            "AjoId": 771929,
+            "AfoId": 3,
+            "Name": "Arvidsjaurs ÄSO",
+            "AjoDisplayFullName": "25-12-01-002-Ä - Arvidsjaurs ÄSO"
+          },
+          {
+            "AjoId": 771937,
+            "AfoId": 3,
+            "Name": "Lilla Tallberg",
+            "AjoDisplayFullName": "25-12-01-003-A - Lilla Tallberg"
+          },
+          {
+            "AjoId": 772467,
+            "AfoId": 3,
+            "Name": "Lauker-Lövviken Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-004-A - Lauker-Lövviken Jaktklubb"
+          },
+          {
+            "AjoId": 773035,
+            "AfoId": 3,
+            "Name": "Fridhems jaktlag",
+            "AjoDisplayFullName": "25-12-01-005-A - Fridhems jaktlag"
+          },
+          {
+            "AjoId": 722084,
+            "AfoId": 3,
+            "Name": "Abborrträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-101-A - Abborrträsk Vvo"
+          },
+          {
+            "AjoId": 722085,
+            "AfoId": 3,
+            "Name": "Aspliden Vvo",
+            "AjoDisplayFullName": "25-12-01-102-A - Aspliden Vvo"
+          },
+          {
+            "AjoId": 722086,
+            "AfoId": 3,
+            "Name": "Grundträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-104-A - Grundträsk Vvo"
+          },
+          {
+            "AjoId": 722087,
+            "AfoId": 3,
+            "Name": "Lövvikens Vvo",
+            "AjoDisplayFullName": "25-12-01-106-A - Lövvikens Vvo"
+          },
+          {
+            "AjoId": 722088,
+            "AfoId": 3,
+            "Name": "Pjesker-Granudds Jaktlag",
+            "AjoDisplayFullName": "25-12-01-108-A - Pjesker-Granudds Jaktlag"
+          },
+          {
+            "AjoId": 722089,
+            "AfoId": 3,
+            "Name": "Pjeskers Vvo",
+            "AjoDisplayFullName": "25-12-01-109-A - Pjeskers Vvo"
+          },
+          {
+            "AjoId": 722091,
+            "AfoId": 3,
+            "Name": "Saltmyrans Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-111-A - Saltmyrans Jaktklubb"
+          },
+          {
+            "AjoId": 722092,
+            "AfoId": 3,
+            "Name": "Siksjö Vvo",
+            "AjoDisplayFullName": "25-12-01-112-A - Siksjö Vvo"
+          },
+          {
+            "AjoId": 722094,
+            "AfoId": 3,
+            "Name": "Utterlidens Vvo",
+            "AjoDisplayFullName": "25-12-01-116-A - Utterlidens Vvo"
+          },
+          {
+            "AjoId": 722095,
+            "AfoId": 3,
+            "Name": "Vuotners Vvo",
+            "AjoDisplayFullName": "25-12-01-117-A - Vuotners Vvo"
+          },
+          {
+            "AjoId": 722096,
+            "AfoId": 3,
+            "Name": "Ånäs Vvo",
+            "AjoDisplayFullName": "25-12-01-118-A - Ånäs Vvo"
+          },
+          {
+            "AjoId": 722097,
+            "AfoId": 3,
+            "Name": "Baktsjaurs Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-120-A - Baktsjaurs Jaktklubb"
+          },
+          {
+            "AjoId": 722098,
+            "AfoId": 3,
+            "Name": "Bäcknäs Vvo",
+            "AjoDisplayFullName": "25-12-01-121-A - Bäcknäs Vvo"
+          },
+          {
+            "AjoId": 722099,
+            "AfoId": 3,
+            "Name": "Hällbergs Jaktvårdsförening",
+            "AjoDisplayFullName": "25-12-01-122-A - Hällbergs Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722100,
+            "AfoId": 3,
+            "Name": "Laukers Jaktsällskap",
+            "AjoDisplayFullName": "25-12-01-123-A - Laukers Jaktsällskap"
+          },
+          {
+            "AjoId": 722101,
+            "AfoId": 3,
+            "Name": "Mausjaurs Sameby",
+            "AjoDisplayFullName": "25-12-01-125-A - Mausjaurs Sameby"
+          },
+          {
+            "AjoId": 722102,
+            "AfoId": 3,
+            "Name": "Akkavare vvo",
+            "AjoDisplayFullName": "25-12-01-126-A - Akkavare vvo"
+          },
+          {
+            "AjoId": 722103,
+            "AfoId": 3,
+            "Name": "Auktsjaurs Vvo",
+            "AjoDisplayFullName": "25-12-01-127-A - Auktsjaurs Vvo"
+          },
+          {
+            "AjoId": 722104,
+            "AfoId": 3,
+            "Name": "Deppis Vvo",
+            "AjoDisplayFullName": "25-12-01-128-A - Deppis Vvo"
+          },
+          {
+            "AjoId": 722105,
+            "AfoId": 3,
+            "Name": "Fjällbonäs Vvo",
+            "AjoDisplayFullName": "25-12-01-129-A - Fjällbonäs Vvo"
+          },
+          {
+            "AjoId": 722106,
+            "AfoId": 3,
+            "Name": "Gullöns Jaktvårdsklubb",
+            "AjoDisplayFullName": "25-12-01-130-A - Gullöns Jaktvårdsklubb"
+          },
+          {
+            "AjoId": 722107,
+            "AfoId": 3,
+            "Name": "Renvallens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-131-A - Renvallens Jaktlag"
+          },
+          {
+            "AjoId": 722108,
+            "AfoId": 3,
+            "Name": "Serrejaur Vvo",
+            "AjoDisplayFullName": "25-12-01-132-A - Serrejaur Vvo"
+          },
+          {
+            "AjoId": 722109,
+            "AfoId": 3,
+            "Name": "Sjöträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-133-A - Sjöträsk Vvo"
+          },
+          {
+            "AjoId": 722110,
+            "AfoId": 3,
+            "Name": "Tjappsåive VVO",
+            "AjoDisplayFullName": "25-12-01-134-A - Tjappsåive VVO"
+          },
+          {
+            "AjoId": 722111,
+            "AfoId": 3,
+            "Name": "Arvidsjaurs Allmänningsskog",
+            "AjoDisplayFullName": "25-12-01-135-A - Arvidsjaurs Allmänningsskog"
+          },
+          {
+            "AjoId": 722112,
+            "AfoId": 3,
+            "Name": "Storbergs Vvo",
+            "AjoDisplayFullName": "25-12-01-136-A - Storbergs Vvo"
+          },
+          {
+            "AjoId": 722113,
+            "AfoId": 3,
+            "Name": "K4 Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-137-A - K4 Jaktklubb"
+          },
+          {
+            "AjoId": 722114,
+            "AfoId": 3,
+            "Name": "Rönnbergets Jaktlag",
+            "AjoDisplayFullName": "25-12-01-138-A - Rönnbergets Jaktlag"
+          },
+          {
+            "AjoId": 722115,
+            "AfoId": 3,
+            "Name": "Avavikens Vvo",
+            "AjoDisplayFullName": "25-12-01-139-A - Avavikens Vvo"
+          },
+          {
+            "AjoId": 722116,
+            "AfoId": 3,
+            "Name": "Baktåive Vvo",
+            "AjoDisplayFullName": "25-12-01-140-A - Baktåive Vvo"
+          },
+          {
+            "AjoId": 722118,
+            "AfoId": 3,
+            "Name": "Hedbergs Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-142-A - Hedbergs Jaktklubb"
+          },
+          {
+            "AjoId": 722119,
+            "AfoId": 3,
+            "Name": "Jerfojaur Vvo",
+            "AjoDisplayFullName": "25-12-01-143-A - Jerfojaur Vvo"
+          },
+          {
+            "AjoId": 722120,
+            "AfoId": 3,
+            "Name": "Lomträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-144-A - Lomträsk Vvo"
+          },
+          {
+            "AjoId": 722121,
+            "AfoId": 3,
+            "Name": "Långuddens Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-145-A - Långuddens Jaktklubb"
+          },
+          {
+            "AjoId": 722122,
+            "AfoId": 3,
+            "Name": "Suddesjaur Vvo",
+            "AjoDisplayFullName": "25-12-01-146-A - Suddesjaur Vvo"
+          },
+          {
+            "AjoId": 722123,
+            "AfoId": 3,
+            "Name": "Åkroken-Städdjejaur Vvo",
+            "AjoDisplayFullName": "25-12-01-147-A - Åkroken-Städdjejaur Vvo"
+          },
+          {
+            "AjoId": 722124,
+            "AfoId": 3,
+            "Name": "Hornlidens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-148-A - Hornlidens Jaktlag"
+          },
+          {
+            "AjoId": 722126,
+            "AfoId": 3,
+            "Name": "Grundträsklidens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-150-A - Grundträsklidens Jaktlag"
+          },
+          {
+            "AjoId": 722128,
+            "AfoId": 3,
+            "Name": "Östra Kikkejaur",
+            "AjoDisplayFullName": "25-12-01-153-A - Östra Kikkejaur"
+          },
+          {
+            "AjoId": 722129,
+            "AfoId": 3,
+            "Name": "V Kikkejaur Sameby",
+            "AjoDisplayFullName": "25-12-01-154-A - V Kikkejaur Sameby"
+          },
+          {
+            "AjoId": 722131,
+            "AfoId": 3,
+            "Name": "Tjintokk AB",
+            "AjoDisplayFullName": "25-12-01-157-A - Tjintokk AB"
+          },
+          {
+            "AjoId": 722132,
+            "AfoId": 3,
+            "Name": "Utterträsk Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-159-A - Utterträsk Jaktklubb"
+          },
+          {
+            "AjoId": 722133,
+            "AfoId": 3,
+            "Name": "Kläppens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-160-A - Kläppens Jaktlag"
+          },
+          {
+            "AjoId": 722134,
+            "AfoId": 3,
+            "Name": "Stormyråsens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-161-A - Stormyråsens Jaktlag"
+          },
+          {
+            "AjoId": 722135,
+            "AfoId": 3,
+            "Name": "Palkovare",
+            "AjoDisplayFullName": "25-12-01-162-A - Palkovare"
+          },
+          {
+            "AjoId": 722136,
+            "AfoId": 3,
+            "Name": "Muorrejaurs Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-163-A - Muorrejaurs Jaktklubb"
+          },
+          {
+            "AjoId": 722138,
+            "AfoId": 3,
+            "Name": "Brännholm jaktområde",
+            "AjoDisplayFullName": "25-12-01-165-A - Brännholm jaktområde"
+          },
+          {
+            "AjoId": 724583,
+            "AfoId": 3,
+            "Name": "Björknäs ",
+            "AjoDisplayFullName": "25-12-01-167-A - Björknäs "
+          },
+          {
+            "AjoId": 725786,
+            "AfoId": 3,
+            "Name": "Strittjomvare 6",
+            "AjoDisplayFullName": "25-12-01-168-A - Strittjomvare 6"
+          },
+          {
+            "AjoId": 725787,
+            "AfoId": 3,
+            "Name": "Lauker-Östansjö Jaktlag",
+            "AjoDisplayFullName": "25-12-01-169-A - Lauker-Östansjö Jaktlag"
+          },
+          {
+            "AjoId": 722141,
+            "AfoId": 3,
+            "Name": "Glommersträsk ÄSO",
+            "AjoDisplayFullName": "25-12-01-202-Ä - Glommersträsk ÄSO"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasons/?_=1794045694247",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "Value": "1947/1948",
+            "Title": "1947/1948"
+          },
+          {
+            "Value": "1961/1962",
+            "Title": "1961/1962"
+          },
+          {
+            "Value": "1967/1968",
+            "Title": "1967/1968"
+          },
+          {
+            "Value": "1972/1973",
+            "Title": "1972/1973"
+          },
+          {
+            "Value": "1981/1982",
+            "Title": "1981/1982"
+          },
+          {
+            "Value": "1986/1987",
+            "Title": "1986/1987"
+          },
+          {
+            "Value": "1987/1988",
+            "Title": "1987/1988"
+          },
+          {
+            "Value": "1988/1989",
+            "Title": "1988/1989"
+          },
+          {
+            "Value": "1989/1990",
+            "Title": "1989/1990"
+          },
+          {
+            "Value": "1990/1991",
+            "Title": "1990/1991"
+          },
+          {
+            "Value": "1991/1992",
+            "Title": "1991/1992"
+          },
+          {
+            "Value": "1992/1993",
+            "Title": "1992/1993"
+          },
+          {
+            "Value": "1993/1994",
+            "Title": "1993/1994"
+          },
+          {
+            "Value": "1994/1995",
+            "Title": "1994/1995"
+          },
+          {
+            "Value": "1995/1996",
+            "Title": "1995/1996"
+          },
+          {
+            "Value": "1996/1997",
+            "Title": "1996/1997"
+          },
+          {
+            "Value": "1997/1998",
+            "Title": "1997/1998"
+          },
+          {
+            "Value": "1998/1999",
+            "Title": "1998/1999"
+          },
+          {
+            "Value": "1999/2000",
+            "Title": "1999/2000"
+          },
+          {
+            "Value": "2000/2001",
+            "Title": "2000/2001"
+          },
+          {
+            "Value": "2001/2002",
+            "Title": "2001/2002"
+          },
+          {
+            "Value": "2002/2003",
+            "Title": "2002/2003"
+          },
+          {
+            "Value": "2003/2004",
+            "Title": "2003/2004"
+          },
+          {
+            "Value": "2004/2005",
+            "Title": "2004/2005"
+          },
+          {
+            "Value": "2005/2006",
+            "Title": "2005/2006"
+          },
+          {
+            "Value": "2006/2007",
+            "Title": "2006/2007"
+          },
+          {
+            "Value": "2007/2008",
+            "Title": "2007/2008"
+          },
+          {
+            "Value": "2008/2009",
+            "Title": "2008/2009"
+          },
+          {
+            "Value": "2009/2010",
+            "Title": "2009/2010"
+          },
+          {
+            "Value": "2010/2011",
+            "Title": "2010/2011"
+          },
+          {
+            "Value": "2011/2012",
+            "Title": "2011/2012"
+          },
+          {
+            "Value": "2012/2013",
+            "Title": "2012/2013"
+          },
+          {
+            "Value": "2013/2014",
+            "Title": "2013/2014"
+          },
+          {
+            "Value": "2014/2015",
+            "Title": "2014/2015"
+          },
+          {
+            "Value": "2015/2016",
+            "Title": "2015/2016"
+          },
+          {
+            "Value": "2016/2017",
+            "Title": "2016/2017"
+          },
+          {
+            "Value": "2017/2018",
+            "Title": "2017/2018"
+          },
+          {
+            "Value": "2018/2019",
+            "Title": "2018/2019"
+          },
+          {
+            "Value": "2019/2020",
+            "Title": "2019/2020"
+          },
+          {
+            "Value": "2020/2021",
+            "Title": "2020/2021"
+          },
+          {
+            "Value": "2021/2022",
+            "Title": "2021/2022"
+          },
+          {
+            "Value": "2022/2023",
+            "Title": "2022/2023"
+          },
+          {
+            "Value": "2023/2024",
+            "Title": "2023/2024"
+          },
+          {
+            "Value": "2024/2025",
+            "Title": "2024/2025"
+          },
+          {
+            "Value": "2025/2026",
+            "Title": "2025/2026"
+          },
+          {
+            "Value": "2026/2027",
+            "Title": "2026/2027"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 719265,
+            "AfoId": 3,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "25-00-99-003-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 771962,
+            "AfoId": 3,
+            "Name": "Torborg Jaktlag",
+            "AjoDisplayFullName": "25-11-01-001-A - Torborg Jaktlag"
+          },
+          {
+            "AjoId": 772460,
+            "AfoId": 3,
+            "Name": "Västra Uddjaure",
+            "AjoDisplayFullName": "25-11-01-002-A - Västra Uddjaure"
+          },
+          {
+            "AjoId": 772461,
+            "AfoId": 3,
+            "Name": "Lövnäs Trollberg",
+            "AjoDisplayFullName": "25-11-01-003-A - Lövnäs Trollberg"
+          },
+          {
+            "AjoId": 772634,
+            "AfoId": 3,
+            "Name": "Krittja Jakt",
+            "AjoDisplayFullName": "25-11-01-004-A - Krittja Jakt"
+          },
+          {
+            "AjoId": 772765,
+            "AfoId": 3,
+            "Name": "Nåddok Jaktlag",
+            "AjoDisplayFullName": "25-11-01-005-A - Nåddok Jaktlag"
+          },
+          {
+            "AjoId": 773002,
+            "AfoId": 3,
+            "Name": "Sakkavare älgjaktsområde",
+            "AjoDisplayFullName": "25-11-01-006-A - Sakkavare älgjaktsområde"
+          },
+          {
+            "AjoId": 721876,
+            "AfoId": 3,
+            "Name": "Racksund-Östansjö Jvf",
+            "AjoDisplayFullName": "25-11-01-101-A - Racksund-Östansjö Jvf"
+          },
+          {
+            "AjoId": 721878,
+            "AfoId": 3,
+            "Name": "Semisjaur-Njargs Sameby",
+            "AjoDisplayFullName": "25-11-01-103-A - Semisjaur-Njargs Sameby"
+          },
+          {
+            "AjoId": 721879,
+            "AfoId": 3,
+            "Name": "Svaipa Sameby",
+            "AjoDisplayFullName": "25-11-01-104-A - Svaipa Sameby"
+          },
+          {
+            "AjoId": 721881,
+            "AfoId": 3,
+            "Name": "Ståkke Sameby",
+            "AjoDisplayFullName": "25-11-01-106-A - Ståkke Sameby"
+          },
+          {
+            "AjoId": 721882,
+            "AfoId": 3,
+            "Name": "Maskaure Sameby",
+            "AjoDisplayFullName": "25-11-01-107-A - Maskaure Sameby"
+          },
+          {
+            "AjoId": 721883,
+            "AfoId": 3,
+            "Name": "Adolfströms Jaktlag",
+            "AjoDisplayFullName": "25-11-01-108-A - Adolfströms Jaktlag"
+          },
+          {
+            "AjoId": 721884,
+            "AfoId": 3,
+            "Name": "Luokta Mavas Sameby",
+            "AjoDisplayFullName": "25-11-01-109-A - Luokta Mavas Sameby"
+          },
+          {
+            "AjoId": 721885,
+            "AfoId": 3,
+            "Name": "Länsstyrelsens upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-11-01-110-A - Länsstyrelsens upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 721886,
+            "AfoId": 3,
+            "Name": "Båtsjaur Jaktlag",
+            "AjoDisplayFullName": "25-11-01-111-A - Båtsjaur Jaktlag"
+          },
+          {
+            "AjoId": 722022,
+            "AfoId": 3,
+            "Name": "Västerfjäll",
+            "AjoDisplayFullName": "25-11-01-112-A - Västerfjäll"
+          },
+          {
+            "AjoId": 722023,
+            "AfoId": 3,
+            "Name": "Sundnäs",
+            "AjoDisplayFullName": "25-11-01-113-A - Sundnäs"
+          },
+          {
+            "AjoId": 722024,
+            "AfoId": 3,
+            "Name": "Märsa Älgjaktsområde",
+            "AjoDisplayFullName": "25-11-01-114-A - Märsa Älgjaktsområde"
+          },
+          {
+            "AjoId": 722025,
+            "AfoId": 3,
+            "Name": "Gauto jaktområde",
+            "AjoDisplayFullName": "25-11-01-116-A - Gauto jaktområde"
+          },
+          {
+            "AjoId": 722026,
+            "AfoId": 3,
+            "Name": "Höglidens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-117-A - Höglidens Jaktlag"
+          },
+          {
+            "AjoId": 722027,
+            "AfoId": 3,
+            "Name": "Björklidens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-119-A - Björklidens Jaktlag"
+          },
+          {
+            "AjoId": 722028,
+            "AfoId": 3,
+            "Name": "Hällbackens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-120-A - Hällbackens Jaktlag"
+          },
+          {
+            "AjoId": 722029,
+            "AfoId": 3,
+            "Name": "Laisviks Jaktv.förening",
+            "AjoDisplayFullName": "25-11-01-121-A - Laisviks Jaktv.förening"
+          },
+          {
+            "AjoId": 722030,
+            "AfoId": 3,
+            "Name": "Loholms Byalag",
+            "AjoDisplayFullName": "25-11-01-122-A - Loholms Byalag"
+          },
+          {
+            "AjoId": 722031,
+            "AfoId": 3,
+            "Name": "Korsträsk jaktområde",
+            "AjoDisplayFullName": "25-11-01-123-A - Korsträsk jaktområde"
+          },
+          {
+            "AjoId": 722032,
+            "AfoId": 3,
+            "Name": "Laisvalls Jaktklubb",
+            "AjoDisplayFullName": "25-11-01-124-A - Laisvalls Jaktklubb"
+          },
+          {
+            "AjoId": 722033,
+            "AfoId": 3,
+            "Name": "Jäkkviks Byalag",
+            "AjoDisplayFullName": "25-11-01-125-A - Jäkkviks Byalag"
+          },
+          {
+            "AjoId": 722034,
+            "AfoId": 3,
+            "Name": "Laisvalls jaktlag",
+            "AjoDisplayFullName": "25-11-01-126-A - Laisvalls jaktlag"
+          },
+          {
+            "AjoId": 722035,
+            "AfoId": 3,
+            "Name": "Akkapakte",
+            "AjoDisplayFullName": "25-11-01-127-A - Akkapakte"
+          },
+          {
+            "AjoId": 722036,
+            "AfoId": 3,
+            "Name": "Jutis Byalag",
+            "AjoDisplayFullName": "25-11-01-128-A - Jutis Byalag"
+          },
+          {
+            "AjoId": 722037,
+            "AfoId": 3,
+            "Name": "Tjärnbergs Jaktlag",
+            "AjoDisplayFullName": "25-11-01-129-A - Tjärnbergs Jaktlag"
+          },
+          {
+            "AjoId": 722038,
+            "AfoId": 3,
+            "Name": "Galtisjaur Jaktlag",
+            "AjoDisplayFullName": "25-11-01-130-A - Galtisjaur Jaktlag"
+          },
+          {
+            "AjoId": 722040,
+            "AfoId": 3,
+            "Name": "Lestanders Jaktlag",
+            "AjoDisplayFullName": "25-11-01-132-A - Lestanders Jaktlag"
+          },
+          {
+            "AjoId": 722041,
+            "AfoId": 3,
+            "Name": "Höghedens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-133-A - Höghedens Jaktlag"
+          },
+          {
+            "AjoId": 722042,
+            "AfoId": 3,
+            "Name": "Nya Bergnäs jaktområde",
+            "AjoDisplayFullName": "25-11-01-134-A - Nya Bergnäs jaktområde"
+          },
+          {
+            "AjoId": 722043,
+            "AfoId": 3,
+            "Name": "Vaxnäs Jaktlag",
+            "AjoDisplayFullName": "25-11-01-135-A - Vaxnäs Jaktlag"
+          },
+          {
+            "AjoId": 722044,
+            "AfoId": 3,
+            "Name": "Komyrans Jaktlag",
+            "AjoDisplayFullName": "25-11-01-136-A - Komyrans Jaktlag"
+          },
+          {
+            "AjoId": 722045,
+            "AfoId": 3,
+            "Name": "Sundnäs jaktområde",
+            "AjoDisplayFullName": "25-11-01-137-A - Sundnäs jaktområde"
+          },
+          {
+            "AjoId": 724573,
+            "AfoId": 3,
+            "Name": "Laisvall",
+            "AjoDisplayFullName": "25-11-01-138-A - Laisvall"
+          },
+          {
+            "AjoId": 771910,
+            "AfoId": 3,
+            "Name": "Laby Jaktlag",
+            "AjoDisplayFullName": "25-11-02-001-A - Laby Jaktlag"
+          },
+          {
+            "AjoId": 771927,
+            "AfoId": 3,
+            "Name": "Arjeplogs ÄSO",
+            "AjoDisplayFullName": "25-11-02-002-Ä - Arjeplogs ÄSO"
+          },
+          {
+            "AjoId": 772462,
+            "AfoId": 3,
+            "Name": "Granselets Jakt",
+            "AjoDisplayFullName": "25-11-02-004-A - Granselets Jakt"
+          },
+          {
+            "AjoId": 773014,
+            "AfoId": 3,
+            "Name": "Ringhultsheden Jaktlag",
+            "AjoDisplayFullName": "25-11-02-005-A - Ringhultsheden Jaktlag"
+          },
+          {
+            "AjoId": 722046,
+            "AfoId": 3,
+            "Name": "Arjeplogs Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-101-A - Arjeplogs Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722047,
+            "AfoId": 3,
+            "Name": "Bukts Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-102-A - Bukts Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722049,
+            "AfoId": 3,
+            "Name": "Mjölkbergs JVF",
+            "AjoDisplayFullName": "25-11-02-104-A - Mjölkbergs JVF"
+          },
+          {
+            "AjoId": 722050,
+            "AfoId": 3,
+            "Name": "Järvtandlidens Vvo",
+            "AjoDisplayFullName": "25-11-02-105-A - Järvtandlidens Vvo"
+          },
+          {
+            "AjoId": 722051,
+            "AfoId": 3,
+            "Name": "Kallöns Vvo",
+            "AjoDisplayFullName": "25-11-02-106-A - Kallöns Vvo"
+          },
+          {
+            "AjoId": 722052,
+            "AfoId": 3,
+            "Name": "Stensunds Jaktlag",
+            "AjoDisplayFullName": "25-11-02-107-A - Stensunds Jaktlag"
+          },
+          {
+            "AjoId": 722053,
+            "AfoId": 3,
+            "Name": "Långvikens Vvo",
+            "AjoDisplayFullName": "25-11-02-108-A - Långvikens Vvo"
+          },
+          {
+            "AjoId": 722054,
+            "AfoId": 3,
+            "Name": "Kuorrokveiks Jaktlag",
+            "AjoDisplayFullName": "25-11-02-109-A - Kuorrokveiks Jaktlag"
+          },
+          {
+            "AjoId": 722055,
+            "AfoId": 3,
+            "Name": "Marielunds Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-110-A - Marielunds Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722056,
+            "AfoId": 3,
+            "Name": "Mellanström Vvo",
+            "AjoDisplayFullName": "25-11-02-111-A - Mellanström Vvo"
+          },
+          {
+            "AjoId": 722057,
+            "AfoId": 3,
+            "Name": "Mullholms Vvo",
+            "AjoDisplayFullName": "25-11-02-112-A - Mullholms Vvo"
+          },
+          {
+            "AjoId": 722058,
+            "AfoId": 3,
+            "Name": "Nyby Jaktlag",
+            "AjoDisplayFullName": "25-11-02-113-A - Nyby Jaktlag"
+          },
+          {
+            "AjoId": 722059,
+            "AfoId": 3,
+            "Name": "Nylidens Vvo",
+            "AjoDisplayFullName": "25-11-02-114-A - Nylidens Vvo"
+          },
+          {
+            "AjoId": 722060,
+            "AfoId": 3,
+            "Name": "Pilbergets Vvo",
+            "AjoDisplayFullName": "25-11-02-115-A - Pilbergets Vvo"
+          },
+          {
+            "AjoId": 722061,
+            "AfoId": 3,
+            "Name": "Radnejaurs Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-116-A - Radnejaurs Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722062,
+            "AfoId": 3,
+            "Name": "Sundås Jaktlag",
+            "AjoDisplayFullName": "25-11-02-117-A - Sundås Jaktlag"
+          },
+          {
+            "AjoId": 722063,
+            "AfoId": 3,
+            "Name": "Balkis Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-119-A - Balkis Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722066,
+            "AfoId": 3,
+            "Name": "Ståkke Sameby",
+            "AjoDisplayFullName": "25-11-02-123-A - Ståkke Sameby"
+          },
+          {
+            "AjoId": 722067,
+            "AfoId": 3,
+            "Name": "Svannäs",
+            "AjoDisplayFullName": "25-11-02-124-A - Svannäs"
+          },
+          {
+            "AjoId": 722068,
+            "AfoId": 3,
+            "Name": "Oxmyrens Jaktlag",
+            "AjoDisplayFullName": "25-11-02-125-A - Oxmyrens Jaktlag"
+          },
+          {
+            "AjoId": 722069,
+            "AfoId": 3,
+            "Name": "Maskaure Sameby",
+            "AjoDisplayFullName": "25-11-02-126-A - Maskaure Sameby"
+          },
+          {
+            "AjoId": 722071,
+            "AfoId": 3,
+            "Name": "Nurrholm & Ulljabouda VVO",
+            "AjoDisplayFullName": "25-11-02-128-A - Nurrholm & Ulljabouda VVO"
+          },
+          {
+            "AjoId": 722072,
+            "AfoId": 3,
+            "Name": "Målke Jaktlag",
+            "AjoDisplayFullName": "25-11-02-129-A - Målke Jaktlag"
+          },
+          {
+            "AjoId": 722073,
+            "AfoId": 3,
+            "Name": "Svannäs Jaktlag",
+            "AjoDisplayFullName": "25-11-02-130-A - Svannäs Jaktlag"
+          },
+          {
+            "AjoId": 722074,
+            "AfoId": 3,
+            "Name": "Sveggejaurs Jaktlag",
+            "AjoDisplayFullName": "25-11-02-131-A - Sveggejaurs Jaktlag"
+          },
+          {
+            "AjoId": 722075,
+            "AfoId": 3,
+            "Name": "Skellefteå Krafts",
+            "AjoDisplayFullName": "25-11-02-132-A - Skellefteå Krafts"
+          },
+          {
+            "AjoId": 722076,
+            "AfoId": 3,
+            "Name": "Bellonäs älgjaktslag",
+            "AjoDisplayFullName": "25-11-02-133-A - Bellonäs älgjaktslag"
+          },
+          {
+            "AjoId": 722077,
+            "AfoId": 3,
+            "Name": "Brattforsmorets Jaktlag",
+            "AjoDisplayFullName": "25-11-02-134-A - Brattforsmorets Jaktlag"
+          },
+          {
+            "AjoId": 722078,
+            "AfoId": 3,
+            "Name": "Röjbergets Jaktlag",
+            "AjoDisplayFullName": "25-11-02-135-A - Röjbergets Jaktlag"
+          },
+          {
+            "AjoId": 722081,
+            "AfoId": 3,
+            "Name": "Östra Mullejaur",
+            "AjoDisplayFullName": "25-11-02-138-A - Östra Mullejaur"
+          },
+          {
+            "AjoId": 722083,
+            "AfoId": 3,
+            "Name": "Slagnäs Jaktlag",
+            "AjoDisplayFullName": "25-11-02-140-A - Slagnäs Jaktlag"
+          },
+          {
+            "AjoId": 724582,
+            "AfoId": 3,
+            "Name": "Öregrund",
+            "AjoDisplayFullName": "25-11-02-141-A - Öregrund"
+          },
+          {
+            "AjoId": 724682,
+            "AfoId": 3,
+            "Name": "Arvliden",
+            "AjoDisplayFullName": "25-11-02-142-A - Arvliden"
+          },
+          {
+            "AjoId": 724574,
+            "AfoId": 3,
+            "Name": "Stråtjejaur",
+            "AjoDisplayFullName": "25-11-02-143-A - Stråtjejaur"
+          },
+          {
+            "AjoId": 724683,
+            "AfoId": 3,
+            "Name": "Stor-Ståkke",
+            "AjoDisplayFullName": "25-11-02-144-A - Stor-Ståkke"
+          },
+          {
+            "AjoId": 724752,
+            "AfoId": 3,
+            "Name": "Enberget",
+            "AjoDisplayFullName": "25-11-02-145-A - Enberget"
+          },
+          {
+            "AjoId": 725922,
+            "AfoId": 3,
+            "Name": "Bäcknäs",
+            "AjoDisplayFullName": "25-11-02-146-A - Bäcknäs"
+          },
+          {
+            "AjoId": 771913,
+            "AfoId": 3,
+            "Name": "Norra Hornlidens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-001-A - Norra Hornlidens Jaktlag"
+          },
+          {
+            "AjoId": 771929,
+            "AfoId": 3,
+            "Name": "Arvidsjaurs ÄSO",
+            "AjoDisplayFullName": "25-12-01-002-Ä - Arvidsjaurs ÄSO"
+          },
+          {
+            "AjoId": 771937,
+            "AfoId": 3,
+            "Name": "Lilla Tallberg",
+            "AjoDisplayFullName": "25-12-01-003-A - Lilla Tallberg"
+          },
+          {
+            "AjoId": 772467,
+            "AfoId": 3,
+            "Name": "Lauker-Lövviken Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-004-A - Lauker-Lövviken Jaktklubb"
+          },
+          {
+            "AjoId": 773035,
+            "AfoId": 3,
+            "Name": "Fridhems jaktlag",
+            "AjoDisplayFullName": "25-12-01-005-A - Fridhems jaktlag"
+          },
+          {
+            "AjoId": 722084,
+            "AfoId": 3,
+            "Name": "Abborrträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-101-A - Abborrträsk Vvo"
+          },
+          {
+            "AjoId": 722085,
+            "AfoId": 3,
+            "Name": "Aspliden Vvo",
+            "AjoDisplayFullName": "25-12-01-102-A - Aspliden Vvo"
+          },
+          {
+            "AjoId": 722086,
+            "AfoId": 3,
+            "Name": "Grundträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-104-A - Grundträsk Vvo"
+          },
+          {
+            "AjoId": 722087,
+            "AfoId": 3,
+            "Name": "Lövvikens Vvo",
+            "AjoDisplayFullName": "25-12-01-106-A - Lövvikens Vvo"
+          },
+          {
+            "AjoId": 722088,
+            "AfoId": 3,
+            "Name": "Pjesker-Granudds Jaktlag",
+            "AjoDisplayFullName": "25-12-01-108-A - Pjesker-Granudds Jaktlag"
+          },
+          {
+            "AjoId": 722089,
+            "AfoId": 3,
+            "Name": "Pjeskers Vvo",
+            "AjoDisplayFullName": "25-12-01-109-A - Pjeskers Vvo"
+          },
+          {
+            "AjoId": 722091,
+            "AfoId": 3,
+            "Name": "Saltmyrans Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-111-A - Saltmyrans Jaktklubb"
+          },
+          {
+            "AjoId": 722092,
+            "AfoId": 3,
+            "Name": "Siksjö Vvo",
+            "AjoDisplayFullName": "25-12-01-112-A - Siksjö Vvo"
+          },
+          {
+            "AjoId": 722094,
+            "AfoId": 3,
+            "Name": "Utterlidens Vvo",
+            "AjoDisplayFullName": "25-12-01-116-A - Utterlidens Vvo"
+          },
+          {
+            "AjoId": 722095,
+            "AfoId": 3,
+            "Name": "Vuotners Vvo",
+            "AjoDisplayFullName": "25-12-01-117-A - Vuotners Vvo"
+          },
+          {
+            "AjoId": 722096,
+            "AfoId": 3,
+            "Name": "Ånäs Vvo",
+            "AjoDisplayFullName": "25-12-01-118-A - Ånäs Vvo"
+          },
+          {
+            "AjoId": 722097,
+            "AfoId": 3,
+            "Name": "Baktsjaurs Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-120-A - Baktsjaurs Jaktklubb"
+          },
+          {
+            "AjoId": 722098,
+            "AfoId": 3,
+            "Name": "Bäcknäs Vvo",
+            "AjoDisplayFullName": "25-12-01-121-A - Bäcknäs Vvo"
+          },
+          {
+            "AjoId": 722099,
+            "AfoId": 3,
+            "Name": "Hällbergs Jaktvårdsförening",
+            "AjoDisplayFullName": "25-12-01-122-A - Hällbergs Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722100,
+            "AfoId": 3,
+            "Name": "Laukers Jaktsällskap",
+            "AjoDisplayFullName": "25-12-01-123-A - Laukers Jaktsällskap"
+          },
+          {
+            "AjoId": 722101,
+            "AfoId": 3,
+            "Name": "Mausjaurs Sameby",
+            "AjoDisplayFullName": "25-12-01-125-A - Mausjaurs Sameby"
+          },
+          {
+            "AjoId": 722102,
+            "AfoId": 3,
+            "Name": "Akkavare vvo",
+            "AjoDisplayFullName": "25-12-01-126-A - Akkavare vvo"
+          },
+          {
+            "AjoId": 722103,
+            "AfoId": 3,
+            "Name": "Auktsjaurs Vvo",
+            "AjoDisplayFullName": "25-12-01-127-A - Auktsjaurs Vvo"
+          },
+          {
+            "AjoId": 722104,
+            "AfoId": 3,
+            "Name": "Deppis Vvo",
+            "AjoDisplayFullName": "25-12-01-128-A - Deppis Vvo"
+          },
+          {
+            "AjoId": 722105,
+            "AfoId": 3,
+            "Name": "Fjällbonäs Vvo",
+            "AjoDisplayFullName": "25-12-01-129-A - Fjällbonäs Vvo"
+          },
+          {
+            "AjoId": 722106,
+            "AfoId": 3,
+            "Name": "Gullöns Jaktvårdsklubb",
+            "AjoDisplayFullName": "25-12-01-130-A - Gullöns Jaktvårdsklubb"
+          },
+          {
+            "AjoId": 722107,
+            "AfoId": 3,
+            "Name": "Renvallens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-131-A - Renvallens Jaktlag"
+          },
+          {
+            "AjoId": 722108,
+            "AfoId": 3,
+            "Name": "Serrejaur Vvo",
+            "AjoDisplayFullName": "25-12-01-132-A - Serrejaur Vvo"
+          },
+          {
+            "AjoId": 722109,
+            "AfoId": 3,
+            "Name": "Sjöträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-133-A - Sjöträsk Vvo"
+          },
+          {
+            "AjoId": 722110,
+            "AfoId": 3,
+            "Name": "Tjappsåive VVO",
+            "AjoDisplayFullName": "25-12-01-134-A - Tjappsåive VVO"
+          },
+          {
+            "AjoId": 722111,
+            "AfoId": 3,
+            "Name": "Arvidsjaurs Allmänningsskog",
+            "AjoDisplayFullName": "25-12-01-135-A - Arvidsjaurs Allmänningsskog"
+          },
+          {
+            "AjoId": 722112,
+            "AfoId": 3,
+            "Name": "Storbergs Vvo",
+            "AjoDisplayFullName": "25-12-01-136-A - Storbergs Vvo"
+          },
+          {
+            "AjoId": 722113,
+            "AfoId": 3,
+            "Name": "K4 Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-137-A - K4 Jaktklubb"
+          },
+          {
+            "AjoId": 722114,
+            "AfoId": 3,
+            "Name": "Rönnbergets Jaktlag",
+            "AjoDisplayFullName": "25-12-01-138-A - Rönnbergets Jaktlag"
+          },
+          {
+            "AjoId": 722115,
+            "AfoId": 3,
+            "Name": "Avavikens Vvo",
+            "AjoDisplayFullName": "25-12-01-139-A - Avavikens Vvo"
+          },
+          {
+            "AjoId": 722116,
+            "AfoId": 3,
+            "Name": "Baktåive Vvo",
+            "AjoDisplayFullName": "25-12-01-140-A - Baktåive Vvo"
+          },
+          {
+            "AjoId": 722118,
+            "AfoId": 3,
+            "Name": "Hedbergs Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-142-A - Hedbergs Jaktklubb"
+          },
+          {
+            "AjoId": 722119,
+            "AfoId": 3,
+            "Name": "Jerfojaur Vvo",
+            "AjoDisplayFullName": "25-12-01-143-A - Jerfojaur Vvo"
+          },
+          {
+            "AjoId": 722120,
+            "AfoId": 3,
+            "Name": "Lomträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-144-A - Lomträsk Vvo"
+          },
+          {
+            "AjoId": 722121,
+            "AfoId": 3,
+            "Name": "Långuddens Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-145-A - Långuddens Jaktklubb"
+          },
+          {
+            "AjoId": 722122,
+            "AfoId": 3,
+            "Name": "Suddesjaur Vvo",
+            "AjoDisplayFullName": "25-12-01-146-A - Suddesjaur Vvo"
+          },
+          {
+            "AjoId": 722123,
+            "AfoId": 3,
+            "Name": "Åkroken-Städdjejaur Vvo",
+            "AjoDisplayFullName": "25-12-01-147-A - Åkroken-Städdjejaur Vvo"
+          },
+          {
+            "AjoId": 722124,
+            "AfoId": 3,
+            "Name": "Hornlidens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-148-A - Hornlidens Jaktlag"
+          },
+          {
+            "AjoId": 722126,
+            "AfoId": 3,
+            "Name": "Grundträsklidens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-150-A - Grundträsklidens Jaktlag"
+          },
+          {
+            "AjoId": 722128,
+            "AfoId": 3,
+            "Name": "Östra Kikkejaur",
+            "AjoDisplayFullName": "25-12-01-153-A - Östra Kikkejaur"
+          },
+          {
+            "AjoId": 722129,
+            "AfoId": 3,
+            "Name": "V Kikkejaur Sameby",
+            "AjoDisplayFullName": "25-12-01-154-A - V Kikkejaur Sameby"
+          },
+          {
+            "AjoId": 722131,
+            "AfoId": 3,
+            "Name": "Tjintokk AB",
+            "AjoDisplayFullName": "25-12-01-157-A - Tjintokk AB"
+          },
+          {
+            "AjoId": 722132,
+            "AfoId": 3,
+            "Name": "Utterträsk Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-159-A - Utterträsk Jaktklubb"
+          },
+          {
+            "AjoId": 722133,
+            "AfoId": 3,
+            "Name": "Kläppens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-160-A - Kläppens Jaktlag"
+          },
+          {
+            "AjoId": 722134,
+            "AfoId": 3,
+            "Name": "Stormyråsens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-161-A - Stormyråsens Jaktlag"
+          },
+          {
+            "AjoId": 722135,
+            "AfoId": 3,
+            "Name": "Palkovare",
+            "AjoDisplayFullName": "25-12-01-162-A - Palkovare"
+          },
+          {
+            "AjoId": 722136,
+            "AfoId": 3,
+            "Name": "Muorrejaurs Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-163-A - Muorrejaurs Jaktklubb"
+          },
+          {
+            "AjoId": 722138,
+            "AfoId": 3,
+            "Name": "Brännholm jaktområde",
+            "AjoDisplayFullName": "25-12-01-165-A - Brännholm jaktområde"
+          },
+          {
+            "AjoId": 724583,
+            "AfoId": 3,
+            "Name": "Björknäs ",
+            "AjoDisplayFullName": "25-12-01-167-A - Björknäs "
+          },
+          {
+            "AjoId": 725786,
+            "AfoId": 3,
+            "Name": "Strittjomvare 6",
+            "AjoDisplayFullName": "25-12-01-168-A - Strittjomvare 6"
+          },
+          {
+            "AjoId": 725787,
+            "AfoId": 3,
+            "Name": "Lauker-Östansjö Jaktlag",
+            "AjoDisplayFullName": "25-12-01-169-A - Lauker-Östansjö Jaktlag"
+          },
+          {
+            "AjoId": 722141,
+            "AfoId": 3,
+            "Name": "Glommersträsk ÄSO",
+            "AjoDisplayFullName": "25-12-01-202-Ä - Glommersträsk ÄSO"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 719265,
+            "AfoId": 3,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "25-00-99-003-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 771962,
+            "AfoId": 3,
+            "Name": "Torborg Jaktlag",
+            "AjoDisplayFullName": "25-11-01-001-A - Torborg Jaktlag"
+          },
+          {
+            "AjoId": 772460,
+            "AfoId": 3,
+            "Name": "Västra Uddjaure",
+            "AjoDisplayFullName": "25-11-01-002-A - Västra Uddjaure"
+          },
+          {
+            "AjoId": 772461,
+            "AfoId": 3,
+            "Name": "Lövnäs Trollberg",
+            "AjoDisplayFullName": "25-11-01-003-A - Lövnäs Trollberg"
+          },
+          {
+            "AjoId": 772634,
+            "AfoId": 3,
+            "Name": "Krittja Jakt",
+            "AjoDisplayFullName": "25-11-01-004-A - Krittja Jakt"
+          },
+          {
+            "AjoId": 772765,
+            "AfoId": 3,
+            "Name": "Nåddok Jaktlag",
+            "AjoDisplayFullName": "25-11-01-005-A - Nåddok Jaktlag"
+          },
+          {
+            "AjoId": 773002,
+            "AfoId": 3,
+            "Name": "Sakkavare älgjaktsområde",
+            "AjoDisplayFullName": "25-11-01-006-A - Sakkavare älgjaktsområde"
+          },
+          {
+            "AjoId": 721876,
+            "AfoId": 3,
+            "Name": "Racksund-Östansjö Jvf",
+            "AjoDisplayFullName": "25-11-01-101-A - Racksund-Östansjö Jvf"
+          },
+          {
+            "AjoId": 721878,
+            "AfoId": 3,
+            "Name": "Semisjaur-Njargs Sameby",
+            "AjoDisplayFullName": "25-11-01-103-A - Semisjaur-Njargs Sameby"
+          },
+          {
+            "AjoId": 721879,
+            "AfoId": 3,
+            "Name": "Svaipa Sameby",
+            "AjoDisplayFullName": "25-11-01-104-A - Svaipa Sameby"
+          },
+          {
+            "AjoId": 721881,
+            "AfoId": 3,
+            "Name": "Ståkke Sameby",
+            "AjoDisplayFullName": "25-11-01-106-A - Ståkke Sameby"
+          },
+          {
+            "AjoId": 721882,
+            "AfoId": 3,
+            "Name": "Maskaure Sameby",
+            "AjoDisplayFullName": "25-11-01-107-A - Maskaure Sameby"
+          },
+          {
+            "AjoId": 721883,
+            "AfoId": 3,
+            "Name": "Adolfströms Jaktlag",
+            "AjoDisplayFullName": "25-11-01-108-A - Adolfströms Jaktlag"
+          },
+          {
+            "AjoId": 721884,
+            "AfoId": 3,
+            "Name": "Luokta Mavas Sameby",
+            "AjoDisplayFullName": "25-11-01-109-A - Luokta Mavas Sameby"
+          },
+          {
+            "AjoId": 721885,
+            "AfoId": 3,
+            "Name": "Länsstyrelsens upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-11-01-110-A - Länsstyrelsens upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 721886,
+            "AfoId": 3,
+            "Name": "Båtsjaur Jaktlag",
+            "AjoDisplayFullName": "25-11-01-111-A - Båtsjaur Jaktlag"
+          },
+          {
+            "AjoId": 722022,
+            "AfoId": 3,
+            "Name": "Västerfjäll",
+            "AjoDisplayFullName": "25-11-01-112-A - Västerfjäll"
+          },
+          {
+            "AjoId": 722023,
+            "AfoId": 3,
+            "Name": "Sundnäs",
+            "AjoDisplayFullName": "25-11-01-113-A - Sundnäs"
+          },
+          {
+            "AjoId": 722024,
+            "AfoId": 3,
+            "Name": "Märsa Älgjaktsområde",
+            "AjoDisplayFullName": "25-11-01-114-A - Märsa Älgjaktsområde"
+          },
+          {
+            "AjoId": 722025,
+            "AfoId": 3,
+            "Name": "Gauto jaktområde",
+            "AjoDisplayFullName": "25-11-01-116-A - Gauto jaktområde"
+          },
+          {
+            "AjoId": 722026,
+            "AfoId": 3,
+            "Name": "Höglidens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-117-A - Höglidens Jaktlag"
+          },
+          {
+            "AjoId": 722027,
+            "AfoId": 3,
+            "Name": "Björklidens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-119-A - Björklidens Jaktlag"
+          },
+          {
+            "AjoId": 722028,
+            "AfoId": 3,
+            "Name": "Hällbackens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-120-A - Hällbackens Jaktlag"
+          },
+          {
+            "AjoId": 722029,
+            "AfoId": 3,
+            "Name": "Laisviks Jaktv.förening",
+            "AjoDisplayFullName": "25-11-01-121-A - Laisviks Jaktv.förening"
+          },
+          {
+            "AjoId": 722030,
+            "AfoId": 3,
+            "Name": "Loholms Byalag",
+            "AjoDisplayFullName": "25-11-01-122-A - Loholms Byalag"
+          },
+          {
+            "AjoId": 722031,
+            "AfoId": 3,
+            "Name": "Korsträsk jaktområde",
+            "AjoDisplayFullName": "25-11-01-123-A - Korsträsk jaktområde"
+          },
+          {
+            "AjoId": 722032,
+            "AfoId": 3,
+            "Name": "Laisvalls Jaktklubb",
+            "AjoDisplayFullName": "25-11-01-124-A - Laisvalls Jaktklubb"
+          },
+          {
+            "AjoId": 722033,
+            "AfoId": 3,
+            "Name": "Jäkkviks Byalag",
+            "AjoDisplayFullName": "25-11-01-125-A - Jäkkviks Byalag"
+          },
+          {
+            "AjoId": 722034,
+            "AfoId": 3,
+            "Name": "Laisvalls jaktlag",
+            "AjoDisplayFullName": "25-11-01-126-A - Laisvalls jaktlag"
+          },
+          {
+            "AjoId": 722035,
+            "AfoId": 3,
+            "Name": "Akkapakte",
+            "AjoDisplayFullName": "25-11-01-127-A - Akkapakte"
+          },
+          {
+            "AjoId": 722036,
+            "AfoId": 3,
+            "Name": "Jutis Byalag",
+            "AjoDisplayFullName": "25-11-01-128-A - Jutis Byalag"
+          },
+          {
+            "AjoId": 722037,
+            "AfoId": 3,
+            "Name": "Tjärnbergs Jaktlag",
+            "AjoDisplayFullName": "25-11-01-129-A - Tjärnbergs Jaktlag"
+          },
+          {
+            "AjoId": 722038,
+            "AfoId": 3,
+            "Name": "Galtisjaur Jaktlag",
+            "AjoDisplayFullName": "25-11-01-130-A - Galtisjaur Jaktlag"
+          },
+          {
+            "AjoId": 722040,
+            "AfoId": 3,
+            "Name": "Lestanders Jaktlag",
+            "AjoDisplayFullName": "25-11-01-132-A - Lestanders Jaktlag"
+          },
+          {
+            "AjoId": 722041,
+            "AfoId": 3,
+            "Name": "Höghedens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-133-A - Höghedens Jaktlag"
+          },
+          {
+            "AjoId": 722042,
+            "AfoId": 3,
+            "Name": "Nya Bergnäs jaktområde",
+            "AjoDisplayFullName": "25-11-01-134-A - Nya Bergnäs jaktområde"
+          },
+          {
+            "AjoId": 722043,
+            "AfoId": 3,
+            "Name": "Vaxnäs Jaktlag",
+            "AjoDisplayFullName": "25-11-01-135-A - Vaxnäs Jaktlag"
+          },
+          {
+            "AjoId": 722044,
+            "AfoId": 3,
+            "Name": "Komyrans Jaktlag",
+            "AjoDisplayFullName": "25-11-01-136-A - Komyrans Jaktlag"
+          },
+          {
+            "AjoId": 722045,
+            "AfoId": 3,
+            "Name": "Sundnäs jaktområde",
+            "AjoDisplayFullName": "25-11-01-137-A - Sundnäs jaktområde"
+          },
+          {
+            "AjoId": 724573,
+            "AfoId": 3,
+            "Name": "Laisvall",
+            "AjoDisplayFullName": "25-11-01-138-A - Laisvall"
+          },
+          {
+            "AjoId": 771910,
+            "AfoId": 3,
+            "Name": "Laby Jaktlag",
+            "AjoDisplayFullName": "25-11-02-001-A - Laby Jaktlag"
+          },
+          {
+            "AjoId": 771927,
+            "AfoId": 3,
+            "Name": "Arjeplogs ÄSO",
+            "AjoDisplayFullName": "25-11-02-002-Ä - Arjeplogs ÄSO"
+          },
+          {
+            "AjoId": 772462,
+            "AfoId": 3,
+            "Name": "Granselets Jakt",
+            "AjoDisplayFullName": "25-11-02-004-A - Granselets Jakt"
+          },
+          {
+            "AjoId": 773014,
+            "AfoId": 3,
+            "Name": "Ringhultsheden Jaktlag",
+            "AjoDisplayFullName": "25-11-02-005-A - Ringhultsheden Jaktlag"
+          },
+          {
+            "AjoId": 722046,
+            "AfoId": 3,
+            "Name": "Arjeplogs Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-101-A - Arjeplogs Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722047,
+            "AfoId": 3,
+            "Name": "Bukts Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-102-A - Bukts Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722049,
+            "AfoId": 3,
+            "Name": "Mjölkbergs JVF",
+            "AjoDisplayFullName": "25-11-02-104-A - Mjölkbergs JVF"
+          },
+          {
+            "AjoId": 722050,
+            "AfoId": 3,
+            "Name": "Järvtandlidens Vvo",
+            "AjoDisplayFullName": "25-11-02-105-A - Järvtandlidens Vvo"
+          },
+          {
+            "AjoId": 722051,
+            "AfoId": 3,
+            "Name": "Kallöns Vvo",
+            "AjoDisplayFullName": "25-11-02-106-A - Kallöns Vvo"
+          },
+          {
+            "AjoId": 722052,
+            "AfoId": 3,
+            "Name": "Stensunds Jaktlag",
+            "AjoDisplayFullName": "25-11-02-107-A - Stensunds Jaktlag"
+          },
+          {
+            "AjoId": 722053,
+            "AfoId": 3,
+            "Name": "Långvikens Vvo",
+            "AjoDisplayFullName": "25-11-02-108-A - Långvikens Vvo"
+          },
+          {
+            "AjoId": 722054,
+            "AfoId": 3,
+            "Name": "Kuorrokveiks Jaktlag",
+            "AjoDisplayFullName": "25-11-02-109-A - Kuorrokveiks Jaktlag"
+          },
+          {
+            "AjoId": 722055,
+            "AfoId": 3,
+            "Name": "Marielunds Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-110-A - Marielunds Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722056,
+            "AfoId": 3,
+            "Name": "Mellanström Vvo",
+            "AjoDisplayFullName": "25-11-02-111-A - Mellanström Vvo"
+          },
+          {
+            "AjoId": 722057,
+            "AfoId": 3,
+            "Name": "Mullholms Vvo",
+            "AjoDisplayFullName": "25-11-02-112-A - Mullholms Vvo"
+          },
+          {
+            "AjoId": 722058,
+            "AfoId": 3,
+            "Name": "Nyby Jaktlag",
+            "AjoDisplayFullName": "25-11-02-113-A - Nyby Jaktlag"
+          },
+          {
+            "AjoId": 722059,
+            "AfoId": 3,
+            "Name": "Nylidens Vvo",
+            "AjoDisplayFullName": "25-11-02-114-A - Nylidens Vvo"
+          },
+          {
+            "AjoId": 722060,
+            "AfoId": 3,
+            "Name": "Pilbergets Vvo",
+            "AjoDisplayFullName": "25-11-02-115-A - Pilbergets Vvo"
+          },
+          {
+            "AjoId": 722061,
+            "AfoId": 3,
+            "Name": "Radnejaurs Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-116-A - Radnejaurs Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722062,
+            "AfoId": 3,
+            "Name": "Sundås Jaktlag",
+            "AjoDisplayFullName": "25-11-02-117-A - Sundås Jaktlag"
+          },
+          {
+            "AjoId": 722063,
+            "AfoId": 3,
+            "Name": "Balkis Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-119-A - Balkis Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722066,
+            "AfoId": 3,
+            "Name": "Ståkke Sameby",
+            "AjoDisplayFullName": "25-11-02-123-A - Ståkke Sameby"
+          },
+          {
+            "AjoId": 722067,
+            "AfoId": 3,
+            "Name": "Svannäs",
+            "AjoDisplayFullName": "25-11-02-124-A - Svannäs"
+          },
+          {
+            "AjoId": 722068,
+            "AfoId": 3,
+            "Name": "Oxmyrens Jaktlag",
+            "AjoDisplayFullName": "25-11-02-125-A - Oxmyrens Jaktlag"
+          },
+          {
+            "AjoId": 722069,
+            "AfoId": 3,
+            "Name": "Maskaure Sameby",
+            "AjoDisplayFullName": "25-11-02-126-A - Maskaure Sameby"
+          },
+          {
+            "AjoId": 722071,
+            "AfoId": 3,
+            "Name": "Nurrholm & Ulljabouda VVO",
+            "AjoDisplayFullName": "25-11-02-128-A - Nurrholm & Ulljabouda VVO"
+          },
+          {
+            "AjoId": 722072,
+            "AfoId": 3,
+            "Name": "Målke Jaktlag",
+            "AjoDisplayFullName": "25-11-02-129-A - Målke Jaktlag"
+          },
+          {
+            "AjoId": 722073,
+            "AfoId": 3,
+            "Name": "Svannäs Jaktlag",
+            "AjoDisplayFullName": "25-11-02-130-A - Svannäs Jaktlag"
+          },
+          {
+            "AjoId": 722074,
+            "AfoId": 3,
+            "Name": "Sveggejaurs Jaktlag",
+            "AjoDisplayFullName": "25-11-02-131-A - Sveggejaurs Jaktlag"
+          },
+          {
+            "AjoId": 722075,
+            "AfoId": 3,
+            "Name": "Skellefteå Krafts",
+            "AjoDisplayFullName": "25-11-02-132-A - Skellefteå Krafts"
+          },
+          {
+            "AjoId": 722076,
+            "AfoId": 3,
+            "Name": "Bellonäs älgjaktslag",
+            "AjoDisplayFullName": "25-11-02-133-A - Bellonäs älgjaktslag"
+          },
+          {
+            "AjoId": 722077,
+            "AfoId": 3,
+            "Name": "Brattforsmorets Jaktlag",
+            "AjoDisplayFullName": "25-11-02-134-A - Brattforsmorets Jaktlag"
+          },
+          {
+            "AjoId": 722078,
+            "AfoId": 3,
+            "Name": "Röjbergets Jaktlag",
+            "AjoDisplayFullName": "25-11-02-135-A - Röjbergets Jaktlag"
+          },
+          {
+            "AjoId": 722081,
+            "AfoId": 3,
+            "Name": "Östra Mullejaur",
+            "AjoDisplayFullName": "25-11-02-138-A - Östra Mullejaur"
+          },
+          {
+            "AjoId": 722083,
+            "AfoId": 3,
+            "Name": "Slagnäs Jaktlag",
+            "AjoDisplayFullName": "25-11-02-140-A - Slagnäs Jaktlag"
+          },
+          {
+            "AjoId": 724582,
+            "AfoId": 3,
+            "Name": "Öregrund",
+            "AjoDisplayFullName": "25-11-02-141-A - Öregrund"
+          },
+          {
+            "AjoId": 724682,
+            "AfoId": 3,
+            "Name": "Arvliden",
+            "AjoDisplayFullName": "25-11-02-142-A - Arvliden"
+          },
+          {
+            "AjoId": 724574,
+            "AfoId": 3,
+            "Name": "Stråtjejaur",
+            "AjoDisplayFullName": "25-11-02-143-A - Stråtjejaur"
+          },
+          {
+            "AjoId": 724683,
+            "AfoId": 3,
+            "Name": "Stor-Ståkke",
+            "AjoDisplayFullName": "25-11-02-144-A - Stor-Ståkke"
+          },
+          {
+            "AjoId": 724752,
+            "AfoId": 3,
+            "Name": "Enberget",
+            "AjoDisplayFullName": "25-11-02-145-A - Enberget"
+          },
+          {
+            "AjoId": 725922,
+            "AfoId": 3,
+            "Name": "Bäcknäs",
+            "AjoDisplayFullName": "25-11-02-146-A - Bäcknäs"
+          },
+          {
+            "AjoId": 771913,
+            "AfoId": 3,
+            "Name": "Norra Hornlidens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-001-A - Norra Hornlidens Jaktlag"
+          },
+          {
+            "AjoId": 771929,
+            "AfoId": 3,
+            "Name": "Arvidsjaurs ÄSO",
+            "AjoDisplayFullName": "25-12-01-002-Ä - Arvidsjaurs ÄSO"
+          },
+          {
+            "AjoId": 771937,
+            "AfoId": 3,
+            "Name": "Lilla Tallberg",
+            "AjoDisplayFullName": "25-12-01-003-A - Lilla Tallberg"
+          },
+          {
+            "AjoId": 772467,
+            "AfoId": 3,
+            "Name": "Lauker-Lövviken Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-004-A - Lauker-Lövviken Jaktklubb"
+          },
+          {
+            "AjoId": 773035,
+            "AfoId": 3,
+            "Name": "Fridhems jaktlag",
+            "AjoDisplayFullName": "25-12-01-005-A - Fridhems jaktlag"
+          },
+          {
+            "AjoId": 722084,
+            "AfoId": 3,
+            "Name": "Abborrträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-101-A - Abborrträsk Vvo"
+          },
+          {
+            "AjoId": 722085,
+            "AfoId": 3,
+            "Name": "Aspliden Vvo",
+            "AjoDisplayFullName": "25-12-01-102-A - Aspliden Vvo"
+          },
+          {
+            "AjoId": 722086,
+            "AfoId": 3,
+            "Name": "Grundträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-104-A - Grundträsk Vvo"
+          },
+          {
+            "AjoId": 722087,
+            "AfoId": 3,
+            "Name": "Lövvikens Vvo",
+            "AjoDisplayFullName": "25-12-01-106-A - Lövvikens Vvo"
+          },
+          {
+            "AjoId": 722088,
+            "AfoId": 3,
+            "Name": "Pjesker-Granudds Jaktlag",
+            "AjoDisplayFullName": "25-12-01-108-A - Pjesker-Granudds Jaktlag"
+          },
+          {
+            "AjoId": 722089,
+            "AfoId": 3,
+            "Name": "Pjeskers Vvo",
+            "AjoDisplayFullName": "25-12-01-109-A - Pjeskers Vvo"
+          },
+          {
+            "AjoId": 722091,
+            "AfoId": 3,
+            "Name": "Saltmyrans Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-111-A - Saltmyrans Jaktklubb"
+          },
+          {
+            "AjoId": 722092,
+            "AfoId": 3,
+            "Name": "Siksjö Vvo",
+            "AjoDisplayFullName": "25-12-01-112-A - Siksjö Vvo"
+          },
+          {
+            "AjoId": 722094,
+            "AfoId": 3,
+            "Name": "Utterlidens Vvo",
+            "AjoDisplayFullName": "25-12-01-116-A - Utterlidens Vvo"
+          },
+          {
+            "AjoId": 722095,
+            "AfoId": 3,
+            "Name": "Vuotners Vvo",
+            "AjoDisplayFullName": "25-12-01-117-A - Vuotners Vvo"
+          },
+          {
+            "AjoId": 722096,
+            "AfoId": 3,
+            "Name": "Ånäs Vvo",
+            "AjoDisplayFullName": "25-12-01-118-A - Ånäs Vvo"
+          },
+          {
+            "AjoId": 722097,
+            "AfoId": 3,
+            "Name": "Baktsjaurs Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-120-A - Baktsjaurs Jaktklubb"
+          },
+          {
+            "AjoId": 722098,
+            "AfoId": 3,
+            "Name": "Bäcknäs Vvo",
+            "AjoDisplayFullName": "25-12-01-121-A - Bäcknäs Vvo"
+          },
+          {
+            "AjoId": 722099,
+            "AfoId": 3,
+            "Name": "Hällbergs Jaktvårdsförening",
+            "AjoDisplayFullName": "25-12-01-122-A - Hällbergs Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722100,
+            "AfoId": 3,
+            "Name": "Laukers Jaktsällskap",
+            "AjoDisplayFullName": "25-12-01-123-A - Laukers Jaktsällskap"
+          },
+          {
+            "AjoId": 722101,
+            "AfoId": 3,
+            "Name": "Mausjaurs Sameby",
+            "AjoDisplayFullName": "25-12-01-125-A - Mausjaurs Sameby"
+          },
+          {
+            "AjoId": 722102,
+            "AfoId": 3,
+            "Name": "Akkavare vvo",
+            "AjoDisplayFullName": "25-12-01-126-A - Akkavare vvo"
+          },
+          {
+            "AjoId": 722103,
+            "AfoId": 3,
+            "Name": "Auktsjaurs Vvo",
+            "AjoDisplayFullName": "25-12-01-127-A - Auktsjaurs Vvo"
+          },
+          {
+            "AjoId": 722104,
+            "AfoId": 3,
+            "Name": "Deppis Vvo",
+            "AjoDisplayFullName": "25-12-01-128-A - Deppis Vvo"
+          },
+          {
+            "AjoId": 722105,
+            "AfoId": 3,
+            "Name": "Fjällbonäs Vvo",
+            "AjoDisplayFullName": "25-12-01-129-A - Fjällbonäs Vvo"
+          },
+          {
+            "AjoId": 722106,
+            "AfoId": 3,
+            "Name": "Gullöns Jaktvårdsklubb",
+            "AjoDisplayFullName": "25-12-01-130-A - Gullöns Jaktvårdsklubb"
+          },
+          {
+            "AjoId": 722107,
+            "AfoId": 3,
+            "Name": "Renvallens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-131-A - Renvallens Jaktlag"
+          },
+          {
+            "AjoId": 722108,
+            "AfoId": 3,
+            "Name": "Serrejaur Vvo",
+            "AjoDisplayFullName": "25-12-01-132-A - Serrejaur Vvo"
+          },
+          {
+            "AjoId": 722109,
+            "AfoId": 3,
+            "Name": "Sjöträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-133-A - Sjöträsk Vvo"
+          },
+          {
+            "AjoId": 722110,
+            "AfoId": 3,
+            "Name": "Tjappsåive VVO",
+            "AjoDisplayFullName": "25-12-01-134-A - Tjappsåive VVO"
+          },
+          {
+            "AjoId": 722111,
+            "AfoId": 3,
+            "Name": "Arvidsjaurs Allmänningsskog",
+            "AjoDisplayFullName": "25-12-01-135-A - Arvidsjaurs Allmänningsskog"
+          },
+          {
+            "AjoId": 722112,
+            "AfoId": 3,
+            "Name": "Storbergs Vvo",
+            "AjoDisplayFullName": "25-12-01-136-A - Storbergs Vvo"
+          },
+          {
+            "AjoId": 722113,
+            "AfoId": 3,
+            "Name": "K4 Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-137-A - K4 Jaktklubb"
+          },
+          {
+            "AjoId": 722114,
+            "AfoId": 3,
+            "Name": "Rönnbergets Jaktlag",
+            "AjoDisplayFullName": "25-12-01-138-A - Rönnbergets Jaktlag"
+          },
+          {
+            "AjoId": 722115,
+            "AfoId": 3,
+            "Name": "Avavikens Vvo",
+            "AjoDisplayFullName": "25-12-01-139-A - Avavikens Vvo"
+          },
+          {
+            "AjoId": 722116,
+            "AfoId": 3,
+            "Name": "Baktåive Vvo",
+            "AjoDisplayFullName": "25-12-01-140-A - Baktåive Vvo"
+          },
+          {
+            "AjoId": 722118,
+            "AfoId": 3,
+            "Name": "Hedbergs Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-142-A - Hedbergs Jaktklubb"
+          },
+          {
+            "AjoId": 722119,
+            "AfoId": 3,
+            "Name": "Jerfojaur Vvo",
+            "AjoDisplayFullName": "25-12-01-143-A - Jerfojaur Vvo"
+          },
+          {
+            "AjoId": 722120,
+            "AfoId": 3,
+            "Name": "Lomträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-144-A - Lomträsk Vvo"
+          },
+          {
+            "AjoId": 722121,
+            "AfoId": 3,
+            "Name": "Långuddens Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-145-A - Långuddens Jaktklubb"
+          },
+          {
+            "AjoId": 722122,
+            "AfoId": 3,
+            "Name": "Suddesjaur Vvo",
+            "AjoDisplayFullName": "25-12-01-146-A - Suddesjaur Vvo"
+          },
+          {
+            "AjoId": 722123,
+            "AfoId": 3,
+            "Name": "Åkroken-Städdjejaur Vvo",
+            "AjoDisplayFullName": "25-12-01-147-A - Åkroken-Städdjejaur Vvo"
+          },
+          {
+            "AjoId": 722124,
+            "AfoId": 3,
+            "Name": "Hornlidens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-148-A - Hornlidens Jaktlag"
+          },
+          {
+            "AjoId": 722126,
+            "AfoId": 3,
+            "Name": "Grundträsklidens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-150-A - Grundträsklidens Jaktlag"
+          },
+          {
+            "AjoId": 722128,
+            "AfoId": 3,
+            "Name": "Östra Kikkejaur",
+            "AjoDisplayFullName": "25-12-01-153-A - Östra Kikkejaur"
+          },
+          {
+            "AjoId": 722129,
+            "AfoId": 3,
+            "Name": "V Kikkejaur Sameby",
+            "AjoDisplayFullName": "25-12-01-154-A - V Kikkejaur Sameby"
+          },
+          {
+            "AjoId": 722131,
+            "AfoId": 3,
+            "Name": "Tjintokk AB",
+            "AjoDisplayFullName": "25-12-01-157-A - Tjintokk AB"
+          },
+          {
+            "AjoId": 722132,
+            "AfoId": 3,
+            "Name": "Utterträsk Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-159-A - Utterträsk Jaktklubb"
+          },
+          {
+            "AjoId": 722133,
+            "AfoId": 3,
+            "Name": "Kläppens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-160-A - Kläppens Jaktlag"
+          },
+          {
+            "AjoId": 722134,
+            "AfoId": 3,
+            "Name": "Stormyråsens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-161-A - Stormyråsens Jaktlag"
+          },
+          {
+            "AjoId": 722135,
+            "AfoId": 3,
+            "Name": "Palkovare",
+            "AjoDisplayFullName": "25-12-01-162-A - Palkovare"
+          },
+          {
+            "AjoId": 722136,
+            "AfoId": 3,
+            "Name": "Muorrejaurs Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-163-A - Muorrejaurs Jaktklubb"
+          },
+          {
+            "AjoId": 722138,
+            "AfoId": 3,
+            "Name": "Brännholm jaktområde",
+            "AjoDisplayFullName": "25-12-01-165-A - Brännholm jaktområde"
+          },
+          {
+            "AjoId": 724583,
+            "AfoId": 3,
+            "Name": "Björknäs ",
+            "AjoDisplayFullName": "25-12-01-167-A - Björknäs "
+          },
+          {
+            "AjoId": 725786,
+            "AfoId": 3,
+            "Name": "Strittjomvare 6",
+            "AjoDisplayFullName": "25-12-01-168-A - Strittjomvare 6"
+          },
+          {
+            "AjoId": 725787,
+            "AfoId": 3,
+            "Name": "Lauker-Östansjö Jaktlag",
+            "AjoDisplayFullName": "25-12-01-169-A - Lauker-Östansjö Jaktlag"
+          },
+          {
+            "AjoId": 722141,
+            "AfoId": 3,
+            "Name": "Glommersträsk ÄSO",
+            "AjoDisplayFullName": "25-12-01-202-Ä - Glommersträsk ÄSO"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 719265,
+            "AfoId": 3,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "25-00-99-003-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 771962,
+            "AfoId": 3,
+            "Name": "Torborg Jaktlag",
+            "AjoDisplayFullName": "25-11-01-001-A - Torborg Jaktlag"
+          },
+          {
+            "AjoId": 772460,
+            "AfoId": 3,
+            "Name": "Västra Uddjaure",
+            "AjoDisplayFullName": "25-11-01-002-A - Västra Uddjaure"
+          },
+          {
+            "AjoId": 772461,
+            "AfoId": 3,
+            "Name": "Lövnäs Trollberg",
+            "AjoDisplayFullName": "25-11-01-003-A - Lövnäs Trollberg"
+          },
+          {
+            "AjoId": 772634,
+            "AfoId": 3,
+            "Name": "Krittja Jakt",
+            "AjoDisplayFullName": "25-11-01-004-A - Krittja Jakt"
+          },
+          {
+            "AjoId": 772765,
+            "AfoId": 3,
+            "Name": "Nåddok Jaktlag",
+            "AjoDisplayFullName": "25-11-01-005-A - Nåddok Jaktlag"
+          },
+          {
+            "AjoId": 773002,
+            "AfoId": 3,
+            "Name": "Sakkavare älgjaktsområde",
+            "AjoDisplayFullName": "25-11-01-006-A - Sakkavare älgjaktsområde"
+          },
+          {
+            "AjoId": 721876,
+            "AfoId": 3,
+            "Name": "Racksund-Östansjö Jvf",
+            "AjoDisplayFullName": "25-11-01-101-A - Racksund-Östansjö Jvf"
+          },
+          {
+            "AjoId": 721878,
+            "AfoId": 3,
+            "Name": "Semisjaur-Njargs Sameby",
+            "AjoDisplayFullName": "25-11-01-103-A - Semisjaur-Njargs Sameby"
+          },
+          {
+            "AjoId": 721879,
+            "AfoId": 3,
+            "Name": "Svaipa Sameby",
+            "AjoDisplayFullName": "25-11-01-104-A - Svaipa Sameby"
+          },
+          {
+            "AjoId": 721881,
+            "AfoId": 3,
+            "Name": "Ståkke Sameby",
+            "AjoDisplayFullName": "25-11-01-106-A - Ståkke Sameby"
+          },
+          {
+            "AjoId": 721882,
+            "AfoId": 3,
+            "Name": "Maskaure Sameby",
+            "AjoDisplayFullName": "25-11-01-107-A - Maskaure Sameby"
+          },
+          {
+            "AjoId": 721883,
+            "AfoId": 3,
+            "Name": "Adolfströms Jaktlag",
+            "AjoDisplayFullName": "25-11-01-108-A - Adolfströms Jaktlag"
+          },
+          {
+            "AjoId": 721884,
+            "AfoId": 3,
+            "Name": "Luokta Mavas Sameby",
+            "AjoDisplayFullName": "25-11-01-109-A - Luokta Mavas Sameby"
+          },
+          {
+            "AjoId": 721885,
+            "AfoId": 3,
+            "Name": "Länsstyrelsens upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-11-01-110-A - Länsstyrelsens upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 721886,
+            "AfoId": 3,
+            "Name": "Båtsjaur Jaktlag",
+            "AjoDisplayFullName": "25-11-01-111-A - Båtsjaur Jaktlag"
+          },
+          {
+            "AjoId": 722022,
+            "AfoId": 3,
+            "Name": "Västerfjäll",
+            "AjoDisplayFullName": "25-11-01-112-A - Västerfjäll"
+          },
+          {
+            "AjoId": 722023,
+            "AfoId": 3,
+            "Name": "Sundnäs",
+            "AjoDisplayFullName": "25-11-01-113-A - Sundnäs"
+          },
+          {
+            "AjoId": 722024,
+            "AfoId": 3,
+            "Name": "Märsa Älgjaktsområde",
+            "AjoDisplayFullName": "25-11-01-114-A - Märsa Älgjaktsområde"
+          },
+          {
+            "AjoId": 722025,
+            "AfoId": 3,
+            "Name": "Gauto jaktområde",
+            "AjoDisplayFullName": "25-11-01-116-A - Gauto jaktområde"
+          },
+          {
+            "AjoId": 722026,
+            "AfoId": 3,
+            "Name": "Höglidens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-117-A - Höglidens Jaktlag"
+          },
+          {
+            "AjoId": 722027,
+            "AfoId": 3,
+            "Name": "Björklidens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-119-A - Björklidens Jaktlag"
+          },
+          {
+            "AjoId": 722028,
+            "AfoId": 3,
+            "Name": "Hällbackens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-120-A - Hällbackens Jaktlag"
+          },
+          {
+            "AjoId": 722029,
+            "AfoId": 3,
+            "Name": "Laisviks Jaktv.förening",
+            "AjoDisplayFullName": "25-11-01-121-A - Laisviks Jaktv.förening"
+          },
+          {
+            "AjoId": 722030,
+            "AfoId": 3,
+            "Name": "Loholms Byalag",
+            "AjoDisplayFullName": "25-11-01-122-A - Loholms Byalag"
+          },
+          {
+            "AjoId": 722031,
+            "AfoId": 3,
+            "Name": "Korsträsk jaktområde",
+            "AjoDisplayFullName": "25-11-01-123-A - Korsträsk jaktområde"
+          },
+          {
+            "AjoId": 722032,
+            "AfoId": 3,
+            "Name": "Laisvalls Jaktklubb",
+            "AjoDisplayFullName": "25-11-01-124-A - Laisvalls Jaktklubb"
+          },
+          {
+            "AjoId": 722033,
+            "AfoId": 3,
+            "Name": "Jäkkviks Byalag",
+            "AjoDisplayFullName": "25-11-01-125-A - Jäkkviks Byalag"
+          },
+          {
+            "AjoId": 722034,
+            "AfoId": 3,
+            "Name": "Laisvalls jaktlag",
+            "AjoDisplayFullName": "25-11-01-126-A - Laisvalls jaktlag"
+          },
+          {
+            "AjoId": 722035,
+            "AfoId": 3,
+            "Name": "Akkapakte",
+            "AjoDisplayFullName": "25-11-01-127-A - Akkapakte"
+          },
+          {
+            "AjoId": 722036,
+            "AfoId": 3,
+            "Name": "Jutis Byalag",
+            "AjoDisplayFullName": "25-11-01-128-A - Jutis Byalag"
+          },
+          {
+            "AjoId": 722037,
+            "AfoId": 3,
+            "Name": "Tjärnbergs Jaktlag",
+            "AjoDisplayFullName": "25-11-01-129-A - Tjärnbergs Jaktlag"
+          },
+          {
+            "AjoId": 722038,
+            "AfoId": 3,
+            "Name": "Galtisjaur Jaktlag",
+            "AjoDisplayFullName": "25-11-01-130-A - Galtisjaur Jaktlag"
+          },
+          {
+            "AjoId": 722040,
+            "AfoId": 3,
+            "Name": "Lestanders Jaktlag",
+            "AjoDisplayFullName": "25-11-01-132-A - Lestanders Jaktlag"
+          },
+          {
+            "AjoId": 722041,
+            "AfoId": 3,
+            "Name": "Höghedens Jaktlag",
+            "AjoDisplayFullName": "25-11-01-133-A - Höghedens Jaktlag"
+          },
+          {
+            "AjoId": 722042,
+            "AfoId": 3,
+            "Name": "Nya Bergnäs jaktområde",
+            "AjoDisplayFullName": "25-11-01-134-A - Nya Bergnäs jaktområde"
+          },
+          {
+            "AjoId": 722043,
+            "AfoId": 3,
+            "Name": "Vaxnäs Jaktlag",
+            "AjoDisplayFullName": "25-11-01-135-A - Vaxnäs Jaktlag"
+          },
+          {
+            "AjoId": 722044,
+            "AfoId": 3,
+            "Name": "Komyrans Jaktlag",
+            "AjoDisplayFullName": "25-11-01-136-A - Komyrans Jaktlag"
+          },
+          {
+            "AjoId": 722045,
+            "AfoId": 3,
+            "Name": "Sundnäs jaktområde",
+            "AjoDisplayFullName": "25-11-01-137-A - Sundnäs jaktområde"
+          },
+          {
+            "AjoId": 724573,
+            "AfoId": 3,
+            "Name": "Laisvall",
+            "AjoDisplayFullName": "25-11-01-138-A - Laisvall"
+          },
+          {
+            "AjoId": 771910,
+            "AfoId": 3,
+            "Name": "Laby Jaktlag",
+            "AjoDisplayFullName": "25-11-02-001-A - Laby Jaktlag"
+          },
+          {
+            "AjoId": 771927,
+            "AfoId": 3,
+            "Name": "Arjeplogs ÄSO",
+            "AjoDisplayFullName": "25-11-02-002-Ä - Arjeplogs ÄSO"
+          },
+          {
+            "AjoId": 772462,
+            "AfoId": 3,
+            "Name": "Granselets Jakt",
+            "AjoDisplayFullName": "25-11-02-004-A - Granselets Jakt"
+          },
+          {
+            "AjoId": 773014,
+            "AfoId": 3,
+            "Name": "Ringhultsheden Jaktlag",
+            "AjoDisplayFullName": "25-11-02-005-A - Ringhultsheden Jaktlag"
+          },
+          {
+            "AjoId": 722046,
+            "AfoId": 3,
+            "Name": "Arjeplogs Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-101-A - Arjeplogs Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722047,
+            "AfoId": 3,
+            "Name": "Bukts Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-102-A - Bukts Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722049,
+            "AfoId": 3,
+            "Name": "Mjölkbergs JVF",
+            "AjoDisplayFullName": "25-11-02-104-A - Mjölkbergs JVF"
+          },
+          {
+            "AjoId": 722050,
+            "AfoId": 3,
+            "Name": "Järvtandlidens Vvo",
+            "AjoDisplayFullName": "25-11-02-105-A - Järvtandlidens Vvo"
+          },
+          {
+            "AjoId": 722051,
+            "AfoId": 3,
+            "Name": "Kallöns Vvo",
+            "AjoDisplayFullName": "25-11-02-106-A - Kallöns Vvo"
+          },
+          {
+            "AjoId": 722052,
+            "AfoId": 3,
+            "Name": "Stensunds Jaktlag",
+            "AjoDisplayFullName": "25-11-02-107-A - Stensunds Jaktlag"
+          },
+          {
+            "AjoId": 722053,
+            "AfoId": 3,
+            "Name": "Långvikens Vvo",
+            "AjoDisplayFullName": "25-11-02-108-A - Långvikens Vvo"
+          },
+          {
+            "AjoId": 722054,
+            "AfoId": 3,
+            "Name": "Kuorrokveiks Jaktlag",
+            "AjoDisplayFullName": "25-11-02-109-A - Kuorrokveiks Jaktlag"
+          },
+          {
+            "AjoId": 722055,
+            "AfoId": 3,
+            "Name": "Marielunds Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-110-A - Marielunds Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722056,
+            "AfoId": 3,
+            "Name": "Mellanström Vvo",
+            "AjoDisplayFullName": "25-11-02-111-A - Mellanström Vvo"
+          },
+          {
+            "AjoId": 722057,
+            "AfoId": 3,
+            "Name": "Mullholms Vvo",
+            "AjoDisplayFullName": "25-11-02-112-A - Mullholms Vvo"
+          },
+          {
+            "AjoId": 722058,
+            "AfoId": 3,
+            "Name": "Nyby Jaktlag",
+            "AjoDisplayFullName": "25-11-02-113-A - Nyby Jaktlag"
+          },
+          {
+            "AjoId": 722059,
+            "AfoId": 3,
+            "Name": "Nylidens Vvo",
+            "AjoDisplayFullName": "25-11-02-114-A - Nylidens Vvo"
+          },
+          {
+            "AjoId": 722060,
+            "AfoId": 3,
+            "Name": "Pilbergets Vvo",
+            "AjoDisplayFullName": "25-11-02-115-A - Pilbergets Vvo"
+          },
+          {
+            "AjoId": 722061,
+            "AfoId": 3,
+            "Name": "Radnejaurs Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-116-A - Radnejaurs Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722062,
+            "AfoId": 3,
+            "Name": "Sundås Jaktlag",
+            "AjoDisplayFullName": "25-11-02-117-A - Sundås Jaktlag"
+          },
+          {
+            "AjoId": 722063,
+            "AfoId": 3,
+            "Name": "Balkis Jaktvårdsförening",
+            "AjoDisplayFullName": "25-11-02-119-A - Balkis Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722066,
+            "AfoId": 3,
+            "Name": "Ståkke Sameby",
+            "AjoDisplayFullName": "25-11-02-123-A - Ståkke Sameby"
+          },
+          {
+            "AjoId": 722067,
+            "AfoId": 3,
+            "Name": "Svannäs",
+            "AjoDisplayFullName": "25-11-02-124-A - Svannäs"
+          },
+          {
+            "AjoId": 722068,
+            "AfoId": 3,
+            "Name": "Oxmyrens Jaktlag",
+            "AjoDisplayFullName": "25-11-02-125-A - Oxmyrens Jaktlag"
+          },
+          {
+            "AjoId": 722069,
+            "AfoId": 3,
+            "Name": "Maskaure Sameby",
+            "AjoDisplayFullName": "25-11-02-126-A - Maskaure Sameby"
+          },
+          {
+            "AjoId": 722071,
+            "AfoId": 3,
+            "Name": "Nurrholm & Ulljabouda VVO",
+            "AjoDisplayFullName": "25-11-02-128-A - Nurrholm & Ulljabouda VVO"
+          },
+          {
+            "AjoId": 722072,
+            "AfoId": 3,
+            "Name": "Målke Jaktlag",
+            "AjoDisplayFullName": "25-11-02-129-A - Målke Jaktlag"
+          },
+          {
+            "AjoId": 722073,
+            "AfoId": 3,
+            "Name": "Svannäs Jaktlag",
+            "AjoDisplayFullName": "25-11-02-130-A - Svannäs Jaktlag"
+          },
+          {
+            "AjoId": 722074,
+            "AfoId": 3,
+            "Name": "Sveggejaurs Jaktlag",
+            "AjoDisplayFullName": "25-11-02-131-A - Sveggejaurs Jaktlag"
+          },
+          {
+            "AjoId": 722075,
+            "AfoId": 3,
+            "Name": "Skellefteå Krafts",
+            "AjoDisplayFullName": "25-11-02-132-A - Skellefteå Krafts"
+          },
+          {
+            "AjoId": 722076,
+            "AfoId": 3,
+            "Name": "Bellonäs älgjaktslag",
+            "AjoDisplayFullName": "25-11-02-133-A - Bellonäs älgjaktslag"
+          },
+          {
+            "AjoId": 722077,
+            "AfoId": 3,
+            "Name": "Brattforsmorets Jaktlag",
+            "AjoDisplayFullName": "25-11-02-134-A - Brattforsmorets Jaktlag"
+          },
+          {
+            "AjoId": 722078,
+            "AfoId": 3,
+            "Name": "Röjbergets Jaktlag",
+            "AjoDisplayFullName": "25-11-02-135-A - Röjbergets Jaktlag"
+          },
+          {
+            "AjoId": 722081,
+            "AfoId": 3,
+            "Name": "Östra Mullejaur",
+            "AjoDisplayFullName": "25-11-02-138-A - Östra Mullejaur"
+          },
+          {
+            "AjoId": 722083,
+            "AfoId": 3,
+            "Name": "Slagnäs Jaktlag",
+            "AjoDisplayFullName": "25-11-02-140-A - Slagnäs Jaktlag"
+          },
+          {
+            "AjoId": 724582,
+            "AfoId": 3,
+            "Name": "Öregrund",
+            "AjoDisplayFullName": "25-11-02-141-A - Öregrund"
+          },
+          {
+            "AjoId": 724682,
+            "AfoId": 3,
+            "Name": "Arvliden",
+            "AjoDisplayFullName": "25-11-02-142-A - Arvliden"
+          },
+          {
+            "AjoId": 724574,
+            "AfoId": 3,
+            "Name": "Stråtjejaur",
+            "AjoDisplayFullName": "25-11-02-143-A - Stråtjejaur"
+          },
+          {
+            "AjoId": 724683,
+            "AfoId": 3,
+            "Name": "Stor-Ståkke",
+            "AjoDisplayFullName": "25-11-02-144-A - Stor-Ståkke"
+          },
+          {
+            "AjoId": 724752,
+            "AfoId": 3,
+            "Name": "Enberget",
+            "AjoDisplayFullName": "25-11-02-145-A - Enberget"
+          },
+          {
+            "AjoId": 725922,
+            "AfoId": 3,
+            "Name": "Bäcknäs",
+            "AjoDisplayFullName": "25-11-02-146-A - Bäcknäs"
+          },
+          {
+            "AjoId": 771913,
+            "AfoId": 3,
+            "Name": "Norra Hornlidens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-001-A - Norra Hornlidens Jaktlag"
+          },
+          {
+            "AjoId": 771929,
+            "AfoId": 3,
+            "Name": "Arvidsjaurs ÄSO",
+            "AjoDisplayFullName": "25-12-01-002-Ä - Arvidsjaurs ÄSO"
+          },
+          {
+            "AjoId": 771937,
+            "AfoId": 3,
+            "Name": "Lilla Tallberg",
+            "AjoDisplayFullName": "25-12-01-003-A - Lilla Tallberg"
+          },
+          {
+            "AjoId": 772467,
+            "AfoId": 3,
+            "Name": "Lauker-Lövviken Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-004-A - Lauker-Lövviken Jaktklubb"
+          },
+          {
+            "AjoId": 773035,
+            "AfoId": 3,
+            "Name": "Fridhems jaktlag",
+            "AjoDisplayFullName": "25-12-01-005-A - Fridhems jaktlag"
+          },
+          {
+            "AjoId": 722084,
+            "AfoId": 3,
+            "Name": "Abborrträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-101-A - Abborrträsk Vvo"
+          },
+          {
+            "AjoId": 722085,
+            "AfoId": 3,
+            "Name": "Aspliden Vvo",
+            "AjoDisplayFullName": "25-12-01-102-A - Aspliden Vvo"
+          },
+          {
+            "AjoId": 722086,
+            "AfoId": 3,
+            "Name": "Grundträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-104-A - Grundträsk Vvo"
+          },
+          {
+            "AjoId": 722087,
+            "AfoId": 3,
+            "Name": "Lövvikens Vvo",
+            "AjoDisplayFullName": "25-12-01-106-A - Lövvikens Vvo"
+          },
+          {
+            "AjoId": 722088,
+            "AfoId": 3,
+            "Name": "Pjesker-Granudds Jaktlag",
+            "AjoDisplayFullName": "25-12-01-108-A - Pjesker-Granudds Jaktlag"
+          },
+          {
+            "AjoId": 722089,
+            "AfoId": 3,
+            "Name": "Pjeskers Vvo",
+            "AjoDisplayFullName": "25-12-01-109-A - Pjeskers Vvo"
+          },
+          {
+            "AjoId": 722091,
+            "AfoId": 3,
+            "Name": "Saltmyrans Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-111-A - Saltmyrans Jaktklubb"
+          },
+          {
+            "AjoId": 722092,
+            "AfoId": 3,
+            "Name": "Siksjö Vvo",
+            "AjoDisplayFullName": "25-12-01-112-A - Siksjö Vvo"
+          },
+          {
+            "AjoId": 722094,
+            "AfoId": 3,
+            "Name": "Utterlidens Vvo",
+            "AjoDisplayFullName": "25-12-01-116-A - Utterlidens Vvo"
+          },
+          {
+            "AjoId": 722095,
+            "AfoId": 3,
+            "Name": "Vuotners Vvo",
+            "AjoDisplayFullName": "25-12-01-117-A - Vuotners Vvo"
+          },
+          {
+            "AjoId": 722096,
+            "AfoId": 3,
+            "Name": "Ånäs Vvo",
+            "AjoDisplayFullName": "25-12-01-118-A - Ånäs Vvo"
+          },
+          {
+            "AjoId": 722097,
+            "AfoId": 3,
+            "Name": "Baktsjaurs Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-120-A - Baktsjaurs Jaktklubb"
+          },
+          {
+            "AjoId": 722098,
+            "AfoId": 3,
+            "Name": "Bäcknäs Vvo",
+            "AjoDisplayFullName": "25-12-01-121-A - Bäcknäs Vvo"
+          },
+          {
+            "AjoId": 722099,
+            "AfoId": 3,
+            "Name": "Hällbergs Jaktvårdsförening",
+            "AjoDisplayFullName": "25-12-01-122-A - Hällbergs Jaktvårdsförening"
+          },
+          {
+            "AjoId": 722100,
+            "AfoId": 3,
+            "Name": "Laukers Jaktsällskap",
+            "AjoDisplayFullName": "25-12-01-123-A - Laukers Jaktsällskap"
+          },
+          {
+            "AjoId": 722101,
+            "AfoId": 3,
+            "Name": "Mausjaurs Sameby",
+            "AjoDisplayFullName": "25-12-01-125-A - Mausjaurs Sameby"
+          },
+          {
+            "AjoId": 722102,
+            "AfoId": 3,
+            "Name": "Akkavare vvo",
+            "AjoDisplayFullName": "25-12-01-126-A - Akkavare vvo"
+          },
+          {
+            "AjoId": 722103,
+            "AfoId": 3,
+            "Name": "Auktsjaurs Vvo",
+            "AjoDisplayFullName": "25-12-01-127-A - Auktsjaurs Vvo"
+          },
+          {
+            "AjoId": 722104,
+            "AfoId": 3,
+            "Name": "Deppis Vvo",
+            "AjoDisplayFullName": "25-12-01-128-A - Deppis Vvo"
+          },
+          {
+            "AjoId": 722105,
+            "AfoId": 3,
+            "Name": "Fjällbonäs Vvo",
+            "AjoDisplayFullName": "25-12-01-129-A - Fjällbonäs Vvo"
+          },
+          {
+            "AjoId": 722106,
+            "AfoId": 3,
+            "Name": "Gullöns Jaktvårdsklubb",
+            "AjoDisplayFullName": "25-12-01-130-A - Gullöns Jaktvårdsklubb"
+          },
+          {
+            "AjoId": 722107,
+            "AfoId": 3,
+            "Name": "Renvallens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-131-A - Renvallens Jaktlag"
+          },
+          {
+            "AjoId": 722108,
+            "AfoId": 3,
+            "Name": "Serrejaur Vvo",
+            "AjoDisplayFullName": "25-12-01-132-A - Serrejaur Vvo"
+          },
+          {
+            "AjoId": 722109,
+            "AfoId": 3,
+            "Name": "Sjöträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-133-A - Sjöträsk Vvo"
+          },
+          {
+            "AjoId": 722110,
+            "AfoId": 3,
+            "Name": "Tjappsåive VVO",
+            "AjoDisplayFullName": "25-12-01-134-A - Tjappsåive VVO"
+          },
+          {
+            "AjoId": 722111,
+            "AfoId": 3,
+            "Name": "Arvidsjaurs Allmänningsskog",
+            "AjoDisplayFullName": "25-12-01-135-A - Arvidsjaurs Allmänningsskog"
+          },
+          {
+            "AjoId": 722112,
+            "AfoId": 3,
+            "Name": "Storbergs Vvo",
+            "AjoDisplayFullName": "25-12-01-136-A - Storbergs Vvo"
+          },
+          {
+            "AjoId": 722113,
+            "AfoId": 3,
+            "Name": "K4 Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-137-A - K4 Jaktklubb"
+          },
+          {
+            "AjoId": 722114,
+            "AfoId": 3,
+            "Name": "Rönnbergets Jaktlag",
+            "AjoDisplayFullName": "25-12-01-138-A - Rönnbergets Jaktlag"
+          },
+          {
+            "AjoId": 722115,
+            "AfoId": 3,
+            "Name": "Avavikens Vvo",
+            "AjoDisplayFullName": "25-12-01-139-A - Avavikens Vvo"
+          },
+          {
+            "AjoId": 722116,
+            "AfoId": 3,
+            "Name": "Baktåive Vvo",
+            "AjoDisplayFullName": "25-12-01-140-A - Baktåive Vvo"
+          },
+          {
+            "AjoId": 722118,
+            "AfoId": 3,
+            "Name": "Hedbergs Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-142-A - Hedbergs Jaktklubb"
+          },
+          {
+            "AjoId": 722119,
+            "AfoId": 3,
+            "Name": "Jerfojaur Vvo",
+            "AjoDisplayFullName": "25-12-01-143-A - Jerfojaur Vvo"
+          },
+          {
+            "AjoId": 722120,
+            "AfoId": 3,
+            "Name": "Lomträsk Vvo",
+            "AjoDisplayFullName": "25-12-01-144-A - Lomträsk Vvo"
+          },
+          {
+            "AjoId": 722121,
+            "AfoId": 3,
+            "Name": "Långuddens Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-145-A - Långuddens Jaktklubb"
+          },
+          {
+            "AjoId": 722122,
+            "AfoId": 3,
+            "Name": "Suddesjaur Vvo",
+            "AjoDisplayFullName": "25-12-01-146-A - Suddesjaur Vvo"
+          },
+          {
+            "AjoId": 722123,
+            "AfoId": 3,
+            "Name": "Åkroken-Städdjejaur Vvo",
+            "AjoDisplayFullName": "25-12-01-147-A - Åkroken-Städdjejaur Vvo"
+          },
+          {
+            "AjoId": 722124,
+            "AfoId": 3,
+            "Name": "Hornlidens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-148-A - Hornlidens Jaktlag"
+          },
+          {
+            "AjoId": 722126,
+            "AfoId": 3,
+            "Name": "Grundträsklidens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-150-A - Grundträsklidens Jaktlag"
+          },
+          {
+            "AjoId": 722128,
+            "AfoId": 3,
+            "Name": "Östra Kikkejaur",
+            "AjoDisplayFullName": "25-12-01-153-A - Östra Kikkejaur"
+          },
+          {
+            "AjoId": 722129,
+            "AfoId": 3,
+            "Name": "V Kikkejaur Sameby",
+            "AjoDisplayFullName": "25-12-01-154-A - V Kikkejaur Sameby"
+          },
+          {
+            "AjoId": 722131,
+            "AfoId": 3,
+            "Name": "Tjintokk AB",
+            "AjoDisplayFullName": "25-12-01-157-A - Tjintokk AB"
+          },
+          {
+            "AjoId": 722132,
+            "AfoId": 3,
+            "Name": "Utterträsk Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-159-A - Utterträsk Jaktklubb"
+          },
+          {
+            "AjoId": 722133,
+            "AfoId": 3,
+            "Name": "Kläppens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-160-A - Kläppens Jaktlag"
+          },
+          {
+            "AjoId": 722134,
+            "AfoId": 3,
+            "Name": "Stormyråsens Jaktlag",
+            "AjoDisplayFullName": "25-12-01-161-A - Stormyråsens Jaktlag"
+          },
+          {
+            "AjoId": 722135,
+            "AfoId": 3,
+            "Name": "Palkovare",
+            "AjoDisplayFullName": "25-12-01-162-A - Palkovare"
+          },
+          {
+            "AjoId": 722136,
+            "AfoId": 3,
+            "Name": "Muorrejaurs Jaktklubb",
+            "AjoDisplayFullName": "25-12-01-163-A - Muorrejaurs Jaktklubb"
+          },
+          {
+            "AjoId": 722138,
+            "AfoId": 3,
+            "Name": "Brännholm jaktområde",
+            "AjoDisplayFullName": "25-12-01-165-A - Brännholm jaktområde"
+          },
+          {
+            "AjoId": 724583,
+            "AfoId": 3,
+            "Name": "Björknäs ",
+            "AjoDisplayFullName": "25-12-01-167-A - Björknäs "
+          },
+          {
+            "AjoId": 725786,
+            "AfoId": 3,
+            "Name": "Strittjomvare 6",
+            "AjoDisplayFullName": "25-12-01-168-A - Strittjomvare 6"
+          },
+          {
+            "AjoId": 725787,
+            "AfoId": 3,
+            "Name": "Lauker-Östansjö Jaktlag",
+            "AjoDisplayFullName": "25-12-01-169-A - Lauker-Östansjö Jaktlag"
+          },
+          {
+            "AjoId": 722141,
+            "AfoId": 3,
+            "Name": "Glommersträsk ÄSO",
+            "AjoDisplayFullName": "25-12-01-202-Ä - Glommersträsk ÄSO"
+          }
+        ]
+      }
+    ],
+    "note": "One official portal report configuration; CSV fields map the rendered grouped table, values preserved as displayed. The historical Gräsmyrs VVO is a separate identity and is not treated as the same area."
+  },
+  "interpretation": "Cumulative portal report values observed at capture time; changes are not exact kill dates and may reflect delayed reporting or corrections."
+}
