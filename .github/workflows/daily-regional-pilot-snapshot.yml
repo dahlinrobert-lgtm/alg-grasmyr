@@ -29,8 +29,8 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install playwright
           python -m playwright install --with-deps chromium
-      - name: Run snapshot archive tests
-        run: python -m unittest tests.test_regional_pilot_snapshots tests.test_geographic_pilot_validation -v
+      - name: Run snapshot archive and dashboard export tests
+        run: python -m unittest tests.test_regional_pilot_snapshots tests.test_geographic_pilot_validation tests.test_regional_dashboard_export -v
       - name: Refresh selector catalogue
         run: |
           python scripts/discover_national_areas.py \
