@@ -30,6 +30,19 @@ def number(value: str) -> int | float | None:
     return int(result) if result.is_integer() else result
 
 
+def display_area_name(meta: dict, row: dict, area_display_id: str | None) -> tuple[str, str]:
+    """Return a safe display label without promoting generic selector suffixes to names."""
+    source_name = (row.get("jaktomradesnamn") or meta.get("area_name") or "").strip()
+    catalogue_name = (meta.get("catalogue_area_name") or "").strip()
+    generic_labels = {"A", "Ä", "B", "E", "LICENSOMRÅDE", "ÄLGSKÖTSELOMRÅDE"}
+    if source_name and source_name.upper() not in generic_labels:
+        return source_name, "portal_report"
+    if catalogue_name and catalogue_name.upper() not in generic_labels:
+        return catalogue_name, "selector_catalogue"
+    registration = area_display_id or meta.get("area_display_id") or meta.get("area_id") or meta.get("area_key") or "okänt ID"
+    return f"Jaktområde {registration}", "registration_id_fallback"
+
+
 def build_area(folder: Path) -> dict:
     csv_files = sorted(folder.glob("*.csv"))
     snapshots = []
@@ -64,11 +77,20 @@ def build_area(folder: Path) -> dict:
         latest_meta = meta
 
     latest = snapshots[-1] if snapshots else None
+    latest_row = read_row(csv_files[-1]) if csv_files else {}
+    display_name, display_name_source = display_area_name(latest_meta, latest_row, latest_meta.get("area_display_id"))
+    quality_flags = list(latest_meta.get("quality_flags") or [])
+    if display_name_source == "registration_id_fallback" and "missing_descriptive_area_name" not in quality_flags:
+        quality_flags.append("missing_descriptive_area_name")
     return {
         "area_key": folder.name,
         "area_id": latest_meta.get("area_id"),
         "area_display_id": latest_meta.get("area_display_id"),
-        "area_name": latest_meta.get("area_name") or latest_meta.get("catalogue_area_name") or folder.name,
+        "area_name": latest_meta.get("area_name") or "",
+        "catalogue_area_name": latest_meta.get("catalogue_area_name") or "",
+        "display_name": display_name,
+        "display_name_source": display_name_source,
+        "quality_flags": quality_flags,
         "county": latest_meta.get("county"),
         "afo": latest_meta.get("afo"),
         "hunting_season": latest_meta.get("hunting_season", "2026/2027"),
@@ -101,6 +123,8 @@ def build_export(root: Path) -> dict:
         "area_count": len(areas),
         "areas_with_latest_snapshot": latest_areas,
         "snapshot_date_count": len(dates),
+        "areas_missing_descriptive_name": sum(1 for area in areas if area["display_name_source"] == "registration_id_fallback"),
+        "areas_with_source_name": sum(1 for area in areas if area["display_name_source"] == "portal_report"),
         "interpretation": (
             "Dates are observation dates in daily cumulative portal snapshots. "
             "First observed positive is not the exact kill date. Latest observed increase "
