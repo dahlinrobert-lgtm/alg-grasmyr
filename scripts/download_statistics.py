@@ -16,7 +16,6 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from playwright.async_api import async_playwright
 
 URL = "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/"
 COUNTY_NAME = "Västerbottens län"
