@@ -87,7 +87,12 @@ def validate_pilot(output_dir: Path, min_end_year: int = 2026) -> list[str]:
                     "no_rendered_rows",
                     "unrecognized_table_structure",
                 }
-                and result.get("data_status") == report.get("data_status")
+                and result.get("data_status") in {
+                    "no_rendered_table",
+                    "no_rendered_rows",
+                    "unrecognized_table_structure",
+                }
+                and report.get("data_status") == result.get("data_status")
                 and int(report.get("data_csv_rows", 0) or 0) == 0
                 and int(result.get("data_csv_rows", 0) or 0) == 0
             ):
