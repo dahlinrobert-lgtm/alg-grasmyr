@@ -50,6 +50,8 @@ def load_csv(path: Path) -> dict[str, dict[str, str]]:
             if season in rows:
                 raise ValidationError(f"{path}:{line_number}: duplicate hunting season {season!r}")
             normalized = {str(k): str(v or "") for k, v in row.items() if k is not None}
+            if season_column != "jaktsasong":
+                normalized.pop(season_column, None)
             normalized["jaktsasong"] = season
             rows[season] = normalized
     if not rows:
