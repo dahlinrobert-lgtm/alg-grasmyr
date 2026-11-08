@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-11-08T12:18:33.045045+00:00",
+  "generated_at_utc": "2026-11-08T14:17:48.846Z",
   "source": "Länsstyrelsernas Älgdata statistikportal",
   "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
   "report": "Avskjutning med mål — ÄJO",
@@ -15,7 +15,7 @@
       "area_key": "dalarnas-l-n-20-21-03-030",
       "area_id": "717433",
       "area_display_id": "20-21-03-030",
-      "area_name": "A",
+      "area_name": "20-21-03-030",
       "county": "Dalarnas län",
       "afo": "Fredriksbergs ÄFO",
       "hunting_season": "2026/2027",
@@ -55,6 +55,11 @@
           "reported_area_ha": 373.34,
           "slutrapporterat": "Nej"
         }
+      ],
+      "catalogue_area_name": "A",
+      "area_name_missing": true,
+      "quality_flags": [
+        "missing_jaktomradesnamn"
       ]
     },
     {
@@ -101,7 +106,8 @@
           "reported_area_ha": 33255.79,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "dalarnas-l-n-20-80-10-052-a",
@@ -147,7 +153,8 @@
           "reported_area_ha": 348.97,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "dalarnas-l-n-20-29-03-028-a",
@@ -193,7 +200,8 @@
           "reported_area_ha": 635.07,
           "slutrapporterat": "Ja"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "dalarnas-l-n-20-26-02-029",
@@ -239,7 +247,8 @@
           "reported_area_ha": 22394.53,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "g-vleborgs-l-n-21-04-09-004-a",
@@ -285,7 +294,8 @@
           "reported_area_ha": 14306.19,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "g-vleborgs-l-n-21-06-06-084",
@@ -331,7 +341,8 @@
           "reported_area_ha": 19749.87,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "g-vleborgs-l-n-21-12-03-059",
@@ -377,7 +388,8 @@
           "reported_area_ha": 57875.53,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "g-vleborgs-l-n-21-03-06-074",
@@ -423,7 +435,8 @@
           "reported_area_ha": 93099.84,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "g-vleborgs-l-n-21-09-07-015",
@@ -469,7 +482,8 @@
           "reported_area_ha": 34786.68,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "j-mtlands-l-n-22-83-09-162-a",
@@ -515,7 +529,8 @@
           "reported_area_ha": 473.33,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "j-mtlands-l-n-22-83-14-062-a",
@@ -561,7 +576,8 @@
           "reported_area_ha": 1675.03,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "j-mtlands-l-n-23-03-01-016-a",
@@ -607,7 +623,8 @@
           "reported_area_ha": 2896.28,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "j-mtlands-l-n-23-07-02-021-a",
@@ -653,7 +670,8 @@
           "reported_area_ha": 468.51,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "j-mtlands-l-n-23-08-01-004-a",
@@ -699,7 +717,8 @@
           "reported_area_ha": 2609.39,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "norrbottens-l-n-25-13-02-129-a",
@@ -745,7 +764,8 @@
           "reported_area_ha": 7518.2,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "norrbottens-l-n-25-12-01-101-a",
@@ -791,7 +811,8 @@
           "reported_area_ha": 5437,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "norrbottens-l-n-25-05-02-101-a",
@@ -837,7 +858,8 @@
           "reported_area_ha": 2433.62,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "norrbottens-l-n-25-03-02-101-a",
@@ -883,7 +905,8 @@
           "reported_area_ha": 4901.9,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "norrbottens-l-n-25-15-03-116-a",
@@ -929,13 +952,14 @@
           "reported_area_ha": 1336.49,
           "slutrapporterat": "Ja"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "sk-ne-l-n-12-02-07-001",
       "area_id": "723436",
       "area_display_id": "12-02-07-001",
-      "area_name": "A",
+      "area_name": "12-02-07-001",
       "county": "Skåne län",
       "afo": "Nordvästra älgförvaltningsområdet",
       "hunting_season": "2026/2027",
@@ -975,13 +999,18 @@
           "reported_area_ha": 2046.88,
           "slutrapporterat": "Nej"
         }
+      ],
+      "catalogue_area_name": "A",
+      "area_name_missing": true,
+      "quality_flags": [
+        "missing_jaktomradesnamn"
       ]
     },
     {
       "area_key": "sk-ne-l-n-12-04-01-076",
       "area_id": "772192",
       "area_display_id": "12-04-01-076",
-      "area_name": "A",
+      "area_name": "12-04-01-076",
       "county": "Skåne län",
       "afo": "Mellersta Norra älgförvaltningsområdet",
       "hunting_season": "2026/2027",
@@ -1021,13 +1050,18 @@
           "reported_area_ha": 1869.35,
           "slutrapporterat": "Nej"
         }
+      ],
+      "catalogue_area_name": "A",
+      "area_name_missing": true,
+      "quality_flags": [
+        "missing_jaktomradesnamn"
       ]
     },
     {
       "area_key": "sk-ne-l-n-12-04-04-064",
       "area_id": "716238",
       "area_display_id": "12-04-04-064",
-      "area_name": "A",
+      "area_name": "12-04-04-064",
       "county": "Skåne län",
       "afo": "Mellersta Älgförvaltningsområdet",
       "hunting_season": "2026/2027",
@@ -1067,13 +1101,18 @@
           "reported_area_ha": 961.29,
           "slutrapporterat": "Nej"
         }
+      ],
+      "catalogue_area_name": "A",
+      "area_name_missing": true,
+      "quality_flags": [
+        "missing_jaktomradesnamn"
       ]
     },
     {
       "area_key": "sk-ne-l-n-12-65-05-006",
       "area_id": "723247",
       "area_display_id": "12-65-05-006",
-      "area_name": "A",
+      "area_name": "12-65-05-006",
       "county": "Skåne län",
       "afo": "Södra älgförvaltningsområdet",
       "hunting_season": "2026/2027",
@@ -1113,6 +1152,11 @@
           "reported_area_ha": 1798.54,
           "slutrapporterat": "Nej"
         }
+      ],
+      "catalogue_area_name": "A",
+      "area_name_missing": true,
+      "quality_flags": [
+        "missing_jaktomradesnamn"
       ]
     },
     {
@@ -1159,7 +1203,8 @@
           "reported_area_ha": 10849.44,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "v-sterbottens-l-n-24-04-01-099-a",
@@ -1205,7 +1250,8 @@
           "reported_area_ha": 3415.38,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "v-sterbottens-l-n-24-81-01-002-a",
@@ -1251,7 +1297,8 @@
           "reported_area_ha": 6407.21,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "v-sterbottens-l-n-24-18-01-004-a",
@@ -1297,7 +1344,8 @@
           "reported_area_ha": 5027.09,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "v-sterbottens-l-n-24-62-03-002-a",
@@ -1343,7 +1391,8 @@
           "reported_area_ha": 3263.84,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     },
     {
       "area_key": "v-sterbottens-l-n-24-82-10-003-a",
@@ -1389,7 +1438,8 @@
           "reported_area_ha": 748.36,
           "slutrapporterat": "Nej"
         }
-      ]
+      ],
+      "area_name_missing": false
     }
   ]
 }
