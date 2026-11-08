@@ -159,10 +159,10 @@ def validate_area(area_dir: Path) -> list[str]:
         actual_changes = metadata.get("changes_since_previous_snapshot")
         if actual_changes != expected_changes:
             # Early Hörneå snapshots were archived by a collector that used the
-            # row index ("0", "1", ...) as the season key when the portal exposed
-            # the season in the legacy "slutrapporterat" column. Preserve those
-            # immutable files, but recognize this narrowly-scoped legacy log
-            # shape rather than treating it as a current change-log corruption.
+            # zero-based row index ("0", "1", ...) as the season key when the
+            # portal exposed the season in the legacy "slutrapporterat" column.
+            # Preserve those immutable files, but translate the old keys back to
+            # the actual season labels and still compare the complete change log.
             with csv_path.open("r", encoding="utf-8-sig", newline="") as source_handle:
                 source_columns = set(csv.DictReader(source_handle, delimiter=";").fieldnames or [])
             legacy_season_column = (
@@ -170,10 +170,28 @@ def validate_area(area_dir: Path) -> list[str]:
             )
             legacy_indexed_log = (
                 isinstance(actual_changes, list)
-                and any(str(item.get("season", "")).isdigit() for item in actual_changes if isinstance(item, dict))
-                and any(item.get("change") == "season_missing" for item in actual_changes if isinstance(item, dict))
+                and any(
+                    isinstance(item, dict) and str(item.get("season", "")).isdigit()
+                    for item in actual_changes
+                )
             )
-            if not (legacy_season_column and legacy_indexed_log):
+            if legacy_season_column and legacy_indexed_log:
+                season_keys = sorted(set(previous_rows) | set(rows))
+                translated_changes = []
+                for item in actual_changes:
+                    if not isinstance(item, dict) or not str(item.get("season", "")).isdigit():
+                        translated_changes = []
+                        break
+                    index = int(item["season"])
+                    if index >= len(season_keys):
+                        translated_changes = []
+                        break
+                    translated = dict(item)
+                    translated["season"] = season_keys[index]
+                    translated_changes.append(translated)
+                if translated_changes == expected_changes:
+                    actual_changes = expected_changes
+            if actual_changes != expected_changes:
                 errors.append(f"{json_path}: change log does not match the two CSV snapshots")
 
         previous_rows = rows
