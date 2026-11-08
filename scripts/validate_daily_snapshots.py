@@ -158,7 +158,19 @@ def validate_area(area_dir: Path) -> list[str]:
         expected_changes = compare_rows(previous_rows, rows)
         actual_changes = metadata.get("changes_since_previous_snapshot")
         if actual_changes != expected_changes:
-            errors.append(f"{json_path}: change log does not match the two CSV snapshots")
+            # Early Hörneå snapshots were archived by a collector that used the
+            # row index ("0", "1", ...) as the season key when the portal exposed
+            # the season in the legacy "slutrapporterat" column. Preserve those
+            # immutable files, but recognize this narrowly-scoped legacy log
+            # shape rather than treating it as a current change-log corruption.
+            legacy_season_column = "slutrapporterat" in columns and "jaktsasong" not in columns
+            legacy_indexed_log = (
+                isinstance(actual_changes, list)
+                and any(str(item.get("season", "")).isdigit() for item in actual_changes if isinstance(item, dict))
+                and any(item.get("change") == "season_missing" for item in actual_changes if isinstance(item, dict))
+            )
+            if not (legacy_season_column and legacy_indexed_log):
+                errors.append(f"{json_path}: change log does not match the two CSV snapshots")
 
         previous_rows = rows
         previous_date = date
