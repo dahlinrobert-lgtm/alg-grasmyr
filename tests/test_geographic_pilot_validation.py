@@ -71,6 +71,41 @@ class GeographicPilotArtifactValidationTests(unittest.TestCase):
             errors = validate_pilot(root)
             self.assertTrue(any("portal-selected ID" in error for error in errors))
 
+    def test_accepts_explicit_no_rendered_rows_without_csv(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            report, result = self.make_fixture(root)
+            report["data_status"] = "no_rendered_rows"
+            report["data_csv"] = None
+            report["data_csv_rows"] = 0
+            result["data_status"] = "no_rendered_rows"
+            result["data_available"] = False
+            result["data_csv_rows"] = 0
+            summary = json.loads((root / "pilot_summary.json").read_text(encoding="utf-8"))
+            summary["results"][0]["data_status"] = "no_rendered_rows"
+            summary["results"][0]["data_available"] = False
+            summary["results"][0]["data_csv_rows"] = 0
+            summary["data_row_count"] = 0
+            summary["data_available_count"] = 0
+            (root / "pilot_summary.json").write_text(json.dumps(summary), encoding="utf-8")
+            (root / "01-test-lan-123456" / "report.csv").unlink()
+            report_path = root / "01-test-lan-123456" / "download-report.json"
+            report_path.write_text(json.dumps(report), encoding="utf-8")
+            self.assertEqual(validate_pilot(root), [])
+
+    def test_rejects_missing_csv_without_explicit_no_rows_status(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            report, _ = self.make_fixture(root)
+            report["data_csv"] = None
+            report["data_csv_rows"] = 0
+            report["data_status"] = "data_rows"
+            report_path = root / "01-test-lan-123456" / "download-report.json"
+            report_path.write_text(json.dumps(report), encoding="utf-8")
+            (root / "01-test-lan-123456" / "report.csv").unlink()
+            errors = validate_pilot(root)
+            self.assertTrue(any("missing report CSV" in error for error in errors))
+
     def test_detects_wrong_hunting_season(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

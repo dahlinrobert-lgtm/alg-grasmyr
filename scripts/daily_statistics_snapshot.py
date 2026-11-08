@@ -27,8 +27,23 @@ def read_rows(path: Path) -> dict[str, dict[str, str]]:
         reader = csv.DictReader(handle, delimiter=";")
         rows = {}
         for row in reader:
-            key = row.get("jaktsasong") or row.get("Jaktsäsong") or str(len(rows))
-            rows[key] = {str(k): str(v or "") for k, v in row.items() if k is not None}
+            key = (
+                row.get("jaktsasong")
+                or row.get("Jaktsäsong")
+                or row.get("slutrapporterat")
+                or row.get("Slutrapporterat")
+            )
+            if not key:
+                raise ValueError(
+                    f"{path}: missing hunting-season value; expected jaktsasong or slutrapporterat"
+                )
+            normalized = {str(k): str(v or "") for k, v in row.items() if k is not None}
+            normalized["jaktsasong"] = str(key).strip()
+            normalized.pop("slutrapporterat", None)
+            normalized.pop("Slutrapporterat", None)
+            if normalized["jaktsasong"] in rows:
+                raise ValueError(f"{path}: duplicate hunting season {normalized['jaktsasong']!r}")
+            rows[normalized["jaktsasong"]] = normalized
         return rows
 
 

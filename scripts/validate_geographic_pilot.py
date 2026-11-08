@@ -81,7 +81,22 @@ def validate_pilot(output_dir: Path, min_end_year: int = 2026) -> list[str]:
         csv_name = report.get("data_csv")
         csv_path = report_dir / csv_name if csv_name else None
         if not csv_path or not csv_path.is_file():
-            if report.get("data_status") in {"no_rendered_table", "unrecognized_table_structure"} and int(report.get("data_csv_rows", 0) or 0) == 0:
+            no_rows_statuses = {
+                "no_rendered_table",
+                "no_rendered_rows",
+                "unrecognized_table_structure",
+            }
+            no_rows_is_explicit = (
+                report.get("data_status") in no_rows_statuses
+                and result.get("data_status") == report.get("data_status")
+                and int(report.get("data_csv_rows", 0) or 0) == 0
+                and int(result.get("data_csv_rows", 0) or 0) == 0
+                and result.get("data_available") is False
+            )
+            if no_rows_is_explicit:
+                # Some valid area selections return no rendered table/rows for
+                # the current season. A missing CSV is expected only when both
+                # the download report and pilot summary explicitly say so.
                 continue
             errors.append(f"{area_id}: missing report CSV")
             continue

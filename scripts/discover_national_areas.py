@@ -9,7 +9,6 @@ from __future__ import annotations
 import argparse, asyncio, csv, json, re
 from datetime import datetime, timezone
 from pathlib import Path
-from playwright.async_api import async_playwright
 
 URL = "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/"
 
@@ -48,6 +47,10 @@ async def main():
     args = ap.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
     rows, errors, coverage = [], [], []
+    # Playwright is only needed for the live browser crawl. Keep pure helpers
+    # such as latest_year_window importable in lightweight unit-test jobs.
+    from playwright.async_api import async_playwright
+
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         page = await browser.new_page(viewport={"width": 1440, "height": 1000})
