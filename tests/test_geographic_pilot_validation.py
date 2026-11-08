@@ -82,6 +82,9 @@ class GeographicPilotArtifactValidationTests(unittest.TestCase):
             result["data_available"] = False
             result["data_csv_rows"] = 0
             summary = json.loads((root / "pilot_summary.json").read_text(encoding="utf-8"))
+            summary["results"][0]["data_status"] = "no_rendered_rows"
+            summary["results"][0]["data_available"] = False
+            summary["results"][0]["data_csv_rows"] = 0
             summary["data_row_count"] = 0
             summary["data_available_count"] = 0
             (root / "pilot_summary.json").write_text(json.dumps(summary), encoding="utf-8")
