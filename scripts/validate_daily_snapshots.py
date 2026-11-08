@@ -163,7 +163,11 @@ def validate_area(area_dir: Path) -> list[str]:
             # the season in the legacy "slutrapporterat" column. Preserve those
             # immutable files, but recognize this narrowly-scoped legacy log
             # shape rather than treating it as a current change-log corruption.
-            legacy_season_column = "slutrapporterat" in columns and "jaktsasong" not in columns
+            with csv_path.open("r", encoding="utf-8-sig", newline="") as source_handle:
+                source_columns = set(csv.DictReader(source_handle, delimiter=";").fieldnames or [])
+            legacy_season_column = (
+                "slutrapporterat" in source_columns and "jaktsasong" not in source_columns
+            )
             legacy_indexed_log = (
                 isinstance(actual_changes, list)
                 and any(str(item.get("season", "")).isdigit() for item in actual_changes if isinstance(item, dict))
