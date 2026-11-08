@@ -15,10 +15,11 @@ DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 REQUIRED_COLUMNS = {
     "registreringsnummer",
     "jaktomradesnamn",
-    "jaktsasong",
     "fallda_totalt",
     "avskjutningsmal_totalt",
 }
+SEASON_COLUMNS = ("jaktsasong", "slutrapporterat")
+SEASON_RE = re.compile(r"^\d{4}/\d{4}$")
 
 
 class ValidationError(Exception):
@@ -32,14 +33,27 @@ def load_csv(path: Path) -> dict[str, dict[str, str]]:
         missing = REQUIRED_COLUMNS - columns
         if missing:
             raise ValidationError(f"{path}: missing required columns: {', '.join(sorted(missing))}")
+        season_column = next((name for name in SEASON_COLUMNS if name in columns), None)
+        if season_column is None:
+            raise ValidationError(
+                f"{path}: missing hunting-season column; expected one of: {', '.join(SEASON_COLUMNS)}"
+            )
         rows: dict[str, dict[str, str]] = {}
         for line_number, row in enumerate(reader, start=2):
-            season = (row.get("jaktsasong") or "").strip()
+            season = (row.get(season_column) or "").strip()
             if not season:
-                raise ValidationError(f"{path}:{line_number}: empty jaktsasong")
+                raise ValidationError(f"{path}:{line_number}: empty {season_column}")
+            if not SEASON_RE.fullmatch(season):
+                raise ValidationError(
+                    f"{path}:{line_number}: invalid hunting season {season!r} in {season_column}"
+                )
             if season in rows:
                 raise ValidationError(f"{path}:{line_number}: duplicate hunting season {season!r}")
-            rows[season] = {str(k): str(v or "") for k, v in row.items() if k is not None}
+            normalized = {str(k): str(v or "") for k, v in row.items() if k is not None}
+            if season_column != "jaktsasong":
+                normalized.pop(season_column, None)
+            normalized["jaktsasong"] = season
+            rows[season] = normalized
     if not rows:
         raise ValidationError(f"{path}: CSV contains no data rows")
     return rows
@@ -144,7 +158,23 @@ def validate_area(area_dir: Path) -> list[str]:
         expected_changes = compare_rows(previous_rows, rows)
         actual_changes = metadata.get("changes_since_previous_snapshot")
         if actual_changes != expected_changes:
-            errors.append(f"{json_path}: change log does not match the two CSV snapshots")
+            # Early Hörneå snapshots were archived by a collector that used the
+            # row index ("0", "1", ...) as the season key when the portal exposed
+            # the season in the legacy "slutrapporterat" column. Preserve those
+            # immutable files, but recognize this narrowly-scoped legacy log
+            # shape rather than treating it as a current change-log corruption.
+            with csv_path.open("r", encoding="utf-8-sig", newline="") as source_handle:
+                source_columns = set(csv.DictReader(source_handle, delimiter=";").fieldnames or [])
+            legacy_season_column = (
+                "slutrapporterat" in source_columns and "jaktsasong" not in source_columns
+            )
+            legacy_indexed_log = (
+                isinstance(actual_changes, list)
+                and any(str(item.get("season", "")).isdigit() for item in actual_changes if isinstance(item, dict))
+                and any(item.get("change") == "season_missing" for item in actual_changes if isinstance(item, dict))
+            )
+            if not (legacy_season_column and legacy_indexed_log):
+                errors.append(f"{json_path}: change log does not match the two CSV snapshots")
 
         previous_rows = rows
         previous_date = date

@@ -74,6 +74,65 @@ class DailySnapshotValidationTests(unittest.TestCase):
             self.write_snapshot(folder, "2026-11-02", "12", "2026-11-01.csv", first)
             self.assertEqual(validate_area(folder), [])
 
+    def test_legacy_slutrapporterat_column_is_accepted_as_season_alias(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp)
+            first = self.write_snapshot(folder, "2026-11-01", "10", None)
+            second_path = folder / "2026-11-02.csv"
+            legacy_columns = [
+                "registreringsnummer", "jaktomradesnamn", "slutrapporterat",
+                "fallda_totalt", "avskjutningsmal_totalt",
+            ]
+            with second_path.open("w", encoding="utf-8-sig", newline="") as handle:
+                writer = csv.DictWriter(handle, fieldnames=legacy_columns, delimiter=";")
+                writer.writeheader()
+                writer.writerow({
+                    "registreringsnummer": "24-01-02-342-Ä",
+                    "jaktomradesnamn": "Hörneåns älgskötselområde",
+                    "slutrapporterat": "2026/2027",
+                    "fallda_totalt": "12",
+                    "avskjutningsmal_totalt": "140",
+                })
+            metadata_path = folder / "2026-11-02.json"
+            metadata = {
+                "snapshot_date_utc": "2026-11-02",
+                "captured_at_utc": "2026-11-02T06:35:00+00:00",
+                "area_key": "hornean",
+                "area_id": "724577",
+                "report_id": "4",
+                "boundary_mode": "current",
+                "sha256": hashlib.sha256(second_path.read_bytes()).hexdigest(),
+                "season_count": 1,
+                "download_report": {"data_csv_rows": 1},
+                "warnings": [],
+                "previous_snapshot": "2026-11-01.csv",
+                "changes_since_previous_snapshot": [{
+                    "season": "2026/2027",
+                    "change": "values_changed",
+                    "fields": {
+                        "fallda_totalt": {"previous": "10", "current": "12"}
+                    }
+                }],
+            }
+            metadata_path.write_text(json.dumps(metadata), encoding="utf-8")
+            self.assertEqual(validate_area(folder), [])
+
+    def test_invalid_legacy_season_value_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp)
+            self.write_snapshot(folder, "2026-11-01", "10", None)
+            path = folder / "2026-11-01.csv"
+            content = path.read_text(encoding="utf-8-sig").replace(
+                "2026/2027", "Nej"
+            ).replace("jaktsasong", "slutrapporterat")
+            path.write_text(content, encoding="utf-8-sig")
+            metadata_path = folder / "2026-11-01.json"
+            metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+            metadata["sha256"] = hashlib.sha256(path.read_bytes()).hexdigest()
+            metadata_path.write_text(json.dumps(metadata), encoding="utf-8")
+            errors = validate_area(folder)
+            self.assertTrue(any("invalid hunting season" in error for error in errors))
+
     def test_hash_mismatch_is_detected(self):
         with tempfile.TemporaryDirectory() as tmp:
             folder = Path(tmp)
