@@ -19,7 +19,7 @@ REQUIRED_COLUMNS = {
     "avskjutningsmal_totalt",
 }
 SEASON_COLUMNS = ("jaktsasong", "slutrapporterat")
-SEASON_RE = re.compile(r"^\\d{4}/\\d{4}$")
+SEASON_RE = re.compile(r"^\d{4}/\d{4}$")
 
 
 class ValidationError(Exception):
