@@ -32,6 +32,9 @@ jobs:
           python -m pip install playwright
           python -m playwright install --with-deps chromium
 
+      - name: Test daily snapshot season-key handling
+        run: python -m unittest tests.test_daily_statistics_snapshot -v
+
       - name: Capture Hörneåns ÄSO statistics
         run: |
           python scripts/daily_statistics_snapshot.py \
