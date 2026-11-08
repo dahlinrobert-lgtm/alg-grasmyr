@@ -29,8 +29,8 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install playwright
           python -m playwright install --with-deps chromium
-      - name: Run snapshot archive tests
-        run: python -m unittest tests.test_regional_pilot_snapshots tests.test_geographic_pilot_validation -v
+      - name: Run snapshot archive and dashboard export tests
+        run: python -m unittest tests.test_regional_pilot_snapshots tests.test_geographic_pilot_validation tests.test_regional_dashboard_export -v
       - name: Refresh selector catalogue
         run: |
           python scripts/discover_national_areas.py \
@@ -51,13 +51,15 @@ jobs:
         run: python scripts/archive_geographic_pilot.py --pilot-dir out/geographic-pilot --output-root data/regional_pilot_snapshots
       - name: Validate archived history and change logs
         run: python scripts/validate_regional_pilot_snapshots.py --root data/regional_pilot_snapshots
-      - name: Commit validated daily snapshots
+      - name: Build public dashboard export
+        run: python scripts/build_regional_dashboard_export.py
+      - name: Commit validated snapshots and dashboard export
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/regional_pilot_snapshots/
+          git add data/regional_pilot_snapshots/ data/regional_pilot_dashboard.json
           if ! git diff --cached --quiet; then
-            git commit -m "Store daily regional Älgdata pilot snapshots"
+            git commit -m "Store daily regional Älgdata snapshots and dashboard export"
             git push
           else
             echo "No new regional snapshot changes to commit."
@@ -70,5 +72,6 @@ jobs:
           path: |
             out/geographic-pilot/
             data/regional_pilot_snapshots/
+            data/regional_pilot_dashboard.json
           if-no-files-found: warn
           retention-days: 30
