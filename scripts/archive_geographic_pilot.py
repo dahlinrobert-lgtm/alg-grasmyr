@@ -113,6 +113,15 @@ def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | No
             previous_row = read_one_row(previous_csv)
             previous_name = previous_csv.name
         shutil.copyfile(source_csv, csv_path)
+        source_name = (row.get("jaktomradesnamn") or "").strip()
+        catalogue_name = (candidate.get("area_name") or "").strip()
+        generic_labels = {"A", "Ä", "B", "E", "LICENSOMRÅDE", "ÄLGSKÖTSELOMRÅDE"}
+        has_catalogue_name = bool(catalogue_name and catalogue_name.upper() not in generic_labels)
+        quality_flags = []
+        if not source_name:
+            quality_flags.append("missing_jaktomradesnamn")
+        if not source_name and not has_catalogue_name:
+            quality_flags.append("missing_descriptive_area_name")
         metadata = {
             "snapshot_date_utc": date,
             "captured_at_utc": captured_at.isoformat(),
@@ -121,9 +130,12 @@ def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | No
             "area_key": key,
             "area_id": portal_id,
             "area_display_id": candidate.get("area_display_id", ""),
-            "area_name": row.get("jaktomradesnamn", ""),
-            "catalogue_area_name": candidate.get("area_name", ""),
-            "quality_flags": ["missing_jaktomradesnamn"] if not row.get("jaktomradesnamn") else [],
+            "area_name": source_name,
+            "catalogue_area_name": catalogue_name,
+            "area_label_raw": candidate.get("area_label_raw", ""),
+            "display_name": source_name or (catalogue_name if has_catalogue_name else f"Jaktområde {candidate.get('area_display_id') or candidate.get('area_portal_id')}"),
+            "display_name_source": "portal_report" if source_name else ("selector_catalogue" if has_catalogue_name else "registration_id_fallback"),
+            "quality_flags": quality_flags,
             "county": candidate["county"],
             "afo": candidate["afo_name"],
             "boundary_mode": "current",
