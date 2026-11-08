@@ -68,7 +68,13 @@ def build_area(folder: Path) -> dict:
         "area_key": folder.name,
         "area_id": latest_meta.get("area_id"),
         "area_display_id": latest_meta.get("area_display_id"),
-        "area_name": latest_meta.get("area_name") or latest_meta.get("catalogue_area_name") or folder.name,
+        # Some portal catalogue labels contain only the trailing area type
+        # ("A" or "Ä") when the actual hunting-area name is missing. Never
+        # present that type marker as the area's name; use its stable ID instead.
+        "area_name": latest_meta.get("area_name") or latest_meta.get("area_display_id") or folder.name,
+        "area_name_missing": not bool(latest_meta.get("area_name")),
+        "catalogue_area_name": latest_meta.get("catalogue_area_name"),
+        "quality_flags": latest_meta.get("quality_flags") or [],
         "county": latest_meta.get("county"),
         "afo": latest_meta.get("afo"),
         "hunting_season": latest_meta.get("hunting_season", "2026/2027"),

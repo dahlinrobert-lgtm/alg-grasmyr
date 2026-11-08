@@ -58,6 +58,24 @@ class RegionalDashboardExportTests(unittest.TestCase):
             self.assertIsNone(area["latest_observed_increase_date"])
             self.assertEqual(area["latest_delta"], 0)
 
+    def test_missing_area_name_uses_stable_display_id_not_catalogue_type_marker(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp) / "unnamed-area"
+            folder.mkdir()
+            self.write_snapshot(folder, "2026-11-08", "0")
+            meta_path = folder / "2026-11-08.json"
+            meta = json.loads(meta_path.read_text(encoding="utf-8"))
+            meta["area_name"] = ""
+            meta["catalogue_area_name"] = "A"
+            meta["quality_flags"] = ["missing_jaktomradesnamn"]
+            meta_path.write_text(json.dumps(meta), encoding="utf-8")
+
+            area = build_area(folder)
+            self.assertEqual(area["area_name"], "20-21-03-030-A")
+            self.assertTrue(area["area_name_missing"])
+            self.assertEqual(area["catalogue_area_name"], "A")
+            self.assertIn("missing_jaktomradesnamn", area["quality_flags"])
+
     def test_export_reports_latest_coverage(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
