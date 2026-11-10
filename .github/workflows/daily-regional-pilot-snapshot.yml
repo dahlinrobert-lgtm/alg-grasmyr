@@ -58,7 +58,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/regional_pilot_snapshots/ data/regional_pilot_intraday/ data/regional_pilot_dashboard.json
+          mkdir -p data/regional_pilot_intraday
+          git add -A data/regional_pilot_snapshots/ data/regional_pilot_intraday/ data/regional_pilot_dashboard.json
           if ! git diff --cached --quiet; then
             git commit -m "Store daily regional Älgdata snapshots and dashboard export"
             git push
