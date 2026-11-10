@@ -1,0 +1,27 @@
+name: Regional pilot quality checks
+
+on:
+  pull_request:
+    paths:
+      - "scripts/download_statistics.py"
+      - "scripts/archive_geographic_pilot.py"
+      - "scripts/validate_regional_pilot_snapshots.py"
+      - "tests/test_download_statistics.py"
+      - "tests/test_regional_pilot_snapshots.py"
+      - ".github/workflows/daily-regional-pilot-snapshot.yml"
+      - ".github/workflows/regional-pilot-quality.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run regional pilot regression tests
+        run: |
+          python -m unittest tests.test_download_statistics tests.test_regional_pilot_snapshots tests.test_geographic_pilot_validation tests.test_regional_dashboard_export -v
