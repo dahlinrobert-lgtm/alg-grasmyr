@@ -182,7 +182,8 @@ def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | No
         archived.append(key)
     result = {
         "snapshot_date_utc": date, "candidate_count": len(candidates),
-        "archived_count": len(archived), "unchanged_count": len(unchanged),\n        "intraday_archived_count": len(intraday_archived), "intraday_observations": intraday_archived,
+        "archived_count": len(archived), "unchanged_count": len(unchanged),
+        "intraday_archived_count": len(intraday_archived), "intraday_observations": intraday_archived,
         "area_keys_archived": archived, "area_keys_unchanged": unchanged,
         "output_root": str(output_root)
     }
