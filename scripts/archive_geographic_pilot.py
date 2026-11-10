@@ -194,7 +194,8 @@ def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | No
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--pilot-dir", type=Path, default=Path("out/geographic-pilot"))
-    parser.add_argument("--output-root", type=Path, default=Path("data/regional_pilot_snapshots"))\n    parser.add_argument("--intraday-root", type=Path, default=Path("data/regional_pilot_intraday"))
+    parser.add_argument("--output-root", type=Path, default=Path("data/regional_pilot_snapshots"))
+    parser.add_argument("--intraday-root", type=Path, default=Path("data/regional_pilot_intraday"))
     args = parser.parse_args()
     archive_pilot(args.pilot_dir, args.output_root, intraday_root=args.intraday_root)
     return 0
