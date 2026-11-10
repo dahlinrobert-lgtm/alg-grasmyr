@@ -7,7 +7,7 @@
       "area_name": "24-01-02-342-Ä - Hörneåns älgskötselområde",
       "event_count": 35,
       "first_snapshot": "2026-11-01",
-      "latest_snapshot": "2026-11-08",
+      "latest_snapshot": "2026-11-10",
       "season_counts": [
         {
           "date": "2026-11-01",
@@ -40,9 +40,13 @@
         {
           "date": "2026-11-08",
           "season_count": 0
+        },
+        {
+          "date": "2026-11-10",
+          "season_count": 0
         }
       ],
-      "snapshot_count": 8
+      "snapshot_count": 9
     }
   ],
   "event_count": 35,
@@ -51,7 +55,7 @@
     "reported_value_increase": 14,
     "season_missing": 7
   },
-  "generated_at_utc": "2026-11-08T00:00:00Z",
+  "generated_at_utc": "2026-11-10T00:00:00Z",
   "interpretation_limits": [
     "Events compare adjacent available snapshots; they do not identify exact dates when an animal was harvested.",
     "A missing season is a portal-output absence, not proof that source statistics were deleted or equal to zero.",
@@ -59,7 +63,7 @@
     "Only fields that changed are emitted; unchanged daily observations are not duplicated as events."
   ],
   "scope": "daily portal snapshots; report 4 (Avskjutning med mål — ÄJO)",
-  "snapshot_count": 8,
+  "snapshot_count": 9,
   "source_export_inventory": {
     "automatic_snapshot_matches": [],
     "candidate_file_count": 0,
