@@ -35,7 +35,8 @@ def area_key(candidate: dict) -> str:
     return f"{county}-{stable}"
 
 
-def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | None = None) -> dict:
+def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | None = None,
+                  intraday_root: Path | None = None) -> dict:
     captured_at = captured_at or datetime.now(timezone.utc)
     date = captured_at.date().isoformat()
     summary = json.loads((pilot_dir / "pilot_summary.json").read_text(encoding="utf-8"))
@@ -56,7 +57,7 @@ def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | No
         raise ValueError("Duplicate portal IDs in candidate set")
     if summary.get("min_end_year") != 2026:
         raise ValueError("This daily baseline workflow is pinned to 2026/2027")
-    archived, unchanged = [], []
+    archived, unchanged, intraday_archived = [], [], []
     for result in results:
         portal_id = str(result["area_id"])
         candidate = by_id.get(portal_id)
@@ -96,12 +97,49 @@ def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | No
         json_path = target / f"{date}.json"
         digest = sha256(source_csv)
         if csv_path.exists() or json_path.exists():
-            if csv_path.is_file() and json_path.is_file():
-                old_meta = json.loads(json_path.read_text(encoding="utf-8"))
-                if old_meta.get("sha256") == digest:
-                    unchanged.append(key)
-                    continue
-            raise FileExistsError(f"{key}: refusing to overwrite an existing dated snapshot")
+            if not (csv_path.is_file() and json_path.is_file()):
+                raise FileExistsError(f"{key}: incomplete existing daily snapshot pair")
+            old_meta = json.loads(json_path.read_text(encoding="utf-8"))
+            if old_meta.get("sha256") == digest:
+                unchanged.append(key)
+                continue
+
+            # Keep the first daily observation immutable. A changed re-run is
+            # retained separately as an intraday observation rather than
+            # overwriting the canonical daily snapshot or failing the whole run.
+            observation_root = intraday_root or output_root.parent / "regional_pilot_intraday"
+            observation_dir = observation_root / key / date
+            observation_dir.mkdir(parents=True, exist_ok=True)
+            stamp = captured_at.strftime("%Y%m%dT%H%M%S%fZ")
+            observation_csv = observation_dir / f"{stamp}.csv"
+            observation_json = observation_dir / f"{stamp}.json"
+            if observation_csv.exists() or observation_json.exists():
+                raise FileExistsError(f"{key}: intraday observation timestamp collision")
+            shutil.copyfile(source_csv, observation_csv)
+            observation_meta = {
+                "snapshot_date_utc": date,
+                "captured_at_utc": captured_at.isoformat(),
+                "observation_type": "same_day_change",
+                "source": "Länsstyrelsernas Älgdata statistikportal",
+                "area_key": key,
+                "area_id": portal_id,
+                "area_display_id": candidate.get("area_display_id", ""),
+                "county": candidate["county"],
+                "afo": candidate["afo_name"],
+                "hunting_season": "2026/2027",
+                "slutrapporterat": row["slutrapporterat"],
+                "csv_file": observation_csv.name,
+                "sha256": digest,
+                "row_count": 1,
+                "daily_snapshot": str(csv_path),
+                "daily_snapshot_sha256": old_meta.get("sha256"),
+                "changes_vs_daily_snapshot": compare_rows(read_one_row(csv_path), row),
+                "interpretation": "Same-day cumulative portal observation; not a separate kill-date record."
+            }
+            observation_json.write_text(json.dumps(observation_meta, ensure_ascii=False, indent=2) + "\n",
+                                        encoding="utf-8")
+            intraday_archived.append(f"{key}/{date}/{stamp}")
+            continue
         previous_files = sorted(target.glob("*.csv"))
         previous_row, previous_name, previous_meta = {}, None, {}
         if previous_files:
@@ -145,6 +183,7 @@ def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | No
     result = {
         "snapshot_date_utc": date, "candidate_count": len(candidates),
         "archived_count": len(archived), "unchanged_count": len(unchanged),
+        "intraday_archived_count": len(intraday_archived), "intraday_observations": intraday_archived,
         "area_keys_archived": archived, "area_keys_unchanged": unchanged,
         "output_root": str(output_root)
     }
@@ -156,8 +195,9 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--pilot-dir", type=Path, default=Path("out/geographic-pilot"))
     parser.add_argument("--output-root", type=Path, default=Path("data/regional_pilot_snapshots"))
+    parser.add_argument("--intraday-root", type=Path, default=Path("data/regional_pilot_intraday"))
     args = parser.parse_args()
-    archive_pilot(args.pilot_dir, args.output_root)
+    archive_pilot(args.pilot_dir, args.output_root, intraday_root=args.intraday_root)
     return 0
 
 

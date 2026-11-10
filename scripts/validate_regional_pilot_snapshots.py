@@ -82,6 +82,38 @@ def validate_area(folder: Path) -> list[str]:
     return errors
 
 
+
+def validate_intraday_root(root: Path) -> list[str]:
+    """Validate timestamped same-day observations without mixing them into daily history."""
+    if not root.exists():
+        return []
+    errors = []
+    for area_dir in sorted(p for p in root.iterdir() if p.is_dir()):
+        for date_dir in sorted(p for p in area_dir.iterdir() if p.is_dir()):
+            csv_stems = {p.stem for p in date_dir.glob("*.csv")}
+            json_stems = {p.stem for p in date_dir.glob("*.json")}
+            if csv_stems != json_stems:
+                errors.append(f"{area_dir.name}/{date_dir.name}: CSV/JSON observation pairs do not match")
+            for stem in sorted(csv_stems & json_stems):
+                csv_path, json_path = date_dir / f"{stem}.csv", date_dir / f"{stem}.json"
+                try:
+                    meta = json.loads(json_path.read_text(encoding="utf-8"))
+                    if hashlib.sha256(csv_path.read_bytes()).hexdigest() != meta.get("sha256"):
+                        errors.append(f"{area_dir.name}/{date_dir.name}/{stem}: SHA-256 mismatch")
+                    row = read_one(csv_path)
+                    if meta.get("area_key") != area_dir.name or meta.get("snapshot_date_utc") != date_dir.name:
+                        errors.append(f"{area_dir.name}/{date_dir.name}/{stem}: identity/date mismatch")
+                    if meta.get("observation_type") != "same_day_change" or meta.get("row_count") != 1:
+                        errors.append(f"{area_dir.name}/{date_dir.name}/{stem}: invalid observation metadata")
+                    if row.get("slutrapporterat") not in {"Ja", "Nej"}:
+                        errors.append(f"{area_dir.name}/{date_dir.name}/{stem}: invalid slutrapporterat flag")
+                    captured = datetime.fromisoformat(str(meta.get("captured_at_utc", "")).replace("Z", "+00:00"))
+                    if captured.tzinfo is None:
+                        raise ValueError("timezone missing")
+                except Exception as exc:
+                    errors.append(f"{area_dir.name}/{date_dir.name}/{stem}: cannot validate observation: {exc}")
+    return errors
+
 def validate_root(root: Path) -> list[str]:
     if not root.is_dir():
         return [f"snapshot root does not exist: {root}"]
@@ -97,8 +129,9 @@ def validate_root(root: Path) -> list[str]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path("data/regional_pilot_snapshots"))
+    parser.add_argument("--intraday-root", type=Path, default=Path("data/regional_pilot_intraday"))
     args = parser.parse_args()
-    errors = validate_root(args.root)
+    errors = validate_root(args.root) + validate_intraday_root(args.intraday_root)
     print(json.dumps({"valid": not errors, "error_count": len(errors), "errors": errors}, ensure_ascii=False, indent=2))
     return 1 if errors else 0
 

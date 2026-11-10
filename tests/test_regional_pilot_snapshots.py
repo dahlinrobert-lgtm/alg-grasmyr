@@ -3,6 +3,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from scripts.archive_geographic_pilot import archive_pilot
+
+def read_csv_total(path):
+    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+        return next(csv.DictReader(handle, delimiter=";"))["fallda_totalt"]
 from scripts.validate_regional_pilot_snapshots import validate_root
 
 
@@ -44,14 +48,20 @@ class RegionalPilotSnapshotTests(unittest.TestCase):
             self.assertEqual(second["unchanged_count"],1)
             self.assertEqual(validate_root(out),[])
 
-    def test_refuses_to_overwrite_changed_same_day_snapshot(self):
+    def test_preserves_changed_same_day_snapshot_as_intraday_observation(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); pilot=root/"pilot"; pilot.mkdir(); out=root/"history"
             self.make_pilot(pilot)
             archive_pilot(pilot,out,datetime(2026,11,6,6,0,tzinfo=timezone.utc))
             self.make_pilot(pilot,"4")
-            with self.assertRaises(FileExistsError):
-                archive_pilot(pilot,out,datetime(2026,11,6,7,0,tzinfo=timezone.utc))
+            intraday = root / "intraday"
+            result = archive_pilot(pilot,out,datetime(2026,11,6,7,0,tzinfo=timezone.utc),intraday_root=intraday)
+            self.assertEqual(result["intraday_archived_count"],1)
+            daily = next(out.rglob("2026-11-06.csv"))
+            self.assertEqual(read_csv_total(daily),"3")
+            observation = next(intraday.rglob("*.csv"))
+            self.assertEqual(read_csv_total(observation),"4")
+            self.assertEqual(len(list(intraday.rglob("*.json"))),1)
 
     def test_detects_tampered_snapshot(self):
         with tempfile.TemporaryDirectory() as tmp:
