@@ -189,6 +189,12 @@ def save_rendered_table(state: dict[str, Any] | None, output_path: Path) -> int:
     return len(rows)
 
 
+def playwright_factory():
+    """Load Playwright lazily so pure parsing helpers remain importable without it."""
+    from playwright.async_api import async_playwright
+    return async_playwright
+
+
 async def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", type=Path, default=Path("out/hornean-avskjutning"))
@@ -218,7 +224,7 @@ async def main() -> None:
     data_csv_path: Path | None = None
     data_csv_rows = 0
 
-    async with async_playwright() as p:
+    async with playwright_factory()() as p:
         browser = await p.chromium.launch(headless=True)
         page = await browser.new_page(viewport={"width": 1440, "height": 1000}, accept_downloads=True)
         page.set_default_timeout(15000)
