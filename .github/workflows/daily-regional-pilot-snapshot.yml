@@ -2,8 +2,9 @@ name: Daily regional Älgdata pilot snapshots
 
 on:
   schedule:
-    # Run after the national selector catalogue has been refreshed by the pilot workflow.
-    - cron: "20 8 * * *"
+    # 09:37 Europe/Stockholm; avoid the top of the hour and handle DST explicitly.
+    - cron: "37 9 * * *"
+      timezone: "Europe/Stockholm"
   workflow_dispatch:
 
 permissions:
@@ -30,7 +31,7 @@ jobs:
           python -m pip install playwright
           python -m playwright install --with-deps chromium
       - name: Run snapshot archive and dashboard export tests
-        run: python -m unittest tests.test_regional_pilot_snapshots tests.test_geographic_pilot_validation tests.test_regional_dashboard_export -v
+        run: python -m unittest tests.test_download_statistics tests.test_regional_pilot_snapshots tests.test_geographic_pilot_validation tests.test_regional_dashboard_export -v
       - name: Refresh selector catalogue
         run: |
           python scripts/discover_national_areas.py \
@@ -48,16 +49,16 @@ jobs:
       - name: Validate pilot selection and source reports
         run: python scripts/validate_geographic_pilot.py --directory out/geographic-pilot --min-end-year 2026
       - name: Archive immutable daily snapshots
-        run: python scripts/archive_geographic_pilot.py --pilot-dir out/geographic-pilot --output-root data/regional_pilot_snapshots
+        run: python scripts/archive_geographic_pilot.py --pilot-dir out/geographic-pilot --output-root data/regional_pilot_snapshots --intraday-root data/regional_pilot_intraday
       - name: Validate archived history and change logs
-        run: python scripts/validate_regional_pilot_snapshots.py --root data/regional_pilot_snapshots
+        run: python scripts/validate_regional_pilot_snapshots.py --root data/regional_pilot_snapshots --intraday-root data/regional_pilot_intraday
       - name: Build public dashboard export
         run: python scripts/build_regional_dashboard_export.py
       - name: Commit validated snapshots and dashboard export
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/regional_pilot_snapshots/ data/regional_pilot_dashboard.json
+          git add data/regional_pilot_snapshots/ data/regional_pilot_intraday/ data/regional_pilot_dashboard.json
           if ! git diff --cached --quiet; then
             git commit -m "Store daily regional Älgdata snapshots and dashboard export"
             git push
