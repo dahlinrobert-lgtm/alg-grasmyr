@@ -86,18 +86,21 @@ jobs:
             echo ".git is absent from GITHUB_WORKSPACE"
           fi
           echo "Git repository detection:"
-          git -C "$GITHUB_WORKSPACE" rev-parse --show-toplevel
-          git -C "$GITHUB_WORKSPACE" status --short
+          git -c safe.directory="$GITHUB_WORKSPACE" -C "$GITHUB_WORKSPACE" rev-parse --show-toplevel
+          git -c safe.directory="$GITHUB_WORKSPACE" -C "$GITHUB_WORKSPACE" status --short
       - name: Commit validated snapshots and dashboard export
         working-directory: ${{ github.workspace }}
         run: |
-          git -C "$GITHUB_WORKSPACE" config user.name "github-actions[bot]"
-          git -C "$GITHUB_WORKSPACE" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # actions/checkout creates the worktree as root inside this container,
+          # while workflow steps run as pwuser. Explicitly trust only this checkout.
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git -c safe.directory="$GITHUB_WORKSPACE" -C "$GITHUB_WORKSPACE" config user.name "github-actions[bot]"
+          git -c safe.directory="$GITHUB_WORKSPACE" -C "$GITHUB_WORKSPACE" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           mkdir -p data/regional_pilot_intraday
-          git -C "$GITHUB_WORKSPACE" add -A data/regional_pilot_snapshots/ data/regional_pilot_intraday/ data/regional_pilot_dashboard.json
-          if ! git -C "$GITHUB_WORKSPACE" diff --cached --quiet; then
-            git -C "$GITHUB_WORKSPACE" commit -m "Store daily regional Älgdata snapshots and dashboard export"
-            git -C "$GITHUB_WORKSPACE" push
+          git -c safe.directory="$GITHUB_WORKSPACE" -C "$GITHUB_WORKSPACE" add -A data/regional_pilot_snapshots/ data/regional_pilot_intraday/ data/regional_pilot_dashboard.json
+          if ! git -c safe.directory="$GITHUB_WORKSPACE" -C "$GITHUB_WORKSPACE" diff --cached --quiet; then
+            git -c safe.directory="$GITHUB_WORKSPACE" -C "$GITHUB_WORKSPACE" commit -m "Store daily regional Älgdata snapshots and dashboard export"
+            git -c safe.directory="$GITHUB_WORKSPACE" -C "$GITHUB_WORKSPACE" push
           else
             echo "No new regional snapshot changes to commit."
           fi
