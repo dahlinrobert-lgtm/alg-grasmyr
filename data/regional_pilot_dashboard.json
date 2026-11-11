@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-11-08T14:17:48.846Z",
+  "generated_at_utc": "2026-11-11T21:06:54.855081+00:00",
   "source": "Länsstyrelsernas Älgdata statistikportal",
   "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
   "report": "Avskjutning med mål — ÄJO",
   "hunting_season": "2026/2027",
-  "latest_snapshot_date": "2026-11-08",
+  "latest_snapshot_date": "2026-11-11",
   "area_count": 30,
-  "areas_with_latest_snapshot": 30,
-  "snapshot_date_count": 3,
+  "areas_with_latest_snapshot": 29,
+  "snapshot_date_count": 4,
   "interpretation": "Dates are observation dates in daily cumulative portal snapshots. First observed positive is not the exact kill date. Latest observed increase is the snapshot date when a cumulative increase was first visible; reporting delays and corrections may affect it.",
   "areas": [
     {
@@ -16,12 +16,17 @@
       "area_id": "717433",
       "area_display_id": "20-21-03-030",
       "area_name": "20-21-03-030",
+      "area_name_missing": true,
+      "catalogue_area_name": "A",
+      "quality_flags": [
+        "missing_jaktomradesnamn"
+      ],
       "county": "Dalarnas län",
       "afo": "Fredriksbergs ÄFO",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": null,
       "latest_observed_increase_date": null,
       "latest_total": 0,
@@ -54,12 +59,16 @@
           "calf_total": 0,
           "reported_area_ha": 373.34,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 0,
+          "delta": 0,
+          "adult_total": 0,
+          "calf_total": 0,
+          "reported_area_ha": 373.34,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "catalogue_area_name": "A",
-      "area_name_missing": true,
-      "quality_flags": [
-        "missing_jaktomradesnamn"
       ]
     },
     {
@@ -67,15 +76,18 @@
       "area_id": "718551",
       "area_display_id": "20-31-03-005-Ä",
       "area_name": "BODA-BINGSJÖ ÄLGSKÖTSELOMRÅDE",
+      "area_name_missing": false,
+      "catalogue_area_name": "BODA-BINGSJÖ ÄLGSKÖTSELOMRÅDE",
+      "quality_flags": [],
       "county": "Dalarnas län",
       "afo": "Bingsjö ÄFO",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": "2026-11-06",
-      "latest_observed_increase_date": "2026-11-08",
-      "latest_total": 88,
+      "latest_observed_increase_date": "2026-11-11",
+      "latest_total": 89,
       "latest_delta": 1,
       "slutrapporterat": "Nej",
       "snapshots": [
@@ -105,21 +117,32 @@
           "calf_total": 36,
           "reported_area_ha": 33255.79,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 89,
+          "delta": 1,
+          "adult_total": 52,
+          "calf_total": 37,
+          "reported_area_ha": 33255.79,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "dalarnas-l-n-20-80-10-052-a",
       "area_id": "725921",
       "area_display_id": "20-80-10-052-A",
       "area_name": "Bingsjö södra jaktlag",
+      "area_name_missing": false,
+      "catalogue_area_name": "Bingsjö södra jaktlag",
+      "quality_flags": [],
       "county": "Dalarnas län",
       "afo": "Bjursås ÄFO",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": null,
       "latest_observed_increase_date": null,
       "latest_total": 0,
@@ -152,21 +175,32 @@
           "calf_total": 0,
           "reported_area_ha": 348.97,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 0,
+          "delta": 0,
+          "adult_total": 0,
+          "calf_total": 0,
+          "reported_area_ha": 348.97,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "dalarnas-l-n-20-29-03-028-a",
       "area_id": "718542",
       "area_display_id": "20-29-03-028-A",
       "area_name": "DIGERBERGET-HELGBO JAKTKLUBB",
+      "area_name_missing": false,
+      "catalogue_area_name": "DIGERBERGET-HELGBO JAKTKLUBB",
+      "quality_flags": [],
       "county": "Dalarnas län",
       "afo": "Gimmens ÄFO",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": null,
       "latest_observed_increase_date": null,
       "latest_total": 0,
@@ -199,25 +233,36 @@
           "calf_total": 0,
           "reported_area_ha": 635.07,
           "slutrapporterat": "Ja"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 0,
+          "delta": 0,
+          "adult_total": 0,
+          "calf_total": 0,
+          "reported_area_ha": 635.07,
+          "slutrapporterat": "Ja"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "dalarnas-l-n-20-26-02-029",
       "area_id": "724524",
       "area_display_id": "20-26-02-029-Ä",
       "area_name": "GAGNEF-MOCKFJÄRDS SÖDRA ÄLGSKÖTSELOMRÅDE",
+      "area_name_missing": false,
+      "catalogue_area_name": "GAGNEF-MOCKFJÄRDS SÖDRA ÄLGSKÖTSELOMRÅDE",
+      "quality_flags": [],
       "county": "Dalarnas län",
       "afo": "Gyllbergens ÄFO",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": "2026-11-06",
-      "latest_observed_increase_date": "2026-11-07",
-      "latest_total": 70,
-      "latest_delta": 0,
+      "latest_observed_increase_date": "2026-11-11",
+      "latest_total": 72,
+      "latest_delta": 2,
       "slutrapporterat": "Nej",
       "snapshots": [
         {
@@ -246,25 +291,36 @@
           "calf_total": 35,
           "reported_area_ha": 22394.53,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 72,
+          "delta": 2,
+          "adult_total": 35,
+          "calf_total": 37,
+          "reported_area_ha": 22394.53,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "g-vleborgs-l-n-21-04-09-004-a",
       "area_id": "772686",
       "area_display_id": "21-04-09-004-A",
       "area_name": "Arbrå Västra Viltvårdsområde",
+      "area_name_missing": false,
+      "catalogue_area_name": "Arbrå Västra Viltvårdsområde",
+      "quality_flags": [],
       "county": "Gävleborgs län",
       "afo": "Ljusnan-Voxnan",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": "2026-11-06",
-      "latest_observed_increase_date": null,
-      "latest_total": 56,
-      "latest_delta": 0,
+      "latest_observed_increase_date": "2026-11-11",
+      "latest_total": 57,
+      "latest_delta": 1,
       "slutrapporterat": "Nej",
       "snapshots": [
         {
@@ -293,25 +349,36 @@
           "calf_total": 21,
           "reported_area_ha": 14306.19,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 57,
+          "delta": 1,
+          "adult_total": 35,
+          "calf_total": 22,
+          "reported_area_ha": 14306.19,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "g-vleborgs-l-n-21-06-06-084",
       "area_id": "719777",
       "area_display_id": "21-06-06-084-Ä",
       "area_name": "Attmars älgskötselområde",
+      "area_name_missing": false,
+      "catalogue_area_name": "Attmars älgskötselområde",
+      "quality_flags": [],
       "county": "Gävleborgs län",
       "afo": "Norra Hälsingland",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": "2026-11-06",
-      "latest_observed_increase_date": "2026-11-08",
-      "latest_total": 82,
-      "latest_delta": 4,
+      "latest_observed_increase_date": "2026-11-11",
+      "latest_total": 85,
+      "latest_delta": 3,
       "slutrapporterat": "Nej",
       "snapshots": [
         {
@@ -340,25 +407,36 @@
           "calf_total": 34,
           "reported_area_ha": 19749.87,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 85,
+          "delta": 3,
+          "adult_total": 49,
+          "calf_total": 36,
+          "reported_area_ha": 19749.87,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "g-vleborgs-l-n-21-12-03-059",
       "area_id": "724443",
       "area_display_id": "21-12-03-059-Ä",
       "area_name": "Hamrångekustens mixområde",
+      "area_name_missing": false,
+      "catalogue_area_name": "Hamrångekustens mixområde",
+      "quality_flags": [],
       "county": "Gävleborgs län",
       "afo": "Hamrångefjärden",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": "2026-11-06",
-      "latest_observed_increase_date": "2026-11-08",
-      "latest_total": 118,
-      "latest_delta": 10,
+      "latest_observed_increase_date": "2026-11-11",
+      "latest_total": 120,
+      "latest_delta": 2,
       "slutrapporterat": "Nej",
       "snapshots": [
         {
@@ -387,25 +465,36 @@
           "calf_total": 55,
           "reported_area_ha": 57875.53,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 120,
+          "delta": 2,
+          "adult_total": 64,
+          "calf_total": 56,
+          "reported_area_ha": 57875.53,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "g-vleborgs-l-n-21-03-06-074",
       "area_id": "718708",
       "area_display_id": "21-03-06-074-Ä",
       "area_name": "Ljusdals mixområde",
+      "area_name_missing": false,
+      "catalogue_area_name": "Ljusdals mixområde",
+      "quality_flags": [],
       "county": "Gävleborgs län",
       "afo": "Ljusdal-Ramsjö",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": "2026-11-06",
-      "latest_observed_increase_date": "2026-11-08",
-      "latest_total": 205,
-      "latest_delta": 13,
+      "latest_observed_increase_date": "2026-11-11",
+      "latest_total": 213,
+      "latest_delta": 8,
       "slutrapporterat": "Nej",
       "snapshots": [
         {
@@ -434,25 +523,36 @@
           "calf_total": 103,
           "reported_area_ha": 93099.84,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 213,
+          "delta": 8,
+          "adult_total": 106,
+          "calf_total": 107,
+          "reported_area_ha": 93099.84,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "g-vleborgs-l-n-21-09-07-015",
       "area_id": "724629",
       "area_display_id": "21-09-07-015-Ä",
       "area_name": "Långvind älgskötselområde",
+      "area_name_missing": false,
+      "catalogue_area_name": "Långvind älgskötselområde",
+      "quality_flags": [],
       "county": "Gävleborgs län",
       "afo": "Långvind",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": "2026-11-06",
-      "latest_observed_increase_date": null,
-      "latest_total": 44,
-      "latest_delta": 0,
+      "latest_observed_increase_date": "2026-11-11",
+      "latest_total": 52,
+      "latest_delta": 8,
       "slutrapporterat": "Nej",
       "snapshots": [
         {
@@ -481,21 +581,32 @@
           "calf_total": 17,
           "reported_area_ha": 34786.68,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 52,
+          "delta": 8,
+          "adult_total": 29,
+          "calf_total": 23,
+          "reported_area_ha": 34786.68,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "j-mtlands-l-n-22-83-09-162-a",
       "area_id": "719376",
       "area_display_id": "22-83-09-162-A",
       "area_name": "22-83-09-162-A",
+      "area_name_missing": false,
+      "catalogue_area_name": "22-83-09-162-A",
+      "quality_flags": [],
       "county": "Jämtlands län",
       "afo": "Strömsund/Sollefteå",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": null,
       "latest_observed_increase_date": null,
       "latest_total": 0,
@@ -528,21 +639,32 @@
           "calf_total": 0,
           "reported_area_ha": 473.33,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 0,
+          "delta": 0,
+          "adult_total": 0,
+          "calf_total": 0,
+          "reported_area_ha": 473.33,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "j-mtlands-l-n-22-83-14-062-a",
       "area_id": "719406",
       "area_display_id": "22-83-14-062-A",
       "area_name": "22-83-14-062-A",
+      "area_name_missing": false,
+      "catalogue_area_name": "22-83-14-062-A",
+      "quality_flags": [],
       "county": "Jämtlands län",
       "afo": "Hammerdal/Ragunda",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": "2026-11-06",
       "latest_observed_increase_date": null,
       "latest_total": 2,
@@ -575,21 +697,32 @@
           "calf_total": 1,
           "reported_area_ha": 1675.03,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 2,
+          "delta": 0,
+          "adult_total": 1,
+          "calf_total": 1,
+          "reported_area_ha": 1675.03,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "j-mtlands-l-n-23-03-01-016-a",
       "area_id": "772829",
       "area_display_id": "23-03-01-016-A",
       "area_name": "23-03-01-016-A",
+      "area_name_missing": false,
+      "catalogue_area_name": "23-03-01-016-A",
+      "quality_flags": [],
       "county": "Jämtlands län",
       "afo": "Västjämtland",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": "2026-11-06",
       "latest_observed_increase_date": null,
       "latest_total": 8,
@@ -622,15 +755,26 @@
           "calf_total": 3,
           "reported_area_ha": 2896.28,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 8,
+          "delta": 0,
+          "adult_total": 5,
+          "calf_total": 3,
+          "reported_area_ha": 2896.28,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "j-mtlands-l-n-23-07-02-021-a",
       "area_id": "721966",
       "area_display_id": "23-07-02-021-A",
       "area_name": "23-07-02-021-A",
+      "area_name_missing": false,
+      "catalogue_area_name": "23-07-02-021-A",
+      "quality_flags": [],
       "county": "Jämtlands län",
       "afo": "Berg",
       "hunting_season": "2026/2027",
@@ -671,19 +815,31 @@
           "slutrapporterat": "Nej"
         }
       ],
-      "area_name_missing": false
+      "latest_observation_status": "no_reported_data",
+      "latest_observation_date": "2026-11-11",
+      "latest_data_status": "no_rendered_rows",
+      "no_data_observation_count": 1,
+      "no_data_observations": [
+        {
+          "date": "2026-11-11",
+          "status": "no_rendered_rows"
+        }
+      ]
     },
     {
       "area_key": "j-mtlands-l-n-23-08-01-004-a",
       "area_id": "722200",
       "area_display_id": "23-08-01-004-A",
       "area_name": "23-08-01-004-A",
+      "area_name_missing": false,
+      "catalogue_area_name": "23-08-01-004-A",
+      "quality_flags": [],
       "county": "Jämtlands län",
       "afo": "Härjedalen",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": "2026-11-06",
       "latest_observed_increase_date": null,
       "latest_total": 2,
@@ -716,21 +872,32 @@
           "calf_total": 0,
           "reported_area_ha": 2609.39,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 2,
+          "delta": 0,
+          "adult_total": 2,
+          "calf_total": 0,
+          "reported_area_ha": 2609.39,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "norrbottens-l-n-25-13-02-129-a",
       "area_id": "722324",
       "area_display_id": "25-13-02-129-A",
       "area_name": "AB Hvalfisken",
+      "area_name_missing": false,
+      "catalogue_area_name": "AB Hvalfisken",
+      "quality_flags": [],
       "county": "Norrbottens län",
       "afo": "ÄFO 2",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": null,
       "latest_observed_increase_date": null,
       "latest_total": 0,
@@ -763,21 +930,32 @@
           "calf_total": 0,
           "reported_area_ha": 7518.2,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 0,
+          "delta": 0,
+          "adult_total": 0,
+          "calf_total": 0,
+          "reported_area_ha": 7518.2,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "norrbottens-l-n-25-12-01-101-a",
       "area_id": "722084",
       "area_display_id": "25-12-01-101-A",
       "area_name": "Abborrträsk Vvo",
+      "area_name_missing": false,
+      "catalogue_area_name": "Abborrträsk Vvo",
+      "quality_flags": [],
       "county": "Norrbottens län",
       "afo": "ÄFO 3",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": null,
       "latest_observed_increase_date": null,
       "latest_total": 0,
@@ -810,21 +988,32 @@
           "calf_total": 0,
           "reported_area_ha": 5437,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 0,
+          "delta": 0,
+          "adult_total": 0,
+          "calf_total": 0,
+          "reported_area_ha": 5437,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "norrbottens-l-n-25-05-02-101-a",
       "area_id": "720898",
       "area_display_id": "25-05-02-101-A",
       "area_name": "Abramså Vvo",
+      "area_name_missing": false,
+      "catalogue_area_name": "Abramså Vvo",
+      "quality_flags": [],
       "county": "Norrbottens län",
       "afo": "ÄFO 5",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": "2026-11-06",
       "latest_observed_increase_date": null,
       "latest_total": 7,
@@ -857,21 +1046,32 @@
           "calf_total": 2,
           "reported_area_ha": 2433.62,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 7,
+          "delta": 0,
+          "adult_total": 5,
+          "calf_total": 2,
+          "reported_area_ha": 2433.62,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "norrbottens-l-n-25-03-02-101-a",
       "area_id": "720458",
       "area_display_id": "25-03-02-101-A",
       "area_name": "Aledalens Vvo",
+      "area_name_missing": false,
+      "catalogue_area_name": "Aledalens Vvo",
+      "quality_flags": [],
       "county": "Norrbottens län",
       "afo": "ÄFO 4",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": null,
       "latest_observed_increase_date": null,
       "latest_total": 0,
@@ -904,21 +1104,32 @@
           "calf_total": 0,
           "reported_area_ha": 4901.9,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 0,
+          "delta": 0,
+          "adult_total": 0,
+          "calf_total": 0,
+          "reported_area_ha": 4901.9,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "norrbottens-l-n-25-15-03-116-a",
       "area_id": "722453",
       "area_display_id": "25-15-03-116-A",
       "area_name": "Auskari jaktlag",
+      "area_name_missing": false,
+      "catalogue_area_name": "Auskari jaktlag",
+      "quality_flags": [],
       "county": "Norrbottens län",
       "afo": "ÄFO 1",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": null,
       "latest_observed_increase_date": null,
       "latest_total": 0,
@@ -951,21 +1162,34 @@
           "calf_total": 0,
           "reported_area_ha": 1336.49,
           "slutrapporterat": "Ja"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 0,
+          "delta": 0,
+          "adult_total": 0,
+          "calf_total": 0,
+          "reported_area_ha": 1336.49,
+          "slutrapporterat": "Ja"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "sk-ne-l-n-12-02-07-001",
       "area_id": "723436",
       "area_display_id": "12-02-07-001",
       "area_name": "12-02-07-001",
+      "area_name_missing": true,
+      "catalogue_area_name": "A",
+      "quality_flags": [
+        "missing_jaktomradesnamn"
+      ],
       "county": "Skåne län",
       "afo": "Nordvästra älgförvaltningsområdet",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": null,
       "latest_observed_increase_date": null,
       "latest_total": 0,
@@ -998,12 +1222,16 @@
           "calf_total": 0,
           "reported_area_ha": 2046.88,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 0,
+          "delta": 0,
+          "adult_total": 0,
+          "calf_total": 0,
+          "reported_area_ha": 2046.88,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "catalogue_area_name": "A",
-      "area_name_missing": true,
-      "quality_flags": [
-        "missing_jaktomradesnamn"
       ]
     },
     {
@@ -1011,12 +1239,17 @@
       "area_id": "772192",
       "area_display_id": "12-04-01-076",
       "area_name": "12-04-01-076",
+      "area_name_missing": true,
+      "catalogue_area_name": "A",
+      "quality_flags": [
+        "missing_jaktomradesnamn"
+      ],
       "county": "Skåne län",
       "afo": "Mellersta Norra älgförvaltningsområdet",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": null,
       "latest_observed_increase_date": null,
       "latest_total": 0,
@@ -1049,12 +1282,16 @@
           "calf_total": 0,
           "reported_area_ha": 1869.35,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 0,
+          "delta": 0,
+          "adult_total": 0,
+          "calf_total": 0,
+          "reported_area_ha": 1869.35,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "catalogue_area_name": "A",
-      "area_name_missing": true,
-      "quality_flags": [
-        "missing_jaktomradesnamn"
       ]
     },
     {
@@ -1062,12 +1299,17 @@
       "area_id": "716238",
       "area_display_id": "12-04-04-064",
       "area_name": "12-04-04-064",
+      "area_name_missing": true,
+      "catalogue_area_name": "A",
+      "quality_flags": [
+        "missing_jaktomradesnamn"
+      ],
       "county": "Skåne län",
       "afo": "Mellersta Älgförvaltningsområdet",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": null,
       "latest_observed_increase_date": null,
       "latest_total": 0,
@@ -1100,12 +1342,16 @@
           "calf_total": 0,
           "reported_area_ha": 961.29,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 0,
+          "delta": 0,
+          "adult_total": 0,
+          "calf_total": 0,
+          "reported_area_ha": 961.29,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "catalogue_area_name": "A",
-      "area_name_missing": true,
-      "quality_flags": [
-        "missing_jaktomradesnamn"
       ]
     },
     {
@@ -1113,12 +1359,17 @@
       "area_id": "723247",
       "area_display_id": "12-65-05-006",
       "area_name": "12-65-05-006",
+      "area_name_missing": true,
+      "catalogue_area_name": "A",
+      "quality_flags": [
+        "missing_jaktomradesnamn"
+      ],
       "county": "Skåne län",
       "afo": "Södra älgförvaltningsområdet",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": null,
       "latest_observed_increase_date": null,
       "latest_total": 0,
@@ -1151,12 +1402,16 @@
           "calf_total": 0,
           "reported_area_ha": 1798.54,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 0,
+          "delta": 0,
+          "adult_total": 0,
+          "calf_total": 0,
+          "reported_area_ha": 1798.54,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "catalogue_area_name": "A",
-      "area_name_missing": true,
-      "quality_flags": [
-        "missing_jaktomradesnamn"
       ]
     },
     {
@@ -1164,12 +1419,15 @@
       "area_id": "718250",
       "area_display_id": "12-10-07-105-Ä",
       "area_name": "GLIMÅKRA ÄLGSKÖTSELOMRÅDE",
+      "area_name_missing": false,
+      "catalogue_area_name": "GLIMÅKRA ÄLGSKÖTSELOMRÅDE",
+      "quality_flags": [],
       "county": "Skåne län",
       "afo": "Nordöstra älgförvaltningsområdet",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": null,
       "latest_observed_increase_date": null,
       "latest_total": 0,
@@ -1202,21 +1460,32 @@
           "calf_total": 0,
           "reported_area_ha": 10849.44,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 0,
+          "delta": 0,
+          "adult_total": 0,
+          "calf_total": 0,
+          "reported_area_ha": 10849.44,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "v-sterbottens-l-n-24-04-01-099-a",
       "area_id": "722695",
       "area_display_id": "24-04-01-099-A",
       "area_name": "ABBORRTJÄRNS VILTVÅRDSOMRÅDE",
+      "area_name_missing": false,
+      "catalogue_area_name": "ABBORRTJÄRNS VILTVÅRDSOMRÅDE",
+      "quality_flags": [],
       "county": "Västerbottens län",
       "afo": "Sydöstra älgförvaltningsområdet",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": null,
       "latest_observed_increase_date": null,
       "latest_total": 0,
@@ -1249,21 +1518,32 @@
           "calf_total": 0,
           "reported_area_ha": 3415.38,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 0,
+          "delta": 0,
+          "adult_total": 0,
+          "calf_total": 0,
+          "reported_area_ha": 3415.38,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "v-sterbottens-l-n-24-81-01-002-a",
       "area_id": "719644",
       "area_display_id": "24-81-01-002-A",
       "area_name": "AJAUR VILTVÅRDSOMRÅDE",
+      "area_name_missing": false,
+      "catalogue_area_name": "AJAUR VILTVÅRDSOMRÅDE",
+      "quality_flags": [],
       "county": "Västerbottens län",
       "afo": "Mellersta älgförvaltningsområdet",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": "2026-11-06",
       "latest_observed_increase_date": null,
       "latest_total": 8,
@@ -1296,21 +1576,32 @@
           "calf_total": 2,
           "reported_area_ha": 6407.21,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 8,
+          "delta": 0,
+          "adult_total": 6,
+          "calf_total": 2,
+          "reported_area_ha": 6407.21,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "v-sterbottens-l-n-24-18-01-004-a",
       "area_id": "772548",
       "area_display_id": "24-18-01-004-A",
       "area_name": "Adak VVO",
+      "area_name_missing": false,
+      "catalogue_area_name": "Adak VVO",
+      "quality_flags": [],
       "county": "Västerbottens län",
       "afo": "Nordvästra älgförvaltningsområdet",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": "2026-11-06",
       "latest_observed_increase_date": null,
       "latest_total": 5,
@@ -1343,21 +1634,32 @@
           "calf_total": 1,
           "reported_area_ha": 5027.09,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 5,
+          "delta": 0,
+          "adult_total": 4,
+          "calf_total": 1,
+          "reported_area_ha": 5027.09,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "v-sterbottens-l-n-24-62-03-002-a",
       "area_id": "719152",
       "area_display_id": "24-62-03-002-A",
       "area_name": "Arasjö jaktområde",
+      "area_name_missing": false,
+      "catalogue_area_name": "Arasjö jaktområde",
+      "quality_flags": [],
       "county": "Västerbottens län",
       "afo": "Sydvästra älgförvaltningsområdet",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": "2026-11-06",
       "latest_observed_increase_date": null,
       "latest_total": 2,
@@ -1390,21 +1692,32 @@
           "calf_total": 0,
           "reported_area_ha": 3263.84,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 2,
+          "delta": 0,
+          "adult_total": 2,
+          "calf_total": 0,
+          "reported_area_ha": 3263.84,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     },
     {
       "area_key": "v-sterbottens-l-n-24-82-10-003-a",
       "area_id": "720118",
       "area_display_id": "24-82-10-003-A",
       "area_name": "BJURÖKLUBBS JAKTLAG",
+      "area_name_missing": false,
+      "catalogue_area_name": "BJURÖKLUBBS JAKTLAG",
+      "quality_flags": [],
       "county": "Västerbottens län",
       "afo": "Nordöstra älgförvaltningsområdet",
       "hunting_season": "2026/2027",
-      "snapshot_count": 3,
+      "snapshot_count": 4,
       "first_snapshot_date": "2026-11-06",
-      "latest_snapshot_date": "2026-11-08",
+      "latest_snapshot_date": "2026-11-11",
       "first_observed_positive_date": "2026-11-06",
       "latest_observed_increase_date": null,
       "latest_total": 2,
@@ -1437,9 +1750,17 @@
           "calf_total": 0,
           "reported_area_ha": 748.36,
           "slutrapporterat": "Nej"
+        },
+        {
+          "date": "2026-11-11",
+          "total": 2,
+          "delta": 0,
+          "adult_total": 2,
+          "calf_total": 0,
+          "reported_area_ha": 748.36,
+          "slutrapporterat": "Nej"
         }
-      ],
-      "area_name_missing": false
+      ]
     }
   ]
 }

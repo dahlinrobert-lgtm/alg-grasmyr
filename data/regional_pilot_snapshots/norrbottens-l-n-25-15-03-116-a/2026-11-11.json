@@ -1,0 +1,4359 @@
+{
+  "snapshot_date_utc": "2026-11-11",
+  "captured_at_utc": "2026-11-11T21:06:54.305514+00:00",
+  "source": "Länsstyrelsernas Älgdata statistikportal",
+  "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+  "area_key": "norrbottens-l-n-25-15-03-116-a",
+  "area_id": "722453",
+  "area_display_id": "25-15-03-116-A",
+  "area_name": "Auskari jaktlag",
+  "catalogue_area_name": "Auskari jaktlag",
+  "quality_flags": [],
+  "county": "Norrbottens län",
+  "afo": "ÄFO 1",
+  "boundary_mode": "current",
+  "report_id": "4",
+  "report_name": "Avskjutning med mål — ÄJO",
+  "hunting_season": "2026/2027",
+  "slutrapporterat": "Ja",
+  "csv_file": "2026-11-11.csv",
+  "sha256": "444c6efe5b2bbeab5985311ee26be6d8e7c23375409c8cb306fdb7a3caf809bc",
+  "row_count": 1,
+  "previous_snapshot": "2026-11-08.csv",
+  "previous_area_id": "722453",
+  "changes_since_previous_snapshot": [],
+  "download_report": {
+    "inspected_at_utc": "2026-11-11T21:02:10.171224+00:00",
+    "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+    "county": "Norrbottens län",
+    "afo": "ÄFO 1",
+    "selected_area": {
+      "area_id": "722453",
+      "display_label": "25-15-03-116-A - Auskari jaktlag"
+    },
+    "report_config": {
+      "ReportCategoryId": 1,
+      "Name": "ÄJO",
+      "ReportType": 0,
+      "Report": 1,
+      "ReportLevel": 3,
+      "SearchTypeChoice": "1",
+      "Id": "4",
+      "County": "1",
+      "TypeCounty": null,
+      "TypeCountyDefault": null,
+      "TypeCountyManagement": null,
+      "TypeCountyManagementDefault": null,
+      "ElkManagement": "1",
+      "HuntingArea": "1",
+      "HuntingYearFrom": "1",
+      "HuntingYearTo": "1",
+      "ExcelReport": false,
+      "AlertInfoBeforeLoad": null,
+      "ShowOnlyYearFromForHistoricalAFO": null,
+      "option_label": "ÄJO"
+    },
+    "hunting_year_from": "2026/2027",
+    "hunting_year_to_requested": "2026/2027",
+    "hunting_year_to_selected": "2026/2027",
+    "boundary_mode": "current",
+    "navigation_error": null,
+    "errors": [],
+    "data_csv": "avskjutning_mal_ajo_722453_2026-2027_2026-2027.csv",
+    "data_csv_rows": 1,
+    "data_status": "data_rows",
+    "data_csv_size_bytes": 610,
+    "before_stats": {
+      "title": "Statistik Älgdata",
+      "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+      "visible_text": "Statistik\nVälj...\nNationell\nLän\nÄFO\nÄJO\nGeografiskt - Nationell\nNationell\nLän\nÄFO\nVuxna djur - Nationell\nVuxna djur - Län\nVuxna djur - ÄFO\nVuxna djur - ÄJO\nVuxna djur - Nationell\nVuxna djur - Län\nVuxna djur - ÄFO\nVuxna djur - ÄJO\nNationell\nLän\nÄFO\nNationell\nLän\nÄFO\nÄJO\nNationell\nNationell (per ÄFO)\nLän\nÄFO\nÄJO\nNationell\nLän\nÄFO\nÄJO\nÄBIN Län\nÄBIN Äfo samtliga\nÄBIN Äfo\nFoderprognos Län\nFoderprognos Äfo samtliga\nFoderprognos Äfo\nVald statistiktyp:\nAvskjutning med mål\nÄFO gränser\n Historiska gränser\n Nuvarande gränser\nLän\nVälj...\nBlekinge län\nDalarnas län\nGävleborgs län\nHallands län\nJämtlands län\nJönköpings län\nKalmar län\nKronobergs län\nNorrbottens län\nSkåne län\nStockholms län\nSödermanlands län\nUppsala län\nVärmlands län\nVästerbottens län\nVästernorrlands län\nVästmanlands län\nVästra Götalands län\nÖrebro län\nÖstergötlands län\nÄFO\nVälj...\nÄFO 1\nÄFO 2\nÄFO 3\nÄFO 4\nÄFO 5\nÄFO 6\nJaktår - från\n1947/1948\n1961/1962\n1967/1968\n1972/1973\n1981/1982\n1986/1987\n1987/1988\n1988/1989\n1989/1990\n1990/1991\n1991/1992\n1992/1993\n1993/1994\n1994/1995\n1995/1996\n1996/1997\n1997/1998\n1998/1999\n1999/2000\n2000/2001\n2001/2002\n2002/2003\n2003/2004\n2004/2005\n2005/2006\n2006/2007\n2007/2008\n2008/2009\n2009/2010\n2010/2011\n2011/2012\n2012/2013\n2013/2014\n2014/2015\n2015/2016\n2016/2017\n2017/2018\n2018/2019\n2019/2020\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\nJaktår - till\n1947/1948\n1961/1962\n1967/1968\n1972/1973\n1981/1982\n1986/1987\n1987/1988\n1988/1989\n1989/1990\n1990/1991\n1991/1992\n1992/1993\n1993/1994\n1994/1995\n1995/1996\n1996/1997\n1997/1998\n1998/1999\n1999/2000\n2000/2001\n2001/2002\n2002/2003\n2003/2004\n2004/2005\n2005/2006\n2006/2007\n2007/2008\n2008/2009\n2009/2010\n2010/2011\n2011/2012\n2012/2013\n2013/2014\n2014/2015\n2015/2016\n2016/2017\n2017/2018\n2018/2019\n2019/2020\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\nJaktområde\nVälj...\n25-00-99-001-A - Oregistrerad mark\n25-14-01-101-A - Baste Cearru\n25-14-01-102-A - Unna Tjerusj\n25-14-01-103-A - Länsstyrelsens upplåtelsejaktlag\n25-14-01-104-A - Girjas Sameby\n25-14-01-105-A - Sjaunja Byalag\n25-14-01-106-A - Tjautjas Byalag\n25-14-01-107-A - Killinge Jaktklubb\n25-14-01-110-A - Kaitum 1\n25-14-01-111-A - Mårdhunden\n25-15-01-002-A - Saivonpola\n25-15-01-003-A - Kirkkojärvi\n25-15-01-101-A - Svappavaara Jaktlag\n25-15-01-102-A - Taljavaara Jaktlag\n25-15-01-103-A - Svappavaara Jaktvårdsför\n25-15-01-105-A - Soppero lilla jaktlag\n25-15-01-106-A - Svappavaara lilla jaktlag\n25-15-01-107-A - Väkkärä Jaktlag\n25-15-01-109-A - Jukkasjärvi Byallmänning\n25-15-01-110-A - Soppero Byars Samfällighetsförening\n25-15-01-111-A - Puoltsa Älgjaktsområde\n25-15-01-112-A - Lainio Byasamfällighet\n25-15-01-113-A - Kaalasjärvi Skifteslag\n25-15-01-114-A - Jukkasjärvi Sockenallmänning\n25-15-01-115-A - Pirttivuopio Byalag\n25-15-01-116-A - Talma Sameby\n25-15-01-117-A - Gabna Sameby\n25-15-01-118-A - Laevas Sameby\n25-15-01-119-A - Vittangi Sameby\n25-15-01-120-A - Länsstyrelsens Upplåtelsejaktlag\n25-15-01-121-A - Saarivuoma Sameby\n25-15-01-122-A - Soppero/Lannavaara\n25-15-01-123-A - Kurravaara Jaktklubb\n25-15-01-124-A - Soppero jaktlag\n25-15-01-125-A - Vargbackens Jaktlag\n25-15-01-126-A - Sevujärvi jaktlag\n25-15-01-127-A - Svappavaara Fritidsförening\n25-15-01-128-A - Svappavaara samfällda\n25-15-02-001-A - Perälombolo Jaktlag\n25-15-02-002-A - Salmijärvi\n25-15-02-003-Ä - Kiruna Södra ÄSO\n25-15-02-004-A - Lassijärvi\n25-15-02-005-A - Team Parakka\n25-15-02-006-A - Jölget Korkkio\n25-15-02-007-A - Reikäkivenvuoma\n25-15-02-008-A - Saivonpalo\n25-15-02-009-A - Lihavaara\n25-15-02-101-A - Ounisjoki Jaktlag\n25-15-02-103-A - Herranmukka Jaktlag\n25-15-02-105-A - Kuoksu Byamarker\n25-15-02-106-A - Mikkelirova-Kiviniemi Jaktlag\n25-15-02-107-A - Vivungi Jaktklubb\n25-15-02-108-A - Masugnsbyns Jvf\n25-15-02-109-A - Nedre Parakka Jaktlag\n25-15-02-110-A - Jylkkyvaara Jaktområde\n25-15-02-111-A - Piilijärvi Vvo\n25-15-02-112-A - Lainio Jaktskytteklubb\n25-15-02-113-A - Övre Parakka Jaktlag\n25-15-02-114-A - Merasjärvi Jaktlag\n25-15-02-115-A - Jukkasjärvi Sockenallmänning\n25-15-02-116-A - Valkeajärvi jaktlag\n25-15-02-118-A - Masugnsbyns jaktlag\n25-15-02-119-A - Lundströms\n25-15-02-120-A - Junovinsa\n25-15-02-122-A - Normarova\n25-15-02-124-A - Neitigården\n25-15-02-125-A - Särkiletho\n25-15-03-002-A - Kuusivaara Övre Soppero\n25-15-03-003-A - Suijavaara Jaktlag\n25-15-03-004-A - Saivo 22\n25-15-03-005-A - Auvattivuoma\n25-15-03-101-A - Liedakka\n25-15-03-102-A - Ruodusniemi Jaktlag\n25-15-03-103-A - Kuttainen Älgjaktområde\n25-15-03-104-A - Idivuoma Jaktlag\n25-15-03-105-A - Könkämä Sameby\n25-15-03-106-A - Pounovuoma Jaktlag\n25-15-03-107-A - Lainiovuoma Sameby\n25-15-03-108-A - Länsstyrelsens Upplåtelsejaktlag\n25-15-03-109-A - Mertajärvi Jaktlag\n25-15-03-110-A - Idivuoma-Mertajärvi Byalag\n25-15-03-111-A - Kaarejoki Jakt\n25-15-03-112-A - Maunu Byalag\n25-15-03-113-A - Leipivaara Jaktlag\n25-15-03-114-A - Karesuando Byasamfällighet\n25-15-03-115-A - Saivomuotka Jaktklubb\n25-15-03-116-A - Auskari jaktlag\n25-15-03-118-A - Peurajärvi jaktlag\n25-15-03-119-A - Maunu byaallmänning\n25-15-03-120-A - Kuukavuoma jaktlag\n25-15-03-121-A - Kuttainen Raja lag\n25-15-03-122-A - Paittasjärvi Jaktlag\n25-15-03-123-A - Kaarevaara Jaktlag\nv1.9.0\nStatistik älgdata\nKontakta oss\nÄlgdata\nStatistik för älgdata\n\nHär finns statistik om älgstammen och dess påverkan på skog och trafik. I menyn till vänster väljer du ut den statistik du är intresserad av. Resultatet visas i tabeller och grafer över hela skärmen.\n\nDu kan välja att exportera data för att öppna upp i bl.a. Excel.\n\nNågra tips när du använder sidan:\nDu kan välja att dölja eller visa menyn för att kunna se mer på skärmen. När du för muspekaren över graferna visas mer information. Om du klickar på graferna kan du ändra inställningarna för hur de visas. För att komma tillbaka till förstasidan för statistiken kan du klicka på Länstyrelsens logga längst upp på sidan. Vill du komma tillbaka till www.algdata.se klickar du på länken uppe till höger på sidan.\n\nDu har även möjlighet att skapa bilder, tabeller och grafer. En ny bild, graf eller tabell skapas utifrån den data som finns synlig på skärmen. Uppmärksamma att bara data som är synlig på skärmen tas med när man skapar bilder, inte den data som ligger utanför i rullistorna.\n\nStatistik\n\nÄlgdata syftar till att samla all viktig information om älgstammen och dess påverkan på skog och trafik på en plats på internet.\n\nDet här medför att älgförvaltningsgrupper, enskilda jägare och andra på ett lättare sätt kommer att hitta information, vilket underlättar en kunskapsbaserad och flexibel älgförvaltning.\n\nLänsstyrelsen har samlat in statistik över fällda älgar, slaktvikt, viltolyckor, älgobservationer, biologiskt data m.m. Statistiken hämtar även information från andra system som viltdata.\n\nLän\n\nSverige består av 21 län. Länsstyrelserna samverkar och älgstatistik samlas in från de 20 myndigheter som har älgar inom sitt geografiska område.\n\nPå älgdata kan du se statistik per län och över hela landet. I den nationella statistiken omfattas data från alla län.\n\nÄFO\n\nÄlgförvaltningsområde, benämns ofta som ÄFO. Ett älgförvaltningsområde inrättas av länsstyrelsen och motsvarar i stort sett en egen älgstam. När förvaltningen sker över stora områden kan jakten i större utsträckning planeras strategiskt utifrån bland annat skador på skog och förekomst av trafikolyckor.\n\nFörvaltningen ska vara väl förankrad i lokalsamhället och bygga på kunskap utifrån inventeringar av älg, skador och statistik.\n\nJaktområde\n\nDet finns två sorters jaktområde: älgskötselområde och licensområde.\n\nEtt älgskötselområde är en frivillig sammanslutning av jaktlag och marker som jagar inom ett område. Området ska tåla en avskjutning av minst 10 vuxna älgar per år.\n\nLicensområde kallades tidigare A-, B-, E- områden. Den nya typen av licensområden skall enligt jaktlagstiftningen klara av en avskjutning av minst en årskalv per år. Detta är ett steg i riktning mot att älgjakten och avskjutningen skall vara produktionsbaserad. En produktionsbaserad avskjutning innebär att antalet älgar som skjuts inom ett område skall motsvara det antal som marken klarar av att producera.\n\n\n",
+      "headings": [
+        "Statistik för älgdata",
+        "Statistik",
+        "Län",
+        "ÄFO",
+        "Jaktområde"
+      ],
+      "tables": [
+        {
+          "caption": "",
+          "rows": []
+        }
+      ],
+      "table_count": 1,
+      "form_controls": [
+        {
+          "id": "select-statistics",
+          "label": "rapport",
+          "value": "{\"ReportCategoryId\":1,\"Name\":\"ÄJO\",\"ReportType\":0,\"Report\":1,\"ReportLevel\":3,\"SearchTypeChoice\":\"1\",\"Id\":\"4\",\"County\":\"1\",\"TypeCounty\":null,\"TypeCountyDefault\":null,\"TypeCountyManagement\":null,\"TypeCountyManagementDefault\":null,\"ElkManagement\":\"1\",\"HuntingArea\":\"1\",\"HuntingYearFrom\":\"1\",\"HuntingYearTo\":\"1\",\"ExcelReport\":false,\"AlertInfoBeforeLoad\":null,\"ShowOnlyYearFromForHistoricalAFO\":null}",
+          "selected_text": "ÄJO",
+          "options_count": 39
+        },
+        {
+          "id": "select-county",
+          "label": "menuItemHead",
+          "value": "25",
+          "selected_text": "Norrbottens län",
+          "options_count": 21
+        },
+        {
+          "id": "select-afo",
+          "label": "menuItemHead",
+          "value": "1",
+          "selected_text": "ÄFO 1",
+          "options_count": 7
+        },
+        {
+          "id": "select-season-from",
+          "label": "menuItemHead",
+          "value": "2026/2027",
+          "selected_text": "2026/2027",
+          "options_count": 46
+        },
+        {
+          "id": "select-season-to",
+          "label": "menuItemHead",
+          "value": "2026/2027",
+          "selected_text": "2026/2027",
+          "options_count": 46
+        },
+        {
+          "id": "select-ajo",
+          "label": "menuItemHead",
+          "value": "722453",
+          "selected_text": "25-15-03-116-A - Auskari jaktlag",
+          "options_count": 94
+        }
+      ],
+      "radios": [
+        {
+          "name": "optTypeAFO",
+          "value": "F",
+          "checked": false,
+          "label": ""
+        },
+        {
+          "name": "optTypeAFO",
+          "value": "G",
+          "checked": true,
+          "label": ""
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "input",
+          "value": "Visa statistik",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Excel",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "SKV",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "SKV",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        }
+      ]
+    },
+    "after_stats": {
+      "title": "Statistik Älgdata",
+      "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+      "visible_text": "Statistik\nVälj...\nNationell\nLän\nÄFO\nÄJO\nGeografiskt - Nationell\nNationell\nLän\nÄFO\nVuxna djur - Nationell\nVuxna djur - Län\nVuxna djur - ÄFO\nVuxna djur - ÄJO\nVuxna djur - Nationell\nVuxna djur - Län\nVuxna djur - ÄFO\nVuxna djur - ÄJO\nNationell\nLän\nÄFO\nNationell\nLän\nÄFO\nÄJO\nNationell\nNationell (per ÄFO)\nLän\nÄFO\nÄJO\nNationell\nLän\nÄFO\nÄJO\nÄBIN Län\nÄBIN Äfo samtliga\nÄBIN Äfo\nFoderprognos Län\nFoderprognos Äfo samtliga\nFoderprognos Äfo\nVald statistiktyp:\nAvskjutning med mål\nÄFO gränser\n Historiska gränser\n Nuvarande gränser\nLän\nVälj...\nBlekinge län\nDalarnas län\nGävleborgs län\nHallands län\nJämtlands län\nJönköpings län\nKalmar län\nKronobergs län\nNorrbottens län\nSkåne län\nStockholms län\nSödermanlands län\nUppsala län\nVärmlands län\nVästerbottens län\nVästernorrlands län\nVästmanlands län\nVästra Götalands län\nÖrebro län\nÖstergötlands län\nÄFO\nVälj...\nÄFO 1\nÄFO 2\nÄFO 3\nÄFO 4\nÄFO 5\nÄFO 6\nJaktår - från\n1947/1948\n1961/1962\n1967/1968\n1972/1973\n1981/1982\n1986/1987\n1987/1988\n1988/1989\n1989/1990\n1990/1991\n1991/1992\n1992/1993\n1993/1994\n1994/1995\n1995/1996\n1996/1997\n1997/1998\n1998/1999\n1999/2000\n2000/2001\n2001/2002\n2002/2003\n2003/2004\n2004/2005\n2005/2006\n2006/2007\n2007/2008\n2008/2009\n2009/2010\n2010/2011\n2011/2012\n2012/2013\n2013/2014\n2014/2015\n2015/2016\n2016/2017\n2017/2018\n2018/2019\n2019/2020\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\nJaktår - till\n1947/1948\n1961/1962\n1967/1968\n1972/1973\n1981/1982\n1986/1987\n1987/1988\n1988/1989\n1989/1990\n1990/1991\n1991/1992\n1992/1993\n1993/1994\n1994/1995\n1995/1996\n1996/1997\n1997/1998\n1998/1999\n1999/2000\n2000/2001\n2001/2002\n2002/2003\n2003/2004\n2004/2005\n2005/2006\n2006/2007\n2007/2008\n2008/2009\n2009/2010\n2010/2011\n2011/2012\n2012/2013\n2013/2014\n2014/2015\n2015/2016\n2016/2017\n2017/2018\n2018/2019\n2019/2020\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\nJaktområde\nVälj...\n25-00-99-001-A - Oregistrerad mark\n25-14-01-101-A - Baste Cearru\n25-14-01-102-A - Unna Tjerusj\n25-14-01-103-A - Länsstyrelsens upplåtelsejaktlag\n25-14-01-104-A - Girjas Sameby\n25-14-01-105-A - Sjaunja Byalag\n25-14-01-106-A - Tjautjas Byalag\n25-14-01-107-A - Killinge Jaktklubb\n25-14-01-110-A - Kaitum 1\n25-14-01-111-A - Mårdhunden\n25-15-01-002-A - Saivonpola\n25-15-01-003-A - Kirkkojärvi\n25-15-01-101-A - Svappavaara Jaktlag\n25-15-01-102-A - Taljavaara Jaktlag\n25-15-01-103-A - Svappavaara Jaktvårdsför\n25-15-01-105-A - Soppero lilla jaktlag\n25-15-01-106-A - Svappavaara lilla jaktlag\n25-15-01-107-A - Väkkärä Jaktlag\n25-15-01-109-A - Jukkasjärvi Byallmänning\n25-15-01-110-A - Soppero Byars Samfällighetsförening\n25-15-01-111-A - Puoltsa Älgjaktsområde\n25-15-01-112-A - Lainio Byasamfällighet\n25-15-01-113-A - Kaalasjärvi Skifteslag\n25-15-01-114-A - Jukkasjärvi Sockenallmänning\n25-15-01-115-A - Pirttivuopio Byalag\n25-15-01-116-A - Talma Sameby\n25-15-01-117-A - Gabna Sameby\n25-15-01-118-A - Laevas Sameby\n25-15-01-119-A - Vittangi Sameby\n25-15-01-120-A - Länsstyrelsens Upplåtelsejaktlag\n25-15-01-121-A - Saarivuoma Sameby\n25-15-01-122-A - Soppero/Lannavaara\n25-15-01-123-A - Kurravaara Jaktklubb\n25-15-01-124-A - Soppero jaktlag\n25-15-01-125-A - Vargbackens Jaktlag\n25-15-01-126-A - Sevujärvi jaktlag\n25-15-01-127-A - Svappavaara Fritidsförening\n25-15-01-128-A - Svappavaara samfällda\n25-15-02-001-A - Perälombolo Jaktlag\n25-15-02-002-A - Salmijärvi\n25-15-02-003-Ä - Kiruna Södra ÄSO\n25-15-02-004-A - Lassijärvi\n25-15-02-005-A - Team Parakka\n25-15-02-006-A - Jölget Korkkio\n25-15-02-007-A - Reikäkivenvuoma\n25-15-02-008-A - Saivonpalo\n25-15-02-009-A - Lihavaara\n25-15-02-101-A - Ounisjoki Jaktlag\n25-15-02-103-A - Herranmukka Jaktlag\n25-15-02-105-A - Kuoksu Byamarker\n25-15-02-106-A - Mikkelirova-Kiviniemi Jaktlag\n25-15-02-107-A - Vivungi Jaktklubb\n25-15-02-108-A - Masugnsbyns Jvf\n25-15-02-109-A - Nedre Parakka Jaktlag\n25-15-02-110-A - Jylkkyvaara Jaktområde\n25-15-02-111-A - Piilijärvi Vvo\n25-15-02-112-A - Lainio Jaktskytteklubb\n25-15-02-113-A - Övre Parakka Jaktlag\n25-15-02-114-A - Merasjärvi Jaktlag\n25-15-02-115-A - Jukkasjärvi Sockenallmänning\n25-15-02-116-A - Valkeajärvi jaktlag\n25-15-02-118-A - Masugnsbyns jaktlag\n25-15-02-119-A - Lundströms\n25-15-02-120-A - Junovinsa\n25-15-02-122-A - Normarova\n25-15-02-124-A - Neitigården\n25-15-02-125-A - Särkiletho\n25-15-03-002-A - Kuusivaara Övre Soppero\n25-15-03-003-A - Suijavaara Jaktlag\n25-15-03-004-A - Saivo 22\n25-15-03-005-A - Auvattivuoma\n25-15-03-101-A - Liedakka\n25-15-03-102-A - Ruodusniemi Jaktlag\n25-15-03-103-A - Kuttainen Älgjaktområde\n25-15-03-104-A - Idivuoma Jaktlag\n25-15-03-105-A - Könkämä Sameby\n25-15-03-106-A - Pounovuoma Jaktlag\n25-15-03-107-A - Lainiovuoma Sameby\n25-15-03-108-A - Länsstyrelsens Upplåtelsejaktlag\n25-15-03-109-A - Mertajärvi Jaktlag\n25-15-03-110-A - Idivuoma-Mertajärvi Byalag\n25-15-03-111-A - Kaarejoki Jakt\n25-15-03-112-A - Maunu Byalag\n25-15-03-113-A - Leipivaara Jaktlag\n25-15-03-114-A - Karesuando Byasamfällighet\n25-15-03-115-A - Saivomuotka Jaktklubb\n25-15-03-116-A - Auskari jaktlag\n25-15-03-118-A - Peurajärvi jaktlag\n25-15-03-119-A - Maunu byaallmänning\n25-15-03-120-A - Kuukavuoma jaktlag\n25-15-03-121-A - Kuttainen Raja lag\n25-15-03-122-A - Paittasjärvi Jaktlag\n25-15-03-123-A - Kaarevaara Jaktlag\nv1.9.0\nStatistik älgdata\nKontakta oss\nÄlgdata\n Förvaltande län - Län som administrerar älgförvaltningsområden som kan vara indelade oberoende av länsgräns. I kolumnstycket \"Avskjutningsmål ÄJO\" behöver summan av han- och hondjur inte vara samma som antalet vuxna djur då det finns jaktområden som inte har könskvoterad tilldelning.\n Kom ihåg inställningar för tabellen.\nVisa 10 rader\nDölj/visa kolumner\nExcel\nSKV\nSpara som bild\nSök:\nRegistreringsnummer\tJaktområdets namn\tSlut- rapporterat\tRegistrerad areal ha\tFällda älgar\tTjur %\tKalv %\tAvskjutningsmål ÄJO\tNyttjandegrad - ÄJO\nVuxen\tHandjur\tHondjur\tKalv\tHandjur kalv\tHondjur kalv\tTotalt\tVarav otjänliga\tVarav oregistrerad mark\tÄlgar/ 1000 ha\tVuxen\tHandjur\tHondjur\tKalv\tTotalt\tÄlgar/ 1000 ha\tVuxen\tKalv\tTotalt\nRegistreringsnummer\n\t\nJaktområdets namn\n\t\nSlut- rapporterat\n\t\nRegistrerad areal ha\n\t\nFällda älgar\n\t\nTjur %\n\t\nKalv %\n\t\nAvskjutningsmål ÄJO\n\t\nNyttjandegrad - ÄJO\n\n\nVuxen\n\t\nHandjur\n\t\nHondjur\n\t\nKalv\n\t\nHandjur kalv\n\t\nHondjur kalv\n\t\nTotalt\n\t\nVarav otjänliga\n\t\nVarav oregistrerad mark\n\t\nÄlgar/ 1000 ha\n\t\nVuxen\n\t\nHandjur\n\t\nHondjur\n\t\nKalv\n\t\nTotalt\n\t\nÄlgar/ 1000 ha\n\t\nVuxen\n\t\nKalv\n\t\nTotalt\n\n\nSumma:\n\t\n\t\n\t\n1 336,49 (1 336,49)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n\t\n\t\n\t\n1 (1)\n\t\n0 (0)\n\t\n0 (0)\n\t\n1 (1)\n\t\n2 (2)\n\t\n\t\n\t\n\t\n\n25-15-03-116-A\tAuskari jaktlag\tJa\t1336,49\t0\t0\t0\t0\t0\t0\t0\t0\t0\t-\t-\t-\t1\t0\t0\t1\t2\t1,5\t-\t-\t-\nSumma:\t\t\t1 336,49 (1 336,49)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t\t\t\t1 (1)\t0 (0)\t0 (0)\t1 (1)\t2 (2)\t\t\t\t\nVisar 1 till 1 av totalt 1 rader\nFöregående\n1\nNästa\nTotalt antal fällda älgar - Jaktområde - Nuvarande gränser - 25-15-03-116-A - Auskari jaktlag - 2026/2027\nBar chart with 1 bar.\nGenererad av www.algdata.se\nThe chart has 1 X axis displaying Säsong.\nThe chart has 1 Y axis displaying Antal. Data ranges from -0.5 to 0.5.\nSäsong\nAntal\nTotalt antal fällda älgar - Jaktområde - Nuvarande gränser - 25-15-03-116-A - Auskari jaktlag - 2026/2027\nGenererad av www.algdata.se\n25-15-03-116-A\n2026/2027\n0\nEnd of interactive chart.\n\n\nNyttjandegrad av avskjutningsmål ÄJO - Jaktområde - Nuvarande gränser - 25-15-03-116-A - Auskari jaktlag - 2026/2027\nBar chart with 1 bar.\nGenererad av www.algdata.se\nThe chart has 1 X axis displaying Säsong.\nThe chart has 1 Y axis displaying Nyttjandegrad. Data ranges from 0 to 0.\nSäsong\nNyttjandegrad\nNyttjandegrad av avskjutningsmål ÄJO - Jaktområde - Nuvarande gränser - 25-15-03-116-A - Auskari jaktlag - 2026/2027\nGenererad av www.algdata.se\n25-15-03-116-A\n2026/2027\nEnd of interactive chart.\n\n\n\n\n\n\n\n\n\n\n\n",
+      "headings": [
+        "Statistik för älgdata",
+        "Statistik",
+        "Län",
+        "ÄFO",
+        "Jaktområde"
+      ],
+      "tables": [
+        {
+          "caption": "",
+          "rows": [
+            [
+              "Registreringsnummer",
+              "Jaktområdets namn",
+              "Slut- rapporterat",
+              "Registrerad areal ha",
+              "Fällda älgar",
+              "Tjur %",
+              "Kalv %",
+              "Avskjutningsmål ÄJO",
+              "Nyttjandegrad - ÄJO"
+            ],
+            [
+              "Vuxen",
+              "Handjur",
+              "Hondjur",
+              "Kalv",
+              "Handjur kalv",
+              "Hondjur kalv",
+              "Totalt",
+              "Varav otjänliga",
+              "Varav oregistrerad mark",
+              "Älgar/ 1000 ha",
+              "Vuxen",
+              "Handjur",
+              "Hondjur",
+              "Kalv",
+              "Totalt",
+              "Älgar/ 1000 ha",
+              "Vuxen",
+              "Kalv",
+              "Totalt"
+            ]
+          ]
+        },
+        {
+          "caption": "",
+          "rows": [
+            [
+              "Registreringsnummer",
+              "Jaktområdets namn",
+              "Slut- rapporterat",
+              "Registrerad areal ha",
+              "Fällda älgar",
+              "Tjur %",
+              "Kalv %",
+              "Avskjutningsmål ÄJO",
+              "Nyttjandegrad - ÄJO"
+            ],
+            [
+              "Vuxen",
+              "Handjur",
+              "Hondjur",
+              "Kalv",
+              "Handjur kalv",
+              "Hondjur kalv",
+              "Totalt",
+              "Varav otjänliga",
+              "Varav oregistrerad mark",
+              "Älgar/ 1000 ha",
+              "Vuxen",
+              "Handjur",
+              "Hondjur",
+              "Kalv",
+              "Totalt",
+              "Älgar/ 1000 ha",
+              "Vuxen",
+              "Kalv",
+              "Totalt"
+            ],
+            [
+              "Summa:",
+              "",
+              "",
+              "1 336,49 (1 336,49)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "",
+              "",
+              "",
+              "1 (1)",
+              "0 (0)",
+              "0 (0)",
+              "1 (1)",
+              "2 (2)",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "25-15-03-116-A",
+              "Auskari jaktlag",
+              "Ja",
+              "1336,49",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-",
+              "-",
+              "-",
+              "1",
+              "0",
+              "0",
+              "1",
+              "2",
+              "1,5",
+              "-",
+              "-",
+              "-"
+            ]
+          ]
+        },
+        {
+          "caption": "",
+          "rows": [
+            [
+              "Summa:",
+              "",
+              "",
+              "1 336,49 (1 336,49)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "",
+              "",
+              "",
+              "1 (1)",
+              "0 (0)",
+              "0 (0)",
+              "1 (1)",
+              "2 (2)",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      "table_count": 3,
+      "form_controls": [
+        {
+          "id": "select-statistics",
+          "label": "rapport",
+          "value": "{\"ReportCategoryId\":1,\"Name\":\"ÄJO\",\"ReportType\":0,\"Report\":1,\"ReportLevel\":3,\"SearchTypeChoice\":\"1\",\"Id\":\"4\",\"County\":\"1\",\"TypeCounty\":null,\"TypeCountyDefault\":null,\"TypeCountyManagement\":null,\"TypeCountyManagementDefault\":null,\"ElkManagement\":\"1\",\"HuntingArea\":\"1\",\"HuntingYearFrom\":\"1\",\"HuntingYearTo\":\"1\",\"ExcelReport\":false,\"AlertInfoBeforeLoad\":null,\"ShowOnlyYearFromForHistoricalAFO\":null}",
+          "selected_text": "ÄJO",
+          "options_count": 39
+        },
+        {
+          "id": "select-county",
+          "label": "menuItemHead",
+          "value": "25",
+          "selected_text": "Norrbottens län",
+          "options_count": 21
+        },
+        {
+          "id": "select-afo",
+          "label": "menuItemHead",
+          "value": "1",
+          "selected_text": "ÄFO 1",
+          "options_count": 7
+        },
+        {
+          "id": "select-season-from",
+          "label": "menuItemHead",
+          "value": "2026/2027",
+          "selected_text": "2026/2027",
+          "options_count": 46
+        },
+        {
+          "id": "select-season-to",
+          "label": "menuItemHead",
+          "value": "2026/2027",
+          "selected_text": "2026/2027",
+          "options_count": 46
+        },
+        {
+          "id": "select-ajo",
+          "label": "menuItemHead",
+          "value": "722453",
+          "selected_text": "25-15-03-116-A - Auskari jaktlag",
+          "options_count": 94
+        }
+      ],
+      "radios": [
+        {
+          "name": "optTypeAFO",
+          "value": "F",
+          "checked": false,
+          "label": ""
+        },
+        {
+          "name": "optTypeAFO",
+          "value": "G",
+          "checked": true,
+          "label": ""
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "input",
+          "value": "Visa statistik",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "Visa 10 rader",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "Dölj/visa kolumner",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "Excel",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "SKV",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "Spara som bild",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Excel",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "SKV",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "SKV",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        }
+      ]
+    },
+    "request_metadata": [
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+        "method": "GET",
+        "resource_type": "document"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/dist/app/Home/assets/app.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/dist/app/Home/assets/app.js",
+        "method": "GET",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/modernizr-2.8.3.js",
+        "method": "GET",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/download.js",
+        "method": "GET",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/custom.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/variables.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/Site.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/open-menu.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/medium.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/respond.js",
+        "method": "GET",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/lst_topplogo.gif",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/statistik.png",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/lan.png",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/AFOmap.jpg",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/ajo.png",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAfoInCounty/25?_=1794430923435",
+        "method": "GET",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/elkAnimation.gif",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasonsByLanAndAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasons/?_=1794430923436",
+        "method": "GET",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/LoadData/GetData",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/CLientApp/Src/assets/Images/sort_both.png",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/CLientApp/Src/assets/Images/sort_asc.png",
+        "method": "GET",
+        "resource_type": "image"
+      }
+    ],
+    "response_metadata": [
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "resource_type": "document"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/custom.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/dist/app/Home/assets/app.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/variables.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/open-menu.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/Site.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/medium.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/download.js",
+        "status": 200,
+        "content_type": "application/javascript",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/respond.js",
+        "status": 200,
+        "content_type": "application/javascript",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/lst_topplogo.gif",
+        "status": 200,
+        "content_type": "image/gif",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/statistik.png",
+        "status": 200,
+        "content_type": "image/png",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/modernizr-2.8.3.js",
+        "status": 200,
+        "content_type": "application/javascript",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/lan.png",
+        "status": 200,
+        "content_type": "image/png",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/AFOmap.jpg",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/dist/app/Home/assets/app.js",
+        "status": 200,
+        "content_type": "application/javascript",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/ajo.png",
+        "status": 200,
+        "content_type": "image/png",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAfoInCounty/25?_=1794430923435",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/elkAnimation.gif",
+        "status": 200,
+        "content_type": "image/gif",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasonsByLanAndAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasons/?_=1794430923436",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/LoadData/GetData",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/CLientApp/Src/assets/Images/sort_both.png",
+        "status": 404,
+        "content_type": "text/html",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/CLientApp/Src/assets/Images/sort_asc.png",
+        "status": 404,
+        "content_type": "text/html",
+        "resource_type": "image"
+      }
+    ],
+    "public_json_responses": [
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAfoInCounty/25?_=1794430923435",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AfoId": -1,
+            "CountyNo": null,
+            "Name": "Välj...",
+            "DisplayId": "äfo---001"
+          },
+          {
+            "AfoId": 1,
+            "CountyNo": "25",
+            "Name": "ÄFO 1",
+            "DisplayId": "äfo-25-001"
+          },
+          {
+            "AfoId": 2,
+            "CountyNo": "25",
+            "Name": "ÄFO 2",
+            "DisplayId": "äfo-25-002"
+          },
+          {
+            "AfoId": 3,
+            "CountyNo": "25",
+            "Name": "ÄFO 3",
+            "DisplayId": "äfo-25-003"
+          },
+          {
+            "AfoId": 4,
+            "CountyNo": "25",
+            "Name": "ÄFO 4",
+            "DisplayId": "äfo-25-004"
+          },
+          {
+            "AfoId": 5,
+            "CountyNo": "25",
+            "Name": "ÄFO 5",
+            "DisplayId": "äfo-25-005"
+          },
+          {
+            "AfoId": 6,
+            "CountyNo": "25",
+            "Name": "ÄFO 6",
+            "DisplayId": "äfo-25-006"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 719263,
+            "AfoId": 1,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "25-00-99-001-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 722337,
+            "AfoId": 1,
+            "Name": "Baste Cearru",
+            "AjoDisplayFullName": "25-14-01-101-A - Baste Cearru"
+          },
+          {
+            "AjoId": 722338,
+            "AfoId": 1,
+            "Name": "Unna Tjerusj",
+            "AjoDisplayFullName": "25-14-01-102-A - Unna Tjerusj"
+          },
+          {
+            "AjoId": 722339,
+            "AfoId": 1,
+            "Name": "Länsstyrelsens upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-14-01-103-A - Länsstyrelsens upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 722340,
+            "AfoId": 1,
+            "Name": "Girjas Sameby",
+            "AjoDisplayFullName": "25-14-01-104-A - Girjas Sameby"
+          },
+          {
+            "AjoId": 722341,
+            "AfoId": 1,
+            "Name": "Sjaunja Byalag",
+            "AjoDisplayFullName": "25-14-01-105-A - Sjaunja Byalag"
+          },
+          {
+            "AjoId": 722342,
+            "AfoId": 1,
+            "Name": "Tjautjas Byalag",
+            "AjoDisplayFullName": "25-14-01-106-A - Tjautjas Byalag"
+          },
+          {
+            "AjoId": 722343,
+            "AfoId": 1,
+            "Name": "Killinge Jaktklubb",
+            "AjoDisplayFullName": "25-14-01-107-A - Killinge Jaktklubb"
+          },
+          {
+            "AjoId": 722346,
+            "AfoId": 1,
+            "Name": "Kaitum 1",
+            "AjoDisplayFullName": "25-14-01-110-A - Kaitum 1"
+          },
+          {
+            "AjoId": 722347,
+            "AfoId": 1,
+            "Name": "Mårdhunden",
+            "AjoDisplayFullName": "25-14-01-111-A - Mårdhunden"
+          },
+          {
+            "AjoId": 772046,
+            "AfoId": 1,
+            "Name": "Saivonpola",
+            "AjoDisplayFullName": "25-15-01-002-A - Saivonpola"
+          },
+          {
+            "AjoId": 772761,
+            "AfoId": 1,
+            "Name": "Kirkkojärvi",
+            "AjoDisplayFullName": "25-15-01-003-A - Kirkkojärvi"
+          },
+          {
+            "AjoId": 722391,
+            "AfoId": 1,
+            "Name": "Svappavaara Jaktlag",
+            "AjoDisplayFullName": "25-15-01-101-A - Svappavaara Jaktlag"
+          },
+          {
+            "AjoId": 722392,
+            "AfoId": 1,
+            "Name": "Taljavaara Jaktlag",
+            "AjoDisplayFullName": "25-15-01-102-A - Taljavaara Jaktlag"
+          },
+          {
+            "AjoId": 722393,
+            "AfoId": 1,
+            "Name": "Svappavaara Jaktvårdsför",
+            "AjoDisplayFullName": "25-15-01-103-A - Svappavaara Jaktvårdsför"
+          },
+          {
+            "AjoId": 722394,
+            "AfoId": 1,
+            "Name": "Soppero lilla jaktlag",
+            "AjoDisplayFullName": "25-15-01-105-A - Soppero lilla jaktlag"
+          },
+          {
+            "AjoId": 722395,
+            "AfoId": 1,
+            "Name": "Svappavaara lilla jaktlag",
+            "AjoDisplayFullName": "25-15-01-106-A - Svappavaara lilla jaktlag"
+          },
+          {
+            "AjoId": 722396,
+            "AfoId": 1,
+            "Name": "Väkkärä Jaktlag",
+            "AjoDisplayFullName": "25-15-01-107-A - Väkkärä Jaktlag"
+          },
+          {
+            "AjoId": 722398,
+            "AfoId": 1,
+            "Name": "Jukkasjärvi Byallmänning",
+            "AjoDisplayFullName": "25-15-01-109-A - Jukkasjärvi Byallmänning"
+          },
+          {
+            "AjoId": 722399,
+            "AfoId": 1,
+            "Name": "Soppero Byars Samfällighetsförening",
+            "AjoDisplayFullName": "25-15-01-110-A - Soppero Byars Samfällighetsförening"
+          },
+          {
+            "AjoId": 722400,
+            "AfoId": 1,
+            "Name": "Puoltsa Älgjaktsområde",
+            "AjoDisplayFullName": "25-15-01-111-A - Puoltsa Älgjaktsområde"
+          },
+          {
+            "AjoId": 722401,
+            "AfoId": 1,
+            "Name": "Lainio Byasamfällighet",
+            "AjoDisplayFullName": "25-15-01-112-A - Lainio Byasamfällighet"
+          },
+          {
+            "AjoId": 722402,
+            "AfoId": 1,
+            "Name": "Kaalasjärvi Skifteslag",
+            "AjoDisplayFullName": "25-15-01-113-A - Kaalasjärvi Skifteslag"
+          },
+          {
+            "AjoId": 722403,
+            "AfoId": 1,
+            "Name": "Jukkasjärvi Sockenallmänning",
+            "AjoDisplayFullName": "25-15-01-114-A - Jukkasjärvi Sockenallmänning"
+          },
+          {
+            "AjoId": 722404,
+            "AfoId": 1,
+            "Name": "Pirttivuopio Byalag",
+            "AjoDisplayFullName": "25-15-01-115-A - Pirttivuopio Byalag"
+          },
+          {
+            "AjoId": 722405,
+            "AfoId": 1,
+            "Name": "Talma Sameby",
+            "AjoDisplayFullName": "25-15-01-116-A - Talma Sameby"
+          },
+          {
+            "AjoId": 722406,
+            "AfoId": 1,
+            "Name": "Gabna Sameby",
+            "AjoDisplayFullName": "25-15-01-117-A - Gabna Sameby"
+          },
+          {
+            "AjoId": 722407,
+            "AfoId": 1,
+            "Name": "Laevas Sameby",
+            "AjoDisplayFullName": "25-15-01-118-A - Laevas Sameby"
+          },
+          {
+            "AjoId": 722408,
+            "AfoId": 1,
+            "Name": "Vittangi Sameby",
+            "AjoDisplayFullName": "25-15-01-119-A - Vittangi Sameby"
+          },
+          {
+            "AjoId": 722409,
+            "AfoId": 1,
+            "Name": "Länsstyrelsens Upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-15-01-120-A - Länsstyrelsens Upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 722410,
+            "AfoId": 1,
+            "Name": "Saarivuoma Sameby",
+            "AjoDisplayFullName": "25-15-01-121-A - Saarivuoma Sameby"
+          },
+          {
+            "AjoId": 722411,
+            "AfoId": 1,
+            "Name": "Soppero/Lannavaara",
+            "AjoDisplayFullName": "25-15-01-122-A - Soppero/Lannavaara"
+          },
+          {
+            "AjoId": 722412,
+            "AfoId": 1,
+            "Name": "Kurravaara Jaktklubb",
+            "AjoDisplayFullName": "25-15-01-123-A - Kurravaara Jaktklubb"
+          },
+          {
+            "AjoId": 722413,
+            "AfoId": 1,
+            "Name": "Soppero jaktlag",
+            "AjoDisplayFullName": "25-15-01-124-A - Soppero jaktlag"
+          },
+          {
+            "AjoId": 722414,
+            "AfoId": 1,
+            "Name": "Vargbackens Jaktlag",
+            "AjoDisplayFullName": "25-15-01-125-A - Vargbackens Jaktlag"
+          },
+          {
+            "AjoId": 722415,
+            "AfoId": 1,
+            "Name": "Sevujärvi jaktlag",
+            "AjoDisplayFullName": "25-15-01-126-A - Sevujärvi jaktlag"
+          },
+          {
+            "AjoId": 724567,
+            "AfoId": 1,
+            "Name": "Svappavaara Fritidsförening",
+            "AjoDisplayFullName": "25-15-01-127-A - Svappavaara Fritidsförening"
+          },
+          {
+            "AjoId": 726027,
+            "AfoId": 1,
+            "Name": "Svappavaara samfällda",
+            "AjoDisplayFullName": "25-15-01-128-A - Svappavaara samfällda"
+          },
+          {
+            "AjoId": 771921,
+            "AfoId": 1,
+            "Name": "Perälombolo Jaktlag",
+            "AjoDisplayFullName": "25-15-02-001-A - Perälombolo Jaktlag"
+          },
+          {
+            "AjoId": 771923,
+            "AfoId": 1,
+            "Name": "Salmijärvi",
+            "AjoDisplayFullName": "25-15-02-002-A - Salmijärvi"
+          },
+          {
+            "AjoId": 771930,
+            "AfoId": 1,
+            "Name": "Kiruna Södra ÄSO",
+            "AjoDisplayFullName": "25-15-02-003-Ä - Kiruna Södra ÄSO"
+          },
+          {
+            "AjoId": 772045,
+            "AfoId": 1,
+            "Name": "Lassijärvi",
+            "AjoDisplayFullName": "25-15-02-004-A - Lassijärvi"
+          },
+          {
+            "AjoId": 772048,
+            "AfoId": 1,
+            "Name": "Team Parakka",
+            "AjoDisplayFullName": "25-15-02-005-A - Team Parakka"
+          },
+          {
+            "AjoId": 772118,
+            "AfoId": 1,
+            "Name": "Jölget Korkkio",
+            "AjoDisplayFullName": "25-15-02-006-A - Jölget Korkkio"
+          },
+          {
+            "AjoId": 772477,
+            "AfoId": 1,
+            "Name": "Reikäkivenvuoma",
+            "AjoDisplayFullName": "25-15-02-007-A - Reikäkivenvuoma"
+          },
+          {
+            "AjoId": 772478,
+            "AfoId": 1,
+            "Name": "Saivonpalo",
+            "AjoDisplayFullName": "25-15-02-008-A - Saivonpalo"
+          },
+          {
+            "AjoId": 772881,
+            "AfoId": 1,
+            "Name": "Lihavaara",
+            "AjoDisplayFullName": "25-15-02-009-A - Lihavaara"
+          },
+          {
+            "AjoId": 722416,
+            "AfoId": 1,
+            "Name": "Ounisjoki Jaktlag",
+            "AjoDisplayFullName": "25-15-02-101-A - Ounisjoki Jaktlag"
+          },
+          {
+            "AjoId": 722418,
+            "AfoId": 1,
+            "Name": "Herranmukka Jaktlag",
+            "AjoDisplayFullName": "25-15-02-103-A - Herranmukka Jaktlag"
+          },
+          {
+            "AjoId": 722419,
+            "AfoId": 1,
+            "Name": "Kuoksu Byamarker",
+            "AjoDisplayFullName": "25-15-02-105-A - Kuoksu Byamarker"
+          },
+          {
+            "AjoId": 722420,
+            "AfoId": 1,
+            "Name": "Mikkelirova-Kiviniemi Jaktlag",
+            "AjoDisplayFullName": "25-15-02-106-A - Mikkelirova-Kiviniemi Jaktlag"
+          },
+          {
+            "AjoId": 722421,
+            "AfoId": 1,
+            "Name": "Vivungi Jaktklubb",
+            "AjoDisplayFullName": "25-15-02-107-A - Vivungi Jaktklubb"
+          },
+          {
+            "AjoId": 722422,
+            "AfoId": 1,
+            "Name": "Masugnsbyns Jvf",
+            "AjoDisplayFullName": "25-15-02-108-A - Masugnsbyns Jvf"
+          },
+          {
+            "AjoId": 722423,
+            "AfoId": 1,
+            "Name": "Nedre Parakka Jaktlag",
+            "AjoDisplayFullName": "25-15-02-109-A - Nedre Parakka Jaktlag"
+          },
+          {
+            "AjoId": 722424,
+            "AfoId": 1,
+            "Name": "Jylkkyvaara Jaktområde",
+            "AjoDisplayFullName": "25-15-02-110-A - Jylkkyvaara Jaktområde"
+          },
+          {
+            "AjoId": 722425,
+            "AfoId": 1,
+            "Name": "Piilijärvi Vvo",
+            "AjoDisplayFullName": "25-15-02-111-A - Piilijärvi Vvo"
+          },
+          {
+            "AjoId": 722426,
+            "AfoId": 1,
+            "Name": "Lainio Jaktskytteklubb",
+            "AjoDisplayFullName": "25-15-02-112-A - Lainio Jaktskytteklubb"
+          },
+          {
+            "AjoId": 722427,
+            "AfoId": 1,
+            "Name": "Övre Parakka Jaktlag",
+            "AjoDisplayFullName": "25-15-02-113-A - Övre Parakka Jaktlag"
+          },
+          {
+            "AjoId": 722428,
+            "AfoId": 1,
+            "Name": "Merasjärvi Jaktlag",
+            "AjoDisplayFullName": "25-15-02-114-A - Merasjärvi Jaktlag"
+          },
+          {
+            "AjoId": 722429,
+            "AfoId": 1,
+            "Name": "Jukkasjärvi Sockenallmänning",
+            "AjoDisplayFullName": "25-15-02-115-A - Jukkasjärvi Sockenallmänning"
+          },
+          {
+            "AjoId": 722430,
+            "AfoId": 1,
+            "Name": "Valkeajärvi jaktlag",
+            "AjoDisplayFullName": "25-15-02-116-A - Valkeajärvi jaktlag"
+          },
+          {
+            "AjoId": 722431,
+            "AfoId": 1,
+            "Name": "Masugnsbyns jaktlag",
+            "AjoDisplayFullName": "25-15-02-118-A - Masugnsbyns jaktlag"
+          },
+          {
+            "AjoId": 722432,
+            "AfoId": 1,
+            "Name": "Lundströms",
+            "AjoDisplayFullName": "25-15-02-119-A - Lundströms"
+          },
+          {
+            "AjoId": 722433,
+            "AfoId": 1,
+            "Name": "Junovinsa",
+            "AjoDisplayFullName": "25-15-02-120-A - Junovinsa"
+          },
+          {
+            "AjoId": 722435,
+            "AfoId": 1,
+            "Name": "Normarova",
+            "AjoDisplayFullName": "25-15-02-122-A - Normarova"
+          },
+          {
+            "AjoId": 722437,
+            "AfoId": 1,
+            "Name": "Neitigården",
+            "AjoDisplayFullName": "25-15-02-124-A - Neitigården"
+          },
+          {
+            "AjoId": 724568,
+            "AfoId": 1,
+            "Name": "Särkiletho",
+            "AjoDisplayFullName": "25-15-02-125-A - Särkiletho"
+          },
+          {
+            "AjoId": 772476,
+            "AfoId": 1,
+            "Name": "Kuusivaara Övre Soppero",
+            "AjoDisplayFullName": "25-15-03-002-A - Kuusivaara Övre Soppero"
+          },
+          {
+            "AjoId": 772479,
+            "AfoId": 1,
+            "Name": "Suijavaara Jaktlag",
+            "AjoDisplayFullName": "25-15-03-003-A - Suijavaara Jaktlag"
+          },
+          {
+            "AjoId": 772633,
+            "AfoId": 1,
+            "Name": "Saivo 22",
+            "AjoDisplayFullName": "25-15-03-004-A - Saivo 22"
+          },
+          {
+            "AjoId": 772764,
+            "AfoId": 1,
+            "Name": "Auvattivuoma",
+            "AjoDisplayFullName": "25-15-03-005-A - Auvattivuoma"
+          },
+          {
+            "AjoId": 722438,
+            "AfoId": 1,
+            "Name": "Liedakka",
+            "AjoDisplayFullName": "25-15-03-101-A - Liedakka"
+          },
+          {
+            "AjoId": 722439,
+            "AfoId": 1,
+            "Name": "Ruodusniemi Jaktlag",
+            "AjoDisplayFullName": "25-15-03-102-A - Ruodusniemi Jaktlag"
+          },
+          {
+            "AjoId": 722440,
+            "AfoId": 1,
+            "Name": "Kuttainen Älgjaktområde",
+            "AjoDisplayFullName": "25-15-03-103-A - Kuttainen Älgjaktområde"
+          },
+          {
+            "AjoId": 722441,
+            "AfoId": 1,
+            "Name": "Idivuoma Jaktlag",
+            "AjoDisplayFullName": "25-15-03-104-A - Idivuoma Jaktlag"
+          },
+          {
+            "AjoId": 722442,
+            "AfoId": 1,
+            "Name": "Könkämä Sameby",
+            "AjoDisplayFullName": "25-15-03-105-A - Könkämä Sameby"
+          },
+          {
+            "AjoId": 722443,
+            "AfoId": 1,
+            "Name": "Pounovuoma Jaktlag",
+            "AjoDisplayFullName": "25-15-03-106-A - Pounovuoma Jaktlag"
+          },
+          {
+            "AjoId": 722444,
+            "AfoId": 1,
+            "Name": "Lainiovuoma Sameby",
+            "AjoDisplayFullName": "25-15-03-107-A - Lainiovuoma Sameby"
+          },
+          {
+            "AjoId": 722445,
+            "AfoId": 1,
+            "Name": "Länsstyrelsens Upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-15-03-108-A - Länsstyrelsens Upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 722446,
+            "AfoId": 1,
+            "Name": "Mertajärvi Jaktlag",
+            "AjoDisplayFullName": "25-15-03-109-A - Mertajärvi Jaktlag"
+          },
+          {
+            "AjoId": 722447,
+            "AfoId": 1,
+            "Name": "Idivuoma-Mertajärvi Byalag",
+            "AjoDisplayFullName": "25-15-03-110-A - Idivuoma-Mertajärvi Byalag"
+          },
+          {
+            "AjoId": 722448,
+            "AfoId": 1,
+            "Name": "Kaarejoki Jakt",
+            "AjoDisplayFullName": "25-15-03-111-A - Kaarejoki Jakt"
+          },
+          {
+            "AjoId": 722449,
+            "AfoId": 1,
+            "Name": "Maunu Byalag",
+            "AjoDisplayFullName": "25-15-03-112-A - Maunu Byalag"
+          },
+          {
+            "AjoId": 722450,
+            "AfoId": 1,
+            "Name": "Leipivaara Jaktlag",
+            "AjoDisplayFullName": "25-15-03-113-A - Leipivaara Jaktlag"
+          },
+          {
+            "AjoId": 722451,
+            "AfoId": 1,
+            "Name": "Karesuando Byasamfällighet",
+            "AjoDisplayFullName": "25-15-03-114-A - Karesuando Byasamfällighet"
+          },
+          {
+            "AjoId": 722452,
+            "AfoId": 1,
+            "Name": "Saivomuotka Jaktklubb",
+            "AjoDisplayFullName": "25-15-03-115-A - Saivomuotka Jaktklubb"
+          },
+          {
+            "AjoId": 722453,
+            "AfoId": 1,
+            "Name": "Auskari jaktlag",
+            "AjoDisplayFullName": "25-15-03-116-A - Auskari jaktlag"
+          },
+          {
+            "AjoId": 724569,
+            "AfoId": 1,
+            "Name": "Peurajärvi jaktlag",
+            "AjoDisplayFullName": "25-15-03-118-A - Peurajärvi jaktlag"
+          },
+          {
+            "AjoId": 725776,
+            "AfoId": 1,
+            "Name": "Maunu byaallmänning",
+            "AjoDisplayFullName": "25-15-03-119-A - Maunu byaallmänning"
+          },
+          {
+            "AjoId": 725777,
+            "AfoId": 1,
+            "Name": "Kuukavuoma jaktlag",
+            "AjoDisplayFullName": "25-15-03-120-A - Kuukavuoma jaktlag"
+          },
+          {
+            "AjoId": 725778,
+            "AfoId": 1,
+            "Name": "Kuttainen Raja lag",
+            "AjoDisplayFullName": "25-15-03-121-A - Kuttainen Raja lag"
+          },
+          {
+            "AjoId": 725780,
+            "AfoId": 1,
+            "Name": "Paittasjärvi Jaktlag",
+            "AjoDisplayFullName": "25-15-03-122-A - Paittasjärvi Jaktlag"
+          },
+          {
+            "AjoId": 725781,
+            "AfoId": 1,
+            "Name": "Kaarevaara Jaktlag",
+            "AjoDisplayFullName": "25-15-03-123-A - Kaarevaara Jaktlag"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasonsByLanAndAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "Value": "1990/1991",
+            "Title": "1990/1991"
+          },
+          {
+            "Value": "1991/1992",
+            "Title": "1991/1992"
+          },
+          {
+            "Value": "1992/1993",
+            "Title": "1992/1993"
+          },
+          {
+            "Value": "1993/1994",
+            "Title": "1993/1994"
+          },
+          {
+            "Value": "1994/1995",
+            "Title": "1994/1995"
+          },
+          {
+            "Value": "1995/1996",
+            "Title": "1995/1996"
+          },
+          {
+            "Value": "1996/1997",
+            "Title": "1996/1997"
+          },
+          {
+            "Value": "1997/1998",
+            "Title": "1997/1998"
+          },
+          {
+            "Value": "1998/1999",
+            "Title": "1998/1999"
+          },
+          {
+            "Value": "1999/2000",
+            "Title": "1999/2000"
+          },
+          {
+            "Value": "2000/2001",
+            "Title": "2000/2001"
+          },
+          {
+            "Value": "2001/2002",
+            "Title": "2001/2002"
+          },
+          {
+            "Value": "2002/2003",
+            "Title": "2002/2003"
+          },
+          {
+            "Value": "2003/2004",
+            "Title": "2003/2004"
+          },
+          {
+            "Value": "2004/2005",
+            "Title": "2004/2005"
+          },
+          {
+            "Value": "2005/2006",
+            "Title": "2005/2006"
+          },
+          {
+            "Value": "2006/2007",
+            "Title": "2006/2007"
+          },
+          {
+            "Value": "2007/2008",
+            "Title": "2007/2008"
+          },
+          {
+            "Value": "2008/2009",
+            "Title": "2008/2009"
+          },
+          {
+            "Value": "2009/2010",
+            "Title": "2009/2010"
+          },
+          {
+            "Value": "2010/2011",
+            "Title": "2010/2011"
+          },
+          {
+            "Value": "2011/2012",
+            "Title": "2011/2012"
+          },
+          {
+            "Value": "2012/2013",
+            "Title": "2012/2013"
+          },
+          {
+            "Value": "2013/2014",
+            "Title": "2013/2014"
+          },
+          {
+            "Value": "2014/2015",
+            "Title": "2014/2015"
+          },
+          {
+            "Value": "2015/2016",
+            "Title": "2015/2016"
+          },
+          {
+            "Value": "2016/2017",
+            "Title": "2016/2017"
+          },
+          {
+            "Value": "2017/2018",
+            "Title": "2017/2018"
+          },
+          {
+            "Value": "2018/2019",
+            "Title": "2018/2019"
+          },
+          {
+            "Value": "2019/2020",
+            "Title": "2019/2020"
+          },
+          {
+            "Value": "2020/2021",
+            "Title": "2020/2021"
+          },
+          {
+            "Value": "2021/2022",
+            "Title": "2021/2022"
+          },
+          {
+            "Value": "2022/2023",
+            "Title": "2022/2023"
+          },
+          {
+            "Value": "2023/2024",
+            "Title": "2023/2024"
+          },
+          {
+            "Value": "2024/2025",
+            "Title": "2024/2025"
+          },
+          {
+            "Value": "2025/2026",
+            "Title": "2025/2026"
+          },
+          {
+            "Value": "2026/2027",
+            "Title": "2026/2027"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 719263,
+            "AfoId": 1,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "25-00-99-001-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 722337,
+            "AfoId": 1,
+            "Name": "Baste Cearru",
+            "AjoDisplayFullName": "25-14-01-101-A - Baste Cearru"
+          },
+          {
+            "AjoId": 722338,
+            "AfoId": 1,
+            "Name": "Unna Tjerusj",
+            "AjoDisplayFullName": "25-14-01-102-A - Unna Tjerusj"
+          },
+          {
+            "AjoId": 722339,
+            "AfoId": 1,
+            "Name": "Länsstyrelsens upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-14-01-103-A - Länsstyrelsens upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 722340,
+            "AfoId": 1,
+            "Name": "Girjas Sameby",
+            "AjoDisplayFullName": "25-14-01-104-A - Girjas Sameby"
+          },
+          {
+            "AjoId": 722341,
+            "AfoId": 1,
+            "Name": "Sjaunja Byalag",
+            "AjoDisplayFullName": "25-14-01-105-A - Sjaunja Byalag"
+          },
+          {
+            "AjoId": 722342,
+            "AfoId": 1,
+            "Name": "Tjautjas Byalag",
+            "AjoDisplayFullName": "25-14-01-106-A - Tjautjas Byalag"
+          },
+          {
+            "AjoId": 722343,
+            "AfoId": 1,
+            "Name": "Killinge Jaktklubb",
+            "AjoDisplayFullName": "25-14-01-107-A - Killinge Jaktklubb"
+          },
+          {
+            "AjoId": 722346,
+            "AfoId": 1,
+            "Name": "Kaitum 1",
+            "AjoDisplayFullName": "25-14-01-110-A - Kaitum 1"
+          },
+          {
+            "AjoId": 722347,
+            "AfoId": 1,
+            "Name": "Mårdhunden",
+            "AjoDisplayFullName": "25-14-01-111-A - Mårdhunden"
+          },
+          {
+            "AjoId": 772046,
+            "AfoId": 1,
+            "Name": "Saivonpola",
+            "AjoDisplayFullName": "25-15-01-002-A - Saivonpola"
+          },
+          {
+            "AjoId": 772761,
+            "AfoId": 1,
+            "Name": "Kirkkojärvi",
+            "AjoDisplayFullName": "25-15-01-003-A - Kirkkojärvi"
+          },
+          {
+            "AjoId": 722391,
+            "AfoId": 1,
+            "Name": "Svappavaara Jaktlag",
+            "AjoDisplayFullName": "25-15-01-101-A - Svappavaara Jaktlag"
+          },
+          {
+            "AjoId": 722392,
+            "AfoId": 1,
+            "Name": "Taljavaara Jaktlag",
+            "AjoDisplayFullName": "25-15-01-102-A - Taljavaara Jaktlag"
+          },
+          {
+            "AjoId": 722393,
+            "AfoId": 1,
+            "Name": "Svappavaara Jaktvårdsför",
+            "AjoDisplayFullName": "25-15-01-103-A - Svappavaara Jaktvårdsför"
+          },
+          {
+            "AjoId": 722394,
+            "AfoId": 1,
+            "Name": "Soppero lilla jaktlag",
+            "AjoDisplayFullName": "25-15-01-105-A - Soppero lilla jaktlag"
+          },
+          {
+            "AjoId": 722395,
+            "AfoId": 1,
+            "Name": "Svappavaara lilla jaktlag",
+            "AjoDisplayFullName": "25-15-01-106-A - Svappavaara lilla jaktlag"
+          },
+          {
+            "AjoId": 722396,
+            "AfoId": 1,
+            "Name": "Väkkärä Jaktlag",
+            "AjoDisplayFullName": "25-15-01-107-A - Väkkärä Jaktlag"
+          },
+          {
+            "AjoId": 722398,
+            "AfoId": 1,
+            "Name": "Jukkasjärvi Byallmänning",
+            "AjoDisplayFullName": "25-15-01-109-A - Jukkasjärvi Byallmänning"
+          },
+          {
+            "AjoId": 722399,
+            "AfoId": 1,
+            "Name": "Soppero Byars Samfällighetsförening",
+            "AjoDisplayFullName": "25-15-01-110-A - Soppero Byars Samfällighetsförening"
+          },
+          {
+            "AjoId": 722400,
+            "AfoId": 1,
+            "Name": "Puoltsa Älgjaktsområde",
+            "AjoDisplayFullName": "25-15-01-111-A - Puoltsa Älgjaktsområde"
+          },
+          {
+            "AjoId": 722401,
+            "AfoId": 1,
+            "Name": "Lainio Byasamfällighet",
+            "AjoDisplayFullName": "25-15-01-112-A - Lainio Byasamfällighet"
+          },
+          {
+            "AjoId": 722402,
+            "AfoId": 1,
+            "Name": "Kaalasjärvi Skifteslag",
+            "AjoDisplayFullName": "25-15-01-113-A - Kaalasjärvi Skifteslag"
+          },
+          {
+            "AjoId": 722403,
+            "AfoId": 1,
+            "Name": "Jukkasjärvi Sockenallmänning",
+            "AjoDisplayFullName": "25-15-01-114-A - Jukkasjärvi Sockenallmänning"
+          },
+          {
+            "AjoId": 722404,
+            "AfoId": 1,
+            "Name": "Pirttivuopio Byalag",
+            "AjoDisplayFullName": "25-15-01-115-A - Pirttivuopio Byalag"
+          },
+          {
+            "AjoId": 722405,
+            "AfoId": 1,
+            "Name": "Talma Sameby",
+            "AjoDisplayFullName": "25-15-01-116-A - Talma Sameby"
+          },
+          {
+            "AjoId": 722406,
+            "AfoId": 1,
+            "Name": "Gabna Sameby",
+            "AjoDisplayFullName": "25-15-01-117-A - Gabna Sameby"
+          },
+          {
+            "AjoId": 722407,
+            "AfoId": 1,
+            "Name": "Laevas Sameby",
+            "AjoDisplayFullName": "25-15-01-118-A - Laevas Sameby"
+          },
+          {
+            "AjoId": 722408,
+            "AfoId": 1,
+            "Name": "Vittangi Sameby",
+            "AjoDisplayFullName": "25-15-01-119-A - Vittangi Sameby"
+          },
+          {
+            "AjoId": 722409,
+            "AfoId": 1,
+            "Name": "Länsstyrelsens Upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-15-01-120-A - Länsstyrelsens Upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 722410,
+            "AfoId": 1,
+            "Name": "Saarivuoma Sameby",
+            "AjoDisplayFullName": "25-15-01-121-A - Saarivuoma Sameby"
+          },
+          {
+            "AjoId": 722411,
+            "AfoId": 1,
+            "Name": "Soppero/Lannavaara",
+            "AjoDisplayFullName": "25-15-01-122-A - Soppero/Lannavaara"
+          },
+          {
+            "AjoId": 722412,
+            "AfoId": 1,
+            "Name": "Kurravaara Jaktklubb",
+            "AjoDisplayFullName": "25-15-01-123-A - Kurravaara Jaktklubb"
+          },
+          {
+            "AjoId": 722413,
+            "AfoId": 1,
+            "Name": "Soppero jaktlag",
+            "AjoDisplayFullName": "25-15-01-124-A - Soppero jaktlag"
+          },
+          {
+            "AjoId": 722414,
+            "AfoId": 1,
+            "Name": "Vargbackens Jaktlag",
+            "AjoDisplayFullName": "25-15-01-125-A - Vargbackens Jaktlag"
+          },
+          {
+            "AjoId": 722415,
+            "AfoId": 1,
+            "Name": "Sevujärvi jaktlag",
+            "AjoDisplayFullName": "25-15-01-126-A - Sevujärvi jaktlag"
+          },
+          {
+            "AjoId": 724567,
+            "AfoId": 1,
+            "Name": "Svappavaara Fritidsförening",
+            "AjoDisplayFullName": "25-15-01-127-A - Svappavaara Fritidsförening"
+          },
+          {
+            "AjoId": 726027,
+            "AfoId": 1,
+            "Name": "Svappavaara samfällda",
+            "AjoDisplayFullName": "25-15-01-128-A - Svappavaara samfällda"
+          },
+          {
+            "AjoId": 771921,
+            "AfoId": 1,
+            "Name": "Perälombolo Jaktlag",
+            "AjoDisplayFullName": "25-15-02-001-A - Perälombolo Jaktlag"
+          },
+          {
+            "AjoId": 771923,
+            "AfoId": 1,
+            "Name": "Salmijärvi",
+            "AjoDisplayFullName": "25-15-02-002-A - Salmijärvi"
+          },
+          {
+            "AjoId": 771930,
+            "AfoId": 1,
+            "Name": "Kiruna Södra ÄSO",
+            "AjoDisplayFullName": "25-15-02-003-Ä - Kiruna Södra ÄSO"
+          },
+          {
+            "AjoId": 772045,
+            "AfoId": 1,
+            "Name": "Lassijärvi",
+            "AjoDisplayFullName": "25-15-02-004-A - Lassijärvi"
+          },
+          {
+            "AjoId": 772048,
+            "AfoId": 1,
+            "Name": "Team Parakka",
+            "AjoDisplayFullName": "25-15-02-005-A - Team Parakka"
+          },
+          {
+            "AjoId": 772118,
+            "AfoId": 1,
+            "Name": "Jölget Korkkio",
+            "AjoDisplayFullName": "25-15-02-006-A - Jölget Korkkio"
+          },
+          {
+            "AjoId": 772477,
+            "AfoId": 1,
+            "Name": "Reikäkivenvuoma",
+            "AjoDisplayFullName": "25-15-02-007-A - Reikäkivenvuoma"
+          },
+          {
+            "AjoId": 772478,
+            "AfoId": 1,
+            "Name": "Saivonpalo",
+            "AjoDisplayFullName": "25-15-02-008-A - Saivonpalo"
+          },
+          {
+            "AjoId": 772881,
+            "AfoId": 1,
+            "Name": "Lihavaara",
+            "AjoDisplayFullName": "25-15-02-009-A - Lihavaara"
+          },
+          {
+            "AjoId": 722416,
+            "AfoId": 1,
+            "Name": "Ounisjoki Jaktlag",
+            "AjoDisplayFullName": "25-15-02-101-A - Ounisjoki Jaktlag"
+          },
+          {
+            "AjoId": 722418,
+            "AfoId": 1,
+            "Name": "Herranmukka Jaktlag",
+            "AjoDisplayFullName": "25-15-02-103-A - Herranmukka Jaktlag"
+          },
+          {
+            "AjoId": 722419,
+            "AfoId": 1,
+            "Name": "Kuoksu Byamarker",
+            "AjoDisplayFullName": "25-15-02-105-A - Kuoksu Byamarker"
+          },
+          {
+            "AjoId": 722420,
+            "AfoId": 1,
+            "Name": "Mikkelirova-Kiviniemi Jaktlag",
+            "AjoDisplayFullName": "25-15-02-106-A - Mikkelirova-Kiviniemi Jaktlag"
+          },
+          {
+            "AjoId": 722421,
+            "AfoId": 1,
+            "Name": "Vivungi Jaktklubb",
+            "AjoDisplayFullName": "25-15-02-107-A - Vivungi Jaktklubb"
+          },
+          {
+            "AjoId": 722422,
+            "AfoId": 1,
+            "Name": "Masugnsbyns Jvf",
+            "AjoDisplayFullName": "25-15-02-108-A - Masugnsbyns Jvf"
+          },
+          {
+            "AjoId": 722423,
+            "AfoId": 1,
+            "Name": "Nedre Parakka Jaktlag",
+            "AjoDisplayFullName": "25-15-02-109-A - Nedre Parakka Jaktlag"
+          },
+          {
+            "AjoId": 722424,
+            "AfoId": 1,
+            "Name": "Jylkkyvaara Jaktområde",
+            "AjoDisplayFullName": "25-15-02-110-A - Jylkkyvaara Jaktområde"
+          },
+          {
+            "AjoId": 722425,
+            "AfoId": 1,
+            "Name": "Piilijärvi Vvo",
+            "AjoDisplayFullName": "25-15-02-111-A - Piilijärvi Vvo"
+          },
+          {
+            "AjoId": 722426,
+            "AfoId": 1,
+            "Name": "Lainio Jaktskytteklubb",
+            "AjoDisplayFullName": "25-15-02-112-A - Lainio Jaktskytteklubb"
+          },
+          {
+            "AjoId": 722427,
+            "AfoId": 1,
+            "Name": "Övre Parakka Jaktlag",
+            "AjoDisplayFullName": "25-15-02-113-A - Övre Parakka Jaktlag"
+          },
+          {
+            "AjoId": 722428,
+            "AfoId": 1,
+            "Name": "Merasjärvi Jaktlag",
+            "AjoDisplayFullName": "25-15-02-114-A - Merasjärvi Jaktlag"
+          },
+          {
+            "AjoId": 722429,
+            "AfoId": 1,
+            "Name": "Jukkasjärvi Sockenallmänning",
+            "AjoDisplayFullName": "25-15-02-115-A - Jukkasjärvi Sockenallmänning"
+          },
+          {
+            "AjoId": 722430,
+            "AfoId": 1,
+            "Name": "Valkeajärvi jaktlag",
+            "AjoDisplayFullName": "25-15-02-116-A - Valkeajärvi jaktlag"
+          },
+          {
+            "AjoId": 722431,
+            "AfoId": 1,
+            "Name": "Masugnsbyns jaktlag",
+            "AjoDisplayFullName": "25-15-02-118-A - Masugnsbyns jaktlag"
+          },
+          {
+            "AjoId": 722432,
+            "AfoId": 1,
+            "Name": "Lundströms",
+            "AjoDisplayFullName": "25-15-02-119-A - Lundströms"
+          },
+          {
+            "AjoId": 722433,
+            "AfoId": 1,
+            "Name": "Junovinsa",
+            "AjoDisplayFullName": "25-15-02-120-A - Junovinsa"
+          },
+          {
+            "AjoId": 722435,
+            "AfoId": 1,
+            "Name": "Normarova",
+            "AjoDisplayFullName": "25-15-02-122-A - Normarova"
+          },
+          {
+            "AjoId": 722437,
+            "AfoId": 1,
+            "Name": "Neitigården",
+            "AjoDisplayFullName": "25-15-02-124-A - Neitigården"
+          },
+          {
+            "AjoId": 724568,
+            "AfoId": 1,
+            "Name": "Särkiletho",
+            "AjoDisplayFullName": "25-15-02-125-A - Särkiletho"
+          },
+          {
+            "AjoId": 772476,
+            "AfoId": 1,
+            "Name": "Kuusivaara Övre Soppero",
+            "AjoDisplayFullName": "25-15-03-002-A - Kuusivaara Övre Soppero"
+          },
+          {
+            "AjoId": 772479,
+            "AfoId": 1,
+            "Name": "Suijavaara Jaktlag",
+            "AjoDisplayFullName": "25-15-03-003-A - Suijavaara Jaktlag"
+          },
+          {
+            "AjoId": 772633,
+            "AfoId": 1,
+            "Name": "Saivo 22",
+            "AjoDisplayFullName": "25-15-03-004-A - Saivo 22"
+          },
+          {
+            "AjoId": 772764,
+            "AfoId": 1,
+            "Name": "Auvattivuoma",
+            "AjoDisplayFullName": "25-15-03-005-A - Auvattivuoma"
+          },
+          {
+            "AjoId": 722438,
+            "AfoId": 1,
+            "Name": "Liedakka",
+            "AjoDisplayFullName": "25-15-03-101-A - Liedakka"
+          },
+          {
+            "AjoId": 722439,
+            "AfoId": 1,
+            "Name": "Ruodusniemi Jaktlag",
+            "AjoDisplayFullName": "25-15-03-102-A - Ruodusniemi Jaktlag"
+          },
+          {
+            "AjoId": 722440,
+            "AfoId": 1,
+            "Name": "Kuttainen Älgjaktområde",
+            "AjoDisplayFullName": "25-15-03-103-A - Kuttainen Älgjaktområde"
+          },
+          {
+            "AjoId": 722441,
+            "AfoId": 1,
+            "Name": "Idivuoma Jaktlag",
+            "AjoDisplayFullName": "25-15-03-104-A - Idivuoma Jaktlag"
+          },
+          {
+            "AjoId": 722442,
+            "AfoId": 1,
+            "Name": "Könkämä Sameby",
+            "AjoDisplayFullName": "25-15-03-105-A - Könkämä Sameby"
+          },
+          {
+            "AjoId": 722443,
+            "AfoId": 1,
+            "Name": "Pounovuoma Jaktlag",
+            "AjoDisplayFullName": "25-15-03-106-A - Pounovuoma Jaktlag"
+          },
+          {
+            "AjoId": 722444,
+            "AfoId": 1,
+            "Name": "Lainiovuoma Sameby",
+            "AjoDisplayFullName": "25-15-03-107-A - Lainiovuoma Sameby"
+          },
+          {
+            "AjoId": 722445,
+            "AfoId": 1,
+            "Name": "Länsstyrelsens Upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-15-03-108-A - Länsstyrelsens Upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 722446,
+            "AfoId": 1,
+            "Name": "Mertajärvi Jaktlag",
+            "AjoDisplayFullName": "25-15-03-109-A - Mertajärvi Jaktlag"
+          },
+          {
+            "AjoId": 722447,
+            "AfoId": 1,
+            "Name": "Idivuoma-Mertajärvi Byalag",
+            "AjoDisplayFullName": "25-15-03-110-A - Idivuoma-Mertajärvi Byalag"
+          },
+          {
+            "AjoId": 722448,
+            "AfoId": 1,
+            "Name": "Kaarejoki Jakt",
+            "AjoDisplayFullName": "25-15-03-111-A - Kaarejoki Jakt"
+          },
+          {
+            "AjoId": 722449,
+            "AfoId": 1,
+            "Name": "Maunu Byalag",
+            "AjoDisplayFullName": "25-15-03-112-A - Maunu Byalag"
+          },
+          {
+            "AjoId": 722450,
+            "AfoId": 1,
+            "Name": "Leipivaara Jaktlag",
+            "AjoDisplayFullName": "25-15-03-113-A - Leipivaara Jaktlag"
+          },
+          {
+            "AjoId": 722451,
+            "AfoId": 1,
+            "Name": "Karesuando Byasamfällighet",
+            "AjoDisplayFullName": "25-15-03-114-A - Karesuando Byasamfällighet"
+          },
+          {
+            "AjoId": 722452,
+            "AfoId": 1,
+            "Name": "Saivomuotka Jaktklubb",
+            "AjoDisplayFullName": "25-15-03-115-A - Saivomuotka Jaktklubb"
+          },
+          {
+            "AjoId": 722453,
+            "AfoId": 1,
+            "Name": "Auskari jaktlag",
+            "AjoDisplayFullName": "25-15-03-116-A - Auskari jaktlag"
+          },
+          {
+            "AjoId": 724569,
+            "AfoId": 1,
+            "Name": "Peurajärvi jaktlag",
+            "AjoDisplayFullName": "25-15-03-118-A - Peurajärvi jaktlag"
+          },
+          {
+            "AjoId": 725776,
+            "AfoId": 1,
+            "Name": "Maunu byaallmänning",
+            "AjoDisplayFullName": "25-15-03-119-A - Maunu byaallmänning"
+          },
+          {
+            "AjoId": 725777,
+            "AfoId": 1,
+            "Name": "Kuukavuoma jaktlag",
+            "AjoDisplayFullName": "25-15-03-120-A - Kuukavuoma jaktlag"
+          },
+          {
+            "AjoId": 725778,
+            "AfoId": 1,
+            "Name": "Kuttainen Raja lag",
+            "AjoDisplayFullName": "25-15-03-121-A - Kuttainen Raja lag"
+          },
+          {
+            "AjoId": 725780,
+            "AfoId": 1,
+            "Name": "Paittasjärvi Jaktlag",
+            "AjoDisplayFullName": "25-15-03-122-A - Paittasjärvi Jaktlag"
+          },
+          {
+            "AjoId": 725781,
+            "AfoId": 1,
+            "Name": "Kaarevaara Jaktlag",
+            "AjoDisplayFullName": "25-15-03-123-A - Kaarevaara Jaktlag"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasons/?_=1794430923436",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "Value": "1947/1948",
+            "Title": "1947/1948"
+          },
+          {
+            "Value": "1961/1962",
+            "Title": "1961/1962"
+          },
+          {
+            "Value": "1967/1968",
+            "Title": "1967/1968"
+          },
+          {
+            "Value": "1972/1973",
+            "Title": "1972/1973"
+          },
+          {
+            "Value": "1981/1982",
+            "Title": "1981/1982"
+          },
+          {
+            "Value": "1986/1987",
+            "Title": "1986/1987"
+          },
+          {
+            "Value": "1987/1988",
+            "Title": "1987/1988"
+          },
+          {
+            "Value": "1988/1989",
+            "Title": "1988/1989"
+          },
+          {
+            "Value": "1989/1990",
+            "Title": "1989/1990"
+          },
+          {
+            "Value": "1990/1991",
+            "Title": "1990/1991"
+          },
+          {
+            "Value": "1991/1992",
+            "Title": "1991/1992"
+          },
+          {
+            "Value": "1992/1993",
+            "Title": "1992/1993"
+          },
+          {
+            "Value": "1993/1994",
+            "Title": "1993/1994"
+          },
+          {
+            "Value": "1994/1995",
+            "Title": "1994/1995"
+          },
+          {
+            "Value": "1995/1996",
+            "Title": "1995/1996"
+          },
+          {
+            "Value": "1996/1997",
+            "Title": "1996/1997"
+          },
+          {
+            "Value": "1997/1998",
+            "Title": "1997/1998"
+          },
+          {
+            "Value": "1998/1999",
+            "Title": "1998/1999"
+          },
+          {
+            "Value": "1999/2000",
+            "Title": "1999/2000"
+          },
+          {
+            "Value": "2000/2001",
+            "Title": "2000/2001"
+          },
+          {
+            "Value": "2001/2002",
+            "Title": "2001/2002"
+          },
+          {
+            "Value": "2002/2003",
+            "Title": "2002/2003"
+          },
+          {
+            "Value": "2003/2004",
+            "Title": "2003/2004"
+          },
+          {
+            "Value": "2004/2005",
+            "Title": "2004/2005"
+          },
+          {
+            "Value": "2005/2006",
+            "Title": "2005/2006"
+          },
+          {
+            "Value": "2006/2007",
+            "Title": "2006/2007"
+          },
+          {
+            "Value": "2007/2008",
+            "Title": "2007/2008"
+          },
+          {
+            "Value": "2008/2009",
+            "Title": "2008/2009"
+          },
+          {
+            "Value": "2009/2010",
+            "Title": "2009/2010"
+          },
+          {
+            "Value": "2010/2011",
+            "Title": "2010/2011"
+          },
+          {
+            "Value": "2011/2012",
+            "Title": "2011/2012"
+          },
+          {
+            "Value": "2012/2013",
+            "Title": "2012/2013"
+          },
+          {
+            "Value": "2013/2014",
+            "Title": "2013/2014"
+          },
+          {
+            "Value": "2014/2015",
+            "Title": "2014/2015"
+          },
+          {
+            "Value": "2015/2016",
+            "Title": "2015/2016"
+          },
+          {
+            "Value": "2016/2017",
+            "Title": "2016/2017"
+          },
+          {
+            "Value": "2017/2018",
+            "Title": "2017/2018"
+          },
+          {
+            "Value": "2018/2019",
+            "Title": "2018/2019"
+          },
+          {
+            "Value": "2019/2020",
+            "Title": "2019/2020"
+          },
+          {
+            "Value": "2020/2021",
+            "Title": "2020/2021"
+          },
+          {
+            "Value": "2021/2022",
+            "Title": "2021/2022"
+          },
+          {
+            "Value": "2022/2023",
+            "Title": "2022/2023"
+          },
+          {
+            "Value": "2023/2024",
+            "Title": "2023/2024"
+          },
+          {
+            "Value": "2024/2025",
+            "Title": "2024/2025"
+          },
+          {
+            "Value": "2025/2026",
+            "Title": "2025/2026"
+          },
+          {
+            "Value": "2026/2027",
+            "Title": "2026/2027"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 719263,
+            "AfoId": 1,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "25-00-99-001-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 722337,
+            "AfoId": 1,
+            "Name": "Baste Cearru",
+            "AjoDisplayFullName": "25-14-01-101-A - Baste Cearru"
+          },
+          {
+            "AjoId": 722338,
+            "AfoId": 1,
+            "Name": "Unna Tjerusj",
+            "AjoDisplayFullName": "25-14-01-102-A - Unna Tjerusj"
+          },
+          {
+            "AjoId": 722339,
+            "AfoId": 1,
+            "Name": "Länsstyrelsens upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-14-01-103-A - Länsstyrelsens upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 722340,
+            "AfoId": 1,
+            "Name": "Girjas Sameby",
+            "AjoDisplayFullName": "25-14-01-104-A - Girjas Sameby"
+          },
+          {
+            "AjoId": 722341,
+            "AfoId": 1,
+            "Name": "Sjaunja Byalag",
+            "AjoDisplayFullName": "25-14-01-105-A - Sjaunja Byalag"
+          },
+          {
+            "AjoId": 722342,
+            "AfoId": 1,
+            "Name": "Tjautjas Byalag",
+            "AjoDisplayFullName": "25-14-01-106-A - Tjautjas Byalag"
+          },
+          {
+            "AjoId": 722343,
+            "AfoId": 1,
+            "Name": "Killinge Jaktklubb",
+            "AjoDisplayFullName": "25-14-01-107-A - Killinge Jaktklubb"
+          },
+          {
+            "AjoId": 722346,
+            "AfoId": 1,
+            "Name": "Kaitum 1",
+            "AjoDisplayFullName": "25-14-01-110-A - Kaitum 1"
+          },
+          {
+            "AjoId": 722347,
+            "AfoId": 1,
+            "Name": "Mårdhunden",
+            "AjoDisplayFullName": "25-14-01-111-A - Mårdhunden"
+          },
+          {
+            "AjoId": 772046,
+            "AfoId": 1,
+            "Name": "Saivonpola",
+            "AjoDisplayFullName": "25-15-01-002-A - Saivonpola"
+          },
+          {
+            "AjoId": 772761,
+            "AfoId": 1,
+            "Name": "Kirkkojärvi",
+            "AjoDisplayFullName": "25-15-01-003-A - Kirkkojärvi"
+          },
+          {
+            "AjoId": 722391,
+            "AfoId": 1,
+            "Name": "Svappavaara Jaktlag",
+            "AjoDisplayFullName": "25-15-01-101-A - Svappavaara Jaktlag"
+          },
+          {
+            "AjoId": 722392,
+            "AfoId": 1,
+            "Name": "Taljavaara Jaktlag",
+            "AjoDisplayFullName": "25-15-01-102-A - Taljavaara Jaktlag"
+          },
+          {
+            "AjoId": 722393,
+            "AfoId": 1,
+            "Name": "Svappavaara Jaktvårdsför",
+            "AjoDisplayFullName": "25-15-01-103-A - Svappavaara Jaktvårdsför"
+          },
+          {
+            "AjoId": 722394,
+            "AfoId": 1,
+            "Name": "Soppero lilla jaktlag",
+            "AjoDisplayFullName": "25-15-01-105-A - Soppero lilla jaktlag"
+          },
+          {
+            "AjoId": 722395,
+            "AfoId": 1,
+            "Name": "Svappavaara lilla jaktlag",
+            "AjoDisplayFullName": "25-15-01-106-A - Svappavaara lilla jaktlag"
+          },
+          {
+            "AjoId": 722396,
+            "AfoId": 1,
+            "Name": "Väkkärä Jaktlag",
+            "AjoDisplayFullName": "25-15-01-107-A - Väkkärä Jaktlag"
+          },
+          {
+            "AjoId": 722398,
+            "AfoId": 1,
+            "Name": "Jukkasjärvi Byallmänning",
+            "AjoDisplayFullName": "25-15-01-109-A - Jukkasjärvi Byallmänning"
+          },
+          {
+            "AjoId": 722399,
+            "AfoId": 1,
+            "Name": "Soppero Byars Samfällighetsförening",
+            "AjoDisplayFullName": "25-15-01-110-A - Soppero Byars Samfällighetsförening"
+          },
+          {
+            "AjoId": 722400,
+            "AfoId": 1,
+            "Name": "Puoltsa Älgjaktsområde",
+            "AjoDisplayFullName": "25-15-01-111-A - Puoltsa Älgjaktsområde"
+          },
+          {
+            "AjoId": 722401,
+            "AfoId": 1,
+            "Name": "Lainio Byasamfällighet",
+            "AjoDisplayFullName": "25-15-01-112-A - Lainio Byasamfällighet"
+          },
+          {
+            "AjoId": 722402,
+            "AfoId": 1,
+            "Name": "Kaalasjärvi Skifteslag",
+            "AjoDisplayFullName": "25-15-01-113-A - Kaalasjärvi Skifteslag"
+          },
+          {
+            "AjoId": 722403,
+            "AfoId": 1,
+            "Name": "Jukkasjärvi Sockenallmänning",
+            "AjoDisplayFullName": "25-15-01-114-A - Jukkasjärvi Sockenallmänning"
+          },
+          {
+            "AjoId": 722404,
+            "AfoId": 1,
+            "Name": "Pirttivuopio Byalag",
+            "AjoDisplayFullName": "25-15-01-115-A - Pirttivuopio Byalag"
+          },
+          {
+            "AjoId": 722405,
+            "AfoId": 1,
+            "Name": "Talma Sameby",
+            "AjoDisplayFullName": "25-15-01-116-A - Talma Sameby"
+          },
+          {
+            "AjoId": 722406,
+            "AfoId": 1,
+            "Name": "Gabna Sameby",
+            "AjoDisplayFullName": "25-15-01-117-A - Gabna Sameby"
+          },
+          {
+            "AjoId": 722407,
+            "AfoId": 1,
+            "Name": "Laevas Sameby",
+            "AjoDisplayFullName": "25-15-01-118-A - Laevas Sameby"
+          },
+          {
+            "AjoId": 722408,
+            "AfoId": 1,
+            "Name": "Vittangi Sameby",
+            "AjoDisplayFullName": "25-15-01-119-A - Vittangi Sameby"
+          },
+          {
+            "AjoId": 722409,
+            "AfoId": 1,
+            "Name": "Länsstyrelsens Upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-15-01-120-A - Länsstyrelsens Upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 722410,
+            "AfoId": 1,
+            "Name": "Saarivuoma Sameby",
+            "AjoDisplayFullName": "25-15-01-121-A - Saarivuoma Sameby"
+          },
+          {
+            "AjoId": 722411,
+            "AfoId": 1,
+            "Name": "Soppero/Lannavaara",
+            "AjoDisplayFullName": "25-15-01-122-A - Soppero/Lannavaara"
+          },
+          {
+            "AjoId": 722412,
+            "AfoId": 1,
+            "Name": "Kurravaara Jaktklubb",
+            "AjoDisplayFullName": "25-15-01-123-A - Kurravaara Jaktklubb"
+          },
+          {
+            "AjoId": 722413,
+            "AfoId": 1,
+            "Name": "Soppero jaktlag",
+            "AjoDisplayFullName": "25-15-01-124-A - Soppero jaktlag"
+          },
+          {
+            "AjoId": 722414,
+            "AfoId": 1,
+            "Name": "Vargbackens Jaktlag",
+            "AjoDisplayFullName": "25-15-01-125-A - Vargbackens Jaktlag"
+          },
+          {
+            "AjoId": 722415,
+            "AfoId": 1,
+            "Name": "Sevujärvi jaktlag",
+            "AjoDisplayFullName": "25-15-01-126-A - Sevujärvi jaktlag"
+          },
+          {
+            "AjoId": 724567,
+            "AfoId": 1,
+            "Name": "Svappavaara Fritidsförening",
+            "AjoDisplayFullName": "25-15-01-127-A - Svappavaara Fritidsförening"
+          },
+          {
+            "AjoId": 726027,
+            "AfoId": 1,
+            "Name": "Svappavaara samfällda",
+            "AjoDisplayFullName": "25-15-01-128-A - Svappavaara samfällda"
+          },
+          {
+            "AjoId": 771921,
+            "AfoId": 1,
+            "Name": "Perälombolo Jaktlag",
+            "AjoDisplayFullName": "25-15-02-001-A - Perälombolo Jaktlag"
+          },
+          {
+            "AjoId": 771923,
+            "AfoId": 1,
+            "Name": "Salmijärvi",
+            "AjoDisplayFullName": "25-15-02-002-A - Salmijärvi"
+          },
+          {
+            "AjoId": 771930,
+            "AfoId": 1,
+            "Name": "Kiruna Södra ÄSO",
+            "AjoDisplayFullName": "25-15-02-003-Ä - Kiruna Södra ÄSO"
+          },
+          {
+            "AjoId": 772045,
+            "AfoId": 1,
+            "Name": "Lassijärvi",
+            "AjoDisplayFullName": "25-15-02-004-A - Lassijärvi"
+          },
+          {
+            "AjoId": 772048,
+            "AfoId": 1,
+            "Name": "Team Parakka",
+            "AjoDisplayFullName": "25-15-02-005-A - Team Parakka"
+          },
+          {
+            "AjoId": 772118,
+            "AfoId": 1,
+            "Name": "Jölget Korkkio",
+            "AjoDisplayFullName": "25-15-02-006-A - Jölget Korkkio"
+          },
+          {
+            "AjoId": 772477,
+            "AfoId": 1,
+            "Name": "Reikäkivenvuoma",
+            "AjoDisplayFullName": "25-15-02-007-A - Reikäkivenvuoma"
+          },
+          {
+            "AjoId": 772478,
+            "AfoId": 1,
+            "Name": "Saivonpalo",
+            "AjoDisplayFullName": "25-15-02-008-A - Saivonpalo"
+          },
+          {
+            "AjoId": 772881,
+            "AfoId": 1,
+            "Name": "Lihavaara",
+            "AjoDisplayFullName": "25-15-02-009-A - Lihavaara"
+          },
+          {
+            "AjoId": 722416,
+            "AfoId": 1,
+            "Name": "Ounisjoki Jaktlag",
+            "AjoDisplayFullName": "25-15-02-101-A - Ounisjoki Jaktlag"
+          },
+          {
+            "AjoId": 722418,
+            "AfoId": 1,
+            "Name": "Herranmukka Jaktlag",
+            "AjoDisplayFullName": "25-15-02-103-A - Herranmukka Jaktlag"
+          },
+          {
+            "AjoId": 722419,
+            "AfoId": 1,
+            "Name": "Kuoksu Byamarker",
+            "AjoDisplayFullName": "25-15-02-105-A - Kuoksu Byamarker"
+          },
+          {
+            "AjoId": 722420,
+            "AfoId": 1,
+            "Name": "Mikkelirova-Kiviniemi Jaktlag",
+            "AjoDisplayFullName": "25-15-02-106-A - Mikkelirova-Kiviniemi Jaktlag"
+          },
+          {
+            "AjoId": 722421,
+            "AfoId": 1,
+            "Name": "Vivungi Jaktklubb",
+            "AjoDisplayFullName": "25-15-02-107-A - Vivungi Jaktklubb"
+          },
+          {
+            "AjoId": 722422,
+            "AfoId": 1,
+            "Name": "Masugnsbyns Jvf",
+            "AjoDisplayFullName": "25-15-02-108-A - Masugnsbyns Jvf"
+          },
+          {
+            "AjoId": 722423,
+            "AfoId": 1,
+            "Name": "Nedre Parakka Jaktlag",
+            "AjoDisplayFullName": "25-15-02-109-A - Nedre Parakka Jaktlag"
+          },
+          {
+            "AjoId": 722424,
+            "AfoId": 1,
+            "Name": "Jylkkyvaara Jaktområde",
+            "AjoDisplayFullName": "25-15-02-110-A - Jylkkyvaara Jaktområde"
+          },
+          {
+            "AjoId": 722425,
+            "AfoId": 1,
+            "Name": "Piilijärvi Vvo",
+            "AjoDisplayFullName": "25-15-02-111-A - Piilijärvi Vvo"
+          },
+          {
+            "AjoId": 722426,
+            "AfoId": 1,
+            "Name": "Lainio Jaktskytteklubb",
+            "AjoDisplayFullName": "25-15-02-112-A - Lainio Jaktskytteklubb"
+          },
+          {
+            "AjoId": 722427,
+            "AfoId": 1,
+            "Name": "Övre Parakka Jaktlag",
+            "AjoDisplayFullName": "25-15-02-113-A - Övre Parakka Jaktlag"
+          },
+          {
+            "AjoId": 722428,
+            "AfoId": 1,
+            "Name": "Merasjärvi Jaktlag",
+            "AjoDisplayFullName": "25-15-02-114-A - Merasjärvi Jaktlag"
+          },
+          {
+            "AjoId": 722429,
+            "AfoId": 1,
+            "Name": "Jukkasjärvi Sockenallmänning",
+            "AjoDisplayFullName": "25-15-02-115-A - Jukkasjärvi Sockenallmänning"
+          },
+          {
+            "AjoId": 722430,
+            "AfoId": 1,
+            "Name": "Valkeajärvi jaktlag",
+            "AjoDisplayFullName": "25-15-02-116-A - Valkeajärvi jaktlag"
+          },
+          {
+            "AjoId": 722431,
+            "AfoId": 1,
+            "Name": "Masugnsbyns jaktlag",
+            "AjoDisplayFullName": "25-15-02-118-A - Masugnsbyns jaktlag"
+          },
+          {
+            "AjoId": 722432,
+            "AfoId": 1,
+            "Name": "Lundströms",
+            "AjoDisplayFullName": "25-15-02-119-A - Lundströms"
+          },
+          {
+            "AjoId": 722433,
+            "AfoId": 1,
+            "Name": "Junovinsa",
+            "AjoDisplayFullName": "25-15-02-120-A - Junovinsa"
+          },
+          {
+            "AjoId": 722435,
+            "AfoId": 1,
+            "Name": "Normarova",
+            "AjoDisplayFullName": "25-15-02-122-A - Normarova"
+          },
+          {
+            "AjoId": 722437,
+            "AfoId": 1,
+            "Name": "Neitigården",
+            "AjoDisplayFullName": "25-15-02-124-A - Neitigården"
+          },
+          {
+            "AjoId": 724568,
+            "AfoId": 1,
+            "Name": "Särkiletho",
+            "AjoDisplayFullName": "25-15-02-125-A - Särkiletho"
+          },
+          {
+            "AjoId": 772476,
+            "AfoId": 1,
+            "Name": "Kuusivaara Övre Soppero",
+            "AjoDisplayFullName": "25-15-03-002-A - Kuusivaara Övre Soppero"
+          },
+          {
+            "AjoId": 772479,
+            "AfoId": 1,
+            "Name": "Suijavaara Jaktlag",
+            "AjoDisplayFullName": "25-15-03-003-A - Suijavaara Jaktlag"
+          },
+          {
+            "AjoId": 772633,
+            "AfoId": 1,
+            "Name": "Saivo 22",
+            "AjoDisplayFullName": "25-15-03-004-A - Saivo 22"
+          },
+          {
+            "AjoId": 772764,
+            "AfoId": 1,
+            "Name": "Auvattivuoma",
+            "AjoDisplayFullName": "25-15-03-005-A - Auvattivuoma"
+          },
+          {
+            "AjoId": 722438,
+            "AfoId": 1,
+            "Name": "Liedakka",
+            "AjoDisplayFullName": "25-15-03-101-A - Liedakka"
+          },
+          {
+            "AjoId": 722439,
+            "AfoId": 1,
+            "Name": "Ruodusniemi Jaktlag",
+            "AjoDisplayFullName": "25-15-03-102-A - Ruodusniemi Jaktlag"
+          },
+          {
+            "AjoId": 722440,
+            "AfoId": 1,
+            "Name": "Kuttainen Älgjaktområde",
+            "AjoDisplayFullName": "25-15-03-103-A - Kuttainen Älgjaktområde"
+          },
+          {
+            "AjoId": 722441,
+            "AfoId": 1,
+            "Name": "Idivuoma Jaktlag",
+            "AjoDisplayFullName": "25-15-03-104-A - Idivuoma Jaktlag"
+          },
+          {
+            "AjoId": 722442,
+            "AfoId": 1,
+            "Name": "Könkämä Sameby",
+            "AjoDisplayFullName": "25-15-03-105-A - Könkämä Sameby"
+          },
+          {
+            "AjoId": 722443,
+            "AfoId": 1,
+            "Name": "Pounovuoma Jaktlag",
+            "AjoDisplayFullName": "25-15-03-106-A - Pounovuoma Jaktlag"
+          },
+          {
+            "AjoId": 722444,
+            "AfoId": 1,
+            "Name": "Lainiovuoma Sameby",
+            "AjoDisplayFullName": "25-15-03-107-A - Lainiovuoma Sameby"
+          },
+          {
+            "AjoId": 722445,
+            "AfoId": 1,
+            "Name": "Länsstyrelsens Upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-15-03-108-A - Länsstyrelsens Upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 722446,
+            "AfoId": 1,
+            "Name": "Mertajärvi Jaktlag",
+            "AjoDisplayFullName": "25-15-03-109-A - Mertajärvi Jaktlag"
+          },
+          {
+            "AjoId": 722447,
+            "AfoId": 1,
+            "Name": "Idivuoma-Mertajärvi Byalag",
+            "AjoDisplayFullName": "25-15-03-110-A - Idivuoma-Mertajärvi Byalag"
+          },
+          {
+            "AjoId": 722448,
+            "AfoId": 1,
+            "Name": "Kaarejoki Jakt",
+            "AjoDisplayFullName": "25-15-03-111-A - Kaarejoki Jakt"
+          },
+          {
+            "AjoId": 722449,
+            "AfoId": 1,
+            "Name": "Maunu Byalag",
+            "AjoDisplayFullName": "25-15-03-112-A - Maunu Byalag"
+          },
+          {
+            "AjoId": 722450,
+            "AfoId": 1,
+            "Name": "Leipivaara Jaktlag",
+            "AjoDisplayFullName": "25-15-03-113-A - Leipivaara Jaktlag"
+          },
+          {
+            "AjoId": 722451,
+            "AfoId": 1,
+            "Name": "Karesuando Byasamfällighet",
+            "AjoDisplayFullName": "25-15-03-114-A - Karesuando Byasamfällighet"
+          },
+          {
+            "AjoId": 722452,
+            "AfoId": 1,
+            "Name": "Saivomuotka Jaktklubb",
+            "AjoDisplayFullName": "25-15-03-115-A - Saivomuotka Jaktklubb"
+          },
+          {
+            "AjoId": 722453,
+            "AfoId": 1,
+            "Name": "Auskari jaktlag",
+            "AjoDisplayFullName": "25-15-03-116-A - Auskari jaktlag"
+          },
+          {
+            "AjoId": 724569,
+            "AfoId": 1,
+            "Name": "Peurajärvi jaktlag",
+            "AjoDisplayFullName": "25-15-03-118-A - Peurajärvi jaktlag"
+          },
+          {
+            "AjoId": 725776,
+            "AfoId": 1,
+            "Name": "Maunu byaallmänning",
+            "AjoDisplayFullName": "25-15-03-119-A - Maunu byaallmänning"
+          },
+          {
+            "AjoId": 725777,
+            "AfoId": 1,
+            "Name": "Kuukavuoma jaktlag",
+            "AjoDisplayFullName": "25-15-03-120-A - Kuukavuoma jaktlag"
+          },
+          {
+            "AjoId": 725778,
+            "AfoId": 1,
+            "Name": "Kuttainen Raja lag",
+            "AjoDisplayFullName": "25-15-03-121-A - Kuttainen Raja lag"
+          },
+          {
+            "AjoId": 725780,
+            "AfoId": 1,
+            "Name": "Paittasjärvi Jaktlag",
+            "AjoDisplayFullName": "25-15-03-122-A - Paittasjärvi Jaktlag"
+          },
+          {
+            "AjoId": 725781,
+            "AfoId": 1,
+            "Name": "Kaarevaara Jaktlag",
+            "AjoDisplayFullName": "25-15-03-123-A - Kaarevaara Jaktlag"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 719263,
+            "AfoId": 1,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "25-00-99-001-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 722337,
+            "AfoId": 1,
+            "Name": "Baste Cearru",
+            "AjoDisplayFullName": "25-14-01-101-A - Baste Cearru"
+          },
+          {
+            "AjoId": 722338,
+            "AfoId": 1,
+            "Name": "Unna Tjerusj",
+            "AjoDisplayFullName": "25-14-01-102-A - Unna Tjerusj"
+          },
+          {
+            "AjoId": 722339,
+            "AfoId": 1,
+            "Name": "Länsstyrelsens upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-14-01-103-A - Länsstyrelsens upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 722340,
+            "AfoId": 1,
+            "Name": "Girjas Sameby",
+            "AjoDisplayFullName": "25-14-01-104-A - Girjas Sameby"
+          },
+          {
+            "AjoId": 722341,
+            "AfoId": 1,
+            "Name": "Sjaunja Byalag",
+            "AjoDisplayFullName": "25-14-01-105-A - Sjaunja Byalag"
+          },
+          {
+            "AjoId": 722342,
+            "AfoId": 1,
+            "Name": "Tjautjas Byalag",
+            "AjoDisplayFullName": "25-14-01-106-A - Tjautjas Byalag"
+          },
+          {
+            "AjoId": 722343,
+            "AfoId": 1,
+            "Name": "Killinge Jaktklubb",
+            "AjoDisplayFullName": "25-14-01-107-A - Killinge Jaktklubb"
+          },
+          {
+            "AjoId": 722346,
+            "AfoId": 1,
+            "Name": "Kaitum 1",
+            "AjoDisplayFullName": "25-14-01-110-A - Kaitum 1"
+          },
+          {
+            "AjoId": 722347,
+            "AfoId": 1,
+            "Name": "Mårdhunden",
+            "AjoDisplayFullName": "25-14-01-111-A - Mårdhunden"
+          },
+          {
+            "AjoId": 772046,
+            "AfoId": 1,
+            "Name": "Saivonpola",
+            "AjoDisplayFullName": "25-15-01-002-A - Saivonpola"
+          },
+          {
+            "AjoId": 772761,
+            "AfoId": 1,
+            "Name": "Kirkkojärvi",
+            "AjoDisplayFullName": "25-15-01-003-A - Kirkkojärvi"
+          },
+          {
+            "AjoId": 722391,
+            "AfoId": 1,
+            "Name": "Svappavaara Jaktlag",
+            "AjoDisplayFullName": "25-15-01-101-A - Svappavaara Jaktlag"
+          },
+          {
+            "AjoId": 722392,
+            "AfoId": 1,
+            "Name": "Taljavaara Jaktlag",
+            "AjoDisplayFullName": "25-15-01-102-A - Taljavaara Jaktlag"
+          },
+          {
+            "AjoId": 722393,
+            "AfoId": 1,
+            "Name": "Svappavaara Jaktvårdsför",
+            "AjoDisplayFullName": "25-15-01-103-A - Svappavaara Jaktvårdsför"
+          },
+          {
+            "AjoId": 722394,
+            "AfoId": 1,
+            "Name": "Soppero lilla jaktlag",
+            "AjoDisplayFullName": "25-15-01-105-A - Soppero lilla jaktlag"
+          },
+          {
+            "AjoId": 722395,
+            "AfoId": 1,
+            "Name": "Svappavaara lilla jaktlag",
+            "AjoDisplayFullName": "25-15-01-106-A - Svappavaara lilla jaktlag"
+          },
+          {
+            "AjoId": 722396,
+            "AfoId": 1,
+            "Name": "Väkkärä Jaktlag",
+            "AjoDisplayFullName": "25-15-01-107-A - Väkkärä Jaktlag"
+          },
+          {
+            "AjoId": 722398,
+            "AfoId": 1,
+            "Name": "Jukkasjärvi Byallmänning",
+            "AjoDisplayFullName": "25-15-01-109-A - Jukkasjärvi Byallmänning"
+          },
+          {
+            "AjoId": 722399,
+            "AfoId": 1,
+            "Name": "Soppero Byars Samfällighetsförening",
+            "AjoDisplayFullName": "25-15-01-110-A - Soppero Byars Samfällighetsförening"
+          },
+          {
+            "AjoId": 722400,
+            "AfoId": 1,
+            "Name": "Puoltsa Älgjaktsområde",
+            "AjoDisplayFullName": "25-15-01-111-A - Puoltsa Älgjaktsområde"
+          },
+          {
+            "AjoId": 722401,
+            "AfoId": 1,
+            "Name": "Lainio Byasamfällighet",
+            "AjoDisplayFullName": "25-15-01-112-A - Lainio Byasamfällighet"
+          },
+          {
+            "AjoId": 722402,
+            "AfoId": 1,
+            "Name": "Kaalasjärvi Skifteslag",
+            "AjoDisplayFullName": "25-15-01-113-A - Kaalasjärvi Skifteslag"
+          },
+          {
+            "AjoId": 722403,
+            "AfoId": 1,
+            "Name": "Jukkasjärvi Sockenallmänning",
+            "AjoDisplayFullName": "25-15-01-114-A - Jukkasjärvi Sockenallmänning"
+          },
+          {
+            "AjoId": 722404,
+            "AfoId": 1,
+            "Name": "Pirttivuopio Byalag",
+            "AjoDisplayFullName": "25-15-01-115-A - Pirttivuopio Byalag"
+          },
+          {
+            "AjoId": 722405,
+            "AfoId": 1,
+            "Name": "Talma Sameby",
+            "AjoDisplayFullName": "25-15-01-116-A - Talma Sameby"
+          },
+          {
+            "AjoId": 722406,
+            "AfoId": 1,
+            "Name": "Gabna Sameby",
+            "AjoDisplayFullName": "25-15-01-117-A - Gabna Sameby"
+          },
+          {
+            "AjoId": 722407,
+            "AfoId": 1,
+            "Name": "Laevas Sameby",
+            "AjoDisplayFullName": "25-15-01-118-A - Laevas Sameby"
+          },
+          {
+            "AjoId": 722408,
+            "AfoId": 1,
+            "Name": "Vittangi Sameby",
+            "AjoDisplayFullName": "25-15-01-119-A - Vittangi Sameby"
+          },
+          {
+            "AjoId": 722409,
+            "AfoId": 1,
+            "Name": "Länsstyrelsens Upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-15-01-120-A - Länsstyrelsens Upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 722410,
+            "AfoId": 1,
+            "Name": "Saarivuoma Sameby",
+            "AjoDisplayFullName": "25-15-01-121-A - Saarivuoma Sameby"
+          },
+          {
+            "AjoId": 722411,
+            "AfoId": 1,
+            "Name": "Soppero/Lannavaara",
+            "AjoDisplayFullName": "25-15-01-122-A - Soppero/Lannavaara"
+          },
+          {
+            "AjoId": 722412,
+            "AfoId": 1,
+            "Name": "Kurravaara Jaktklubb",
+            "AjoDisplayFullName": "25-15-01-123-A - Kurravaara Jaktklubb"
+          },
+          {
+            "AjoId": 722413,
+            "AfoId": 1,
+            "Name": "Soppero jaktlag",
+            "AjoDisplayFullName": "25-15-01-124-A - Soppero jaktlag"
+          },
+          {
+            "AjoId": 722414,
+            "AfoId": 1,
+            "Name": "Vargbackens Jaktlag",
+            "AjoDisplayFullName": "25-15-01-125-A - Vargbackens Jaktlag"
+          },
+          {
+            "AjoId": 722415,
+            "AfoId": 1,
+            "Name": "Sevujärvi jaktlag",
+            "AjoDisplayFullName": "25-15-01-126-A - Sevujärvi jaktlag"
+          },
+          {
+            "AjoId": 724567,
+            "AfoId": 1,
+            "Name": "Svappavaara Fritidsförening",
+            "AjoDisplayFullName": "25-15-01-127-A - Svappavaara Fritidsförening"
+          },
+          {
+            "AjoId": 726027,
+            "AfoId": 1,
+            "Name": "Svappavaara samfällda",
+            "AjoDisplayFullName": "25-15-01-128-A - Svappavaara samfällda"
+          },
+          {
+            "AjoId": 771921,
+            "AfoId": 1,
+            "Name": "Perälombolo Jaktlag",
+            "AjoDisplayFullName": "25-15-02-001-A - Perälombolo Jaktlag"
+          },
+          {
+            "AjoId": 771923,
+            "AfoId": 1,
+            "Name": "Salmijärvi",
+            "AjoDisplayFullName": "25-15-02-002-A - Salmijärvi"
+          },
+          {
+            "AjoId": 771930,
+            "AfoId": 1,
+            "Name": "Kiruna Södra ÄSO",
+            "AjoDisplayFullName": "25-15-02-003-Ä - Kiruna Södra ÄSO"
+          },
+          {
+            "AjoId": 772045,
+            "AfoId": 1,
+            "Name": "Lassijärvi",
+            "AjoDisplayFullName": "25-15-02-004-A - Lassijärvi"
+          },
+          {
+            "AjoId": 772048,
+            "AfoId": 1,
+            "Name": "Team Parakka",
+            "AjoDisplayFullName": "25-15-02-005-A - Team Parakka"
+          },
+          {
+            "AjoId": 772118,
+            "AfoId": 1,
+            "Name": "Jölget Korkkio",
+            "AjoDisplayFullName": "25-15-02-006-A - Jölget Korkkio"
+          },
+          {
+            "AjoId": 772477,
+            "AfoId": 1,
+            "Name": "Reikäkivenvuoma",
+            "AjoDisplayFullName": "25-15-02-007-A - Reikäkivenvuoma"
+          },
+          {
+            "AjoId": 772478,
+            "AfoId": 1,
+            "Name": "Saivonpalo",
+            "AjoDisplayFullName": "25-15-02-008-A - Saivonpalo"
+          },
+          {
+            "AjoId": 772881,
+            "AfoId": 1,
+            "Name": "Lihavaara",
+            "AjoDisplayFullName": "25-15-02-009-A - Lihavaara"
+          },
+          {
+            "AjoId": 722416,
+            "AfoId": 1,
+            "Name": "Ounisjoki Jaktlag",
+            "AjoDisplayFullName": "25-15-02-101-A - Ounisjoki Jaktlag"
+          },
+          {
+            "AjoId": 722418,
+            "AfoId": 1,
+            "Name": "Herranmukka Jaktlag",
+            "AjoDisplayFullName": "25-15-02-103-A - Herranmukka Jaktlag"
+          },
+          {
+            "AjoId": 722419,
+            "AfoId": 1,
+            "Name": "Kuoksu Byamarker",
+            "AjoDisplayFullName": "25-15-02-105-A - Kuoksu Byamarker"
+          },
+          {
+            "AjoId": 722420,
+            "AfoId": 1,
+            "Name": "Mikkelirova-Kiviniemi Jaktlag",
+            "AjoDisplayFullName": "25-15-02-106-A - Mikkelirova-Kiviniemi Jaktlag"
+          },
+          {
+            "AjoId": 722421,
+            "AfoId": 1,
+            "Name": "Vivungi Jaktklubb",
+            "AjoDisplayFullName": "25-15-02-107-A - Vivungi Jaktklubb"
+          },
+          {
+            "AjoId": 722422,
+            "AfoId": 1,
+            "Name": "Masugnsbyns Jvf",
+            "AjoDisplayFullName": "25-15-02-108-A - Masugnsbyns Jvf"
+          },
+          {
+            "AjoId": 722423,
+            "AfoId": 1,
+            "Name": "Nedre Parakka Jaktlag",
+            "AjoDisplayFullName": "25-15-02-109-A - Nedre Parakka Jaktlag"
+          },
+          {
+            "AjoId": 722424,
+            "AfoId": 1,
+            "Name": "Jylkkyvaara Jaktområde",
+            "AjoDisplayFullName": "25-15-02-110-A - Jylkkyvaara Jaktområde"
+          },
+          {
+            "AjoId": 722425,
+            "AfoId": 1,
+            "Name": "Piilijärvi Vvo",
+            "AjoDisplayFullName": "25-15-02-111-A - Piilijärvi Vvo"
+          },
+          {
+            "AjoId": 722426,
+            "AfoId": 1,
+            "Name": "Lainio Jaktskytteklubb",
+            "AjoDisplayFullName": "25-15-02-112-A - Lainio Jaktskytteklubb"
+          },
+          {
+            "AjoId": 722427,
+            "AfoId": 1,
+            "Name": "Övre Parakka Jaktlag",
+            "AjoDisplayFullName": "25-15-02-113-A - Övre Parakka Jaktlag"
+          },
+          {
+            "AjoId": 722428,
+            "AfoId": 1,
+            "Name": "Merasjärvi Jaktlag",
+            "AjoDisplayFullName": "25-15-02-114-A - Merasjärvi Jaktlag"
+          },
+          {
+            "AjoId": 722429,
+            "AfoId": 1,
+            "Name": "Jukkasjärvi Sockenallmänning",
+            "AjoDisplayFullName": "25-15-02-115-A - Jukkasjärvi Sockenallmänning"
+          },
+          {
+            "AjoId": 722430,
+            "AfoId": 1,
+            "Name": "Valkeajärvi jaktlag",
+            "AjoDisplayFullName": "25-15-02-116-A - Valkeajärvi jaktlag"
+          },
+          {
+            "AjoId": 722431,
+            "AfoId": 1,
+            "Name": "Masugnsbyns jaktlag",
+            "AjoDisplayFullName": "25-15-02-118-A - Masugnsbyns jaktlag"
+          },
+          {
+            "AjoId": 722432,
+            "AfoId": 1,
+            "Name": "Lundströms",
+            "AjoDisplayFullName": "25-15-02-119-A - Lundströms"
+          },
+          {
+            "AjoId": 722433,
+            "AfoId": 1,
+            "Name": "Junovinsa",
+            "AjoDisplayFullName": "25-15-02-120-A - Junovinsa"
+          },
+          {
+            "AjoId": 722435,
+            "AfoId": 1,
+            "Name": "Normarova",
+            "AjoDisplayFullName": "25-15-02-122-A - Normarova"
+          },
+          {
+            "AjoId": 722437,
+            "AfoId": 1,
+            "Name": "Neitigården",
+            "AjoDisplayFullName": "25-15-02-124-A - Neitigården"
+          },
+          {
+            "AjoId": 724568,
+            "AfoId": 1,
+            "Name": "Särkiletho",
+            "AjoDisplayFullName": "25-15-02-125-A - Särkiletho"
+          },
+          {
+            "AjoId": 772476,
+            "AfoId": 1,
+            "Name": "Kuusivaara Övre Soppero",
+            "AjoDisplayFullName": "25-15-03-002-A - Kuusivaara Övre Soppero"
+          },
+          {
+            "AjoId": 772479,
+            "AfoId": 1,
+            "Name": "Suijavaara Jaktlag",
+            "AjoDisplayFullName": "25-15-03-003-A - Suijavaara Jaktlag"
+          },
+          {
+            "AjoId": 772633,
+            "AfoId": 1,
+            "Name": "Saivo 22",
+            "AjoDisplayFullName": "25-15-03-004-A - Saivo 22"
+          },
+          {
+            "AjoId": 772764,
+            "AfoId": 1,
+            "Name": "Auvattivuoma",
+            "AjoDisplayFullName": "25-15-03-005-A - Auvattivuoma"
+          },
+          {
+            "AjoId": 722438,
+            "AfoId": 1,
+            "Name": "Liedakka",
+            "AjoDisplayFullName": "25-15-03-101-A - Liedakka"
+          },
+          {
+            "AjoId": 722439,
+            "AfoId": 1,
+            "Name": "Ruodusniemi Jaktlag",
+            "AjoDisplayFullName": "25-15-03-102-A - Ruodusniemi Jaktlag"
+          },
+          {
+            "AjoId": 722440,
+            "AfoId": 1,
+            "Name": "Kuttainen Älgjaktområde",
+            "AjoDisplayFullName": "25-15-03-103-A - Kuttainen Älgjaktområde"
+          },
+          {
+            "AjoId": 722441,
+            "AfoId": 1,
+            "Name": "Idivuoma Jaktlag",
+            "AjoDisplayFullName": "25-15-03-104-A - Idivuoma Jaktlag"
+          },
+          {
+            "AjoId": 722442,
+            "AfoId": 1,
+            "Name": "Könkämä Sameby",
+            "AjoDisplayFullName": "25-15-03-105-A - Könkämä Sameby"
+          },
+          {
+            "AjoId": 722443,
+            "AfoId": 1,
+            "Name": "Pounovuoma Jaktlag",
+            "AjoDisplayFullName": "25-15-03-106-A - Pounovuoma Jaktlag"
+          },
+          {
+            "AjoId": 722444,
+            "AfoId": 1,
+            "Name": "Lainiovuoma Sameby",
+            "AjoDisplayFullName": "25-15-03-107-A - Lainiovuoma Sameby"
+          },
+          {
+            "AjoId": 722445,
+            "AfoId": 1,
+            "Name": "Länsstyrelsens Upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-15-03-108-A - Länsstyrelsens Upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 722446,
+            "AfoId": 1,
+            "Name": "Mertajärvi Jaktlag",
+            "AjoDisplayFullName": "25-15-03-109-A - Mertajärvi Jaktlag"
+          },
+          {
+            "AjoId": 722447,
+            "AfoId": 1,
+            "Name": "Idivuoma-Mertajärvi Byalag",
+            "AjoDisplayFullName": "25-15-03-110-A - Idivuoma-Mertajärvi Byalag"
+          },
+          {
+            "AjoId": 722448,
+            "AfoId": 1,
+            "Name": "Kaarejoki Jakt",
+            "AjoDisplayFullName": "25-15-03-111-A - Kaarejoki Jakt"
+          },
+          {
+            "AjoId": 722449,
+            "AfoId": 1,
+            "Name": "Maunu Byalag",
+            "AjoDisplayFullName": "25-15-03-112-A - Maunu Byalag"
+          },
+          {
+            "AjoId": 722450,
+            "AfoId": 1,
+            "Name": "Leipivaara Jaktlag",
+            "AjoDisplayFullName": "25-15-03-113-A - Leipivaara Jaktlag"
+          },
+          {
+            "AjoId": 722451,
+            "AfoId": 1,
+            "Name": "Karesuando Byasamfällighet",
+            "AjoDisplayFullName": "25-15-03-114-A - Karesuando Byasamfällighet"
+          },
+          {
+            "AjoId": 722452,
+            "AfoId": 1,
+            "Name": "Saivomuotka Jaktklubb",
+            "AjoDisplayFullName": "25-15-03-115-A - Saivomuotka Jaktklubb"
+          },
+          {
+            "AjoId": 722453,
+            "AfoId": 1,
+            "Name": "Auskari jaktlag",
+            "AjoDisplayFullName": "25-15-03-116-A - Auskari jaktlag"
+          },
+          {
+            "AjoId": 724569,
+            "AfoId": 1,
+            "Name": "Peurajärvi jaktlag",
+            "AjoDisplayFullName": "25-15-03-118-A - Peurajärvi jaktlag"
+          },
+          {
+            "AjoId": 725776,
+            "AfoId": 1,
+            "Name": "Maunu byaallmänning",
+            "AjoDisplayFullName": "25-15-03-119-A - Maunu byaallmänning"
+          },
+          {
+            "AjoId": 725777,
+            "AfoId": 1,
+            "Name": "Kuukavuoma jaktlag",
+            "AjoDisplayFullName": "25-15-03-120-A - Kuukavuoma jaktlag"
+          },
+          {
+            "AjoId": 725778,
+            "AfoId": 1,
+            "Name": "Kuttainen Raja lag",
+            "AjoDisplayFullName": "25-15-03-121-A - Kuttainen Raja lag"
+          },
+          {
+            "AjoId": 725780,
+            "AfoId": 1,
+            "Name": "Paittasjärvi Jaktlag",
+            "AjoDisplayFullName": "25-15-03-122-A - Paittasjärvi Jaktlag"
+          },
+          {
+            "AjoId": 725781,
+            "AfoId": 1,
+            "Name": "Kaarevaara Jaktlag",
+            "AjoDisplayFullName": "25-15-03-123-A - Kaarevaara Jaktlag"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 719263,
+            "AfoId": 1,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "25-00-99-001-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 722337,
+            "AfoId": 1,
+            "Name": "Baste Cearru",
+            "AjoDisplayFullName": "25-14-01-101-A - Baste Cearru"
+          },
+          {
+            "AjoId": 722338,
+            "AfoId": 1,
+            "Name": "Unna Tjerusj",
+            "AjoDisplayFullName": "25-14-01-102-A - Unna Tjerusj"
+          },
+          {
+            "AjoId": 722339,
+            "AfoId": 1,
+            "Name": "Länsstyrelsens upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-14-01-103-A - Länsstyrelsens upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 722340,
+            "AfoId": 1,
+            "Name": "Girjas Sameby",
+            "AjoDisplayFullName": "25-14-01-104-A - Girjas Sameby"
+          },
+          {
+            "AjoId": 722341,
+            "AfoId": 1,
+            "Name": "Sjaunja Byalag",
+            "AjoDisplayFullName": "25-14-01-105-A - Sjaunja Byalag"
+          },
+          {
+            "AjoId": 722342,
+            "AfoId": 1,
+            "Name": "Tjautjas Byalag",
+            "AjoDisplayFullName": "25-14-01-106-A - Tjautjas Byalag"
+          },
+          {
+            "AjoId": 722343,
+            "AfoId": 1,
+            "Name": "Killinge Jaktklubb",
+            "AjoDisplayFullName": "25-14-01-107-A - Killinge Jaktklubb"
+          },
+          {
+            "AjoId": 722346,
+            "AfoId": 1,
+            "Name": "Kaitum 1",
+            "AjoDisplayFullName": "25-14-01-110-A - Kaitum 1"
+          },
+          {
+            "AjoId": 722347,
+            "AfoId": 1,
+            "Name": "Mårdhunden",
+            "AjoDisplayFullName": "25-14-01-111-A - Mårdhunden"
+          },
+          {
+            "AjoId": 772046,
+            "AfoId": 1,
+            "Name": "Saivonpola",
+            "AjoDisplayFullName": "25-15-01-002-A - Saivonpola"
+          },
+          {
+            "AjoId": 772761,
+            "AfoId": 1,
+            "Name": "Kirkkojärvi",
+            "AjoDisplayFullName": "25-15-01-003-A - Kirkkojärvi"
+          },
+          {
+            "AjoId": 722391,
+            "AfoId": 1,
+            "Name": "Svappavaara Jaktlag",
+            "AjoDisplayFullName": "25-15-01-101-A - Svappavaara Jaktlag"
+          },
+          {
+            "AjoId": 722392,
+            "AfoId": 1,
+            "Name": "Taljavaara Jaktlag",
+            "AjoDisplayFullName": "25-15-01-102-A - Taljavaara Jaktlag"
+          },
+          {
+            "AjoId": 722393,
+            "AfoId": 1,
+            "Name": "Svappavaara Jaktvårdsför",
+            "AjoDisplayFullName": "25-15-01-103-A - Svappavaara Jaktvårdsför"
+          },
+          {
+            "AjoId": 722394,
+            "AfoId": 1,
+            "Name": "Soppero lilla jaktlag",
+            "AjoDisplayFullName": "25-15-01-105-A - Soppero lilla jaktlag"
+          },
+          {
+            "AjoId": 722395,
+            "AfoId": 1,
+            "Name": "Svappavaara lilla jaktlag",
+            "AjoDisplayFullName": "25-15-01-106-A - Svappavaara lilla jaktlag"
+          },
+          {
+            "AjoId": 722396,
+            "AfoId": 1,
+            "Name": "Väkkärä Jaktlag",
+            "AjoDisplayFullName": "25-15-01-107-A - Väkkärä Jaktlag"
+          },
+          {
+            "AjoId": 722398,
+            "AfoId": 1,
+            "Name": "Jukkasjärvi Byallmänning",
+            "AjoDisplayFullName": "25-15-01-109-A - Jukkasjärvi Byallmänning"
+          },
+          {
+            "AjoId": 722399,
+            "AfoId": 1,
+            "Name": "Soppero Byars Samfällighetsförening",
+            "AjoDisplayFullName": "25-15-01-110-A - Soppero Byars Samfällighetsförening"
+          },
+          {
+            "AjoId": 722400,
+            "AfoId": 1,
+            "Name": "Puoltsa Älgjaktsområde",
+            "AjoDisplayFullName": "25-15-01-111-A - Puoltsa Älgjaktsområde"
+          },
+          {
+            "AjoId": 722401,
+            "AfoId": 1,
+            "Name": "Lainio Byasamfällighet",
+            "AjoDisplayFullName": "25-15-01-112-A - Lainio Byasamfällighet"
+          },
+          {
+            "AjoId": 722402,
+            "AfoId": 1,
+            "Name": "Kaalasjärvi Skifteslag",
+            "AjoDisplayFullName": "25-15-01-113-A - Kaalasjärvi Skifteslag"
+          },
+          {
+            "AjoId": 722403,
+            "AfoId": 1,
+            "Name": "Jukkasjärvi Sockenallmänning",
+            "AjoDisplayFullName": "25-15-01-114-A - Jukkasjärvi Sockenallmänning"
+          },
+          {
+            "AjoId": 722404,
+            "AfoId": 1,
+            "Name": "Pirttivuopio Byalag",
+            "AjoDisplayFullName": "25-15-01-115-A - Pirttivuopio Byalag"
+          },
+          {
+            "AjoId": 722405,
+            "AfoId": 1,
+            "Name": "Talma Sameby",
+            "AjoDisplayFullName": "25-15-01-116-A - Talma Sameby"
+          },
+          {
+            "AjoId": 722406,
+            "AfoId": 1,
+            "Name": "Gabna Sameby",
+            "AjoDisplayFullName": "25-15-01-117-A - Gabna Sameby"
+          },
+          {
+            "AjoId": 722407,
+            "AfoId": 1,
+            "Name": "Laevas Sameby",
+            "AjoDisplayFullName": "25-15-01-118-A - Laevas Sameby"
+          },
+          {
+            "AjoId": 722408,
+            "AfoId": 1,
+            "Name": "Vittangi Sameby",
+            "AjoDisplayFullName": "25-15-01-119-A - Vittangi Sameby"
+          },
+          {
+            "AjoId": 722409,
+            "AfoId": 1,
+            "Name": "Länsstyrelsens Upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-15-01-120-A - Länsstyrelsens Upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 722410,
+            "AfoId": 1,
+            "Name": "Saarivuoma Sameby",
+            "AjoDisplayFullName": "25-15-01-121-A - Saarivuoma Sameby"
+          },
+          {
+            "AjoId": 722411,
+            "AfoId": 1,
+            "Name": "Soppero/Lannavaara",
+            "AjoDisplayFullName": "25-15-01-122-A - Soppero/Lannavaara"
+          },
+          {
+            "AjoId": 722412,
+            "AfoId": 1,
+            "Name": "Kurravaara Jaktklubb",
+            "AjoDisplayFullName": "25-15-01-123-A - Kurravaara Jaktklubb"
+          },
+          {
+            "AjoId": 722413,
+            "AfoId": 1,
+            "Name": "Soppero jaktlag",
+            "AjoDisplayFullName": "25-15-01-124-A - Soppero jaktlag"
+          },
+          {
+            "AjoId": 722414,
+            "AfoId": 1,
+            "Name": "Vargbackens Jaktlag",
+            "AjoDisplayFullName": "25-15-01-125-A - Vargbackens Jaktlag"
+          },
+          {
+            "AjoId": 722415,
+            "AfoId": 1,
+            "Name": "Sevujärvi jaktlag",
+            "AjoDisplayFullName": "25-15-01-126-A - Sevujärvi jaktlag"
+          },
+          {
+            "AjoId": 724567,
+            "AfoId": 1,
+            "Name": "Svappavaara Fritidsförening",
+            "AjoDisplayFullName": "25-15-01-127-A - Svappavaara Fritidsförening"
+          },
+          {
+            "AjoId": 726027,
+            "AfoId": 1,
+            "Name": "Svappavaara samfällda",
+            "AjoDisplayFullName": "25-15-01-128-A - Svappavaara samfällda"
+          },
+          {
+            "AjoId": 771921,
+            "AfoId": 1,
+            "Name": "Perälombolo Jaktlag",
+            "AjoDisplayFullName": "25-15-02-001-A - Perälombolo Jaktlag"
+          },
+          {
+            "AjoId": 771923,
+            "AfoId": 1,
+            "Name": "Salmijärvi",
+            "AjoDisplayFullName": "25-15-02-002-A - Salmijärvi"
+          },
+          {
+            "AjoId": 771930,
+            "AfoId": 1,
+            "Name": "Kiruna Södra ÄSO",
+            "AjoDisplayFullName": "25-15-02-003-Ä - Kiruna Södra ÄSO"
+          },
+          {
+            "AjoId": 772045,
+            "AfoId": 1,
+            "Name": "Lassijärvi",
+            "AjoDisplayFullName": "25-15-02-004-A - Lassijärvi"
+          },
+          {
+            "AjoId": 772048,
+            "AfoId": 1,
+            "Name": "Team Parakka",
+            "AjoDisplayFullName": "25-15-02-005-A - Team Parakka"
+          },
+          {
+            "AjoId": 772118,
+            "AfoId": 1,
+            "Name": "Jölget Korkkio",
+            "AjoDisplayFullName": "25-15-02-006-A - Jölget Korkkio"
+          },
+          {
+            "AjoId": 772477,
+            "AfoId": 1,
+            "Name": "Reikäkivenvuoma",
+            "AjoDisplayFullName": "25-15-02-007-A - Reikäkivenvuoma"
+          },
+          {
+            "AjoId": 772478,
+            "AfoId": 1,
+            "Name": "Saivonpalo",
+            "AjoDisplayFullName": "25-15-02-008-A - Saivonpalo"
+          },
+          {
+            "AjoId": 772881,
+            "AfoId": 1,
+            "Name": "Lihavaara",
+            "AjoDisplayFullName": "25-15-02-009-A - Lihavaara"
+          },
+          {
+            "AjoId": 722416,
+            "AfoId": 1,
+            "Name": "Ounisjoki Jaktlag",
+            "AjoDisplayFullName": "25-15-02-101-A - Ounisjoki Jaktlag"
+          },
+          {
+            "AjoId": 722418,
+            "AfoId": 1,
+            "Name": "Herranmukka Jaktlag",
+            "AjoDisplayFullName": "25-15-02-103-A - Herranmukka Jaktlag"
+          },
+          {
+            "AjoId": 722419,
+            "AfoId": 1,
+            "Name": "Kuoksu Byamarker",
+            "AjoDisplayFullName": "25-15-02-105-A - Kuoksu Byamarker"
+          },
+          {
+            "AjoId": 722420,
+            "AfoId": 1,
+            "Name": "Mikkelirova-Kiviniemi Jaktlag",
+            "AjoDisplayFullName": "25-15-02-106-A - Mikkelirova-Kiviniemi Jaktlag"
+          },
+          {
+            "AjoId": 722421,
+            "AfoId": 1,
+            "Name": "Vivungi Jaktklubb",
+            "AjoDisplayFullName": "25-15-02-107-A - Vivungi Jaktklubb"
+          },
+          {
+            "AjoId": 722422,
+            "AfoId": 1,
+            "Name": "Masugnsbyns Jvf",
+            "AjoDisplayFullName": "25-15-02-108-A - Masugnsbyns Jvf"
+          },
+          {
+            "AjoId": 722423,
+            "AfoId": 1,
+            "Name": "Nedre Parakka Jaktlag",
+            "AjoDisplayFullName": "25-15-02-109-A - Nedre Parakka Jaktlag"
+          },
+          {
+            "AjoId": 722424,
+            "AfoId": 1,
+            "Name": "Jylkkyvaara Jaktområde",
+            "AjoDisplayFullName": "25-15-02-110-A - Jylkkyvaara Jaktområde"
+          },
+          {
+            "AjoId": 722425,
+            "AfoId": 1,
+            "Name": "Piilijärvi Vvo",
+            "AjoDisplayFullName": "25-15-02-111-A - Piilijärvi Vvo"
+          },
+          {
+            "AjoId": 722426,
+            "AfoId": 1,
+            "Name": "Lainio Jaktskytteklubb",
+            "AjoDisplayFullName": "25-15-02-112-A - Lainio Jaktskytteklubb"
+          },
+          {
+            "AjoId": 722427,
+            "AfoId": 1,
+            "Name": "Övre Parakka Jaktlag",
+            "AjoDisplayFullName": "25-15-02-113-A - Övre Parakka Jaktlag"
+          },
+          {
+            "AjoId": 722428,
+            "AfoId": 1,
+            "Name": "Merasjärvi Jaktlag",
+            "AjoDisplayFullName": "25-15-02-114-A - Merasjärvi Jaktlag"
+          },
+          {
+            "AjoId": 722429,
+            "AfoId": 1,
+            "Name": "Jukkasjärvi Sockenallmänning",
+            "AjoDisplayFullName": "25-15-02-115-A - Jukkasjärvi Sockenallmänning"
+          },
+          {
+            "AjoId": 722430,
+            "AfoId": 1,
+            "Name": "Valkeajärvi jaktlag",
+            "AjoDisplayFullName": "25-15-02-116-A - Valkeajärvi jaktlag"
+          },
+          {
+            "AjoId": 722431,
+            "AfoId": 1,
+            "Name": "Masugnsbyns jaktlag",
+            "AjoDisplayFullName": "25-15-02-118-A - Masugnsbyns jaktlag"
+          },
+          {
+            "AjoId": 722432,
+            "AfoId": 1,
+            "Name": "Lundströms",
+            "AjoDisplayFullName": "25-15-02-119-A - Lundströms"
+          },
+          {
+            "AjoId": 722433,
+            "AfoId": 1,
+            "Name": "Junovinsa",
+            "AjoDisplayFullName": "25-15-02-120-A - Junovinsa"
+          },
+          {
+            "AjoId": 722435,
+            "AfoId": 1,
+            "Name": "Normarova",
+            "AjoDisplayFullName": "25-15-02-122-A - Normarova"
+          },
+          {
+            "AjoId": 722437,
+            "AfoId": 1,
+            "Name": "Neitigården",
+            "AjoDisplayFullName": "25-15-02-124-A - Neitigården"
+          },
+          {
+            "AjoId": 724568,
+            "AfoId": 1,
+            "Name": "Särkiletho",
+            "AjoDisplayFullName": "25-15-02-125-A - Särkiletho"
+          },
+          {
+            "AjoId": 772476,
+            "AfoId": 1,
+            "Name": "Kuusivaara Övre Soppero",
+            "AjoDisplayFullName": "25-15-03-002-A - Kuusivaara Övre Soppero"
+          },
+          {
+            "AjoId": 772479,
+            "AfoId": 1,
+            "Name": "Suijavaara Jaktlag",
+            "AjoDisplayFullName": "25-15-03-003-A - Suijavaara Jaktlag"
+          },
+          {
+            "AjoId": 772633,
+            "AfoId": 1,
+            "Name": "Saivo 22",
+            "AjoDisplayFullName": "25-15-03-004-A - Saivo 22"
+          },
+          {
+            "AjoId": 772764,
+            "AfoId": 1,
+            "Name": "Auvattivuoma",
+            "AjoDisplayFullName": "25-15-03-005-A - Auvattivuoma"
+          },
+          {
+            "AjoId": 722438,
+            "AfoId": 1,
+            "Name": "Liedakka",
+            "AjoDisplayFullName": "25-15-03-101-A - Liedakka"
+          },
+          {
+            "AjoId": 722439,
+            "AfoId": 1,
+            "Name": "Ruodusniemi Jaktlag",
+            "AjoDisplayFullName": "25-15-03-102-A - Ruodusniemi Jaktlag"
+          },
+          {
+            "AjoId": 722440,
+            "AfoId": 1,
+            "Name": "Kuttainen Älgjaktområde",
+            "AjoDisplayFullName": "25-15-03-103-A - Kuttainen Älgjaktområde"
+          },
+          {
+            "AjoId": 722441,
+            "AfoId": 1,
+            "Name": "Idivuoma Jaktlag",
+            "AjoDisplayFullName": "25-15-03-104-A - Idivuoma Jaktlag"
+          },
+          {
+            "AjoId": 722442,
+            "AfoId": 1,
+            "Name": "Könkämä Sameby",
+            "AjoDisplayFullName": "25-15-03-105-A - Könkämä Sameby"
+          },
+          {
+            "AjoId": 722443,
+            "AfoId": 1,
+            "Name": "Pounovuoma Jaktlag",
+            "AjoDisplayFullName": "25-15-03-106-A - Pounovuoma Jaktlag"
+          },
+          {
+            "AjoId": 722444,
+            "AfoId": 1,
+            "Name": "Lainiovuoma Sameby",
+            "AjoDisplayFullName": "25-15-03-107-A - Lainiovuoma Sameby"
+          },
+          {
+            "AjoId": 722445,
+            "AfoId": 1,
+            "Name": "Länsstyrelsens Upplåtelsejaktlag",
+            "AjoDisplayFullName": "25-15-03-108-A - Länsstyrelsens Upplåtelsejaktlag"
+          },
+          {
+            "AjoId": 722446,
+            "AfoId": 1,
+            "Name": "Mertajärvi Jaktlag",
+            "AjoDisplayFullName": "25-15-03-109-A - Mertajärvi Jaktlag"
+          },
+          {
+            "AjoId": 722447,
+            "AfoId": 1,
+            "Name": "Idivuoma-Mertajärvi Byalag",
+            "AjoDisplayFullName": "25-15-03-110-A - Idivuoma-Mertajärvi Byalag"
+          },
+          {
+            "AjoId": 722448,
+            "AfoId": 1,
+            "Name": "Kaarejoki Jakt",
+            "AjoDisplayFullName": "25-15-03-111-A - Kaarejoki Jakt"
+          },
+          {
+            "AjoId": 722449,
+            "AfoId": 1,
+            "Name": "Maunu Byalag",
+            "AjoDisplayFullName": "25-15-03-112-A - Maunu Byalag"
+          },
+          {
+            "AjoId": 722450,
+            "AfoId": 1,
+            "Name": "Leipivaara Jaktlag",
+            "AjoDisplayFullName": "25-15-03-113-A - Leipivaara Jaktlag"
+          },
+          {
+            "AjoId": 722451,
+            "AfoId": 1,
+            "Name": "Karesuando Byasamfällighet",
+            "AjoDisplayFullName": "25-15-03-114-A - Karesuando Byasamfällighet"
+          },
+          {
+            "AjoId": 722452,
+            "AfoId": 1,
+            "Name": "Saivomuotka Jaktklubb",
+            "AjoDisplayFullName": "25-15-03-115-A - Saivomuotka Jaktklubb"
+          },
+          {
+            "AjoId": 722453,
+            "AfoId": 1,
+            "Name": "Auskari jaktlag",
+            "AjoDisplayFullName": "25-15-03-116-A - Auskari jaktlag"
+          },
+          {
+            "AjoId": 724569,
+            "AfoId": 1,
+            "Name": "Peurajärvi jaktlag",
+            "AjoDisplayFullName": "25-15-03-118-A - Peurajärvi jaktlag"
+          },
+          {
+            "AjoId": 725776,
+            "AfoId": 1,
+            "Name": "Maunu byaallmänning",
+            "AjoDisplayFullName": "25-15-03-119-A - Maunu byaallmänning"
+          },
+          {
+            "AjoId": 725777,
+            "AfoId": 1,
+            "Name": "Kuukavuoma jaktlag",
+            "AjoDisplayFullName": "25-15-03-120-A - Kuukavuoma jaktlag"
+          },
+          {
+            "AjoId": 725778,
+            "AfoId": 1,
+            "Name": "Kuttainen Raja lag",
+            "AjoDisplayFullName": "25-15-03-121-A - Kuttainen Raja lag"
+          },
+          {
+            "AjoId": 725780,
+            "AfoId": 1,
+            "Name": "Paittasjärvi Jaktlag",
+            "AjoDisplayFullName": "25-15-03-122-A - Paittasjärvi Jaktlag"
+          },
+          {
+            "AjoId": 725781,
+            "AfoId": 1,
+            "Name": "Kaarevaara Jaktlag",
+            "AjoDisplayFullName": "25-15-03-123-A - Kaarevaara Jaktlag"
+          }
+        ]
+      }
+    ],
+    "note": "One official portal report configuration; CSV fields map the rendered grouped table, values preserved as displayed. The historical Gräsmyrs VVO is a separate identity and is not treated as the same area."
+  },
+  "interpretation": "Cumulative portal report values observed at capture time; changes are not exact kill dates and may reflect delayed reporting or corrections."
+}
