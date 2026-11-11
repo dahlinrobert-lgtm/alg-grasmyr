@@ -69,14 +69,15 @@ jobs:
       - name: Build public dashboard export
         run: python scripts/build_regional_dashboard_export.py
       - name: Commit validated snapshots and dashboard export
+        working-directory: ${{ github.workspace }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$GITHUB_WORKSPACE" config user.name "github-actions[bot]"
+          git -C "$GITHUB_WORKSPACE" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           mkdir -p data/regional_pilot_intraday
-          git add -A data/regional_pilot_snapshots/ data/regional_pilot_intraday/ data/regional_pilot_dashboard.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Store daily regional Älgdata snapshots and dashboard export"
-            git push
+          git -C "$GITHUB_WORKSPACE" add -A data/regional_pilot_snapshots/ data/regional_pilot_intraday/ data/regional_pilot_dashboard.json
+          if ! git -C "$GITHUB_WORKSPACE" diff --cached --quiet; then
+            git -C "$GITHUB_WORKSPACE" commit -m "Store daily regional Älgdata snapshots and dashboard export"
+            git -C "$GITHUB_WORKSPACE" push
           else
             echo "No new regional snapshot changes to commit."
           fi
@@ -88,6 +89,7 @@ jobs:
           path: |
             out/geographic-pilot/
             data/regional_pilot_snapshots/
+            data/regional_pilot_intraday/
             data/regional_pilot_dashboard.json
           if-no-files-found: warn
           retention-days: 30
