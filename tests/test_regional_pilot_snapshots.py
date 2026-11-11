@@ -63,6 +63,33 @@ class RegionalPilotSnapshotTests(unittest.TestCase):
             self.assertEqual(read_csv_total(observation),"4")
             self.assertEqual(len(list(intraday.rglob("*.json"))),1)
 
+
+    def test_records_explicit_no_data_without_creating_zero_snapshot(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); pilot=root/"pilot"; pilot.mkdir(); out=root/"history"
+            self.make_pilot(pilot)
+            folder=pilot/"01-test-lan-123456"
+            (folder/"report.csv").unlink()
+            report={"selected_area":{"area_id":"123456","display_label":"12-34-56-A - Testområde"},
+                    "hunting_year_to_selected":"2026/2027","data_csv":None,
+                    "data_csv_rows":0,"data_status":"no_rendered_rows","errors":[]}
+            (folder/"download-report.json").write_text(json.dumps(report),encoding="utf-8")
+            summary=json.loads((pilot/"pilot_summary.json").read_text())
+            summary["data_available_count"]=0
+            summary["no_data_count"]=1
+            summary["data_row_count"]=0
+            summary["results"][0]["data_available"]=False
+            summary["results"][0]["data_csv_rows"]=0
+            summary["results"][0]["data_status"]="no_rendered_rows"
+            (pilot/"pilot_summary.json").write_text(json.dumps(summary),encoding="utf-8")
+            status_root=root/"status"
+            result=archive_pilot(pilot,out,datetime(2026,11,11,10,0,tzinfo=timezone.utc),status_root=status_root)
+            self.assertEqual(result["no_data_count"],1)
+            self.assertEqual(list(out.rglob("*.csv")),[])
+            status=json.loads(next(status_root.rglob("*.json")).read_text())
+            self.assertEqual(status["observation_status"],"no_reported_data")
+            self.assertEqual(status["row_count"],0)
+
     def test_detects_tampered_snapshot(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); pilot=root/"pilot"; pilot.mkdir(); out=root/"history"
