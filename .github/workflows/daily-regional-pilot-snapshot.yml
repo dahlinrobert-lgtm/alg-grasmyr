@@ -68,6 +68,26 @@ jobs:
         run: python scripts/validate_regional_pilot_snapshots.py --root data/regional_pilot_snapshots --intraday-root data/regional_pilot_intraday
       - name: Build public dashboard export
         run: python scripts/build_regional_dashboard_export.py
+      - name: Diagnose Git workspace inside Playwright container
+        working-directory: ${{ github.workspace }}
+        run: |
+          echo "pwd=$(pwd)"
+          echo "GITHUB_WORKSPACE=$GITHUB_WORKSPACE"
+          echo "RUNNER_WORKSPACE=$RUNNER_WORKSPACE"
+          echo "Workspace directory:"
+          ls -la "$GITHUB_WORKSPACE"
+          echo "Git metadata entry:"
+          if [ -e "$GITHUB_WORKSPACE/.git" ]; then
+            ls -la "$GITHUB_WORKSPACE/.git"
+            if [ -f "$GITHUB_WORKSPACE/.git" ]; then
+              cat "$GITHUB_WORKSPACE/.git"
+            fi
+          else
+            echo ".git is absent from GITHUB_WORKSPACE"
+          fi
+          echo "Git repository detection:"
+          git -C "$GITHUB_WORKSPACE" rev-parse --show-toplevel
+          git -C "$GITHUB_WORKSPACE" status --short
       - name: Commit validated snapshots and dashboard export
         working-directory: ${{ github.workspace }}
         run: |
