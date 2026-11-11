@@ -105,7 +105,7 @@ def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | No
                 if json.loads(status_path.read_text(encoding="utf-8")) != status:
                     raise FileExistsError(f"{key}: refusing to overwrite existing no-data status for {date}")
             else:
-                status_path.write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+                status_path.write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             no_data_recorded.append(key)
             continue
         csv_name = report.get("data_csv")
