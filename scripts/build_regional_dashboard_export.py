@@ -90,8 +90,39 @@ def build_area(folder: Path) -> dict:
     }
 
 
-def build_export(root: Path) -> dict:
-    areas = [build_area(folder) for folder in sorted(root.iterdir()) if folder.is_dir()]
+def build_export(root: Path, status_root: Path | None = None) -> dict:
+    areas_by_key = {area["area_key"]: area for area in
+                    (build_area(folder) for folder in sorted(root.iterdir()) if folder.is_dir())}
+    status_root = status_root or root.parent / "regional_pilot_status"
+    if status_root.exists():
+        for folder in sorted(p for p in status_root.iterdir() if p.is_dir()):
+            statuses = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(folder.glob("*.json"))]
+            if not statuses:
+                continue
+            latest_status = statuses[-1]
+            area = areas_by_key.get(folder.name)
+            if area is None:
+                area = {
+                    "area_key": folder.name, "area_id": latest_status.get("area_id"),
+                    "area_display_id": latest_status.get("area_display_id"),
+                    "area_name": latest_status.get("area_name") or latest_status.get("area_display_id") or folder.name,
+                    "area_name_missing": not bool(latest_status.get("area_name")),
+                    "county": latest_status.get("county"), "afo": latest_status.get("afo"),
+                    "hunting_season": latest_status.get("hunting_season"), "snapshot_count": 0,
+                    "first_snapshot_date": None, "latest_snapshot_date": None,
+                    "first_observed_positive_date": None, "latest_observed_increase_date": None,
+                    "latest_total": None, "latest_delta": None, "slutrapporterat": None, "snapshots": []
+                }
+                areas_by_key[folder.name] = area
+            area["latest_observation_status"] = latest_status.get("observation_status")
+            area["latest_observation_date"] = latest_status.get("snapshot_date_utc")
+            area["latest_data_status"] = latest_status.get("data_status")
+            area["no_data_observation_count"] = len(statuses)
+            area["no_data_observations"] = [
+                {"date": item.get("snapshot_date_utc"), "status": item.get("data_status")}
+                for item in statuses
+            ]
+    areas = list(areas_by_key.values())
     areas.sort(key=lambda x: (x.get("county") or "", x.get("area_name") or ""))
     dates = sorted({s["date"] for a in areas for s in a["snapshots"]})
     latest_date = max(dates) if dates else None
@@ -121,8 +152,9 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path("data/regional_pilot_snapshots"))
     parser.add_argument("--output", type=Path, default=Path("data/regional_pilot_dashboard.json"))
+    parser.add_argument("--status-root", type=Path, default=Path("data/regional_pilot_status"))
     args = parser.parse_args()
-    payload = build_export(args.root)
+    payload = build_export(args.root, args.status_root)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({
