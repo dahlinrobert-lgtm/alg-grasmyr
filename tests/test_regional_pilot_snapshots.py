@@ -27,11 +27,12 @@ class RegionalPilotSnapshotTests(unittest.TestCase):
         with csv_path.open("w",encoding="utf-8",newline="") as h:
             w=csv.DictWriter(h,fieldnames=list(row),delimiter=";");w.writeheader();w.writerow(row)
         report = {"selected_area":{"area_id":"123456","display_label":"12-34-56-A - Testområde"},
-                  "hunting_year_to_selected":"2026/2027","data_csv":"report.csv","errors":[]}
+                  "hunting_year_to_selected":"2026/2027","data_csv":"report.csv",
+                  "data_csv_rows":1,"data_status":"data_rows","errors":[]}
         (folder/"download-report.json").write_text(json.dumps(report),encoding="utf-8")
         result = {"area_id":"123456","county":"Test län","afo_name":"Test ÄFO",
                   "portal_selection_success":True,"selected_to_year":"2026/2027",
-                  "boundary_mode":"current"}
+                  "boundary_mode":"current","data_available":True,"data_csv_rows":1,"data_status":"data_rows"}
         summary={"candidate_count":1,"min_end_year":2026,"results":[result],
                  "portal_selection_success_count":1,"data_available_count":1,"data_row_count":1,
                  "failure_count":0,"identity_collisions":[]}
