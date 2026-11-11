@@ -76,6 +76,25 @@ class RegionalDashboardExportTests(unittest.TestCase):
             self.assertEqual(area["catalogue_area_name"], "A")
             self.assertIn("missing_jaktomradesnamn", area["quality_flags"])
 
+
+    def test_export_includes_area_with_no_reported_data_without_zero_values(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); snapshots=root/"snapshots"; snapshots.mkdir()
+            statuses=root/"status"; folder=statuses/"skane-lan-12-10-07-105-a"; folder.mkdir(parents=True)
+            (folder/"2026-11-11.json").write_text(json.dumps({
+                "area_key":folder.name,"area_id":"718250","area_display_id":"12-10-07-105-Ä",
+                "area_name":"Glimåkra älgskötselområde","county":"Skåne län",
+                "afo":"Nordöstra älgförvaltningsområdet","hunting_season":"2026/2027",
+                "snapshot_date_utc":"2026-11-11","observation_status":"no_reported_data",
+                "data_status":"no_rendered_rows","row_count":0
+            }),encoding="utf-8")
+            payload=build_export(snapshots,statuses)
+            self.assertEqual(payload["area_count"],1)
+            area=payload["areas"][0]
+            self.assertEqual(area["latest_observation_status"],"no_reported_data")
+            self.assertIsNone(area["latest_total"])
+            self.assertEqual(area["snapshot_count"],0)
+
     def test_export_reports_latest_coverage(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
