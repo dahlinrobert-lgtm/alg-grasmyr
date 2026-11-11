@@ -36,7 +36,7 @@ def area_key(candidate: dict) -> str:
 
 
 def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | None = None,
-                  intraday_root: Path | None = None) -> dict:
+                  intraday_root: Path | None = None, status_root: Path | None = None) -> dict:
     captured_at = captured_at or datetime.now(timezone.utc)
     date = captured_at.date().isoformat()
     summary = json.loads((pilot_dir / "pilot_summary.json").read_text(encoding="utf-8"))
@@ -47,9 +47,8 @@ def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | No
         raise ValueError("Pilot candidate count is empty or inconsistent")
     if (len(results) != len(candidates)
             or summary.get("portal_selection_success_count") != len(candidates)
-            or summary.get("data_available_count") != len(candidates)
-            or summary.get("data_row_count") != len(candidates)):
-        raise ValueError("Pilot must return exactly one data row for every selected area")
+            or summary.get("data_available_count", 0) + summary.get("no_data_count", 0) != len(candidates)):
+        raise ValueError("Pilot must return one successful data or explicit no-data result for every selected area")
     if summary.get("failure_count") != 0 or summary.get("identity_collisions"):
         raise ValueError("Refusing to archive pilot with failures or identity collisions")
     by_id = {str(x["area_portal_id"]): x for x in candidates}
@@ -57,7 +56,8 @@ def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | No
         raise ValueError("Duplicate portal IDs in candidate set")
     if summary.get("min_end_year") != 2026:
         raise ValueError("This daily baseline workflow is pinned to 2026/2027")
-    archived, unchanged, intraday_archived = [], [], []
+    archived, unchanged, intraday_archived, no_data_recorded = [], [], [], []
+    status_root = status_root or output_root.parent / "regional_pilot_status"
     for result in results:
         portal_id = str(result["area_id"])
         candidate = by_id.get(portal_id)
@@ -79,18 +79,44 @@ def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | No
             raise ValueError(f"{portal_id}: portal selected a different area")
         if report.get("hunting_year_to_selected") != "2026/2027":
             raise ValueError(f"{portal_id}: report season mismatch")
+        if report.get("errors"):
+            raise ValueError(f"{portal_id}: portal report contains errors: {report.get('errors')}")
+        key = area_key(candidate)
+        if not result.get("data_available"):
+            if (result.get("data_status") not in {"no_rendered_table", "no_rendered_rows", "unrecognized_table_structure"}
+                    or int(result.get("data_csv_rows", -1)) != 0
+                    or int(report.get("data_csv_rows", -1)) != 0
+                    or report.get("data_status") != result.get("data_status")):
+                raise ValueError(f"{portal_id}: no-data result is not explicitly attested by the portal report")
+            status_dir = status_root / key
+            status_dir.mkdir(parents=True, exist_ok=True)
+            status_path = status_dir / f"{date}.json"
+            status = {
+                "snapshot_date_utc": date, "captured_at_utc": captured_at.isoformat(),
+                "observation_status": "no_reported_data", "data_status": result["data_status"],
+                "source": "Länsstyrelsernas Älgdata statistikportal", "area_key": key,
+                "area_id": portal_id, "area_display_id": candidate.get("area_display_id", ""),
+                "area_name": candidate.get("area_name", ""), "county": candidate["county"],
+                "afo": candidate["afo_name"], "hunting_season": "2026/2027", "row_count": 0,
+                "download_report": report,
+                "interpretation": "Area selection succeeded, but the portal returned no report rows at capture time. This is not equivalent to zero harvested animals."
+            }
+            if status_path.exists():
+                if json.loads(status_path.read_text(encoding="utf-8")) != status:
+                    raise FileExistsError(f"{key}: refusing to overwrite existing no-data status for {date}")
+            else:
+                status_path.write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            no_data_recorded.append(key)
+            continue
         csv_name = report.get("data_csv")
         source_csv = folder / csv_name if csv_name else None
         if source_csv is None or not source_csv.is_file():
             raise ValueError(f"{portal_id}: missing source CSV")
-        if report.get("errors"):
-            raise ValueError(f"{portal_id}: portal report contains errors: {report.get('errors')}")
         row = read_one_row(source_csv)
         if row.get("registreringsnummer") != str(selected_area.get("display_label", "")).split(" - ")[0]:
             raise ValueError(f"{portal_id}: CSV registration number does not match portal selection")
         if row.get("slutrapporterat") not in {"Ja", "Nej"}:
             raise ValueError(f"{portal_id}: invalid slutrapporterat flag")
-        key = area_key(candidate)
         target = output_root / key
         target.mkdir(parents=True, exist_ok=True)
         csv_path = target / f"{date}.csv"
@@ -184,6 +210,7 @@ def archive_pilot(pilot_dir: Path, output_root: Path, captured_at: datetime | No
         "snapshot_date_utc": date, "candidate_count": len(candidates),
         "archived_count": len(archived), "unchanged_count": len(unchanged),
         "intraday_archived_count": len(intraday_archived), "intraday_observations": intraday_archived,
+        "no_data_count": len(no_data_recorded), "area_keys_no_data": no_data_recorded,
         "area_keys_archived": archived, "area_keys_unchanged": unchanged,
         "output_root": str(output_root)
     }
@@ -196,8 +223,10 @@ def main() -> int:
     parser.add_argument("--pilot-dir", type=Path, default=Path("out/geographic-pilot"))
     parser.add_argument("--output-root", type=Path, default=Path("data/regional_pilot_snapshots"))
     parser.add_argument("--intraday-root", type=Path, default=Path("data/regional_pilot_intraday"))
+    parser.add_argument("--status-root", type=Path, default=Path("data/regional_pilot_status"))
     args = parser.parse_args()
-    archive_pilot(args.pilot_dir, args.output_root, intraday_root=args.intraday_root)
+    archive_pilot(args.pilot_dir, args.output_root, intraday_root=args.intraday_root,
+                  status_root=args.status_root)
     return 0
 
 

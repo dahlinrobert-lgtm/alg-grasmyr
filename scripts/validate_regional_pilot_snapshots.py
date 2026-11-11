@@ -114,6 +114,28 @@ def validate_intraday_root(root: Path) -> list[str]:
                     errors.append(f"{area_dir.name}/{date_dir.name}/{stem}: cannot validate observation: {exc}")
     return errors
 
+def validate_status_root(root: Path) -> list[str]:
+    if not root.exists():
+        return []
+    errors = []
+    for area_dir in sorted(p for p in root.iterdir() if p.is_dir()):
+        for status_path in sorted(area_dir.glob("*.json")):
+            try:
+                meta = json.loads(status_path.read_text(encoding="utf-8"))
+                if meta.get("observation_status") != "no_reported_data":
+                    errors.append(f"{area_dir.name}/{status_path.name}: invalid no-data status")
+                if meta.get("area_key") != area_dir.name or meta.get("snapshot_date_utc") != status_path.stem:
+                    errors.append(f"{area_dir.name}/{status_path.name}: identity/date mismatch")
+                if meta.get("row_count") != 0 or meta.get("data_status") not in {"no_rendered_table", "no_rendered_rows", "unrecognized_table_structure"}:
+                    errors.append(f"{area_dir.name}/{status_path.name}: invalid no-data metadata")
+                captured = datetime.fromisoformat(str(meta.get("captured_at_utc", "")).replace("Z", "+00:00"))
+                if captured.tzinfo is None:
+                    raise ValueError("timezone missing")
+            except Exception as exc:
+                errors.append(f"{area_dir.name}/{status_path.name}: cannot validate no-data status: {exc}")
+    return errors
+
+
 def validate_root(root: Path) -> list[str]:
     if not root.is_dir():
         return [f"snapshot root does not exist: {root}"]
@@ -130,8 +152,9 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path("data/regional_pilot_snapshots"))
     parser.add_argument("--intraday-root", type=Path, default=Path("data/regional_pilot_intraday"))
+    parser.add_argument("--status-root", type=Path, default=Path("data/regional_pilot_status"))
     args = parser.parse_args()
-    errors = validate_root(args.root) + validate_intraday_root(args.intraday_root)
+    errors = validate_root(args.root) + validate_intraday_root(args.intraday_root) + validate_status_root(args.status_root)
     print(json.dumps({"valid": not errors, "error_count": len(errors), "errors": errors}, ensure_ascii=False, indent=2))
     return 1 if errors else 0
 
