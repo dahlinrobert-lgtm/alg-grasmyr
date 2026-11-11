@@ -96,7 +96,8 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git -c safe.directory="$GITHUB_WORKSPACE" -C "$GITHUB_WORKSPACE" config user.name "github-actions[bot]"
           git -c safe.directory="$GITHUB_WORKSPACE" -C "$GITHUB_WORKSPACE" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          mkdir -p data/regional_pilot_intraday
+          # Keep optional archive roots present even when this run has no entries.
+          mkdir -p data/regional_pilot_intraday data/regional_pilot_status
           git -c safe.directory="$GITHUB_WORKSPACE" -C "$GITHUB_WORKSPACE" add -A data/regional_pilot_snapshots/ data/regional_pilot_intraday/ data/regional_pilot_status/ data/regional_pilot_dashboard.json
           if ! git -c safe.directory="$GITHUB_WORKSPACE" -C "$GITHUB_WORKSPACE" diff --cached --quiet; then
             git -c safe.directory="$GITHUB_WORKSPACE" -C "$GITHUB_WORKSPACE" commit -m "Store daily regional Älgdata snapshots and dashboard export"
