@@ -1,0 +1,1823 @@
+{
+  "snapshot_date_utc": "2026-11-12",
+  "captured_at_utc": "2026-11-12T17:09:52.966823+00:00",
+  "source": "Länsstyrelsernas Älgdata statistikportal",
+  "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+  "area_key": "sk-ne-l-n-12-04-01-076",
+  "area_id": "772192",
+  "area_display_id": "12-04-01-076",
+  "area_name": "",
+  "catalogue_area_name": "A",
+  "quality_flags": [
+    "missing_jaktomradesnamn"
+  ],
+  "county": "Skåne län",
+  "afo": "Mellersta Norra älgförvaltningsområdet",
+  "boundary_mode": "current",
+  "report_id": "4",
+  "report_name": "Avskjutning med mål — ÄJO",
+  "hunting_season": "2026/2027",
+  "slutrapporterat": "Nej",
+  "csv_file": "2026-11-12.csv",
+  "sha256": "5984fd413bb2f92c690a2121acfdad7da52b07e51c5ea544cdc6e5c034bbb4c7",
+  "row_count": 1,
+  "previous_snapshot": "2026-11-11.csv",
+  "previous_area_id": "772192",
+  "changes_since_previous_snapshot": [],
+  "download_report": {
+    "inspected_at_utc": "2026-11-12T17:09:21.427237+00:00",
+    "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+    "county": "Skåne län",
+    "afo": "Mellersta Norra älgförvaltningsområdet",
+    "selected_area": {
+      "area_id": "772192",
+      "display_label": "12-04-01-076-A"
+    },
+    "report_config": {
+      "ReportCategoryId": 1,
+      "Name": "ÄJO",
+      "ReportType": 0,
+      "Report": 1,
+      "ReportLevel": 3,
+      "SearchTypeChoice": "1",
+      "Id": "4",
+      "County": "1",
+      "TypeCounty": null,
+      "TypeCountyDefault": null,
+      "TypeCountyManagement": null,
+      "TypeCountyManagementDefault": null,
+      "ElkManagement": "1",
+      "HuntingArea": "1",
+      "HuntingYearFrom": "1",
+      "HuntingYearTo": "1",
+      "ExcelReport": false,
+      "AlertInfoBeforeLoad": null,
+      "ShowOnlyYearFromForHistoricalAFO": null,
+      "option_label": "ÄJO"
+    },
+    "hunting_year_from": "2026/2027",
+    "hunting_year_to_requested": "2026/2027",
+    "hunting_year_to_selected": "2026/2027",
+    "boundary_mode": "current",
+    "navigation_error": null,
+    "errors": [],
+    "data_csv": "avskjutning_mal_ajo_772192_2026-2027_2026-2027.csv",
+    "data_csv_rows": 1,
+    "data_status": "data_rows",
+    "data_csv_size_bytes": 596,
+    "before_stats": {
+      "title": "Statistik Älgdata",
+      "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+      "visible_text": "Statistik\nVälj...\nNationell\nLän\nÄFO\nÄJO\nGeografiskt - Nationell\nNationell\nLän\nÄFO\nVuxna djur - Nationell\nVuxna djur - Län\nVuxna djur - ÄFO\nVuxna djur - ÄJO\nVuxna djur - Nationell\nVuxna djur - Län\nVuxna djur - ÄFO\nVuxna djur - ÄJO\nNationell\nLän\nÄFO\nNationell\nLän\nÄFO\nÄJO\nNationell\nNationell (per ÄFO)\nLän\nÄFO\nÄJO\nNationell\nLän\nÄFO\nÄJO\nÄBIN Län\nÄBIN Äfo samtliga\nÄBIN Äfo\nFoderprognos Län\nFoderprognos Äfo samtliga\nFoderprognos Äfo\nVald statistiktyp:\nAvskjutning med mål\nÄFO gränser\n Historiska gränser\n Nuvarande gränser\nLän\nVälj...\nBlekinge län\nDalarnas län\nGävleborgs län\nHallands län\nJämtlands län\nJönköpings län\nKalmar län\nKronobergs län\nNorrbottens län\nSkåne län\nStockholms län\nSödermanlands län\nUppsala län\nVärmlands län\nVästerbottens län\nVästernorrlands län\nVästmanlands län\nVästra Götalands län\nÖrebro län\nÖstergötlands län\nÄFO\nVälj...\nSödra älgförvaltningsområdet\nMellersta Älgförvaltningsområdet\nMellersta Norra älgförvaltningsområdet\nNordvästra älgförvaltningsområdet\nNordöstra älgförvaltningsområdet\nJaktår - från\n1947/1948\n1961/1962\n1967/1968\n1972/1973\n1981/1982\n1986/1987\n1987/1988\n1988/1989\n1989/1990\n1990/1991\n1991/1992\n1992/1993\n1993/1994\n1994/1995\n1995/1996\n1996/1997\n1997/1998\n1998/1999\n1999/2000\n2000/2001\n2001/2002\n2002/2003\n2003/2004\n2004/2005\n2005/2006\n2006/2007\n2007/2008\n2008/2009\n2009/2010\n2010/2011\n2011/2012\n2012/2013\n2013/2014\n2014/2015\n2015/2016\n2016/2017\n2017/2018\n2018/2019\n2019/2020\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\nJaktår - till\n1947/1948\n1961/1962\n1967/1968\n1972/1973\n1981/1982\n1986/1987\n1987/1988\n1988/1989\n1989/1990\n1990/1991\n1991/1992\n1992/1993\n1993/1994\n1994/1995\n1995/1996\n1996/1997\n1997/1998\n1998/1999\n1999/2000\n2000/2001\n2001/2002\n2002/2003\n2003/2004\n2004/2005\n2005/2006\n2006/2007\n2007/2008\n2008/2009\n2009/2010\n2010/2011\n2011/2012\n2012/2013\n2013/2014\n2014/2015\n2015/2016\n2016/2017\n2017/2018\n2018/2019\n2019/2020\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\nJaktområde\nVälj...\n12-00-99-003-A - Oregistrerad mark\n12-04-01-076-A\n12-04-01-217-Ä - Vedby-Oderljunga Älgskötselområde\n12-06-10-064-Ä - Hågnarps Älgskötselområde\n12-06-11-023-Ä - VERUMS ÄLGSKÖTSELOMRÅDE\n12-06-12-028-Ä - Vittsjöortens Älgskötselområde\n12-07-14-012-Ä - Snapphanebygdens Jägare\n12-07-20-047-Ä - Rya älgskötselområde\n12-07-21-063-Ä - VÄRSJÖ-RÖKE ÄLGSKÖTSELOMRÅDE\nv1.9.0\nStatistik älgdata\nKontakta oss\nÄlgdata\nStatistik för älgdata\n\nHär finns statistik om älgstammen och dess påverkan på skog och trafik. I menyn till vänster väljer du ut den statistik du är intresserad av. Resultatet visas i tabeller och grafer över hela skärmen.\n\nDu kan välja att exportera data för att öppna upp i bl.a. Excel.\n\nNågra tips när du använder sidan:\nDu kan välja att dölja eller visa menyn för att kunna se mer på skärmen. När du för muspekaren över graferna visas mer information. Om du klickar på graferna kan du ändra inställningarna för hur de visas. För att komma tillbaka till förstasidan för statistiken kan du klicka på Länstyrelsens logga längst upp på sidan. Vill du komma tillbaka till www.algdata.se klickar du på länken uppe till höger på sidan.\n\nDu har även möjlighet att skapa bilder, tabeller och grafer. En ny bild, graf eller tabell skapas utifrån den data som finns synlig på skärmen. Uppmärksamma att bara data som är synlig på skärmen tas med när man skapar bilder, inte den data som ligger utanför i rullistorna.\n\nStatistik\n\nÄlgdata syftar till att samla all viktig information om älgstammen och dess påverkan på skog och trafik på en plats på internet.\n\nDet här medför att älgförvaltningsgrupper, enskilda jägare och andra på ett lättare sätt kommer att hitta information, vilket underlättar en kunskapsbaserad och flexibel älgförvaltning.\n\nLänsstyrelsen har samlat in statistik över fällda älgar, slaktvikt, viltolyckor, älgobservationer, biologiskt data m.m. Statistiken hämtar även information från andra system som viltdata.\n\nLän\n\nSverige består av 21 län. Länsstyrelserna samverkar och älgstatistik samlas in från de 20 myndigheter som har älgar inom sitt geografiska område.\n\nPå älgdata kan du se statistik per län och över hela landet. I den nationella statistiken omfattas data från alla län.\n\nÄFO\n\nÄlgförvaltningsområde, benämns ofta som ÄFO. Ett älgförvaltningsområde inrättas av länsstyrelsen och motsvarar i stort sett en egen älgstam. När förvaltningen sker över stora områden kan jakten i större utsträckning planeras strategiskt utifrån bland annat skador på skog och förekomst av trafikolyckor.\n\nFörvaltningen ska vara väl förankrad i lokalsamhället och bygga på kunskap utifrån inventeringar av älg, skador och statistik.\n\nJaktområde\n\nDet finns två sorters jaktområde: älgskötselområde och licensområde.\n\nEtt älgskötselområde är en frivillig sammanslutning av jaktlag och marker som jagar inom ett område. Området ska tåla en avskjutning av minst 10 vuxna älgar per år.\n\nLicensområde kallades tidigare A-, B-, E- områden. Den nya typen av licensområden skall enligt jaktlagstiftningen klara av en avskjutning av minst en årskalv per år. Detta är ett steg i riktning mot att älgjakten och avskjutningen skall vara produktionsbaserad. En produktionsbaserad avskjutning innebär att antalet älgar som skjuts inom ett område skall motsvara det antal som marken klarar av att producera.\n\n\n",
+      "headings": [
+        "Statistik för älgdata",
+        "Statistik",
+        "Län",
+        "ÄFO",
+        "Jaktområde"
+      ],
+      "tables": [
+        {
+          "caption": "",
+          "rows": []
+        }
+      ],
+      "table_count": 1,
+      "form_controls": [
+        {
+          "id": "select-statistics",
+          "label": "rapport",
+          "value": "{\"ReportCategoryId\":1,\"Name\":\"ÄJO\",\"ReportType\":0,\"Report\":1,\"ReportLevel\":3,\"SearchTypeChoice\":\"1\",\"Id\":\"4\",\"County\":\"1\",\"TypeCounty\":null,\"TypeCountyDefault\":null,\"TypeCountyManagement\":null,\"TypeCountyManagementDefault\":null,\"ElkManagement\":\"1\",\"HuntingArea\":\"1\",\"HuntingYearFrom\":\"1\",\"HuntingYearTo\":\"1\",\"ExcelReport\":false,\"AlertInfoBeforeLoad\":null,\"ShowOnlyYearFromForHistoricalAFO\":null}",
+          "selected_text": "ÄJO",
+          "options_count": 39
+        },
+        {
+          "id": "select-county",
+          "label": "menuItemHead",
+          "value": "12",
+          "selected_text": "Skåne län",
+          "options_count": 21
+        },
+        {
+          "id": "select-afo",
+          "label": "menuItemHead",
+          "value": "3",
+          "selected_text": "Mellersta Norra älgförvaltningsområdet",
+          "options_count": 6
+        },
+        {
+          "id": "select-season-from",
+          "label": "menuItemHead",
+          "value": "2026/2027",
+          "selected_text": "2026/2027",
+          "options_count": 46
+        },
+        {
+          "id": "select-season-to",
+          "label": "menuItemHead",
+          "value": "2026/2027",
+          "selected_text": "2026/2027",
+          "options_count": 46
+        },
+        {
+          "id": "select-ajo",
+          "label": "menuItemHead",
+          "value": "772192",
+          "selected_text": "12-04-01-076-A",
+          "options_count": 10
+        }
+      ],
+      "radios": [
+        {
+          "name": "optTypeAFO",
+          "value": "F",
+          "checked": false,
+          "label": ""
+        },
+        {
+          "name": "optTypeAFO",
+          "value": "G",
+          "checked": true,
+          "label": ""
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "input",
+          "value": "Visa statistik",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Excel",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "SKV",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "SKV",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        }
+      ]
+    },
+    "after_stats": {
+      "title": "Statistik Älgdata",
+      "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+      "visible_text": "Statistik\nVälj...\nNationell\nLän\nÄFO\nÄJO\nGeografiskt - Nationell\nNationell\nLän\nÄFO\nVuxna djur - Nationell\nVuxna djur - Län\nVuxna djur - ÄFO\nVuxna djur - ÄJO\nVuxna djur - Nationell\nVuxna djur - Län\nVuxna djur - ÄFO\nVuxna djur - ÄJO\nNationell\nLän\nÄFO\nNationell\nLän\nÄFO\nÄJO\nNationell\nNationell (per ÄFO)\nLän\nÄFO\nÄJO\nNationell\nLän\nÄFO\nÄJO\nÄBIN Län\nÄBIN Äfo samtliga\nÄBIN Äfo\nFoderprognos Län\nFoderprognos Äfo samtliga\nFoderprognos Äfo\nVald statistiktyp:\nAvskjutning med mål\nÄFO gränser\n Historiska gränser\n Nuvarande gränser\nLän\nVälj...\nBlekinge län\nDalarnas län\nGävleborgs län\nHallands län\nJämtlands län\nJönköpings län\nKalmar län\nKronobergs län\nNorrbottens län\nSkåne län\nStockholms län\nSödermanlands län\nUppsala län\nVärmlands län\nVästerbottens län\nVästernorrlands län\nVästmanlands län\nVästra Götalands län\nÖrebro län\nÖstergötlands län\nÄFO\nVälj...\nSödra älgförvaltningsområdet\nMellersta Älgförvaltningsområdet\nMellersta Norra älgförvaltningsområdet\nNordvästra älgförvaltningsområdet\nNordöstra älgförvaltningsområdet\nJaktår - från\n1947/1948\n1961/1962\n1967/1968\n1972/1973\n1981/1982\n1986/1987\n1987/1988\n1988/1989\n1989/1990\n1990/1991\n1991/1992\n1992/1993\n1993/1994\n1994/1995\n1995/1996\n1996/1997\n1997/1998\n1998/1999\n1999/2000\n2000/2001\n2001/2002\n2002/2003\n2003/2004\n2004/2005\n2005/2006\n2006/2007\n2007/2008\n2008/2009\n2009/2010\n2010/2011\n2011/2012\n2012/2013\n2013/2014\n2014/2015\n2015/2016\n2016/2017\n2017/2018\n2018/2019\n2019/2020\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\nJaktår - till\n1947/1948\n1961/1962\n1967/1968\n1972/1973\n1981/1982\n1986/1987\n1987/1988\n1988/1989\n1989/1990\n1990/1991\n1991/1992\n1992/1993\n1993/1994\n1994/1995\n1995/1996\n1996/1997\n1997/1998\n1998/1999\n1999/2000\n2000/2001\n2001/2002\n2002/2003\n2003/2004\n2004/2005\n2005/2006\n2006/2007\n2007/2008\n2008/2009\n2009/2010\n2010/2011\n2011/2012\n2012/2013\n2013/2014\n2014/2015\n2015/2016\n2016/2017\n2017/2018\n2018/2019\n2019/2020\n2020/2021\n2021/2022\n2022/2023\n2023/2024\n2024/2025\n2025/2026\n2026/2027\nJaktområde\nVälj...\n12-00-99-003-A - Oregistrerad mark\n12-04-01-076-A\n12-04-01-217-Ä - Vedby-Oderljunga Älgskötselområde\n12-06-10-064-Ä - Hågnarps Älgskötselområde\n12-06-11-023-Ä - VERUMS ÄLGSKÖTSELOMRÅDE\n12-06-12-028-Ä - Vittsjöortens Älgskötselområde\n12-07-14-012-Ä - Snapphanebygdens Jägare\n12-07-20-047-Ä - Rya älgskötselområde\n12-07-21-063-Ä - VÄRSJÖ-RÖKE ÄLGSKÖTSELOMRÅDE\nv1.9.0\nStatistik älgdata\nKontakta oss\nÄlgdata\n Förvaltande län - Län som administrerar älgförvaltningsområden som kan vara indelade oberoende av länsgräns. I kolumnstycket \"Avskjutningsmål ÄJO\" behöver summan av han- och hondjur inte vara samma som antalet vuxna djur då det finns jaktområden som inte har könskvoterad tilldelning.\n\n\nI urvalet ingår ett eller flera jaktår där rapportering fortfarande pågår. För dessa år kan data saknas och statistiken därmed vara inkomplett.\n Kom ihåg inställningar för tabellen.\nVisa 10 rader\nDölj/visa kolumner\nExcel\nSKV\nSpara som bild\nSök:\nRegistreringsnummer\tJaktområdets namn\tSlut- rapporterat\tRegistrerad areal ha\tFällda älgar\tTjur %\tKalv %\tAvskjutningsmål ÄJO\tNyttjandegrad - ÄJO\nVuxen\tHandjur\tHondjur\tKalv\tHandjur kalv\tHondjur kalv\tTotalt\tVarav otjänliga\tVarav oregistrerad mark\tÄlgar/ 1000 ha\tVuxen\tHandjur\tHondjur\tKalv\tTotalt\tÄlgar/ 1000 ha\tVuxen\tKalv\tTotalt\nRegistreringsnummer\n\t\nJaktområdets namn\n\t\nSlut- rapporterat\n\t\nRegistrerad areal ha\n\t\nFällda älgar\n\t\nTjur %\n\t\nKalv %\n\t\nAvskjutningsmål ÄJO\n\t\nNyttjandegrad - ÄJO\n\n\nVuxen\n\t\nHandjur\n\t\nHondjur\n\t\nKalv\n\t\nHandjur kalv\n\t\nHondjur kalv\n\t\nTotalt\n\t\nVarav otjänliga\n\t\nVarav oregistrerad mark\n\t\nÄlgar/ 1000 ha\n\t\nVuxen\n\t\nHandjur\n\t\nHondjur\n\t\nKalv\n\t\nTotalt\n\t\nÄlgar/ 1000 ha\n\t\nVuxen\n\t\nKalv\n\t\nTotalt\n\n\nSumma:\n\t\n\t\n\t\n1 869,35 (1 869,35)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n\t\n\t\n\t\n0 (0)\n\t\n0 (0)\n\t\n0 (0)\n\t\n1 (1)\n\t\n1 (1)\n\t\n\t\n\t\n\t\n\n12-04-01-076-A\t\tNej\t1869,35\t0\t0\t0\t0\t0\t0\t0\t0\t0\t-\t-\t-\t0\t0\t0\t1\t1\t0,5\t-\t-\t-\nSumma:\t\t\t1 869,35 (1 869,35)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t0 (0)\t\t\t\t0 (0)\t0 (0)\t0 (0)\t1 (1)\t1 (1)\t\t\t\t\nVisar 1 till 1 av totalt 1 rader\nFöregående\n1\nNästa\nTotalt antal fällda älgar - Jaktområde - Nuvarande gränser - 12-04-01-076-A - 2026/2027\nBar chart with 1 bar.\nGenererad av www.algdata.se\nThe chart has 1 X axis displaying Säsong.\nThe chart has 1 Y axis displaying Antal. Data ranges from -0.5 to 0.5.\nSäsong\nAntal\nTotalt antal fällda älgar - Jaktområde - Nuvarande gränser - 12-04-01-076-A - 2026/2027\nGenererad av www.algdata.se\n12-04-01-076-A\n2026/2027\n0\nEnd of interactive chart.\n\n\nNyttjandegrad av avskjutningsmål ÄJO - Jaktområde - Nuvarande gränser - 12-04-01-076-A - 2026/2027\nBar chart with 1 bar.\nGenererad av www.algdata.se\nThe chart has 1 X axis displaying Säsong.\nThe chart has 1 Y axis displaying Nyttjandegrad. Data ranges from 0 to 0.\nSäsong\nNyttjandegrad\nNyttjandegrad av avskjutningsmål ÄJO - Jaktområde - Nuvarande gränser - 12-04-01-076-A - 2026/2027\nGenererad av www.algdata.se\n12-04-01-076-A\n2026/2027\nEnd of interactive chart.\n\n\n\n\n\n\n\n\n\n\n\n",
+      "headings": [
+        "Statistik för älgdata",
+        "Statistik",
+        "Län",
+        "ÄFO",
+        "Jaktområde"
+      ],
+      "tables": [
+        {
+          "caption": "",
+          "rows": [
+            [
+              "Registreringsnummer",
+              "Jaktområdets namn",
+              "Slut- rapporterat",
+              "Registrerad areal ha",
+              "Fällda älgar",
+              "Tjur %",
+              "Kalv %",
+              "Avskjutningsmål ÄJO",
+              "Nyttjandegrad - ÄJO"
+            ],
+            [
+              "Vuxen",
+              "Handjur",
+              "Hondjur",
+              "Kalv",
+              "Handjur kalv",
+              "Hondjur kalv",
+              "Totalt",
+              "Varav otjänliga",
+              "Varav oregistrerad mark",
+              "Älgar/ 1000 ha",
+              "Vuxen",
+              "Handjur",
+              "Hondjur",
+              "Kalv",
+              "Totalt",
+              "Älgar/ 1000 ha",
+              "Vuxen",
+              "Kalv",
+              "Totalt"
+            ]
+          ]
+        },
+        {
+          "caption": "",
+          "rows": [
+            [
+              "Registreringsnummer",
+              "Jaktområdets namn",
+              "Slut- rapporterat",
+              "Registrerad areal ha",
+              "Fällda älgar",
+              "Tjur %",
+              "Kalv %",
+              "Avskjutningsmål ÄJO",
+              "Nyttjandegrad - ÄJO"
+            ],
+            [
+              "Vuxen",
+              "Handjur",
+              "Hondjur",
+              "Kalv",
+              "Handjur kalv",
+              "Hondjur kalv",
+              "Totalt",
+              "Varav otjänliga",
+              "Varav oregistrerad mark",
+              "Älgar/ 1000 ha",
+              "Vuxen",
+              "Handjur",
+              "Hondjur",
+              "Kalv",
+              "Totalt",
+              "Älgar/ 1000 ha",
+              "Vuxen",
+              "Kalv",
+              "Totalt"
+            ],
+            [
+              "Summa:",
+              "",
+              "",
+              "1 869,35 (1 869,35)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "",
+              "",
+              "",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "1 (1)",
+              "1 (1)",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "12-04-01-076-A",
+              "",
+              "Nej",
+              "1869,35",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-",
+              "-",
+              "-",
+              "0",
+              "0",
+              "0",
+              "1",
+              "1",
+              "0,5",
+              "-",
+              "-",
+              "-"
+            ]
+          ]
+        },
+        {
+          "caption": "",
+          "rows": [
+            [
+              "Summa:",
+              "",
+              "",
+              "1 869,35 (1 869,35)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "",
+              "",
+              "",
+              "0 (0)",
+              "0 (0)",
+              "0 (0)",
+              "1 (1)",
+              "1 (1)",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      "table_count": 3,
+      "form_controls": [
+        {
+          "id": "select-statistics",
+          "label": "rapport",
+          "value": "{\"ReportCategoryId\":1,\"Name\":\"ÄJO\",\"ReportType\":0,\"Report\":1,\"ReportLevel\":3,\"SearchTypeChoice\":\"1\",\"Id\":\"4\",\"County\":\"1\",\"TypeCounty\":null,\"TypeCountyDefault\":null,\"TypeCountyManagement\":null,\"TypeCountyManagementDefault\":null,\"ElkManagement\":\"1\",\"HuntingArea\":\"1\",\"HuntingYearFrom\":\"1\",\"HuntingYearTo\":\"1\",\"ExcelReport\":false,\"AlertInfoBeforeLoad\":null,\"ShowOnlyYearFromForHistoricalAFO\":null}",
+          "selected_text": "ÄJO",
+          "options_count": 39
+        },
+        {
+          "id": "select-county",
+          "label": "menuItemHead",
+          "value": "12",
+          "selected_text": "Skåne län",
+          "options_count": 21
+        },
+        {
+          "id": "select-afo",
+          "label": "menuItemHead",
+          "value": "3",
+          "selected_text": "Mellersta Norra älgförvaltningsområdet",
+          "options_count": 6
+        },
+        {
+          "id": "select-season-from",
+          "label": "menuItemHead",
+          "value": "2026/2027",
+          "selected_text": "2026/2027",
+          "options_count": 46
+        },
+        {
+          "id": "select-season-to",
+          "label": "menuItemHead",
+          "value": "2026/2027",
+          "selected_text": "2026/2027",
+          "options_count": 46
+        },
+        {
+          "id": "select-ajo",
+          "label": "menuItemHead",
+          "value": "772192",
+          "selected_text": "12-04-01-076-A",
+          "options_count": 10
+        }
+      ],
+      "radios": [
+        {
+          "name": "optTypeAFO",
+          "value": "F",
+          "checked": false,
+          "label": ""
+        },
+        {
+          "name": "optTypeAFO",
+          "value": "G",
+          "checked": true,
+          "label": ""
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "input",
+          "value": "Visa statistik",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "Visa 10 rader",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "Dölj/visa kolumner",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "Excel",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "SKV",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "Spara som bild",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "value": "",
+          "text": "",
+          "disabled": false,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Dölj alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Visa alla",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Linjediagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Stapeldiagram",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara bild",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Spara svg",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "Excel",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "SKV",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        },
+        {
+          "tag": "input",
+          "value": "SKV",
+          "text": "",
+          "disabled": false,
+          "visible": false
+        }
+      ]
+    },
+    "request_metadata": [
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+        "method": "GET",
+        "resource_type": "document"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/dist/app/Home/assets/app.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/dist/app/Home/assets/app.js",
+        "method": "GET",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/modernizr-2.8.3.js",
+        "method": "GET",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/download.js",
+        "method": "GET",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/custom.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/variables.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/Site.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/open-menu.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/medium.css",
+        "method": "GET",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/respond.js",
+        "method": "GET",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/lst_topplogo.gif",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/statistik.png",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/lan.png",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/AFOmap.jpg",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/ajo.png",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAfoInCounty/12?_=1794503355369",
+        "method": "GET",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/elkAnimation.gif",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasonsByLanAndAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasons/?_=1794503355370",
+        "method": "GET",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/LoadData/GetData",
+        "method": "POST",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/CLientApp/Src/assets/Images/sort_both.png",
+        "method": "GET",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/CLientApp/Src/assets/Images/sort_asc.png",
+        "method": "GET",
+        "resource_type": "image"
+      }
+    ],
+    "response_metadata": [
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "resource_type": "document"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/dist/app/Home/assets/app.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/variables.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/custom.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/Site.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/open-menu.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/CSS/medium.css",
+        "status": 200,
+        "content_type": "text/css",
+        "resource_type": "stylesheet"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/modernizr-2.8.3.js",
+        "status": 200,
+        "content_type": "application/javascript",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/download.js",
+        "status": 200,
+        "content_type": "application/javascript",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Scripts/respond.js",
+        "status": 200,
+        "content_type": "application/javascript",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/lst_topplogo.gif",
+        "status": 200,
+        "content_type": "image/gif",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/statistik.png",
+        "status": 200,
+        "content_type": "image/png",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/lan.png",
+        "status": 200,
+        "content_type": "image/png",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/ajo.png",
+        "status": 200,
+        "content_type": "image/png",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/dist/app/Home/assets/app.js",
+        "status": 200,
+        "content_type": "application/javascript",
+        "resource_type": "script"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/AFOmap.jpg",
+        "status": 200,
+        "content_type": "image/jpeg",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAfoInCounty/12?_=1794503355369",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/ClientApp/src/assets/Images/elkAnimation.gif",
+        "status": 200,
+        "content_type": "image/gif",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasonsByLanAndAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasons/?_=1794503355370",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/LoadData/GetData",
+        "status": 200,
+        "content_type": "application/json; charset=utf-8",
+        "resource_type": "xhr"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/CLientApp/Src/assets/Images/sort_both.png",
+        "status": 404,
+        "content_type": "text/html",
+        "resource_type": "image"
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/CLientApp/Src/assets/Images/sort_asc.png",
+        "status": 404,
+        "content_type": "text/html",
+        "resource_type": "image"
+      }
+    ],
+    "public_json_responses": [
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAfoInCounty/12?_=1794503355369",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AfoId": -1,
+            "CountyNo": null,
+            "Name": "Välj...",
+            "DisplayId": "äfo---001"
+          },
+          {
+            "AfoId": 1,
+            "CountyNo": "12",
+            "Name": "Södra älgförvaltningsområdet",
+            "DisplayId": "äfo-12-001"
+          },
+          {
+            "AfoId": 2,
+            "CountyNo": "12",
+            "Name": "Mellersta Älgförvaltningsområdet",
+            "DisplayId": "äfo-12-002"
+          },
+          {
+            "AfoId": 3,
+            "CountyNo": "12",
+            "Name": "Mellersta Norra älgförvaltningsområdet",
+            "DisplayId": "äfo-12-003"
+          },
+          {
+            "AfoId": 4,
+            "CountyNo": "12",
+            "Name": "Nordvästra älgförvaltningsområdet",
+            "DisplayId": "äfo-12-004"
+          },
+          {
+            "AfoId": 5,
+            "CountyNo": "12",
+            "Name": "Nordöstra älgförvaltningsområdet",
+            "DisplayId": "äfo-12-005"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 716224,
+            "AfoId": 3,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "12-00-99-003-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 772192,
+            "AfoId": 3,
+            "Name": "",
+            "AjoDisplayFullName": "12-04-01-076-A"
+          },
+          {
+            "AjoId": 716235,
+            "AfoId": 3,
+            "Name": "Vedby-Oderljunga Älgskötselområde",
+            "AjoDisplayFullName": "12-04-01-217-Ä - Vedby-Oderljunga Älgskötselområde"
+          },
+          {
+            "AjoId": 723413,
+            "AfoId": 3,
+            "Name": "Hågnarps Älgskötselområde",
+            "AjoDisplayFullName": "12-06-10-064-Ä - Hågnarps Älgskötselområde"
+          },
+          {
+            "AjoId": 723414,
+            "AfoId": 3,
+            "Name": "VERUMS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "12-06-11-023-Ä - VERUMS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 716244,
+            "AfoId": 3,
+            "Name": "Vittsjöortens Älgskötselområde",
+            "AjoDisplayFullName": "12-06-12-028-Ä - Vittsjöortens Älgskötselområde"
+          },
+          {
+            "AjoId": 716247,
+            "AfoId": 3,
+            "Name": "Snapphanebygdens Jägare",
+            "AjoDisplayFullName": "12-07-14-012-Ä - Snapphanebygdens Jägare"
+          },
+          {
+            "AjoId": 723423,
+            "AfoId": 3,
+            "Name": "Rya älgskötselområde",
+            "AjoDisplayFullName": "12-07-20-047-Ä - Rya älgskötselområde"
+          },
+          {
+            "AjoId": 718228,
+            "AfoId": 3,
+            "Name": "VÄRSJÖ-RÖKE ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "12-07-21-063-Ä - VÄRSJÖ-RÖKE ÄLGSKÖTSELOMRÅDE"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasonsByLanAndAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "Value": "1993/1994",
+            "Title": "1993/1994"
+          },
+          {
+            "Value": "1994/1995",
+            "Title": "1994/1995"
+          },
+          {
+            "Value": "1995/1996",
+            "Title": "1995/1996"
+          },
+          {
+            "Value": "1996/1997",
+            "Title": "1996/1997"
+          },
+          {
+            "Value": "1997/1998",
+            "Title": "1997/1998"
+          },
+          {
+            "Value": "1998/1999",
+            "Title": "1998/1999"
+          },
+          {
+            "Value": "1999/2000",
+            "Title": "1999/2000"
+          },
+          {
+            "Value": "2000/2001",
+            "Title": "2000/2001"
+          },
+          {
+            "Value": "2001/2002",
+            "Title": "2001/2002"
+          },
+          {
+            "Value": "2002/2003",
+            "Title": "2002/2003"
+          },
+          {
+            "Value": "2003/2004",
+            "Title": "2003/2004"
+          },
+          {
+            "Value": "2004/2005",
+            "Title": "2004/2005"
+          },
+          {
+            "Value": "2005/2006",
+            "Title": "2005/2006"
+          },
+          {
+            "Value": "2006/2007",
+            "Title": "2006/2007"
+          },
+          {
+            "Value": "2007/2008",
+            "Title": "2007/2008"
+          },
+          {
+            "Value": "2008/2009",
+            "Title": "2008/2009"
+          },
+          {
+            "Value": "2009/2010",
+            "Title": "2009/2010"
+          },
+          {
+            "Value": "2010/2011",
+            "Title": "2010/2011"
+          },
+          {
+            "Value": "2011/2012",
+            "Title": "2011/2012"
+          },
+          {
+            "Value": "2012/2013",
+            "Title": "2012/2013"
+          },
+          {
+            "Value": "2013/2014",
+            "Title": "2013/2014"
+          },
+          {
+            "Value": "2014/2015",
+            "Title": "2014/2015"
+          },
+          {
+            "Value": "2015/2016",
+            "Title": "2015/2016"
+          },
+          {
+            "Value": "2016/2017",
+            "Title": "2016/2017"
+          },
+          {
+            "Value": "2017/2018",
+            "Title": "2017/2018"
+          },
+          {
+            "Value": "2018/2019",
+            "Title": "2018/2019"
+          },
+          {
+            "Value": "2019/2020",
+            "Title": "2019/2020"
+          },
+          {
+            "Value": "2020/2021",
+            "Title": "2020/2021"
+          },
+          {
+            "Value": "2021/2022",
+            "Title": "2021/2022"
+          },
+          {
+            "Value": "2022/2023",
+            "Title": "2022/2023"
+          },
+          {
+            "Value": "2023/2024",
+            "Title": "2023/2024"
+          },
+          {
+            "Value": "2024/2025",
+            "Title": "2024/2025"
+          },
+          {
+            "Value": "2025/2026",
+            "Title": "2025/2026"
+          },
+          {
+            "Value": "2026/2027",
+            "Title": "2026/2027"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 716224,
+            "AfoId": 3,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "12-00-99-003-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 772192,
+            "AfoId": 3,
+            "Name": "",
+            "AjoDisplayFullName": "12-04-01-076-A"
+          },
+          {
+            "AjoId": 716235,
+            "AfoId": 3,
+            "Name": "Vedby-Oderljunga Älgskötselområde",
+            "AjoDisplayFullName": "12-04-01-217-Ä - Vedby-Oderljunga Älgskötselområde"
+          },
+          {
+            "AjoId": 723413,
+            "AfoId": 3,
+            "Name": "Hågnarps Älgskötselområde",
+            "AjoDisplayFullName": "12-06-10-064-Ä - Hågnarps Älgskötselområde"
+          },
+          {
+            "AjoId": 723414,
+            "AfoId": 3,
+            "Name": "VERUMS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "12-06-11-023-Ä - VERUMS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 716244,
+            "AfoId": 3,
+            "Name": "Vittsjöortens Älgskötselområde",
+            "AjoDisplayFullName": "12-06-12-028-Ä - Vittsjöortens Älgskötselområde"
+          },
+          {
+            "AjoId": 716247,
+            "AfoId": 3,
+            "Name": "Snapphanebygdens Jägare",
+            "AjoDisplayFullName": "12-07-14-012-Ä - Snapphanebygdens Jägare"
+          },
+          {
+            "AjoId": 723423,
+            "AfoId": 3,
+            "Name": "Rya älgskötselområde",
+            "AjoDisplayFullName": "12-07-20-047-Ä - Rya älgskötselområde"
+          },
+          {
+            "AjoId": 718228,
+            "AfoId": 3,
+            "Name": "VÄRSJÖ-RÖKE ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "12-07-21-063-Ä - VÄRSJÖ-RÖKE ÄLGSKÖTSELOMRÅDE"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetSeasons/?_=1794503355370",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "Value": "1947/1948",
+            "Title": "1947/1948"
+          },
+          {
+            "Value": "1961/1962",
+            "Title": "1961/1962"
+          },
+          {
+            "Value": "1967/1968",
+            "Title": "1967/1968"
+          },
+          {
+            "Value": "1972/1973",
+            "Title": "1972/1973"
+          },
+          {
+            "Value": "1981/1982",
+            "Title": "1981/1982"
+          },
+          {
+            "Value": "1986/1987",
+            "Title": "1986/1987"
+          },
+          {
+            "Value": "1987/1988",
+            "Title": "1987/1988"
+          },
+          {
+            "Value": "1988/1989",
+            "Title": "1988/1989"
+          },
+          {
+            "Value": "1989/1990",
+            "Title": "1989/1990"
+          },
+          {
+            "Value": "1990/1991",
+            "Title": "1990/1991"
+          },
+          {
+            "Value": "1991/1992",
+            "Title": "1991/1992"
+          },
+          {
+            "Value": "1992/1993",
+            "Title": "1992/1993"
+          },
+          {
+            "Value": "1993/1994",
+            "Title": "1993/1994"
+          },
+          {
+            "Value": "1994/1995",
+            "Title": "1994/1995"
+          },
+          {
+            "Value": "1995/1996",
+            "Title": "1995/1996"
+          },
+          {
+            "Value": "1996/1997",
+            "Title": "1996/1997"
+          },
+          {
+            "Value": "1997/1998",
+            "Title": "1997/1998"
+          },
+          {
+            "Value": "1998/1999",
+            "Title": "1998/1999"
+          },
+          {
+            "Value": "1999/2000",
+            "Title": "1999/2000"
+          },
+          {
+            "Value": "2000/2001",
+            "Title": "2000/2001"
+          },
+          {
+            "Value": "2001/2002",
+            "Title": "2001/2002"
+          },
+          {
+            "Value": "2002/2003",
+            "Title": "2002/2003"
+          },
+          {
+            "Value": "2003/2004",
+            "Title": "2003/2004"
+          },
+          {
+            "Value": "2004/2005",
+            "Title": "2004/2005"
+          },
+          {
+            "Value": "2005/2006",
+            "Title": "2005/2006"
+          },
+          {
+            "Value": "2006/2007",
+            "Title": "2006/2007"
+          },
+          {
+            "Value": "2007/2008",
+            "Title": "2007/2008"
+          },
+          {
+            "Value": "2008/2009",
+            "Title": "2008/2009"
+          },
+          {
+            "Value": "2009/2010",
+            "Title": "2009/2010"
+          },
+          {
+            "Value": "2010/2011",
+            "Title": "2010/2011"
+          },
+          {
+            "Value": "2011/2012",
+            "Title": "2011/2012"
+          },
+          {
+            "Value": "2012/2013",
+            "Title": "2012/2013"
+          },
+          {
+            "Value": "2013/2014",
+            "Title": "2013/2014"
+          },
+          {
+            "Value": "2014/2015",
+            "Title": "2014/2015"
+          },
+          {
+            "Value": "2015/2016",
+            "Title": "2015/2016"
+          },
+          {
+            "Value": "2016/2017",
+            "Title": "2016/2017"
+          },
+          {
+            "Value": "2017/2018",
+            "Title": "2017/2018"
+          },
+          {
+            "Value": "2018/2019",
+            "Title": "2018/2019"
+          },
+          {
+            "Value": "2019/2020",
+            "Title": "2019/2020"
+          },
+          {
+            "Value": "2020/2021",
+            "Title": "2020/2021"
+          },
+          {
+            "Value": "2021/2022",
+            "Title": "2021/2022"
+          },
+          {
+            "Value": "2022/2023",
+            "Title": "2022/2023"
+          },
+          {
+            "Value": "2023/2024",
+            "Title": "2023/2024"
+          },
+          {
+            "Value": "2024/2025",
+            "Title": "2024/2025"
+          },
+          {
+            "Value": "2025/2026",
+            "Title": "2025/2026"
+          },
+          {
+            "Value": "2026/2027",
+            "Title": "2026/2027"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 716224,
+            "AfoId": 3,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "12-00-99-003-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 772192,
+            "AfoId": 3,
+            "Name": "",
+            "AjoDisplayFullName": "12-04-01-076-A"
+          },
+          {
+            "AjoId": 716235,
+            "AfoId": 3,
+            "Name": "Vedby-Oderljunga Älgskötselområde",
+            "AjoDisplayFullName": "12-04-01-217-Ä - Vedby-Oderljunga Älgskötselområde"
+          },
+          {
+            "AjoId": 723413,
+            "AfoId": 3,
+            "Name": "Hågnarps Älgskötselområde",
+            "AjoDisplayFullName": "12-06-10-064-Ä - Hågnarps Älgskötselområde"
+          },
+          {
+            "AjoId": 723414,
+            "AfoId": 3,
+            "Name": "VERUMS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "12-06-11-023-Ä - VERUMS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 716244,
+            "AfoId": 3,
+            "Name": "Vittsjöortens Älgskötselområde",
+            "AjoDisplayFullName": "12-06-12-028-Ä - Vittsjöortens Älgskötselområde"
+          },
+          {
+            "AjoId": 716247,
+            "AfoId": 3,
+            "Name": "Snapphanebygdens Jägare",
+            "AjoDisplayFullName": "12-07-14-012-Ä - Snapphanebygdens Jägare"
+          },
+          {
+            "AjoId": 723423,
+            "AfoId": 3,
+            "Name": "Rya älgskötselområde",
+            "AjoDisplayFullName": "12-07-20-047-Ä - Rya älgskötselområde"
+          },
+          {
+            "AjoId": 718228,
+            "AfoId": 3,
+            "Name": "VÄRSJÖ-RÖKE ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "12-07-21-063-Ä - VÄRSJÖ-RÖKE ÄLGSKÖTSELOMRÅDE"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 716224,
+            "AfoId": 3,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "12-00-99-003-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 772192,
+            "AfoId": 3,
+            "Name": "",
+            "AjoDisplayFullName": "12-04-01-076-A"
+          },
+          {
+            "AjoId": 716235,
+            "AfoId": 3,
+            "Name": "Vedby-Oderljunga Älgskötselområde",
+            "AjoDisplayFullName": "12-04-01-217-Ä - Vedby-Oderljunga Älgskötselområde"
+          },
+          {
+            "AjoId": 723413,
+            "AfoId": 3,
+            "Name": "Hågnarps Älgskötselområde",
+            "AjoDisplayFullName": "12-06-10-064-Ä - Hågnarps Älgskötselområde"
+          },
+          {
+            "AjoId": 723414,
+            "AfoId": 3,
+            "Name": "VERUMS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "12-06-11-023-Ä - VERUMS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 716244,
+            "AfoId": 3,
+            "Name": "Vittsjöortens Älgskötselområde",
+            "AjoDisplayFullName": "12-06-12-028-Ä - Vittsjöortens Älgskötselområde"
+          },
+          {
+            "AjoId": 716247,
+            "AfoId": 3,
+            "Name": "Snapphanebygdens Jägare",
+            "AjoDisplayFullName": "12-07-14-012-Ä - Snapphanebygdens Jägare"
+          },
+          {
+            "AjoId": 723423,
+            "AfoId": 3,
+            "Name": "Rya älgskötselområde",
+            "AjoDisplayFullName": "12-07-20-047-Ä - Rya älgskötselområde"
+          },
+          {
+            "AjoId": 718228,
+            "AfoId": 3,
+            "Name": "VÄRSJÖ-RÖKE ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "12-07-21-063-Ä - VÄRSJÖ-RÖKE ÄLGSKÖTSELOMRÅDE"
+          }
+        ]
+      },
+      {
+        "url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/Home/GetAjoInCountyAfo",
+        "status": 200,
+        "truncated": false,
+        "json": [
+          {
+            "AjoId": -1,
+            "AfoId": 0,
+            "Name": null,
+            "AjoDisplayFullName": "Välj..."
+          },
+          {
+            "AjoId": 716224,
+            "AfoId": 3,
+            "Name": "Oregistrerad mark",
+            "AjoDisplayFullName": "12-00-99-003-A - Oregistrerad mark"
+          },
+          {
+            "AjoId": 772192,
+            "AfoId": 3,
+            "Name": "",
+            "AjoDisplayFullName": "12-04-01-076-A"
+          },
+          {
+            "AjoId": 716235,
+            "AfoId": 3,
+            "Name": "Vedby-Oderljunga Älgskötselområde",
+            "AjoDisplayFullName": "12-04-01-217-Ä - Vedby-Oderljunga Älgskötselområde"
+          },
+          {
+            "AjoId": 723413,
+            "AfoId": 3,
+            "Name": "Hågnarps Älgskötselområde",
+            "AjoDisplayFullName": "12-06-10-064-Ä - Hågnarps Älgskötselområde"
+          },
+          {
+            "AjoId": 723414,
+            "AfoId": 3,
+            "Name": "VERUMS ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "12-06-11-023-Ä - VERUMS ÄLGSKÖTSELOMRÅDE"
+          },
+          {
+            "AjoId": 716244,
+            "AfoId": 3,
+            "Name": "Vittsjöortens Älgskötselområde",
+            "AjoDisplayFullName": "12-06-12-028-Ä - Vittsjöortens Älgskötselområde"
+          },
+          {
+            "AjoId": 716247,
+            "AfoId": 3,
+            "Name": "Snapphanebygdens Jägare",
+            "AjoDisplayFullName": "12-07-14-012-Ä - Snapphanebygdens Jägare"
+          },
+          {
+            "AjoId": 723423,
+            "AfoId": 3,
+            "Name": "Rya älgskötselområde",
+            "AjoDisplayFullName": "12-07-20-047-Ä - Rya älgskötselområde"
+          },
+          {
+            "AjoId": 718228,
+            "AfoId": 3,
+            "Name": "VÄRSJÖ-RÖKE ÄLGSKÖTSELOMRÅDE",
+            "AjoDisplayFullName": "12-07-21-063-Ä - VÄRSJÖ-RÖKE ÄLGSKÖTSELOMRÅDE"
+          }
+        ]
+      }
+    ],
+    "note": "One official portal report configuration; CSV fields map the rendered grouped table, values preserved as displayed. The historical Gräsmyrs VVO is a separate identity and is not treated as the same area."
+  },
+  "interpretation": "Cumulative portal report values observed at capture time; changes are not exact kill dates and may reflect delayed reporting or corrections."
+}
