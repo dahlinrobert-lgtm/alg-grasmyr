@@ -27,7 +27,8 @@ class NationalAfoSnapshotTests(unittest.TestCase):
             "HeaderOne": [{"Name": "Fällda älgar"}],
             "HeaderTwo": [{"Name": "Totalt"}],
         }
-        parsed = parse_afo_api_data(data, [])
+        html_tables = [{"rows": [["Registreringsnummer"], ["Summa:", "", "42 (2 408)"]]}]
+        parsed = parse_afo_api_data(data, html_tables)
         self.assertEqual(parsed["fallda_totalt"], 11)
         self.assertEqual(parsed["avskjutningsmal_totalt"], 15)
         self.assertEqual(parsed["source_row_count"], 2)
@@ -35,6 +36,7 @@ class NationalAfoSnapshotTests(unittest.TestCase):
         self.assertEqual(parsed["areas_with_kills_count"], 2)
         self.assertEqual(parsed["areas_with_targets_count"], 2)
         self.assertEqual(len(parsed["raw_area_rows"]), 2)
+        self.assertEqual(parsed["raw_html_summa_row"][2], "42 (2 408)")
 
     def test_missing_area_count_is_not_silently_zero(self):
         data = {"TableDataFormatted": [[
