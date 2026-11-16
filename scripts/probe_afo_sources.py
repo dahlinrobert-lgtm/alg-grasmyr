@@ -45,6 +45,8 @@ async def main():
             try:
                 response=await request.get(url)
                 body=await response.text()
+                if key=="lansstyrelsen_wms":
+                    (args.out/"lansstyrelsen-wms-capabilities.xml").write_text(body,encoding="utf-8")
                 entry={"status":response.status,"content_type":response.headers.get("content-type",""),"body_chars":len(body)}
                 if key=="lansstyrelsen_wms":
                     entry["is_wms_capabilities"]="WMS_Capabilities" in body or "WMT_MS_Capabilities" in body
@@ -60,6 +62,18 @@ async def main():
         browser=await p.chromium.launch(headless=True)
         page=await browser.new_page(viewport={"width":1440,"height":1000})
         page.set_default_timeout(20000)
+        captured=[]
+        async def capture_response(response):
+            try:
+                if response.request.resource_type not in ("xhr","fetch"):
+                    return
+                entry={"url":response.url,"status":response.status,"content_type":response.headers.get("content-type","")}
+                if "json" in entry["content_type"].lower():
+                    entry["body_excerpt"]=(await response.text())[:12000]
+                captured.append(entry)
+            except Exception:
+                pass
+        page.on("response",capture_response)
         try:
             await page.goto(PORTAL,wait_until="domcontentloaded",timeout=60000)
             selects=page.locator("select")
@@ -111,7 +125,7 @@ async def main():
             await button.click()
             try: await page.wait_for_load_state("networkidle",timeout=15000)
             except Exception: pass
-            await page.wait_for_timeout(1800)
+            await page.wait_for_timeout(5000)
             after=await page.evaluate("""() => ({
               title:document.title,
               text:(document.body?.innerText||'').slice(-16000),
@@ -121,7 +135,7 @@ async def main():
                 )
               }))
             })""")
-            result["sources"]["afo_level_report"]={"status":"completed","report":report,"report_catalog":report_catalog,"selected_without_hunting_area":selected_area,"before":before,"after":after}
+            result["sources"]["afo_level_report"]={"status":"completed","report":report,"report_catalog":report_catalog,"selected_without_hunting_area":selected_area,"before":before,"after":after,"network_responses":captured}
         except Exception as exc:
             result["sources"]["afo_level_report"]={"status":"error","error":type(exc).__name__+": "+str(exc)[:1500]}
         finally:
