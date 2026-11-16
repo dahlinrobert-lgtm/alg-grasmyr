@@ -43,8 +43,11 @@ async def main():
         request=await p.request.new_context(timeout=45000)
         for key,url in (
             ("lansstyrelsen_wms",LST_WMS),
-            ("lansstyrelsen_rest_layer","https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/rest/services/Jaktadm/lst_jaktadm_visning/MapServer/0?f=pjson"),
-            ("lansstyrelsen_rest_query","https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/rest/services/Jaktadm/lst_jaktadm_visning/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json"),
+            ("lansstyrelsen_rest_service_root","https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/rest/services/Jaktadm/lst_jaktadm_visning/MapServer?f=pjson"),
+            ("lansstyrelsen_rest_layer_0","https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/rest/services/Jaktadm/lst_jaktadm_visning/MapServer/0?f=pjson"),
+            ("lansstyrelsen_rest_layer_1","https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/rest/services/Jaktadm/lst_jaktadm_visning/MapServer/1?f=pjson"),
+            ("lansstyrelsen_rest_layer_2","https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/rest/services/Jaktadm/lst_jaktadm_visning/MapServer/2?f=pjson"),
+            ("lansstyrelsen_rest_query_2","https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/rest/services/Jaktadm/lst_jaktadm_visning/MapServer/2/query?where=1%3D1&returnCountOnly=true&f=json"),
             ("skogsstyrelsen_layer_count",SKS_COUNT),
             ("skogsstyrelsen_layer_attributes",SKS_LAYER+"/query?where=1%3D1&outFields=AFONr_SKS,AFONamn_SKS,LanNamn,AFONr,AFONamn,InvAr&returnGeometry=false&f=json")
         ):
