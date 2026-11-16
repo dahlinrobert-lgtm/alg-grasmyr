@@ -1,0 +1,40 @@
+name: Publish verified national AFO baseline artifact
+
+on:
+  push:
+    branches:
+      - feat/national-afo-avskjutning-snapshots
+    paths:
+      - ".github/workflows/publish-national-afo-baseline.yml"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  publish-baseline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download the verified 129/129 baseline artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: national-afo-snapshot-batch
+          run-id: 43949116427
+          github-token: \${{ secrets.GITHUB_TOKEN }}
+          path: /tmp/national-afo-batch
+      - name: Validate and place immutable baseline
+        run: |
+          test -s /tmp/national-afo-batch/national_afo_dashboard.json
+          test "$(find /tmp/national-afo-batch/national_afo_snapshots -name '*.json' | wc -l)" -eq 129
+          mkdir -p data
+          cp -R /tmp/national-afo-batch/national_afo_snapshots data/
+          cp /tmp/national-afo-batch/national_afo_dashboard.json data/
+      - name: Commit baseline to feature branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/national_afo_snapshots/ data/national_afo_dashboard.json
+          git commit -m "Add verified national ÄFO avskjutning baseline"
+          git push
