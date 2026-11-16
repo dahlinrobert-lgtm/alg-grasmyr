@@ -41,7 +41,13 @@ async def main():
 
     async with async_playwright() as p:
         request=await p.request.new_context(timeout=45000)
-        for key,url in (("lansstyrelsen_wms",LST_WMS),("skogsstyrelsen_layer_count",SKS_COUNT)):
+        for key,url in (
+            ("lansstyrelsen_wms",LST_WMS),
+            ("lansstyrelsen_rest_layer","https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/rest/services/Jaktadm/lst_jaktadm_visning/MapServer/0?f=pjson"),
+            ("lansstyrelsen_rest_query","https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/rest/services/Jaktadm/lst_jaktadm_visning/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json"),
+            ("skogsstyrelsen_layer_count",SKS_COUNT),
+            ("skogsstyrelsen_layer_attributes",SKS_LAYER+"/query?where=1%3D1&outFields=AFONr_SKS,AFONamn_SKS,LanNamn,AFONr,AFONamn,InvAr&returnGeometry=false&f=json")
+        ):
             try:
                 response=await request.get(url)
                 body=await response.text()
