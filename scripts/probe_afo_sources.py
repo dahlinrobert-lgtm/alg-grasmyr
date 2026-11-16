@@ -48,6 +48,9 @@ async def main():
             ("lansstyrelsen_rest_layer_1","https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/rest/services/Jaktadm/lst_jaktadm_visning/MapServer/1?f=pjson"),
             ("lansstyrelsen_rest_layer_2","https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/rest/services/Jaktadm/lst_jaktadm_visning/MapServer/2?f=pjson"),
             ("lansstyrelsen_rest_query_2","https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/rest/services/Jaktadm/lst_jaktadm_visning/MapServer/2/query?where=1%3D1&returnCountOnly=true&f=json"),
+            ("lansstyrelsen_afo_count","https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/rest/services/Jaktadm/lst_jaktadm_visning/MapServer/1/query?where=1%3D1&returnCountOnly=true&f=json"),
+            ("lansstyrelsen_afo_features","https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/rest/services/Jaktadm/lst_jaktadm_visning/MapServer/1/query?where=1%3D1&outFields=OBJECTID,afo_id,namn_afo,forvaltare&returnGeometry=true&outSR=4326&f=geojson"),
+            ("lansstyrelsen_metadata","https://ext-geodatakatalog.lansstyrelsen.se/GeodataKatalogen/GetMetaDataById?id=6d4c42de-2b43-4b72-98ec-856d8adfaf29"),
             ("skogsstyrelsen_layer_count",SKS_COUNT),
             ("skogsstyrelsen_layer_attributes",SKS_LAYER+"/query?where=1%3D1&outFields=AFONr_SKS,AFONamn_SKS,LanNamn,AFONr,AFONamn,InvAr&returnGeometry=false&f=json")
         ):
