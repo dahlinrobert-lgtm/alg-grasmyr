@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Read-only probe of ÄFO-level harvest statistics and national ÄFO boundary services."""
 from __future__ import annotations
-import argparse, asyncio, json, re
+import argparse, asyncio, csv, json, re
 from datetime import datetime, timezone
 from pathlib import Path
 from playwright.async_api import async_playwright
@@ -164,11 +164,11 @@ async def main():
         await request.dispose()
 
     try:
-        catalogue=json.loads(Path("data/national_area_catalog/national_area_catalog.json").read_text(encoding="utf-8"))
         expected=set()
-        for item in catalogue.get("county_afo_coverage",[]):
-            if item.get("boundary_mode")=="current":
-                expected.add(f"{int(item['county_portal_value']):02d}-{int(item['afo_id']):03d}")
+        with Path("data/national_area_catalog/national_area_catalog.csv").open("r",encoding="utf-8-sig",newline="") as handle:
+            for row in csv.DictReader(handle,delimiter=";"):
+                if row.get("boundary_mode")=="current":
+                    expected.add(f"{int(row['county_portal_value']):02d}-{int(row['afo_portal_value']):03d}")
         features=(result["sources"].get("lansstyrelsen_afo_features",{}).get("json") or {}).get("features",[])
         actual={str((f.get("properties") or {}).get("afo_id") or (f.get("attributes") or {}).get("afo_id")) for f in features}
         result["sources"]["afo_catalog_crosswalk"]={"catalog_current_count":len(expected),"boundary_feature_count":len(actual),"missing_boundary_ids":sorted(expected-actual),"extra_boundary_ids":sorted(actual-expected)}
