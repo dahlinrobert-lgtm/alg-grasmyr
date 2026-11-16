@@ -33,7 +33,7 @@ async def main():
     ap.add_argument("--afo",default="Sydöstra älgförvaltningsområdet")
     ap.add_argument("--from-year",default="2026/2027")
     ap.add_argument("--to-year",default="2026/2027")
-    ap.add_argument("--report-id",default="3")
+    ap.add_argument("--report-id",default="22")
     ap.add_argument("--out",type=Path,default=Path("out/afo-source-probe"))
     args=ap.parse_args()
     args.out.mkdir(parents=True,exist_ok=True)
@@ -84,13 +84,17 @@ async def main():
             result["sources"]["browser_cors_from_github_pages"]={"ok":False,"error":type(exc).__name__+": "+str(exc)[:1000]}
         page.set_default_timeout(20000)
         captured=[]
+        captured_requests=[]
+        page.on("request",lambda req: captured_requests.append({"url":req.url,"method":req.method,"post_data":req.post_data}) if "LoadData/GetData" in req.url else None)
         async def capture_response(response):
             try:
                 if response.request.resource_type not in ("xhr","fetch"):
                     return
                 entry={"url":response.url,"status":response.status,"content_type":response.headers.get("content-type","")}
                 if "json" in entry["content_type"].lower():
-                    entry["body_excerpt"]=(await response.text())[:12000]
+                    body=await response.text()
+                    entry["body_chars"]=len(body)
+                    entry["body"]=body[:500000]
                 captured.append(entry)
             except Exception:
                 pass
@@ -108,12 +112,14 @@ async def main():
                 except Exception:
                     continue
             report=await choose_report(selects.nth(0),args.report_id)
-            await selects.nth(1).select_option(label=args.county)
-            await page.wait_for_timeout(600)
-            await selects.nth(2).select_option(label=args.afo)
-            await page.wait_for_timeout(800)
+            if report["config"].get("County") == "1":
+                await selects.nth(1).select_option(label=args.county)
+                await page.wait_for_timeout(600)
+            if report["config"].get("ElkManagement") == "1":
+                await selects.nth(2).select_option(label=args.afo)
+                await page.wait_for_timeout(800)
             radio=page.locator('input[name="optTypeAFO"][value="G"]')
-            if await radio.count():
+            if await radio.count() and report["config"].get("ElkManagement") == "1":
                 await radio.check()
                 await page.wait_for_timeout(400)
             await selects.nth(3).select_option(label=args.from_year)
@@ -156,7 +162,7 @@ async def main():
                 )
               }))
             })""")
-            result["sources"]["afo_level_report"]={"status":"completed","report":report,"report_catalog":report_catalog,"selected_without_hunting_area":selected_area,"before":before,"after":after,"network_responses":captured}
+            result["sources"]["afo_level_report"]={"status":"completed","report":report,"report_catalog":report_catalog,"selected_without_hunting_area":selected_area,"before":before,"after":after,"network_responses":captured,"network_requests":captured_requests}
         except Exception as exc:
             result["sources"]["afo_level_report"]={"status":"error","error":type(exc).__name__+": "+str(exc)[:1500]}
         finally:
