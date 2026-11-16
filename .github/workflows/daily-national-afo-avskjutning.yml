@@ -1,0 +1,60 @@
+name: Daily national ÄFO avskjutning snapshots
+
+on:
+  schedule:
+    - cron: "35 4 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - feat/national-afo-avskjutning-snapshots
+    paths:
+      - "scripts/snapshot_national_afo.py"
+      - "tests/test_national_afo_snapshot.py"
+      - ".github/workflows/daily-national-afo-avskjutning.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: national-afo-avskjutning-snapshots
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Playwright and Chromium
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Run parser and archive regression tests
+        run: |
+          python -m unittest tests.test_national_afo_snapshot -v
+          python -m py_compile scripts/snapshot_national_afo.py
+      - name: Probe one verified AFO on feature branch
+        if: github.event_name == 'push'
+        run: |
+          python scripts/snapshot_national_afo.py \
+            --county "Västerbottens län" \
+            --afo-name "Sydöstra älgförvaltningsområdet"
+      - name: Collect full national AFO snapshot
+        if: github.event_name != 'push'
+        run: python scripts/snapshot_national_afo.py
+      - name: Commit immutable national AFO snapshots
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/national_afo_snapshots/ data/national_afo_dashboard.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Add daily national ÄFO avskjutning snapshot"
+            git push
+          else
+            echo "National ÄFO snapshot unchanged."
+          fi
