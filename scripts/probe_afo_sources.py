@@ -33,7 +33,7 @@ async def main():
     ap.add_argument("--afo",default="Sydöstra älgförvaltningsområdet")
     ap.add_argument("--from-year",default="2026/2027")
     ap.add_argument("--to-year",default="2026/2027")
-    ap.add_argument("--report-id",default="22")
+    ap.add_argument("--report-id",default="3")
     ap.add_argument("--out",type=Path,default=Path("out/afo-source-probe"))
     args=ap.parse_args()
     args.out.mkdir(parents=True,exist_ok=True)
