@@ -228,7 +228,7 @@ async def collect_one(page, item: dict[str, str], season: str) -> dict[str, Any]
         "boundary_mode": "current",
         "hunting_season": season,
         "aggregation_level": "sum of ShotTotal and AssignedTotal across all registered ÄJO rows within the AFO",
-        "data_status": "summa_row_available",
+        "data_status": "area_rows_available",
         "report_name_from_api": (api_payload.get("Data") or {}).get("ReportName"),
         **parsed,
     }
@@ -276,9 +276,10 @@ def archive_complete_batch(
         "afo_count": len(records),
         "areas_with_data": sum(1 for item in records if item["fallda_totalt"] is not None),
         "interpretation": (
-            "Fällda totals are read from the portal's ÄFO Summa row across registered hunting areas. "
-            "They are cumulative reported values for the selected hunting season, not exact daily kill events. "
-            "Raw source cells and summary rows are preserved."
+            "Fällda totals are calculated by summing ShotTotal across all TableDataFormatted ÄJO rows within each AFO; avskjutningsmål is the sum of AssignedTotal. "
+            "The portal's visible Summa row uses a two-part display; its leading value is not the animal total. "
+            "Full raw area rows and the HTML Summa row are preserved in each immutable AFO snapshot. "
+            "Totals are cumulative reported values for the selected hunting season, not exact daily kill events."
         ),
         "areas": sorted(
             [
@@ -293,6 +294,9 @@ def archive_complete_batch(
                     "avskjutningsmal_totalt_raw": item["avskjutningsmal_totalt_raw"],
                     "data_status": item["data_status"],
                     "source_row_count": item["source_row_count"],
+                    "finished_reporting_area_count": item["finished_reporting_area_count"],
+                    "areas_with_kills_count": item["areas_with_kills_count"],
+                    "areas_with_targets_count": item["areas_with_targets_count"],
                 }
                 for item in records
             ],
