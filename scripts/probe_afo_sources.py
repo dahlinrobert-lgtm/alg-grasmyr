@@ -33,10 +33,11 @@ async def main():
     ap.add_argument("--afo",default="Sydöstra älgförvaltningsområdet")
     ap.add_argument("--from-year",default="2026/2027")
     ap.add_argument("--to-year",default="2026/2027")
+    ap.add_argument("--report-id",default="3")
     ap.add_argument("--out",type=Path,default=Path("out/afo-source-probe"))
     args=ap.parse_args()
     args.out.mkdir(parents=True,exist_ok=True)
-    result={"probed_at_utc":datetime.now(timezone.utc).isoformat(),"inputs":vars(args).__str__(),"sources":{}}
+    result={"probed_at_utc":datetime.now(timezone.utc).isoformat(),"inputs":{k:str(v) for k,v in vars(args).items()},"sources":{}}
 
     async with async_playwright() as p:
         request=await p.request.new_context(timeout=45000)
@@ -63,7 +64,15 @@ async def main():
             await page.goto(PORTAL,wait_until="domcontentloaded",timeout=60000)
             selects=page.locator("select")
             await selects.nth(5).wait_for(state="attached",timeout=30000)
-            report=await choose_report(selects.nth(0),"4")
+            report_options=await options(selects.nth(0))
+            report_catalog=[]
+            for opt in report_options:
+                try:
+                    cfg=json.loads(opt["value"])
+                    report_catalog.append({"label":opt["label"],"id":str(cfg.get("Id")),"name":cfg.get("Name"),"report_level":cfg.get("ReportLevel"),"county":cfg.get("County"),"elk_management":cfg.get("ElkManagement"),"hunting_area":cfg.get("HuntingArea")})
+                except Exception:
+                    continue
+            report=await choose_report(selects.nth(0),args.report_id)
             await selects.nth(1).select_option(label=args.county)
             await page.wait_for_timeout(600)
             await selects.nth(2).select_option(label=args.afo)
@@ -82,10 +91,13 @@ async def main():
             await page.wait_for_timeout(500)
             area_options=await options(selects.nth(5))
             selected_area=next((x for x in area_options if x["value"] in ("","-1")),None)
-            if selected_area:
-                await selects.nth(5).select_option(value=selected_area["value"])
+            if report["config"].get("HuntingArea") == "1":
+                if selected_area:
+                    await selects.nth(5).select_option(value=selected_area["value"])
+                else:
+                    raise RuntimeError("No blank/all-area option found in hunting-area selector")
             else:
-                raise RuntimeError("No blank/all-area option found in hunting-area selector")
+                selected_area={"label":"not required by report config","value":None}
             before=await page.evaluate("""() => ({
               controls:Array.from(document.querySelectorAll('select')).map(s=>({
                 value:s.value,selected:s.selectedIndex>=0?s.options[s.selectedIndex].text.trim():'',
@@ -109,7 +121,7 @@ async def main():
                 )
               }))
             })""")
-            result["sources"]["afo_level_report"]={"status":"completed","report":report,"selected_without_hunting_area":selected_area,"before":before,"after":after}
+            result["sources"]["afo_level_report"]={"status":"completed","report":report,"report_catalog":report_catalog,"selected_without_hunting_area":selected_area,"before":before,"after":after}
         except Exception as exc:
             result["sources"]["afo_level_report"]={"status":"error","error":type(exc).__name__+": "+str(exc)[:1500]}
         finally:
