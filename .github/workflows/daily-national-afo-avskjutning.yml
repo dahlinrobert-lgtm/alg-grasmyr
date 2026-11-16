@@ -50,7 +50,7 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
       - name: Commit immutable national AFO snapshots
-        if: github.event_name != 'push'
+        if: success()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
