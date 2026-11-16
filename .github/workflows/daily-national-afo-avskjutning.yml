@@ -37,15 +37,18 @@ jobs:
         run: |
           python -m unittest tests.test_national_afo_snapshot -v
           python -m py_compile scripts/snapshot_national_afo.py
-      - name: Probe one verified AFO on feature branch
-        if: github.event_name == 'push'
-        run: |
-          python scripts/snapshot_national_afo.py \
-            --county "Västerbottens län" \
-            --afo-name "Sydöstra älgförvaltningsområdet"
       - name: Collect full national AFO snapshot
-        if: github.event_name != 'push'
         run: python scripts/snapshot_national_afo.py
+      - name: Upload national AFO batch for verification
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: national-afo-snapshot-batch
+          path: |
+            data/national_afo_snapshots/
+            data/national_afo_dashboard.json
+          if-no-files-found: warn
+          retention-days: 30
       - name: Commit immutable national AFO snapshots
         if: github.event_name != 'push'
         run: |
