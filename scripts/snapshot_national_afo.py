@@ -38,35 +38,62 @@ def parse_current_number(raw: str) -> int | float | None:
     return int(number) if number.is_integer() else number
 
 
-def parse_afo_summary(tables: list[dict[str, Any]]) -> dict[str, Any]:
-    """Extract the official Summa row from the rendered ÄFO report table."""
+def parse_portal_count(raw: Any) -> int:
+    """Parse a non-negative count from one Älgdata area row; missing values are not zero."""
+    value = str(raw if raw is not None else "").strip().replace("\u00a0", "").replace(" ", "")
+    if not value or value == "-":
+        raise ValueError(f"Missing count in source row: {raw!r}")
+    value = value.replace(",", ".")
+    if not re.fullmatch(r"\d+(?:\.0+)?", value):
+        raise ValueError(f"Unrecognized count in source row: {raw!r}")
+    return int(float(value))
+
+
+def parse_afo_api_data(data: dict[str, Any], html_tables: list[dict[str, Any]]) -> dict[str, Any]:
+    """Sum ShotTotal and AssignedTotal across every ÄJO row in the ÄFO report."""
+    rows = data.get("TableDataFormatted")
+    if not isinstance(rows, list) or not rows:
+        raise ValueError("ÄFO report did not return TableDataFormatted area rows")
+
+    def values(field: str) -> list[int]:
+        parsed = []
+        for index, row in enumerate(rows):
+            cell = next((item for item in row if item.get("Name") == field), None)
+            if cell is None:
+                raise ValueError(f"Source row {index} is missing field {field}")
+            parsed.append(parse_portal_count(cell.get("Text")))
+        return parsed
+
+    shot_values = values("ShotTotal")
+    target_values = values("AssignedTotal")
+    finished = sum(1 for row in rows if next((item.get("Text") for item in row if item.get("Name") == "FinishedReporting"), "") == "Ja")
+    areas_with_kills = sum(1 for value in shot_values if value > 0)
+    areas_with_targets = sum(1 for value in target_values if value > 0)
+
     candidates = [
         table.get("rows", [])
-        for table in tables
-        if table.get("rows")
-        and any("Registreringsnummer" in str(cell) for cell in table["rows"][0])
+        for table in html_tables
+        if table.get("rows") and any("Registreringsnummer" in str(cell) for cell in table["rows"][0])
     ]
-    if not candidates:
-        raise ValueError("ÄFO report did not render the expected hunting-area table")
-    rows = max(candidates, key=len)
-    summary = next(
-        (row for row in rows if row and str(row[0]).strip().casefold().startswith("summa")),
-        None,
-    )
-    if summary is None:
-        raise ValueError("ÄFO report table did not contain a Summa row")
-    if len(summary) < 21:
-        raise ValueError(f"Summa row schema changed: expected >=21 cells, got {len(summary)}")
-    return {
-        "source_row_count": max(0, len(rows) - 3),
-        "raw_header_rows": rows[:2],
-        "raw_summa_row": summary,
-        "fallda_totalt_raw": summary[10],
-        "fallda_totalt": parse_current_number(summary[10]),
-        "avskjutningsmal_totalt_raw": summary[20],
-        "avskjutningsmal_totalt": parse_current_number(summary[20]),
-    }
+    html_summary = None
+    if candidates:
+        html_rows = max(candidates, key=len)
+        html_summary = next((row for row in html_rows if row and str(row[0]).strip().casefold().startswith("summa")), None)
 
+    return {
+        "source_row_count": len(rows),
+        "finished_reporting_area_count": finished,
+        "areas_with_kills_count": areas_with_kills,
+        "areas_with_targets_count": areas_with_targets,
+        "fallda_totalt": sum(shot_values),
+        "fallda_totalt_raw": str(sum(shot_values)),
+        "avskjutningsmal_totalt": sum(target_values),
+        "avskjutningsmal_totalt_raw": str(sum(target_values)),
+        "raw_header_one": data.get("HeaderOne", []),
+        "raw_header_two": data.get("HeaderTwo", []),
+        "raw_area_rows": rows,
+        "raw_html_summa_row": html_summary,
+    }
 
 def load_active_afo_catalog(path: Path, season: str = SEASON) -> list[dict[str, str]]:
     """Keep only current-boundary AFOs with a selector valid for the requested season."""
@@ -184,18 +211,13 @@ async def collect_one(page, item: dict[str, str], season: str) -> dict[str, Any]
     api_payload = await response.json()
     if api_payload.get("Error") or api_payload.get("Errors"):
         raise RuntimeError(f"Portal returned a report error: {api_payload.get('Error') or api_payload.get('Errors')}")
-    await page.wait_for_timeout(500)
-
+    await page.wait_for_timeout(350)
     tables = await page.evaluate("""() => Array.from(document.querySelectorAll('table')).map(t => ({
       rows:Array.from(t.querySelectorAll('tr')).slice(0,200).map(tr =>
         Array.from(tr.querySelectorAll('th,td')).map(c => (c.innerText||'').replace(/\\s+/g,' ').trim())
       )
     }))""")
-    parsed = parse_afo_summary(tables)
-    graph_one = ((api_payload.get("Data") or {}).get("GraphOne") or {}).get("GraphData") or {}
-    graph_columns = graph_one.get("Columns") or []
-    if graph_columns:
-        parsed["source_row_count"] = max(0, len(graph_columns) - 1)
+    parsed = parse_afo_api_data(api_payload.get("Data") or {}, tables)
     return {
         **item,
         "snapshot_date": datetime.now(timezone.utc).date().isoformat(),
@@ -205,7 +227,7 @@ async def collect_one(page, item: dict[str, str], season: str) -> dict[str, Any]
         "report_name": "ÄFO",
         "boundary_mode": "current",
         "hunting_season": season,
-        "aggregation_level": "ÄFO Summa row across the AFO's registered hunting areas",
+        "aggregation_level": "sum of ShotTotal and AssignedTotal across all registered ÄJO rows within the AFO",
         "data_status": "summa_row_available",
         "report_name_from_api": (api_payload.get("Data") or {}).get("ReportName"),
         **parsed,
