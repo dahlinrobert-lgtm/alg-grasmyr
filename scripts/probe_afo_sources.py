@@ -181,6 +181,20 @@ async def main():
     except Exception as exc:
         result["sources"]["afo_catalog_crosswalk"]={"error":type(exc).__name__+": "+str(exc)[:1000]}
 
+    try:
+        direct_payload={"ReportId":"3","TypeAFO":"G","CountyNo":"24","AfoId":"5","AjoId":"","SeasonFrom":"2026/2027","SeasonTo":"2026/2027","AlertInfoBeforeLoad":"","ReportType":0,"Report":1,"ReportLevel":2}
+        direct_response=await request.post(
+            "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/LoadData/GetData",
+            data=json.dumps(direct_payload),
+            headers={"Content-Type":"application/json","Referer":PORTAL}
+        )
+        direct_json=await direct_response.json()
+        direct_data=direct_json.get("Data") or {}
+        direct_rows=direct_data.get("TableDataFormatted") or []
+        result["sources"]["direct_api_post"]={"status":direct_response.status,"ok":direct_response.ok,"report_name":direct_data.get("ReportName"),"table_rows":len(direct_rows),"first_row":direct_rows[0] if direct_rows else None,"error":direct_json.get("Error")}
+    except Exception as exc:
+        result["sources"]["direct_api_post"]={"error":type(exc).__name__+": "+str(exc)[:1000]}
+
     path=args.out/"afo_source_probe.json"
     path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"output":str(path),"sources":{k:{"status":v.get("status"),"error":v.get("error"),"count":(v.get("json") or {}).get("count"),"wms":v.get("is_wms_capabilities")} for k,v in result["sources"].items()}},ensure_ascii=False,indent=2))
