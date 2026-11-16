@@ -73,6 +73,15 @@ async def main():
 
         browser=await p.chromium.launch(headless=True)
         page=await browser.new_page(viewport={"width":1440,"height":1000})
+        try:
+            await page.goto("https://dahlinrobert-lgtm.github.io/Skog/",wait_until="domcontentloaded",timeout=60000)
+            cors_result=await page.evaluate("""async (url) => {
+              try { const r=await fetch(url); const j=await r.json(); return {ok:r.ok,status:r.status,type:j.type,features:j.features?.length}; }
+              catch(e) { return {ok:false,error:String(e)}; }
+            }""","https://ext-geodata-applikationer.lansstyrelsen.se/arcgis/rest/services/Jaktadm/lst_jaktadm_visning/MapServer/1/query?where=1%3D1&outFields=OBJECTID,afo_id,namn_afo,forvaltare&returnGeometry=true&outSR=4326&f=geojson")
+            result["sources"]["browser_cors_from_github_pages"]=cors_result
+        except Exception as exc:
+            result["sources"]["browser_cors_from_github_pages"]={"ok":False,"error":type(exc).__name__+": "+str(exc)[:1000]}
         page.set_default_timeout(20000)
         captured=[]
         async def capture_response(response):
@@ -153,6 +162,18 @@ async def main():
         finally:
             await browser.close()
         await request.dispose()
+
+    try:
+        catalogue=json.loads(Path("data/national_area_catalog/national_area_catalog.json").read_text(encoding="utf-8"))
+        expected=set()
+        for item in catalogue.get("county_afo_coverage",[]):
+            if item.get("boundary_mode")=="current":
+                expected.add(f"{int(item['county_portal_value']):02d}-{int(item['afo_id']):03d}")
+        features=(result["sources"].get("lansstyrelsen_afo_features",{}).get("json") or {}).get("features",[])
+        actual={str((f.get("properties") or {}).get("afo_id") or (f.get("attributes") or {}).get("afo_id")) for f in features}
+        result["sources"]["afo_catalog_crosswalk"]={"catalog_current_count":len(expected),"boundary_feature_count":len(actual),"missing_boundary_ids":sorted(expected-actual),"extra_boundary_ids":sorted(actual-expected)}
+    except Exception as exc:
+        result["sources"]["afo_catalog_crosswalk"]={"error":type(exc).__name__+": "+str(exc)[:1000]}
 
     path=args.out/"afo_source_probe.json"
     path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
