@@ -192,6 +192,10 @@ async def collect_one(page, item: dict[str, str], season: str) -> dict[str, Any]
       )
     }))""")
     parsed = parse_afo_summary(tables)
+    graph_one = ((api_payload.get("Data") or {}).get("GraphOne") or {}).get("GraphData") or {}
+    graph_columns = graph_one.get("Columns") or []
+    if graph_columns:
+        parsed["source_row_count"] = max(0, len(graph_columns) - 1)
     return {
         **item,
         "snapshot_date": datetime.now(timezone.utc).date().isoformat(),
