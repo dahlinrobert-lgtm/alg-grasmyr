@@ -5,36 +5,44 @@ from pathlib import Path
 from scripts.snapshot_national_afo import (
     archive_complete_batch,
     load_active_afo_catalog,
-    parse_afo_summary,
-    parse_current_number,
+    parse_afo_api_data,
 )
 
 
 class NationalAfoSnapshotTests(unittest.TestCase):
-    def test_parse_current_number_preserves_zero_and_null(self):
-        self.assertEqual(parse_current_number("1 234 (2 408)"), 1234)
-        self.assertEqual(parse_current_number("12,5 (14,2)"), 12.5)
-        self.assertEqual(parse_current_number("0 (783)"), 0)
-        self.assertIsNone(parse_current_number("-"))
+    def test_parse_afo_totals_sum_underlying_area_rows(self):
+        data = {
+            "TableDataFormatted": [
+                [
+                    {"Name": "ShotTotal", "Text": "5"},
+                    {"Name": "AssignedTotal", "Text": "7"},
+                    {"Name": "FinishedReporting", "Text": "Ja"},
+                ],
+                [
+                    {"Name": "ShotTotal", "Text": "6"},
+                    {"Name": "AssignedTotal", "Text": "8"},
+                    {"Name": "FinishedReporting", "Text": "Nej"},
+                ],
+            ],
+            "HeaderOne": [{"Name": "Fällda älgar"}],
+            "HeaderTwo": [{"Name": "Totalt"}],
+        }
+        parsed = parse_afo_api_data(data, [])
+        self.assertEqual(parsed["fallda_totalt"], 11)
+        self.assertEqual(parsed["avskjutningsmal_totalt"], 15)
+        self.assertEqual(parsed["source_row_count"], 2)
+        self.assertEqual(parsed["finished_reporting_area_count"], 1)
+        self.assertEqual(parsed["areas_with_kills_count"], 2)
+        self.assertEqual(parsed["areas_with_targets_count"], 2)
+        self.assertEqual(len(parsed["raw_area_rows"]), 2)
 
-    def test_parse_summa_row_uses_total_cells(self):
-        rows = [
-            {"rows": [
-                ["Registreringsnummer", "Jaktområdets namn", "Slut- rapporterat", "Registrerad areal ha", "Fällda älgar"],
-                ["Vuxen", "Handjur", "Hondjur", "Kalv", "Totalt", "Avskjutningsmål"],
-                ["Summa:", "", "", "14 773,37 (780 017,77)", "25 (1 550)", "13 (843)", "12 (707)",
-                 "17 (858)", "9 (428)", "8 (430)", "42 (2 408)", "1 (4)", "1 (1)", "", "", "",
-                 "35 (2 000)", "0 (783)", "0 (883)", "31 (1 394)", "66 (3 394)", "", "", "", ""],
-            ]}
-        ]
-        parsed = parse_afo_summary(rows)
-        self.assertEqual(parsed["fallda_totalt"], 42)
-        self.assertEqual(parsed["avskjutningsmal_totalt"], 66)
-        self.assertEqual(parsed["fallda_totalt_raw"], "42 (2 408)")
-
-    def test_summary_row_is_required(self):
+    def test_missing_area_count_is_not_silently_zero(self):
+        data = {"TableDataFormatted": [[
+            {"Name": "ShotTotal", "Text": "-"},
+            {"Name": "AssignedTotal", "Text": "8"},
+        ]]}
         with self.assertRaises(ValueError):
-            parse_afo_summary([{"rows": [["Registreringsnummer"], ["No rows"]]}])
+            parse_afo_api_data(data, [])
 
     def test_catalog_filters_to_current_season_and_deduplicates(self):
         with tempfile.TemporaryDirectory() as tmp:
