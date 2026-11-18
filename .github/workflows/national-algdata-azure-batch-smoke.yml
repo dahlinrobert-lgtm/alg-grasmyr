@@ -1,0 +1,60 @@
+name: National Älgdata Azure batch runner synthetic integration
+
+on:
+  workflow_dispatch:
+    inputs:
+      collection_id:
+        description: "Unique synthetic collection ID (letters, numbers, dot, underscore or hyphen)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: national-algdata-azure-batch-synthetic
+  cancel-in-progress: false
+
+jobs:
+  synthetic-runner-integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Azure SDK
+        run: python -m pip install --disable-pip-version-check "azure-identity>=1.17,<2" "azure-storage-blob>=12.20,<13"
+      - name: Validate collection ID
+        env:
+          COLLECTION_ID: ${{ inputs.collection_id }}
+        run: |
+          python - <<'PY'
+          import os, re
+          value = os.environ["COLLECTION_ID"]
+          if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]{0,99}", value):
+              raise SystemExit("Invalid collection_id")
+          if not value.startswith("synthetic-runner-"):
+              raise SystemExit("collection_id must start with synthetic-runner-")
+          PY
+      - name: Run unit tests
+        run: |
+          python -m unittest tests.test_national_batching tests.test_national_batch_runner tests.test_azure_batch_checkpoint tests.test_azure_checkpoint_pointer -v
+          python -m py_compile scripts/run_national_batches.py scripts/azure_batch_checkpoint.py scripts/azure_checkpoint_pointer.py
+      - name: Sign in to Azure with GitHub OIDC
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - name: Exercise Azure-backed runner resume using synthetic areas only
+        env:
+          AZURE_STORAGE_ACCOUNT: stskogkolldata
+          AZURE_STORAGE_CONTAINER: national-algdata
+          COLLECTION_ID: ${{ inputs.collection_id }}
+        run: |
+          set -euo pipefail
+          python scripts/azure_batch_runner_integration_smoke.py | tee "$RUNNER_TEMP/azure-batch-runner-result.json"
+          cat "$RUNNER_TEMP/azure-batch-runner-result.json" >> "$GITHUB_STEP_SUMMARY"
