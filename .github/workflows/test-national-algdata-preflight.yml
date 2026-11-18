@@ -42,3 +42,4 @@ jobs:
         run: |
           python -m unittest tests.test_national_preflight tests.test_national_preflight_validation tests.test_national_batching tests.test_national_batch_runner -v
           python -m py_compile scripts/run_national_preflight.py scripts/validate_national_preflight.py scripts/national_batching.py scripts/run_national_batches.py
+          python scripts/run_national_batches.py --help
