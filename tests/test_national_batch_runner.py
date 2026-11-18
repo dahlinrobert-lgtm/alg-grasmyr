@@ -122,5 +122,37 @@ class NationalBatchRunnerTests(unittest.TestCase):
 
 
 
+    def test_azure_checkpoint_is_published_after_initialization_and_each_area(self):
+        candidates = [candidate(1), candidate(2)]
+        with tempfile.TemporaryDirectory() as directory:
+            package = Path(directory) / "package"
+            output = package / "run"
+            with ExitStack() as stack:
+                stack.enter_context(patch("scripts.run_national_batches.run_area", side_effect=self.fake_success))
+                stack.enter_context(patch("scripts.azure_checkpoint_pointer.read_latest", return_value=None))
+                cas = stack.enter_context(patch(
+                    "scripts.azure_checkpoint_pointer.compare_and_swap_latest",
+                    side_effect=[
+                        {"etag": "etag-1", "generation": 1},
+                        {"etag": "etag-2", "generation": 2},
+                        {"etag": "etag-3", "generation": 3},
+                    ],
+                ))
+                publish = stack.enter_context(patch("scripts.azure_checkpoint_store.publish_snapshot"))
+                validate = stack.enter_context(patch("scripts.azure_batch_checkpoint.validate_batch_package"))
+                manifest = run_collection(
+                    candidates, output, batch_size=2, azure_collection_id="test-collection"
+                )
+
+            self.assertEqual(manifest["completed_count"], 2)
+            self.assertEqual(publish.call_count, 3)
+            self.assertEqual(validate.call_count, 3)
+            self.assertIsNone(cas.call_args_list[0].args[2])
+            self.assertEqual(cas.call_args_list[1].args[2], "etag-1")
+            self.assertEqual(cas.call_args_list[2].args[2], "etag-2")
+            self.assertTrue((package / "selected_candidates.json").is_file())
+            self.assertTrue((package / "checkpoint_provenance.json").is_file())
+
+
 if __name__ == "__main__":
     unittest.main()
