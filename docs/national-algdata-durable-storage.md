@@ -4,7 +4,7 @@
 
 Use Azure Blob Storage as the durable object store for national Älgdata collection checkpoints and raw portal outputs. GitHub Actions artifacts remain short-lived diagnostics and convenient hand-off packages; they are not the authoritative archive.
 
-The Azure identity, dedicated container, and synthetic upload/restore path have now been configured and tested. The national batch runner itself still uses GitHub Actions artifacts; Azure is not yet its authoritative checkpoint backend.
+The Azure identity, dedicated container, synthetic upload/restore path, conditional pointer updates, and opt-in Azure batch-runner resume path have now been configured and tested. The default runner behavior still uses the existing local/GitHub-artifact path; Azure is enabled only when an explicit `--azure-collection-id` is supplied. The Azure path is not approved for real national portal collection or production use yet.
 
 ## Storage layout
 
