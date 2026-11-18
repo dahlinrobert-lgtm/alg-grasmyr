@@ -31,10 +31,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install pinned Playwright dependency
         run: python -m pip install --disable-pip-version-check --retries 5 --timeout 30 "playwright==1.56.0"
-      - name: Run national preflight unit tests
+      - name: Run national preflight and batch-state unit tests
         run: |
-          python -m unittest tests.test_national_preflight tests.test_national_preflight_validation tests.test_geographic_pilot tests.test_download_statistics -v
-          python -m py_compile scripts/run_national_preflight.py scripts/validate_national_preflight.py scripts/download_statistics.py
+          python -m unittest tests.test_national_preflight tests.test_national_preflight_validation tests.test_national_batching tests.test_geographic_pilot tests.test_download_statistics -v
+          python -m py_compile scripts/run_national_preflight.py scripts/validate_national_preflight.py scripts/national_batching.py scripts/download_statistics.py
       - name: Refresh national selector catalogue
         run: python scripts/discover_national_areas.py
       - name: Probe current areas across the national AFO catalogue
