@@ -60,7 +60,7 @@ jobs:
               }, ensure_ascii=False, indent=2) + chr(10),
               encoding="utf-8",
           )
-          print(json.dumps({"candidate_count": len(candidates), "afo_count": len(coverage)}, ensure_ascii=False))
+          print(json.dumps({"candidate_count": len(candidates), "afo_count": coverage["afo_count"]}, ensure_ascii=False))
           PY
       - name: Run bounded sequential batch smoke test
         run: |
