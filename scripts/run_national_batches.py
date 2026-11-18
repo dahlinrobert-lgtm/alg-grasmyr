@@ -145,7 +145,7 @@ def run_collection(
                 raise ValueError("Azure frozen candidate list differs from requested candidates")
         else:
             selected_path.write_text(
-                json.dumps({"candidates": candidates}, ensure_ascii=False, indent=2) + "\\n",
+                json.dumps({"candidates": candidates}, ensure_ascii=False, indent=2) + "\n",
                 encoding="utf-8",
             )
 
@@ -195,7 +195,7 @@ def run_collection(
             "collection_id": azure_collection_id,
             "checkpoint_backend": "azure_blob",
             "production_write": False,
-        }, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+        }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         validate_batch_package(package_root)
         snapshot_id = "checkpoint-" + uuid.uuid4().hex
         publish_snapshot(package_root, azure_collection_id, snapshot_id)
@@ -227,7 +227,7 @@ def run_collection(
                 "collection_id": azure_collection_id,
                 "checkpoint_backend": "azure_blob",
                 "production_write": False,
-            }, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+            }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             validate_batch_package(package_root)
             snapshot_id = "checkpoint-" + uuid.uuid4().hex
             publish_snapshot(package_root, azure_collection_id, snapshot_id)
