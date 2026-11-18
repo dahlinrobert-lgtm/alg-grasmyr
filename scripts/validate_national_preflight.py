@@ -63,6 +63,11 @@ def validate(directory: Path) -> list[str]:
         errors.append("failure_count is inconsistent")
     if summary.get("failure_count") == 0 and not candidates:
         errors.append("empty national candidate set cannot be considered successful")
+    expected_data_count = sum(bool(x.get("data_available")) for x in results)
+    if summary.get("data_available_count") != expected_data_count:
+        errors.append("data_available_count is inconsistent")
+    if summary.get("failure_count", 0) > 0:
+        errors.append(f"national preflight recorded {summary['failure_count']} failed area probes; inspect diagnostics")
     return errors
 
 
