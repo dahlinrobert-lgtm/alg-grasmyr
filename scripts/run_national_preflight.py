@@ -16,9 +16,12 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-# This script is executed by file path, so Python puts scripts/ (not the
-# repository root) first on sys.path. Import the sibling module directly.
-from run_geographic_pilot import EXCLUDED_AREA_IDS, year_number
+try:
+    # Module import from tests / package context.
+    from scripts.run_geographic_pilot import EXCLUDED_AREA_IDS, year_number
+except ModuleNotFoundError:
+    # Direct execution as: python scripts/run_national_preflight.py
+    from run_geographic_pilot import EXCLUDED_AREA_IDS, year_number
 
 
 def load_catalog(path: Path) -> tuple[list[dict], dict]:
