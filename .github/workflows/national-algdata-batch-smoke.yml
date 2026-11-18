@@ -41,6 +41,20 @@ jobs:
         run: |
           python -m unittest tests.test_national_preflight tests.test_national_preflight_validation tests.test_national_batching tests.test_national_batch_runner -v
           python -m py_compile scripts/run_national_preflight.py scripts/validate_national_preflight.py scripts/national_batching.py scripts/run_national_batches.py
+      - name: Validate smoke-test inputs
+        env:
+          SMOKE_LIMIT: ${{ inputs.limit }}
+          SMOKE_BATCH_SIZE: ${{ inputs.batch_size }}
+        run: |
+          python - <<'PY'
+          import os
+          limit = int(os.environ["SMOKE_LIMIT"])
+          batch_size = int(os.environ["SMOKE_BATCH_SIZE"])
+          if not 1 <= limit <= 20:
+              raise SystemExit("Smoke-test limit must be between 1 and 20")
+          if not 1 <= batch_size <= 20:
+              raise SystemExit("Smoke-test batch size must be between 1 and 20")
+          PY
       - name: Restore previous checkpoint artifact
         if: ${{ inputs.resume_run_id != '' }}
         uses: actions/download-artifact@v4
@@ -88,6 +102,8 @@ jobs:
           }, ensure_ascii=False))
           PY
       - name: Validate restored checkpoint and candidate identity
+        env:
+          RESUME_RUN_ID: ${{ inputs.resume_run_id }}
         run: |
           python - <<'PY'
           import json
@@ -100,7 +116,8 @@ jobs:
           candidates = selected.get("candidates")
           if not isinstance(candidates, list) or not candidates:
               raise SystemExit("Frozen candidate list is empty or invalid")
-          resume_run_id = "${{ inputs.resume_run_id }}".strip()
+          import os
+          resume_run_id = os.environ.get("RESUME_RUN_ID", "").strip()
           manifest_path = root / "run" / "manifest.json"
           if resume_run_id:
               if not manifest_path.is_file():
