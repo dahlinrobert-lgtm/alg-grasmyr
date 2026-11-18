@@ -12,6 +12,7 @@ from azure_batch_checkpoint import validate_batch_package
 
 
 def fake_area(candidate, area_dir, report_id, area_timeout):
+    area_dir.mkdir(parents=True, exist_ok=True)
     return {
         "area_id": str(candidate["area_portal_id"]),
         "county": candidate["county"],
