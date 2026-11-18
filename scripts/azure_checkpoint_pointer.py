@@ -129,8 +129,8 @@ def compare_and_swap_latest(
                 content_settings=ContentSettings(content_type="application/json"),
             )
         else:
-            if props is None or props.etag != expected_etag:
-                raise RuntimeError("Latest pointer ETag changed; refusing stale checkpoint update")
+            if props is None:
+                raise RuntimeError("Latest pointer is absent; refusing conditional update")
             generation = current["generation"] + 1
             payload = {
                 "schema_version": 1,
