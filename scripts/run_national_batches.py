@@ -151,6 +151,7 @@ def run_collection(
 
         latest = read_latest(azure_collection_id)
         if latest is not None:
+            # Azure is the authoritative resume source; refuse to overlay local state.
             with tempfile.TemporaryDirectory(prefix="algdata-azure-resume-") as temp:
                 restored_root = Path(temp) / "package"
                 restore_snapshot(
