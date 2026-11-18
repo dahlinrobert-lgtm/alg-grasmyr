@@ -76,6 +76,7 @@ def compare_and_swap_latest(
     """
     from azure.core import MatchConditions
     from azure.core.exceptions import ResourceNotFoundError
+    from azure.storage.blob import ContentSettings
 
     _validate_collection_id(collection_id)
     if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]{0,99}", snapshot_id):
@@ -125,7 +126,7 @@ def compare_and_swap_latest(
                     "production_write": False,
                 }, sort_keys=True).encode("utf-8"),
                 overwrite=False,
-                content_type="application/json",
+                content_settings=ContentSettings(content_type="application/json"),
             )
         else:
             if props is None or props.etag != expected_etag:
