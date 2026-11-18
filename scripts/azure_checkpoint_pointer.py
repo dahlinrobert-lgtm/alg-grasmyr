@@ -12,11 +12,10 @@ import re
 from datetime import datetime, timezone
 from typing import Any
 
-from scripts.azure_checkpoint_store import (
-    CONTAINER,
-    PREFIX_ROOT,
-    _clients,
-)
+try:  # Direct script execution from scripts/ and package imports from repo root.
+    from azure_checkpoint_store import CONTAINER, PREFIX_ROOT, _clients
+except ModuleNotFoundError:  # pragma: no cover - exercised by package-based tests
+    from scripts.azure_checkpoint_store import CONTAINER, PREFIX_ROOT, _clients
 
 
 def _validate_collection_id(collection_id: str) -> None:
