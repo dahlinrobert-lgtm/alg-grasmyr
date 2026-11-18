@@ -94,4 +94,13 @@ Do not switch the national collector to Azure until all gates pass:
 
 ## Current status
 
-The GitHub-artifact resume mechanism was proven by smoke runs #5 and #6. It remains the interim checkpoint transport, with 30-day artifact retention. The Azure design above is not yet deployed or credentialed.
+The GitHub-artifact resume mechanism was proven by smoke runs #5 and #6. It remains the interim checkpoint transport, with 30-day artifact retention.
+
+A first isolated Azure implementation is now prepared on branch `feature/azure-checkpoint-smoke`:
+- `scripts/azure_checkpoint_store.py` publishes immutable snapshot files and uploads the checkpoint manifest last.
+- Every file is accompanied by SHA-256 and byte-count metadata; an existing object is accepted only when its metadata matches.
+- Restore validates manifest provenance, safe relative paths, SHA-256 and byte counts.
+- `.github/workflows/national-algdata-azure-smoke.yml` is manual and synthetic-only. It supports upload and restore in separate workflow runs.
+- The workflow targets the existing `stskogkolldata` account and a dedicated `national-algdata` container.
+
+This is implementation code only. The workflow has not yet been run, the target container/permissions have not been verified from this repository, and the national runner still uses GitHub artifacts. Do not treat Azure as the authoritative checkpoint store until the separate-run test and recovery gates above pass.
