@@ -9,6 +9,9 @@ import argparse
 import json
 import subprocess
 import sys
+import shutil
+import tempfile
+import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -119,9 +122,62 @@ def run_collection(
     limit: int | None = None,
     stop_after_area: int | None = None,
     retry_failed: bool = False,
+    azure_collection_id: str | None = None,
 ) -> dict[str, Any]:
-    output_dir.mkdir(parents=True, exist_ok=True)
+    output_dir.parent.mkdir(parents=True, exist_ok=True)
     manifest_path = output_dir / "manifest.json"
+    azure_state: dict[str, Any] | None = None
+    package_root = output_dir.parent
+    if azure_collection_id:
+        try:
+            from scripts.azure_checkpoint_store import publish_snapshot, restore_snapshot
+            from scripts.azure_checkpoint_pointer import read_latest, compare_and_swap_latest
+            from scripts.azure_batch_checkpoint import validate_batch_package
+        except ModuleNotFoundError:
+            from azure_checkpoint_store import publish_snapshot, restore_snapshot
+            from azure_checkpoint_pointer import read_latest, compare_and_swap_latest
+            from azure_batch_checkpoint import validate_batch_package
+
+        selected_path = package_root / "selected_candidates.json"
+        if selected_path.exists():
+            selected_payload = json.loads(selected_path.read_text(encoding="utf-8"))
+            if selected_payload.get("candidates") != candidates:
+                raise ValueError("Azure frozen candidate list differs from requested candidates")
+        else:
+            selected_path.write_text(
+                json.dumps({"candidates": candidates}, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+
+        latest = read_latest(azure_collection_id)
+        if latest is not None:
+            # Azure is the authoritative resume source; refuse to overlay local state.
+            with tempfile.TemporaryDirectory(prefix="algdata-azure-resume-") as temp:
+                restored_root = Path(temp) / "package"
+                restore_snapshot(
+                    azure_collection_id,
+                    latest["pointer"]["snapshot_id"],
+                    restored_root,
+                )
+                validate_batch_package(restored_root)
+                restored_selected = json.loads(
+                    (restored_root / "selected_candidates.json").read_text(encoding="utf-8")
+                )
+                if restored_selected.get("candidates") != candidates:
+                    raise ValueError("Azure checkpoint candidate identity differs; refusing resume")
+                if output_dir.exists() and any(output_dir.iterdir()):
+                    raise ValueError("Local run directory is not empty; refusing to overlay Azure checkpoint")
+                if output_dir.exists():
+                    output_dir.rmdir()
+                shutil.copytree(restored_root / "run", output_dir)
+            manifest = load_manifest(manifest_path)
+            if manifest.get("candidates") != candidates:
+                raise ValueError("Azure checkpoint manifest candidate identity differs")
+            azure_state = {"etag": latest["etag"], "generation": latest["pointer"]["generation"]}
+        else:
+            azure_state = {"etag": None, "generation": 0}
+
+    output_dir.mkdir(parents=True, exist_ok=True)
     if manifest_path.exists():
         manifest = load_manifest(manifest_path)
         if manifest.get("candidates") != candidates:
@@ -133,6 +189,19 @@ def run_collection(
             created_at_utc=datetime.now(timezone.utc).isoformat(),
         )
         save_manifest_atomic(manifest_path, manifest)
+
+    if azure_collection_id and azure_state and azure_state["generation"] == 0:
+        provenance_path = package_root / "checkpoint_provenance.json"
+        provenance_path.write_text(json.dumps({
+            "collection_id": azure_collection_id,
+            "checkpoint_backend": "azure_blob",
+            "production_write": False,
+        }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        validate_batch_package(package_root)
+        snapshot_id = "checkpoint-" + uuid.uuid4().hex
+        publish_snapshot(package_root, azure_collection_id, snapshot_id)
+        pointer = compare_and_swap_latest(azure_collection_id, snapshot_id, None)
+        azure_state = {"etag": pointer["etag"], "generation": pointer["generation"]}
 
     processed_this_run = 0
     for candidate in candidates:
@@ -153,6 +222,20 @@ def run_collection(
         record_result(manifest, result)
         manifest["updated_at_utc"] = datetime.now(timezone.utc).isoformat()
         save_manifest_atomic(manifest_path, manifest)
+        if azure_collection_id and azure_state is not None:
+            provenance_path = package_root / "checkpoint_provenance.json"
+            provenance_path.write_text(json.dumps({
+                "collection_id": azure_collection_id,
+                "checkpoint_backend": "azure_blob",
+                "production_write": False,
+            }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            validate_batch_package(package_root)
+            snapshot_id = "checkpoint-" + uuid.uuid4().hex
+            publish_snapshot(package_root, azure_collection_id, snapshot_id)
+            pointer = compare_and_swap_latest(
+                azure_collection_id, snapshot_id, azure_state["etag"]
+            )
+            azure_state = {"etag": pointer["etag"], "generation": pointer["generation"]}
         processed_this_run += 1
         print(json.dumps({
             "area_id": area_id,
@@ -175,6 +258,10 @@ def main() -> int:
     parser.add_argument("--batch-size", type=int, default=100)
     parser.add_argument("--report-id", default="4")
     parser.add_argument("--area-timeout", type=int, default=240)
+    parser.add_argument(
+        "--azure-collection-id",
+        help="Enable durable Azure checkpoint/resume for this frozen collection ID",
+    )
     parser.add_argument("--limit", type=int, help="Maximum new area attempts in this invocation")
     parser.add_argument(
         "--retry-failed", action="store_true",
@@ -190,6 +277,7 @@ def main() -> int:
         load_candidates(args.candidates), args.out, args.batch_size,
         args.report_id, args.area_timeout, args.limit,
         retry_failed=args.retry_failed,
+        azure_collection_id=args.azure_collection_id,
     )
     print(json.dumps({
         "run_id": manifest["run_id"],
