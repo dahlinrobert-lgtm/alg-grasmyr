@@ -89,8 +89,13 @@ def record_result(manifest: dict[str, Any], result: dict[str, Any]) -> None:
         raise ValueError(f"result area_id {area_id} is not in this run's candidate set")
 
     normalized = dict(result)
+    normalized.pop("attempt_history", None)
     normalized["status"] = classify_result(normalized)
-    manifest.setdefault("results", {})[area_id] = normalized
+    previous = manifest.setdefault("results", {}).get(area_id, {})
+    history = list(previous.get("attempt_history", []))
+    history.append(dict(normalized))
+    normalized["attempt_history"] = history
+    manifest["results"][area_id] = normalized
 
     for batch in manifest.get("batches", []):
         ids = batch["candidate_ids"]
