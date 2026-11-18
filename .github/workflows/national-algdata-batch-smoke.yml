@@ -48,6 +48,8 @@ jobs:
           if not candidates:
               raise SystemExit("No current national candidates selected")
           Path("out/national-batch-smoke").mkdir(parents=True, exist_ok=True)
+          assert 1 <= int("${{ inputs.limit }}") <= 20, "Smoke-test limit must be between 1 and 20"
+          assert 1 <= int("${{ inputs.batch_size }}") <= 20, "Smoke-test batch size must be between 1 and 20"
           Path("out/national-batch-smoke/selected_candidates.json").write_text(
               json.dumps({
                   "catalogue_metadata": metadata,
@@ -55,7 +57,7 @@ jobs:
                   "min_end_year": 2026,
                   "areas_per_afo": 5,
                   "candidates": candidates,
-              }, ensure_ascii=False, indent=2) + "\\n",
+              }, ensure_ascii=False, indent=2) + chr(10),
               encoding="utf-8",
           )
           print(json.dumps({"candidate_count": len(candidates), "afo_count": len(coverage)}, ensure_ascii=False))
