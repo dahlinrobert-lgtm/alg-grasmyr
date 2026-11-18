@@ -1,0 +1,33 @@
+name: Test national Älgdata preflight
+
+on:
+  pull_request:
+    paths:
+      - "scripts/run_national_preflight.py"
+      - "scripts/validate_national_preflight.py"
+      - "tests/test_national_preflight*.py"
+      - ".github/workflows/national-algdata-preflight.yml"
+      - ".github/workflows/test-national-algdata-preflight.yml"
+  push:
+    paths:
+      - "scripts/run_national_preflight.py"
+      - "scripts/validate_national_preflight.py"
+      - "tests/test_national_preflight*.py"
+      - ".github/workflows/national-algdata-preflight.yml"
+      - ".github/workflows/test-national-algdata-preflight.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run national preflight tests and compile checks
+        run: |
+          python -m unittest tests.test_national_preflight tests.test_national_preflight_validation -v
+          python -m py_compile scripts/run_national_preflight.py scripts/validate_national_preflight.py

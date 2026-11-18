@@ -1,0 +1,54 @@
+name: National Älgdata preflight
+
+on:
+  workflow_dispatch:
+    inputs:
+      min_end_year:
+        description: "Minimum hunting-season start year (2026 = 2026/2027)"
+        required: true
+        type: number
+        default: 2026
+      areas_per_afo:
+        description: "Areas to probe per current AFO (start with 1)"
+        required: true
+        type: number
+        default: 1
+
+permissions:
+  contents: read
+
+concurrency:
+  group: national-algdata-preflight
+  cancel-in-progress: false
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    container:
+      image: mcr.microsoft.com/playwright/python:v1.56.0-noble
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pinned Playwright dependency
+        run: python -m pip install --disable-pip-version-check --retries 5 --timeout 30 "playwright==1.56.0"
+      - name: Run national preflight unit tests
+        run: |
+          python -m unittest tests.test_national_preflight tests.test_geographic_pilot tests.test_download_statistics -v
+          python -m py_compile scripts/run_national_preflight.py scripts/download_statistics.py
+      - name: Refresh national selector catalogue
+        run: python scripts/discover_national_areas.py
+      - name: Probe current areas across the national AFO catalogue
+        run: |
+          python scripts/run_national_preflight.py \
+            --min-end-year "${{ inputs.min_end_year }}" \
+            --areas-per-afo "${{ inputs.areas_per_afo }}"
+      - name: Validate national preflight manifest
+        run: python scripts/validate_national_preflight.py --directory out/national-preflight
+      - name: Upload national preflight diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: national-algdata-preflight
+          path: out/national-preflight/
+          if-no-files-found: warn
+          retention-days: 30
