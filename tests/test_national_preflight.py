@@ -1,6 +1,6 @@
 import unittest
 
-from scripts.run_national_preflight import select_national_candidates
+from scripts.run_national_preflight import select_national_candidates, select_geographically_balanced_sample
 from scripts.discover_national_areas import county_discovery_audit
 
 
@@ -33,6 +33,27 @@ class NationalPreflightSelectionTests(unittest.TestCase):
         self.assertEqual(len(selected), 2)
         self.assertEqual(coverage["afo_coverage"][0]["selected_count"], 2)
         self.assertEqual([x["area_portal_id"] for x in selected], ["1", "3"])
+
+
+    def test_smoke_sample_spreads_across_counties_before_repeating(self):
+        rows = [
+            {"county": "Norrbotten", "afo_name": "AFO B", "area_portal_id": "2"},
+            {"county": "Norrbotten", "afo_name": "AFO A", "area_portal_id": "1"},
+            {"county": "Skåne", "afo_name": "AFO A", "area_portal_id": "3"},
+            {"county": "Västerbotten", "afo_name": "AFO A", "area_portal_id": "4"},
+            {"county": "Skåne", "afo_name": "AFO B", "area_portal_id": "5"},
+        ]
+        sample = select_geographically_balanced_sample(rows, 3)
+        self.assertEqual([(x["county"], x["area_portal_id"]) for x in sample], [("Norrbotten", "1"), ("Skåne", "3"), ("Västerbotten", "4")])
+
+    def test_smoke_sample_repeats_counties_only_after_first_round(self):
+        rows = [
+            {"county": "Norrbotten", "afo_name": "AFO A", "area_portal_id": "1"},
+            {"county": "Norrbotten", "afo_name": "AFO B", "area_portal_id": "2"},
+            {"county": "Skåne", "afo_name": "AFO A", "area_portal_id": "3"},
+        ]
+        sample = select_geographically_balanced_sample(rows, 3)
+        self.assertEqual([x["area_portal_id"] for x in sample], ["1", "3", "2"])
 
     def test_gotland_is_explicitly_non_applicable_not_a_missing_county(self):
         from scripts.discover_national_areas import EXPECTED_SWEDISH_COUNTIES
