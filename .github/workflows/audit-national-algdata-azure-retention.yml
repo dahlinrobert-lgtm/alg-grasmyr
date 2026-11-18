@@ -1,0 +1,115 @@
+name: Audit National Älgdata Azure retention settings
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: national-algdata-azure-retention-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Sign in to Azure with GitHub OIDC
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Read storage account, Blob service and lifecycle configuration
+        env:
+          STORAGE_ACCOUNT: stskogkolldata
+          STORAGE_CONTAINER: national-algdata
+        shell: bash
+        run: |
+          set -euo pipefail
+          command -v jq >/dev/null
+
+          ACCOUNT_JSON="$(az storage account show --name "$STORAGE_ACCOUNT" --output json)"
+          RESOURCE_GROUP="$(jq -r '.resourceGroup' <<<"$ACCOUNT_JSON")"
+          ACCOUNT_ID="$(jq -r '.id' <<<"$ACCOUNT_JSON")"
+
+          SERVICE_JSON="$(az storage account blob-service-properties show \
+            --account-name "$STORAGE_ACCOUNT" \
+            --resource-group "$RESOURCE_GROUP" --output json)"
+
+          CONTAINER_JSON="$(az storage container show \
+            --name "$STORAGE_CONTAINER" --account-name "$STORAGE_ACCOUNT" \
+            --auth-mode login --output json)"
+
+          if POLICY_JSON="$(az storage account management-policy show \
+            --account-name "$STORAGE_ACCOUNT" \
+            --resource-group "$RESOURCE_GROUP" --output json 2>/dev/null)"; then
+            POLICY_PRESENT=true
+          else
+            POLICY_JSON='{"policy":null}'
+            POLICY_PRESENT=false
+          fi
+
+          ACCOUNT_SUMMARY="$(jq '{
+            location, sku: .sku.name, kind, httpsOnly: .enableHttpsTrafficOnly,
+            minimumTlsVersion, allowBlobPublicAccess, allowSharedKeyAccess,
+            publicNetworkAccess
+          }' <<<"$ACCOUNT_JSON")"
+
+          SERVICE_SUMMARY="$(jq '{
+            isVersioningEnabled,
+            deleteRetentionPolicy,
+            containerDeleteRetentionPolicy,
+            changeFeed,
+            restorePolicy
+          }' <<<"$SERVICE_JSON")"
+
+          CONTAINER_SUMMARY="$(jq '{
+            name, publicAccess: .properties.publicAccess,
+            hasImmutabilityPolicy: .properties.hasImmutabilityPolicy,
+            hasLegalHold: .properties.hasLegalHold,
+            leaseStatus: .properties.leaseStatus
+          }' <<<"$CONTAINER_JSON")"
+
+          POLICY_SUMMARY="$(jq '{
+            policy: .policy
+          }' <<<"$POLICY_JSON")"
+
+          {
+            echo "## Azure retention and recovery audit"
+            echo
+            echo "- Storage account: `$STORAGE_ACCOUNT`"
+            echo "- Container: `$STORAGE_CONTAINER`"
+            echo "- Resource group: `$RESOURCE_GROUP`"
+            echo "- Account resource ID: `$ACCOUNT_ID`"
+            echo
+            echo "### Storage account security"
+            echo ' ```json'
+            jq . <<<"$ACCOUNT_SUMMARY"
+            echo ' ```'
+            echo
+            echo "### Blob service retention and recovery"
+            echo ' ```json'
+            jq . <<<"$SERVICE_SUMMARY"
+            echo ' ```'
+            echo
+            echo "### Container properties"
+            echo ' ```json'
+            jq . <<<"$CONTAINER_SUMMARY"
+            echo ' ```'
+            echo
+            echo "### Lifecycle management"
+            echo "- Policy present: $POLICY_PRESENT"
+            echo ' ```json'
+            jq . <<<"$POLICY_SUMMARY"
+            echo ' ```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          printf '%s\n' "$ACCOUNT_SUMMARY" "$SERVICE_SUMMARY" "$CONTAINER_SUMMARY" "$POLICY_SUMMARY" \
+            | jq -s '{account:.[0], blobService:.[1], container:.[2], lifecycle:.[3]}' \
+            > "$RUNNER_TEMP/azure-retention-audit.json"
+
+          echo "Read-only audit completed. No Azure resources or data were modified."
