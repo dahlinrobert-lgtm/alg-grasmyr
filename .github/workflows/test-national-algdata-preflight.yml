@@ -6,8 +6,10 @@ on:
       - "scripts/run_national_preflight.py"
       - "scripts/validate_national_preflight.py"
       - "scripts/national_batching.py"
+      - "scripts/run_national_batches.py"
       - "tests/test_national_preflight*.py"
       - "tests/test_national_batching.py"
+      - "tests/test_national_batch_runner.py"
       - "docs/national-batch-ingestion.md"
       - ".github/workflows/national-algdata-preflight.yml"
       - ".github/workflows/test-national-algdata-preflight.yml"
@@ -16,8 +18,10 @@ on:
       - "scripts/run_national_preflight.py"
       - "scripts/validate_national_preflight.py"
       - "scripts/national_batching.py"
+      - "scripts/run_national_batches.py"
       - "tests/test_national_preflight*.py"
       - "tests/test_national_batching.py"
+      - "tests/test_national_batch_runner.py"
       - "docs/national-batch-ingestion.md"
       - ".github/workflows/national-algdata-preflight.yml"
       - ".github/workflows/test-national-algdata-preflight.yml"
@@ -33,7 +37,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Run national preflight and batch-state tests
+      - name: Run national preflight and batch-runner tests
         run: |
-          python -m unittest tests.test_national_preflight tests.test_national_preflight_validation tests.test_national_batching -v
-          python -m py_compile scripts/run_national_preflight.py scripts/validate_national_preflight.py scripts/national_batching.py
+          python -m unittest tests.test_national_preflight tests.test_national_preflight_validation tests.test_national_batching tests.test_national_batch_runner -v
+          python -m py_compile scripts/run_national_preflight.py scripts/validate_national_preflight.py scripts/national_batching.py scripts/run_national_batches.py
