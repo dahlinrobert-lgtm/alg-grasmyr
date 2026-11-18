@@ -45,12 +45,13 @@ class NationalBatchingTests(unittest.TestCase):
         record_result(manifest, {"area_id": "2", "portal_selection_success": True, "data_available": False})
         self.assertEqual(manifest["results"]["1"]["status"], "success")
         self.assertEqual(manifest["results"]["2"]["status"], "no_data")
-        self.assertEqual(next_pending_batch(manifest)["batch_id"], "batch-0001")
+        self.assertEqual(next_pending_batch(manifest)["batch_id"], "batch-0002")
         record_result(manifest, {"area_id": "3", "portal_selection_success": False, "data_available": False})
         self.assertEqual(manifest["status"], "completed_with_errors")
         self.assertEqual(manifest["failure_count"], 1)
         self.assertEqual(manifest["no_data_count"], 1)
-        self.assertEqual(public_status(manifest)["production_write"], False)
+        self.assertIsNone(next_pending_batch(manifest))
+        self.assertFalse(public_status(manifest)["production_write"])
 
     def test_unknown_area_is_rejected(self):
         manifest = create_manifest([candidate(1)])
