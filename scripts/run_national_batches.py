@@ -13,13 +13,21 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from scripts.national_batching import (
-    create_manifest,
-    load_manifest,
-    next_pending_batch,
-    record_result,
-    save_manifest_atomic,
-)
+try:
+    # Support both module execution and direct script execution from scripts/.
+    from scripts.national_batching import (
+        create_manifest,
+        load_manifest,
+        record_result,
+        save_manifest_atomic,
+    )
+except ModuleNotFoundError:
+    from national_batching import (
+        create_manifest,
+        load_manifest,
+        record_result,
+        save_manifest_atomic,
+    )
 
 
 def load_candidates(path: Path) -> list[dict[str, Any]]:
