@@ -4,7 +4,7 @@
 
 Use Azure Blob Storage as the durable object store for national Älgdata collection checkpoints and raw portal outputs. GitHub Actions artifacts remain short-lived diagnostics and convenient hand-off packages; they are not the authoritative archive.
 
-This document describes the proposed architecture only. No Azure resource is provisioned, no credentials are stored in the repository, and the current smoke workflow continues to use GitHub artifacts until the Azure connection has been configured and tested.
+The Azure identity, dedicated container, and synthetic upload/restore path have now been configured and tested. The national batch runner itself still uses GitHub Actions artifacts; Azure is not yet its authoritative checkpoint backend.
 
 ## Storage layout
 
@@ -96,11 +96,13 @@ Do not switch the national collector to Azure until all gates pass:
 
 The GitHub-artifact resume mechanism was proven by smoke runs #5 and #6. It remains the interim checkpoint transport, with 30-day artifact retention.
 
-A first isolated Azure implementation is now prepared on branch `feature/azure-checkpoint-smoke`:
+A first isolated Azure implementation is merged on `main`:
 - `scripts/azure_checkpoint_store.py` publishes immutable snapshot files and uploads the checkpoint manifest last.
 - Every file is accompanied by SHA-256 and byte-count metadata; an existing object is accepted only when its metadata matches.
 - Restore validates manifest provenance, safe relative paths, SHA-256 and byte counts.
 - `.github/workflows/national-algdata-azure-smoke.yml` is manual and synthetic-only. It supports upload and restore in separate workflow runs.
 - The workflow targets the existing `stskogkolldata` account and a dedicated `national-algdata` container.
 
-This is implementation code only. The workflow has not yet been run, the target container/permissions have not been verified from this repository, and the national runner still uses GitHub artifacts. Do not treat Azure as the authoritative checkpoint store until the separate-run test and recovery gates above pass.
+The separate-run synthetic upload and restore tests have both passed in GitHub Actions (upload run `44402880891`, restore run `44403461037`). OIDC and Blob access to `stskogkolldata/national-algdata` are verified. The national runner still uses GitHub Actions artifacts; do not treat Azure as authoritative until batch-package validation, conditional checkpoint updates, recovery/versioning, and a bounded real-data resume test have passed.
+
+A follow-on opt-in batch-package layer is being developed on branch `feature/azure-batch-checkpoint-package`. It validates the frozen candidate set, manifest, result IDs/statuses, and `production_write=false` before upload and after restore. It does not change the portal runner or website publishing.
