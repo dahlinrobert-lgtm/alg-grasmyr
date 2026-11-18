@@ -10,6 +10,7 @@ on:
         options:
           - upload
           - restore
+          - pointer-test
         default: upload
       source_snapshot_id:
         description: Snapshot ID to restore (required in restore mode)
@@ -76,6 +77,17 @@ jobs:
             --collection-id synthetic-oidc-validation \
             --snapshot-id "$SNAPSHOT_ID" | tee "$RUNNER_TEMP/azure-smoke-result.json"
           echo "Uploaded snapshot ID: $SNAPSHOT_ID" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Exercise Azure latest-pointer concurrency with synthetic snapshots
+        if: inputs.mode == 'pointer-test'
+        env:
+          AZURE_STORAGE_ACCOUNT: stskogkolldata
+          AZURE_STORAGE_CONTAINER: national-algdata
+          COLLECTION_ID: pointer-smoke-${{ github.run_id }}-${{ github.run_attempt }}
+        run: |
+          set -euo pipefail
+          python scripts/azure_pointer_integration_smoke.py --collection-id "$COLLECTION_ID" | tee "$RUNNER_TEMP/azure-pointer-smoke-result.json"
+          cat "$RUNNER_TEMP/azure-pointer-smoke-result.json" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Restore and verify synthetic checkpoint snapshot
         if: inputs.mode == 'restore'
