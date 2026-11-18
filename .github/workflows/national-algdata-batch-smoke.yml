@@ -42,11 +42,13 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
-          from scripts.run_national_preflight import load_catalog, select_national_candidates
+          from scripts.run_national_preflight import load_catalog, select_national_candidates, select_geographically_balanced_sample
           rows, metadata = load_catalog(Path("data/national_area_catalog/national_area_catalog.csv"))
           candidates, coverage = select_national_candidates(rows, min_end_year=2026, areas_per_afo=5)
           if not candidates:
               raise SystemExit("No current national candidates selected")
+          full_candidate_count = len(candidates)
+          smoke_candidates = select_geographically_balanced_sample(candidates, int("${{ inputs.limit }}"))
           Path("out/national-batch-smoke").mkdir(parents=True, exist_ok=True)
           assert 1 <= int("${{ inputs.limit }}") <= 20, "Smoke-test limit must be between 1 and 20"
           assert 1 <= int("${{ inputs.batch_size }}") <= 20, "Smoke-test batch size must be between 1 and 20"
@@ -56,11 +58,18 @@ jobs:
                   "coverage": coverage,
                   "min_end_year": 2026,
                   "areas_per_afo": 5,
-                  "candidates": candidates,
-              }, ensure_ascii=False, indent=2) + chr(10),
+                  "full_candidate_count": full_candidate_count,
+                  "smoke_sample_strategy": "round_robin_county_then_afo",
+                  "candidates": smoke_candidates,
+              }, ensure_ascii=False, indent=2),
               encoding="utf-8",
           )
-          print(json.dumps({"candidate_count": len(candidates), "afo_count": coverage["afo_count"]}, ensure_ascii=False))
+          print(json.dumps({
+              "full_candidate_count": full_candidate_count,
+              "smoke_candidate_count": len(smoke_candidates),
+              "smoke_counties": sorted({x["county"] for x in smoke_candidates}),
+              "afo_count": coverage["afo_count"],
+          }, ensure_ascii=False))
           PY
       - name: Run bounded sequential batch smoke test
         run: |

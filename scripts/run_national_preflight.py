@@ -95,6 +95,36 @@ def select_national_candidates(
     return selected, summary
 
 
+
+def select_geographically_balanced_sample(candidates: list[dict], limit: int) -> list[dict]:
+    """Choose a deterministic sample spread across counties before repeating counties."""
+    if limit < 1:
+        raise ValueError("limit must be at least 1")
+    by_county: dict[str, list[dict]] = defaultdict(list)
+    for candidate in candidates:
+        county = str(candidate.get("county", "")).strip()
+        if not county:
+            raise ValueError("every candidate must have a county")
+        by_county[county].append(candidate)
+    counties = sorted(by_county, key=str.casefold)
+    for county in counties:
+        by_county[county].sort(key=lambda row: (str(row.get("afo_name", "")).casefold(), str(row.get("area_portal_id", ""))))
+    selected = []
+    round_index = 0
+    while len(selected) < limit:
+        added = False
+        for county in counties:
+            if round_index < len(by_county[county]):
+                selected.append(by_county[county][round_index])
+                added = True
+                if len(selected) == limit:
+                    break
+        if not added:
+            break
+        round_index += 1
+    return selected
+
+
 def run_preflight(
     candidates: list[dict], output_dir: Path, report_id: str = "4"
 ) -> list[dict]:
