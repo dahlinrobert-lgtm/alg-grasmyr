@@ -13,6 +13,16 @@ from azure_batch_checkpoint import validate_batch_package
 
 def fake_area(candidate, area_dir, report_id, area_timeout):
     area_dir.mkdir(parents=True, exist_ok=True)
+    # Azure snapshots store files, not empty directory entries. Write a small
+    # synthetic result so the area's attempt directory survives upload/restore.
+    (area_dir / "synthetic-result.json").write_text(
+        json.dumps({
+            "area_portal_id": str(candidate["area_portal_id"]),
+            "status": "success",
+            "production_write": False,
+        }, ensure_ascii=False, indent=2) + "\\n",
+        encoding="utf-8",
+    )
     return {
         "area_id": str(candidate["area_portal_id"]),
         "county": candidate["county"],
