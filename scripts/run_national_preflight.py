@@ -62,7 +62,18 @@ def select_national_candidates(
             by_id.values(),
             key=lambda r: (r.get("area_name", "").casefold(), r.get("area_portal_id", "")),
         )
-        chosen = candidates[:areas_per_afo]
+        # Spread a bounded sample across the selector list instead of taking
+        # only the first alphabetic entries in each AFO.
+        if len(candidates) <= areas_per_afo:
+            chosen = candidates
+        elif areas_per_afo == 1:
+            chosen = [candidates[0]]
+        else:
+            indexes = [
+                round(i * (len(candidates) - 1) / (areas_per_afo - 1))
+                for i in range(areas_per_afo)
+            ]
+            chosen = [candidates[i] for i in indexes]
         selected.extend(chosen)
         coverage.append({
             "county": county,
@@ -185,6 +196,7 @@ def main() -> int:
         "areas_per_afo": args.areas_per_afo,
         "catalogue_age_days": round(age_days, 2),
         "coverage": coverage,
+        "county_audit": catalog_meta.get("county_audit", {}),
         "candidate_count": len(candidates),
         "portal_selection_success_count": sum(bool(x["portal_selection_success"]) for x in results),
         "data_available_count": sum(bool(x["data_available"]) for x in results),
