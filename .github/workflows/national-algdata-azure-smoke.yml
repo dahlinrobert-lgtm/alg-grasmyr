@@ -54,6 +54,9 @@ jobs:
             exit 1
           fi
 
+      - name: Run Azure checkpoint helper unit tests (no Azure access)
+        run: python -m unittest tests.test_azure_checkpoint_store -v
+
       - name: Sign in to Azure with GitHub OIDC
         uses: azure/login@v2
         with:
