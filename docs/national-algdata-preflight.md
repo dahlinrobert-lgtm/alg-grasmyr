@@ -11,7 +11,8 @@ Den nationella förkontrollen verifierar att rapport 4 (Avskjutning med mål —
 - Katalogen uppdateras live från den publika portalen innan provhämtningen.
 - Endast `boundary_mode=current` används.
 - Endast katalograder med slutår minst det begärda jaktåret väljs.
-- Standard är ett jaktområde per ÄFO, vilket ger geografisk/organisatorisk täckning över landet snarare än ett stort urval från ett fåtal län.
+- Standard är fem jaktområden per ÄFO. Urvalet sprids jämnt över den sorterade listan av områden i respektive AFO, så att provet inte bara tar de första alfabetiska posterna.
+- Den nationella länslistan jämförs med Sveriges 21 län. Saknade län (för närvarande särskilt Gotlands län) redovisas som upptäcktsavvikelse; det antas inte att ett saknat län automatiskt ska ha ett aktivt jaktområde.
 - Kända pilotidentiteter 724577 (Hörneåns ÄSO) och 718148 (Gräsmyrs VVO) hoppas över för att undvika dubbelinsamling.
 - Portal-ID behandlas som en observerad källnyckel, inte som permanent geografisk identitet.
 - Katalogens ålder kontrolleras; äldre än 14 dagar stoppar provhämtningen.
@@ -22,16 +23,16 @@ Workflow: `National Älgdata preflight` (manuell `workflow_dispatch`).
 
 Standardinställningar:
 - jaktår: minst 2026/2027;
-- ett område per aktuellt ÄFO;
+- fem områden per aktuellt ÄFO (kan ändras via workflow-input);
 - rapport-ID 4;
-- högst 180 minuter.
+- högst 240 minuter för hela körningen.
 
-Varje område hämtas separat genom den befintliga `download_statistics.py`. Ett enskilt områdes timeout eller portalproblem registreras som fel och hindrar inte att senare områden provas. Varje anrop har 180 sekunders timeout.
+Varje område hämtas separat och sekventiellt genom den befintliga `download_statistics.py` för att undvika onödig belastning på portalen. Ett enskilt områdes timeout eller portalproblem registreras som fel och hindrar inte att senare områden provas. Varje anrop har 180 sekunders timeout. Fem områden per AFO ger cirka 626 prov i den katalog som granskades 2026-11-18; faktisk mängd beräknas om från den nya livekatalogen vid varje körning.
 
 ## Resultat och tolkning
 
 Artifact innehåller:
-- `selected_candidates.json`: valda områden och täckning per län/ÄFO;
+- `selected_candidates.json`: valda områden och täckning per län/ÄFO, inklusive länsrevision och saknade län;
 - `national_preflight_summary.json`: resultat per område och total summering;
 - en katalog per område med `download-report.json` och eventuell CSV.
 
@@ -43,6 +44,7 @@ Status skiljer mellan lyckad portalhämtning, tillgängliga datarader, tom rappo
 2. Portal-ID, län, ÄFO, jaktår och gränsläge matchar mellan katalog och portalrapport.
 3. Tomma tabeller är åtskilda från tekniska fel.
 4. Misslyckade hämtningar har diagnostik och påverkar inte identiteten för andra områden.
-5. Resultaten granskas innan provet utökas till flera områden per ÄFO eller samtliga cirka 3 200 områden.
+5. Femområdesprovet granskas innan provet utökas till samtliga cirka 3 200 områden.
+6. Saknade län i väljarkatalogen utreds separat och redovisas, inte tyst förbises.
 
 Ingen daglig nationell workflow eller produktionsarkivering aktiveras av detta steg.

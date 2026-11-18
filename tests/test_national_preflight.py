@@ -1,6 +1,7 @@
 import unittest
 
 from scripts.run_national_preflight import select_national_candidates
+from scripts.discover_national_areas import county_discovery_audit
 
 
 class NationalPreflightSelectionTests(unittest.TestCase):
@@ -31,6 +32,13 @@ class NationalPreflightSelectionTests(unittest.TestCase):
         selected, coverage = select_national_candidates(rows, areas_per_afo=2)
         self.assertEqual(len(selected), 2)
         self.assertEqual(coverage["afo_coverage"][0]["selected_count"], 2)
+        self.assertEqual([x["area_portal_id"] for x in selected], ["1", "3"])
+
+    def test_county_audit_explicitly_reports_missing_gotland(self):
+        audit = county_discovery_audit(["Västerbottens län", "Norrbottens län"])
+        self.assertIn("Gotlands län", audit["missing_expected_counties"])
+        self.assertFalse(audit["complete"])
+        self.assertEqual(audit["seen_county_count"], 2)
 
 
 if __name__ == "__main__":
