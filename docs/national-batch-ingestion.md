@@ -65,11 +65,30 @@ Webbpublicering ska vara separat från insamlingsprocessen. Första publicerade 
 - Återupptagning över separata workflow-körningar kräver en beständig checkpoint-/batchlagring och verifiering av dess integritet.
 - Workflow ska ha concurrency-skydd så att två nationella insamlingar inte körs samtidigt.
 
+## Första batch-runnern
+
+`scripts/run_national_batches.py` återanvänder `scripts/download_statistics.py` och kör en områdeshämtning i taget. Den läser kandidatlistan från preflightens `selected_candidates.json` (fältet `candidates`) eller från en fristående JSON-array.
+
+Exempel på en begränsad testkörning:
+
+```bash
+python scripts/run_national_batches.py \\
+  --candidates out/national-preflight/selected_candidates.json \\
+  --out out/national-batch-test \\
+  --batch-size 10 \\
+  --area-timeout 240 \\
+  --limit 10
+```
+
+Körningen skapar `manifest.json` och `areas/<area_id>/` med nedladdningsrapport, CSV och körloggar. Manifestet skrivs atomiskt efter varje områdesförsök. Om processen startas igen med samma `--out` och exakt samma kandidatlista hoppas redan slutligt klassificerade områden över. Om kandidatlistan har ändrats avbryts återupptagningen; använd då en ny utdatakatalog.
+
+Denna första version gör inte automatiska retries av områden med status `failed`; de ligger kvar som synliga fel och retry-policy läggs till efter att grundläggande återupptagning har verifierats. `--limit` gör det möjligt att simulera avbrott utan att ändra kandidatlistan.
+
 ## Nästa utvecklingssteg
 
-1. Implementera en sekventiell batch-runner med checkpoint efter varje område.
-2. Lägg till tester för avbrott, återupptagning, retry och idempotent publicering.
-3. Lägg till ett separat manuellt testworkflow som kör en liten batch utan produktionsskrivning.
-4. Verifiera hur checkpoint och batchfiler ska lagras beständigt.
-5. Implementera webbpublicering först efter godkänt batchtest.
-6. Kör en full nationell testinsamling utan produktionsskrivning och behandla Gotland som ett dokumenterat undantag.
+1. Köra en 10-områdes testinsamling med `--limit 10` och därefter återuppta samma körning.
+2. Verifiera att färdiga områden inte hämtas igen och att checkpointen överlever en ny process.
+3. Lägga till explicit retry-policy för tekniska fel och idempotent hantering av befintliga resultat.
+4. Lägga till ett separat manuellt workflow för små batchar utan produktionsskrivning.
+5. Verifiera beständig lagring av checkpoint och batchfiler mellan GitHub Actions-jobb.
+6. Implementera webbpublicering först efter godkänt batchtest och fortsatt behandla Gotland som ett dokumenterat undantag.
