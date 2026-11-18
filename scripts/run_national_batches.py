@@ -118,6 +118,7 @@ def run_collection(
     area_timeout: int = 240,
     limit: int | None = None,
     stop_after_area: int | None = None,
+    retry_failed: bool = False,
 ) -> dict[str, Any]:
     output_dir.mkdir(parents=True, exist_ok=True)
     manifest_path = output_dir / "manifest.json"
@@ -137,14 +138,18 @@ def run_collection(
     for candidate in candidates:
         area_id = str(candidate["area_portal_id"])
         existing = manifest.get("results", {}).get(area_id)
-        if existing and existing.get("status") in {"success", "no_data", "failed"}:
+        if existing and existing.get("status") in {"success", "no_data"}:
+            continue
+        if existing and existing.get("status") == "failed" and not retry_failed:
             continue
         if limit is not None and processed_this_run >= limit:
             break
 
-        area_dir = output_dir / "areas" / area_id
+        history = existing.get("attempt_history", []) if existing else []
+        attempt_number = len(history) + 1
+        area_dir = output_dir / "areas" / area_id / f"attempt-{attempt_number:04d}"
         result = run_area(candidate, area_dir, report_id, area_timeout)
-        result["attempt_number"] = 1
+        result["attempt_number"] = attempt_number
         record_result(manifest, result)
         manifest["updated_at_utc"] = datetime.now(timezone.utc).isoformat()
         save_manifest_atomic(manifest_path, manifest)
@@ -171,6 +176,10 @@ def main() -> int:
     parser.add_argument("--report-id", default="4")
     parser.add_argument("--area-timeout", type=int, default=240)
     parser.add_argument("--limit", type=int, help="Maximum new area attempts in this invocation")
+    parser.add_argument(
+        "--retry-failed", action="store_true",
+        help="Retry areas whose latest checkpoint status is failed; success and no_data remain final",
+    )
     args = parser.parse_args()
     if args.area_timeout < 1:
         parser.error("--area-timeout must be positive")
@@ -180,6 +189,7 @@ def main() -> int:
     manifest = run_collection(
         load_candidates(args.candidates), args.out, args.batch_size,
         args.report_id, args.area_timeout, args.limit,
+        retry_failed=args.retry_failed,
     )
     print(json.dumps({
         "run_id": manifest["run_id"],
