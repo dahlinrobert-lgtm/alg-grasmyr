@@ -12,10 +12,10 @@ from pathlib import Path
 
 URL = "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/"
 
-# Swedish county baseline used only as a discovery completeness diagnostic.
-# A missing county is reported for investigation; it does not imply that the
-# county must have an active ÄFO or hunting area in this particular report.
-EXPECTED_SWEDISH_COUNTIES = [
+# Sweden has 21 counties, but Gotland is not part of the operational county
+# coverage in the Älgdata statistics selector. Keep it explicit as a
+# non-applicable county rather than reporting it as a discovery gap.
+SWEDISH_COUNTIES = [
     "Blekinge län", "Dalarnas län", "Gotlands län", "Gävleborgs län",
     "Hallands län", "Jämtlands län", "Jönköpings län", "Kalmar län",
     "Kronobergs län", "Norrbottens län", "Skåne län", "Stockholms län",
@@ -23,17 +23,30 @@ EXPECTED_SWEDISH_COUNTIES = [
     "Västerbottens län", "Västernorrlands län", "Västmanlands län",
     "Västra Götalands län", "Örebro län", "Östergötlands län",
 ]
+NON_APPLICABLE_COUNTIES = {
+    "Gotlands län": "Ingår inte i Älgdatas länsväljare; enligt verksamhetsuppgiften finns ingen älgstam/älgförvaltning på Gotland."
+}
+EXPECTED_SWEDISH_COUNTIES = [
+    county for county in SWEDISH_COUNTIES
+    if county not in NON_APPLICABLE_COUNTIES
+]
 
 
 def county_discovery_audit(seen_counties):
     seen = {str(x).strip() for x in seen_counties}
     expected = set(EXPECTED_SWEDISH_COUNTIES)
+    excluded = [
+        {"county": county, "reason": reason}
+        for county, reason in sorted(NON_APPLICABLE_COUNTIES.items())
+    ]
     return {
+        "administrative_county_count": len(SWEDISH_COUNTIES),
         "expected_county_count": len(EXPECTED_SWEDISH_COUNTIES),
         "seen_county_count": len(seen),
         "seen_counties": sorted(seen),
         "missing_expected_counties": sorted(expected - seen),
-        "unexpected_counties": sorted(seen - expected),
+        "unexpected_counties": sorted(seen - set(SWEDISH_COUNTIES)),
+        "non_applicable_counties": excluded,
         "complete": expected.issubset(seen),
     }
 
@@ -59,8 +72,6 @@ def latest_year_window(starts, ends):
     valid_ends = [x for x in ends if x.get("value") and not x.get("disabled")]
     if not valid_starts or not valid_ends:
         raise ValueError("No enabled hunting-year options")
-    # Portal option order is chronological; selecting the first start produced
-    # decade-old pilot windows even though 2026/2027 was available.
     return valid_starts[-1], valid_ends[-1]
 
 
@@ -72,8 +83,6 @@ async def main():
     args = ap.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
     rows, errors, coverage = [], [], []
-    # Playwright is only needed for the live browser crawl. Keep pure helpers
-    # such as latest_year_window importable in lightweight unit-test jobs.
     from playwright.async_api import async_playwright
 
     async with async_playwright() as p:
@@ -107,10 +116,6 @@ async def main():
                                 starts = [x for x in await options(selects.nth(3)) if not x["disabled"] and x["value"]]
                                 if not starts:
                                     raise RuntimeError("No enabled start-year options")
-                                # Select the newest supported season for the current
-                                # availability catalogue. Historical ranges are a
-                                # separate discovery concern and must not masquerade
-                                # as a current-season regional pilot.
                                 await selects.nth(3).select_option(value=starts[-1]["value"])
                                 await page.wait_for_timeout(250)
                                 ends = [x for x in await options(selects.nth(4)) if not x["disabled"] and x["value"]]
@@ -138,18 +143,22 @@ async def main():
             except Exception as exc:
                 errors.append({"county":county["label"],"error":str(exc)[:500]})
         await browser.close()
-    # Keep duplicate area IDs across modes: they represent separate source observations.
     csv_path = args.out / "national_area_catalog.csv"
     fields = list(rows[0]) if rows else ["county","afo_name","boundary_mode","area_portal_id","area_name"]
     with csv_path.open("w",encoding="utf-8-sig",newline="") as f:
         w=csv.DictWriter(f,fieldnames=fields,delimiter=";"); w.writeheader(); w.writerows(rows)
     county_audit = county_discovery_audit([c["label"] for c in counties]) if not args.county else {
         "scope": "filtered",
+        "administrative_county_count": len(SWEDISH_COUNTIES),
         "expected_county_count": len(EXPECTED_SWEDISH_COUNTIES),
         "seen_county_count": len(counties),
         "seen_counties": [c["label"] for c in counties],
         "missing_expected_counties": [],
         "unexpected_counties": [],
+        "non_applicable_counties": [
+            {"county": county, "reason": reason}
+            for county, reason in sorted(NON_APPLICABLE_COUNTIES.items())
+        ],
         "complete": None,
     }
     report = {"catalogued_at_utc":datetime.now(timezone.utc).isoformat(),"source_url":URL,
@@ -159,6 +168,7 @@ async def main():
     (args.out/"national_area_catalog.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"csv":str(csv_path),"area_observations":len(rows),"unique_portal_area_ids":report["unique_portal_area_ids"],
                       "counties":len(counties),"missing_expected_counties":county_audit["missing_expected_counties"],
+                      "non_applicable_counties":county_audit["non_applicable_counties"],
                       "afo_combinations":len(coverage),"errors":len(errors)},ensure_ascii=False,indent=2))
     if not rows: raise SystemExit("No area options discovered")
 
