@@ -13,7 +13,7 @@ Detta dokument beskriver målarkitekturen för nationell insamling efter godkän
 - Inga tekniska fel registrerades.
 - Portalhämtningen tog ungefär 78 minuter för 626 områden, cirka 7,5 sekunder per område i genomsnitt.
 - Katalogen innehöll 3 236 unika aktuella områden vid den körningen. En rent linjär uppskattning för alla dessa är cirka 6 timmar och 45 minuter, exklusive overhead och avvikelser.
-- Gotlands län saknades i portalens länsväljare. Det är en katalog-/upptäcktsavvikelse, inte bevis för att Gotland saknar aktiva jaktområden.
+- Gotlands län ingår inte i Älgdatas länsväljare. Det är förväntat: enligt verksamhetsinformationen saknar Gotland älgstam/älgförvaltning. Sverige har 21 administrativa län men Älgdatas relevanta länstäckning är 20. Gotland redovisas som ett uttryckligt undantag, inte som en datalucka.
 
 ## Målflöde
 
@@ -72,4 +72,4 @@ Webbpublicering ska vara separat från insamlingsprocessen. Första publicerade 
 3. Lägg till ett separat manuellt testworkflow som kör en liten batch utan produktionsskrivning.
 4. Verifiera hur checkpoint och batchfiler ska lagras beständigt.
 5. Implementera webbpublicering först efter godkänt batchtest.
-6. Kör en full nationell testinsamling utan produktionsskrivning och granska Gotland separat.
+6. Kör en full nationell testinsamling utan produktionsskrivning och behandla Gotland som ett dokumenterat undantag.
