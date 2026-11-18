@@ -9,10 +9,10 @@ on:
         type: number
         default: 2026
       areas_per_afo:
-        description: "Areas to probe per current AFO (start with 1)"
+        description: "Areas to probe per current AFO (default 5; sequential and read-only)"
         required: true
         type: number
-        default: 1
+        default: 5
 
 permissions:
   contents: read
@@ -24,7 +24,7 @@ concurrency:
 jobs:
   preflight:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 240
     container:
       image: mcr.microsoft.com/playwright/python:v1.56.0-noble
     steps:
