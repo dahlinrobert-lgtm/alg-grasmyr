@@ -106,3 +106,25 @@ A first isolated Azure implementation is merged on `main`:
 The separate-run synthetic upload and restore tests have both passed in GitHub Actions (upload run `44402880891`, restore run `44403461037`). OIDC and Blob access to `stskogkolldata/national-algdata` are verified. The national runner still uses GitHub Actions artifacts; do not treat Azure as authoritative until batch-package validation, conditional checkpoint updates, recovery/versioning, and a bounded real-data resume test have passed.
 
 A follow-on opt-in batch-package layer is being developed on branch `feature/azure-batch-checkpoint-package`. It validates the frozen candidate set, manifest, result IDs/statuses, and `production_write=false` before upload and after restore. It does not change the portal runner or website publishing.
+
+
+## Azure batch-runner integration (opt-in)
+
+The national runner now has an opt-in Azure backend through
+`scripts/run_national_batches.py --azure-collection-id <stable-id>`.
+
+When enabled, the runner:
+- freezes the candidate list in the checkpoint package and refuses a different candidate set on resume;
+- restores and validates the latest Azure snapshot before processing;
+- creates an initial checkpoint before the first area request;
+- publishes a new immutable package snapshot after every processed area;
+- advances the latest pointer with the ETag observed for the prior generation;
+- fails closed on stale/concurrent pointer updates;
+- keeps `production_write=false` and does not publish website data.
+
+Without `--azure-collection-id`, the existing local/GitHub-artifact behavior is unchanged.
+
+A separate manual workflow, `National Älgdata Azure batch runner synthetic integration`,
+runs two synthetic invocations against Azure and verifies resume and final restore. It
+does not call the Älgdata portal. Do not enable Azure for a real national portal run
+until this synthetic workflow passes and a bounded real-data pilot has been reviewed.
