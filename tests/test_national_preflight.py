@@ -34,11 +34,21 @@ class NationalPreflightSelectionTests(unittest.TestCase):
         self.assertEqual(coverage["afo_coverage"][0]["selected_count"], 2)
         self.assertEqual([x["area_portal_id"] for x in selected], ["1", "3"])
 
-    def test_county_audit_explicitly_reports_missing_gotland(self):
+    def test_gotland_is_explicitly_non_applicable_not_a_missing_county(self):
+        from scripts.discover_national_areas import EXPECTED_SWEDISH_COUNTIES
+
+        audit = county_discovery_audit(EXPECTED_SWEDISH_COUNTIES)
+        self.assertNotIn("Gotlands län", audit["missing_expected_counties"])
+        self.assertEqual(audit["non_applicable_counties"][0]["county"], "Gotlands län")
+        self.assertEqual(audit["administrative_county_count"], 21)
+        self.assertEqual(audit["expected_county_count"], 20)
+        self.assertTrue(audit["complete"])
+
+    def test_a_real_missing_eligible_county_is_still_reported(self):
         audit = county_discovery_audit(["Västerbottens län", "Norrbottens län"])
-        self.assertIn("Gotlands län", audit["missing_expected_counties"])
+        self.assertIn("Skåne län", audit["missing_expected_counties"])
+        self.assertNotIn("Gotlands län", audit["missing_expected_counties"])
         self.assertFalse(audit["complete"])
-        self.assertEqual(audit["seen_county_count"], 2)
 
 
 if __name__ == "__main__":
