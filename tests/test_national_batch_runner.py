@@ -68,5 +68,55 @@ class NationalBatchRunnerTests(unittest.TestCase):
             self.assertEqual(manifest["results"]["1"]["status"], "no_data")
 
 
+    def test_failed_attempt_is_preserved_and_retried_only_when_opted_in(self):
+        candidates = [candidate(1)]
+        calls = []
+        def fail_then_succeed(candidate_row, area_dir, report_id, area_timeout):
+            calls.append(area_dir)
+            if len(calls) == 1:
+                return {
+                    "area_id": "1", "portal_selection_success": False,
+                    "data_available": False, "data_status": "timeout",
+                    "errors": ["temporary timeout"],
+                }
+            return self.fake_success(candidate_row, area_dir, report_id, area_timeout)
+
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "run"
+            with patch("scripts.run_national_batches.run_area", side_effect=fail_then_succeed):
+                first = run_collection(candidates, output)
+                self.assertEqual(first["failure_count"], 1)
+                skipped = run_collection(candidates, output)
+                self.assertEqual(len(calls), 1)
+                self.assertEqual(skipped["failure_count"], 1)
+                final = run_collection(candidates, output, retry_failed=True)
+
+            result = final["results"]["1"]
+            self.assertEqual(result["status"], "success")
+            self.assertEqual(result["attempt_number"], 2)
+            self.assertEqual(len(result["attempt_history"]), 2)
+            self.assertEqual(result["attempt_history"][0]["status"], "failed")
+            self.assertEqual(result["attempt_history"][1]["status"], "success")
+            self.assertNotEqual(calls[0], calls[1])
+            self.assertTrue(str(calls[0]).endswith("attempt-0001"))
+            self.assertTrue(str(calls[1]).endswith("attempt-0002"))
+
+    def test_no_data_is_final_and_not_retried(self):
+        candidates = [candidate(1)]
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "run"
+            with patch("scripts.run_national_batches.run_area", side_effect=lambda *args: {
+                "area_id": "1", "portal_selection_success": True,
+                "data_available": False, "data_status": "no_rendered_rows",
+                "errors": [],
+            }) as mocked:
+                first = run_collection(candidates, output)
+                second = run_collection(candidates, output, retry_failed=True)
+                self.assertEqual(mocked.call_count, 1)
+            self.assertEqual(first["no_data_count"], 1)
+            self.assertEqual(second["results"]["1"]["status"], "no_data")
+            self.assertEqual(len(second["results"]["1"]["attempt_history"]), 1)
+
+
 if __name__ == "__main__":
     unittest.main()
