@@ -199,7 +199,7 @@ def main() -> int:
         "candidate_count", "portal_selection_success_count", "data_available_count",
         "no_data_count", "failure_count", "production_write"
     )}, ensure_ascii=False, indent=2))
-    return 0 if summary["failure_count"] == 0 else 1
+    return 0  # Finish the whole sample; the validator decides whether failures fail the workflow.
 
 
 if __name__ == "__main__":
