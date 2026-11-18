@@ -147,7 +147,7 @@ def compare_and_swap_latest(
                 overwrite=True,
                 etag=expected_etag,
                 match_condition=MatchConditions.IfNotModified,
-                content_type="application/json",
+                content_settings=ContentSettings(content_type="application/json"),
             )
 
         new_props = blob.get_blob_properties()
