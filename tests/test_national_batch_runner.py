@@ -19,6 +19,7 @@ def candidate(area_id):
 
 class NationalBatchRunnerTests(unittest.TestCase):
     def fake_success(self, candidate_row, area_dir, report_id, area_timeout):
+        area_dir.mkdir(parents=True, exist_ok=True)
         return {
             "area_id": str(candidate_row["area_portal_id"]),
             "county": candidate_row["county"],
