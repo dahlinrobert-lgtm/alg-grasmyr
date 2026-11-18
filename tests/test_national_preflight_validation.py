@@ -19,7 +19,7 @@ class NationalPreflightValidationTests(unittest.TestCase):
             (root / "selected_candidates.json").write_text(json.dumps({"candidates": [candidate]}))
             (root / "national_preflight_summary.json").write_text(json.dumps({
                 "candidate_count": 1, "results": [result], "portal_selection_success_count": 1,
-                "failure_count": 0, "production_write": False,
+                "failure_count": 0, "data_available_count": 0, "production_write": False,
             }))
             self.assertEqual(validate(root), [])
 
@@ -35,7 +35,7 @@ class NationalPreflightValidationTests(unittest.TestCase):
             (root / "selected_candidates.json").write_text(json.dumps({"candidates": [candidate]}))
             (root / "national_preflight_summary.json").write_text(json.dumps({
                 "candidate_count": 1, "results": [result], "portal_selection_success_count": 1,
-                "failure_count": 0, "production_write": True,
+                "failure_count": 0, "data_available_count": 0, "production_write": True,
             }))
             self.assertTrue(validate(root))
 
