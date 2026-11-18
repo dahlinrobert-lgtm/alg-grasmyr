@@ -12,6 +12,7 @@ on:
       - "tests/test_national_batch_runner.py"
       - "docs/national-batch-ingestion.md"
       - ".github/workflows/national-algdata-preflight.yml"
+      - ".github/workflows/national-algdata-batch-smoke.yml"
       - ".github/workflows/test-national-algdata-preflight.yml"
   push:
     paths:
