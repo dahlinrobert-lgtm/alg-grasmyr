@@ -9,7 +9,10 @@ import json
 from pathlib import Path
 from typing import Any
 
-from scripts.azure_checkpoint_store import publish_snapshot, restore_snapshot
+try:
+    from scripts.azure_checkpoint_store import publish_snapshot, restore_snapshot
+except ModuleNotFoundError:  # direct script execution from scripts/
+    from azure_checkpoint_store import publish_snapshot, restore_snapshot
 
 
 def validate_batch_package(root: Path) -> dict[str, Any]:
