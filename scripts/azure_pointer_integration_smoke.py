@@ -8,8 +8,10 @@ from pathlib import Path
 
 from azure.core.exceptions import ResourceModifiedError
 
-from scripts.azure_checkpoint_pointer import compare_and_swap_latest, read_latest
-from scripts.azure_checkpoint_store import create_synthetic_fixture, publish_snapshot
+# The workflow executes this file directly (python scripts/...). In that mode
+# the scripts directory, rather than the repository root package, is on sys.path.
+from azure_checkpoint_pointer import compare_and_swap_latest, read_latest
+from azure_checkpoint_store import create_synthetic_fixture, publish_snapshot
 
 
 def main() -> int:
