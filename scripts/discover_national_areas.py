@@ -12,6 +12,31 @@ from pathlib import Path
 
 URL = "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/"
 
+# Swedish county baseline used only as a discovery completeness diagnostic.
+# A missing county is reported for investigation; it does not imply that the
+# county must have an active ÄFO or hunting area in this particular report.
+EXPECTED_SWEDISH_COUNTIES = [
+    "Blekinge län", "Dalarnas län", "Gotlands län", "Gävleborgs län",
+    "Hallands län", "Jämtlands län", "Jönköpings län", "Kalmar län",
+    "Kronobergs län", "Norrbottens län", "Skåne län", "Stockholms län",
+    "Södermanlands län", "Uppsala län", "Värmlands län",
+    "Västerbottens län", "Västernorrlands län", "Västmanlands län",
+    "Västra Götalands län", "Örebro län", "Östergötlands län",
+]
+
+
+def county_discovery_audit(seen_counties):
+    seen = {str(x).strip() for x in seen_counties}
+    expected = set(EXPECTED_SWEDISH_COUNTIES)
+    return {
+        "expected_county_count": len(EXPECTED_SWEDISH_COUNTIES),
+        "seen_county_count": len(seen),
+        "seen_counties": sorted(seen),
+        "missing_expected_counties": sorted(expected - seen),
+        "unexpected_counties": sorted(seen - expected),
+        "complete": expected.issubset(seen),
+    }
+
 async def options(select):
     return await select.locator("option").evaluate_all(
         "(els) => els.map(o => ({label:o.text.trim(), value:o.value, disabled:o.disabled}))"
@@ -118,13 +143,23 @@ async def main():
     fields = list(rows[0]) if rows else ["county","afo_name","boundary_mode","area_portal_id","area_name"]
     with csv_path.open("w",encoding="utf-8-sig",newline="") as f:
         w=csv.DictWriter(f,fieldnames=fields,delimiter=";"); w.writeheader(); w.writerows(rows)
+    county_audit = county_discovery_audit([c["label"] for c in counties]) if not args.county else {
+        "scope": "filtered",
+        "expected_county_count": len(EXPECTED_SWEDISH_COUNTIES),
+        "seen_county_count": len(counties),
+        "seen_counties": [c["label"] for c in counties],
+        "missing_expected_counties": [],
+        "unexpected_counties": [],
+        "complete": None,
+    }
     report = {"catalogued_at_utc":datetime.now(timezone.utc).isoformat(),"source_url":URL,
               "report_id":args.report_id,"area_observations":len(rows),"unique_portal_area_ids":len({r["area_portal_id"] for r in rows}),
-              "counties_seen":len(counties),"county_afo_coverage":coverage,"errors":errors,
+              "counties_seen":len(counties),"county_audit":county_audit,"county_afo_coverage":coverage,"errors":errors,
               "interpretation":"Selector catalogue only. IDs and labels are observations, not verified stable geographic identities; current/historical modes and year coverage must be retained."}
     (args.out/"national_area_catalog.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"csv":str(csv_path),"area_observations":len(rows),"unique_portal_area_ids":report["unique_portal_area_ids"],
-                      "counties":len(counties),"afo_combinations":len(coverage),"errors":len(errors)},ensure_ascii=False,indent=2))
+                      "counties":len(counties),"missing_expected_counties":county_audit["missing_expected_counties"],
+                      "afo_combinations":len(coverage),"errors":len(errors)},ensure_ascii=False,indent=2))
     if not rows: raise SystemExit("No area options discovered")
 
 if __name__ == "__main__":
