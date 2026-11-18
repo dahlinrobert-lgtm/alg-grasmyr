@@ -4,17 +4,23 @@ on:
   workflow_dispatch:
     inputs:
       limit:
-        description: "Maximum number of areas to download (smoke test)"
+        description: "Maximum number of new areas to download in this run"
         required: true
         type: number
         default: 10
       batch_size:
-        description: "Manifest batch size"
+        description: "Manifest batch size (used when starting a new run)"
         required: true
         type: number
         default: 10
+      resume_run_id:
+        description: "Previous successful smoke workflow run ID to resume from (leave empty to start fresh)"
+        required: false
+        type: string
+        default: ""
 
 permissions:
+  actions: read
   contents: read
 
 concurrency:
@@ -35,9 +41,19 @@ jobs:
         run: |
           python -m unittest tests.test_national_preflight tests.test_national_preflight_validation tests.test_national_batching tests.test_national_batch_runner -v
           python -m py_compile scripts/run_national_preflight.py scripts/validate_national_preflight.py scripts/national_batching.py scripts/run_national_batches.py
+      - name: Restore previous checkpoint artifact
+        if: ${{ inputs.resume_run_id != '' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: national-algdata-batch-smoke
+          run-id: ${{ inputs.resume_run_id }}
+          github-token: ${{ github.token }}
+          path: out/national-batch-smoke
       - name: Discover current national area catalogue
+        if: ${{ inputs.resume_run_id == '' }}
         run: python scripts/discover_national_areas.py
       - name: Freeze five-area-per-AFO candidate list
+        if: ${{ inputs.resume_run_id == '' }}
         run: |
           python - <<'PY'
           import json
@@ -48,7 +64,7 @@ jobs:
           if not candidates:
               raise SystemExit("No current national candidates selected")
           full_candidate_count = len(candidates)
-          smoke_candidates = select_geographically_balanced_sample(candidates, int("${{ inputs.limit }}"))
+          smoke_candidates = select_geographically_balanced_sample(candidates, 20)
           Path("out/national-batch-smoke").mkdir(parents=True, exist_ok=True)
           assert 1 <= int("${{ inputs.limit }}") <= 20, "Smoke-test limit must be between 1 and 20"
           assert 1 <= int("${{ inputs.batch_size }}") <= 20, "Smoke-test batch size must be between 1 and 20"
@@ -71,6 +87,48 @@ jobs:
               "afo_count": coverage["afo_count"],
           }, ensure_ascii=False))
           PY
+      - name: Validate restored checkpoint and candidate identity
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path("out/national-batch-smoke")
+          selected_path = root / "selected_candidates.json"
+          if not selected_path.is_file():
+              raise SystemExit("selected_candidates.json missing; cannot resume without the frozen candidate list")
+          selected = json.loads(selected_path.read_text(encoding="utf-8"))
+          candidates = selected.get("candidates")
+          if not isinstance(candidates, list) or not candidates:
+              raise SystemExit("Frozen candidate list is empty or invalid")
+          resume_run_id = "${{ inputs.resume_run_id }}".strip()
+          manifest_path = root / "run" / "manifest.json"
+          if resume_run_id:
+              if not manifest_path.is_file():
+                  raise SystemExit("Previous artifact has no run/manifest.json")
+              manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+              if manifest.get("production_write") is not False:
+                  raise SystemExit("Refusing checkpoint with production_write other than false")
+              if manifest.get("candidates") != candidates:
+                  raise SystemExit("Frozen candidate list differs from the checkpoint manifest")
+              if manifest.get("candidate_count") != len(candidates):
+                  raise SystemExit("Checkpoint candidate_count does not match frozen candidates")
+              provenance_path = root / "checkpoint_provenance.json"
+              if not provenance_path.is_file():
+                  raise SystemExit("Previous artifact lacks checkpoint provenance; cannot verify source run")
+              provenance = json.loads(provenance_path.read_text(encoding="utf-8"))
+              if str(provenance.get("workflow_run_id")) != resume_run_id:
+                  raise SystemExit("Artifact provenance does not match resume_run_id")
+          print(json.dumps({
+              "resume": bool(resume_run_id),
+              "resume_run_id": resume_run_id or None,
+              "candidate_count": len(candidates),
+              "previous_completed_count": (
+                  json.loads(manifest_path.read_text(encoding="utf-8")).get("completed_count", 0)
+                  if resume_run_id else 0
+              ),
+              "production_write": False,
+          }, ensure_ascii=False))
+          PY
       - name: Run bounded sequential batch smoke test
         run: |
           python scripts/run_national_batches.py \
@@ -84,14 +142,15 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
-          root = Path("out/national-batch-smoke/run")
-          manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
+          root = Path("out/national-batch-smoke")
+          manifest = json.loads((root / "run" / "manifest.json").read_text(encoding="utf-8"))
+          selected = json.loads((root / "selected_candidates.json").read_text(encoding="utf-8"))
           assert manifest["production_write"] is False
-          assert manifest["completed_count"] <= int("${{ inputs.limit }}")
+          assert manifest["candidates"] == selected["candidates"]
           assert manifest["completed_count"] == len(manifest["results"])
           for area_id, result in manifest["results"].items():
               assert result["status"] in {"success", "no_data", "failed"}
-              assert (root / "areas" / area_id).is_dir()
+              assert (root / "run" / "areas" / area_id).is_dir()
           print(json.dumps({
               "candidate_count": manifest["candidate_count"],
               "completed_count": manifest["completed_count"],
@@ -101,7 +160,23 @@ jobs:
               "production_write": manifest["production_write"],
           }, ensure_ascii=False, indent=2))
           PY
-      - name: Upload batch smoke diagnostics
+      - name: Write checkpoint provenance
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          root = Path("out/national-batch-smoke")
+          root.mkdir(parents=True, exist_ok=True)
+          (root / "checkpoint_provenance.json").write_text(json.dumps({
+              "workflow": "national-algdata-batch-smoke",
+              "workflow_run_id": os.environ["GITHUB_RUN_ID"],
+              "previous_workflow_run_id": "${{ inputs.resume_run_id }}",
+              "commit_sha": os.environ["GITHUB_SHA"],
+              "production_write": False,
+          }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          PY
+      - name: Upload batch smoke diagnostics and checkpoint
         if: always()
         uses: actions/upload-artifact@v4
         with:
