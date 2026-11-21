@@ -29,3 +29,10 @@ The earlier 129/129 batch that parsed the leading Summa values is invalid and mu
 ## Publication and interpretation
 
 These are cumulative reported totals for a selected hunting season, not individual kill events, exact kill dates, or kill locations. Do not conflate national ÄFO totals with regional ÄJO change snapshots. Never convert missing or unavailable data to zero.
+
+
+## Transient portal response recovery — 2026-11-21
+
+The first fresh run from current `main` (workflow run #9) passed all four parser/archive regression tests and retrieved 128 of 129 AFOs. A single AFO (25-004, ÄFO 4, Norrbottens län) failed because Playwright could not retrieve a response body after the page navigated away. The batch failed closed: no dashboard or snapshot archive was written.
+
+The collector is being updated to retry each failed AFO up to three times, recreating and reinitializing a clean portal page between attempts. The complete national batch still must succeed before any snapshot or dashboard is written. This recovery does not turn missing values into zero and does not weaken exact 129-AFO validation.
