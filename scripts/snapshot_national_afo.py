@@ -179,6 +179,46 @@ async def fetch_boundary_ids(request) -> set[str]:
     return {str(item["attributes"]["afo_id"]) for item in payload.get("features", [])}
 
 
+async def prepare_portal_page(browser):
+    """Create a clean portal page; used again after transient response/navigation failures."""
+    page = await browser.new_page(viewport={"width": 1440, "height": 1000})
+    page.set_default_timeout(20000)
+    await page.goto(PORTAL_URL, wait_until="domcontentloaded", timeout=60000)
+    selects = page.locator("select")
+    await selects.nth(5).wait_for(state="attached", timeout=30000)
+    config = await choose_report(selects.nth(0), REPORT_ID)
+    if config.get("Name") != "ÄFO" or config.get("HuntingArea") != "0":
+        await page.close()
+        raise RuntimeError(f"Unexpected report configuration for ID 3: {config}")
+    return page
+
+
+async def collect_with_recovery(browser, page, item: dict[str, str], season: str, attempts: int = 3):
+    """Retry one AFO on a fresh page after transient portal/browser response failures."""
+    last_error = None
+    for attempt in range(1, attempts + 1):
+        try:
+            return await collect_one(page, item, season), page
+        except Exception as exc:
+            last_error = exc
+            if attempt >= attempts:
+                break
+            print(
+                f"Retrying AFO {item['afo_id']} on a fresh browser page "
+                f"after attempt {attempt}/{attempts}: {type(exc).__name__}: {exc}",
+                flush=True,
+            )
+            try:
+                await page.close()
+            except Exception:
+                pass
+            page = await prepare_portal_page(browser)
+    raise RuntimeError(
+        f"AFO {item['afo_id']} failed after {attempts} attempts: "
+        f"{type(last_error).__name__}: {last_error}"
+    ) from last_error
+
+
 async def collect_one(page, item: dict[str, str], season: str) -> dict[str, Any]:
     selects = page.locator("select")
     await select_exact(selects.nth(1), item["county"])
@@ -327,20 +367,17 @@ async def run(args) -> dict[str, Any]:
         request = await playwright.request.new_context(timeout=45000)
         boundary_ids = await fetch_boundary_ids(request)
         browser = await playwright.chromium.launch(headless=True)
-        page = await browser.new_page(viewport={"width": 1440, "height": 1000})
-        page.set_default_timeout(20000)
+        page = None
         try:
-            await page.goto(PORTAL_URL, wait_until="domcontentloaded", timeout=60000)
-            selects = page.locator("select")
-            await selects.nth(5).wait_for(state="attached", timeout=30000)
-            config = await choose_report(selects.nth(0), REPORT_ID)
-            if config.get("Name") != "ÄFO" or config.get("HuntingArea") != "0":
-                raise RuntimeError(f"Unexpected report configuration for ID 3: {config}")
+            page = await prepare_portal_page(browser)
             records = []
             errors = []
             for item in catalog:
                 try:
-                    records.append(await collect_one(page, item, args.season))
+                    record, page = await collect_with_recovery(
+                        browser, page, item, args.season, attempts=3
+                    )
+                    records.append(record)
                 except Exception as exc:
                     errors.append(
                         {"afo_id": item["afo_id"], "county": item["county"], "afo_name": item["afo_name"],
@@ -366,6 +403,11 @@ async def run(args) -> dict[str, Any]:
             )
             return {"dashboard_path": str(dashboard_path), "dashboard": dashboard}
         finally:
+            if page is not None:
+                try:
+                    await page.close()
+                except Exception:
+                    pass
             await browser.close()
             await request.dispose()
 
