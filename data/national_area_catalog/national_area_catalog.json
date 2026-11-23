@@ -1,10 +1,46 @@
 {
-  "catalogued_at_utc": "2026-11-16T13:05:57.502932+00:00",
+  "catalogued_at_utc": "2026-11-23T15:06:59.351770+00:00",
   "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
   "report_id": "4",
   "area_observations": 6478,
   "unique_portal_area_ids": 3239,
   "counties_seen": 20,
+  "county_audit": {
+    "administrative_county_count": 21,
+    "expected_county_count": 20,
+    "seen_county_count": 20,
+    "seen_counties": [
+      "Blekinge län",
+      "Dalarnas län",
+      "Gävleborgs län",
+      "Hallands län",
+      "Jämtlands län",
+      "Jönköpings län",
+      "Kalmar län",
+      "Kronobergs län",
+      "Norrbottens län",
+      "Skåne län",
+      "Stockholms län",
+      "Södermanlands län",
+      "Uppsala län",
+      "Värmlands län",
+      "Västerbottens län",
+      "Västernorrlands län",
+      "Västmanlands län",
+      "Västra Götalands län",
+      "Örebro län",
+      "Östergötlands län"
+    ],
+    "missing_expected_counties": [],
+    "unexpected_counties": [],
+    "non_applicable_counties": [
+      {
+        "county": "Gotlands län",
+        "reason": "Ingår inte i Älgdatas länsväljare; enligt verksamhetsuppgiften finns ingen älgstam/älgförvaltning på Gotland."
+      }
+    ],
+    "complete": true
+  },
   "county_afo_coverage": [
     {
       "county": "Blekinge län",
