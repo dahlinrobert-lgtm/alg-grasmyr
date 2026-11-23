@@ -123,7 +123,7 @@ class NationalAfoSnapshotTests(unittest.TestCase):
             before = path.read_bytes()
             with self.assertRaisesRegex(FileExistsError, "same-day dashboard"):
                 archive_complete_batch(
-                    [self._record(shot=12)], root, "2026/2027", expected,
+                    [self._record(shot=11)], root, "2027/2028", expected,
                     snapshot_date="2026-11-23",
                 )
             self.assertEqual(path.read_bytes(), before)
