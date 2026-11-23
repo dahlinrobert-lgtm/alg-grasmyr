@@ -84,6 +84,8 @@ def compare_afo(old: dict[str, Any], new: dict[str, Any]) -> dict[str, Any]:
     ]
     changed = []
     status_changes = []
+    field_change_counts = Counter()
+    status_transition_counts = Counter()
     for key in sorted(old_ids & new_ids):
         before, after = old_rows[key], new_rows[key]
         fields = sorted(set(before) | set(after))
@@ -94,7 +96,10 @@ def compare_afo(old: dict[str, Any], new: dict[str, Any]) -> dict[str, Any]:
         if differences:
             item = {"ajo_id": key, "changes": differences}
             changed.append(item)
+            field_change_counts.update(differences.keys())
             if "FinishedReporting" in differences:
+                transition = f"{differences['FinishedReporting']['old']} -> {differences['FinishedReporting']['new']}"
+                status_transition_counts[transition] += 1
                 status_changes.append({
                     "ajo_id": key,
                     **differences["FinishedReporting"],
@@ -106,6 +111,8 @@ def compare_afo(old: dict[str, Any], new: dict[str, Any]) -> dict[str, Any]:
         "missing_rows_unconfirmed": missing,
         "changed_rows": changed,
         "finished_reporting_changes": status_changes,
+        "field_change_counts": dict(field_change_counts),
+        "status_transition_counts": dict(status_transition_counts),
         "unchanged_row_count": len(old_ids & new_ids) - len(changed),
     }
 
@@ -120,6 +127,8 @@ def compare_snapshot_sets(root: Path, old_date: str, new_date: str, expected_afo
     results = {}
     old_total = new_total = 0
     totals = Counter()
+    field_totals = Counter()
+    status_transitions = Counter()
     for afo_id in afo_dirs:
         old_path = base / afo_id / f"{old_date}.json"
         new_path = base / afo_id / f"{new_date}.json"
@@ -138,6 +147,8 @@ def compare_snapshot_sets(root: Path, old_date: str, new_date: str, expected_afo
         totals["changed"] += len(result["changed_rows"])
         totals["status_changed"] += len(result["finished_reporting_changes"])
         totals["unchanged"] += result["unchanged_row_count"]
+        field_totals.update(result["field_change_counts"])
+        status_transitions.update(result["status_transition_counts"])
     return {
         "report_type": "national_afo_ajo_row_diff",
         "old_snapshot_date": old_date,
@@ -148,6 +159,8 @@ def compare_snapshot_sets(root: Path, old_date: str, new_date: str, expected_afo
         "old_raw_ajo_row_count": old_total,
         "new_raw_ajo_row_count": new_total,
         "summary": dict(totals),
+        "field_change_counts": dict(field_totals),
+        "finished_reporting_transition_counts": dict(status_transitions),
         "absence_policy": "Rows missing from the later snapshot are unconfirmed absences, not deletion events.",
         "source_snapshots_modified": False,
         "areas": results,
@@ -171,6 +184,8 @@ def main() -> int:
         "old_rows": report["old_raw_ajo_row_count"],
         "new_rows": report["new_raw_ajo_row_count"],
         "summary": report["summary"],
+        "field_change_counts": report["field_change_counts"],
+        "finished_reporting_transition_counts": report["finished_reporting_transition_counts"],
         "source_snapshots_modified": False,
     }, ensure_ascii=False, indent=2))
     return 0
