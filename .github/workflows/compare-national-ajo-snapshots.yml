@@ -1,0 +1,51 @@
+name: National ÄJO row-level snapshot comparison
+
+on:
+  pull_request:
+    paths:
+      - "scripts/compare_national_ajo_snapshots.py"
+      - "tests/test_national_ajo_snapshot_diff.py"
+      - ".github/workflows/compare-national-ajo-snapshots.yml"
+  workflow_dispatch:
+    inputs:
+      old_date:
+        description: Earlier immutable snapshot date
+        required: true
+        default: "2026-11-21"
+        type: string
+      new_date:
+        description: Later immutable snapshot date
+        required: true
+        default: "2026-11-23"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run comparison regression tests
+        run: |
+          python -m unittest tests.test_national_ajo_snapshot_diff -v
+          python -m py_compile scripts/compare_national_ajo_snapshots.py
+      - name: Compare all national ÄJO rows
+        run: |
+          python scripts/compare_national_ajo_snapshots.py \
+            --old-date "${{ inputs.old_date || '2026-11-21' }}" \
+            --new-date "${{ inputs.new_date || '2026-11-23' }}" \
+            --expected-afo-count 129 \
+            --out out/national-ajo-row-diff.json
+      - name: Upload row-level comparison report
+        uses: actions/upload-artifact@v4
+        with:
+          name: national-ajo-row-diff
+          path: out/national-ajo-row-diff.json
+          if-no-files-found: error
+          retention-days: 30
