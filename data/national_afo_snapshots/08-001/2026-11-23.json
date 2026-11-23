@@ -1,0 +1,1702 @@
+{
+  "afo_id": "08-001",
+  "county": "Kalmar län",
+  "county_portal_value": "08",
+  "afo_name": "1. Västervik norra",
+  "afo_portal_value": "1",
+  "hunting_season": "2026/2027",
+  "snapshot_date": "2026-11-23",
+  "source": "Länsstyrelsernas Älgdata statistikportal",
+  "source_url": "https://algdata-apps.lansstyrelsen.se/algdata-apps-stat/",
+  "report_id": "3",
+  "report_name": "ÄFO",
+  "boundary_mode": "current",
+  "aggregation_level": "sum of ShotTotal and AssignedTotal across all registered ÄJO rows within the AFO",
+  "data_status": "area_rows_available",
+  "report_name_from_api": "Avskjutning med mål - Förvaltningsområde - Nuvarande gränser - Kalmar län\\1. Västervik norra - 2026/2027",
+  "source_row_count": 7,
+  "finished_reporting_area_count": 1,
+  "areas_with_kills_count": 4,
+  "areas_with_targets_count": 6,
+  "fallda_totalt": 62,
+  "fallda_totalt_raw": "62",
+  "avskjutningsmal_totalt": 111,
+  "avskjutningsmal_totalt_raw": "111",
+  "raw_header_one": [
+    {
+      "Name": "Registreringsnummer",
+      "Colspan": 1,
+      "Rowspan": 2,
+      "Cssclass": "tblTemplateCenterUp tblTemplateGroupHeaderOneNoHeadLeft"
+    },
+    {
+      "Name": "Jaktområdets namn",
+      "Colspan": 1,
+      "Rowspan": 2,
+      "Cssclass": "tblTemplateCenterUp tblTemplateGroupHeaderOneNoHead"
+    },
+    {
+      "Name": "Säsong",
+      "Colspan": 1,
+      "Rowspan": 2,
+      "Cssclass": "tblTemplateCenterUp tblTemplateGroupHeaderOneNoHead"
+    },
+    {
+      "Name": "Slut- rapporterat",
+      "Colspan": 1,
+      "Rowspan": 2,
+      "Cssclass": "tblTemplateCenterUp tblTemplateGroupHeaderOneNoHead"
+    },
+    {
+      "Name": "Registrerad areal ha",
+      "Colspan": 1,
+      "Rowspan": 2,
+      "Cssclass": "tblTemplateDown tblTemplateGroupHeaderOneNoHeadRight"
+    },
+    {
+      "Name": "Fällda älgar",
+      "Colspan": 10,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateCenterUp tblTemplateBlockLeft tblTemplateBlockRight tblTemplateGroupHeaderOne"
+    },
+    {
+      "Name": "Tjur %",
+      "Colspan": 1,
+      "Rowspan": 2,
+      "Cssclass": "tblTemplateDown tblTemplateGroupHeaderOneNoHeadLeft"
+    },
+    {
+      "Name": "Kalv %",
+      "Colspan": 1,
+      "Rowspan": 2,
+      "Cssclass": "tblTemplateDown tblTemplateGroupHeaderOneNoHead"
+    },
+    {
+      "Name": "Avskjutningsmål ÄJO",
+      "Colspan": 6,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateBlockLeft tblTemplateBlockRight tblTemplateGroupHeaderOne"
+    },
+    {
+      "Name": "Nyttjandegrad - ÄJO",
+      "Colspan": 3,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateBlockLeft tblTemplateBlockRight tblTemplateGroupHeaderOne"
+    }
+  ],
+  "raw_header_two": [
+    {
+      "Name": "Vuxen",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateBlockLeft tblTemplateGroupHeaderTwoLeft"
+    },
+    {
+      "Name": "Handjur",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateGroupHeaderTwo"
+    },
+    {
+      "Name": "Hondjur",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateGroupHeaderTwo"
+    },
+    {
+      "Name": "Kalv",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateGroupHeaderTwo"
+    },
+    {
+      "Name": "Handjur kalv",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateGroupHeaderTwo"
+    },
+    {
+      "Name": "Hondjur kalv",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateGroupHeaderTwo"
+    },
+    {
+      "Name": "Totalt",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateGroupHeaderTwo"
+    },
+    {
+      "Name": "Varav otjänliga",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateGroupHeaderTwo"
+    },
+    {
+      "Name": "Varav oregistrerad mark",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateGroupHeaderTwo"
+    },
+    {
+      "Name": "Älgar/ 1000 ha",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateBlockRight tblTemplateGroupHeaderTwoRight"
+    },
+    {
+      "Name": "Vuxen",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateBlockLeft tblTemplateGroupHeaderTwoLeft"
+    },
+    {
+      "Name": "Handjur",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateGroupHeaderTwo"
+    },
+    {
+      "Name": "Hondjur",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateGroupHeaderTwo"
+    },
+    {
+      "Name": "Kalv",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateGroupHeaderTwo"
+    },
+    {
+      "Name": "Totalt",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateGroupHeaderTwo"
+    },
+    {
+      "Name": "Älgar/ 1000 ha",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateBlockRight tblTemplateGroupHeaderTwoRight"
+    },
+    {
+      "Name": "Vuxen",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateBlockLeft tblTemplateGroupHeaderTwoLeft"
+    },
+    {
+      "Name": "Kalv",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateGroupHeaderTwo"
+    },
+    {
+      "Name": "Totalt",
+      "Colspan": 1,
+      "Rowspan": 1,
+      "Cssclass": "tblTemplateDown tblTemplateBlockRight tblTemplateGroupHeaderTwoRight"
+    }
+  ],
+  "raw_area_rows": [
+    [
+      {
+        "Name": "AfoName",
+        "Text": "<a href=\"#\" onclick=\"drillDownToAjoReport(4,'716039');\">08-00-99-001-A</a>",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AjoName",
+        "Text": "Oregistrerad mark",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "Season",
+        "Text": "2026/2027",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "FinishedReporting",
+        "Text": "Ja",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "Areal",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotAdult",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "ShotBull",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCow",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCalf",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotBullcalf",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCowcalf",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotTotal",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotUnfitElk",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotUnregLandElk",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotAreal",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      },
+      {
+        "Name": "ShotBullPercentageByAdult",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCalfPercentageByTotal",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedAdult",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "AssignedBull",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedCow",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedCalf",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedTotal",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedAreal",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      },
+      {
+        "Name": "AssignedUtilizationAdult",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "AssignedUtilizationCalf",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedUtilizationTotal",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      }
+    ],
+    [
+      {
+        "Name": "AfoName",
+        "Text": "<a href=\"#\" onclick=\"drillDownToAjoReport(4,'718416');\">08-83-07-014-Ä</a>",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AjoName",
+        "Text": "NORRA TJUST ÄLGSKÖTSELOMRÅDE",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "Season",
+        "Text": "2026/2027",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "FinishedReporting",
+        "Text": "Nej",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "Areal",
+        "Text": "35033,47",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotAdult",
+        "Text": "15",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "ShotBull",
+        "Text": "8",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCow",
+        "Text": "7",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCalf",
+        "Text": "14",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotBullcalf",
+        "Text": "5",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCowcalf",
+        "Text": "9",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotTotal",
+        "Text": "29",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotUnfitElk",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotUnregLandElk",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotAreal",
+        "Text": "0,8",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      },
+      {
+        "Name": "ShotBullPercentageByAdult",
+        "Text": "53%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCalfPercentageByTotal",
+        "Text": "48%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedAdult",
+        "Text": "18",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "AssignedBull",
+        "Text": "9",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedCow",
+        "Text": "9",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedCalf",
+        "Text": "22",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedTotal",
+        "Text": "40",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedAreal",
+        "Text": "1,1",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      },
+      {
+        "Name": "AssignedUtilizationAdult",
+        "Text": "83%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "bg-warning-subtle tblTemplateBlockLeft"
+      },
+      {
+        "Name": "AssignedUtilizationCalf",
+        "Text": "64%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "bg-danger-subtle"
+      },
+      {
+        "Name": "AssignedUtilizationTotal",
+        "Text": "72%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "bg-danger-subtle tblTemplateBlockRight"
+      }
+    ],
+    [
+      {
+        "Name": "AfoName",
+        "Text": "<a href=\"#\" onclick=\"drillDownToAjoReport(4,'718418');\">08-83-08-057-A</a>",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AjoName",
+        "Text": "BLIDSTENA LICENSOMRÅDE",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "Season",
+        "Text": "2026/2027",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "FinishedReporting",
+        "Text": "Nej",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "Areal",
+        "Text": "1021,57",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotAdult",
+        "Text": "1",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "ShotBull",
+        "Text": "1",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCow",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCalf",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotBullcalf",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCowcalf",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotTotal",
+        "Text": "1",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotUnfitElk",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotUnregLandElk",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotAreal",
+        "Text": "1",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      },
+      {
+        "Name": "ShotBullPercentageByAdult",
+        "Text": "100%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCalfPercentageByTotal",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedAdult",
+        "Text": "1",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "AssignedBull",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedCow",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedCalf",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedTotal",
+        "Text": "1",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedAreal",
+        "Text": "1",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      },
+      {
+        "Name": "AssignedUtilizationAdult",
+        "Text": "100%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "bg-success-subtle tblTemplateBlockLeft"
+      },
+      {
+        "Name": "AssignedUtilizationCalf",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedUtilizationTotal",
+        "Text": "100%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "bg-success-subtle tblTemplateBlockRight"
+      }
+    ],
+    [
+      {
+        "Name": "AfoName",
+        "Text": "<a href=\"#\" onclick=\"drillDownToAjoReport(4,'718420');\">08-83-09-041-Ä</a>",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AjoName",
+        "Text": "LOFTAHAMMARS ÄLGSKÖTSELOMRÅDE",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "Season",
+        "Text": "2026/2027",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "FinishedReporting",
+        "Text": "Nej",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "Areal",
+        "Text": "14781,35",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotAdult",
+        "Text": "10",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "ShotBull",
+        "Text": "3",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCow",
+        "Text": "7",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCalf",
+        "Text": "5",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotBullcalf",
+        "Text": "2",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCowcalf",
+        "Text": "3",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotTotal",
+        "Text": "15",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotUnfitElk",
+        "Text": "1",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotUnregLandElk",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotAreal",
+        "Text": "1",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      },
+      {
+        "Name": "ShotBullPercentageByAdult",
+        "Text": "30%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCalfPercentageByTotal",
+        "Text": "33%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedAdult",
+        "Text": "14",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "AssignedBull",
+        "Text": "6",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedCow",
+        "Text": "8",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedCalf",
+        "Text": "17",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedTotal",
+        "Text": "31",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedAreal",
+        "Text": "2,1",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      },
+      {
+        "Name": "AssignedUtilizationAdult",
+        "Text": "71%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "bg-danger-subtle tblTemplateBlockLeft"
+      },
+      {
+        "Name": "AssignedUtilizationCalf",
+        "Text": "29%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "bg-danger-subtle"
+      },
+      {
+        "Name": "AssignedUtilizationTotal",
+        "Text": "48%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "bg-danger-subtle tblTemplateBlockRight"
+      }
+    ],
+    [
+      {
+        "Name": "AfoName",
+        "Text": "<a href=\"#\" onclick=\"drillDownToAjoReport(4,'718422');\">08-83-11-013-Ä</a>",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AjoName",
+        "Text": "MELLERSTA TJUST - LOFTA ÄLGSKÖTSELOMRÅDE",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "Season",
+        "Text": "2026/2027",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "FinishedReporting",
+        "Text": "Nej",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "Areal",
+        "Text": "25774,78",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotAdult",
+        "Text": "12",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "ShotBull",
+        "Text": "6",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCow",
+        "Text": "6",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCalf",
+        "Text": "5",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotBullcalf",
+        "Text": "3",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCowcalf",
+        "Text": "2",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotTotal",
+        "Text": "17",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotUnfitElk",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotUnregLandElk",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotAreal",
+        "Text": "0,7",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      },
+      {
+        "Name": "ShotBullPercentageByAdult",
+        "Text": "50%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCalfPercentageByTotal",
+        "Text": "29%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedAdult",
+        "Text": "12",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "AssignedBull",
+        "Text": "6",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedCow",
+        "Text": "6",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedCalf",
+        "Text": "15",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedTotal",
+        "Text": "27",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedAreal",
+        "Text": "1",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      },
+      {
+        "Name": "AssignedUtilizationAdult",
+        "Text": "100%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "bg-success-subtle tblTemplateBlockLeft"
+      },
+      {
+        "Name": "AssignedUtilizationCalf",
+        "Text": "33%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "bg-danger-subtle"
+      },
+      {
+        "Name": "AssignedUtilizationTotal",
+        "Text": "63%",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "bg-danger-subtle tblTemplateBlockRight"
+      }
+    ],
+    [
+      {
+        "Name": "AfoName",
+        "Text": "<a href=\"#\" onclick=\"drillDownToAjoReport(4,'772172');\">08-83-01-004-A</a>",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AjoName",
+        "Text": "Troserum licensområde",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "Season",
+        "Text": "2026/2027",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "FinishedReporting",
+        "Text": "Nej",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "Areal",
+        "Text": "1591,39",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotAdult",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "ShotBull",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCow",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCalf",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotBullcalf",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCowcalf",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotTotal",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotUnfitElk",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotUnregLandElk",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotAreal",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      },
+      {
+        "Name": "ShotBullPercentageByAdult",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCalfPercentageByTotal",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedAdult",
+        "Text": "1",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "AssignedBull",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedCow",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedCalf",
+        "Text": "3",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedTotal",
+        "Text": "4",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedAreal",
+        "Text": "2,5",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      },
+      {
+        "Name": "AssignedUtilizationAdult",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "AssignedUtilizationCalf",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedUtilizationTotal",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      }
+    ],
+    [
+      {
+        "Name": "AfoName",
+        "Text": "<a href=\"#\" onclick=\"drillDownToAjoReport(4,'772555');\">08-83-71-006-A</a>",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AjoName",
+        "Text": "Tjusts Östra Licensområde",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "Season",
+        "Text": "2026/2027",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "FinishedReporting",
+        "Text": "Nej",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "Areal",
+        "Text": "5448,78",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotAdult",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "ShotBull",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCow",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCalf",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotBullcalf",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCowcalf",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotTotal",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotUnfitElk",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotUnregLandElk",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotAreal",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      },
+      {
+        "Name": "ShotBullPercentageByAdult",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "ShotCalfPercentageByTotal",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedAdult",
+        "Text": "3",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "AssignedBull",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedCow",
+        "Text": "0",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedCalf",
+        "Text": "5",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedTotal",
+        "Text": "8",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedAreal",
+        "Text": "1,5",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      },
+      {
+        "Name": "AssignedUtilizationAdult",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockLeft"
+      },
+      {
+        "Name": "AssignedUtilizationCalf",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault"
+      },
+      {
+        "Name": "AssignedUtilizationTotal",
+        "Text": "-",
+        "Text2": "",
+        "Colspan": 1,
+        "Rowspan": 1,
+        "Cssclass": "tdStatisticDefault tblTemplateBlockRight"
+      }
+    ]
+  ],
+  "raw_html_summa_row": [
+    "Summa:",
+    "",
+    "",
+    "83 651,34 (83 651,34)",
+    "38 (38)",
+    "18 (18)",
+    "20 (20)",
+    "24 (24)",
+    "10 (10)",
+    "14 (14)",
+    "62 (62)",
+    "1 (1)",
+    "0 (0)",
+    "",
+    "47% (47%)",
+    "39% (39%)",
+    "49 (49)",
+    "21 (21)",
+    "23 (23)",
+    "62 (62)",
+    "111 (111)",
+    "",
+    "",
+    "",
+    ""
+  ]
+}
