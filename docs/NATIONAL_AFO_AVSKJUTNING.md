@@ -36,3 +36,16 @@ These are cumulative reported totals for a selected hunting season, not individu
 The first fresh run from current `main` (workflow run #9) passed all four parser/archive regression tests and retrieved 128 of 129 AFOs. A single AFO (25-004, ÄFO 4, Norrbottens län) failed because Playwright could not retrieve a response body after the page navigated away. The batch failed closed: no dashboard or snapshot archive was written.
 
 The collector is being updated to retry each failed AFO up to three times, recreating and reinitializing a clean portal page between attempts. The complete national batch still must succeed before any snapshot or dashboard is written. This recovery does not turn missing values into zero and does not weaken exact 129-AFO validation.
+
+
+## Dashboard update semantics — 2026-11-23
+
+The dated files under `data/national_afo_snapshots/{afo_id}/{snapshot_date}.json` remain immutable. The derived `data/national_afo_dashboard.json` is a current-state pointer and follows monotonic date semantics:
+
+- A complete batch newer than the dashboard date may advance the dashboard.
+- An identical retry for the same date is idempotent.
+- Changed content for an already archived same-day AFO snapshot is refused.
+- Changed dashboard content for the same date is refused.
+- A batch older than the current dashboard is refused before any new dated snapshot is written.
+
+A scheduled run on 2026-11-23 (#12) passed the four existing regression tests and completed collection, but failed while trying to replace the 2026-11-21 dashboard. The previous implementation incorrectly treated the derived dashboard as immutable. The run uploaded an audit artifact but did not commit any files. A correction is being prepared with regression coverage; the new implementation must pass its tests and a fresh 129/129 full run before this incident is considered resolved.
