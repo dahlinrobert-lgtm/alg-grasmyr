@@ -279,6 +279,7 @@ def archive_complete_batch(
     output_root: Path,
     season: str,
     expected_ids: set[str],
+    snapshot_date: str | None = None,
 ) -> tuple[Path, dict[str, Any]]:
     observed_ids = {item["afo_id"] for item in records}
     if observed_ids != expected_ids:
@@ -287,22 +288,41 @@ def archive_complete_batch(
             f"missing={sorted(expected_ids-observed_ids)[:10]}, extra={sorted(observed_ids-expected_ids)[:10]}"
         )
 
-    snapshot_date = datetime.now(timezone.utc).date().isoformat()
+    snapshot_date = snapshot_date or datetime.now(timezone.utc).date().isoformat()
+    try:
+        datetime.strptime(snapshot_date, "%Y-%m-%d")
+    except ValueError as exc:
+        raise ValueError(f"Invalid snapshot date: {snapshot_date!r}") from exc
+
     staged: list[tuple[Path, str]] = []
     for item in records:
         path = output_root / item["afo_id"] / f"{snapshot_date}.json"
         content = json.dumps(item, ensure_ascii=False, indent=2) + "\n"
         staged.append((path, content))
 
-    # Validate every destination before writing any file. Same-day changes are
-    # refused so a retry cannot silently rewrite an earlier observation.
+    dashboard_path = output_root.parent / "national_afo_dashboard.json"
+    # A dashboard is a replaceable current view, unlike the immutable dated
+    # snapshots. It may advance to a newer complete batch, but never regress.
+    existing_dashboard = None
+    if dashboard_path.exists():
+        existing_dashboard = json.loads(dashboard_path.read_text(encoding="utf-8"))
+        existing_date = existing_dashboard.get("snapshot_date")
+        if not isinstance(existing_date, str):
+            raise ValueError("Existing national AFO dashboard has no valid snapshot_date")
+        try:
+            datetime.strptime(existing_date, "%Y-%m-%d")
+        except ValueError as exc:
+            raise ValueError(f"Existing dashboard has invalid snapshot_date: {existing_date!r}") from exc
+        if snapshot_date < existing_date:
+            raise ValueError(
+                f"Refusing to replace newer dashboard dated {existing_date} with older batch {snapshot_date}"
+            )
+
+    # Validate every immutable snapshot and same-day dashboard before writing
+    # any destination. A same-day retry is allowed only when byte-identical.
     for path, content in staged:
         if path.exists() and path.read_text(encoding="utf-8") != content:
             raise FileExistsError(f"Refusing to overwrite changed same-day snapshot: {path}")
-    for path, content in staged:
-        path.parent.mkdir(parents=True, exist_ok=True)
-        if not path.exists():
-            path.write_text(content, encoding="utf-8")
 
     dashboard = {
         "schema_version": 1,
@@ -343,11 +363,22 @@ def archive_complete_batch(
             key=lambda item: item["afo_id"],
         ),
     }
-    dashboard_path = output_root.parent / "national_afo_dashboard.json"
     dashboard_content = json.dumps(dashboard, ensure_ascii=False, indent=2) + "\n"
-    if dashboard_path.exists() and dashboard_path.read_text(encoding="utf-8") != dashboard_content:
-        raise FileExistsError(f"Refusing to overwrite changed same-day dashboard: {dashboard_path}")
-    if not dashboard_path.exists():
+    if existing_dashboard is not None and snapshot_date == existing_dashboard["snapshot_date"]:
+        existing_content = json.dumps(existing_dashboard, ensure_ascii=False, indent=2) + "\n"
+        if existing_content != dashboard_content:
+            raise FileExistsError(
+                f"Refusing to overwrite changed same-day dashboard: {dashboard_path}"
+            )
+
+    # All validation has passed. Preserve immutable snapshots and advance the
+    # derived dashboard only when this complete batch is newer.
+    for path, content in staged:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if not path.exists():
+            path.write_text(content, encoding="utf-8")
+    if existing_dashboard is None or snapshot_date > existing_dashboard["snapshot_date"]:
+        dashboard_path.parent.mkdir(parents=True, exist_ok=True)
         dashboard_path.write_text(dashboard_content, encoding="utf-8")
     return dashboard_path, dashboard
 
