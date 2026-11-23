@@ -5,6 +5,8 @@ on:
     paths:
       - "scripts/snapshot_national_afo.py"
       - "tests/test_national_afo_snapshot.py"
+      - "scripts/compare_national_ajo_snapshots.py"
+      - "tests/test_national_ajo_snapshot_diff.py"
       - ".github/workflows/daily-national-afo-avskjutning.yml"
       - ".github/workflows/test-national-afo-snapshot.yml"
 
@@ -23,5 +25,5 @@ jobs:
         run: python -m pip install --disable-pip-version-check "playwright==1.56.0"
       - name: Run tests and compile
         run: |
-          python -m unittest tests.test_national_afo_snapshot -v
-          python -m py_compile scripts/snapshot_national_afo.py
+          python -m unittest tests.test_national_afo_snapshot tests.test_national_ajo_snapshot_diff -v
+          python -m py_compile scripts/snapshot_national_afo.py scripts/compare_national_ajo_snapshots.py
